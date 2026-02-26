@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import UnivariateSpline
 from scipy.stats import linregress
 from scipy.constants import c
-from scipy.fft import fft, fftshift
+from scipy.fft import fft, fftshift, rfft
+from scipy.signal import argrelextrema
 
 # Daten einlesen
 data_laser = np.loadtxt('data/Filter 1/Data Channel 2.dat')
@@ -19,10 +20,13 @@ mean_data_laser = np.column_stack((erste_spalte_data_laser, zeilen_mittelwerte))
 
 # Interpolation
 x= np.linspace(-5000, 5000, 10000)
-y= mean_data_laser[:,1]
+y = zeilen_mittelwerte
+#y= mean_data_laser[:,1]
+
 
 mean_laser_interpolate = UnivariateSpline(x,y, k=4)
 x_new=np.linspace(-5000,5000,100000)
+#print(mean_laser_interpolate(x_new))
 
 '''plt.plot(x,y,'.',color='green')
 plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='red')
@@ -31,12 +35,18 @@ plt.ylabel("Signal")
 plt.show()'''
 
 # Bestimmung der Position der Maxima (ggf. auch Minima)
-mean_laser_interpolate_deriv1= mean_laser_interpolate.derivative(1)
-
+#mean_laser_interpolate_deriv1= argrelextrema(mean_laser_interpolate,np.greater)
+y_new = mean_laser_interpolate(x_new)
+maxima_idx = argrelextrema(y_new, np.greater)
+minima_idx = argrelextrema(y_new, np.less)
+all_extrema_idx = np.column_stack((maxima_idx, minima_idx)).ravel()
+# deriv_lin= x_new[all_extrema_idx] 
+deriv_lin= x_new[maxima_idx] 
 #print("deriv: ", mean_laser_interpolate_deriv1)
+print(deriv_lin)
 
 '''plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='black')
-plt.plot(x_new, mean_laser_interpolate_deriv1(x_new), color='blue', label="Extrema")
+plt.plot(x_new, all_extrema_idx, color='blue', label="Extrema")
 plt.xlabel("Position")
 plt.ylabel("Signal")
 plt.legend()
@@ -45,7 +55,7 @@ plt.show()'''
 # Kalibrierfunktion
 
 # bc curved, lets make it lin: roots()
-deriv_lin = mean_laser_interpolate_deriv1.roots()
+#deriv_lin = mean_laser_interpolate_deriv1.roots()
 #print(len(deriv_lin))
 
 r= np.linspace(0, len(deriv_lin)-1, len(deriv_lin))
@@ -111,12 +121,13 @@ plt.show()'''
 
 # Umrechnen der Ortsachse in eine Zeitachse
 delta_s = x_korr*101*10**(-5)/fit.slope
+#delta_s = x_korr*266*10**(-9)/fit.slope
 delta_t = delta_s / c
 d=delta_t
 #print(delta_t)
 
 # FT 
-T_sample= ((max(d)-min(d))/len(d))*1e12 #ps
+T_sample= ((max(d)-min(d))/len(d))*1e9 #ps
 f_max=1/T_sample
 L=len(d)
 f_Ny=f_max/2
@@ -125,8 +136,8 @@ w=np.linspace(-f_Ny,f_Ny,L)
 W=abs(fftshift(fft(laser_interpolate_korr/L)))
 
 plt.plot(w,W/max(W), color='purple')
-plt.xlim(0,1000)
-plt.ylim(0,1)
+plt.xlim(-1,1)
+plt.ylim(0,0.24)
 plt.show()
 
 # 
