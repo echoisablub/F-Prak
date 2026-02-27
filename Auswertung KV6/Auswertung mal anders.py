@@ -143,7 +143,3 @@ plt.show()
 # umrechnung frequenz zu wellenlänge
 
 #Todo: optische dichte und so
-
-''' # Schritt 8: Fourier Transfomration
-    dt = (x_korr_eq[1] - x_korr_eq[0]) / 101*10**(-5)  # Samplingintervall in Sekund
-    freq, spectrum = compute_spectrum(laser_interpolate_korr, dt)'''
