@@ -28,11 +28,12 @@ mean_laser_interpolate = UnivariateSpline(x,y, k=4)
 x_new=np.linspace(-5000,5000,100000)
 #print(mean_laser_interpolate(x_new))
 
-'''plt.plot(x,y,'.',color='green')
-plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='red')
-plt.xlabel("Position")
+plt.plot(x,y,'.',color='green', label='Daten')
+plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='red', label='Interpolation')
+plt.xlabel("Motorposition")
 plt.ylabel("Signal")
-plt.show()'''
+plt.legend()
+plt.show()
 
 # Bestimmung der Position der Maxima (ggf. auch Minima)
 #mean_laser_interpolate_deriv1= argrelextrema(mean_laser_interpolate,np.greater)
@@ -45,12 +46,12 @@ deriv_lin= x_new[maxima_idx]
 #print("deriv: ", mean_laser_interpolate_deriv1)
 print(deriv_lin)
 
-'''plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='black')
+plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='black')
 plt.plot(x_new, all_extrema_idx, color='blue', label="Extrema")
 plt.xlabel("Position")
 plt.ylabel("Signal")
 plt.legend()
-plt.show()'''
+plt.show()
 
 # Kalibrierfunktion
 
