@@ -96,13 +96,13 @@ x_korr_eq = np.arange(min(x_korr), max(x_korr), (max(x_korr)-min(x_korr))/len(x_
 laser_interpolate_func = UnivariateSpline(x_korr, y, k=4)
 laser_interpolate_korr = laser_interpolate_func(x_korr_eq)
 
-plt.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="data")
+'''plt.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="data")
 plt.xlabel("Position")
 plt.ylabel("Signal")
 plt.legend()
 plt.show()
 
-'''# Vergleich von laser-interpolation-korr mit laser-interpolation
+# Vergleich von laser-interpolation-korr mit laser-interpolation
 fig, (ax1, ax2) = plt.subplots(1, 2)
 fig.suptitle('Vergleich')
 ax1.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="data")
@@ -120,15 +120,14 @@ plt.ylabel("Signal")
 plt.show()'''
 
 # Umrechnen der Ortsachse in eine Zeitachse
-# deltas = korregierte Position * Weglängendifferenz / Steigung der Regression
-#delta_s = x_korr*101*10**(-5)/fit.slope
-delta_s = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
+delta_s = x_korr*101*10**(-5)/fit.slope
+#delta_s = x_korr*266*10**(-9)/fit.slope
 delta_t = delta_s / c
 d=delta_t
-print(len(delta_s))
+#print(delta_t)
 
 # FT 
-T_sample= ((max(d)-min(d))/len(d))*1e12 #ps
+T_sample= ((max(d)-min(d))/len(d))*1e9 #ps
 f_max=1/T_sample
 L=len(d)
 f_Ny=f_max/2
@@ -137,8 +136,8 @@ w=np.linspace(-f_Ny,f_Ny,L)
 W=abs(fftshift(fft(laser_interpolate_korr/L)))
 
 plt.plot(w,W/max(W), color='purple')
-plt.xlim(0,1000)
-plt.ylim(0,0.25)
+plt.xlim(-1,1)
+plt.ylim(0,0.24)
 plt.show()
 
 # 
