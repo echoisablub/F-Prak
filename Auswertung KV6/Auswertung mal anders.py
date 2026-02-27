@@ -19,7 +19,7 @@ def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
     f_interpol = interp1d(x, y, kind='cubic')
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
-    return x_new, y_new
+    return x_new, y_new, f_interpol
 
 def find_extrema(y):
     peaks = argrelextrema(y, np.greater)[0]
@@ -50,10 +50,9 @@ def compute_spectrum(y, delta_t):
 file_path = "data/Filter 1/Data Channel 2.dat"
 positions, measurements = load_data(file_path)
 mean_data_laser = average_measurements(measurements)
-print(len(mean_data_laser))
+
 # Erste Interpolation der Laser-Daten
-x_new, y_new = interpolate(positions, mean_data_laser, factor=10)
-print(len(x_new), len(y_new))
+x_new, y_new, f_interpol = interpolate(positions, mean_data_laser, factor=10)
 
 plt.plot(positions, mean_data_laser, '.', color='green', label="Datenpunkte")
 plt.plot(x_new, y_new, '-', color='red', label="Interpolation")
@@ -66,16 +65,14 @@ plt.show()
 
 
 # Bestimmung der Extrema
-peaks, troughs = find_extrema(y_new) 
-extrema = np.concatenate((peaks, troughs))
+peaks, troughs = find_extrema(y_new)
 maxima_positions = x_new[peaks]
-minima_positions = x_new[troughs]
 
 plt.plot(x_new, y_new, '-', color='red', label="Interpolation")
-plt.plot(x_new[maxima_positions], y_new[maxima_positions], 'x', color='green', label="Maxima/Minima")
+plt.plot(maxima_positions, f_interpol(maxima_positions), 'x', color='green', label="Maxima")
 plt.xlabel("Motorposition")
 plt.ylabel("Signal")
-plt.title("Laser-Daten: Interpolation mit Maxima/Minima")
+plt.title("Laser-Daten: Interpolation mit Maxima")
 plt.legend()
 plt.show()
 
@@ -121,7 +118,7 @@ ax1.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="Korrigierte
 ax1.set_xlabel("Motorposition")
 ax1.set_ylabel("Signal")
 ax1.legend()
-ax2.plot(x_new, mean_laser_interpolate(x_new), '-', color='green', label="Ursprüngliche Interpolation")
+ax2.plot(x_new, y_new, '-', color='green', label="Ursprüngliche Interpolation")
 ax2.set_xlabel("Motorposition")
 ax2.set_ylabel("Signal")
 ax2.legend()
