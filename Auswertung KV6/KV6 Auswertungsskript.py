@@ -110,9 +110,12 @@ fig.suptitle('Vergleich')
 ax1.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="Korrigierte Interpolation")
 ax1.set_xlabel("Motorposition")
 ax1.set_ylabel("Signal")
+ax1.legend()
 ax2.plot(x_new, mean_laser_interpolate(x_new), '-', color='green', label="Ursprüngliche Interpolation")
 ax2.set_xlabel("Motorposition")
 ax2.set_ylabel("Signal")
+ax2.legend()
+plt.show()
 
 '''#plt.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="data")
 plt.plot(x_new, mean_laser_interpolate(x_new), '-', color='green')
@@ -133,14 +136,23 @@ T_sample= ((max(d)-min(d))/len(d))*1e9 #ps
 f_max=1/T_sample
 L=len(d)
 f_Ny=f_max/2
+lam_ny=c/f_Ny
 w=np.linspace(-f_Ny,f_Ny,L)
+w_alt=np.linspace(-lam_ny,lam_ny,L)
 
 W=abs(fftshift(fft(laser_interpolate_korr/L)))
 
 plt.plot(w,W/max(W), color='purple')
+plt.xlabel("Frequenz (GHz)")
+plt.ylabel("Normierte Amplitude")
 plt.xlim(-1,1)
 plt.ylim(0,1.1)
 #plt.ylim(0,0.24)
 plt.show()
 
-# 
+'''plt.plot(w_alt,W/max(W), color='green')
+plt.xlabel("Wellenlänge (nm)")
+plt.ylabel("Normierte Amplitude")
+plt.xlim(0,1000)
+plt.ylim(0,1.1)
+plt.show()'''
