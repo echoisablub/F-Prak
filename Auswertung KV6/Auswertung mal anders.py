@@ -114,7 +114,7 @@ laser_interpolate_func = UnivariateSpline(x_korr, mean_data_laser, k=4)
 laser_interpolate_korr = laser_interpolate_func(x_korr_eq)
 
 #vergleich der Interpolation vor und nach Korrektur
-fig, (ax1, ax2) = plt.subplots(1, 2)
+'''fig, (ax1, ax2) = plt.subplots(1, 2)
 fig.suptitle('Vergleich')
 ax1.plot(x_korr_eq, laser_interpolate_korr, '-', color='red', label="Korrigierte Interpolation")
 ax1.set_xlabel("Motorposition")
@@ -124,7 +124,7 @@ ax2.plot(x_new, y_new, '-', color='green', label="Ursprüngliche Interpolation")
 ax2.set_xlabel("Motorposition")
 ax2.set_ylabel("Signal")
 ax2.legend()
-plt.show()
+plt.show()'''
 
 # Ort zu Zeit Trafo
 
@@ -180,5 +180,14 @@ plt.title("Laser Spektrum")
 plt.show()
 
 # umrechnung frequenz zu wellenlänge
+lambda_all = c/(w*10**(12-9))
+
+plt.plot(lambda_all,W_imp, color='purple')
+plt.xlim(200,1000)
+plt.ylim(0,0.2)
+plt.xlabel("Wellenlänge [nm]")
+plt.ylabel("Amplitude")
+plt.title("Laser Spektrum, Wellenlänge")
+plt.show()
 
 #Todo: optische dichte und so
