@@ -2,8 +2,10 @@ import numpy as np
 from scipy.interpolate import UnivariateSpline, interp1d
 from scipy.stats import linregress
 from scipy.signal import argrelextrema
-from scipy.fft import fft, fftfreq
+from scipy.constants import c
+from scipy.fft import fft, fftfreq, fftshift
 import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
 
 # 1. Daten einlesen
 def load_data(filepath):
@@ -47,7 +49,7 @@ def compute_spectrum(y, delta_t):
 
 
 # Analyse der Laser-Daten:
-file_path = "data/Filter 1/Data Channel 2.dat"
+file_path = "Auswertung KV6\data\Filter 1\Data Channel 2.dat"
 positions, measurements = load_data(file_path)
 mean_data_laser = average_measurements(measurements)
 
@@ -125,17 +127,54 @@ ax2.legend()
 plt.show()
 
 # Ort zu Zeit Trafo
-delta_s = x_korr*101*10**(-5)/fit.slope
+
+# old code
+'''delta_s = x_korr*101*10**(-5)/fit.slope
 c = 3*10**8  # Lichtgeschwindigkeit in m/s
 delta_t = delta_s / c # Zeit in Sekunden
 
 # Fourier Transformation
-#T_sample= ((max(delta_t)-min(delta_t))/len(delta_t))*1e9 #in pentasec
+#T_sample= ((max(delta_t)-min(delta_t))/len(delta_t))*1e12 #in pentasec
 
 freq, spectrum = compute_spectrum(laser_interpolate_korr, delta_t)
 
 plt.plot(freq, spectrum, color='purple')
 plt.xlabel("Frequenz [Hz]")
+plt.ylabel("Amplitude")
+plt.title("Laser Spektrum")
+plt.show()
+'''
+
+delta_s = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
+delta_t = delta_s / c
+d=delta_t
+print(len(delta_s))
+
+# FT 
+T_sample= ((max(d)-min(d))/len(d))*1e12 #Ps
+f_max=1/T_sample
+L=len(d)
+f_Ny=f_max/2
+w=np.linspace(-f_Ny,f_Ny,L)
+W=abs(fftshift(fft(laser_interpolate_korr/L)))
+W_imp=W/max(W) # normierung, weil?
+
+f_peak, _ = find_peaks(W_imp, prominence=0.15)
+print(f_peak)
+#von w den 6889 index -> w_postion von +peak = 563.6648002224845
+# mittelpunkt peak = 0.14915713157506616
+# w_postion von -peak = -563.3664859593342
+#print(w[5000])
+
+f_mittelwert = 563.515643091*10**12
+lambda_f =c/f_mittelwert
+print(lambda_f)
+# =5.320037902684942e-07 =532nm yaaay
+
+plt.plot(w,W_imp, color='purple')
+plt.xlim(0,1000)
+plt.ylim(0,0.25)
+plt.xlabel("Frequenz [PHz]")
 plt.ylabel("Amplitude")
 plt.title("Laser Spektrum")
 plt.show()
