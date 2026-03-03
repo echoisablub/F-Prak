@@ -142,11 +142,11 @@ x_max = min(x_korr_jod.max(), x_korr_ref.max())
 x_eq = np.linspace(x_min, x_max, 10000)
 
 # Interpolation für Jod und Referenz
-spline_jod = UnivariateSpline(x_korr_jod, mean_jod, k=4)
-spline_ref = UnivariateSpline(x_korr_ref, mean_ref, k=4)
+interpol_jod = UnivariateSpline(x_korr_jod, mean_jod, k=4)
+interpol_ref = UnivariateSpline(x_korr_ref, mean_ref, k=4)
 
-y_eq_jod = spline_jod(x_eq)
-y_eq_ref = spline_ref(x_eq)
+y_eq_jod = interpol_jod(x_eq)
+y_eq_ref = interpol_ref(x_eq)
 
 '''# Ortskorrektur Laser
 x= np.linspace(-5000, 5000, 10000)
@@ -189,33 +189,43 @@ plt.title("Laser Spektrum")
 plt.show()
 '''
 
-'''delta_s = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
-delta_t = delta_s / c
-d=delta_t
-print(len(delta_s))'''
-
-# Ort zu Zeit Trafo
-delta_s = x_eq * 532e-9 / fit.slope 
-delta_t_axis = delta_s / c 
+#delta_s_laser = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
+#delta_t_laser = delta_s_laser / c
+#d_laser = delta_t_laser
+delta_s_led = x_eq * 532e-9 / fit.slope 
+delta_t_led = delta_s_led / c
+d_led = delta_t_led
+#print(len(delta_s_led))
 
 # FFT
 # compute_spectrum liefert Frequenzachse und Amplituden
-freq_axis, spectrum_jod = compute_spectrum(y_eq_jod, delta_t_axis[3] - delta_t_axis)
-_, spectrum_ref = compute_spectrum(y_eq_ref, delta_t_axis[3] - delta_t_axis)
+# freq_axis, spectrum_jod = compute_spectrum(y_eq_jod, d_led[3] - d_led)
+# _, spectrum_ref = compute_spectrum(y_eq_ref, d_led[3] - d_led)
 
-lambda_all = c / (freq_axis + 1e-12) * 1e9
+# lambda_all = c / (freq_axis + 1e-12) * 1e9
 
-'''# FT 
-T_sample= ((max(d)-min(d))/len(d))*1e12 #Ps
-f_max=1/T_sample
-L=len(d)
+# FT 
+'''T_sample_laser= ((max(d_laser)-min(d_laser))/len(d))*1e12 #Ps
+f_max_laser=1/T_sample_laser
+L_laser=len(d_laser)
 f_Ny=f_max/2
-w=np.linspace(-f_Ny,f_Ny,L)
+w=np.linspace(-f_Ny,f_Ny,L_laser)
 W=abs(fftshift(fft(laser_interpolate_korr/L)))
 W_imp=W/max(W) # normierung, weil?
+'''
+T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
+f_max_led=1/T_sample_led
+L_led=len(d_led)
+f_Ny=f_max_led/2
+freq_axis=np.linspace(-f_Ny,f_Ny,L_led)
+spectrum_jod=abs(fftshift(fft(y_eq_jod/L_led)))
+spectrum_ref=abs(fftshift(fft(y_eq_ref/L_led)))
+spectrum_jod_norm=spectrum_jod/max(spectrum_jod)
+spectrum_ref_norm=spectrum_ref/max(spectrum_ref)
 
-f_peak, _ = find_peaks(W_imp, prominence=0.15)
-print(f_peak)
+
+# f_peak, _ = find_peaks(W_imp, prominence=0.15)
+# print(f_peak)
 # von w den 6889 index -> w_postion von +peak = 563.6648002224845
 # mittelpunkt peak = 0.14915713157506616
 # w_postion von -peak = -563.3664859593342
@@ -226,25 +236,32 @@ print(f_peak)
 # print(lambda_f)
 # =5.320037902684942e-07 =532nm yaaay
 
-plt.plot(w,W_imp, color='purple')
+'''plt.plot(w,W_imp, color='purple')
 plt.xlim(0,1000)
 plt.ylim(0,0.25)
 plt.xlabel("Frequenz [PHz]")
 plt.ylabel("Amplitude")
 plt.title("Laser Spektrum")
-plt.show()
+plt.show()'''
 
 # umrechnung frequenz zu wellenlänge
-lambda_all = c/(w*10**(12-9))
+# lambda_laser = c/(w*10**(12-9))
+lambda_led= c / (freq_axis * 1e-12) * 1e9
 
-plt.plot(lambda_all,W_imp, color='purple')
-plt.xlim(200,1000)
-plt.ylim(0,0.2)
-plt.xlabel("Wellenlänge [nm]")
+#plt.plot(w,W_imp,color='purple')
+plt.plot(freq_axis,spectrum_jod_norm, color='purple')
+plt.plot(freq_axis,spectrum_ref_norm, color='purple')
+plt.xlim(400,700)
+plt.ylim(0,0.0006)
+#plt.xlabel("Wellenlänge [nm]")
+plt.xlabel("Frequenz [PHz]")
 plt.ylabel("Amplitude")
-plt.title("Laser Spektrum, Wellenlänge")
+#plt.title("Laser Spektrum, Wellenlänge")
+#plt.title("Led Spektrum, Wellenlänge")
+plt.title("Led Spektrum, Frequenz")
 plt.show()
-'''
+
+
 #Todo: optische dichte und so
 
 #Um subtile Details in den gemessenen Spektren sichtbar zu machen, ist es sinnvoll, die Daten mit
@@ -267,20 +284,21 @@ dot = (spectrum_jod - spectrum_ref) / (spectrum_ref + epsilon)
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
 # Darstellung der Optischen Dichte (OD)
-ax1.plot(lambda_all, od, color='darkred', label='Optische Dichte (OD)')
+ax1.plot(freq_axis, od, color='darkred', label='Optische Dichte (OD)')
 ax1.set_ylabel("OD")
 ax1.set_title("Absorptionsspektrum der Jod-Probe (OD)")
 ax1.grid(True)
 ax1.legend()
 # Darstellung der Differentiellen Transmission (DOT)
-ax2.plot(lambda_all, dot, color='blue', label='Diff. Transmission (DOT)')
-ax2.set_xlabel("Wellenlänge [nm]")
+ax2.plot(freq_axis, dot, color='blue', label='Diff. Transmission (DOT)')
+#ax2.set_xlabel("Wellenlänge [nm]")
+ax2.set_xlabel("Frequenz [PHz]")
 ax2.set_ylabel("DOT")
 ax2.set_title("Spektrum: Differentielle Transmission (DOT)")
 ax2.grid(True)
 ax2.legend()
 # Bereich auf den interessanten Teil begrenzen (z.B. 450nm bis 650nm für Jod)
-plt.xlim(450, 700) 
+plt.xlim(800, 1500) 
 plt.tight_layout()
 plt.show()
 
