@@ -248,17 +248,29 @@ plt.show()'''
 # lambda_laser = c/(w*10**(12-9))
 lambda_led= c / (freq_axis * 1e-12) * 1e9
 
+#f_peak, _ = find_peaks(spectrum_jod_norm)
+#print(f_peak)
+#von w den 6889 index -> w_postion von +peak = 563.6648002224845
+#mittelpunkt peak = 0.14915713157506616
+# w_postion von -peak = -563.3664859593342
+# print(w[5000])
+
 #plt.plot(w,W_imp,color='purple')
-plt.plot(freq_axis,spectrum_jod_norm, color='purple')
-plt.plot(freq_axis,spectrum_ref_norm, color='purple')
-plt.xlim(400,700)
-plt.ylim(0,0.0006)
-#plt.xlabel("Wellenlänge [nm]")
-plt.xlabel("Frequenz [PHz]")
+#plt.plot(freq_axis,spectrum_jod_norm, color='purple', label='jod')
+#plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
+plt.plot(lambda_led,spectrum_ref_norm, color='orange', label='ref')
+plt.plot(lambda_led,spectrum_jod_norm, color='purple',label='jod')
+#plt.xlim(350,700)
+#plt.ylim(0,0.00052)
+plt.xlim(2e26, 10e26)
+plt.ylim(0, 0.00052)
+plt.xlabel("Wellenlänge [nm]")
+#plt.xlabel("Frequenz [PHz]")
 plt.ylabel("Amplitude")
 #plt.title("Laser Spektrum, Wellenlänge")
-#plt.title("Led Spektrum, Wellenlänge")
-plt.title("Led Spektrum, Frequenz")
+plt.title("Led Spektrum, Wellenlänge")
+#plt.title("Led Spektrum, Frequenz")
+plt.legend()
 plt.show()
 
 
@@ -275,30 +287,30 @@ plt.show()
 # Wir nutzen np.log10, da OD im physikalischen Kontext meist dekadisch ist.
 # Ein kleines epsilon verhindert Division durch Null.
 epsilon = 1e-12
-od = -np.log10((spectrum_jod + epsilon) / (spectrum_ref + epsilon))
+od = -np.log10((spectrum_jod + epsilon) / (spectrum_ref))
 
 # 2. Berechnung der Differentiellen Optischen Transmission (DOT)
 # Formel: DOT = (I - I0) / I0
-dot = (spectrum_jod - spectrum_ref) / (spectrum_ref + epsilon)
+dot = (spectrum_jod - spectrum_ref) / (spectrum_ref)
 
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
 # Darstellung der Optischen Dichte (OD)
-ax1.plot(freq_axis, od, color='darkred', label='Optische Dichte (OD)')
+ax1.plot(lambda_led, od, color='darkred', label='Optische Dichte (OD)')
 ax1.set_ylabel("OD")
 ax1.set_title("Absorptionsspektrum der Jod-Probe (OD)")
 ax1.grid(True)
 ax1.legend()
 # Darstellung der Differentiellen Transmission (DOT)
-ax2.plot(freq_axis, dot, color='blue', label='Diff. Transmission (DOT)')
-#ax2.set_xlabel("Wellenlänge [nm]")
-ax2.set_xlabel("Frequenz [PHz]")
+ax2.plot(lambda_led, dot, color='blue', label='Diff. Transmission (DOT)')
+ax2.set_xlabel("Wellenlänge [nm]")
+#ax2.set_xlabel("Frequenz [PHz]")
 ax2.set_ylabel("DOT")
 ax2.set_title("Spektrum: Differentielle Transmission (DOT)")
 ax2.grid(True)
 ax2.legend()
 # Bereich auf den interessanten Teil begrenzen (z.B. 450nm bis 650nm für Jod)
-plt.xlim(800, 1500) 
+# plt.xlim(450, 700) 
 plt.tight_layout()
 plt.show()
 
