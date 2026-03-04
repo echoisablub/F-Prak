@@ -143,14 +143,15 @@ Nachdem die auszuwertenden Daten eingelesen wurden, werden sie in zwei Arrays au
 
 \subsection{Kalibrierfunktion}
 Die Kalibrierfunktion wird anhand der Laserdaten bestimmt um das nicht-lineare Verhalten des Motors zu korrigieren.\\\\
-Dafür werden die Laserdaten zuerst interpoliert, um die Abtastrate zu erhöhen (siehe \ref{fig:l_interpol}). Für die Interpolation wurde sich für eine cubic Interpolation durch die interp1d Funktion aus der Scipy Bibliothek entschieden. Es wurde um einen Faktor von 10 interpoliert. 
+Dafür werden die Laserdaten zuerst interpoliert, um die Abtastrate zu erhöhen (siehe \autoref{fig:l_interpol}). Für die Interpolation wurde sich für eine UnivariateSpline zum 4. Grad aus der Scipy Bibliothek entschieden. Es wurde um einen Faktor von 10 interpoliert. 
 \begin{figure}
 \centering
 \input{img\Laser Daten Interpolation vs Originaldaten.png}
 \caption{Ausschnitt der Laserdaten Interpolation im Vergleich zu den Originaldaten}
 \label{fig:l_interpol}
 \end{figure}
-
+Die Kalibrierfunktion ordnet jeder existierenden Motorposition $P_{ist}$ eine "Soll-Position" $P_{soll}$ zu.\\
+Dafür wurden die Maxima der interpolierten Laserdaten durch die argrelextrema Funktion aus der Scipy Bibliothek bestimmt. Diese Maxima sind die $P_{ist}$, denen mithilfe einer linearen Regression ihre $P_{soll}$-Werte zugeordnet werden.
 
 \section{Diskussion der physikalischen Ergebnisse}
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
