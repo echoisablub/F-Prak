@@ -157,7 +157,8 @@ Die Kalibrierfunktion $\Delta(i)=P_{soll}(i)-P_{ist}(i)$ wird erst nur durch die
 \subsection{Berechnung des Spektrums}
 Wenn die Kalibrierfunktion bestimmt ist, wird die Ortsachse der gemittelten Weißlichtdaten durch sie korrigiert. Dafür wird die Funktion auf die Positionswerte addiert.\\
 Für die Fouriertransformation braucht es ein äquidistantes Gitter, welches die Probe-Messdaten und die Referenz-Messdaten gemeinsam haben müssen. Außerdem werden die gemittelten Messdaten über die korrigierte Ortsachse interpoliert und  dem erstellten Gitter zugeordnet.\\
-Jetzt werden die Weglängendifferenzen $\Delta s$ in Wegzeitdifferenzen $\Delta t=\frac{\Delta s}{c}$ umgerechnet.
+Jetzt werden die Weglängendifferenzen $\Delta s$ in Wegzeitdifferenzen $\Delta t=\frac{\Delta s}{c}$ umgerechnet und der Frequenzbereich ausgerechnet.\\\\
+Die Fouriertransformation selber wurde mithilfe der fft und fftschift Funktionen aus der Scipy Bibliothek gemacht. 
 
 \section{Diskussion der physikalischen Ergebnisse}
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
