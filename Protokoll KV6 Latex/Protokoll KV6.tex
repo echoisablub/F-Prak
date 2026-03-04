@@ -139,10 +139,18 @@ Jetzt wird der Schlitten wieder zuerst auf Position -6000, dann auf -5000 gebrac
 \subsection{Form der aufgenommenen Daten}
 Das Software erzeugt pro Messdurchgang jeweils eine Datei mit $21 \times 10000$ ASCII-Daten pro Messkanal\footnote{Channel 0: Probe, Channel 1: Referenz, Channel 2: Laser}. Dabei enthält die erste Spalte die Motorpositionen und die 20 anderen Spalten die eigentlichen Messwerte, die per der Einstellung der Software pro Motorposition aufgenommen wurden.\\\\
 Die Auswertung der Daten erfolgt mit einem Python Skript, das mit Visual Studio Code geschrieben wurde.\\
-Nachdem die auszuwertenden Daten eingelesen wurden, werden sie in zwei Arrays aufgeteilt, die einerseits die Motorpositionen und andererseits die tatsächlichen Messungen enthalten. Dann werden die Messungen gemittelt 
+Nachdem die auszuwertenden Daten eingelesen wurden, werden sie in zwei Arrays aufgeteilt, die einerseits die Motorpositionen und andererseits die tatsächlichen Messungen enthalten. Dann werden die Messungen gemittelt.
 
+\subsection{Kalibrierfunktion}
+Die Kalibrierfunktion wird anhand der Laserdaten bestimmt um das nicht-lineare Verhalten des Motors zu korrigieren.\\\\
+Dafür werden die Laserdaten zuerst interpoliert, um die Abtastrate zu erhöhen (siehe \ref{fig:l_interpol}). Für die Interpolation wurde sich für eine cubic Interpolation durch die interp1d Funktion aus der Scipy Bibliothek entschieden. Es wurde um einen Faktor von 10 interpoliert. 
+\begin{figure}
+\centering
+\input{img\Laser Daten Interpolation vs Originaldaten.png}
+\caption{Ausschnitt der Laserdaten Interpolation im Vergleich zu den Originaldaten}
+\label{fig:l_interpol}
+\end{figure}
 
-\subsection{Kalibrierungsfunktion}
 
 \section{Diskussion der physikalischen Ergebnisse}
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
