@@ -151,7 +151,13 @@ Dafür werden die Laserdaten zuerst interpoliert, um die Abtastrate zu erhöhen 
 \label{fig:l_interpol}
 \end{figure}
 Die Kalibrierfunktion ordnet jeder existierenden Motorposition $P_{ist}$ eine "Soll-Position" $P_{soll}$ zu.\\
-Dafür wurden die Maxima der interpolierten Laserdaten durch die argrelextrema Funktion aus der Scipy Bibliothek bestimmt. Diese Maxima sind die $P_{ist}$, denen mithilfe einer linearen Regression ihre $P_{soll}$-Werte zugeordnet werden.
+Dafür wurden die Maxima der interpolierten Laserdaten durch die argrelextrema Funktion aus der Scipy Bibliothek bestimmt. Diese Maxima sind die $P_{ist}$, denen mithilfe einer linearen Regression ihre $P_{soll}$-Werte zugeordnet werden.\\
+Die Kalibrierfunktion $\Delta(i)=P_{soll}(i)-P_{ist}(i)$ wird erst nur durch die Korrektur der Maxima berechnet und dann interpoliert, sodass sie auch auf die anderen Motorpositionen anwendbar ist.
+
+\subsection{Berechnung des Spektrums}
+Wenn die Kalibrierfunktion bestimmt ist, wird die Ortsachse der gemittelten Weißlichtdaten durch sie korrigiert. Dafür wird die Funktion auf die Positionswerte addiert.\\
+Für die Fouriertransformation braucht es ein äquidistantes Gitter, welches die Probe-Messdaten und die Referenz-Messdaten gemeinsam haben müssen. Außerdem werden die gemittelten Messdaten über die korrigierte Ortsachse interpoliert und  dem erstellten Gitter zugeordnet.\\
+Jetzt werden die Weglängendifferenzen $\Delta s$ in Wegzeitdifferenzen $\Delta t=\frac{\Delta s}{c}$ umgerechnet.
 
 \section{Diskussion der physikalischen Ergebnisse}
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
