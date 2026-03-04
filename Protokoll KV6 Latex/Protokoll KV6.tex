@@ -117,10 +117,17 @@ Mehr zu dem Unterschied zwischen \textit{input} und \textit{include} gibt es \hr
 
 \section{Experimenteller Aufbau}
 
-Prinzip der Messmethode, Einzelheiten der Apparatur, nur soweit sie speziﬁsch und zur
-Beurteilung der Qualit¨at der Messergebnisse von Bedeutung sind
-
+%Prinzip der Messmethode, Einzelheiten der Apparatur, nur soweit sie speziﬁsch und zur
+%Beurteilung der Qualit¨at der Messergebnisse von Bedeutung sind
+Das Fourier-Transform-Spektrometer, das in diesem Versuch verwendet wird, besteht hauptsächlich aus einem Michelson-Interferometer. Wie in \ref{•} zu sehen, werden in das Michelson-Interferometer zwei Strahlengänge gleichzeitig eingekoppelt: zum einen der zu untersuchende Weißlichtstrahlengang, zum anderen der Laserstrahlengang, der der Kalibrierung der optischen Weglängendifferenz des Interferometers dient.\\
+Die Weißlichtquelle hier ist eine Weißlicht-LED und der Laser ist ein frequenzverdoppelter diode-pumped solid-state-Laser mit einer Wellenlänge von $\lambda_L=532$nm.\\\\
+Das Michelson-Interferometer teilt die einfallenden Lichtbündel in zwei identische Lichtstrahlen auf, die beide über Spiegel wieder zurückgeworfen werden. Einer der beiden Spiegel des Interferometers lässt sich über einen Linearverschiebetisch angetrieben von einem Schrittmotor bewegen.\\
+Nach dem  Durchlaufen des Interferometers wird der Strahlengang des Lasers auf eine einzelne Fotodiode gelenkt, während der Weißlichtstrahl erneut durch einen halbdurchlässigen Spiegel geteilt wird. Einer der beiden Weißlichtstrahlen wird direkt auf eine Fotodiode gelenkt, der andere durchläuft die zu untersuchenden Proben, bevor er auch auf eine Fotodiode trifft.\\
+Alle drei messenden Photodioden sind über eine Signalverstärkung mit einem Computer verbunden.\\\\
+Die Steuerung des Motors und die Aufnahme der Daten erfolgt über ein Python GUI.\\
+Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch 50,5 nm. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, weswegen anhand der Laserdaten später eine Kabibrierungsfunktion aufgestellt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\
 \section{Versuchsdurchführung}
+
 \section{Auswertung der Messungen}
 
 Im Protokoll nicht unbedingt alle Messwerte einzeln auﬀ¨uhren, sondern nur die zur Berech-
