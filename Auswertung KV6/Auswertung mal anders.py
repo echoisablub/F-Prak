@@ -18,10 +18,16 @@ def average_measurements(measurements):
     return np.mean(measurements, axis=1)
 
 def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
-    f_interpol = interp1d(x, y, kind='cubic')
+    f_interpol = UnivariateSpline(x, y, k=4)
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
     return x_new, y_new, f_interpol
+
+'''def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
+    f_interpol = interp1d(x, y, kind='cubic')
+    x_new = np.linspace(x.min(), x.max(), len(x)*factor)
+    y_new = f_interpol(x_new)
+    return x_new, y_new, f_interpol'''
 
 def find_extrema(y):
     peaks = argrelextrema(y, np.greater)[0]
@@ -118,8 +124,8 @@ plt.xlabel("Motorposition")
 plt.ylabel("Korrektur (Soll - Ist)")
 plt.title("Korrektur der Motorpositionen")
 plt.legend()
-plt.show()'''
-
+plt.show()
+'''
 '''# Erzeugen der korrigierten Ortsachse für die Weißlicht-Daten
 # x sind die ursprünglichen Motorpositionen
 x_korr_led = positions_led + delta_interpolate(positions_led)
