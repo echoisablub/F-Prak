@@ -125,8 +125,16 @@ Das Michelson-Interferometer teilt die einfallenden Lichtbündel in zwei identis
 Nach dem  Durchlaufen des Interferometers wird der Strahlengang des Lasers auf eine einzelne Fotodiode gelenkt, während der Weißlichtstrahl erneut durch einen halbdurchlässigen Spiegel geteilt wird. Einer der beiden Weißlichtstrahlen wird direkt auf eine Fotodiode gelenkt, der andere durchläuft die zu untersuchenden Proben, bevor er auch auf eine Fotodiode trifft.\\
 Alle drei messenden Photodioden sind über eine Signalverstärkung mit einem Computer verbunden.\\\\
 Die Steuerung des Motors und die Aufnahme der Daten erfolgt über ein Python GUI.\\
-Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch 50,5 nm. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, weswegen anhand der Laserdaten später eine Kabibrierungsfunktion aufgestellt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\
+Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch $50,5$ nm. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, was in der Auswertung berücksichtigt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\\\
+Bevor die Messungen gestartet werden, muss die Position Null des Motors auf die Mitte des Interferenzmusters gesetzt werden.
+
 \section{Versuchsdurchführung}
+Fourier-Transform-Spektroskopie basiert darauf, die Weglängendifferenz der beiden Teilarme des Interferometers kontrolliert zu variieren. Durch die Variation der Weglängendifferenz wird auch die zeitliche Verzögerung der beiden Teilstrahlen $\Delta t$ variiert.\\\\
+Der Versuch lässt sich in zwei Abschnitte aufteilen. Im ersten Messdurchlauf ist ein Interferenz-Filter die Probe, im Zweiten eine Küvette mit molekularem Iod. Das Ziel ist es die Veränderung des Weißlichtspektrums unter Einfluss der beiden Proben zu untersuchen.\\\\
+Nach der Justage wird der Interferenzfilter in einen der beiden Weißlichtstrahlengänge eingebaut. Der Schlitten des Spiegels wird vom Nullpunkt bis zu Motorposition -6000 gefahren und dann 1000 Schritte zurückgefahren um das mögliche Spiel des Motors beim Umkehren des Schlittens zu verhindern.\\
+Nun erfolgt eine Messung mit 10000 Schritten -- von Motorposition -5000 bis 5000 -- mit folgenden Parametern in der Software: 20 Werte pro Messpunkt, 1 Schritt pro Messpunkt und einer Abklingzeit von 10 ms. Das Resultat pro Messdurchgang ist jeweils eine Datei mit $21 \times 10000$ Daten pro Fotodiode.\\\\
+Für den zweiten Messdurchlauf wird der Interferenzfilter durch die Glasküvette mit dem Iod ersetzt. An die Küvette wird eine Heizspannung von 22,5 V angesetzt, sodass die Küvettentemperatur $76,7\pm 0,1$°C beträgt. In den Referenz-Weißlichtstrahlengang wird eine leere Glasküvette eingebaut.\\
+Jetzt wird der Schlitten wieder zuerst auf Position -6000, dann auf -5000 gebracht. Nun folgt wieder eine Messung nach den oben genannten Parametern.
 
 \section{Auswertung der Messungen}
 
