@@ -129,19 +129,30 @@ Bevor die Messungen gestartet werden, muss die Position Null des Motors auf die 
 Fourier-Transform-Spektroskopie basiert darauf, die Weglängendifferenz der beiden Teilarme des Interferometers kontrolliert zu variieren. Durch die Variation der Weglängendifferenz wird auch die zeitliche Verzögerung der beiden Teilstrahlen $\Delta t$ variiert.\\\\
 Der Versuch lässt sich in zwei Abschnitte aufteilen. Im ersten Messdurchlauf ist ein Interferenz-Filter die Probe, im Zweiten eine Küvette mit molekularem Iod. Das Ziel ist es die Veränderung des Weißlichtspektrums unter Einfluss der beiden Proben zu untersuchen.\\\\
 Nach der Justage wird der Interferenzfilter in einen der beiden Weißlichtstrahlengänge eingebaut. Der Schlitten des Spiegels wird vom Nullpunkt bis zu Motorposition -6000 gefahren und dann 1000 Schritte zurückgefahren um das mögliche Spiel des Motors beim Umkehren des Schlittens zu verhindern.\\
-Nun erfolgt eine Messung mit 10000 Schritten -- von Motorposition -5000 bis 5000 -- mit folgenden Parametern in der Software: 20 Werte pro Messpunkt, 1 Schritt pro Messpunkt und einer Abklingzeit von 10 ms. Das Resultat pro Messdurchgang ist jeweils eine Datei mit $21 \times 10000$ Daten pro Fotodiode.\\\\
+Nun erfolgt eine Messung mit 10000 Schritten -- von Motorposition -5000 bis 5000 -- mit folgenden Parametern in der Software: 20 Werte pro Messpunkt, 1 Schritt pro Messpunkt und einer Abklingzeit von 10 ms.\\
 Für den zweiten Messdurchlauf wird der Interferenzfilter durch die Glasküvette mit dem Iod ersetzt. An die Küvette wird eine Heizspannung von 22,5 V angesetzt, sodass die Küvettentemperatur $76,7\pm 0,1$°C beträgt. In den Referenz-Weißlichtstrahlengang wird eine leere Glasküvette eingebaut.\\
 Jetzt wird der Schlitten wieder zuerst auf Position -6000, dann auf -5000 gebracht. Nun folgt wieder eine Messung nach den oben genannten Parametern.
 
 \section{Auswertung der Messungen}
+%Im Protokoll nicht unbedingt alle Messwerte einzeln auﬀ¨uhren, sondern nur die zur Berechnung der Ergebnisse wesentlichen Daten
+%Weitere Messwerte im Anhang
+\subsection{Form der aufgenommenen Daten}
+Das Software erzeugt pro Messdurchgang jeweils eine Datei mit $21 \times 10000$ ASCII-Daten pro Messkanal\footnote{Channel 0: Probe, Channel 1: Referenz, Channel 2: Laser}. Dabei enthält die erste Spalte die Motorpositionen und die 20 anderen Spalten die eigentlichen Messwerte, die per der Einstellung der Software pro Motorposition aufgenommen wurden.\\\\
+Die Auswertung der Daten erfolgt mit einem Python Skript, das mit Visual Studio Code geschrieben wurde.\\
+Nachdem die auszuwertenden Daten eingelesen wurden, werden sie in zwei Arrays aufgeteilt, die einerseits die Motorpositionen und andererseits die tatsächlichen Messungen enthalten. Dann werden die Messungen gemittelt 
 
-Im Protokoll nicht unbedingt alle Messwerte einzeln auﬀ¨uhren, sondern nur die zur Berech-
-nung der Ergebnisse wesentlichen Daten
-Weitere Messwerte im Anhang
+
+\subsection{Kalibrierungsfunktion}
 
 \section{Diskussion der physikalischen Ergebnisse}
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
 
+Aus den gemessenen Spektren sollen folgende Fragen beantwortet werden:
+1. Wie erkl¨art sich die spektrale Verteilung der Weisslicht-LED?
+2. Wie groß ist die spektrale Bandbreite des eingesetzten Absorptionsfilters und wo liegt
+dessen Zentralwellenl¨ange?
+3. Wie groß ist die experimentell ermittelte spektrale Aufl¨osung des Fourier-Transform-
+Spektrometers? Vergleichen Sie mit der theoretischen Aufl¨osungsgrenze.
 
 \section{Zusammenfassung}
 \subsection{}  Das will ich belegen \cite[p. 2]{erstesBuch}
