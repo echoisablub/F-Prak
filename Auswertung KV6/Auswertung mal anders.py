@@ -6,6 +6,8 @@ from scipy.constants import c
 from scipy.fft import fft, fftfreq, fftshift
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
+from scipy.ndimage import gaussian_filter1d
+
 
 # 1. Daten einlesen
 def load_data(filepath):
@@ -335,12 +337,13 @@ plt.show()'''
 # Wir nutzen np.log10, da OD im physikalischen Kontext meist dekadisch ist.
 # Ein kleines epsilon verhindert Division durch Null.
 epsilon = 1e-12
-od = -np.log10((spectrum_jod + epsilon) / (spectrum_ref))
+od = -np.log10((spectrum_jod_norm + epsilon) / (spectrum_ref_norm))
+#smoothed_od = gaussian_filter1d(od, sigma=2)
 
 # 2. Berechnung der Differentiellen Optischen Transmission (DOT)
 # Formel: DOT = (I - I0) / I0
-dot = (spectrum_jod - spectrum_ref) / (spectrum_ref)
-
+dot = (spectrum_jod_norm - spectrum_ref_norm) / (spectrum_ref_norm)
+#smoothed_dot = gaussian_filter1d(dot, sigma=2)
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
 # Darstellung der Optischen Dichte (OD)
