@@ -249,6 +249,7 @@ T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
 f_max_led=1/T_sample_led
 L_led=len(d_led)
 f_Ny=f_max_led/2
+print(T_sample_led, f_max_led, f_Ny)
 freq_axis=np.linspace(-f_Ny,f_Ny,L_led)
 spectrum_filter=abs(fftshift(fft(y_eq_filter/L_led)))
 spectrum_ref=abs(fftshift(fft(y_eq_ref/L_led)))
@@ -278,7 +279,7 @@ plt.show()'''
 
 # umrechnung frequenz zu wellenlänge
 # lambda_laser = c/(w*10**(12-9))
-lambda_led= c / (freq_axis * 1e-12) * 1e9
+lambda_led= c / (freq_axis * 1e-12) * 1e9 * 1e-24 #das 1e-24 ist noch nicht ganz justified TT
 
 #f_peak, _ = find_peaks(spectrum_jod_norm)
 #print(f_peak)
@@ -307,20 +308,20 @@ plt.legend()
 plt.show()'''
 
 # Filter Plot
-#plt.plot(lambda_led,spectrum_ref_norm, color='blue', label='ref')
-#plt.plot(lambda_led,spectrum_filter_norm, color='red',label='jod')
-plt.plot(freq_axis,spectrum_filter_norm, color='purple', label='jod')
-plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
+plt.plot(lambda_led,spectrum_filter_norm, color='red',label='filter')
+plt.plot(lambda_led,spectrum_ref_norm, color='blue', label='ref')
+#plt.plot(freq_axis,spectrum_filter_norm, color='purple', label='filter')
+#plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
 #plt.xlim(350,700)
 #plt.ylim(0,0.00052)
 #plt.xlim(2e26, 10e26)
 #plt.ylim(0, 0.00052)
-#plt.xlabel("Wellenlänge [nm]")
-plt.xlabel("Frequenz [PHz]")
+plt.xlabel("Wellenlänge [nm]")
+#plt.xlabel("Frequenz [PHz]")
 plt.ylabel("Amplitude")
 #plt.title("Laser Spektrum, Wellenlänge")
-#plt.title("LED Spektrum, Wellenlänge")
-plt.title("LED Spektrum, Frequenz")
+plt.title("LED Spektrum, Wellenlänge")
+#plt.title("LED Spektrum, Frequenz")
 plt.legend()
 plt.show()
 
@@ -364,4 +365,3 @@ ax2.legend()
 # plt.xlim(450, 700) 
 plt.tight_layout()
 plt.show()
-
