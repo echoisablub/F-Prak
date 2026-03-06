@@ -280,7 +280,7 @@ plt.show()'''
 
 # umrechnung frequenz zu wellenlänge
 # lambda_laser = c/(w*10**(12-9))
-lambda_led= c / freq_axis * 1e9
+lambda_led= c / freq_axis * 1e9 * 1e-12
 #lambda_led= c / (freq_axis * 1e-12) * 1e9 * 1e-24 #das 1e-24 ist noch nicht ganz justified TT
 
 #f_peak, _ = find_peaks(spectrum_jod_norm)
