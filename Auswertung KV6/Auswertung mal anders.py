@@ -64,6 +64,7 @@ file_path_led = "Auswertung KV6/data/Filter 1/Data Channel 0.dat"
 positions_led, measurements_led = load_data(file_path_led)
 mean_data_led = average_measurements(measurements_led)'''
 
+'''# Jod-Interferogramm:
 # Dateipfade
 path_jod = "data/Iod 1/Data Channel 0.dat"
 path_ref = "data/Iod 1/Data Channel 1.dat"
@@ -71,6 +72,18 @@ path_ref = "data/Iod 1/Data Channel 1.dat"
 # Einlesen und Mittelwertbildung
 pos_jod, meas_jod = load_data(path_jod)
 mean_jod = average_measurements(meas_jod)
+
+pos_ref, meas_ref = load_data(path_ref)
+mean_ref = average_measurements(meas_ref)'''
+
+#Filter-Interferogramm:
+#Dateipfade
+path_filter = "data/Filter 1/Data Channel 0.dat"
+path_ref = "data/Filter 1/Data Channel 1.dat"
+
+# Einlesen und Mittelwertbildung
+pos_filter, meas_filter = load_data(path_filter)
+mean_filter = average_measurements(meas_filter)
 
 pos_ref, meas_ref = load_data(path_ref)
 mean_ref = average_measurements(meas_ref)
@@ -137,7 +150,8 @@ x_korr_eq = np.linspace(x_korr_led.min(), x_korr_led.max(), len(x_korr_led))
 led_interpolate_func = UnivariateSpline(x_korr_led, mean_data_led, k=4)
 led_interferogram_korr = led_interpolate_func(x_korr_eq)'''
 
-# Korrektur der ursprünglichen Ortsachsen
+#Ortskorrektur Jod
+'''# Korrektur der ursprünglichen Ortsachsen
 x_korr_jod = pos_jod + delta_interpolate(pos_jod)
 x_korr_ref = pos_ref + delta_interpolate(pos_ref)
 
@@ -152,6 +166,24 @@ interpol_jod = UnivariateSpline(x_korr_jod, mean_jod, k=4)
 interpol_ref = UnivariateSpline(x_korr_ref, mean_ref, k=4)
 
 y_eq_jod = interpol_jod(x_eq)
+y_eq_ref = interpol_ref(x_eq)'''
+
+#Ortskorrektur Filter
+# Korrektur der ursprünglichen Ortsachsen
+x_korr_filter = pos_filter + delta_interpolate(pos_filter)
+x_korr_ref = pos_ref + delta_interpolate(pos_ref)
+
+# Erzeugen eines gemeinsamen, äquidistanten Gitters für die FFT
+# Wichtig: Benutze für beide das exakt gleiche Gitter!
+x_min = max(x_korr_filter.min(), x_korr_ref.min())
+x_max = min(x_korr_filter.max(), x_korr_ref.max())
+x_eq = np.linspace(x_min, x_max, 10000)
+
+# Interpolation für Jod und Referenz
+interpol_filter = UnivariateSpline(x_korr_filter, mean_filter, k=4)
+interpol_ref = UnivariateSpline(x_korr_ref, mean_ref, k=4)
+
+y_eq_filter = interpol_filter(x_eq)
 y_eq_ref = interpol_ref(x_eq)
 
 '''# Ortskorrektur Laser
@@ -177,24 +209,6 @@ ax2.legend()
 plt.show()'''
 
 # Ort zu Zeit Trafo
-
-# old code
-'''delta_s = x_korr*101*10**(-5)/fit.slope
-c = 3*10**8  # Lichtgeschwindigkeit in m/s
-delta_t = delta_s / c # Zeit in Sekunden
-
-# Fourier Transformation
-#T_sample= ((max(delta_t)-min(delta_t))/len(delta_t))*1e12 #in pentasec
-
-freq, spectrum = compute_spectrum(laser_interpolate_korr, delta_t)
-
-plt.plot(freq, spectrum, color='purple')
-plt.xlabel("Frequenz [Hz]")
-plt.ylabel("Amplitude")
-plt.title("Laser Spektrum")
-plt.show()
-'''
-
 #delta_s_laser = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
 #delta_t_laser = delta_s_laser / c
 #d_laser = delta_t_laser
@@ -219,7 +233,8 @@ w=np.linspace(-f_Ny,f_Ny,L_laser)
 W=abs(fftshift(fft(laser_interpolate_korr/L)))
 W_imp=W/max(W) # normierung, weil?
 '''
-T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
+# FT Jod
+'''T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
 f_max_led=1/T_sample_led
 L_led=len(d_led)
 f_Ny=f_max_led/2
@@ -227,6 +242,17 @@ freq_axis=np.linspace(-f_Ny,f_Ny,L_led)
 spectrum_jod=abs(fftshift(fft(y_eq_jod/L_led)))
 spectrum_ref=abs(fftshift(fft(y_eq_ref/L_led)))
 spectrum_jod_norm=spectrum_jod/max(spectrum_jod)
+spectrum_ref_norm=spectrum_ref/max(spectrum_ref)'''
+
+# FT Filter
+T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
+f_max_led=1/T_sample_led
+L_led=len(d_led)
+f_Ny=f_max_led/2
+freq_axis=np.linspace(-f_Ny,f_Ny,L_led)
+spectrum_filter=abs(fftshift(fft(y_eq_filter/L_led)))
+spectrum_ref=abs(fftshift(fft(y_eq_ref/L_led)))
+spectrum_filter_norm=spectrum_filter/max(spectrum_filter)
 spectrum_ref_norm=spectrum_ref/max(spectrum_ref)
 
 
@@ -261,24 +287,42 @@ lambda_led= c / (freq_axis * 1e-12) * 1e9
 # w_postion von -peak = -563.3664859593342
 # print(w[5000])
 
-#plt.plot(w,W_imp,color='purple')
-#plt.plot(freq_axis,spectrum_jod_norm, color='purple', label='jod')
-#plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
-plt.plot(lambda_led,spectrum_ref_norm, color='orange', label='ref')
-plt.plot(lambda_led,spectrum_jod_norm, color='purple',label='jod')
+#Jod Plot
+'''#plt.plot(w,W_imp,color='purple')
+plt.plot(freq_axis,spectrum_jod_norm, color='purple', label='jod')
+plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
+#plt.plot(lambda_led,spectrum_ref_norm, color='orange', label='ref')
+#plt.plot(lambda_led,spectrum_jod_norm, color='purple',label='jod')
 #plt.xlim(350,700)
 #plt.ylim(0,0.00052)
-plt.xlim(2e26, 10e26)
-plt.ylim(0, 0.00052)
-plt.xlabel("Wellenlänge [nm]")
-#plt.xlabel("Frequenz [PHz]")
+#plt.xlim(2e26, 10e26)
+#plt.ylim(0, 0.00052)
+#plt.xlabel("Wellenlänge [nm]")
+plt.xlabel("Frequenz [PHz]")
 plt.ylabel("Amplitude")
 #plt.title("Laser Spektrum, Wellenlänge")
-plt.title("LED Spektrum, Wellenlänge")
-#plt.title("Led Spektrum, Frequenz")
+#plt.title("LED Spektrum, Wellenlänge")
+#plt.title("LED Spektrum, Frequenz")
+plt.legend()
+plt.show()'''
+
+# Filter Plot
+#plt.plot(lambda_led,spectrum_ref_norm, color='blue', label='ref')
+#plt.plot(lambda_led,spectrum_filter_norm, color='red',label='jod')
+plt.plot(freq_axis,spectrum_filter_norm, color='purple', label='jod')
+plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
+#plt.xlim(350,700)
+#plt.ylim(0,0.00052)
+#plt.xlim(2e26, 10e26)
+#plt.ylim(0, 0.00052)
+#plt.xlabel("Wellenlänge [nm]")
+plt.xlabel("Frequenz [PHz]")
+plt.ylabel("Amplitude")
+#plt.title("Laser Spektrum, Wellenlänge")
+#plt.title("LED Spektrum, Wellenlänge")
+plt.title("LED Spektrum, Frequenz")
 plt.legend()
 plt.show()
-
 
 #Todo: optische dichte und so
 
@@ -293,18 +337,19 @@ plt.show()
 # Wir nutzen np.log10, da OD im physikalischen Kontext meist dekadisch ist.
 # Ein kleines epsilon verhindert Division durch Null.
 epsilon = 1e-12
-od = -np.log10((spectrum_jod + epsilon) / (spectrum_ref))
+od = -np.log10((spectrum_filter + epsilon) / (spectrum_ref))
 
 # 2. Berechnung der Differentiellen Optischen Transmission (DOT)
 # Formel: DOT = (I - I0) / I0
-dot = (spectrum_jod - spectrum_ref) / (spectrum_ref)
+dot = (spectrum_filter - spectrum_ref) / (spectrum_ref)
 
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
 # Darstellung der Optischen Dichte (OD)
 ax1.plot(lambda_led, od, color='darkred', label='Optische Dichte (OD)')
 ax1.set_ylabel("OD")
-ax1.set_title("Absorptionsspektrum der Jod-Probe (OD)")
+ax1.set_title("Absorptionsspektrum des Interferenzfilters (OD)")
+#ax1.set_xlim(-7.1e30, 7.1e30)
 ax1.grid(True)
 ax1.legend()
 # Darstellung der Differentiellen Transmission (DOT)
