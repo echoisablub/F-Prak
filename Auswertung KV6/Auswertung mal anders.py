@@ -245,7 +245,8 @@ spectrum_jod_norm=spectrum_jod/max(spectrum_jod)
 spectrum_ref_norm=spectrum_ref/max(spectrum_ref)'''
 
 # FT Filter
-T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
+#T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
+T_sample_led= ((max(d_led)-min(d_led))/len(d_led))
 f_max_led=1/T_sample_led
 L_led=len(d_led)
 f_Ny=f_max_led/2
@@ -279,7 +280,8 @@ plt.show()'''
 
 # umrechnung frequenz zu wellenlänge
 # lambda_laser = c/(w*10**(12-9))
-lambda_led= c / (freq_axis * 1e-12) * 1e9 * 1e-24 #das 1e-24 ist noch nicht ganz justified TT
+lambda_led= c / freq_axis * 1e9
+#lambda_led= c / (freq_axis * 1e-12) * 1e9 * 1e-24 #das 1e-24 ist noch nicht ganz justified TT
 
 #f_peak, _ = find_peaks(spectrum_jod_norm)
 #print(f_peak)
