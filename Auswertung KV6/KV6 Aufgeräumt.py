@@ -36,7 +36,7 @@ def linear_fit(extrema):
 
 def korrekturfunktion(data):
     # Analyse der Laser-Daten:
-    file_path = "Auswertung KV6/data/"+data+"/Data Channel 2.dat"
+    file_path = "data/"+data+"/Data Channel 2.dat"
     positions, measurements = load_data(file_path)
     mean_data_laser = average_measurements(measurements)
     
@@ -238,25 +238,25 @@ delta_func, laser_slope = korrekturfunktion(dataset)
 delta_func_filt, slope_filt = korrekturfunktion(dataset_filter)
 
 # JOD-PROBE (Kanal 0)
-path_jod = f"Auswertung KV6/data/{dataset}/Data Channel 0.dat"
+path_jod = f"data/{dataset}/Data Channel 0.dat"
 pos_jod, meas_jod = load_data(path_jod)
 mean_jod = average_measurements(meas_jod)
 x_final, y_jod_final = ortskorrektur(pos_jod, mean_jod, delta_func)
 
 # REFERENZ (Kanal 1)
-path_ref = f"Auswertung KV6/data/{dataset}/Data Channel 1.dat"
+path_ref = f"data/{dataset}/Data Channel 1.dat"
 pos_ref, meas_ref = load_data(path_ref)
 mean_ref = average_measurements(meas_ref)
 x_final, y_ref_final = ortskorrektur(pos_ref, mean_ref, delta_func)
 
 # FILTER-DATEN laden (Kanal 0)
-path_filt = f"Auswertung KV6/data/{dataset_filter}/Data Channel 0.dat"
+path_filt = f"data/{dataset_filter}/Data Channel 0.dat"
 pos_filt, meas_filt = load_data(path_filt)
 mean_filt = average_measurements(meas_filt)
 x_final_f, y_filt_corr = ortskorrektur(pos_filt, mean_filt, delta_func_filt)
 
 # REFERENZ-DATEN laden (Kanal 1)
-path_ref_filt = f"Auswertung KV6/data/{dataset_filter}/Data Channel 1.dat"
+path_ref_filt = f"data/{dataset_filter}/Data Channel 1.dat"
 pos_ref_f, meas_ref_f = load_data(path_ref_filt)
 mean_ref_f = average_measurements(meas_ref_f)
 x_final_f, y_ref_f_corr = ortskorrektur(pos_ref_f, mean_ref_f, delta_func_filt)
