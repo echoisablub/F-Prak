@@ -143,7 +143,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
     s_ref_wl = f_interp_ref(wl_equi)
     s_probe_wl = f_interp_probe(wl_equi)
 
-    # --- PLOT 2: WELLENLÄNGENSPEKTRUM ---
+    # PLOT 2: WELLENLÄNGENSPEKTRUM
     plt.subplot(1, 2, 2)
     plt.plot(wl_equi, s_ref_wl / np.max(s_ref_wl), label="Referenz", color="gray", alpha=0.5)
     plt.plot(wl_equi, s_probe_wl / np.max(s_ref_wl), label=label_probe, color="blue")
@@ -156,7 +156,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
     plt.tight_layout()
     plt.show()
 
-    # --- 3. BERECHNUNG DER OPTISCHEN DICHTE (OD) ---
+    # BERECHNUNG DER OPTISCHEN DICHTE (OD)
     epsilon = 1e-10 # Vermeidung DivByZero
     od = -np.log10((s_probe_wl + epsilon) / (s_ref_wl + epsilon))
     
@@ -165,13 +165,13 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
     plt.xlabel("Wellenlänge $\lambda$ [nm]")
     plt.ylabel("Optische Dichte (OD)")
     plt.title(f"Absorptionsprofil: {label_probe} (OD)")
-    plt.xlim(500, 650) # Fokus auf Iod-Übergänge [4, 5]
+    plt.xlim(400, 800) # Fokus auf Iod-Übergänge
     plt.ylim(0,0.6)
     plt.grid(True)
     plt.show()
 
 def plot_filter_analysis(freq, spec_ref, spec_filt):
-    # Nur positive Frequenzen (Sichtbarer Bereich ca. 400-800 THz) [12]
+    # Nur positive Frequenzen (Sichtbarer Bereich ca. 400-800 THz)
     mask = freq > 0
     f_pos = freq[mask]
     s_ref = spec_ref[mask]
@@ -191,9 +191,9 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.grid(True)
 
     # 2. WELLENLÄNGEN-TRANSFORMATION & INTERPOLATION
-    # Umrechnung: lambda = c / f [13]
+    # Umrechnung: lambda = c / f
     wl_raw = (c / (f_pos * 1e12)) * 1e9
-    wl_equi = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter [14]
+    wl_equi = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter
     
     # Kubische Interpolation auf nm-Gitter (wl_raw muss sortiert sein)
     interp_ref = interp1d(wl_raw[::-1], s_ref[::-1], kind='cubic')
@@ -215,7 +215,7 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.show()
 
     # DIFFERENTIELLE TRANSMISSION (DOT)
-    # Formel: (I - I0) / I0 [11]
+    # Formel: (I - I0) / I0
     dot = (s_filt_nm - s_ref_nm) / (s_ref_nm + 1e-10)
     
     plt.figure(figsize=(10, 4))
