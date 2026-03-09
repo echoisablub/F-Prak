@@ -141,6 +141,7 @@ plt.title("Korrektur der Motorpositionen")
 plt.legend()
 plt.show()
 '''
+
 '''# Erzeugen der korrigierten Ortsachse für die Weißlicht-Daten
 # x sind die ursprünglichen Motorpositionen
 x_korr_led = positions_led + delta_interpolate(positions_led)
@@ -226,7 +227,7 @@ d_led = delta_t_led
 
 # lambda_all = c / (freq_axis + 1e-12) * 1e9
 
-# FT 
+# FT Laser
 '''T_sample_laser= ((max(d_laser)-min(d_laser))/len(d))*1e12 #Ps
 f_max_laser=1/T_sample_laser
 L_laser=len(d_laser)
@@ -283,6 +284,7 @@ plt.show()'''
 # umrechnung frequenz zu wellenlänge
 # lambda_laser = c/(w*10**(12-9))
 lambda_led= c / freq_axis * 1e9 * 1e-12
+lamda_led_filter = c/ freq_axis * 1e9
 #lambda_led= c / (freq_axis * 1e-12) * 1e9 * 1e-24 #das 1e-24 ist noch nicht ganz justified TT
 
 #f_peak, _ = find_peaks(spectrum_jod_norm)
