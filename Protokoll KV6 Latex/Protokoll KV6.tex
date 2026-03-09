@@ -83,12 +83,24 @@ Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die
 \subsection{Weißlichtspektrum}
 
 \subsection{Interferometrie}
-Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht.\cite{OptikLip}
-
-
-
+Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht.\cite{OptikLip}\\\\
+Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig.
 
 \subsection{Kohärenz und Autokorrelation}
+Es wird zwischen räumlicher und zeitlicher Kohärenz unterschieden, wenn es um die Interferenzfähigkeit von Wellen geht. Zeitliche Kohärenz ist die Fähigkeit von Wellen mit unterschiedlichen zurückgelegten optischen Wegen zu interferieren, also ist die Phasenbeziehung bezüglich der Zeitachse fest und die Phasenbeziehung bezüglich der Raumachse variiert. Für die zeitlich stationären Interferenzmuster, die wir bei einem Michelson-Interferometer betrachten, muss zeitliche Kohärenz der überlagernden Wellen vorliegen\\
+Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfindet -- die Kohärenzzeit. Die Umkehrgröße zur Kohärenzzeit ist die spektrale Auflösung $\Delta\nu$.\\\\
+Das genaue Maß der Kohärenz zweier Wellen lässt sich durch die Kohärenzfunktion beschreiben.
+Wir betrachten das einfallende Wellenfeld an einem festen Punkt und aufgeteilt in zwei Anteile mit gleich großer Amplitude:
+$$E(t)=E_1(t)+E_2(t)$$
+Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus:
+\begin{equation}
+I(\Delta t)=<(E_1+E_2)(E_1+E_2)^*>=I_1+I_2+2Re<(E^*_1E_2)>=I_1+I_1+2Re\Gamma(\Delta t)
+\end{equation}
+Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des lichtfeldes $E_1(t)$ entspricht:
+\begin{equation}
+\Gamma(\Delta t)=<(E^*_1(t)\cdot E_1(t+\Delta t))> = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt
+\end{equation}
+
 
 \subsection{Fourier-Spektroskopie}
 
