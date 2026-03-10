@@ -33,11 +33,16 @@ plt.title("$\\beta$$-Funktionen in Abhängigkeit der z-Achse")
 plt.legend()
 plt.show()'''
 
-x_test = [2.381327, 9.38849]
-i_test = [-1.568, -0.505]
+x_1 = [2.381327, 9.38849]
+i_1 = [-1.568, -0.505]
+x_2 = [8.137709, 1.9711]
+i_2 = [-0.805, -1.455]
 
-i_test_neu = np.linspace(-1.568, -0.505, 5)
-fct = linregress(i_test, x_test)
+i_1_neu = np.linspace(-1.6, -0.5, 5)
+fct = linregress(i_1, x_1)
+i_2_neu = np.linspace(-1.5, -0.8, 5)
+fct2 = linregress(i_2, x_2)
 
-plt.plot(i_test_neu, fct, '-')
+plt.plot(i_1_neu, fct, '-', 'g')
+plt.plot(i_2_neu, fct2, '-', 'r')
 plt.show()
