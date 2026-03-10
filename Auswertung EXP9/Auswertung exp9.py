@@ -1,7 +1,8 @@
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
 
-# Emittanzbestimmung duch Q-Scan
+'''# Emittanzbestimmung duch Q-Scan
 
 
 epsilon_x = ...
@@ -30,4 +31,13 @@ plt.xlabel("Z Position [m]")
 plt.ylabel("$\\beta$-Funktion")
 plt.title("$\\beta$$-Funktionen in Abhängigkeit der z-Achse")
 plt.legend()
+plt.show()'''
+
+x_test = [2.381327, 9.38849]
+i_test = [-1.568, -0.505]
+
+i_test_neu = np.linspace(-1.568, -0.505, 5)
+fct = linregress(i_test, x_test)
+
+plt.plot(i_test_neu, fct, '-')
 plt.show()
