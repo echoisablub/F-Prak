@@ -142,7 +142,46 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \subsection{Korrektur der Weißlichtdaten und äquidistantes Gitter}
 
+Nachdem die laserspezifische Korrekturfunktion bestimmt wurde, erfolgt im nächsten Schritt die Linearisierung der Messdaten für die Jod-Probe und die Referenzmessung (bzw. der Filter- und Weißlichtmessung). Dieser Prozess ist entscheidend, um die mechanischen Unzulänglichkeiten des Verschiebetisches rechnerisch zu kompensieren und eine valide Basis für die Spektralanalyse zu schaffen.
+
+\begin{itemize}
+       \item Ortskorrektur der Weißlichtdaten:Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}=x_{ist}+\Delta(x_{ist})$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
+       \item Erzeugung eines äquidistanten Gitters: Eine zwingende mathematische Voraussetzung für die Durchführung der diskreten Fouriertransformation (FFT) ist eine streng äquidistante Abtastung des Signals. Da die Ortsachse nach der Addition der Korrekturwerte zwar linearisiert, aber die Abstände zwischen den Punkten nun ungleichmäßig verteilt sind, müssen die Datenpunkte neu angeordnet werden.
+       \item Interpolation auf eine gemeinsame Basis: Um die Proben- und Referenzdaten später physikalisch miteinander verrechnen zu können (z. B. für die Bestimmung der optischen Dichte), müssen beide Datensätze auf ein **exakt identisches und äquidistantes Gitter** transformiert werden. Hierzu wird ein gemeinsamer Ortsbereich definiert, der den Überlappungsbereich beider Messungen abdeckt. Die gemittelten Amplitudenwerte werden anschließend mittels einer erneuten Spline-Interpolation den neuen, gleichmäßig beabstandeten Stützstellen zugeordnet.
+\end{itemize}
+
+Dieser Schritt stellt sicher, dass die resultierenden Spektren nach der Transformation im Frequenzraum präzise aufeinanderliegen und apparative Einflüsse durch die Verrechnung mit dem Referenzstrahlengang effektiv eliminiert werden können.
+
+\subsubsection{Ortskorrektur Code}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.75]{img/Code_Ortskorrektur.png}
+       \caption{Ortskorrektur}
+\end{figure}
+
 \subsection{Transformation in den Zeit- und Frequenzraum}
+
+
+Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitter transformiert wurden, erfolgt der Übergang von der räumlichen Domäne in die zeitliche Verzögerung und schließlich in den Frequenzraum.
+
+\begin{itemize}
+       \item Transformation der Ortsachse in die Zeitverzögerung ($\Delta t$): Die korrigierte Motorachse $x_{\text{korr}}$ liegt zunächst in Einheiten von Motorschritten vor. Um eine physikalisch interpretierbare Zeitachse zu erhalten, wird die präzise bekannte Wellenlänge des Kalibrierlasers ($\lambda_L = 532,\text{nm}$) herangezogen. Da der Abstand zwischen zwei Intensitätsmaxima im Interferogramm einer Änderung der optischen Weglängendifferenz um exakt $\lambda_L$ entspricht, lässt sich über die Steigung $a$ der Laserkalibrierung (Motorschritte pro Maximum) die geometrische Weglängen- differenz $\Delta s$ berechnen. Unter Berücksichtigung der Lichtgeschwindigkeit $c$ wird diese in die zeitliche Verzögerung $\Delta t$ der Teilstrahlen überführt: $$\Delta t = \frac{\Delta s}{c} = \frac{x_{\text{korr}} \cdot \lambda_L}{a \cdot c}$$ Diese äquidistante Zeitachse bildet die notwendige Basis für die diskrete Fouriertransformation.
+       \item Spektralanalyse via Fouriertransformation: Die physikalische Grundlage für die Extraktion der spektralen Informationen bildet das Wiener-Khinchin-Theorem. Dieses besagt, dass das gemessene Interferogramm $\Delta I(\Delta t)$ mathematisch der Autokorrelationsfunktion des elektrischen Feldes entspricht und somit die Fouriertransformierte der spektralen Energiedichte $W(\omega)$ darstellt. Für die numerische Berechnung im Skript werden die Funktionen `fft` und `fftshift` aus der SciPy-Bibliothek verwendet:
+       \begin{itemize}
+              \item 'fft' (Fast Fourier Transform): Transformiert das zeitliche Signal in den komplexen Frequenzraum. Um physikalisch korrekte Amplituden zu erhalten, wird das Resultat durch die Anzahl der Datenpunkte $N$ normiert.
+              \item 'fftshift': Da der FFT-Algorithmus die Frequenzen standardmäßig in einer Reihenfolge ausgibt, die bei der Nullfrequenz beginnt, verschiebt diese Funktion die Frequenzkomponenten so, dass die Nullfrequenz in der Mitte des Arrays liegt. Dies ermöglicht eine intuitive Darstellung des symmetrischen Spektrums von $-f_{\text{Nyquist}}$ bis $+f_{\text{Nyquist}}$.
+       \end{itemize}
+       \item Sampling und Auflösungsgrenze: In diesem Schritt wird zudem die Abtastrate $T_{\text{sampl}}$ (zeitlicher Abstand zwischen zwei Messpunkten) definiert. Gemäß dem Nyquist-Shannon-Abtast- theorem begrenzt diese die maximal auflösbare Frequenz des Spektrometers ($f_{\text{max}} = 1 / (2 \cdot T_{\text{sampl}})$). Die theoretische spektrale Auflösung $\Delta \nu$ hingegen ist durch die maximale zeitliche Verzögerung $\Delta t_{\text{max}}$ begrenzt, die während des Scans erreicht wurde ($\Delta \nu = 1 / \Delta t_{\text{max}}$).
+\end{itemize}
+
+\subsubsection{FFT Code}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.62]{img/Code_fft.png}
+       \caption{FFT}
+\end{figure}
 
 \subsection{Berechnung von OD und DOT}
 
@@ -150,8 +189,7 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 
 \subsection{Berechnung des Spektrums}
-Wenn die Kalibrierfunktion bestimmt ist, wird die Ortsachse der gemittelten Weißlichtdaten durch sie korrigiert. 
-Dafür wird die Funktion auf die Positionswerte addiert.\\
+Wenn die Kalibrierfunktion bestimmt ist, wird die Ortsachse der gemittelten Weißlichtdaten  durch sie korrigiert. Dafür wird die Funktion auf die Positionswerte addiert.\\
 Für die Fouriertransformation braucht es ein äquidistantes Gitter, welches die Probe-Messdaten und die 
 Referenz-Messdaten gemeinsam haben müssen. Außerdem werden die gemittelten Messdaten über die korrigierte 
 Ortsachse interpoliert und  dem erstellten Gitter zugeordnet.\\
@@ -164,7 +202,7 @@ gemacht.
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
 
 Aus den gemessenen Spektren sollen folgende Fragen beantwortet werden:
-1. Wie erkl¨art sich die spektrale Verteilung der Weisslicht-LED?
+1. Wie erklärt sich die spektrale Verteilung der Weisslicht-LED?
 2. Wie groß ist die spektrale Bandbreite des eingesetzten Absorptionsfilters und wo liegt
 dessen Zentralwellenl¨ange?
 3. Wie groß ist die experimentell ermittelte spektrale Aufl¨osung des Fourier-Transform-
