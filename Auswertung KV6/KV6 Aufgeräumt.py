@@ -1,12 +1,11 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.interpolate import UnivariateSpline, interp1d
 from scipy.stats import linregress
 from scipy.signal import argrelextrema
 from scipy.constants import c
-from scipy.fft import fft, fftfreq, fftshift
-import matplotlib.pyplot as plt
-from scipy.signal import find_peaks
-from scipy.ndimage import gaussian_filter1d
+from scipy.fft import fft, fftshift
+
 
 # 1. Daten einlesen
 def load_data(filepath):
@@ -228,7 +227,6 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.ylim(-1,1)
     plt.grid(True)
     plt.show()
-
 
 dataset = "Iod 1"
 dataset_filter= "Filter 1"
