@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
+from scipy.optimize import fsolve
 
 '''# Emittanzbestimmung duch Q-Scan
 
@@ -33,19 +34,72 @@ plt.title("$\\beta$$-Funktionen in Abhängigkeit der z-Achse")
 plt.legend()
 plt.show()'''
 
+# ---TAG 2---
+
 # Strahl
-x_1 = [-7.715350, 10.871612]
-i_1 = [-2.303, 0.501]
-x_2 = [-4.931521, 9.554739]
-i_2 = [-2.816, 1.192]
+#x_werte
+# I_Q_1:-0.344
+x_1 = [2.381327, 1.701390, 0.543287, -0.559225, -1.598436, -2.668805, -3.962848, -5.083899, -6.339732, -7.617045, -9.388490]
+i_x_1 = [-1.568, -1.492, -1.407, -1.309, -1.192, -1.096, -0.989, -0.891, -0.789, -0.694, -0.505]
 
-i_1_neu = np.linspace(-1.3, 0.5)
-fct = linregress(i_1, x_1)
-i_2_neu = np.linspace(-2.9, 1.2)
-fct2 = linregress(i_2, x_2)
-fct_neu = fct.intercept + fct.slope*i_1_neu
-fct2_neu = fct2.intercept + fct2.slope*i_2_neu
+# I_Q_2: 0.657
+x_2 = [-8.137709, -6.398327, -4.906813, -3.324318, -1.858580, -0.200311, 1.271396, 1.971100]
+i_x_2 = [-0.806, -0.904, -1.009, -1.101, -1.194, -1.294, -1.394, -1.455]
 
-plt.plot(i_1_neu, fct_neu, 'r')
-plt.plot(i_2_neu, fct2_neu, 'b')
+#I_D0: -1.236
+x_2_2=[-1.470172, -1.435137, -1.547972, -1.603483, -1.400256, -1.516494,-1.363436,	-1.541525,	-1.455577,	-1.573190,	-1.319472]
+i_x_2_2=[-0.342, -0.247, -0.149, -0.046,0.056, 0.151, 0.254, 0.352, 0.444, 0.547, 0.657]
+
+#y_werte
+# I_Q_1: 1.685
+y_1=[10.871612, 9.889948, 8.801943, 7.534783, 6.131194, 4.694049, 3.211998, 1.706693, 0.281157, -1.190804, -2.742777, -4.065295, -5.466554, -6.642288, -7.936796, -7.715350]
+i_y_1=[0.501, 0.305, 0.149, -0.056, -0.259, -0.457, -0.657 ,-0.852, -1.060, -1.258, -1.458, -1.661, -1.861, -2.054, -2.254, -2.303]
+# I_Q_2: 2.703
+y_2=[-2.816, -2.615, -2.410, -2.208, -2.022, -1.812, -1.619, -1.414, 1.454827, 2.047659, 2.478990, 3.106047, 3.716454, 4.340098, 4.959453, 5.699637, 6.337515, 7.170582, 7.937646, 8.636715, 9.554739]
+i_y_2=[	-4.931521, -3.839596, -3.017802, -2.195475, -1.261315, -0.548561, 	0.172940, 0.648720, -1.214, -1.018, -0.825, -0.613, -0.425, -0.220, -0.002, 0.186, 0.393, 0.586, 0.789, 0.987, 1.192]
+
+#I_D0: -0.7773577667316248
+y_2_2=[2.742641,2.801394,2.779676, 2.791666,2.826833,2.808116,2.835512,2.855125,2.802748, 2.883961,2.794510,2.875665]
+i_y_2_2=[1.685	,1.773	,1.900	,1.966	,2.095	,2.176	,2.281	,2.376	,2.469	,2.567	,2.681,	2.703	]
+
+i_x_1_neu = np.linspace(-9.4, 2.4)
+fct_x = linregress(i_x_1, x_1)
+i_x_2_neu = np.linspace(-8.2, 2)
+fct2_x = linregress(i_x_2, x_2)
+fct_x_neu = fct_x.intercept + fct_x.slope*i_x_1_neu
+fct2_x_neu = fct2_x.intercept + fct2_x.slope*i_x_2_neu
+
+i_x_2_2_neu = np.linspace(-0.4, 0, 11)
+
+x_intersection = (fct2_x.intercept-fct_x.intercept)/(fct_x.slope-fct2_x.slope)
+print(x_intersection)
+
+plt.plot(i_x_1_neu, fct_x_neu, 'r')
+plt.plot(i_x_2_neu, fct2_x_neu, 'b')
+plt.title("X-Ausrichtung")
+plt.show()
+
+plt.plot(i_x_2_2_neu, x_2_2, 'x')
+plt.title("Überprüfung X")
+plt.show()
+
+i_y_1_neu = np.linspace(-9.4, 2.4)
+fct_y = linregress(i_y_1, y_1)
+i_y_2_neu = np.linspace(-8.2, 2)
+fct2_y = linregress(i_y_2, y_2)
+fct_y_neu = fct_y.intercept + fct_y.slope*i_y_1_neu
+fct2_y_neu = fct2_y.intercept + fct2_y.slope*i_y_2_neu
+
+i_y_2_2_neu = np.linspace(-0.4, 0, 12)
+
+y_intersection = (fct2_y.intercept-fct_y.intercept)/(fct_y.slope-fct2_y.slope)
+print(y_intersection)
+
+plt.plot(i_y_1_neu, fct_y_neu, 'r')
+plt.plot(i_y_2_neu, fct2_y_neu, 'b')
+plt.title("Y-Ausrichtung")
+plt.show()
+
+plt.plot(i_y_2_2_neu, y_2_2, 'x')
+plt.title("Überprüfung Y")
 plt.show()
