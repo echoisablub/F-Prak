@@ -3,23 +3,22 @@ import matplotlib.pyplot as plt
 from scipy.stats import linregress
 from scipy.optimize import fsolve
 
-'''# Emittanzbestimmung duch Q-Scan
-
-
-epsilon_x = ...
-epsilon_y = ...
+# Emittanzbestimmung duch Q-Scan
+'''
+epsilon_x = 7.2867e-07
+epsilon_y = 1.9832e-06 
 
 # Beta Funktions Messung
 
-data = np.loadtxt("data/...")
-z_pos = data[:, 0] # in cm
-x_rms = data[:, 1] # in mm
-y_rms = data[:, 2] # in mm
+data = np.loadtxt("data/beta func")
+z_pos = data[1:4, 0] # in cm
+x_rms = data[1:4, 1] # in mm
+y_rms = data[1:4, 2] # in mm
 
 x_rms_m2 = (x_rms * 10**(-3))**2 # in m
 y_rms_m2 = (y_rms * 10**(-3))**2 # in m
 
-x_rms_new = np.array(...) + x_rms_m2 # hier wert von Q-Scan einfügen
+x_rms_new = np.array(140, 0.0421, 0.1615) + x_rms_m2 # hier wert von Q-Scan einfügen
 y_rms_new = np.array(...) + y_rms_m2 # hier punkt
 z_pos_new = np.array(...) + z_pos
 
@@ -72,7 +71,7 @@ fct2_x_neu = fct2_x.intercept + fct2_x.slope*i_x_2_neu
 i_x_2_2_neu = np.linspace(-0.4, 0, 11)
 
 x_intersection = (fct2_x.intercept-fct_x.intercept)/(fct_x.slope-fct2_x.slope)
-print(x_intersection)
+#print(x_intersection)
 
 plt.plot(i_x_1_neu, fct_x_neu, 'r')
 plt.plot(i_x_2_neu, fct2_x_neu, 'b')
@@ -93,7 +92,7 @@ fct2_y_neu = fct2_y.intercept + fct2_y.slope*i_y_2_neu
 i_y_2_2_neu = np.linspace(-0.4, 0, 12)
 
 y_intersection = (fct2_y.intercept-fct_y.intercept)/(fct_y.slope-fct2_y.slope)
-print(y_intersection)
+#print(y_intersection)
 
 plt.plot(i_y_1_neu, fct_y_neu, 'r')
 plt.plot(i_y_2_neu, fct2_y_neu, 'b')

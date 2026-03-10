@@ -1,0 +1,48 @@
+Theorie:
+Dipol, Quadripul
+
+Messmethoden
+    wie emittanz
+    quadrupolscan
+        nur mit matrizenformalismus
+    wie energie
+    strahlbasierte justage
+
+experimentelle anordnung
+
+messergebnisse
+reihenfolge ist egal
+logisch: strahltransport, justage, energie, emittanz 
+
+
+Energiemessung:
+Fehler selbst
+2 größen: beta,gamma : L +-1cm, Steigung
+Kinetische Energie, betagamma, gamma
+Impuls in KFV/10
+
+Emittanz:
+Fehler bereits gemacht
+Optische Funktionen am eingang vom Quadripol
+    gl 51 in
+    für fehler: elemente von x "fehlerfrei betrachtet" also bei beta= x_1/emitt = x_1/(x_1x_3-x_2^2)1/2 solala, aber basically emit mit fehler, x_1 fehlerfrei
+    Einheiten!!!
+
+
+strahlbreite fehler: 50mu m
+
+
+beta func: graf mit 5 punkten
+
+
+strahlbasierte justage
+I_D0 fehler: 
+    fehler= hälfte von scanschritt = delI/2
+    nicht ganz richtig, aber reicht für uns aus
+    eigentlich über kovarianzmatrix von I_D0 = b_2-b_1/a_1-a_2
+        V(a_1a_2b_1b_2)= blockmatrix mit oben links (a1b1) und unten links (a2b2)
+
+
+nach dem ersten Protokoll: zoom meeting, 15 min
+dann 2. version und easy peasy
+

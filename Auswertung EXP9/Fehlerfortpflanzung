@@ -1,0 +1,47 @@
+
+///
+
+fehlerfortpflanzung: vorlesung 3 p.21 (kovarianz und korrelationsmatix)
+
+fehler: 
+    aus vec b (strahlbreitenmessung)
+    Matrix A (systematischer natur) - aber jetzt: Fehlerfrei betrachten (vernünftige annahme, weil sehr klein)
+
+Nur Fehler aus strahlbreitenmessung (b) Fortpflanzen
+
+x = B * b 
+mit B = (A^T*A)^-1 * A^T
+
+wie Kovarianzmatrix von x (V(x)) aus b:
+im skript: Lineare mehrdimensionale Tranfo
+V(x)=B*V(b)*B^T
+
+und dann next step: Kovarianzmatrix von Emitanz (V(emitt)) 1x1 matrix
+V(emitt)= varianz der Emitanz = ?
+weil emitt= keine linare func
+also skript: Algm gesetz der fehlerfortpflanzung: anstatt B: Jacobi Matrix J (part. Abl.)
+
+V(emitt)= J*V(b)*J^T
+J= 1x3 Matrix = (demitt/dx_1 , demitt/dx_2 , demitt/dx_3)
+
+V(b)=?
+nicht diag elemente 0 -> diagonale matrix (varianzen (fehler^2) von b)
+
+y=ax^n mit a=1, n=2
+sigma_s=del
+sigma_s^2= 2s del
+
+V(b)= hauptdiag:((2S_1 del)^2,(2S_2 del)^2,...,(2S_n del)^2)
+
+fehlerquellen: 
+    kalibrierung: 1pix=250 mu m
+    fehler der auflösung vom system: sigma= 250mu/sqrt(12)
+
+    instabilität des stromkreises: also rauscht der bereich
+    elektronisches rauschen
+    distkretisierung der intensitäten: nicht kondinuierlich also Nieveaus N=2^n =2^8 (weil wir haben 8 bit kamera)
+
+    "wahre Fehler"= 50 mu meter
+    aber muss man selber abschätzen
+
+Zuerst V(b) erstellen, Kovarianzmatrix der quadrierten Strahlbreitenmessung

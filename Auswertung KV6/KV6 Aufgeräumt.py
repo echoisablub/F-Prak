@@ -90,7 +90,7 @@ def fft_spectrum(x_eq, y_eq, laser_slope):
     L = len(delta_t_axis)
     t_range = np.max(delta_t_axis) - np.min(delta_t_axis)
     
-    # Tsampl oft in ps angegeben (Faktor 1e12), um handliche Frequenzwerte zu erhalten.
+    # Tsampl oft in Ps angegeben (Faktor 1e12), um handliche Frequenzwerte zu erhalten.
     T_sampl = (t_range / L) * 1e12 
     f_max = 1 / T_sampl
     f_ny = f_max / 2
@@ -107,7 +107,7 @@ def fft_spectrum(x_eq, y_eq, laser_slope):
 
     return freq_axis, spectrum_abs
 
-def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
+def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     # 1. Vorbereitung: Nur positive Frequenzen betrachten (FFT ist symmetrisch)
     # Da freq von -f_nyquist bis +f_nyquist läuft, nehmen wir nur die rechte Hälfte
     mask = freq > 0
@@ -122,7 +122,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
     plt.plot(f_pos, s_probe_pos / np.max(s_ref_pos), label=f"{label_probe} (normiert)", color="darkred")
     plt.xlabel("Frequenz $f$ [THz]")
     plt.ylabel("Spektrale Energiedichte $W(f)$")
-    plt.title("Spektren im Frequenzraum")
+    plt.title("Iod Spektrum im Frequenzraum")
     plt.xlim(350, 750) # Bereich für sichtbares Licht (ca. 0.35 - 0.75 PHz) [2]
     plt.ylim(0, 0.0005)
     plt.legend()
@@ -148,7 +148,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
     plt.plot(wl_equi, s_probe_wl / np.max(s_ref_wl), label=label_probe, color="blue")
     plt.xlabel("Wellenlänge $\lambda$ [nm]")
     plt.ylabel("Amplitude")
-    plt.title("Äquidistante Wellenlängenspektren")
+    plt.title("Wellenlängenspektren - Iod")
     plt.xlim(400, 800)
     plt.legend()
     plt.grid(True)
@@ -164,8 +164,8 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod"):
     plt.xlabel("Wellenlänge $\lambda$ [nm]")
     plt.ylabel("Optische Dichte (OD)")
     plt.title(f"Absorptionsprofil: {label_probe} (OD)")
-    plt.xlim(400, 800) # Fokus auf Iod-Übergänge
-    plt.ylim(0,0.6)
+    plt.xlim(500, 700) # Fokus auf Iod-Übergänge
+    plt.ylim(0,0.7)
     plt.grid(True)
     plt.show()
 
@@ -180,7 +180,7 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.figure(figsize=(15, 5))
     plt.subplot(1, 2, 1)
     plt.plot(f_pos, s_ref / np.max(s_ref), label="Weißlicht (Ref)", color="gray")
-    plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter", color="orange")
+    plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter 2", color="orange")
     plt.xlabel("Frequenz $f$ [THz]")
     plt.ylabel("Normierte Intensität")
     plt.title("Spektren im Frequenzraum")
@@ -204,7 +204,7 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     # PLOT 2: ÄQUIDISTANTES WELLENLÄNGENSPEKTRUM
     plt.subplot(1, 2, 2)
     plt.plot(wl_equi, s_ref_nm / np.max(s_ref_nm), label="Weißlicht (Ref)", color="gray")
-    plt.plot(wl_equi, s_filt_nm / np.max(s_ref_nm), label="Filter", color="blue")
+    plt.plot(wl_equi, s_filt_nm / np.max(s_ref_nm), label="Filter 2", color="blue")
     plt.xlabel("Wellenlänge $\lambda$ [nm]")
     plt.ylabel("Intensität")
     plt.title("Äquidistante Wellenlängenspektren")
@@ -222,14 +222,14 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.axhline(0, color='black', linestyle='--')
     plt.xlabel("Wellenlänge $\lambda$ [nm]")
     plt.ylabel("DOT")
-    plt.title("Differentielle Transmission des Filters")
+    plt.title("Differentielle Transmission des Filters (2)")
     plt.xlim(450, 650) # Fokus auf den Absorptionsbereich des Filters
     plt.ylim(-1,1)
     plt.grid(True)
     plt.show()
 
-dataset = "Iod 1"
-dataset_filter= "Filter 1"
+dataset = "Iod 2"
+dataset_filter= "Filter 2"
 
 # Korrekturfunktion für Datensatz
 delta_func, laser_slope = korrekturfunktion(dataset)
