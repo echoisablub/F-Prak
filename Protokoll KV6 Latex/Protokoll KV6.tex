@@ -258,11 +258,6 @@ Für die grafische Darstellung und quantitative Analyse werden zwei komplementä
 Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spektren hervorgehoben werden, die andernfalls durch die spektrale Verteilung der LED überlagert würden. Dies ermöglicht letztlich die experimentelle Bestätigung theoretischer Erwartungen, wie etwa der äquidistanten Absorptionslinien des zweiatomigen Iod-Moleküls.
 
 \section{Diskussion der physikalischen Ergebnisse}
-Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
-
-Aus den gemessenen Spektren sollen folgende Fragen beantwortet werden:
-3. Wie groß ist die experimentell ermittelte spektrale Aufl¨osung des Fourier-Transform-
-Spektrometers? Vergleichen Sie mit der theoretischen Aufl¨osungsgrenze.
 
 \subsection{Spektren}
 \subsubsection{Laser}
@@ -354,7 +349,15 @@ Bei den ersten Messreihen sind die Intensitäten und das Rauschen der Spektren g
 
 \section{Zusammenfassung}
 
-
+Im Rahmen des Versuchs KV6 wurde die Fourier-Transform-Spektroskopie (FTS) im sichtbaren Spektralbereich untersucht. Ziel des Experiments war die Bestimmung des Emissionsspektrums einer Weißlicht-LED sowie der Absorptionsspektren eines Interferenzfilters und einer mit Iod gefüllten Küvette.\\\\
+Die methodische Grundlage bildete die Vermessung der zeitlichen Kohärenzfunktion (Autokorrelationsfunktion) mithilfe eines Michelson-Interferometers. Da die mechanische Bewegung des Linearverschiebetisches keine exakte Linearität aufwies, wurde eine numerische Kalibrierfunktion basierend auf einem simultan aufgenommenen Laser-Interferogramm ($\lambda_L=532nm$) erstellt. Mithilfe einer in Python programmierten Auswerteroutine wurden die Messdaten ortskorrigiert, äquidistanziert und schließlich mittels Fouriertransformation in den Frequenzraum überführt.\\\\
+Die physikalische Auswertung ergab folgende Resultate:
+\begin{itemize}
+       \item Für den Interferenzfilter wurde eine Zentralwellenlänge von ca. $506,6nm$ bei einer spektralen Bandbreite von $9,18nm$ ermittelt.
+       \item In den Iodspektren konnten die charakteristischen Absorptionslinien aufgelöst und als Vibrationsübergänge des Moleküls verifiziert werden.
+       \item Die experimentell bestimmte spektrale Auflösung lag mit ca. 0,6 PHz in der Größenordnung der theoretischen Auflösungsgrenze von 0,297 PHz.
+\end{itemize}
+Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtlinearität des Schrittmotors und thermische Instabilitäten, konnte das Funktionsprinzip der Fourier-Spektroskopie erfolgreich demonstriert und die Eignung der numerischen Datenkorrektur bestätigt werden.
 
 \newpage
 \pagenumbering{Alph}
@@ -370,6 +373,6 @@ Bei den ersten Messreihen sind die Intensitäten und das Rauschen der Spektren g
 
 \listoffigures %lof
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-Hierhin gehören in der Regel Originalmessprotokolle (wichtig) etc. 
+Originalmessprotokolle
 
 \end{document} 
