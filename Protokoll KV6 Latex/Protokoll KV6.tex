@@ -65,26 +65,26 @@ Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum
 
 \subsection{Interferometrie}
 Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht.\cite{OptikLip}\\\\
-Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig.\\
-Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft.
+Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig.\cite{vmappe}\\
+Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft.\cite{OptikLip}
 
 \subsection{Kohärenz und Autokorrelation}
 Es wird zwischen räumlicher und zeitlicher Kohärenz unterschieden, wenn es um die Interferenzfähigkeit von Wellen geht. Zeitliche Kohärenz ist die Fähigkeit von Wellen mit unterschiedlichen zurückgelegten optischen Wegen zu interferieren, also ist die Phasenbeziehung bezüglich der Zeitachse fest und die Phasenbeziehung bezüglich der Raumachse variiert. Für die zeitlich stationären Interferenzmuster, die wir bei einem Michelson-Interferometer betrachten, muss zeitliche Kohärenz der überlagernden Wellen vorliegen\\
-Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfindet -- die Kohärenzzeit. Die Umkehrgröße zur Kohärenzzeit ist die spektrale Auflösung $\Delta\nu$.\\\\
+Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfindet -- die Kohärenzzeit. Die Umkehrgröße zur Kohärenzzeit ist die spektrale Auflösung $\Delta\nu$.\cite{vmappe}\\\\
 Das genaue Maß der Kohärenz zweier Wellen lässt sich durch die Kohärenzfunktion beschreiben.
 Wir betrachten das einfallende Wellenfeld an einem festen Punkt und aufgeteilt in zwei Anteile mit gleich großer Amplitude:
 $$E(t)=E_1(t)+E_2(t)$$
-Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus:
+Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus\cite{vmappe}
 \begin{equation}
 I(\Delta t)=<(E_1+E_2)(E_1+E_2)^*>=I_1+I_2+2Re<(E^*_1E_2)>=I_1+I_1+2Re\Gamma(\Delta t)
 \end{equation}
-Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des lichtfeldes $E_1(t)$ entspricht:
+Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des lichtfeldes $E_1(t)$ entspricht\cite{vmappe}
 \begin{equation}
 \Gamma(\Delta t)=<(E^*_1(t)\cdot E_1(t+\Delta t))> = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt
 \end{equation}
 
 Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$. 
-In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima:
+In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima\cite{vmappe}
 \begin{equation}
 K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
 \end{equation}
@@ -152,10 +152,10 @@ Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verl�
 Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{itemize}
-       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \cref{fig:LaserDatenInterpolationvsOriginaldaten} gezeigt.
-       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm. In \cref{fig:LaserDatenInterpolationmitMaxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
-       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \cref{fig:Kalibrierfunktion}.
-       \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \cref{fig:KorrekturderMotorposition} sieht.
+       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \autoref{fig:LaserDatenInterpolationvsOriginaldaten} gezeigt.
+       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm. In \autoref{fig:LaserDatenInterpolationmitMaxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
+       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{fig:Kalibrierfunktion}.
+       \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \autoref{fig:KorrekturderMotorposition} sieht.
 \end{itemize}
 
 \subsubsection{Kalibrierfunktion Code}
@@ -327,6 +327,30 @@ $$\Delta\nu=\frac{1}{\Delta t}=0,297\text{PHz}=1,009\cdot 10^{-3}\text{nm}$$
 Experimentell lässt sich eine Signalbreite von 0,6 PHz aus dem Laserspektrum ablesen. Die Auflösung im Experiment ist 50\% größer als die theoretische Auflösungsgrenze.
 
 \subsection{Fehlerdiskussion}
+Bei dem experimentellen Aufbau gibt es mehrere Fehlerquellen. Die Interpolation der Laserdaten zum Aufbauen der Kalibrierfunktion ist eine der grundlegenden, da das Signal des Lasers Schwankungen hat, die sich durch alle restlichen Ergebnisse fortpflanzen. Das würde auch heißen, dass die Linienbreite des Lasers größer ist als angenommen, das Experiment hat also eine schlechtere Auflösung, als jetzt bestimmt.
+
+Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Für diesen Fehler wird in der Analyse der Daten durch die Korrekturfunktion gegengesteuert. Da die Spektren den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur gut gelangen ist. Diese Annahme wird auch von dem Vergleich des Lasersignals mit der korrigierten Ortsachse zu dem ursprünglich interpolierten Signal unterstützt (siehe \autoref{fig: korrvgl}).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/Vergleich Ursprüngliche vs Korrigierte Interpolation.png}
+	\caption{Vergleich zwischen der ursprünglichen Interpolation der Laserdaten und der Interpolation mit korrigierter Ortsachse}
+	\label{fig: korrvgl}
+\end{figure}
+\\\\
+Es wurden für jede Probe zwei Messreihen aufgenommen. Die Ergebnisse der jeweils ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die Ergebnisse der zweiten Messreihen und deuten auf einen beachtlichen systematischen Fehler hin, da die Auswertungsmethode die gleiche für alle Datensätze ist. In der oberen Auswertung sind die Ergebnisse der zweiten Messreihen zu sehen.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/Spektrum Filter.png}
+	\caption{Das in Messreihe 1 gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
+	\label{fig: filter1spek}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/Spektrum Iod.png}
+	\caption{Das in Messreihe 1 gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
+	\label{fig: iod1spek}
+\end{figure}
+Bei den ersten Messreihen sind die Intensitäten und das Rauschen der Spektren größer (siehe \autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messreihen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich schließen, dass die erste Justage qualitativ leicht schlechter war. Außerdem ist zwischen erster Justage und ersten Messreihen mehr Zeit vergangen als zwischen zweiter Justage und zweiten Messreihen, was heißt, dass das Spektroskop mehr Zeit hatte sich aufgrund von externen Faktoren, wie Temperaturschwankungen im Raum, kleine Vibrationen des Tisches und das Rein- und Rausgehen in und aus dem Raum um Proben auszutauschen, zu ändern.
 
 \section{Zusammenfassung}
 
