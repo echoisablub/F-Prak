@@ -15,8 +15,8 @@
 
 % Literaturangabe
 %\usepackage{biblatex}
-%\bibliographystyle{plain}
-\bibliographystyle{alpha} %http://sites.stat.psu.edu/~surajit/present/bib.htm
+\bibliographystyle{plain}
+%\bibliographystyle{alpha} %http://sites.stat.psu.edu/~surajit/present/bib.htm
 %\usepackage{natbib}
 %\bibliographystyle{plainnat}
 
@@ -146,10 +146,10 @@ Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verl�
 Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{itemize}
-       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen.
-       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm.
-       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt.
-       \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit.          
+       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \autoref{Laser Daten Interpolation vs Originaldaten} gezeigt.
+       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm. In \autoref{Laser Daten Interpolation mit Maxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
+       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{Kalibrierfunktion}.
+       \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \autoref{Korrektur der Motorposition} sieht.
 \end{itemize}
 
 \subsubsection{Kalibrierfunktion Code}
@@ -173,24 +173,28 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Laser Daten Interpolation vs Originaldaten.png}
+       \label{Laser Daten Interpolation vs Originaldaten}
        \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte)}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Laser Daten Interpolation mit Maxima (zoom).png}
+       \label{Laser Daten Interpolation mit Maxima}
        \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot)}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Kalibrierfunktion.png}
+       \label{Kalibrierfunktion}
        \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Extrema (gelbe x)}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Korrektur der Motorposition.png}
+       \label{Korrektur der Motorposition}
        \caption{Korrektur der Motorposition mit dem errechneten Delta (Soll Position - Ist Position)}
 \end{figure}
 
