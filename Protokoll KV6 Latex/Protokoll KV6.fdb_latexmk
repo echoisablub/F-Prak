@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6"] 1773232575 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.bbl" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6" 1773232575
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux" 1773232575 11923 6e6d171cac13763a04acdcd262f6b396 "pdflatex"
-  "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
+["bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6"] 1773235810 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.bbl" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6" 1773235810
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux" 1773235809 11908 498488e23b34039143318126a9543c1b "pdflatex"
+  "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
   "praktikum.bib" 1773232252 723 708ad80ede26594e534000f2af594d63 ""
   (generated)
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.blg"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.bbl"
-["pdflatex"] 1773232571 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.tex" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.pdf" "Protokoll KV6" 1773232575
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux" 1773232571 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.bbl" 1773232575 364 2c7a20a7da1ab59a94c5fc96a407d625 "bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.tex" 1773232571 30044 ac232b0b347fb54e50083d19b0a998ff ""
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.blg"
+["pdflatex"] 1773235806 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.tex" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.pdf" "Protokoll KV6" 1773235810
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux" 1773235806 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.bbl" 1773235810 380 b257f9efd983d7d4ca22acb1c0ecfff9 "bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.tex" 1773233555 30125 fb38f64811cef44838935b1c98a3c906 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/960px-Iodine_spectrum_visible.png" 1773225498 2178 006235f00c77b58567a012057269f272 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Absorsptionsprofil Iod 2 OD.png" 1773156889 91542 fbbf89f81b210a6a3cc47a106864ecf2 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Code_Korrekturfunktion.png" 1773159000 191230 0d1f2c884766fe56805377b84eb10e10 ""
@@ -19,6 +19,7 @@
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Code_fft.png" 1773159094 268624 733acb36857758e9e04f811fb764391b ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Code_stuff für korrekturfunktion.png" 1773164510 128733 b0ed055d97920774210593dddfc46882 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Differentielle Transmission Filter 2.png" 1773156889 71633 ffaf95753e7761a9ccf4d10cdc938f81 ""
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/FFT meme.png" 1773233394 465983 aca1a868698fda4f121c484d18b43183 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Kalibrierfunktion.png" 1773156889 62190 089650070394fb17d8f7614a43d61123 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Korrektur der Motorposition.png" 1773156889 117201 747faf5084c88e577cc02f4371d46920 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/img/Laser Daten Interpolation mit Maxima (zoom).png" 1773156889 237942 32cc1d199f1eaa35071f9b59739c65a4 ""
@@ -141,8 +142,8 @@
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1615302648 2432472 15134b493306b65340e200b07e4f06bc ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   (generated)
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.log"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.pdf"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.toc"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.aux"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.lof"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.toc"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/Protokoll KV6 Latex/Protokoll KV6.log"

@@ -15,8 +15,8 @@
 
 % Literaturangabe
 %\usepackage{biblatex}
-\bibliographystyle{plain}
-%\bibliographystyle{alpha} %http://sites.stat.psu.edu/~surajit/present/bib.htm
+%\bibliographystyle{plain}
+\bibliographystyle{alpha} %http://sites.stat.psu.edu/~surajit/present/bib.htm
 %\usepackage{natbib}
 %\bibliographystyle{plainnat}
 
@@ -37,6 +37,11 @@
 \author{Nico Kalogerakis \\ Léonie Lanz}
 
 \maketitle
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.12]{img/FFT meme.png}
+\end{figure}
 \newpage
 
 \tableofcontents
@@ -77,16 +82,16 @@ Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten T
 \Gamma(\Delta t)=<(E^*_1(t)\cdot E_1(t+\Delta t))> = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt
 \end{equation}
 
-Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$ [10]. 
+Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$. 
 In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima:
 \begin{equation}
 K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
 \end{equation}
-Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$ [11, 12].
+Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$.
 
 
 \subsection{Fourier-Spektroskopie}
-Das Funktionsprinzip der Fourier-Transform-Spektroskopie (FTS) beruht auf der Erkenntnis, dass die experimentell bestimmbare Autokorrelationsfunktion $I(\Delta t)$ die Fourier-Transformierte der spektralen Energiedichte $W(\omega)$ darstellt [13, 14]. 
+Das Funktionsprinzip der Fourier-Transform-Spektroskopie (FTS) beruht auf der Erkenntnis, dass die experimentell bestimmbare Autokorrelationsfunktion $I(\Delta t)$ die Fourier-Transformierte der spektralen Energiedichte $W(\omega)$ darstellt. 
 
 Geht man von einem Wellenfeld mit beliebig vielen Frequenzkomponenten aus, lässt sich das elektrische Feld als Integral beschreiben:
 \begin{equation}
@@ -101,7 +106,7 @@ Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann 
 W(\omega) = \int_{-\infty}^{\infty} \Delta I(\Delta t) e^{i\omega \Delta t} d(\Delta t)
 \end{equation}
 
-In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$ [17, 19, 20]. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$ [20, 21].
+In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$ [17, 19, 20]. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$.
 
 
 \section{Experimenteller Aufbau}
@@ -146,10 +151,10 @@ Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verl�
 Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{itemize}
-       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \autoref{Laser Daten Interpolation vs Originaldaten} gezeigt.
-       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm. In \autoref{Laser Daten Interpolation mit Maxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
-       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{Kalibrierfunktion}.
-       \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \autoref{Korrektur der Motorposition} sieht.
+       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \autoref{fig:LaserDatenInterpolationvsOriginaldaten} gezeigt.
+       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm. In \autoref{fig:LaserDatenInterpolationmitMaxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
+       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{fig:Kalibrierfunktion}.
+       \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \autoref{fig:KorrekturderMotorposition} sieht.
 \end{itemize}
 
 \subsubsection{Kalibrierfunktion Code}
@@ -171,29 +176,29 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Laser Daten Interpolation vs Originaldaten.png}
-       \label{Laser Daten Interpolation vs Originaldaten}
        \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte)}
+       \label{fig:LaserDatenInterpolationvsOriginaldaten}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Laser Daten Interpolation mit Maxima (zoom).png}
-       \label{Laser Daten Interpolation mit Maxima}
        \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot)}
+       \label{fig:LaserDatenInterpolationmitMaxima}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Kalibrierfunktion.png}
-       \label{Kalibrierfunktion}
        \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Extrema (gelbe x)}
+       \label{fig:Kalibrierfunktion}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.3]{img/Korrektur der Motorposition.png}
-       \label{Korrektur der Motorposition}
        \caption{Korrektur der Motorposition mit dem errechneten Delta (Soll Position - Ist Position)}
+       \label{fig:KorrekturderMotorposition}
 \end{figure}
 
 
@@ -203,8 +208,8 @@ Nachdem die laserspezifische Korrekturfunktion bestimmt wurde, erfolgt im nächs
 
 \begin{itemize}
        \item Ortskorrektur der Weißlichtdaten:Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}=x_{ist}+\Delta(x_{ist})$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
-       \item Erzeugung eines äquidistanten Gitters: Eine zwingende mathematische Voraussetzung für die Durchführung der diskreten Fouriertransformation (FFT) ist eine streng äquidistante Abtastung des Signals. Da die Ortsachse nach der Addition der Korrekturwerte zwar linearisiert, aber die Abstände zwischen den Punkten nun ungleichmäßig verteilt sind, müssen die Datenpunkte neu angeordnet werden.
-       \item Interpolation auf eine gemeinsame Basis: Um die Proben- und Referenzdaten später physikalisch miteinander verrechnen zu können (z. B. für die Bestimmung der optischen Dichte), müssen beide Datensätze auf ein **exakt identisches und äquidistantes Gitter** transformiert werden. Hierzu wird ein gemeinsamer Ortsbereich definiert, der den Überlappungsbereich beider Messungen abdeckt. Die gemittelten Amplitudenwerte werden anschließend mittels einer erneuten Spline-Interpolation den neuen, gleichmäßig beabstandeten Stützstellen zugeordnet.
+       \item Erzeugung eines äquidistanten Gitters: Eine zwingende mathematische Voraussetzung für die Durch-führung der diskreten Fouriertransformation (FFT) ist eine streng äquidistante Abtastung des Signals. Da die Ortsachse nach der Addition der Korrekturwerte zwar linearisiert, aber die Abstände zwischen den Punkten nun ungleichmäßig verteilt sind, müssen die Datenpunkte neu angeordnet werden.
+       \item Interpolation auf eine gemeinsame Basis: Um die Proben- und Referenzdaten später physikalisch miteinander verrechnen zu können (z. B. für die Bestimmung der optischen Dichte), müssen beide Datensätze auf ein exakt identisches und äquidistantes Gitter transformiert werden. Hierzu wird ein gemeinsamer Ortsbereich definiert, der den Überlappungsbereich beider Messungen abdeckt. Die gemittelten Amplitudenwerte werden anschließend mittels einer erneuten Spline-Interpolation den neuen, gleichmäßig beabstandeten Stützstellen zugeordnet.
 \end{itemize}
 
 Dieser Schritt stellt sicher, dass die resultierenden Spektren nach der Transformation im Frequenzraum präzise aufeinanderliegen und apparative Einflüsse durch die Verrechnung mit dem Referenzstrahlengang effektiv eliminiert werden können.
