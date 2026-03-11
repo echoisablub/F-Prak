@@ -10,7 +10,7 @@
 \usepackage{url}
 \usepackage{bookmark}
 \renewcommand{\UrlFont}{\small\tt} %smaller font for urls
-\usepackage[a4paper,lmargin={3cm},rmargin={3cm},tmargin={3cm},bmargin = {3cm}]{geometry}
+\usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
 
 
 % Literaturangabe
@@ -55,9 +55,12 @@ Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die
 %Für Details: Hinweise auf die Literatur
 \subsection{Weißlichtspektrum}
 
+Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. 440\,nm bis 480\,nm, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. 550\,nm bis 600\,nm reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei 604\,nm und 617\,nm beobachtet werden.
+
 \subsection{Interferometrie}
 Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht.\cite{OptikLip}\\\\
-Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig.
+Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig.\\
+Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft.
 
 \subsection{Kohärenz und Autokorrelation}
 Es wird zwischen räumlicher und zeitlicher Kohärenz unterschieden, wenn es um die Interferenzfähigkeit von Wellen geht. Zeitliche Kohärenz ist die Fähigkeit von Wellen mit unterschiedlichen zurückgelegten optischen Wegen zu interferieren, also ist die Phasenbeziehung bezüglich der Zeitachse fest und die Phasenbeziehung bezüglich der Raumachse variiert. Für die zeitlich stationären Interferenzmuster, die wir bei einem Michelson-Interferometer betrachten, muss zeitliche Kohärenz der überlagernden Wellen vorliegen\\
@@ -74,8 +77,31 @@ Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten T
 \Gamma(\Delta t)=<(E^*_1(t)\cdot E_1(t+\Delta t))> = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt
 \end{equation}
 
+Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$ [10]. 
+In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima:
+\begin{equation}
+K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
+\end{equation}
+Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$ [11, 12].
+
 
 \subsection{Fourier-Spektroskopie}
+Das Funktionsprinzip der Fourier-Transform-Spektroskopie (FTS) beruht auf der Erkenntnis, dass die experimentell bestimmbare Autokorrelationsfunktion $I(\Delta t)$ die Fourier-Transformierte der spektralen Energiedichte $W(\omega)$ darstellt [13, 14]. 
+
+Geht man von einem Wellenfeld mit beliebig vielen Frequenzkomponenten aus, lässt sich das elektrische Feld als Integral beschreiben:
+\begin{equation}
+E(t) = \frac{1}{2\pi} \int_{0}^{\infty} E_0(\omega)e^{-i\omega t}d\omega
+\end{equation}
+Unter der Annahme einer symmetrischen spektralen Energiedichte ($W(\omega) = W(-\omega)$) ergibt sich für den interferierenden Teil der Intensität $\Delta I(\Delta t)$ nach dem Wiener-Khinchin-Theorem der Zusammenhang [14-16]:
+\begin{equation}
+\Delta I(\Delta t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} W(\omega) e^{-i\omega \Delta t} d\omega
+\end{equation}
+Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann somit aus dem gemessenen Interferogramm das gesuchte Spektrum extrahiert werden [16-18]:
+\begin{equation}
+W(\omega) = \int_{-\infty}^{\infty} \Delta I(\Delta t) e^{i\omega \Delta t} d(\Delta t)
+\end{equation}
+
+In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$ [17, 19, 20]. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$ [20, 21].
 
 
 \section{Experimenteller Aufbau}
@@ -120,7 +146,7 @@ Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verl�
 Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{itemize}
-       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine `UnivariateSpline`-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen.
+       \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen.
        \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm.
        \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt.
        \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit.          
@@ -128,17 +154,46 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \subsubsection{Kalibrierfunktion Code}
 
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{img/Code_stuff für korrekturfunktion.png}
-\caption{Hilfsfunktionen für die Korrekturfunktion}
+\caption{Hilfsfunktionen für die Kalibrierfunktion}
 \end{figure}
 
 \begin{figure}[H]
        \centering
-       \includegraphics[scale=0.75]{img/Code_Korrekturfunktion.png}
-       \caption{Korrekturfunktion}
+       \includegraphics[scale=0.7]{img/Code_Korrekturfunktion.png}
+       \caption{Kalibrierfunktion}
 \end{figure}
+
+\subsubsection{Graphen}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.3]{img/Laser Daten Interpolation vs Originaldaten.png}
+       \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte)}
+\end{figure}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.3]{img/Laser Daten Interpolation mit Maxima (zoom).png}
+       \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot)}
+\end{figure}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.3]{img/Kalibrierfunktion.png}
+       \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Extrema (gelbe x)}
+\end{figure}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.3]{img/Korrektur der Motorposition.png}
+       \caption{Korrektur der Motorposition mit dem errechneten Delta (Soll Position - Ist Position)}
+\end{figure}
+
 
 \subsection{Korrektur der Weißlichtdaten und äquidistantes Gitter}
 

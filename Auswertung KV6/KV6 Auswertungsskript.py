@@ -136,6 +136,19 @@ w=np.linspace(-f_Ny,f_Ny,L)
 
 W=abs(fftshift(fft(laser_interpolate_korr/L)))
 
+lambda_all = c / (w + 1e-12) * 1e9
+
+plt.plot(lambda_all,w/max(w), color='orange', label='ref')
+#plt.xlim(2e26, 10e26)
+#plt.ylim(0, 0.00052)
+plt.xlabel("Wellenlänge [nm]")
+#plt.xlabel("Frequenz [Hz]")
+plt.ylabel("Amplitude")
+plt.title("Weißlichtspektrum Jod, Wellenlänge")
+#plt.title("Weißlichtspektrum Jod,, Frequenz")
+plt.legend()
+plt.show()
+
 plt.plot(w,W/max(W), color='purple')
 plt.xlim(0,1000)
 plt.ylim(0,0.25)
