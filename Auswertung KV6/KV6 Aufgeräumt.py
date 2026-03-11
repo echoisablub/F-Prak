@@ -168,6 +168,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     plt.ylim(0,0.7)
     plt.grid(True)
     plt.show()
+    
 
 def plot_filter_analysis(freq, spec_ref, spec_filt):
     # Nur positive Frequenzen (Sichtbarer Bereich ca. 400-800 THz)
