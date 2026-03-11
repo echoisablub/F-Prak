@@ -41,11 +41,6 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 - **Erzeugung der kontinuierlichen Korrekturfunktion:** Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $Δ(i)=P_{soll}​(i)−P_{ist​}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit.
 # Korrektur der Weißlichtdaten und äquidistantes Gitter
 
-Nachdem die Kalibrierung feststeht, wird sie auf die Proben- und Referenzdaten angewendet.
-
-- **Ortskorrektur:** Die ursprüngliche Ortsachse der Weißlichtdaten wird durch Addition der Korrekturfunktion begradigt.
-- **Äquidistanz:** Für die FFT ist ein äquidistantes Gitter zwingend erforderlich. Die korrigierten Daten müssen daher erneut auf ein gemeinsames Gitter für Probe und Referenz interpoliert werden.
-
 Nachdem die laserspezifische Korrekturfunktion bestimmt wurde, erfolgt im nächsten Schritt die Linearisierung der Messdaten für die Jod-Probe und die Referenzmessung (bzw. der Filter- und Weißlichtmessung). Dieser Prozess ist entscheidend, um die mechanischen Unzulänglichkeiten des Verschiebetisches rechnerisch zu kompensieren und eine valide Basis für die Spektralanalyse zu schaffen.
 
 - **Ortskorrektur der Weißlichtdaten:** Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}​=x_{ist}​+Δ(x_{ist}​)$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
@@ -54,9 +49,6 @@ Nachdem die laserspezifische Korrekturfunktion bestimmt wurde, erfolgt im nächs
 
 Dieser Schritt stellt sicher, dass die resultierenden Spektren nach der Transformation im Frequenzraum präzise aufeinanderliegen und apparative Einflüsse durch die Verrechnung mit dem Referenzstrahlengang effektiv eliminiert werden können.
 # Transformation in den Zeit- und Frequenzraum
-
-- **Ort zu Zeit:** Die Weglängendifferenz Δs wird unter Verwendung der Laserwellenlänge (λL​=532 nm) und der Lichtgeschwindigkeit c in die Zeitverzögerung Δt=Δs/c umgerechnet.
-- **Fouriertransformation:** Mithilfe der Funktionen `fft` und `fftshift` wird das Interferogramm (die Autokorrelationsfunktion) in das Spektrum transformiert. Laut Wiener-Khinchin-Theorem ist das Interferogramm die Fourier-Transformierte der spektralen Energiedichte.
 
 Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitter transformiert wurden, erfolgt der Übergang von der räumlichen Domäne in die zeitliche Verzögerung und schließlich in den Frequenzraum.
 
@@ -68,8 +60,14 @@ Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitt
     - **`fftshift`:** Da der FFT-Algorithmus die Frequenzen standardmäßig in einer Reihenfolge ausgibt, die bei der Nullfrequenz beginnt, verschiebt diese Funktion die Frequenzkomponenten so, dass die Nullfrequenz in der Mitte des Arrays liegt. Dies ermöglicht eine intuitive Darstellung des symmetrischen Spektrums von $-f_{\text{Nyquist}}$ bis $+f_{\text{Nyquist}}$.
 - **Sampling und Auflösungsgrenze:** In diesem Schritt wird zudem die Abtastrate $T_{\text{sampl}}$ (zeitlicher Abstand zwischen zwei Messpunkten) definiert. Gemäß dem Nyquist-Shannon-Abtasttheorem begrenzt diese die maximal auflösbare Frequenz des Spektrometers ($f_{\text{max}} = 1 / (2 \cdot T_{\text{sampl}})$). Die theoretische spektrale Auflösung $\Delta \nu$ hingegen ist durch die maximale zeitliche Verzögerung $\Delta t_{\text{max}}$ begrenzt, die während des Scans erreicht wurde ($\Delta \nu = 1 / \Delta t_{\text{max}}$).
 # Berechnung von OD und DOT
+Um die spezifischen Absorptionsmerkmale der untersuchten Proben – des Notch-Filters und der Iod-Küvette – präzise vom Emissionsprofil der Lichtquelle zu trennen, wird das Probenspektrum ($I$) mit einem simultan aufgenommenen Referenzspektrum ($I_0$) der reinen Weißlicht-LED verglichen. Da das Spektrum der LED kein flaches Plateau aufweist, sondern durch charakteristische Maxima (z. B. den Blaulicht-Peak bei ~450 nm) und apparative Artefakte wie „spektrale Löcher“ (bei ca. 604 nm und 617 nm) geprägt ist, ist diese Normierung essenziell, um echte Absorptionseffekte zu isolieren.
 
-Um die Absorptionsmerkmale der Proben (Notch-Filter und Iod-Küvette) hervorzuheben, vergleichst du das Probenspektrum (I) mit dem Referenzspektrum (I0​).
-- **Optische Dichte (OD):**$$ OD=−log10​(I/I0​)$$
-- **Differentielle optische Transmission (DOT):** $$DOT=(I−I0​)/I0$$
+Für die grafische Darstellung und quantitative Analyse werden zwei komplementäre Größen berechnet:
+
+- **Optische Dichte (OD):** Die optische Dichte beschreibt die Abschwächung des Lichts beim Durchgang durch die Probe auf einer logarithmischen Skala: $$OD = -\log_{10}\left(\frac{I}{I_0}\right)$$ Diese Darstellung eignet sich besonders für die Analyse der **Iod-Küvette**. Sie macht die feinen, oft eng beieinander liegenden Molekülübergänge (Vibrationsübergänge) im gelb-grünen Spektralbereich sichtbar, die im Rohspektrum aufgrund des geringen Signal-zu-Rausch-Verhältnisses und der starken Gesamtabsorption oft schwer aufzulösen sind.
+    
+- **Differentielle optische Transmission (DOT):** Die DOT stellt die relative Intensitätsänderung im Vergleich zur Referenz dar: $$DOT = \frac{I - I_0}{I_0}$$ Diese Metrik wird bevorzugt zur Charakterisierung des **Interferenzfilters** (Notch-Filter) herangezogen. Durch die DOT-Darstellung lassen sich die **Zentralwellenlänge** (ca. 515 nm) und die **spektrale Bandbreite** des Filters präzise bestimmen, da die Filterkurve hierbei direkt als Abweichung von der Nulllinie erscheint.
+    
+
+Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spektren hervorgehoben werden, die andernfalls durch die spektrale Verteilung der LED überlagert würden. Dies ermöglicht letztlich die experimentelle Bestätigung theoretischer Erwartungen, wie etwa der äquidistanten Absorptionslinien des zweiatomigen Iod-Moleküls.
 

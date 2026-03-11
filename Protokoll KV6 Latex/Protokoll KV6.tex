@@ -185,18 +185,14 @@ Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitt
 
 \subsection{Berechnung von OD und DOT}
 
+Um die spezifischen Absorptionsmerkmale der untersuchten Proben – des Notch-Filters und der Iod-Küvette – präzise vom Emissionsprofil der Lichtquelle zu trennen, wird das Probenspektrum ($I$) mit einem simultan aufgenommenen Referenzspektrum ($I_0$) der reinen Weißlicht-LED verglichen. Da das Spektrum der LED kein flaches Plateau aufweist, sondern durch charakteristische Maxima (z. B. den Blaulicht-Peak bei ~450 nm) und apparative Artefakte wie „spektrale Löcher“ (bei ca. 604 nm und 617 nm) geprägt ist, ist diese Normierung essenziell, um echte Absorptionseffekte zu isolieren.
 
-
-
-\subsection{Berechnung des Spektrums}
-Wenn die Kalibrierfunktion bestimmt ist, wird die Ortsachse der gemittelten Weißlichtdaten  durch sie korrigiert. Dafür wird die Funktion auf die Positionswerte addiert.\\
-Für die Fouriertransformation braucht es ein äquidistantes Gitter, welches die Probe-Messdaten und die 
-Referenz-Messdaten gemeinsam haben müssen. Außerdem werden die gemittelten Messdaten über die korrigierte 
-Ortsachse interpoliert und  dem erstellten Gitter zugeordnet.\\
-Jetzt werden die Weglängendifferenzen $\Delta s$ in Wegzeitdifferenzen $\Delta t=\frac{\Delta s}{c}$ 
-umgerechnet und der Frequenzbereich ausgerechnet.\\\\
-Die Fouriertransformation selber wurde mithilfe der fft und fftschift Funktionen aus der Scipy Bibliothek 
-gemacht. 
+Für die grafische Darstellung und quantitative Analyse werden zwei komplementäre Größen berechnet:
+\begin{itemize}
+       \item Optische Dichte (OD): Die optische Dichte beschreibt die Abschwächung des Lichts beim Durchgang durch die Probe auf einer logarithmischen Skala: $$OD = -\log_{10}\left(\frac{I}{I_0}\right)$$ Diese Darstellung eignet sich besonders für die Analyse der Iod-Küvette. Sie macht die feinen, oft eng beieinander liegenden Molekülübergänge (Vibrationsübergänge) im gelb-grünen Spektralbereich sichtbar, die im Rohspektrum aufgrund des geringen Signal-zu-Rausch-Verhältnisses und der starken Gesamtabsorption oft schwer aufzulösen sind.
+       \item Differentielle optische Transmission (DOT): Die DOT stellt die relative Intensitätsänderung im Vergleich zur Referenz dar: $$DOT = \frac{I - I_0}{I_0}$$ Diese Metrik wird bevorzugt zur Charakterisierung des Interferenzfilters (Notch-Filter) herangezogen. Durch die DOT-Darstellung lassen sich die Zentralwellenlänge (ca. 515 nm) und die spektrale Bandbreite des Filters präzise bestimmen, da die Filterkurve hierbei direkt als Abweichung von der Nulllinie erscheint.
+\end{itemize}
+Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spektren hervorgehoben werden, die andernfalls durch die spektrale Verteilung der LED überlagert würden. Dies ermöglicht letztlich die experimentelle Bestätigung theoretischer Erwartungen, wie etwa der äquidistanten Absorptionslinien des zweiatomigen Iod-Moleküls.
 
 \section{Diskussion der physikalischen Ergebnisse}
 Vergleich mit den theoretischen Erwartungen, evtl. auch mit Ergebnissen aus der Literatur
