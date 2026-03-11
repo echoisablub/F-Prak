@@ -82,26 +82,26 @@ In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht
 \begin{equation}
 K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
 \end{equation}
-Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$.
+Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$ [11, 12].
 
 
 \subsection{Fourier-Spektroskopie}
-Das Funktionsprinzip der Fourier-Transform-Spektroskopie (FTS) beruht auf der Erkenntnis, dass die experimentell bestimmbare Autokorrelationsfunktion $I(\Delta t)$ die Fourier-Transformierte der spektralen Energiedichte $W(\omega)$ darstellt. 
+Das Funktionsprinzip der Fourier-Transform-Spektroskopie (FTS) beruht auf der Erkenntnis, dass die experimentell bestimmbare Autokorrelationsfunktion $I(\Delta t)$ die Fourier-Transformierte der spektralen Energiedichte $W(\omega)$ darstellt [13, 14]. 
 
 Geht man von einem Wellenfeld mit beliebig vielen Frequenzkomponenten aus, lässt sich das elektrische Feld als Integral beschreiben:
 \begin{equation}
 E(t) = \frac{1}{2\pi} \int_{0}^{\infty} E_0(\omega)e^{-i\omega t}d\omega
 \end{equation}
-Unter der Annahme einer symmetrischen spektralen Energiedichte ($W(\omega) = W(-\omega)$) ergibt sich für den interferierenden Teil der Intensität $\Delta I(\Delta t)$ nach dem Wiener-Khinchin-Theorem der Zusammenhang:
+Unter der Annahme einer symmetrischen spektralen Energiedichte ($W(\omega) = W(-\omega)$) ergibt sich für den interferierenden Teil der Intensität $\Delta I(\Delta t)$ nach dem Wiener-Khinchin-Theorem der Zusammenhang [14-16]:
 \begin{equation}
 \Delta I(\Delta t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} W(\omega) e^{-i\omega \Delta t} d\omega
 \end{equation}
-Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann somit aus dem gemessenen Interferogramm das gesuchte Spektrum extrahiert werden:
+Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann somit aus dem gemessenen Interferogramm das gesuchte Spektrum extrahiert werden [16-18]:
 \begin{equation}
 W(\omega) = \int_{-\infty}^{\infty} \Delta I(\Delta t) e^{i\omega \Delta t} d(\Delta t)
 \end{equation}
 
-In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$.
+In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$ [17, 19, 20]. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$ [20, 21].
 
 
 \section{Experimenteller Aufbau}
