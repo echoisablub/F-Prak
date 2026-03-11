@@ -53,8 +53,10 @@
 
 \section{Einleitung}
 %Aufgabenstellung, Ziel der Messungen
-Der Kurzversuch 6 - Fourier-Transform-Spektroskopie dient der Einführung in das universelle Konzept der Fourier-Transform-Spektroskopie und dem Erlernen des Programmieren einer Auswertungsroutine. Zu didaktischen Zwecken wird hier sichtbares Licht verwendet anstelle von dem gängigen Infrarotlicht.
-Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die Absorptionsspektren von einem Interferenz-Filter und molekularem Iod zu bestimmen. Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
+Der Kurzversuch 6 - Fourier-Transform-Spektroskopie dient der Einführung in das universelle Konzept der Fourier-Transform-Spektroskopie und dem Erlernen des Programmierens einer Auswertungsroutine.\\
+Zu didaktischen Zwecken wird hier sichtbares Licht verwendet anstelle von dem gängigen Infrarotlicht.
+Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die Absorptionsspektren von einem Interferenz-Filter und von molekularem Iod zu bestimmen.\\
+Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
 
 \section{Theoretische Grundlagen}
 %Kurze Zusammenfassung der wichtigsten Überlegungen (Formeln), die zum Verständnis des Versuches notwendig sind
@@ -64,27 +66,27 @@ Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die
 Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. 440\,nm bis 480\,nm, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. 550\,nm bis 600\,nm reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei 604\,nm und 617\,nm beobachtet werden.
 
 \subsection{Interferometrie}
-Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht.\cite{OptikLip}\\\\
-Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig.\cite{vmappe}\\
-Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft.\cite{OptikLip}
+Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht. \cite{1}\\\\
+Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig. \cite{2}\\
+Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft. \cite{1}
 
 \subsection{Kohärenz und Autokorrelation}
 Es wird zwischen räumlicher und zeitlicher Kohärenz unterschieden, wenn es um die Interferenzfähigkeit von Wellen geht. Zeitliche Kohärenz ist die Fähigkeit von Wellen mit unterschiedlichen zurückgelegten optischen Wegen zu interferieren, also ist die Phasenbeziehung bezüglich der Zeitachse fest und die Phasenbeziehung bezüglich der Raumachse variiert. Für die zeitlich stationären Interferenzmuster, die wir bei einem Michelson-Interferometer betrachten, muss zeitliche Kohärenz der überlagernden Wellen vorliegen\\
-Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfindet -- die Kohärenzzeit. Die Umkehrgröße zur Kohärenzzeit ist die spektrale Auflösung $\Delta\nu$.\cite{vmappe}\\\\
+Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfindet -- die Kohärenzzeit. Die Umkehrgröße zur Kohärenzzeit ist die spektrale Auflösung $\Delta\nu$. \cite{2}\\\\
 Das genaue Maß der Kohärenz zweier Wellen lässt sich durch die Kohärenzfunktion beschreiben.
 Wir betrachten das einfallende Wellenfeld an einem festen Punkt und aufgeteilt in zwei Anteile mit gleich großer Amplitude:
 $$E(t)=E_1(t)+E_2(t)$$
-Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus\cite{vmappe}
+Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus\cite{2}
 \begin{equation}
 I(\Delta t)=<(E_1+E_2)(E_1+E_2)^*>=I_1+I_2+2Re<(E^*_1E_2)>=I_1+I_1+2Re\Gamma(\Delta t)
 \end{equation}
-Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des lichtfeldes $E_1(t)$ entspricht\cite{vmappe}
+Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des lichtfeldes $E_1(t)$ entspricht \cite{2}:
 \begin{equation}
 \Gamma(\Delta t)=<(E^*_1(t)\cdot E_1(t+\Delta t))> = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt
 \end{equation}
 
 Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$. 
-In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima\cite{vmappe}
+In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima \cite{2}:
 \begin{equation}
 K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
 \end{equation}
@@ -111,7 +113,14 @@ In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maxim
 
 
 \section{Experimenteller Aufbau}
-Das Fourier-Transform-Spektrometer, das in diesem Versuch verwendet wird, besteht hauptsächlich aus einem Michelson-Interferometer. Wie in ref zu sehen, werden in das Michelson-Interferometer zwei Strahlengänge gleichzeitig eingekoppelt: zum einen der zu untersuchende Weißlichtstrahlengang, zum anderen der Laserstrahlengang, der der Kalibrierung der optischen Weglängendifferenz des Interferometers dient.\\
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/versuchsaufbau.png}
+	\caption{Schematischer Aufbau des Fourier-Transform-Spektrometers}
+	\label{fig: michint}
+\end{figure}
+
+Das Fourier-Transform-Spektrometer, das in diesem Versuch verwendet wird, besteht hauptsächlich aus einem Michelson-Interferometer. Wie in \autoref{fig: michint} zu sehen, werden in das Michelson-Interferometer zwei Strahlengänge gleichzeitig eingekoppelt: zum einen der zu untersuchende Weißlichtstrahlengang, zum anderen der Laserstrahlengang, der der Kalibrierung der optischen Weglängendifferenz des Interferometers dient.\\
 Die Weißlichtquelle hier ist eine Weißlicht-LED und der Laser ist ein frequenzverdoppelter diode-pumped solid-state-Laser mit einer Wellenlänge von $\lambda_L=532$nm.\\\\
 Das Michelson-Interferometer teilt die einfallenden Lichtbündel in zwei identische Lichtstrahlen auf, die beide über Spiegel wieder zurückgeworfen werden. Einer der beiden Spiegel des Interferometers lässt sich über einen Linearverschiebetisch angetrieben von einem Schrittmotor bewegen.\\
 Nach dem  Durchlaufen des Interferometers wird der Strahlengang des Lasers auf eine einzelne Fotodiode gelenkt, während der Weißlichtstrahl erneut durch einen halbdurchlässigen Spiegel geteilt wird. Einer der beiden Weißlichtstrahlen wird direkt auf eine Fotodiode gelenkt, der andere durchläuft die zu untersuchenden Proben, bevor er auch auf eine Fotodiode trifft.\\
@@ -267,8 +276,7 @@ Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spe
 	\caption{Ausschnitt des Laserpektrums in Abhängigkeit der Wellenlänge}
 	\label{fig: laserspek}
 \end{figure}
-Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}), lässt sich eine Wellenlänge von 5.320037902684942e-07m ablesen. Diese entspricht der tatsächlichen Wellenlänge des Lasers $\lambda_L=532$nm und zeugt von einer korrekten Kalibrierfunktion, die auch für die weiteren Messwerte angewendet werden kann.
-
+Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}), lässt sich eine Wellenlänge von 532,01nm ablesen. Diese entspricht der tatsächlichen Wellenlänge des Lasers $\lambda_L=532$nm und zeugt von einer korrekten Kalibrierfunktion, die auch für die weiteren Messwerte angewendet werden kann.
 
 \subsubsection{Interferenz-Filter}
 \begin{figure}[!h]
@@ -302,14 +310,25 @@ Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_min+\frac{B}
 	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette}
 	\label{fig: iod2od}
 \end{figure}
-Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass das Referenzspektrum der leeren Küvette deutlich mehr Rauschen enthält. Das Rauschen, was bei dem Spektrum der Iod-Küvette zu sehen ist, ist außerdem gleichförmiger. Wie auch am Absorptionsprofil, dargestellt durch die optische Dichte (siehe \autoref{fig: iod2od}), erkennbar, wird durch das Iod unter anderem sehr viel von dem Rauschen absorbiert.\\
+Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass das Referenzspektrum der leeren Küvette deutlich mehr Rauschen enthält. Das Rauschen, was bei dem Spektrum der Iod-Küvette zu sehen ist, ist außerdem gleichförmiger. Wie auch am Absorptionsprofil erkennbar, dargestellt durch die optische Dichte (siehe \autoref{fig: iod2od}), wird durch das Iod unter anderem sehr viel von dem Rauschen absorbiert.\\
 Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. 420-670nm deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
+\\\\
+Das gemessene Iod-Spektrum passt zu Iod-Spektren, die in einer anderen Studie gemessen wurden (siehe \autoref{fig: iodlit}) \cite{4}.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{img/iod literatur2.png}
+	Measured I2 absorption cross-section shown over the full
+wavelength range at 1 nm resolution.
+	\caption{Gemessener $I_2$ Absorptionsquerschnitt \cite{4}}
+	\label{fig: iodlit}
+\end{figure}
+Das Maximum befindet sich im gleichen Wellenlängenbereich und hat eine ähnliche Form. Die kleineren Peaks entlang der Kurve unterscheiden sich leicht in Form, zeigen aber beide die Emissions- bzw. Absorptionsspektrallinien charakteristisch für Iod.
 \\\\
 Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette lassen sich viele klare Maxima erkennen. Diese spiegeln das Absorptionsspektrum von Iod wieder. Jedes Maximum repräsentiert eine Spektrallinie, die bei Iod im Bereich 500-700nm in hoher Anzahl auftreten. Das experimentell bestimmte Spektrum passt zu der theoretischen Erwartung (siehe \autoref{fig: iodtheo}). 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\linewidth]{img/960px-Iodine_spectrum_visible.png}
-	\caption{Das sichtbare Spektrum von Iod \cite{wikim}}
+	\caption{Das sichtbare Spektrum von Iod \cite{3}}
 	\label{fig: iodtheo}
 \end{figure}
 
@@ -345,7 +364,7 @@ Es wurden für jede Probe zwei Messreihen aufgenommen. Die Ergebnisse der jeweil
 	\caption{Das in Messreihe 1 gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
 	\label{fig: iod1spek}
 \end{figure}
-Bei den ersten Messreihen sind die Intensitäten und das Rauschen der Spektren größer (siehe \autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messreihen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich schließen, dass die erste Justage qualitativ leicht schlechter war. Außerdem ist zwischen erster Justage und ersten Messreihen mehr Zeit vergangen als zwischen zweiter Justage und zweiten Messreihen, was heißt, dass das Spektroskop mehr Zeit hatte sich aufgrund von externen Faktoren, wie Temperaturschwankungen im Raum, kleine Vibrationen des Tisches und das Rein- und Rausgehen in und aus dem Raum um Proben auszutauschen, zu ändern.
+Bei den ersten Messreihen sind die Intensitäten und das Rauschen der Spektren größer (siehe \autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messreihen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich schließen, dass die erste Justage qualitativ leicht schlechter war. Außerdem ist zwischen erster Justage und ersten Messreihen mehr Zeit vergangen als zwischen zweiter Justage und zweiten Messreihen, was heißt, dass das Spektrometer mehr Zeit hatte sich aufgrund von externen Faktoren, wie Temperaturschwankungen im Raum, kleine Vibrationen des Tisches und das Rein- und Rausgehen in und aus dem Raum um Proben auszutauschen, zu ändern.
 
 \section{Zusammenfassung}
 
@@ -365,14 +384,13 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 
 \section{Literatur}
 \thispagestyle{empty}
-\bibliography{praktikum.bib}
-\bibliographystyle{unsrt}
+\bibliographystyle{ieeetr}
+\bibliography{praktikum}
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \newpage
 
 \listoffigures %lof
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-Originalmessprotokolle
 
 \end{document} 
