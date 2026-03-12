@@ -67,7 +67,7 @@ Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle erm
 %Für Details: Hinweise auf die Literatur
 \subsection{Weißlichtspektrum}
 
-Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden.
+Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden. \cite{5}
 
 \subsection{Interferometrie}
 Interferometrie ist das Prinzip, mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht. \cite{1}\\\\
@@ -94,7 +94,7 @@ In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht
 \begin{equation}
 K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
 \end{equation}
-Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$.
+Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$. \cite{2}
 
 
 \subsection{Fourier-Spektroskopie}
@@ -104,16 +104,15 @@ Geht man von einem Wellenfeld mit beliebig vielen Frequenzkomponenten aus, läss
 \begin{equation}
 E(t) = \frac{1}{2\pi} \int_{0}^{\infty} E_0(\omega)e^{-i\omega t}d\omega
 \end{equation}
-Unter der Annahme einer symmetrischen spektralen Energiedichte ($W(\omega) = W(-\omega)$) ergibt sich für den interferierenden Teil der Intensität $\Delta I(\Delta t)$ nach dem Wiener-Khinchin-Theorem der Zusammenhang [14-16]:
+Unter der Annahme einer symmetrischen spektralen Energiedichte ($W(\omega) = W(-\omega)$) ergibt sich für den interferierenden Teil der Intensität $\Delta I(\Delta t)$ nach dem Wiener-Khinchin-Theorem der Zusammenhang:
 \begin{equation}
 \Delta I(\Delta t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} W(\omega) e^{-i\omega \Delta t} d\omega
 \end{equation}
-Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann somit aus dem gemessenen Interferogramm das gesuchte Spektrum extrahiert werden [16-18]:
+Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann somit aus dem gemessenen Interferogramm das gesuchte Spektrum extrahiert werden:
 \begin{equation}
 W(\omega) = \int_{-\infty}^{\infty} \Delta I(\Delta t) e^{i\omega \Delta t} d(\Delta t)
-\end{equation}
-
-In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$ [17, 19, 20]. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$.
+\end{equation}\\
+In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$. \cite{2}
 
 
 \section{Experimenteller Aufbau}
