@@ -36,18 +36,17 @@ sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.071
 sigma_epsilon_y = 0.045431*epsilon_y #result: 9.011189318965211e-08 m rad = 0.09011 mm mrad
 
 # Beta Funktions Messung
-'''
-data = np.loadtxt("data/beta func")
-z_pos = data[1:4, 0] # in cm
-x_rms = data[1:4, 1] # in mm
-y_rms = data[1:4, 2] # in mm
+'''Messungen x_rms, y_rms an den verschiedenen schirmen an z_pos'''
+z_pos = np.array([176.5, 233, 288, 343.5]) # in cm
+x_rms_beta = np.array([1.469368, 1.675064, 1.885123, 0.416260]) # in mm
+y_rms_beta = np.array([3.270433, 3.765737, 1.381060, 2.914094]) # in mm
 
-x_rms_m2 = (x_rms * 10**(-3))**2 # in m
-y_rms_m2 = (y_rms * 10**(-3))**2 # in m
+x_rms_m2 = (x_rms_beta * 10**(-3))**2 # in m
+y_rms_m2 = (y_rms_beta * 10**(-3))**2 # in m
 
-x_rms_new = np.array(140, 0.0421, 0.1615) + x_rms_m2 # hier wert von Q-Scan einfügen
-y_rms_new = np.array(...) + y_rms_m2 # hier punkt
-z_pos_new = np.array(...) + z_pos
+x_rms_new = x_vect_x[0] + x_rms_m2 # hier wert von Q-Scan einfügen als 5. punkt
+y_rms_new = x_vect_y[0] + y_rms_m2 
+z_pos_new = np.array([140]) + z_pos
 
 beta_x_func = x_rms_new/epsilon_x
 beta_y_func = y_rms_new/epsilon_y
@@ -56,12 +55,12 @@ plt.plot(z_pos_new, beta_x_func, '.', color='red', label="$\\beta_x$")
 plt.plot(z_pos_new, beta_y_func, '.', color='blue', label="$\\beta_y$")
 plt.xlabel("Z Position [m]")
 plt.ylabel("$\\beta$-Funktion")
-plt.title("$\\beta$$-Funktionen in Abhängigkeit der z-Achse")
+plt.title("$\\beta$-Funktionen in Abhängigkeit der z-Achse")
 plt.legend()
 plt.show()
 
 # ---TAG 2---
-
+'''
 # Strahl
 #x_werte
 # I_Q_1:-0.344
