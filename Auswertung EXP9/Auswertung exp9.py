@@ -26,6 +26,8 @@ p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
 # todo: ekin fehler, beta fehler, impuls fehler
 
 
+
+
 # Emittanzbestimmung duch Q-Scan
 '''zwei Messreihen, eine horizontal (x_RMS(I)), eine vertikal (y_RMS(I))'''
 I_pos = [0.923, 1.023, 1.121, 1.221, 1.316, 1.419, 1.519, 1.621, 1.724, 1.812, 1.919]
@@ -44,6 +46,21 @@ epsilon_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2) #result: 1.983489097
 # Fehlerfortpflanzung wurde in situ gemacht:
 sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.07115 mm mrad
 sigma_epsilon_y = 0.045431*epsilon_y #result: 9.011189318965211e-08 m rad = 0.09011 mm mrad
+
+
+# Twiss Parameter
+beta_x = x_vect_x[0]/(epsilon_x)
+alpha_x = - x_vect_x[1]/(epsilon_x)
+gamma_x = x_vect_x[2]/(epsilon_x)
+beta_y = x_vect_y[0]/(epsilon_y)
+alpha_y = - x_vect_y[1]/(epsilon_y)
+gamma_y = x_vect_y[2]/(epsilon_y)
+
+print(f"beta_x = {beta_x:.3}, alpha_x = {alpha_x:.3}, gamma_x = {gamma_x:.3}")
+print(f"beta_y = {beta_y:.3f}, alpha_y = {alpha_y:.3f} , gamma_y = {gamma_y:.3f} ")
+
+#beta_x = 0.578, alpha_x = -1.19, gamma_x = 4.19
+#beta_y = 0.814, alpha_y = -1.401 , gamma_y = 3.639 
 
 # Beta Funktions Messung
 '''Messungen x_rms, y_rms an den verschiedenen schirmen an z_pos'''
@@ -71,6 +88,7 @@ plt.show()
 
 # Beta-Funktion Fehlerfortpflanzung
 
+
 # ---TAG 2---
 
 # Strahlbasierte Justage
@@ -92,8 +110,8 @@ i_x_2_2=[-0.342, -0.247, -0.149, -0.046,0.056, 0.151, 0.254, 0.352, 0.444, 0.547
 y_1=[10.871612, 9.889948, 8.801943, 7.534783, 6.131194, 4.694049, 3.211998, 1.706693, 0.281157, -1.190804, -2.742777, -4.065295, -5.466554, -6.642288, -7.936796, -7.715350]
 i_y_1=[0.501, 0.305, 0.149, -0.056, -0.259, -0.457, -0.657 ,-0.852, -1.060, -1.258, -1.458, -1.661, -1.861, -2.054, -2.254, -2.303]
 # I_Q_2: 2.703
-y_2=[-2.816, -2.615, -2.410, -2.208, -2.022, -1.812, -1.619, -1.414, 1.454827, 2.047659, 2.478990, 3.106047, 3.716454, 4.340098, 4.959453, 5.699637, 6.337515, 7.170582, 7.937646, 8.636715, 9.554739]
-i_y_2=[	-4.931521, -3.839596, -3.017802, -2.195475, -1.261315, -0.548561, 	0.172940, 0.648720, -1.214, -1.018, -0.825, -0.613, -0.425, -0.220, -0.002, 0.186, 0.393, 0.586, 0.789, 0.987, 1.192]
+y_2=[	-4.931521, -3.839596, -3.017802, -2.195475, -1.261315, -0.548561, 	0.172940, 0.648720, 1.454827, 2.047659, 2.478990, 3.106047, 3.716454, 4.340098, 4.959453, 5.699637, 6.337515, 7.170582, 7.937646, 8.636715, 9.554739]
+i_y_2=[-2.816, -2.615, -2.410, -2.208, -2.022, -1.812, -1.619, -1.414, -1.214, -1.018, -0.825, -0.613, -0.425, -0.220, -0.002, 0.186, 0.393, 0.586, 0.789, 0.987, 1.192]
 
 #I_D0: -0.7773577667316248
 y_2_2=[2.742641,2.801394,2.779676, 2.791666,2.826833,2.808116,2.835512,2.855125,2.802748, 2.883961,2.794510,2.875665]
@@ -130,7 +148,7 @@ fct2_y_neu = fct2_y.intercept + fct2_y.slope*i_y_2_neu
 i_y_2_2_neu = np.linspace(-0.4, 0, 12)
 
 y_intersection = (fct2_y.intercept-fct_y.intercept)/(fct_y.slope-fct2_y.slope)
-#print(y_intersection)
+print(y_intersection)
 
 plt.plot(i_y_1_neu, fct_y_neu, 'r')
 plt.plot(i_y_2_neu, fct2_y_neu, 'b')
