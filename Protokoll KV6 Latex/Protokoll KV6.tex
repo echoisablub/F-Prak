@@ -12,7 +12,11 @@
 \usepackage{bookmark}
 \renewcommand{\UrlFont}{\small\tt} %smaller font for urls
 \usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
-
+\usepackage{siunitx} % Zur einfachen Verwendung von SI-Einheiten und korrekte Rundungen
+\sisetup{
+        locale = DE , % Deutsche Dezimalzeichen u.a.
+        per-mode = symbol, 
+    }
 
 % Literaturangabe
 %\usepackage{biblatex}
@@ -54,19 +58,19 @@
 \section{Einleitung}
 %Aufgabenstellung, Ziel der Messungen
 Der Kurzversuch 6 - Fourier-Transform-Spektroskopie dient der Einführung in das universelle Konzept der Fourier-Transform-Spektroskopie und dem Erlernen des Programmierens einer Auswertungsroutine.\\
-Zu didaktischen Zwecken wird hier sichtbares Licht verwendet anstelle von dem gängigen Infrarotlicht.
+Zu didaktischen Zwecken wird hier sichtbares Licht verwendet, anstelle von dem gängigen Infrarotlicht.
 Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die Absorptionsspektren von einem Interferenz-Filter und von molekularem Iod zu bestimmen.\\
-Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
+Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt, aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
 
 \section{Theoretische Grundlagen}
 %Kurze Zusammenfassung der wichtigsten Überlegungen (Formeln), die zum Verständnis des Versuches notwendig sind
 %Für Details: Hinweise auf die Literatur
 \subsection{Weißlichtspektrum}
 
-Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. 440\,nm bis 480\,nm, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. 550\,nm bis 600\,nm reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei 604\,nm und 617\,nm beobachtet werden.
+Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden.
 
 \subsection{Interferometrie}
-Interferometrie ist das Prinzip mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht. \cite{1}\\\\
+Interferometrie ist das Prinzip, mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht. \cite{1}\\\\
 Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig. \cite{2}\\
 Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft. \cite{1}
 
@@ -76,7 +80,7 @@ Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfinde
 Das genaue Maß der Kohärenz zweier Wellen lässt sich durch die Kohärenzfunktion beschreiben.
 Wir betrachten das einfallende Wellenfeld an einem festen Punkt und aufgeteilt in zwei Anteile mit gleich großer Amplitude:
 $$E(t)=E_1(t)+E_2(t)$$
-Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus\cite{2}
+Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus \cite{2}:
 \begin{equation}
 I(\Delta t)=<(E_1+E_2)(E_1+E_2)^*>=I_1+I_2+2Re<(E^*_1E_2)>=I_1+I_1+2Re\Gamma(\Delta t)
 \end{equation}
@@ -86,7 +90,7 @@ Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten T
 \end{equation}
 
 Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$. 
-In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima \cite{2}:
+In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima $I_{max}, I_{min}$ \cite{2}:
 \begin{equation}
 K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
 \end{equation}
@@ -121,20 +125,20 @@ In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maxim
 \end{figure}
 
 Das Fourier-Transform-Spektrometer, das in diesem Versuch verwendet wird, besteht hauptsächlich aus einem Michelson-Interferometer. Wie in \autoref{fig: michint} zu sehen, werden in das Michelson-Interferometer zwei Strahlengänge gleichzeitig eingekoppelt: zum einen der zu untersuchende Weißlichtstrahlengang, zum anderen der Laserstrahlengang, der der Kalibrierung der optischen Weglängendifferenz des Interferometers dient.\\
-Die Weißlichtquelle hier ist eine Weißlicht-LED und der Laser ist ein frequenzverdoppelter diode-pumped solid-state-Laser mit einer Wellenlänge von $\lambda_L=532$nm.\\\\
+Die Weißlichtquelle hier ist eine Weißlicht-LED und der Laser ist ein frequenzverdoppelter diode-pumped solid-state-Laser mit einer Wellenlänge von $\lambda_L=\qty{532}{nm}$.\\\\
 Das Michelson-Interferometer teilt die einfallenden Lichtbündel in zwei identische Lichtstrahlen auf, die beide über Spiegel wieder zurückgeworfen werden. Einer der beiden Spiegel des Interferometers lässt sich über einen Linearverschiebetisch angetrieben von einem Schrittmotor bewegen.\\
 Nach dem  Durchlaufen des Interferometers wird der Strahlengang des Lasers auf eine einzelne Fotodiode gelenkt, während der Weißlichtstrahl erneut durch einen halbdurchlässigen Spiegel geteilt wird. Einer der beiden Weißlichtstrahlen wird direkt auf eine Fotodiode gelenkt, der andere durchläuft die zu untersuchenden Proben, bevor er auch auf eine Fotodiode trifft.\\
 Alle drei messenden Photodioden sind über eine Signalverstärkung mit einem Computer verbunden.\\\\
 Die Steuerung des Motors und die Aufnahme der Daten erfolgt über ein Python GUI.\\
-Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch $50,5$ nm. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, was in der Auswertung berücksichtigt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\\\
+Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch \qty{50,5}{nm}. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, was in der Auswertung berücksichtigt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\\\
 Bevor die Messungen gestartet werden, muss die Position Null des Motors auf die Mitte des Interferenzmusters gesetzt werden.
 
 \section{Versuchsdurchführung}
 Fourier-Transform-Spektroskopie basiert darauf, die Weglängendifferenz der beiden Teilarme des Interferometers kontrolliert zu variieren. Durch die Variation der Weglängendifferenz wird auch die zeitliche Verzögerung der beiden Teilstrahlen $\Delta t$ variiert.\\\\
 Der Versuch lässt sich in zwei Abschnitte aufteilen. Im ersten Messdurchlauf ist ein Interferenz-Filter die Probe, im Zweiten eine Küvette mit molekularem Iod. Das Ziel ist es die Veränderung des Weißlichtspektrums unter Einfluss der beiden Proben zu untersuchen.\\\\
 Nach der Justage wird der Interferenzfilter in einen der beiden Weißlichtstrahlengänge eingebaut. Der Schlitten des Spiegels wird vom Nullpunkt bis zu Motorposition -6000 gefahren und dann 1000 Schritte zurückgefahren um das mögliche Spiel des Motors beim Umkehren des Schlittens zu verhindern.\\
-Nun erfolgt eine Messung mit 10000 Schritten -- von Motorposition -5000 bis 5000 -- mit folgenden Parametern in der Software: 20 Werte pro Messpunkt, 1 Schritt pro Messpunkt und einer Abklingzeit von 10 ms.\\
-Für den zweiten Messdurchlauf wird der Interferenzfilter durch die Glasküvette mit dem Iod ersetzt. An die Küvette wird eine Heizspannung von 22,5 V angesetzt, sodass die Küvettentemperatur $76,7\pm 0,1$°C beträgt. In den Referenz-Weißlichtstrahlengang wird eine leere Glasküvette eingebaut.\\
+Nun erfolgt eine Messung mit 10000 Schritten -- von Motorposition -5000 bis 5000 -- mit folgenden Parametern in der Software: 20 Werte pro Messpunkt, 1 Schritt pro Messpunkt und einer Abklingzeit von \qty{10}{ms}.\\
+Für den zweiten Messdurchlauf wird der Interferenzfilter durch die Glasküvette mit dem Iod ersetzt. An die Küvette wird eine Heizspannung von \qty{22,5}{V} angesetzt, sodass die Küvettentemperatur $76,7\pm 0,1$°C beträgt. In den Referenz-Weißlichtstrahlengang wird eine leere Glasküvette eingebaut.\\
 Jetzt wird der Schlitten wieder zuerst auf Position -6000, dann auf -5000 gebracht. Nun folgt wieder eine Messung nach den oben genannten Parametern.
 
 \section{Auswertung der Messungen}
@@ -157,13 +161,13 @@ Der erste Schritt im Skript ist die Mittelwertbildung der 20 Messwerte pro Posit
 \end{figure}
 
 \subsection{Kalibrierfunktion}
-Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verläuft und der Antrieb zudem ein gewisses Umkehrspiel aufweist, ist eine numerische Korrektur der Ortsachse nötig. Die Kalibrierung erfolgt anhand des Laser-Interferogramms (Kanal 2), da dessen Wellenlänge ($\lambda_{L}=532nm$) exakt bekannt ist.\\
+Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verläuft und der Antrieb zudem ein gewisses Umkehrspiel aufweist, ist eine numerische Korrektur der Ortsachse nötig. Die Kalibrierung erfolgt anhand des Laser-Interferogramms (Kanal 2), da dessen Wellenlänge ($\lambda_{L}=\qty{532}{nm}$) exakt bekannt ist.\\
 Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{itemize}
        \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \autoref{fig:LaserDatenInterpolationvsOriginaldaten} gezeigt.
-       \item Identifikation der Ist-Positionen ($P_{ist}$): Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen ($P_{ist}$) des Spiegels im Interferogramm. In \autoref{fig:LaserDatenInterpolationmitMaxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
-       \item Berechnung der Soll-Positionen ($P_{soll}$) via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{fig:Kalibrierfunktion}.
+       \item Identifikation der Ist-Positionen $P_{ist}$: Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen $P_{ist}$ des Spiegels im Interferogramm. In \autoref{fig:LaserDatenInterpolationmitMaxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
+       \item Berechnung der Soll-Positionen $P_{soll}$ via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{fig:Kalibrierfunktion}.
        \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \autoref{fig:KorrekturderMotorposition} sieht.
 \end{itemize}
 
@@ -185,28 +189,28 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{figure}[H]
        \centering
-       \includegraphics[scale=0.3]{img/Laser Daten Interpolation vs Originaldaten.png}
+       \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation vs Originaldaten.png}
        \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte)}
        \label{fig:LaserDatenInterpolationvsOriginaldaten}
 \end{figure}
 
 \begin{figure}[H]
        \centering
-       \includegraphics[scale=0.3]{img/Laser Daten Interpolation mit Maxima (zoom).png}
+       \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation mit Maxima (zoom).png}
        \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot)}
        \label{fig:LaserDatenInterpolationmitMaxima}
 \end{figure}
 
 \begin{figure}[H]
        \centering
-       \includegraphics[scale=0.3]{img/Kalibrierfunktion.png}
-       \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Extrema (gelbe x)}
+       \includegraphics[width=1\linewidth]{img/Kalibrierfunktion.png}
+       \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Maxima (gelbe x)}
        \label{fig:Kalibrierfunktion}
 \end{figure}
 
 \begin{figure}[H]
        \centering
-       \includegraphics[scale=0.3]{img/Korrektur der Motorposition.png}
+       \includegraphics[width=1\linewidth]{img/Korrektur der Motorposition.png}
        \caption{Korrektur der Motorposition mit dem errechneten Delta (Soll Position - Ist Position)}
        \label{fig:KorrekturderMotorposition}
 \end{figure}
@@ -217,8 +221,8 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 Nachdem die laserspezifische Korrekturfunktion bestimmt wurde, erfolgt im nächsten Schritt die Linearisierung der Messdaten für die Jod-Probe und die Referenzmessung (bzw. der Filter- und Weißlichtmessung). Dieser Prozess ist entscheidend, um die mechanischen Unzulänglichkeiten des Verschiebetisches rechnerisch zu kompensieren und eine valide Basis für die Spektralanalyse zu schaffen.
 
 \begin{itemize}
-       \item Ortskorrektur der Weißlichtdaten:Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}=x_{ist}+\Delta(x_{ist})$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
-       \item Erzeugung eines äquidistanten Gitters: Eine zwingende mathematische Voraussetzung für die Durch-führung der diskreten Fouriertransformation (FFT) ist eine streng äquidistante Abtastung des Signals. Da die Ortsachse nach der Addition der Korrekturwerte zwar linearisiert, aber die Abstände zwischen den Punkten nun ungleichmäßig verteilt sind, müssen die Datenpunkte neu angeordnet werden.
+       \item Ortskorrektur der Weißlichtdaten: Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}=x_{ist}+\Delta(x_{ist})$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
+       \item Erzeugung eines äquidistanten Gitters: Eine zwingende mathematische Voraussetzung für die Durchführung der diskreten Fouriertransformation (FFT) ist eine streng äquidistante Abtastung des Signals. Da die Ortsachse nach der Addition der Korrekturwerte zwar linearisiert, aber die Abstände zwischen den Punkten nun ungleichmäßig verteilt sind, müssen die Datenpunkte neu angeordnet werden.
        \item Interpolation auf eine gemeinsame Basis: Um die Proben- und Referenzdaten später physikalisch miteinander verrechnen zu können (z. B. für die Bestimmung der optischen Dichte), müssen beide Datensätze auf ein exakt identisches und äquidistantes Gitter transformiert werden. Hierzu wird ein gemeinsamer Ortsbereich definiert, der den Überlappungsbereich beider Messungen abdeckt. Die gemittelten Amplitudenwerte werden anschließend mittels einer erneuten Spline-Interpolation den neuen, gleichmäßig beabstandeten Stützstellen zugeordnet.
 \end{itemize}
 
@@ -238,7 +242,7 @@ Dieser Schritt stellt sicher, dass die resultierenden Spektren nach der Transfor
 Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitter transformiert wurden, erfolgt der Übergang von der räumlichen Domäne in die zeitliche Verzögerung und schließlich in den Frequenzraum.
 
 \begin{itemize}
-       \item Transformation der Ortsachse in die Zeitverzögerung ($\Delta t$): Die korrigierte Motorachse $x_{\text{korr}}$ liegt zunächst in Einheiten von Motorschritten vor. Um eine physikalisch interpretierbare Zeitachse zu erhalten, wird die präzise bekannte Wellenlänge des Kalibrierlasers ($\lambda_L = 532,\text{nm}$) herangezogen. Da der Abstand zwischen zwei Intensitätsmaxima im Interferogramm einer Änderung der optischen Weglängendifferenz um exakt $\lambda_L$ entspricht, lässt sich über die Steigung $a$ der Laserkalibrierung (Motorschritte pro Maximum) die geometrische Weglängen- differenz $\Delta s$ berechnen. Unter Berücksichtigung der Lichtgeschwindigkeit $c$ wird diese in die zeitliche Verzögerung $\Delta t$ der Teilstrahlen überführt: $$\Delta t = \frac{\Delta s}{c} = \frac{x_{\text{korr}} \cdot \lambda_L}{a \cdot c}$$ Diese äquidistante Zeitachse bildet die notwendige Basis für die diskrete Fouriertransformation.
+       \item Transformation der Ortsachse in die Zeitverzögerung $\Delta t$: Die korrigierte Motorachse $x_{\text{korr}}$ liegt zunächst in Einheiten von Motorschritten vor. Um eine physikalisch interpretierbare Zeitachse zu erhalten, wird die präzise bekannte Wellenlänge des Kalibrierlasers ($\lambda_L = \qty{532}{nm}$) herangezogen. Da der Abstand zwischen zwei Intensitätsmaxima im Interferogramm einer Änderung der optischen Weglängendifferenz um exakt $\lambda_L$ entspricht, lässt sich über die Steigung $a$ der Laserkalibrierung (Motorschritte pro Maximum) die geometrische Weglängen- differenz $\Delta s$ berechnen. Unter Berücksichtigung der Lichtgeschwindigkeit $c$ wird diese in die zeitliche Verzögerung $\Delta t$ der Teilstrahlen überführt: $$\Delta t = \frac{\Delta s}{c} = \frac{x_{\text{korr}} \cdot \lambda_L}{a \cdot c}$$ Diese äquidistante Zeitachse bildet die notwendige Basis für die diskrete Fouriertransformation.
        \item Spektralanalyse via Fouriertransformation: Die physikalische Grundlage für die Extraktion der spektralen Informationen bildet das Wiener-Khinchin-Theorem. Dieses besagt, dass das gemessene Interferogramm $\Delta I(\Delta t)$ mathematisch der Autokorrelationsfunktion des elektrischen Feldes entspricht und somit die Fouriertransformierte der spektralen Energiedichte $W(\omega)$ darstellt. Für die numerische Berechnung im Skript werden die Funktionen `fft` und `fftshift` aus der SciPy-Bibliothek verwendet:
        \begin{itemize}
               \item 'fft' (Fast Fourier Transform): Transformiert das zeitliche Signal in den komplexen Frequenzraum. Um physikalisch korrekte Amplituden zu erhalten, wird das Resultat durch die Anzahl der Datenpunkte $N$ normiert.
@@ -257,12 +261,12 @@ Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitt
 
 \subsection{Berechnung von OD und DOT}
 
-Um die spezifischen Absorptionsmerkmale der untersuchten Proben – des Notch-Filters und der Iod-Küvette – präzise vom Emissionsprofil der Lichtquelle zu trennen, wird das Probenspektrum ($I$) mit einem simultan aufgenommenen Referenzspektrum ($I_0$) der reinen Weißlicht-LED verglichen. Da das Spektrum der LED kein flaches Plateau aufweist, sondern durch charakteristische Maxima (z. B. den Blaulicht-Peak bei ~450 nm) und apparative Artefakte wie „spektrale Löcher“ (bei ca. 604 nm und 617 nm) geprägt ist, ist diese Normierung essenziell, um echte Absorptionseffekte zu isolieren.
+Um die spezifischen Absorptionsmerkmale der untersuchten Proben – des Notch-Filters und der Iod-Küvette – präzise vom Emissionsprofil der Lichtquelle zu trennen, wird das Probenspektrum $I$ mit einem simultan aufgenommenen Referenzspektrum $I_0$ der reinen Weißlicht-LED verglichen. Da das Spektrum der LED kein flaches Plateau aufweist, sondern durch charakteristische Maxima (z. B. den Blaulicht-Peak bei ~\qty{450}{nm}) und apparative Artefakte wie „spektrale Löcher“ (bei ca. \qty{604}{nm} und \qty{617}{nm}) geprägt ist, ist diese Normierung essenziell, um echte Absorptionseffekte zu isolieren.
 
 Für die grafische Darstellung und quantitative Analyse werden zwei komplementäre Größen berechnet:
 \begin{itemize}
        \item Optische Dichte (OD): Die optische Dichte beschreibt die Abschwächung des Lichts beim Durchgang durch die Probe auf einer logarithmischen Skala: $$OD = -\log_{10}\left(\frac{I}{I_0}\right)$$ Diese Darstellung eignet sich besonders für die Analyse der Iod-Küvette. Sie macht die feinen, oft eng beieinander liegenden Molekülübergänge (Vibrationsübergänge) im gelb-grünen Spektralbereich sichtbar, die im Rohspektrum aufgrund des geringen Signal-zu-Rausch-Verhältnisses und der starken Gesamtabsorption oft schwer aufzulösen sind.
-       \item Differentielle optische Transmission (DOT): Die DOT stellt die relative Intensitätsänderung im Vergleich zur Referenz dar: $$DOT = \frac{I - I_0}{I_0}$$ Diese Metrik wird bevorzugt zur Charakterisierung des Interferenzfilters (Notch-Filter) herangezogen. Durch die DOT-Darstellung lassen sich die Zentralwellenlänge (ca. 515 nm) und die spektrale Bandbreite des Filters präzise bestimmen, da die Filterkurve hierbei direkt als Abweichung von der Nulllinie erscheint.
+       \item Differentielle optische Transmission (DOT): Die DOT stellt die relative Intensitätsänderung im Vergleich zur Referenz dar: $$DOT = \frac{I - I_0}{I_0}$$ Diese Metrik wird bevorzugt zur Charakterisierung des Interferenzfilters (Notch-Filter) herangezogen. Durch die DOT-Darstellung lassen sich die Zentralwellenlänge (ca. \qty{515}{nm}) und die spektrale Bandbreite des Filters präzise bestimmen, da die Filterkurve hierbei direkt als Abweichung von der Nulllinie erscheint.
 \end{itemize}
 Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spektren hervorgehoben werden, die andernfalls durch die spektrale Verteilung der LED überlagert würden. Dies ermöglicht letztlich die experimentelle Bestätigung theoretischer Erwartungen, wie etwa der äquidistanten Absorptionslinien des zweiatomigen Iod-Moleküls.
 
@@ -272,59 +276,56 @@ Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spe
 \subsubsection{Laser}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{img/Laser Spektrum Wellenlänge.png}
+	\includegraphics[width=0.8\linewidth]{img/Laser Spektrum Wellenlänge.png}
 	\caption{Ausschnitt des Laserpektrums in Abhängigkeit der Wellenlänge}
 	\label{fig: laserspek}
 \end{figure}
-Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}), lässt sich eine Wellenlänge von 532,01nm ablesen. Diese entspricht der tatsächlichen Wellenlänge des Lasers $\lambda_L=532$nm und zeugt von einer korrekten Kalibrierfunktion, die auch für die weiteren Messwerte angewendet werden kann.
+Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}), lässt sich eine Wellenlänge von \qty{532,01}{nm} ablesen. Diese entspricht der tatsächlichen Wellenlänge des Lasers $\lambda_L=\qty{532}{nm}$ und zeugt von einer korrekten Kalibrierfunktion, die auch für die weiteren Messwerte angewendet werden kann.
 
 \subsubsection{Interferenz-Filter}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Spektrum Filter 2.png}
+	\includegraphics[width=0.8\linewidth]{img/Spektrum Filter 2.png}
 	\caption{Das gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
 	\label{fig: filter2spek}
 \end{figure}
 Das Spektrum des Interferen-Filters weicht hauptsächlich in den Intensitäten von dem Referenzspektrum ab (siehe \autoref{fig: filter2spek}). Die genaueren Abweichungen lassen sich an der differentiellen optischen Transmission des Filters erkennen (siehe \autoref{fig: filter2dot}).\\
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Differentielle Transmission Filter 2.png}
+	\includegraphics[width=0.8\linewidth]{img/Differentielle Transmission Filter 2.png}
 	\caption{Die differentielle Transmission des Filters bestimmt durch das Referenzspektrum der Weißlichtquelle}
 	\label{fig: filter2dot}
 \end{figure}
-Auffällig sind hier vor allem die starke Absorption in einem Wellenlängenbereich von etwa 495-520nm. Der Filter filtert also grünes Licht in einem schmalen Bereich, was für einen schmalbandigen Interferenz-Filter spricht.\\\\
+Auffällig sind hier vor allem die starke Absorption in einem Wellenlängenbereich von etwa \qtyrange{495}{520}{\nm}. Der Filter filtert also grünes Licht in einem schmalen Bereich, was für einen schmalbandigen Interferenz-Filter spricht.\\\\
 Die spektrale Bandbreite $B$ des Filters lässt sich mithilfe der DOT in Frequenzdarstellung bestimmen:
-$$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{493\text{nm}}-\frac{c}{521\text{nm}}=32,68\text{PHZ}=$$
-Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_min+\frac{B}{2}}=506,6$nm. 
+$$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{493\si{\nm}}-\frac{c}{521\si{\nm}}=\qty{32,68}{\peta\hertz}$$
+Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_min+\frac{B}{2}}=\qty{506,6}{\nm}$. 
 
 \subsubsection{Iod-Küvette}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Spektrum Iod 2.png}
+	\includegraphics[width=0.8\linewidth]{img/Spektrum Iod 2.png}
 	\caption{Das gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
 	\label{fig: iod2spek}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Absorsptionsprofil Iod 2 OD.png}
+	\includegraphics[width=0.8\linewidth]{img/Absorsptionsprofil Iod 2 OD.png}
 	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette}
 	\label{fig: iod2od}
 \end{figure}
 Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass das Referenzspektrum der leeren Küvette deutlich mehr Rauschen enthält. Das Rauschen, was bei dem Spektrum der Iod-Küvette zu sehen ist, ist außerdem gleichförmiger. Wie auch am Absorptionsprofil erkennbar, dargestellt durch die optische Dichte (siehe \autoref{fig: iod2od}), wird durch das Iod unter anderem sehr viel von dem Rauschen absorbiert.\\
-Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. 420-670nm deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
+Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. \qtyrange{420}{670}{nm} deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
 \\\\
 Das gemessene Iod-Spektrum passt zu Iod-Spektren, die in einer anderen Studie gemessen wurden (siehe \autoref{fig: iodlit}) \cite{4}.\\
+Das Maximum befindet sich im gleichen Wellenlängenbereich und hat eine ähnliche Form. Die kleineren Peaks entlang der Kurve unterscheiden sich leicht in Form, zeigen aber beide die Emissions- bzw. Absorptionsspektrallinien charakteristisch für Iod.\\\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{img/iod literatur2.png}
-	Measured I2 absorption cross-section shown over the full
-wavelength range at 1 nm resolution.
 	\caption{Gemessener $I_2$ Absorptionsquerschnitt \cite{4}}
 	\label{fig: iodlit}
 \end{figure}
-Das Maximum befindet sich im gleichen Wellenlängenbereich und hat eine ähnliche Form. Die kleineren Peaks entlang der Kurve unterscheiden sich leicht in Form, zeigen aber beide die Emissions- bzw. Absorptionsspektrallinien charakteristisch für Iod.
-\\\\
-Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette lassen sich viele klare Maxima erkennen. Diese spiegeln das Absorptionsspektrum von Iod wieder. Jedes Maximum repräsentiert eine Spektrallinie, die bei Iod im Bereich 500-700nm in hoher Anzahl auftreten. Das experimentell bestimmte Spektrum passt zu der theoretischen Erwartung (siehe \autoref{fig: iodtheo}). 
+Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette lassen sich viele klare Maxima erkennen. Diese spiegeln das Absorptionsspektrum von Iod wieder. Jedes Maximum repräsentiert eine Spektrallinie, die bei Iod im Bereich \qtyrange{500}{700}{nm} in hoher Anzahl auftreten. Das sind die Vibrationsübergänge des Moleküls. Das experimentell bestimmte Spektrum passt zu der theoretischen Erwartung (siehe \autoref{fig: iodtheo}). 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\linewidth]{img/960px-Iodine_spectrum_visible.png}
@@ -333,48 +334,48 @@ Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette lassen sich viel
 \end{figure}
 
 \subsection{Spektrale Auflösung}
-Die theoretische Auflösungsgrenze des Fourier-Transform-Spektrometers lässt sich bestimmen durch die Wegzeitdifferenz $\Delta t$. Da der benutzte Schrittmotor eine kleinstmögliche Verschiebung von 50,5nm hat und wir 10000 Schritte pro Messreihe gelaufen sind, ist unsere Weglängendifferenz $\Delta s = 10000 \cdot 50,5 \cdot 10^{-9} \cdot 2 = 1,01$mm.
-Daraus lässt sich $\Delta t = \frac{1,01 \cdot 10^{-3}}{c} = 3,37$pm bestimmen.\\
+Die theoretische Auflösungsgrenze des Fourier-Transform-Spektrometers lässt sich bestimmen durch die Wegzeitdifferenz $\Delta t$. Da der benutzte Schrittmotor eine kleinstmögliche Verschiebung von \qty{50,5}{\nm} hat und wir 10000 Schritte pro Messreihe gelaufen sind, ist unsere Weglängendifferenz $\Delta s = 10000 \cdot 50,5 \cdot 10^{-9} \cdot 2 = \qty{1,01}{\mm}$.
+Daraus lässt sich $\Delta t = \frac{1,01 \cdot 10^{-3}}{c} = \qty{3,37}{\pm}$ bestimmen.\\
 Die theoretische spektrale Auflösungsgrenze ist dann:
-$$\Delta\nu=\frac{1}{\Delta t}=0,297\text{PHz}=1,009\cdot 10^{-3}\text{nm}$$
+$$\Delta\nu=\frac{1}{\Delta t}=\qty{0,297}{\peta\hertz}=\qty{1.009e-3}{\nm}$$
 \\
-Experimentell lässt sich eine Signalbreite von 0,6 PHz aus dem Laserspektrum ablesen. Die Auflösung im Experiment ist 50\% größer als die theoretische Auflösungsgrenze.
+Experimentell lässt sich eine Signalbreite von \qty{0,6}{\peta\hertz} aus dem Laserspektrum ablesen. Die Auflösung im Experiment ist 50\% größer als die theoretische Auflösungsgrenze.
 
 \subsection{Fehlerdiskussion}
 Bei dem experimentellen Aufbau gibt es mehrere Fehlerquellen. Die Interpolation der Laserdaten zum Aufbauen der Kalibrierfunktion ist eine der grundlegenden, da das Signal des Lasers Schwankungen hat, die sich durch alle restlichen Ergebnisse fortpflanzen. Das würde auch heißen, dass die Linienbreite des Lasers größer ist als angenommen, das Experiment hat also eine schlechtere Auflösung, als jetzt bestimmt.
 
-Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Für diesen Fehler wird in der Analyse der Daten durch die Korrekturfunktion gegengesteuert. Da die Spektren den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur gut gelangen ist. Diese Annahme wird auch von dem Vergleich des Lasersignals mit der korrigierten Ortsachse zu dem ursprünglich interpolierten Signal unterstützt (siehe \autoref{fig: korrvgl}).
+Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Zur Kompensation dieses Fehlers wird in der Datenanalyse eine Kalibrierfunktion angewendet. Da die Spektren grundsätzlich den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur erfolgreich durchgeführt wurde. Diese Annahme wird zudem durch den Vergleich des Lasersignals mit der korrigierten Ortsachse und dem ursprünglich interpolierten Signal gestützt (siehe \autoref{fig: korrvgl}).
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Vergleich Ursprüngliche vs Korrigierte Interpolation.png}
+	\includegraphics[width=0.9\linewidth]{img/Vergleich Ursprüngliche vs Korrigierte Interpolation.png}
 	\caption{Vergleich zwischen der ursprünglichen Interpolation der Laserdaten und der Interpolation mit korrigierter Ortsachse}
 	\label{fig: korrvgl}
 \end{figure}
 \\\\
-Es wurden für jede Probe zwei Messreihen aufgenommen. Die Ergebnisse der jeweils ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die Ergebnisse der zweiten Messreihen und deuten auf einen beachtlichen systematischen Fehler hin, da die Auswertungsmethode die gleiche für alle Datensätze ist. In der oberen Auswertung sind die Ergebnisse der zweiten Messreihen zu sehen.\\
+Für jede Probe wurden jeweils zwei Messreihen durchgeführt. Die Ergebnisse der ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die der zweiten Messreihen. Dies deutet auf einen erheblichen systematischen Fehler hin, da die Auswertungsmethode bei allen Datensätzen einheitlich angewendet wurde. In der vorliegenden Auswertung sind daher die Ergebnisse der zweiten Messreihen dargestellt.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Spektrum Filter.png}
+	\includegraphics[width=0.8\linewidth]{img/Spektrum Filter.png}
 	\caption{Das in Messreihe 1 gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
 	\label{fig: filter1spek}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Spektrum Iod.png}
+	\includegraphics[width=0.8\linewidth]{img/Spektrum Iod.png}
 	\caption{Das in Messreihe 1 gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
 	\label{fig: iod1spek}
 \end{figure}
-Bei den ersten Messreihen sind die Intensitäten und das Rauschen der Spektren größer (siehe \autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messreihen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich schließen, dass die erste Justage qualitativ leicht schlechter war. Außerdem ist zwischen erster Justage und ersten Messreihen mehr Zeit vergangen als zwischen zweiter Justage und zweiten Messreihen, was heißt, dass das Spektrometer mehr Zeit hatte sich aufgrund von externen Faktoren, wie Temperaturschwankungen im Raum, kleine Vibrationen des Tisches und das Rein- und Rausgehen in und aus dem Raum um Proben auszutauschen, zu ändern.
+Bei den ersten Messreihen fallen die Intensitäten sowie das Rauschen der Spektren deutlich stärker aus (\autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messdurchgängen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich daraus schließen, dass die Erstjustage qualitativ etwas ungenauer war. Zudem ist zwischen der ersten Justierung und den ersten Messreihen mehr Zeit vergangen als zwischen der zweiten Justierung und den zweiten Messreihen. Dadurch hatte das Spektrometer mehr Gelegenheit, sich durch äußere Einflüsse zu verändern, beispielsweise durch Temperaturschwankungen im Raum, kleine Vibrationen des Tisches oder das Ein- und Austreten aus dem Raum beim Probenaustausch.
 
 \section{Zusammenfassung}
 
 Im Rahmen des Versuchs KV6 wurde die Fourier-Transform-Spektroskopie (FTS) im sichtbaren Spektralbereich untersucht. Ziel des Experiments war die Bestimmung des Emissionsspektrums einer Weißlicht-LED sowie der Absorptionsspektren eines Interferenzfilters und einer mit Iod gefüllten Küvette.\\\\
-Die methodische Grundlage bildete die Vermessung der zeitlichen Kohärenzfunktion (Autokorrelationsfunktion) mithilfe eines Michelson-Interferometers. Da die mechanische Bewegung des Linearverschiebetisches keine exakte Linearität aufwies, wurde eine numerische Kalibrierfunktion basierend auf einem simultan aufgenommenen Laser-Interferogramm ($\lambda_L=532nm$) erstellt. Mithilfe einer in Python programmierten Auswerteroutine wurden die Messdaten ortskorrigiert, äquidistanziert und schließlich mittels Fouriertransformation in den Frequenzraum überführt.\\\\
+Die methodische Grundlage bildete die Vermessung der zeitlichen Kohärenzfunktion (Autokorrelationsfunktion) mithilfe eines Michelson-Interferometers. Da die mechanische Bewegung des Linearverschiebetisches keine exakte Linearität aufwies, wurde eine numerische Kalibrierfunktion basierend auf einem simultan aufgenommenen Laser-Interferogramm ($\lambda_L=\qty{532}{\nm}$) erstellt. Mithilfe einer in Python programmierten Auswerteroutine wurden die Messdaten ortskorrigiert, äquidistanziert und schließlich mittels Fouriertransformation in den Frequenzraum überführt.\\\\
 Die physikalische Auswertung ergab folgende Resultate:
 \begin{itemize}
-       \item Für den Interferenzfilter wurde eine Zentralwellenlänge von ca. $506,6nm$ bei einer spektralen Bandbreite von $9,18nm$ ermittelt.
+       \item Für den Interferenzfilter wurde eine Zentralwellenlänge von ca. \qty{506,6}{\nm} bei einer spektralen Bandbreite von \qty{9,18}{\nm} ermittelt.
        \item In den Iodspektren konnten die charakteristischen Absorptionslinien aufgelöst und als Vibrationsübergänge des Moleküls verifiziert werden.
-       \item Die experimentell bestimmte spektrale Auflösung lag mit ca. 0,6 PHz in der Größenordnung der theoretischen Auflösungsgrenze von 0,297 PHz.
+       \item Die experimentell bestimmte spektrale Auflösung lag mit ca. \qty{0,6}{\peta\hertz} in der Größenordnung der theoretischen Auflösungsgrenze von \qty{0,297}{\peta\hertz}.
 \end{itemize}
 Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtlinearität des Schrittmotors und thermische Instabilitäten, konnte das Funktionsprinzip der Fourier-Spektroskopie erfolgreich demonstriert und die Eignung der numerischen Datenkorrektur bestätigt werden.
 
