@@ -31,10 +31,14 @@ sigma_L = 0.01
 J_betagamma = np.array([(e_lad*kappa)/(e_mass*c_vak*dy_dI), -(e_lad*kappa*L)/(e_mass*c_vak*(dy_dI)**2)])
 V_L_dydI = np.array([[sigma_L**2, 0],[0, sigma_dy_dI**2]])
 V_betagamma = J_betagamma @ V_L_dydI @ np.transpose(J_betagamma)
+sigma_betagamma=np.sqrt(V_betagamma)
+print(f"sigma_betagamma = {sigma_betagamma:.3}")
 
 # gamma fehler
 J_gamma = beta_gamma/gamma
 V_gamma = J_gamma * V_betagamma * J_gamma
+sigma_gamma=np.sqrt(V_gamma)
+print(f"sigma_gamma = {sigma_gamma:.3}")
 
 # ekin fehler
 J_E_kin = E_0
