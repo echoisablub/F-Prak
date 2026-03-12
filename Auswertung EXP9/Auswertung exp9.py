@@ -30,11 +30,10 @@ A = np.array([[0.0293, -0.1312,  0.1470], [0.0874, -0.2237,  0.1432], [0.1755, -
 x_vect_x = 1.0e-05 * np.array([0.0421, 0.0869, 0.3054])
 x_vect_y = 1.0e-05 * np.array([0.1615, 0.2779, 0.7218])
 
-e_x = np.sqrt(x_vect_x[0]*x_vect_x[2]-x_vect_x[1]**2)
-e_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2)
-
-epsilon_x = 7.2867e-07
-epsilon_y = 1.9832e-06 
+epsilon_x = np.sqrt(x_vect_x[0]*x_vect_x[2]-x_vect_x[1]**2) #result: 7.284044206345813e-07 m rad = 0.72867 mm mrad
+epsilon_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2) #result: 1.9834890975248643e-06 m rad = 1.98349 mm mrad
+sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.07115 mm mrad
+sigma_epsilon_y = 0.045431*epsilon_y #result: 9.011189318965211e-08 m rad = 0.09011 mm mrad
 
 # Beta Funktions Messung
 '''
