@@ -38,9 +38,9 @@ V_gamma = J_gamma * V_betagamma * J_gamma
 # ekin fehler
 J_E_kin = E_0
 V_E_kin =J_E_kin * V_gamma * J_E_kin
-print(f"E_kin ={Ekin:.3}")
+#print(f"E_kin ={Ekin:.3}")
 sigma_E_kin = np.sqrt(V_E_kin)
-print(f"sigma_E_kin = {sigma_E_kin:.3}")
+#print(f"sigma_E_kin = {sigma_E_kin:.3}")
 
 #E_kin =6.62 [keV]
 #sigma_E_kin = 0.27 [keV]
@@ -65,7 +65,7 @@ sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.071
 sigma_epsilon_y = 0.045431*epsilon_y #result: 9.011189318965211e-08 m rad = 0.09011 mm mrad
 
 
-# Twiss Parameter
+# Optische Funktionen am eingang vom Quadripol (Twiss Parameter)
 beta_x = x_vect_x[0]/(epsilon_x)
 alpha_x = - x_vect_x[1]/(epsilon_x)
 gamma_x = x_vect_x[2]/(epsilon_x)
@@ -78,6 +78,41 @@ gamma_y = x_vect_y[2]/(epsilon_y)
 
 #beta_x = 0.578, alpha_x = -1.19, gamma_x = 4.19
 #beta_y = 0.814, alpha_y = -1.401 , gamma_y = 3.639 
+
+# Twiss Parameter Fehler:
+# x_i fehlerfrei betrachtet
+# beta_x =x_1/epsilon_x
+# fehler für alle optischen func gleich (zu x bzw y), da alle von gleichem epsilon abhängen
+# V(epsilon_x)=sigma_epsilon_x^2
+
+'''J_epsilon_x = np.array([
+    (x_vect_x[2]) / (2 * np.sqrt(x_vect_x[0] * x_vect_x[2] - x_vect_x[1]**2)), 
+    (-x_vect_x[1]) / (np.sqrt(x_vect_x[0] * x_vect_x[2] - x_vect_x[1]**2)), 
+    (x_vect_x[0]) / (2 * np.sqrt(x_vect_x[0] * x_vect_x[2] - x_vect_x[1]**2))])
+
+V_opt_func_x= J_epsilon_x * sigma_epsilon_x**2 * np.transpose(J_epsilon_x)'''
+#.... denkfehler, brauch ich alles net... fuck
+
+# einfacher weg:
+# aus  sigma_beta_x = |d_beta_x/d_epsilon_x| * sigma_epsilon_x = |-x_1/epsilon_x^2| *sigma_epsilon_x 
+# mit beta_x= x_1/epsilon_x : sigma_beta_x = beta_x * (sigma_epsilon_x / epsilon_x)
+# analog für rest
+
+rel_error_eps_x = sigma_epsilon_x / epsilon_x
+sigma_beta_x = beta_x * rel_error_eps_x
+sigma_alpha_x = abs(alpha_x) * rel_error_eps_x
+sigma_gamma_x = gamma_x * rel_error_eps_x
+
+rel_error_eps_y = sigma_epsilon_y / epsilon_y
+sigma_beta_y = beta_y * rel_error_eps_y
+sigma_alpha_y = abs(alpha_y) * rel_error_eps_y
+sigma_gamma_y = gamma_y * rel_error_eps_y
+
+print(f"sigma_beta_x = {sigma_beta_x:.3}, sigma_alpha_x = {sigma_alpha_x:.3}, sigma_gamma_x = {sigma_gamma_x:.3}")
+print(f"sigma_beta_y = {sigma_beta_y:.3}, sigma_alpha_y = {sigma_alpha_y:.3}, sigma_gamma_y = {sigma_gamma_y:.3}")
+
+#sigma_beta_x = 0.0565, sigma_alpha_x = 0.117, sigma_gamma_x = 0.41
+#sigma_beta_y = 0.037, sigma_alpha_y = 0.0637, sigma_gamma_y = 0.165
 
 # Beta Funktions Messung
 '''Messungen x_rms, y_rms an den verschiedenen schirmen an z_pos'''
