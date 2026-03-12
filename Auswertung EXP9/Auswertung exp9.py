@@ -23,6 +23,7 @@ p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
 
 # Energiemessung Fehlerfortpflanzung
 # fehlerbehaftete Größen: L, Steigung bzw. dy_dI
+
 # todo: ekin fehler, beta fehler, impuls fehler
 
 # bettagamma fehler
@@ -41,9 +42,20 @@ V_E_kin =J_E_kin * V_gamma * J_E_kin
 #print(f"E_kin ={Ekin:.3}")
 sigma_E_kin = np.sqrt(V_E_kin)
 #print(f"sigma_E_kin = {sigma_E_kin:.3}")
-
 #E_kin =6.62 [keV]
 #sigma_E_kin = 0.27 [keV]
+
+# p fehler (p=E_0/c *sqrt(gamma^2-1))
+
+# Da p = (E_0 / c_vak) * beta_gamma:
+J_p = E_0 / c_vak
+V_p = J_p * V_betagamma * J_p
+sigma_p = np.sqrt(V_p)
+
+print(f"p = {p:.3e} [keV/c]")
+print(f"sigma_p = {sigma_p:.3e} [keV/c]")
+# p = 2.752e-07 [keV/c]
+# sigma_p = 5.661e-09 [keV/c]
 
 # Emittanzbestimmung duch Q-Scan
 '''zwei Messreihen, eine horizontal (x_RMS(I)), eine vertikal (y_RMS(I))'''
@@ -123,9 +135,9 @@ y_rms_beta = np.array([3.270433, 3.765737, 1.381060, 2.914094]) # in mm
 x_rms_m2 = (x_rms_beta * 10**(-3))**2 # in m
 y_rms_m2 = (y_rms_beta * 10**(-3))**2 # in m
 
-x_rms_new = x_vect_x[0] + x_rms_m2 # hier wert von Q-Scan einfügen als 5. punkt
-y_rms_new = x_vect_y[0] + y_rms_m2 
-z_pos_new = np.array([140]) + z_pos
+x_rms_new = np.append(x_vect_x[0], x_rms_m2) # hier wert von Q-Scan einfügen als 5. punkt
+y_rms_new = np.append(x_vect_y[0], y_rms_m2)
+z_pos_new = np.append(140, z_pos)
 
 beta_x_func = x_rms_new/epsilon_x
 beta_y_func = y_rms_new/epsilon_y
@@ -140,6 +152,30 @@ plt.show()
 
 # Beta-Funktion Fehlerfortpflanzung
 
+# Wir nehmen hier eine Unsicherheit für die x_rms^2 Messung an (50 mu-m)
+sigma_x_rms_total = np.full(5, 50e-6)
+
+# Jacobi
+d_beta_dx2 = 1 / epsilon_x
+d_beta_deps = -beta_x_func / epsilon_x
+# sigma_beta = sqrt( (d_beta/dx2 * sigma_x2)^2 + (d_beta/deps * sigma_eps)^2 )
+sigma_beta_x = np.sqrt((d_beta_dx2 * sigma_x_rms_total)**2 + (d_beta_deps * sigma_epsilon_x)**2)
+
+# Analog für y:
+sigma_y_rms_total = np.full(5, 50e-6)
+d_beta_dy2 = 1 / epsilon_y
+d_beta_deps_y = -beta_y_func / epsilon_y
+sigma_beta_y = np.sqrt((d_beta_dy2 * sigma_y_rms_total)**2 + (d_beta_deps_y * sigma_epsilon_y)**2)
+
+# 4. Darstellung mit Fehlerbalken
+plt.errorbar(z_pos_new, beta_x_func, yerr=sigma_beta_x, fmt='.', color='red', label="$\\beta_x$ mit Fehler")
+plt.errorbar(z_pos_new, beta_y_func, yerr=sigma_beta_y, fmt='.', color='blue', label="$\\beta_y$ mit Fehler")
+plt.xlabel("Z Position [cm]")
+plt.ylabel("$\\beta$-Funktion")
+plt.title("$\\beta$-Funktionen mit Fehlerfortpflanzung")
+plt.legend()
+plt.grid(True)
+plt.show()
 
 # ---TAG 2---
 
@@ -213,3 +249,4 @@ plt.show()
 
 # Strahltransport
 # hat keine rechnerische Auswertung :)
+# fehler= hälfte von scanschritt = Delta_I/2
