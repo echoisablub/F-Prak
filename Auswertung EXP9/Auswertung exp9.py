@@ -9,7 +9,7 @@ import scipy.constants as const
 # Energiemessung
 '''Messung: <y>(I)'''
 dy_dI = 14.4384e-3 # in m/A
-sigma_dy_dI = (14.4384 - 14.2273)/2 # 1 sigma berechnung durch (value-lower)/2 mit value und lower 2 sigma fehler
+sigma_dy_dI = (14.4384e-3 - 14.2273e-3)/2 # 1 sigma berechnung durch (value-lower)/2 mit value und lower 2 sigma fehler
 kappa = 7.64e-6 # in Tm/A, Eigenschaft des Dipols
 L = 0.52 # in m
 e_lad = const.elementary_charge
@@ -25,8 +25,25 @@ p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
 # fehlerbehaftete Größen: L, Steigung bzw. dy_dI
 # todo: ekin fehler, beta fehler, impuls fehler
 
+# bettagamma fehler
+sigma_L = 0.01
+J_betagamma = np.array([(e_lad*kappa)/(e_mass*c_vak*dy_dI), -(e_lad*kappa*L)/(e_mass*c_vak*(dy_dI)**2)])
+V_L_dydI = np.array([[sigma_L**2, 0],[0, sigma_dy_dI**2]])
+V_betagamma = J_betagamma @ V_L_dydI @ np.transpose(J_betagamma)
 
+# gamma fehler
+J_gamma = beta_gamma/gamma
+V_gamma = J_gamma * V_betagamma * J_gamma
 
+# ekin fehler
+J_E_kin = E_0
+V_E_kin =J_E_kin * V_gamma * J_E_kin
+print(f"E_kin ={Ekin:.3}")
+sigma_E_kin = np.sqrt(V_E_kin)
+print(f"sigma_E_kin = {sigma_E_kin:.3}")
+
+#E_kin =6.62 [keV]
+#sigma_E_kin = 0.27 [keV]
 
 # Emittanzbestimmung duch Q-Scan
 '''zwei Messreihen, eine horizontal (x_RMS(I)), eine vertikal (y_RMS(I))'''
@@ -56,8 +73,8 @@ beta_y = x_vect_y[0]/(epsilon_y)
 alpha_y = - x_vect_y[1]/(epsilon_y)
 gamma_y = x_vect_y[2]/(epsilon_y)
 
-print(f"beta_x = {beta_x:.3}, alpha_x = {alpha_x:.3}, gamma_x = {gamma_x:.3}")
-print(f"beta_y = {beta_y:.3f}, alpha_y = {alpha_y:.3f} , gamma_y = {gamma_y:.3f} ")
+#print(f"beta_x = {beta_x:.3}, alpha_x = {alpha_x:.3}, gamma_x = {gamma_x:.3}")
+#print(f"beta_y = {beta_y:.3f}, alpha_y = {alpha_y:.3f} , gamma_y = {gamma_y:.3f} ")
 
 #beta_x = 0.578, alpha_x = -1.19, gamma_x = 4.19
 #beta_y = 0.814, alpha_y = -1.401 , gamma_y = 3.639 
