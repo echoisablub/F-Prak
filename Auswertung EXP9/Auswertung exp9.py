@@ -2,9 +2,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
 from scipy.optimize import fsolve
+import scipy.constants as const
+# ---Tag 1---
+# Energiemessung
+'''Messung: <y>(I)'''
+dy_dI = 14.4384e-3 # in m/A
+sigma_dy_dI = (14.4384 - 14.2273)/2 # 1 sigma berechnung durch (value-lower)/2 mit value und lower 2 sigma fehler
+kappa = 7.64e-6 # in Tm/A, Eigenschaft des Dipols
+L = 0.52 # in m
+e_lad = const.elementary_charge
+e_mass = const.electron_mass
+c_vak = const.speed_of_light
+E_0 = 511 # in keV
+beta_gamma = (e_lad*kappa*L)/(e_mass*c_vak*dy_dI) #result: 0.16142780000890825 ~= beta
+gamma = np.sqrt(1+beta_gamma**2) #result: 1.0129456720948642 --> also fast klassisch
+Ekin = E_0*(gamma-1) #result: 6.6152384404756015 keV
+p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
+print(beta_gamma, gamma, Ekin, p)
 
-# Emittanzbestimmung duch Q-Scan
-'''
+'''# Emittanzbestimmung duch Q-Scan
+
 epsilon_x = 7.2867e-07
 epsilon_y = 1.9832e-06 
 
@@ -31,7 +48,7 @@ plt.xlabel("Z Position [m]")
 plt.ylabel("$\\beta$-Funktion")
 plt.title("$\\beta$$-Funktionen in Abhängigkeit der z-Achse")
 plt.legend()
-plt.show()'''
+plt.show()
 
 # ---TAG 2---
 
@@ -101,4 +118,4 @@ plt.show()
 
 plt.plot(i_y_2_2_neu, y_2_2, 'x')
 plt.title("Überprüfung Y")
-plt.show()
+plt.show()'''
