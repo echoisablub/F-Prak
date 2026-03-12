@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 from scipy.stats import linregress
 from scipy.optimize import fsolve
 import scipy.constants as const
+
 # ---Tag 1---
+
 # Energiemessung
 '''Messung: <y>(I)'''
 dy_dI = 14.4384e-3 # in m/A
@@ -19,6 +21,11 @@ gamma = np.sqrt(1+beta_gamma**2) #result: 1.0129456720948642 --> also fast klass
 Ekin = E_0*(gamma-1) #result: 6.6152384404756015 keV
 p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
 
+# Energiemessung Fehlerfortpflanzung
+# fehlerbehaftete Größen: L, Steigung bzw. dy_dI
+# todo: ekin fehler, beta fehler, impuls fehler
+
+
 # Emittanzbestimmung duch Q-Scan
 '''zwei Messreihen, eine horizontal (x_RMS(I)), eine vertikal (y_RMS(I))'''
 I_pos = [0.923, 1.023, 1.121, 1.221, 1.316, 1.419, 1.519, 1.621, 1.724, 1.812, 1.919]
@@ -32,6 +39,9 @@ x_vect_y = 1.0e-05 * np.array([0.1615, 0.2779, 0.7218])
 
 epsilon_x = np.sqrt(x_vect_x[0]*x_vect_x[2]-x_vect_x[1]**2) #result: 7.284044206345813e-07 m rad = 0.72867 mm mrad
 epsilon_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2) #result: 1.9834890975248643e-06 m rad = 1.98349 mm mrad
+
+# Emittanz Fehlerfortpflanzung
+# Fehlerfortpflanzung wurde in situ gemacht:
 sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.07115 mm mrad
 sigma_epsilon_y = 0.045431*epsilon_y #result: 9.011189318965211e-08 m rad = 0.09011 mm mrad
 
@@ -53,15 +63,17 @@ beta_y_func = y_rms_new/epsilon_y
 
 plt.plot(z_pos_new, beta_x_func, '.', color='red', label="$\\beta_x$")
 plt.plot(z_pos_new, beta_y_func, '.', color='blue', label="$\\beta_y$")
-plt.xlabel("Z Position [m]")
+plt.xlabel("Z Position [cm]")
 plt.ylabel("$\\beta$-Funktion")
 plt.title("$\\beta$-Funktionen in Abhängigkeit der z-Achse")
 plt.legend()
 plt.show()
 
+# Beta-Funktion Fehlerfortpflanzung
+
 # ---TAG 2---
-'''
-# Strahl
+
+# Strahlbasierte Justage
 #x_werte
 # I_Q_1:-0.344
 x_1 = [2.381327, 1.701390, 0.543287, -0.559225, -1.598436, -2.668805, -3.962848, -5.083899, -6.339732, -7.617045, -9.388490]
@@ -127,4 +139,7 @@ plt.show()
 
 plt.plot(i_y_2_2_neu, y_2_2, 'x')
 plt.title("Überprüfung Y")
-plt.show()'''
+plt.show()
+
+# Strahltransport
+# hat keine rechnerische Auswertung :)
