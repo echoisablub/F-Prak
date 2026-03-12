@@ -18,7 +18,6 @@ beta_gamma = (e_lad*kappa*L)/(e_mass*c_vak*dy_dI) #result: 0.16142780000890825 ~
 gamma = np.sqrt(1+beta_gamma**2) #result: 1.0129456720948642 --> also fast klassisch
 Ekin = E_0*(gamma-1) #result: 6.6152384404756015 keV
 p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
-print(beta_gamma, gamma, Ekin, p)
 
 # Emittanzbestimmung duch Q-Scan
 '''zwei Messreihen, eine horizontal (x_RMS(I)), eine vertikal (y_RMS(I))'''
@@ -28,12 +27,17 @@ I_neg = [-0.908, -1.004, -1.104, -1.206, -1.306, -1.404, -1.509, -1.607, -1.709,
 y_rms_qscan = [0.775577, 0.832959, 0.693442, 0.604762, 0.554150, 0.576056, 0.644182, 0.742516, 0.871134, 0.976145, 1.160084]
 A = np.array([[0.0293, -0.1312,  0.1470], [0.0874, -0.2237,  0.1432], [0.1755, -0.3129,  0.1395], [0.2927, -0.3989,  0.1359], [0.4384, -0.4816,  0.1323], [0.6116, -0.5613,  0.1288], [0.8115, -0.6379,  0.1253], [1.0375, -0.7115,  0.1220], [1.2887, -0.7821,  0.1187], [1.5643, -0.8497,  0.1154], [1.8637, -0.9145,  0.1122]])
 #A=A_x=A_y in diesem  Fall
+x_vect_x = 1.0e-05 * np.array([0.0421, 0.0869, 0.3054])
+x_vect_y = 1.0e-05 * np.array([0.1615, 0.2779, 0.7218])
+
+e_x = np.sqrt(x_vect_x[0]*x_vect_x[2]-x_vect_x[1]**2)
+e_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2)
 
 epsilon_x = 7.2867e-07
 epsilon_y = 1.9832e-06 
 
 # Beta Funktions Messung
-
+'''
 data = np.loadtxt("data/beta func")
 z_pos = data[1:4, 0] # in cm
 x_rms = data[1:4, 1] # in mm
