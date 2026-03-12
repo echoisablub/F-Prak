@@ -250,3 +250,13 @@ plt.show()
 # Strahltransport
 # hat keine rechnerische Auswertung :)
 # fehler= hälfte von scanschritt = Delta_I/2
+
+i_x_1_arr = np.array(i_x_1)
+differenzen = np.abs(np.diff(i_x_1_arr))
+scanschritt = np.mean(differenzen)
+
+# Fehler: Hälfte des Scanschritts
+fehler_I = scanschritt / 2
+
+print(f"Mittlerer Scanschritt: {scanschritt:.4f}")
+print(f"Fehler (Delta_I / 2): {fehler_I:.4f}")
