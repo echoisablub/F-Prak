@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
@@ -9,7 +9,8 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{url}
-\usepackage{siunitx}  
+\usepackage{siunitx}
+\usepackage{bookmark}
 \sisetup{locale = DE}
 
 \renewcommand{\UrlFont}{\small\tt}
@@ -21,16 +22,11 @@
 
 \pagenumbering{Roman}
 
-\title{Fortgeschrittenenpraktikum\\ Versuch EXP9\\ SALOME }
+\title{SALOME\\Simple Accelerator for Learning Optics and
+Manipulation of Electrons}
+\subtitle{Fortgeschrittenenpraktikum\\ Versuch EXP9}
 \author{Léonie Lanz \\ Nico Kalogerakis}
-
 \maketitle
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[scale=0.5]{img/image copy 4.png}
-\end{figure}
-
 \newpage
 
 \tableofcontents
@@ -67,16 +63,43 @@ Bilder
 \subsubsection{x Werte}
 $I_{Q_{1}} = -0.344$ plot\\
 $I_{Q_{2}} = 0.657$ plot\\
-$I_{D_{0}} = -1.236$ (x intersection) plot
+$I_{D_{0}} = -1.236$ (x intersection) 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.435]{img/Strahlbasierte Justage_X-Ausrichtung.png}
+    \caption{Strahlbasierte Justage in x-Ausrichtung}
+\end{figure}
 
 \subsubsection{y Werte}
 $I_{Q_{1}} = 1.685$ plot \\
 $I_{Q_{2}} = 2.703$ plot \\
 $I_{D_{0}} = -0.777$ (y intersection) plot
 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.435]{img/Strahlbasierte Justage_Y-Ausrichtung.png}
+    \caption{Strahlbasierte Justage in y-Ausrichtung}
+\end{figure}
+
 \subsubsection{Fehler}
-Mittlerer Scanschritt = 0.1063
-Fehler: $\frac{\Delta_I}{2} = 0.0532$
+Mittlerer Scanschritt x = 0.1063
+Fehler x: $\frac{\Delta_I}{2} = 0.0532$
+
+Mittlerer Scanschritt y = 0.1869
+Fehler y: $\frac{\Delta_I}{2} = 0.0935$
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.435]{img/Überprüfung der Strahlbasierte Justage_x.png}
+    \caption{Überprüfung der Strahlbasierte Justage in x-Ausrichtung}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.435]{img/Überprüfung der Strahlbasierte Justage_y.png}
+    \caption{Überprüfung der Strahlbasierte Justage in y-Ausrichtung}
+\end{figure}
 
 \subsection{Energiemessung}
 \begin{math}
@@ -101,8 +124,12 @@ $\beta_x = 0.578 \pm 0.0565, \alpha_x = -1.19 \pm 0.117, \gamma_x = 4.19 \pm 0.4
 $\beta_y = 0.814 \pm 0.037, \alpha_y = -1.401 \pm 0.0637, \gamma_y = 3.639 \pm 0.165$
 
 \subsection{Beta-Func}
-Plots
-(output/beta func mit fehlerfortpflanzung.png)
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.435]{img/beta func mit fehlerfortpflanzung.png}
+    \caption{$\beta$-Funktion in Abhängigkeit der z-Position des Strahls}
+\end{figure}
 
 \section{Diskussion der physikalischen Ergebnisse}
 
