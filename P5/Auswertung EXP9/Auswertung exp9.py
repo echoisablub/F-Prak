@@ -157,19 +157,26 @@ plt.show()
 # Beta-Funktion Fehlerfortpflanzung
 
 # Wir nehmen hier eine Unsicherheit für die x_rms^2 Messung an (50 mu-m)
-sigma_x_rms_total = np.full(5, 50e-6)
+sigma_x_linear = np.full(5, 50e-6) 
+x_rms_linear_total = np.sqrt(x_rms_new)
+sigma_x2_total = 2 * x_rms_linear_total * sigma_x_linear
 
 # Jacobi
 d_beta_dx2 = 1 / epsilon_x
 d_beta_deps = -beta_x_func / epsilon_x
 # sigma_beta = sqrt( (d_beta/dx2 * sigma_x2)^2 + (d_beta/deps * sigma_eps)^2 )
-sigma_beta_x = np.sqrt((d_beta_dx2 * sigma_x_rms_total)**2 + (d_beta_deps * sigma_epsilon_x)**2)
+sigma_beta_x = np.sqrt((d_beta_dx2 * sigma_x2_total)**2 + (d_beta_deps * sigma_epsilon_x)**2)
 
 # Analog für y:
-sigma_y_rms_total = np.full(5, 50e-6)
+sigma_y_linear = np.full(5, 50e-6)
+y_rms_linear_total = np.sqrt(y_rms_new)
+sigma_y2_total = 2 * y_rms_linear_total * sigma_y_linear
 d_beta_dy2 = 1 / epsilon_y
 d_beta_deps_y = -beta_y_func / epsilon_y
-sigma_beta_y = np.sqrt((d_beta_dy2 * sigma_y_rms_total)**2 + (d_beta_deps_y * sigma_epsilon_y)**2)
+sigma_beta_y = np.sqrt((d_beta_dy2 * sigma_y2_total)**2 + (d_beta_deps_y * sigma_epsilon_y)**2)
+
+print(f"sigma_beta_x={sigma_beta_x} und sigma_beta_y = {sigma_beta_y}")
+#sigma_beta_x=[0.10545985 0.35286007 0.44095634 0.54226792 0.06168961] und sigma_beta_y = [0.07398192 0.29530019 0.37622171 0.0821982  0.24375554]
 
 # 4. Darstellung mit Fehlerbalken
 plt.errorbar(z_pos_new, beta_x_func, yerr=sigma_beta_x, fmt='.', color='red', label="$\\beta_x$ mit Fehler")
@@ -219,15 +226,23 @@ fct2_x_neu = fct2_x.intercept + fct2_x.slope*i_x_2_neu
 i_x_2_2_neu = np.linspace(-0.4, 0, 11)
 
 x_intersection = (fct2_x.intercept-fct_x.intercept)/(fct_x.slope-fct2_x.slope)
+y_at_intersection = fct_x.slope * x_intersection + fct_x.intercept
 #print(x_intersection)
 
-plt.plot(i_x_1_neu, fct_x_neu, 'r')
-plt.plot(i_x_2_neu, fct2_x_neu, 'b')
-plt.title("X-Ausrichtung")
-plt.show()
-
-plt.plot(i_x_2_2_neu, x_2_2, 'x')
-plt.title("Überprüfung X")
+plt.plot(i_x_1, x_1, 'rx', markersize=6, label="Datenpunkte Scan 1")
+plt.plot(i_x_2, x_2, 'bx', markersize=6, label="Datenpunkte Scan 2")
+plt.plot(i_x_1_neu, fct_x_neu, 'r', label="$I_{Q_{1}}$")
+plt.plot(i_x_2_neu, fct2_x_neu, 'b', label="$I_{Q_{2}}$")
+plt.plot(x_intersection, y_at_intersection, 'ko', markersize=4, label=f"Schnittpunkt ($I_{{D0}}$)")
+plt.axvline(x=x_intersection, color='black', linestyle='--', alpha=0.7, 
+            label=f"$I_{{D0}} = {x_intersection:.3f}$ A")
+plt.xlim(-1.6,-0.4)
+plt.ylim(-10,5)
+plt.xlabel("Magnetstrom I [A]")
+plt.ylabel("Strahlposition [mm]")
+plt.legend()
+plt.title("Strahlbasierte Justage: X-Ausrichtung")
+plt.grid(True, linestyle=':', alpha=0.6)
 plt.show()
 
 i_y_1_neu = np.linspace(-9.4, 2.4)
@@ -240,28 +255,64 @@ fct2_y_neu = fct2_y.intercept + fct2_y.slope*i_y_2_neu
 i_y_2_2_neu = np.linspace(-0.4, 0, 12)
 
 y_intersection = (fct2_y.intercept-fct_y.intercept)/(fct_y.slope-fct2_y.slope)
-print(y_intersection)
+y_at_intersection_y = fct_y.slope * y_intersection + fct_y.intercept
+#print(y_intersection)
 
-plt.plot(i_y_1_neu, fct_y_neu, 'r')
-plt.plot(i_y_2_neu, fct2_y_neu, 'b')
-plt.title("Y-Ausrichtung")
+plt.plot(i_y_1, y_1, 'rx', markersize=6, label="Datenpunkte Scan 1")
+plt.plot(i_y_2, y_2, 'bx', markersize=6, label="Datenpunkte Scan 2")
+plt.plot(i_y_1_neu, fct_y_neu, 'r', label="$I_{Q_{1}}$")
+plt.plot(i_y_2_neu, fct2_y_neu, 'b', label="$I_{Q_{2}}$")
+plt.plot(y_intersection, y_at_intersection_y, 'ko', markersize=4, label=f"Schnittpunkt ($I_{{D0}}$)")
+plt.axvline(x=y_intersection, color='black', linestyle='--', alpha=0.7, 
+            label=f"$I_{{D0}} = {y_intersection:.3f}$ A")
+plt.xlim(-3,1.2)
+plt.ylim(-8,12)
+plt.xlabel("Magnetstrom I [A]")
+plt.ylabel("Strahlposition [mm]")
+plt.legend()
+plt.title("Strahlbasierte Justage: Y-Ausrichtung")
+plt.grid(True, linestyle=':', alpha=0.6)
 plt.show()
 
-plt.plot(i_y_2_2_neu, y_2_2, 'x')
-plt.title("Überprüfung Y")
-plt.show()
-
-# Strahltransport
-# hat keine rechnerische Auswertung :)
 # fehler= hälfte von scanschritt = Delta_I/2
 
 i_x_1_arr = np.array(i_x_1)
-differenzen = np.abs(np.diff(i_x_1_arr))
-scanschritt = np.mean(differenzen)
-fehler_I = scanschritt / 2
+differenzen_x = np.abs(np.diff(i_x_1_arr))
+scanschritt_x = np.mean(differenzen_x)
+sigma_ID0_x = scanschritt_x / 2
 
-print(f"Mittlerer Scanschritt: {scanschritt:.4f}")
-print(f"Fehler (Delta_I / 2): {fehler_I:.4f}")
+print(f"Mittlerer Scanschritt x: {scanschritt_x:.4f}")
+print(f"Fehler (Delta_I / 2) x: {sigma_ID0_x:.4f}")
 
-# Mittlerer Scanschritt: 0.1063
-# Fehler (Delta_I / 2): 0.0532
+i_y_1_arr = np.array(i_y_1)
+differenzen_y = np.abs(np.diff(i_y_1_arr))
+scanschritt_y = np.mean(differenzen_y)
+sigma_ID0_y = scanschritt_y / 2
+
+print(f"Mittlerer Scanschritt y: {scanschritt_y:.4f}")
+print(f"Fehler (Delta_I / 2) y: {sigma_ID0_y:.4f}")
+
+# Mittlerer Scanschritt x: 0.1063
+# sigma_ID0_x: 0.0532
+# Mittlerer Scanschritt y: 0.1869
+# sigma_ID0_y: 0.0935
+
+plt.errorbar(i_x_2_2_neu, x_2_2, yerr=sigma_ID0_x, fmt='x')
+plt.xlabel("Quadrupolstrom $I_Q$ [A]")
+plt.ylabel("Strahlposition [mm]")
+# noch avg line reinpacken?
+plt.legend()
+plt.title("Überprüfung der Strahlbasierte Justage in x-Ausrichtung")
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.show()
+
+plt.errorbar(i_y_2_2_neu, y_2_2, yerr=sigma_ID0_y, fmt='x')
+plt.xlabel("Quadrupolstrom $I_Q$ [A]")
+plt.ylabel("Strahlposition [mm]")
+plt.title("Überprüfung der Strahlbasierte Justage in y-Ausrichtung")
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.show()
+
+
+# Strahltransport
+# hat keine rechnerische Auswertung :)
