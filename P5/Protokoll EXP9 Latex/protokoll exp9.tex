@@ -64,6 +64,14 @@ SALOME lässt sich durch ein Kontrollsystem steuern. Hiermit werden die Ströme 
 
 \section{Versuchsdurchführung}
 \subsection{Strahltransport}
+Um Messungen an einem Beschleuniger durchzuführen, muss zuerst der Strahl durch das Strahlrohr transportiert werden. Es müssen also die Dipolströme gefunden werden, für die der Strahl möglichst mittig den gesamten Beschleuniger durchqueren kann.\\
+Dafür wird an jedem Dipolpaar einer der Ströme drastisch -- von $\qty{-5}{\ampere}$ bis $\qty{5}{\ampere}$  und anders herum -- geändert, während mit dem anderen immer nur in kleineren Schritten von $\qty{0,5}{\ampere}$ gescannt wird. 
+
+\subsubsection{Strahlbasierte Justage}
+Damit sich der Strom bei Variation der Quadrupolströme nicht bewegt, wird die strahlbasierte Justage durchgeführt. Das Ziel hier ist, dass der Teilchenstrahl den Quadrupol genau auf Achse durchquert.\\
+Um das zu erreichen, werden die Dipole V102MATCH und Q113MATCH vor dem Quadrupol Q57MATCH genutzt. Zuerst wird die Justage für $\langle x\rangle$, dann für $\langle y\rangle$ durchgeführt.\\
+Bei der Justage wird zuerst der Strahl in die entgegengesetzte Richtung der Messung fokussiert. Dann wird für zwei feste Quadrupolströme $I_{Q_1}$ und $I_{Q_2}$ jeweils der Dipolstrom $I_D$ durchgescannt. $I_{Q_1}$ und $I_{Q_2}$ haben eine Differenz von etwa $\qty{1}{\ampere}$. Für jeden Dipolstrom wird die zeitlich gemittelte Position $\langle y\rangle$ (für den horizontalen Scan) bzw. $\langle x\rangle$ (für den vertikalen Scan) notiert.\\
+Für $I_{Q_1}$ und $I_{Q_2}$ werden dann Geraden ermittelt und der Schnittpunkt beider Geraden bestimmt. An diesem Schnittpunkt $I_{D_0}$ wird jetzt eine Kontrollmessung durchgeführt, bei der der Quadrupolstrom von $I_{Q_1}$ bis $I_{Q_2}$ variiert wird. 
 
 \subsection{Energiemessung}
 Zur Ablenkung des Teilchenstrahls werden magnetische Felder genutzt. Um die Energie des Teilchenstrahls zu ermitteln, wird die Teilchenablenkung durch das Dipolmagnetfeld gemessen.\\
@@ -86,36 +94,38 @@ Für die vertikale Ablenkung $y$ gilt:
 \end{equation}
 
 Vor dem Start der Messung wird die Distanz $L$ zwischen dem benutzten Quadrupol und Schirm bestimmt.\\
-Die Messung selber ist folgendermaßen strukturiert:
+Die Messung selber ist folgendermaßen strukturiert: Zuerst werden die Dipolströme bestimmt, für die $y$ maximal bzw. minimal ist. Anschließend wird zwischen den beiden Strömen immer in $\qty{0,1}{\ampere}$ Abständen die zeitlich gemittelte Position $\langle y\rangle$ bestimmt. 
 
 
 \subsection{Emittanzmessung}
+\label{sec: emittanzmessung}
 Eins der Verfahren um die Emittanz zu bestimmen, lässt sich mit einem zentrierten Strahl, einem Quadrupolmagneten und dem Schirm hinter dem Quadrupolmagneten durchführen.\\
 Auf dem Schirm lassen sich die transversalen Strahlgrößen $\sigma_x=\sqrt{\Sigma^x_{11}}$ und $\sigma_y=\sqrt{\Sigma^y_{11}}$ in Abhängigkeit der Quadrupolstärke $k$ messen. Die transversalen Strahlengrößen am Schirm hängen über die, durch die Geometrie und Ströme des Beschleunigers bekannte, Transfermatrix $A$ mit den transversalen Strahlengrößen am Ort des Quadrupols zusammen:
 \begin{equation}
-	\vec{b} = A\cdot\begin{pmatrix} <x^2> \\ <xx'> \\ <x'^2> \end{pmatrix}
+	\vec{b} = A\cdot\begin{pmatrix} \langle x^2\rangle \\ \langle xx'\rangle \\ \langle x'^2\rangle \end{pmatrix}
 \end{equation}
-$A$ ist hier eine $i\times 3$ Matrix mit $i$ der Anzahl an variierten Quadrupolstärken und $\vec{b}$ ist ein $i\times 1$ dimensionaler Vektor mit den korrespondierenden $<x^2_{screen}>$ für jede variierte Quadrupolstärke. Damit der gesuchte Vektor $\vec{x}$ dreidimensional ist, wird die Normalengleichung der linearen Regressionen angewendet \cite{1}:
+$A$ ist hier eine $i\times 3$ Matrix mit $i$ der Anzahl an variierten Quadrupolstärken und $\vec{b}$ ist ein $i\times 1$ dimensionaler Vektor mit den korrespondierenden $\langle x^2_{screen}\rangle$ für jede variierte Quadrupolstärke. Damit der gesuchte Vektor $\vec{x}$ dreidimensional ist, wird die Normalengleichung der linearen Regressionen angewendet \cite{1}:
 \begin{equation}
 	(A^T\cdot A)^{-1}\cdot A^T\cdot \vec{b}=\vec{x}
 \end{equation}
 Aus $\vec{x}$ lässt sich dann die Emittanz am Ort des Quadrupolmagneten bestimmen:
 \begin{equation}
-	\epsilon_{x,y}=\sqrt{<x^2><x'^2>-<xx'>^2}
+	\epsilon_{x,y}=\sqrt{\langle x^2\rangle \langle x'^2\rangle-\langle xx'\rangle^2}
 \end{equation}
 Anschließend lassen sich die Twiss-Parameter $\beta, \alpha, \gamma$ mithilfe der Emittanz und $\vec{x}$ bestimmen (hier als Beispiel in x-Richtung):
 \begin{equation}
-	\beta_x=\frac{<x^2>}{\epsilon_x}, \alpha_x=\frac{-<xx'>}{\epsilon_x}, \gamma_x=\frac{<x'^2>}{\epsilon_x}
+	\beta_x=\frac{\langle x^2\rangle}{\epsilon_x}, \alpha_x=\frac{-\langle xx'\rangle}{\epsilon_x}, \gamma_x=\frac{\langle x'^2\rangle}{\epsilon_x}
 \end{equation}
 Die so bestimmten Twiss-Parameter lassen sich mithilfe der Transformationsmatrix durch die Strahlführung transformieren.
 
+Für die Emittanzmessung werden zwei Messreihen aufgenommen: Eine horizontale Messung für $\epsilon_x$ und eine vertikale für $\epsilon_y$.\\
+Jede Messreihe ist folgendermaßen strukturiert: Zuerst wird der Quadrupolstrom $I_0$ bestimmt, für den die Strahlbreite in die betrachtete Richtung minimal ist, dann wird um diesen Strom in einem Rahmen von $I_0-0,5$ bis $I_0+0,5$ in $\qty{0,1}{\ampere}$ Schritten gemessen.\\
+Für die horizontale Messung ist der Quadrupolstrom positiv, für die vertikale negativ.
+
 
 \subsubsection{Beta-Funktion}
-Die Bestimmung der Beta-Funktion wird mit Schirmen durchgeführt. Die Strahlgrößen $x_{RMS}$ und $y_{RMS}$ werden an den vier Schirmen im Aufbau gemessen. Dazugehörig werden auch die z-Positionen der Schirme entlang der Strahllänge gemessen. 
+Die Bestimmung der Beta-Funktion wird mit Schirmen durchgeführt. Die Strahlgrößen $x_{RMS}$ und $y_{RMS}$ werden an den vier Schirmen im Aufbau gemessen. Dazugehörig werden auch die z-Positionen der Schirme entlang der Strahllänge gemessen.
 
-
-quadrupolscan (nur mit matrizenformalismus)\\
-strahlbasierte justage\\
 
 \section{Auswertung der Messergebnisse}
 
