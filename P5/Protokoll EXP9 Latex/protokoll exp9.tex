@@ -45,6 +45,29 @@ Manipulation of Electrons}
 
 \subsection{Betatron-Strahlung und Emittanz}
 
+\subsection{Messverfahren}
+\subsubsection{Emittanzmessung mit Quadrupolmagneten}
+Eins der Verfahren um die Emittanz zu bestimmen, lässt sich mit einem zentrierten Strahl, einem Quadrupolmagneten und dem Schirm hinter dem Quadrupolmagneten durchführen.\\
+Auf dem Schirm lassen sich die transversalen Strahlgrößen $\sigma_x=\sqrt{\Sigma^x_{11}}$ und $\sigma_y=\sqrt{\Sigma^y_{11}}$ in Abhängigkeit der Quadrupolstärke $k$ messen. Die transversalen Strahlengrößen am Schirm hängen über die, durch die Geometrie und Ströme des Beschleunigers bekannte, Transfermatrix $A$ mit den transversalen Strahlengrößen am Ort des Quadrupols zusammen:
+\begin{equation}
+	\vec{b} = A\cdot\begin{pmatrix} <x^2> \\ <xx'> \\ <x'^2> \end{pmatrix}
+\end{equation}
+$A$ ist hier eine $i\times 3$ Matrix mit $i$ der Anzahl an variierten Quadrupolstärken und $\vec{b}$ ist ein $i\times 1$ dimensionaler Vektor mit den korrespondierenden $<x^2_{screen}>$ für jede variierte Quadrupolstärke. Damit der gesuchte Vektor $\vec{x}$ dreidimensional ist, wird die Normalengleichung der linearen Regressionen angewendet \cite{1}:
+\begin{equation}
+	(A^T\cdot A)^{-1}\cdot A^T\cdot \vec{b}=\vec{x}
+\end{equation}
+Aus $\vec{x}$ lässt sich dann die Emittanz am Ort des Quadrupolmagneten bestimmen:
+\begin{equation}
+	\epsilon_{x,y}=\sqrt{<x^2><x'^2>-<xx'>^2}
+\end{equation}
+Anschließend lassen sich die Twiss-Parameter $\beta, \alpha, \gamma$ mithilfe der Emittanz und $\vec{x}$ bestimmen (hier als Beispiel in x-Richtung):
+\begin{equation}
+	\beta_x=\frac{<x^2>}{\epsilon_x}, \alpha_x=\frac{-<xx'>}{\epsilon_x}, \gamma_x=\frac{<x'^2>}{\epsilon_x}
+\end{equation}
+Die so bestimmten Twiss-Parameter lassen sich mithilfe der Transformationsmatrix durch die Strahlführung transformieren.
+
+\subsubsection{Energiemessung}
+
 \section{Experimenteller Aufbau}
 Der Versuch von an SALOME, dem Simple Accelerator for Learning Optics and Manipulation, durchgeführt. SALOME ist ein 6m langer Linearbeschleuniger, der Elektronen mit Energien bis zu \qty{20}{keV} erzeugen kann.\\
 \begin{figure}[h]
