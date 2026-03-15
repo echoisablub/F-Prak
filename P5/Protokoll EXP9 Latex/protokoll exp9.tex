@@ -9,9 +9,11 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{url}
+\usepackage{float}
 \usepackage{siunitx}
 \usepackage{bookmark}
 \sisetup{locale = DE}
+\usepackage{subcaption}
 
 \renewcommand{\UrlFont}{\small\tt}
 \usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
@@ -130,82 +132,158 @@ Die Bestimmung der Beta-Funktion wird mit Schirmen durchgeführt. Die Strahlgrö
 \section{Auswertung der Messergebnisse}
 
 \subsection{Strahltransport}
-Bilder
+
+Die für den stabilen Transport ermittelten Magneteinstellungen sind in \autoref{fig:einstellungenstrahltransport} dokumentiert.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{img/strahltransport/strahltransport einstellungen.png}
+    \caption{Einstellungen: Strahltransport}
+    \label{fig:einstellungenstrahltransport}
+\end{figure}
+
+In \autoref{fig:fuenf_bilder_gesamt} sind die resultierenden Strahlprofile dargestellt, wie sie auf den Schirmen entlang ... aufgenommen wurden. Die Aufnahmen zeigen einen gut fokussierten und zentrierten Strahl auf allen Stationen.
+
+\begin{figure}[H]
+
+    \centering
+    
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/02_schirm.png}
+        \caption{Schirm 2}
+        \label{fig:schirm2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/03_schirm.png}
+        \caption{Schirm 3}
+        \label{fig:schirm3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/04_schirm.png}
+        \caption{Schirm 4}
+        \label{fig:schirm4}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/05_schirm.png}
+        \caption{Schirm 5}
+        \label{fig:schirm5}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Horizontaler Abstand zwischen den beiden unteren Bildern
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/06_schirm.png}
+        \caption{Schirm 6}
+        \label{fig:schirm6}
+    \end{subfigure}
+
+    \caption{Gesamtdarstellung der fünf Messungen: Strahlprofile auf den verschiedenen Schirmen}
+    \label{fig:fuenf_bilder_gesamt}
+\end{figure}
+
+Dieser erfolgreiche Strahltransport bildete die notwendige Grundlage für die präzise Durchführung der nachfolgenden strahlbasierten Justage und der Emittanzmessung.
 
 \subsection{Strahlbasierte Justage}
-\subsubsection{x Werte}
-$I_{Q_{1}} = -0.344$ plot\\
-$I_{Q_{2}} = 0.657$ plot\\
-$I_{D_{0}} = -1.236$ (x intersection) 
 
-\begin{figure}[ht!]
+Um sicherzustellen, dass der Strahl den Quadrupol Q57MATCH exakt auf der magnetischen Achse durchquert, wurde eine Strahlbasierte Justage durchgeführt.
+Durch Variation des Dipolstroms bei zwei unterschiedlichen Quadrupolstärken ($I_{Q1}$ und $I_{Q2}$) wurden Regressionsgeraden ermittelt, deren Schnittpunkt den magnetischen Mittelpunkt $I_{D0}$ definiert.
+\subsubsection{Horizontale Ausrichtung}
+Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den Quadrupolstärken $I_{Q_{1}} = -0.344$ und $I_{Q_{2}} = 0.657$, ergab sich ein Korrekturstrom von $I_{D0,x} = -1,236\text{A}\pm 0,0532\text{A}$.
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.435]{img/Strahlbasierte Justage_X-Ausrichtung.png}
+    \includegraphics[scale=0.35]{img/Strahlbasierte Justage_X-Ausrichtung.png}
     \caption{Strahlbasierte Justage in x-Ausrichtung}
+    \label{fig:strahlbasiertejustagex}
 \end{figure}
 
-\subsubsection{y Werte}
-$I_{Q_{1}} = 1.685$ plot \\
-$I_{Q_{2}} = 2.703$ plot \\
-$I_{D_{0}} = -0.777$ (y intersection) plot
-
-\begin{figure}[ht!]
+\subsubsection{Vertikale Ausrichtung}
+Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Quadrupolstärken $I_{Q_{1}} = 1.685$ und $I_{Q_{2}} = 2.703$, wurde ein Wert von $I_{D0,y} = -0,686\text{A}\pm 0,0935\text{A}$ bestimmt.
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.435]{img/Strahlbasierte Justage_Y-Ausrichtung.png}
+    \includegraphics[scale=0.35]{img/Strahlbasierte Justage_Y-Ausrichtung.png}
     \caption{Strahlbasierte Justage in y-Ausrichtung}
+    \label{fig:strahlbasiertejustagey}
 \end{figure}
 
-\subsubsection{Fehler}
-Mittlerer Scanschritt x = 0.1063
-Fehler x: $\frac{\Delta_I}{2} = 0.0532$
+\subsubsection{Kontrollmessung}
 
-Mittlerer Scanschritt y = 0.1869
-Fehler y: $\frac{\Delta_I}{2} = 0.0935$
+Die Kontrollmessungen in \autoref{fig:ueberpruefung_justage_gesamt} bestätigen den Erfolg der Justage, da die Strahlposition innerhalb der Fehlergrenzen stabil bleibt, wenn die Quadrupolstärke variiert wird.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.435]{img/Überprüfung der Strahlbasierte Justage_x.png}
-    \caption{Überprüfung der Strahlbasierte Justage in x-Ausrichtung}
-\end{figure}
+    \begin{subfigure}[b]{0.8\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Überprüfung der Strahlbasierte Justage_x.png}
+        \caption{Überprüfung der Strahlbasierte Justage in x-Ausrichtung}
+        \label{fig:Überprüfungstrahlbasiertejustagex}
+    \end{subfigure}
 
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[scale=0.435]{img/Überprüfung der Strahlbasierte Justage_y.png}
-    \caption{Überprüfung der Strahlbasierte Justage in y-Ausrichtung}
+    \begin{subfigure}[b]{0.8\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Überprüfung der Strahlbasierte Justage_y.png}
+        \caption{Überprüfung der Strahlbasierte Justage in y-Ausrichtung}
+        \label{fig:Überprüfungstrahlbasiertejustagey}
+    \end{subfigure}
+    
+    \caption{Zusammenfassende Darstellung der Kontrollmessungen zur strahlbasierten Justage.}
+    \label{fig:ueberpruefung_justage_gesamt}
 \end{figure}
 
 \subsection{Energiemessung}
-\begin{math}
-\frac{dy}{dI} = 14.4384 \frac{mm}{A} \pm 0.106 \frac{mm}{A}\\
-\kappa = 7.64 \cdot 10^{-6} \frac{Tm}{A}\\
-L = 0.52 m \pm 0.01 m\\
-E_0 = 511 keV\\
-\beta \gamma = 0.1614 \pm 0.00332 \approx \beta\\
-\gamma = 1.013 \pm 0.000529 \rightarrow \text{ also fast klassisch}\\
-E_{kin} =6.62 keV \pm 0.27 keV\\
-p = 2.752 \cdot 10^{-7} \frac{keV}{c} \pm 5.661 \cdot 10^{-9} \frac{keV}{c}\\
-\end{math}
+
+Die kinetische Energie der Elektronen wurde über die vertikale Ablenkung in einem Dipolmagneten bestimmt. Aus der linearen Regression der Strahlposition über dem Magnetstrom ergab sich eine Steigung von $\frac{dy}{dI} = 14,4384 \pm 0,106 \text{ mm/A}$. Unter Verwendung der dipolspezifischen Konstante $\kappa = 7,64 \cdot 10^{-6} \text{ Tm/A}$, der Driftstrecke $L = 0,52 \pm 0,01 \text{ m}$ und der Ruheenergie der Elektronen von $E_0 = 511 \text{ keV}$ wurde zunächst das Produkt $\beta\gamma = 0,1614 \pm 0,00332$ ermittelt, was aufgrund der geringen Geschwindigkeit näherungsweise $\beta$ entspricht.\\
+Daraus resultiert ein Lorentzfaktor von $\gamma = 1,013 \pm 0,000529$, was auf ein nahezu klassisches Geschwindigkeitsregime hindeutet. Die finale kinetische Energie wurde zu $E_{kin} = 6,62 \pm 0,27 \text{ keV}$ berechnet. Der entsprechende Impuls der Teilchen wurde mit $p = 2,752 \cdot 10^{-7} \pm 5,661 \cdot 10^{-9} \text{ keV/c}$ bestimmt.
 
 \subsection{Emittanz}
-
-$\epsilon_x = 0.72867 \pm 0.07115$ mm mrad\\
-$\epsilon_y = 1.98349 \pm 0.09011$ mm mrad
+Die Emittanz wurde mittels eines Quadrupol-Scans am Ort des Magneten bestimmt, indem die transversalen Strahlgrößen auf dem Schirm als Funktion der Quadrupolstärke $k$ gemessen wurden. Durch Anwendung der Normalengleichung für die lineare Regression ergaben sich folgende Werte für die Emittanz:
+\begin{itemize}
+    \item $\epsilon_x = 0.72867 \pm 0.07115$ mm mrad
+    \item $\epsilon_y = 1.98349 \pm 0.09011$ mm mrad
+\end{itemize}
 
 \subsubsection{Optische Funktionen}
 
-$\beta_x = 0.578 \pm 0.0565, \alpha_x = -1.19 \pm 0.117, \gamma_x = 4.19 \pm 0.41$\\
-$\beta_y = 0.814 \pm 0.037, \alpha_y = -1.401 \pm 0.0637, \gamma_y = 3.639 \pm 0.165$
+Basierend auf der Emittanz wurden die Twiss-Parameter am Eingang des Quadrupols berechnet. Diese beschreiben die Form und Ausrichtung der Phasenraumellipse. Die ermittelten Werte lauten:
+\begin{itemize}
+    \item $\beta_x = 0.578 \pm 0.0565, \, \alpha_x = -1.19 \pm 0.117,\, \gamma_x = 4.19 \pm 0.41$
+    \item $\beta_y = 0.814 \pm 0.037, \, \alpha_y = -1.401 \pm 0.0637,\, \gamma_y = 3.639 \pm 0.165$
+\end{itemize}
+
+
 
 \subsection{Beta-Func}
 
-\begin{figure}[ht!]
+In \autoref{fig:betafunc} ist der Verlauf der $\beta$-Funktion in Abhängigkeit der z-Position entlang des Beschleunigers dargestellt. Die Messpunkte umfassen die Daten der vier Diagnostikschirme sowie den extrapolierten Wert aus dem Q-Scan.\\
+Die Entwicklung der $\beta$-Funktion zeigt die erwartete Fokussierungswirkung der Quadrupol-Zellen im diagnostischen Bereich.
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.435]{img/beta func mit fehlerfortpflanzung.png}
+    \includegraphics[scale=0.35]{img/beta func mit fehlerfortpflanzung.png}
     \caption{$\beta$-Funktion in Abhängigkeit der z-Position des Strahls}
+    \label{fig:betafunc}
 \end{figure}
 
 \section{Diskussion der physikalischen Ergebnisse}
 
+\subsection{Fehlerdiskussion}
+
+\subsubsection{Strahlbasierte Justage}
+Die Unsicherheit der Justage wurde konservativ als die Hälfte der gewählten Scanschrittweite ($\Delta I/2$) angesetzt. Dies resultiert in einem Fehler von $\pm 0,0532\text{A}$ für die x-Achse und $\pm 0,0935\text{A}$ für die y-Achse. 
+
+\subsubsection{Energiemessung}
+Die angewandte Fehlerfortpflanzung berücksichtigt hierbei konsequent die Unsicherheiten der Geometrie ($L$) sowie der experimentell ermittelten Steigungsmessung ($dy/dI$).
+
+\subsubsection{Emittanz}
+
+Hierbei wurde vorausgesetzt, dass der relative Fehler der optischen Funktionen direkt proportional zum relativen Fehler der Emittanzmessung ist.
+
+\subsubsection{Beta Funktion}
+Die Fehlerbalken reflektieren die kombinierte Unsicherheit aus der Emittanzmessung und der Schirmauflösung. Bei der Fehlerfortpflanzung wurde die Schirmunsicherheit von $\pm 50,\mu\text{m}$ für die lineare Strahlbreite auf den quadratischen Term $x_{rms}^2$ transformiert, um physikalisch plausible Fehlergrenzen im Bereich von ca. $0,1$ bis $0,5,\text{m}$ zu erhalten. 
 
 \section{Zusammenfassung}
 
