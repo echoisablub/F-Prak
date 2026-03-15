@@ -45,8 +45,51 @@ Manipulation of Electrons}
 
 \subsection{Betatron-Strahlung und Emittanz}
 
-\subsection{Messverfahren}
-\subsubsection{Emittanzmessung mit Quadrupolmagneten}
+
+\section{Experimenteller Aufbau}
+Der Versuch von an SALOME, dem Simple Accelerator for Learning Optics and Manipulation, durchgeführt. SALOME ist ein \qty{6}{m} langer Linearbeschleuniger, der Elektronen mit Energien bis zu \qty{20}{keV} erzeugen kann.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/salome aufbau.png}
+	\caption{Schematischer Aufbau von SALOME. Focusing und Defocusing bezieht sich bei den Quadrupolen auf die Horizontale.}
+	%hier vielleicht ein eigenes bild einfügen, weil das nicht ganz akkurat zu unserem aufbau ist?
+	\label{fig: salomeaufbau}
+\end{figure}
+Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in vier Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{mikroampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
+Darauf folgt die erste F0D0-Zelle in dem zweiten Abschnitt, der Matching Section. Hinter jedem Quadrupol ist ein Schirm mit Kamera angebracht, der rein und raus aus dem Strahl gefahren werden kann.\\
+Der dritte Abschnitt ist die Diagnostic Section mit der zweiten F0D0-Zelle. Die Diagnostikstationen hier sind immer in der Mitte von zwei Quadrupolmagneten.\\
+Zuletzt gibt es die Straight Section in der der Elektronenstrahl nach einem letzten Quadrupolmagneten in einen Beam-Dump geführt wird.\\\\
+SALOME lässt sich durch ein Kontrollsystem steuern. Hiermit werden die Ströme der Magnete, die Schirme und Kameras gesteuert. Die benutzten Kameras haben eine Auflösung von $0,250 \frac{\text{pixel}}{\text{mm}}$.
+
+
+\section{Versuchsdurchführung}
+\subsection{Strahltransport}
+
+\subsection{Energiemessung}
+Zur Ablenkung des Teilchenstrahls werden magnetische Felder genutzt. Um die Energie des Teilchenstrahls zu ermitteln, wird die Teilchenablenkung durch das Dipolmagnetfeld gemessen.\\
+Zur Berechnung betrachten wir zunächst den Absolutbetrag der Lorentzkraft mit der Annahme, dass die Geschwindigkeit der Elektronen senkrecht zum Magnetfeld des Dipols ist. Die resultierende Ablenkung ist vertikal, weswegen die Kraft auch durch eine Änderung des vertikalen Impulses $p_y$ gegeben ist:
+\begin{equation}
+	F=evB=\frac{dp_y}{dt}
+\end{equation}
+Mit der Umschreibung der Zeit $t$ zu $t=\frac{L}{v} \Leftrightarrow dt=\frac{dL}{v}$ folgt, mit dem angelegten Strom $I$ und der Bauteil-abhängigen Konstante $\kappa = \qty{7.64e-6}{\tesla\meter\per\ampere}$, für den vertikalen Impuls:
+\begin{equation}
+	p_y = e\int^{\infty}_{-\infty}BdL = \kappa I
+\end{equation}
+Für den vertikalen Winkel zur Bahn eines Referenzteilchens $y'$ gilt:
+\begin{equation}
+	\frac{p_y}{p}=\frac{e\kappa I}{m_ec\beta\gamma}=y'
+\end{equation}
+Für die vertikale Ablenkung $y$ gilt:
+\begin{equation}
+	y=y_0+y'L \Leftrightarrow y=y_0+\frac{e\kappa IL}{m_ec\beta\gamma}\\
+	dy = \frac{e\kappa L}{m_ec\beta\gamma}dI \Leftrightarrow \beta\gamma = \frac{e\kappa L}{m_ec\cdot \frac{dy}{dI}}
+\end{equation}
+
+Vor dem Start der Messung wird die Distanz $L$ zwischen dem benutzten Quadrupol und Schirm bestimmt.\\
+Die Messung selber ist folgendermaßen strukturiert:
+
+
+\subsection{Emittanzmessung}
 Eins der Verfahren um die Emittanz zu bestimmen, lässt sich mit einem zentrierten Strahl, einem Quadrupolmagneten und dem Schirm hinter dem Quadrupolmagneten durchführen.\\
 Auf dem Schirm lassen sich die transversalen Strahlgrößen $\sigma_x=\sqrt{\Sigma^x_{11}}$ und $\sigma_y=\sqrt{\Sigma^y_{11}}$ in Abhängigkeit der Quadrupolstärke $k$ messen. Die transversalen Strahlengrößen am Schirm hängen über die, durch die Geometrie und Ströme des Beschleunigers bekannte, Transfermatrix $A$ mit den transversalen Strahlengrößen am Ort des Quadrupols zusammen:
 \begin{equation}
@@ -66,30 +109,6 @@ Anschließend lassen sich die Twiss-Parameter $\beta, \alpha, \gamma$ mithilfe d
 \end{equation}
 Die so bestimmten Twiss-Parameter lassen sich mithilfe der Transformationsmatrix durch die Strahlführung transformieren.
 
-\subsubsection{Energiemessung}
-
-\section{Experimenteller Aufbau}
-Der Versuch von an SALOME, dem Simple Accelerator for Learning Optics and Manipulation, durchgeführt. SALOME ist ein 6m langer Linearbeschleuniger, der Elektronen mit Energien bis zu \qty{20}{keV} erzeugen kann.\\
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.75\linewidth]{img/salome aufbau.png}
-	\caption{Schematischer Aufbau von SALOME. Focusing und Defocusing bezieht sich bei den Quadrupolen auf die Horizontale.}
-	%hier vielleicht ein eigenes bild einfügen, weil das nicht ganz akkurat zu unserem aufbau ist?
-	\label{fig: salomeaufbau}
-\end{figure}
-Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in vier Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{mikroampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
-Darauf folgt die erste F0D0-Zelle in dem zweiten Abschnitt, der Matching Section. Hinter jedem Quadrupol ist ein Schirm mit Kamera angebracht, der rein und raus aus dem Strahl gefahren werden kann.\\
-Der dritte Abschnitt ist die Diagnostic Section mit der zweiten F0D0-Zelle. Die Diagnostikstationen hier sind immer in der Mitte von zwei Quadrupolmagneten.\\
-Zuletzt gibt es die Straight Section in der der Elektronenstrahl nach einem letzten Quadrupolmagneten in einen Beam-Dump geführt wird.\\\\
-SALOME lässt sich durch ein Kontrollsystem steuern. Hiermit werden die Ströme der Magnete, die Schirme und Kameras gesteuert. Die benutzten Kameras haben eine Auflösung von $0,250 \frac{\text{pixel}}{\text{mm}}$.
-
-
-\section{Versuchsdurchführung}
-\subsection{Strahltransport}
-
-\subsection{Energiemessung}
-
-\subsection{Emittanzmessung}
 
 \subsubsection{Beta-Funktion}
 Die Bestimmung der Beta-Funktion wird mit Schirmen durchgeführt. Die Strahlgrößen $x_{RMS}$ und $y_{RMS}$ werden an den vier Schirmen im Aufbau gemessen. Dazugehörig werden auch die z-Positionen der Schirme entlang der Strahllänge gemessen. 
