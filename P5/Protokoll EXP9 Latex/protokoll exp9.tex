@@ -15,7 +15,7 @@
 \sisetup{locale = DE}
 \usepackage{subcaption}
 
-\renewcommand{\UrlFont}{\small\tt}
+%\renewcommand{\UrlFont}{\small\tt}
 \usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
 
 \linespread{1.1}
@@ -57,7 +57,7 @@ Das Magnetfeld eines Dipols ist abhängig von dem angelegten Strom $I_D$ mit Abs
 Innerhalb des Dipols ist das Magnetfeld näherungsweise homogen (siehe \autoref{fig: dipol}), trotz den Krümmungseffekten an den Rändern.
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/dipol joch.png}
+	\includegraphics[width=0.7\linewidth]{img/dipol joch.png}
 	\caption{Prinzip eines aus zwei parallelen Eisenpolen gebildeten Eisenmagneten. \cite{2}}
 	\label{fig: dipol}
 \end{figure}
@@ -67,7 +67,7 @@ Innerhalb des Dipols ist das Magnetfeld näherungsweise homogen (siehe \autoref{
 Quadrupole mit Feldstärke $k$ werden für die Strahlfokussierung verwendet. Ein Quadrupol besteht aus vier Polen mit hyperbelförmigen Flächen, die abwechselnd gepolt sind (siehe \autoref{fig: quadrupol}) \cite{2}.\\
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png}
+	\includegraphics[width=0.7\linewidth]{img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png}
 	\caption{Magnetischen Feldlinien eines idealen Quadrupols mit eingezeichneten Kräften. \cite{4}}
 	\label{fig: quadrupol}
 \end{figure}
@@ -86,21 +86,39 @@ Eine gängige Quadrupolanordnung in Beschleunigern ist die F0D0-Struktur (siehe 
 Diese Struktur wird entlang des Beschleunigers wiederholt.
 
 \subsection{Betatron-Strahlung und Emittanz}
+Bei der Betrachtung der Bewegungsgleichung des gesamten Teilchenstrahls $x''(z)-k(z)x(z)=0$, ist die Bahnfunktion $x(z)$ letztendlich eine Schwingungsgleichung, die die transversale Schwingung -- auch Betatronschwingung -- um den Orbit in Abhängigkeit der Position entlang der Sollbahn beschreibt. \cite{3}\\\\
+Diese Betatronschwingung lässt sich auf unterschiedliche Arten charakterisieren. Es gibt die Betafunktion $\beta(z)$, auch Amplitudenfunktion genannt, die zusammen mit der ortsabhängigen Phase $\Phi(z)$ durch die Lösung der Bewegungsgleichung definiert ist \cite{3}:
+\begin{equation}
+	x(z)=\sqrt{\epsilon\beta(z)}\cos(\Phi(z)+\Phi_0),\\
+	x'(z)=-\frac{\sqrt{\epsilon}}{\sqrt{\beta(z)}}[\alpha(z)\cos(\Phi(z)+\Phi_0)+\sin(\Phi(z)+\Phi_0)]
+\end{equation}
+Die Größe $E(z)=\sqrt{\epsilon\beta(z)}$ nennt sich die Einhüllende, da sie die Grenze der Bewegung bildet.\\\\
+Die Größe $\epsilon$ ist eine Erhaltungsgröße -- die Emittanz. Die Emittanz beschreibt die Teilchenbewegung im horizontalen transversalen Phasenraum $(x, x')$ \cite{3}:
+\begin{equation}
+	\epsilon=\gamma(z)x^2(z)+2\alpha(z)x(z)x'(z)+\beta(z)x'^2(z)
+\end{equation}
+Die Parameter $\alpha(z), \beta(z), \gamma(z)$ werden auch optische Funktionen oder Twiss-Parameter genannt und sind in Abhängigkeit von $\beta(z)$ definiert \cite{3}:
+\begin{equation}
+	\alpha(z)=\frac{1}{2}\beta'(z),\\
+	\gamma(z)=\frac{1+\alpha^2(z)}{\beta(z)}
+\end{equation}
+Die normierte Emittanz ist definiert durch den Lorentzfaktor $\gamma$ und $\beta=\frac{v}{c}$ (nicht zu verwechseln mit $\gamma(z) \& \beta(z)$):
+\begin{equation}
+	\epsilon_n=\beta\gamma\cdot\epsilon=\beta\gamma\cdot\sigma_x\sigma_{x'}
+\end{equation}
 
 
 \section{Experimenteller Aufbau}
 Der Versuch von an SALOME, dem Simple Accelerator for Learning Optics and Manipulation, durchgeführt. SALOME ist ein \qty{6}{m} langer Linearbeschleuniger, der Elektronen mit Energien bis zu \qty{20}{keV} erzeugen kann.\\
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.75\linewidth]{img/salome aufbau.png}
-	\caption{Schematischer Aufbau von SALOME. Focusing und Defocusing bezieht sich bei den Quadrupolen auf die Horizontale.}
-	%hier vielleicht ein eigenes bild einfügen, weil das nicht ganz akkurat zu unserem aufbau ist?
+	\includegraphics[width=0.75\linewidth]{img/salome schematic.png}
+	\caption{Schematischer Aufbau von SALOME. Focusing und Defocusing bezieht sich bei den Quadrupolen auf die Horizontale. \cite{5}}
 	\label{fig: salomeaufbau}
 \end{figure}
-Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in vier Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{\micro\ampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
+Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in drei Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{\micro\ampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
 Darauf folgt die erste F0D0-Zelle in dem zweiten Abschnitt, der Matching Section. Hinter jedem Quadrupol ist ein Schirm mit Kamera angebracht, der rein und raus aus dem Strahl gefahren werden kann.\\
-Der dritte Abschnitt ist die Diagnostic Section mit der zweiten F0D0-Zelle. Die Diagnostikstationen hier sind immer in der Mitte von zwei Quadrupolmagneten.\\
-Zuletzt gibt es die Straight Section in der der Elektronenstrahl nach einem letzten Quadrupolmagneten in einen Beam-Dump geführt wird.\\\\
+Der dritte Abschnitt ist die Diagnostic Section mit der zweiten F0D0-Zelle. Die Diagnostikstationen hier sind immer in der Mitte von zwei Quadrupolmagneten.\\\\
 SALOME lässt sich durch ein Kontrollsystem steuern. Hiermit werden die Ströme der Magnete, die Schirme und Kameras gesteuert. Die benutzten Kameras haben eine Auflösung von $0,250 \frac{\text{pixel}}{\text{mm}}$.
 
 
@@ -331,8 +349,11 @@ Die Fehlerbalken reflektieren die kombinierte Unsicherheit aus der Emittanzmessu
 
 \pagenumbering{Alph}
 
-\bibliography{literatur.bib}
-\addcontentsline{toc}{section}{Literatur}
+\section{Literatur}
+\thispagestyle{empty}
+\bibliographystyle{ieeetr}
+\bibliography{literatur}
+\addcontentsline{toc}{chapter}{Bibliography}
 
 \newpage
 
