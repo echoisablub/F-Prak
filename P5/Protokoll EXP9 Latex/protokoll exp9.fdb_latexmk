@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9"] 0 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9" 1773684314
+["bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9"] 0 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9" 1773685191
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux" 0 -1 0 "pdflatex"
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "literatur.bib" 1773672917 2640 46bc89c6c61fcc9ab1a6e85b99d24134 ""
   (generated)
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.blg"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl"
-["pdflatex"] 1773684312 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.tex" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.pdf" "protokoll exp9" 1773684314
+["pdflatex"] 1773685189 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.tex" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.pdf" "protokoll exp9" 1773685191
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png" 1773672917 185910 90d9281f05e8ce1134d5129c88165203 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_X-Ausrichtung.png" 1773408904 78778 01a83db03530e474366c0868537bd36f ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_Y-Ausrichtung.png" 1773408904 86648 9940762983c5c8d0725dc9ba1e014470 ""
@@ -22,9 +22,9 @@
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/strahltransport einstellungen.png" 1773339314 50404 7571500ecf761aa71f5f495340c8f8a4 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_x.png" 1773408904 50735 18c05c32c4c0272eb715489b4198937d ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_y.png" 1773408904 49926 bf63c268b69cabf3151f90a3f6c7c1cc ""
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux" 1773684312 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux" 1773685189 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl" 1773599079 0 d41d8cd98f00b204e9800998ecf8427e "bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.tex" 1773684310 29142 b4a2f38c5ff89b44f1679088a63dcd5d ""
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.tex" 1773685186 29186 667421d75e909eff72d510de3193e4f0 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -143,8 +143,8 @@
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1615302648 2432472 15134b493306b65340e200b07e4f06bc ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   (generated)
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.log"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.lof"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.toc"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.pdf"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.log"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.toc"

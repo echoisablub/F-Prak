@@ -350,8 +350,7 @@ Die Genauigkeit der Ergebnisse wird durch zwei Hauptfaktoren limitiert:
     \item Schirmauflösung: Die Auflösung der Kameras von \qty{0,250}{px/mm} sowie die Schirmunsicherheit von $50\mu m$ beeinflussen direkt die Bestimmung der Strahlbreiten. Dies führt insbesondere bei der Fehlerfortpflanzung auf die $\beta$-Funktion zu Unsicherheiten im Bereich von 0,1 bis 0,5m.
     \item Statistische Unsicherheit: Die Nutzung der halben Scanschrittweite ($\Delta I/2$) als Fehlermaß für die Justage ist ein konservativer Ansatz, der jedoch durch die stabilen Kontrollmessungen gerechtfertigt wird. Die Übereinstimmung der Schnittpunkte beim Beam-based Alignment belegt, dass systematische Fehler durch eine Dezentrierung des Strahls im Quadrupolfeld erfolgreich minimiert wurden.
 \end{enumerate}
-Weiterhin berücksichtigt die Fehlerfortpflanzung der Emergiemessung die Unsicherheiten der Geometrie ($L$) sowie der experimentell ermittelten Steigungsmessung ($dy/dI$).
-Und bei der Emittanz wurde vorausgesetzt, dass der relative Fehler der optischen Funktionen direkt proportional zum relativen Fehler der Emittanzmessung ist.
+Es wurde für die Fehlerrechnung die Gauß'sche Fehlerfortpflanzung (Jacobimatrix-Verfahren) in Python implementiert, um die Unsicherheiten von $L$ und der Steigung $dy/dI$ auf die finalen Ergebnisse zu übertragen. Und bei der Emittanz wurde vorausgesetzt, dass der relative Fehler der optischen Funktionen direkt proportional zum relativen Fehler der Emittanzmessung ist.
 
 \section{Zusammenfassung}
 Intro satz...\\
