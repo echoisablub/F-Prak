@@ -38,12 +38,52 @@ Manipulation of Electrons}
 \pagenumbering{arabic}
 
 \section{Einleitung}
+Der Versuch EXP9 - SALOME dient der Heranführung an grundlegende Konzepte und Methoden bei der Arbeit mit Teilchenbeschleunigern. Im Rahmen des Experiments wird ein \qty{6}{\m} langer Linearbeschleuniger SALOME verwendet, um praktische Erfahrung in verschiedenen Arbeitsschritten zu sammeln. Zu diesen Aufgaben gehören der Strahltransport, die strahlbasierte Justage und Messungen der Energie, Emittanz und der optischen Funktionen. Die Reihenfolge der durchgeführten Übungen wurde didaktisch gewählt und spiegelt nicht die tatsächliche Abfolge bei der Realisierung eines vollständigen Beschleunigerbetriebs wider.
 
 \section{Theoretische Grundlagen}
+Jeder Beschleuniger hat eine Sollbahn, auf der sich im Idealfall alle Teilchen bewegen. Die Sollbahn der Teilchen wird bei der Konstruktion des Beschleunigers festgelegt, da sie fest mit den genutzten Bauteilen zusammenhängt. In Praxis folgen die Bahnen der einzelnen Teilchen im Strahl nicht dieser Sollbahn -- es gibt immer Abweichungen mit einer gewissen Winkeldivergenz. Es gilt also immer wieder den Strahl regelmäßig sowohl zu fokussieren als auch auf die Sollbahn zurückzulenken. \cite{2}\\\\
+Um die Bewegung von Teilchen entlang und abweichend von der Sollbahn zu beschreiben, wird ein mitbewegtes Koordinatensystem $K$ eingeführt. Die z-Komponente zeigt entlang der Sollbahn, die y- und x-Komponenten stehen vertikal zueinander und der Sollbahn \cite{3}
+
 \subsection{Dipol}
+Das Magnetfeld eines Beschleunigers, lässt sich als eine Summe von Multipolen schreiben \cite{3}:
+\begin{equation}
+	\frac{e}{p}B_y(x)=\frac{1}{R}+kx+...=\text{Dipol}+\text{Quadrupol}+\text{Multipole höherer Ordnung}
+\end{equation}
+Für die Teilchenablenkung werden die magnetischen Felder von Dipolen verwendet.\\
+Das Magnetfeld eines Dipols ist abhängig von dem angelegten Strom $I_D$ mit Abstand $h$ und Windungszahl $n$ \cite{3}:
+\begin{equation}
+	B_0=\mu_0\frac{nI_D}{h}
+\end{equation}
+Innerhalb des Dipols ist das Magnetfeld näherungsweise homogen (siehe \autoref{fig: dipol}), trotz den Krümmungseffekten an den Rändern.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/dipol joch.png}
+	\caption{Prinzip eines aus zwei parallelen Eisenpolen gebildeten Eisenmagneten. \cite{2}}
+	\label{fig: dipol}
+\end{figure}
 
 \subsection{Quadrupol}
 %hier auch F0D0 Zellen einführen 
+Quadrupole mit Feldstärke $k$ werden für die Strahlfokussierung verwendet. Ein Quadrupol besteht aus vier Polen mit hyperbelförmigen Flächen, die abwechselnd gepolt sind (siehe \autoref{fig: quadrupol}) \cite{2}.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png}
+	\caption{Magnetischen Feldlinien eines idealen Quadrupols mit eingezeichneten Kräften. \cite{4}}
+	\label{fig: quadrupol}
+\end{figure}
+Der Feldgradient $g$ ist in Abhängigkeit zu dem angelegten Strom \cite{3}:
+\begin{equation}
+	\frac{\partial B}{\partial x}=g=\frac{2\mu_0nI}{a^2}
+\end{equation}
+An dem Verlauf der Feldlinien ist zu sehen, dass ein Quadrupol, der in der horizontalen Ebene fokussierend wirkt, in vertikaler Richtung defokussiert. Um den Strahl also richtig fokussiert zu bekommen, müssen alternierend mindestens zwei Quadrupole verwendet werden, deren Polarität um 90° verdreht ist \cite{2}. Da die Stärke des Feldes zur Sollbahn hin gegen Null geht, heben sich die beiden entgegengesetzten Wirkungsrichtungen der Quadrupole nicht auf und das Resultat ist ein fokussierter Strahl.\\\\
+Eine gängige Quadrupolanordnung in Beschleunigern ist die F0D0-Struktur (siehe \autoref{fig: f0d0}). Hier werden ein fokussierender (F) und ein defokussierender (D) Quadrupol hintereinander angeordnet. Zwischen ihnen befinden sich Strecken ohne Fokussierung (0). \cite{3}\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{img/f0d0.png}
+	\caption{Eine F0D0-Zelle \cite{3}}
+	\label{fig: f0d0}
+\end{figure}
+Diese Struktur wird entlang des Beschleunigers wiederholt.
 
 \subsection{Betatron-Strahlung und Emittanz}
 
@@ -57,7 +97,7 @@ Der Versuch von an SALOME, dem Simple Accelerator for Learning Optics and Manipu
 	%hier vielleicht ein eigenes bild einfügen, weil das nicht ganz akkurat zu unserem aufbau ist?
 	\label{fig: salomeaufbau}
 \end{figure}
-Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in vier Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{mikroampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
+Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in vier Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{\micro\ampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
 Darauf folgt die erste F0D0-Zelle in dem zweiten Abschnitt, der Matching Section. Hinter jedem Quadrupol ist ein Schirm mit Kamera angebracht, der rein und raus aus dem Strahl gefahren werden kann.\\
 Der dritte Abschnitt ist die Diagnostic Section mit der zweiten F0D0-Zelle. Die Diagnostikstationen hier sind immer in der Mitte von zwei Quadrupolmagneten.\\
 Zuletzt gibt es die Straight Section in der der Elektronenstrahl nach einem letzten Quadrupolmagneten in einen Beam-Dump geführt wird.\\\\
@@ -67,11 +107,11 @@ SALOME lässt sich durch ein Kontrollsystem steuern. Hiermit werden die Ströme 
 \section{Versuchsdurchführung}
 \subsection{Strahltransport}
 Um Messungen an einem Beschleuniger durchzuführen, muss zuerst der Strahl durch das Strahlrohr transportiert werden. Es müssen also die Dipolströme gefunden werden, für die der Strahl möglichst mittig den gesamten Beschleuniger durchqueren kann.\\
-Dafür wird an jedem Dipolpaar einer der Ströme drastisch -- von $\qty{-5}{\ampere}$ bis $\qty{5}{\ampere}$  und anders herum -- geändert, während mit dem anderen immer nur in kleineren Schritten von $\qty{0,5}{\ampere}$ gescannt wird. 
+Dafür wird an jedem Dipolpaar einer der Ströme drastisch -- von $-\qty{5}{\ampere}$ bis $\qty{5}{\ampere}$  und anders herum -- geändert, während mit dem anderen immer nur in kleineren Schritten von $\qty{0,5}{\ampere}$ gescannt wird. 
 
 \subsubsection{Strahlbasierte Justage}
 Damit sich der Strom bei Variation der Quadrupolströme nicht bewegt, wird die strahlbasierte Justage durchgeführt. Das Ziel hier ist, dass der Teilchenstrahl den Quadrupol genau auf Achse durchquert.\\
-Um das zu erreichen, werden die Dipole V102MATCH und Q113MATCH vor dem Quadrupol Q57MATCH genutzt. Zuerst wird die Justage für $\langle x\rangle$, dann für $\langle y\rangle$ durchgeführt.\\
+Um das zu erreichen, werden die Dipole V102MATCH und Q113MATCH vor dem Quadrupol Q57MATCH genutzt.\\Zuerst wird die Justage für $\langle x\rangle$, dann für $\langle y\rangle$ durchgeführt.\\\\
 Bei der Justage wird zuerst der Strahl in die entgegengesetzte Richtung der Messung fokussiert. Dann wird für zwei feste Quadrupolströme $I_{Q_1}$ und $I_{Q_2}$ jeweils der Dipolstrom $I_D$ durchgescannt. $I_{Q_1}$ und $I_{Q_2}$ haben eine Differenz von etwa $\qty{1}{\ampere}$. Für jeden Dipolstrom wird die zeitlich gemittelte Position $\langle y\rangle$ (für den horizontalen Scan) bzw. $\langle x\rangle$ (für den vertikalen Scan) notiert.\\
 Für $I_{Q_1}$ und $I_{Q_2}$ werden dann Geraden ermittelt und der Schnittpunkt beider Geraden bestimmt. An diesem Schnittpunkt $I_{D_0}$ wird jetzt eine Kontrollmessung durchgeführt, bei der der Quadrupolstrom von $I_{Q_1}$ bis $I_{Q_2}$ variiert wird. 
 
@@ -118,8 +158,7 @@ Anschließend lassen sich die Twiss-Parameter $\beta, \alpha, \gamma$ mithilfe d
 \begin{equation}
 	\beta_x=\frac{\langle x^2\rangle}{\epsilon_x}, \alpha_x=\frac{-\langle xx'\rangle}{\epsilon_x}, \gamma_x=\frac{\langle x'^2\rangle}{\epsilon_x}
 \end{equation}
-Die so bestimmten Twiss-Parameter lassen sich mithilfe der Transformationsmatrix durch die Strahlführung transformieren.
-
+Die so bestimmten Twiss-Parameter lassen sich mithilfe der Transformationsmatrix durch die Strahlführung transformieren.\\\\
 Für die Emittanzmessung werden zwei Messreihen aufgenommen: Eine horizontale Messung für $\epsilon_x$ und eine vertikale für $\epsilon_y$.\\
 Jede Messreihe ist folgendermaßen strukturiert: Zuerst wird der Quadrupolstrom $I_0$ bestimmt, für den die Strahlbreite in die betrachtete Richtung minimal ist, dann wird um diesen Strom in einem Rahmen von $I_0-0,5$ bis $I_0+0,5$ in $\qty{0,1}{\ampere}$ Schritten gemessen.\\
 Für die horizontale Messung ist der Quadrupolstrom positiv, für die vertikale negativ.
@@ -194,7 +233,7 @@ Dieser erfolgreiche Strahltransport bildete die notwendige Grundlage für die pr
 Um sicherzustellen, dass der Strahl den Quadrupol Q57MATCH exakt auf der magnetischen Achse durchquert, wurde eine Strahlbasierte Justage durchgeführt.
 Durch Variation des Dipolstroms bei zwei unterschiedlichen Quadrupolstärken ($I_{Q1}$ und $I_{Q2}$) wurden Regressionsgeraden ermittelt, deren Schnittpunkt den magnetischen Mittelpunkt $I_{D0}$ definiert.
 \subsubsection{Horizontale Ausrichtung}
-Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den Quadrupolstärken $I_{Q_{1}} = -0.344$ und $I_{Q_{2}} = 0.657$, ergab sich ein Korrekturstrom von $I_{D0,x} = -1,236\text{A}\pm 0,0532\text{A}$.
+Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{-0,344}{\ampere}$ und $I_{Q_{2}} = \qty{0,657}{\ampere}$, ergab sich ein Korrekturstrom von $I_{D0,x} = \qty{-1,236}{\A}\pm \qty{0,0532}{\A}$.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{img/Strahlbasierte Justage_X-Ausrichtung.png}
@@ -203,7 +242,7 @@ Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den
 \end{figure}
 
 \subsubsection{Vertikale Ausrichtung}
-Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Quadrupolstärken $I_{Q_{1}} = 1.685$ und $I_{Q_{2}} = 2.703$, wurde ein Wert von $I_{D0,y} = -0,686\text{A}\pm 0,0935\text{A}$ bestimmt.
+Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{1,685}{\A}$ und $I_{Q_{2}} = \qty{2,703}{\A}$, wurde ein Wert von $I_{D0,y} = \qty{-0,686}{\A}\pm \qty{0,0935}{\A}$ bestimmt.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{img/Strahlbasierte Justage_Y-Ausrichtung.png}
@@ -237,8 +276,8 @@ Die Kontrollmessungen in \autoref{fig:ueberpruefung_justage_gesamt} bestätigen 
 
 \subsection{Energiemessung}
 
-Die kinetische Energie der Elektronen wurde über die vertikale Ablenkung in einem Dipolmagneten bestimmt. Aus der linearen Regression der Strahlposition über dem Magnetstrom ergab sich eine Steigung von $\frac{dy}{dI} = 14,4384 \pm 0,106 \text{ mm/A}$. Unter Verwendung der dipolspezifischen Konstante $\kappa = 7,64 \cdot 10^{-6} \text{ Tm/A}$, der Driftstrecke $L = 0,52 \pm 0,01 \text{ m}$ und der Ruheenergie der Elektronen von $E_0 = 511 \text{ keV}$ wurde zunächst das Produkt $\beta\gamma = 0,1614 \pm 0,00332$ ermittelt, was aufgrund der geringen Geschwindigkeit näherungsweise $\beta$ entspricht.\\
-Daraus resultiert ein Lorentzfaktor von $\gamma = 1,013 \pm 0,000529$, was auf ein nahezu klassisches Geschwindigkeitsregime hindeutet. Die finale kinetische Energie wurde zu $E_{kin} = 6,62 \pm 0,27 \text{ keV}$ berechnet. Der entsprechende Impuls der Teilchen wurde mit $p = 2,752 \cdot 10^{-7} \pm 5,661 \cdot 10^{-9} \text{ keV/c}$ bestimmt.
+Die kinetische Energie der Elektronen wurde über die vertikale Ablenkung in einem Dipolmagneten bestimmt. Aus der linearen Regression der Strahlposition über dem Magnetstrom ergab sich eine Steigung von $\frac{dy}{dI} = \qty{14,4384}{\mm\per\A} \pm \qty{0,106}{\mm\per\A}$. Unter Verwendung der dipolspezifischen Konstante $\kappa = 7,64 \cdot \qty{e-6}{\T\m\per\A}$, der Driftstrecke $L = \qty{0,52}{\m} \pm \qty{0,01}{\m}$ und der Ruheenergie der Elektronen von $E_0 = \qty{511}{\keV}$ wurde zunächst das Produkt $\beta\gamma = 0,1614 \pm 0,00332$ ermittelt, was aufgrund der geringen Geschwindigkeit näherungsweise $\beta$ entspricht.\\
+Daraus resultiert ein Lorentzfaktor von $\gamma = 1,013 \pm 0,000529$, was auf ein nahezu klassisches Geschwindigkeitsregime hindeutet. Die finale kinetische Energie wurde zu $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ berechnet. Der entsprechende Impuls der Teilchen wurde mit $p = 2,752 \cdot 10^{-7}\text{ keV/c} \pm 5,661 \cdot 10^{-9} \text{ keV/c}$ bestimmt.
 
 \subsection{Emittanz}
 Die Emittanz wurde mittels eines Quadrupol-Scans am Ort des Magneten bestimmt, indem die transversalen Strahlgrößen auf dem Schirm als Funktion der Quadrupolstärke $k$ gemessen wurden. Durch Anwendung der Normalengleichung für die lineare Regression ergaben sich folgende Werte für die Emittanz:
@@ -257,7 +296,7 @@ Basierend auf der Emittanz wurden die Twiss-Parameter am Eingang des Quadrupols 
 
 
 
-\subsection{Beta-Func}
+\subsection{Beta-Funktion}
 
 In \autoref{fig:betafunc} ist der Verlauf der $\beta$-Funktion in Abhängigkeit der z-Position entlang des Beschleunigers dargestellt. Die Messpunkte umfassen die Daten der vier Diagnostikschirme sowie den extrapolierten Wert aus dem Q-Scan.\\
 Die Entwicklung der $\beta$-Funktion zeigt die erwartete Fokussierungswirkung der Quadrupol-Zellen im diagnostischen Bereich.
