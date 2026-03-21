@@ -48,3 +48,42 @@ sigma_ID0_y: 0.0935
 # Strahltransport
 
 strahltransport ordner bilder
+
+
+---
+
+\begin{table}[H]
+    \centering
+    \caption{Zusammenfassung der experimentell ermittelten Strahlparameter.}
+    \label{tab:ergebnisse_parameter}
+    \begin{tabular}{|l|l|l|}
+        \toprule
+        Parameter & Symbol & Wert \\
+        \midrule
+        Steigung der Energiemessung & $dy/dI$ & $14,4384 \pm 0,1056$ mm/A \\
+        Kinetische Energie & $E_{kin}$ & $6,62 \pm 0,27$ keV \\
+        Relativistischer Impuls & $p$ & $2,752*10^{-7} \pm 5,661*10^{-9}$ keV/c \\
+        \midrule
+        Horizontale Emittanz & $\epsilon_x$ & $0,72867 \pm 0,07115$ mm mrad \\
+        Vertikale Emittanz & $\epsilon_y$ & $1,98349 \pm 0,09011$ mm mrad \\
+        \midrule
+        $\beta$-Funktion am Quadrupol (x/y) & $\beta_{x/y}$ & \qty{0,578}{m} / \qty{0,814}{m} \\
+        $\alpha$-Parameter am Quadrupol (x/y) & $\alpha_{x/y}$ & -1,19 / -1,401 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Ergebnisse der strahlbasierten Justage am Quadrupol Q57MATCH.}
+    \label{tab:justage_ergebnisse}
+    \begin{tabular}{llll}
+        \toprule
+        Ebene & Dipol-Magnet & Korrekturstrom $I_{D0}$ & Unsicherheit $\sigma_{ID0}$ \\
+        \midrule
+        Horizontal (x) & V102MATCH & \qty{-1,236}{A} & \qty{0,0532}{A} \\
+        Vertikal (y) & Q113MATCH & \qty{-0,777}{A} & \qty{0,0935}{A} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
