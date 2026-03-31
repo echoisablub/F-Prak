@@ -19,7 +19,7 @@ E_0 = 511 # in keV
 beta_gamma = (e_lad*kappa*L)/(e_mass*c_vak*dy_dI) #result: 0.16142780000890825 ~= beta
 gamma = np.sqrt(1+beta_gamma**2) #result: 1.0129456720948642 --> also fast klassisch
 Ekin = E_0*(gamma-1) #result: 6.6152384404756015 keV
-p = E_0/c_vak*np.sqrt(gamma**2-1) #result: p=2.7515570723447654e-07 keV/c
+p = E_0*np.sqrt(gamma**2-1)/c_vak #result: p=2.7515570723447654e-07 keV/c
 
 # Energiemessung Fehlerfortpflanzung
 # fehlerbehaftete Größen: L, Steigung bzw. dy_dI

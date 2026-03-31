@@ -74,7 +74,7 @@ Manipulation of Electrons}
 Der Versuch EXP9 - SALOME dient der Heranführung an grundlegende Konzepte und Methoden bei der Arbeit mit Teilchenbeschleunigern. Im Rahmen des Experiments wird ein \qty{6}{\m} langer Linearbeschleuniger SALOME verwendet, um praktische Erfahrung in verschiedenen Arbeitsschritten zu sammeln. Zu diesen Aufgaben gehören der Strahltransport, die strahlbasierte Justage und Messungen der Energie, Emittanz und der optischen Funktionen. Die Reihenfolge der durchgeführten Übungen wurde didaktisch gewählt und spiegelt nicht die tatsächliche Abfolge bei der Realisierung eines vollständigen Beschleunigerbetriebs wider.
 
 \section{Theoretische Grundlagen}
-Jeder Beschleuniger hat eine Sollbahn, auf der sich im Idealfall alle Teilchen bewegen. Die Sollbahn der Teilchen wird bei der Konstruktion des Beschleunigers festgelegt, da sie fest mit den genutzten Bauteilen zusammenhängt. In Praxis folgen die Bahnen der einzelnen Teilchen im Strahl nicht dieser Sollbahn -- es gibt immer Abweichungen mit einer gewissen Winkeldivergenz. Es gilt also den Strahl regelmäßig zu fokussieren und auf die Sollbahn zurückzulenken. \cite{2}\\\\
+Jeder Beschleuniger hat eine Sollbahn, auf der sich im Idealfall alle Teilchen bewegen. Die Sollbahn der Teilchen wird bei der Konstruktion des Beschleunigers festgelegt, da sie fest mit den genutzten Bauteilen zusammenhängt. In Praxis folgen die Bahnen der einzelnen Teilchen im Strahl nicht dieser Sollbahn -- es gibt immer Abweichungen mit einer gewissen Winkeldivergenz und Raumabweichung. Es gilt also den Strahl regelmäßig zu fokussieren und auf die Sollbahn zurückzulenken. \cite{2}\\\\
 Um die Bewegung von Teilchen entlang und abweichend von der Sollbahn zu beschreiben, wird ein mitbewegtes Koordinatensystem $K$ eingeführt. Die z-Komponente zeigt entlang der Sollbahn, die y- und x-Komponenten stehen vertikal zueinander und der Sollbahn \cite{3}
 
 \subsection{Dipol}
@@ -106,7 +106,7 @@ Quadrupole mit Feldstärke $k$ werden für die Strahlfokussierung verwendet. Ein
 \end{figure}
 Der Feldgradient $g$ ist in Abhängigkeit zu dem angelegten Strom \cite{3}:
 \begin{equation}
-	\frac{\partial B}{\partial x}=g=\frac{2\mu_0nI}{a^2}
+	\frac{\partial B}{\partial x}=g=\frac{2\mu_0nI}{a^2}, k=\frac{eg}{p}
 \end{equation}
 An dem Verlauf der Feldlinien ist zu sehen, dass ein Quadrupol, der in der horizontalen Ebene fokussierend wirkt, in vertikaler Richtung defokussiert. Um den Strahl also richtig fokussiert zu bekommen, müssen alternierend mindestens zwei Quadrupole verwendet werden, deren Polarität um 90° verdreht ist \cite{2}. Da die Stärke des Feldes zur Sollbahn hin gegen Null geht, heben sich die beiden entgegengesetzten Wirkungsrichtungen der Quadrupole nicht auf und das Resultat ist ein fokussierter Strahl.\\\\
 Eine gängige Quadrupolanordnung in Beschleunigern ist die F0D0-Struktur (siehe \autoref{fig: f0d0}). Hier werden ein fokussierender (F) und ein defokussierender (D) Quadrupol hintereinander angeordnet. Zwischen ihnen befinden sich Strecken ohne Fokussierung (0). \cite{3}\\
@@ -132,24 +132,24 @@ Die Größe $\epsilon$ ist eine Erhaltungsgröße -- die Emittanz. Die Emittanz 
 \end{equation}
 Die Parameter $\alpha(z), \beta(z), \gamma(z)$ werden auch optische Funktionen oder Twiss-Parameter genannt und sind in Abhängigkeit von $\beta(z)$ definiert \cite{3}:
 \begin{equation}
-	\alpha(z)=\frac{1}{2}\beta'(z),\\
+	\alpha(z)=-\frac{1}{2}\beta'(z),\\
 	\gamma(z)=\frac{1+\alpha^2(z)}{\beta(z)}
 \end{equation}
 Die normierte Emittanz ist definiert durch den Lorentzfaktor $\gamma$ und $\beta=\frac{v}{c}$ (nicht zu verwechseln mit $\gamma(z)\,\&\,\beta(z)$):
 \begin{equation}
-	\epsilon_n=\beta\gamma\cdot\epsilon=\beta\gamma\cdot\sigma_x\sigma_{x'}
+	\epsilon_n=\beta\gamma\cdot\epsilon\approx\beta\gamma\cdot\sigma_x\sigma_{x'}
 \end{equation}
 
 
 \section{Experimenteller Aufbau}
-Der Versuch wird an SALOME, dem Simple Accelerator for Learning Optics and Manipulation, durchgeführt. SALOME ist ein \qty{6}{m} langer Linearbeschleuniger, der Elektronen mit Energien bis zu \qty{20}{keV} erzeugen kann.\\
+Der Versuch wird an SALOME, dem Simple Accelerator for Learning Optics and Manipulation, durchgeführt. SALOME ist ein \qty{6}{m} langer Linearbeschleuniger, der Elektronen mit Energien bis zu ca. \qty{10}{keV} erzeugen kann.\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\linewidth]{img/salome schematic.png}
 	\caption{Schematischer Aufbau von SALOME. Focusing und Defocusing bezieht sich bei den Quadrupolen auf die Horizontale. \cite{5}}
 	\label{fig: salomeaufbau}
 \end{figure}
-Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in drei Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl mit max. \qty{100}{\micro\ampere} von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
+Der Beschleuniger ist, wie in \autoref{fig: salomeaufbau} zu sehen, in drei Abschnitte aufgeteilt.\\ Zuerst die Injection Section: Hier wird ein kontinuierlicher, monoenergetischer Elektronenstrahl im \si{\micro\ampere}-Bereich von einer thermischen Kathode mit Gleichspannung erzeugt. Der Strahl wird anfänglich durch einen Solenoidmagneten fokussiert. Dieser Solenoid wird während der Messungen nicht verändert.\\
 Darauf folgt die erste F0D0-Zelle in dem zweiten Abschnitt, der Matching Section. Hinter jedem Quadrupol ist ein Schirm mit Kamera angebracht, der rein und raus aus dem Strahl gefahren werden kann.\\
 Der dritte Abschnitt ist die Diagnostic Section mit der zweiten F0D0-Zelle. Die Diagnostikstationen hier sind immer in der Mitte von zwei Quadrupolmagneten.\\\\
 SALOME lässt sich durch ein Kontrollsystem steuern. Hiermit werden die Ströme der Magnete, die Schirme und Kameras gesteuert. Die benutzten Kameras haben eine Auflösung von $0,250\, \frac{\text{pixel}}{\text{mm}}$.
@@ -189,7 +189,7 @@ Für die vertikale Ablenkung $y$ gilt:
 \end{equation}
 Anhand des Werts von $\beta\gamma$ kann man dann mit dem Lorentzfaktor,
 \begin{equation}
-    \gamma = \sqrt{1+\beta\gamma^2}
+    \gamma = \sqrt{1+(\beta\gamma)^2}
     \label{eq:gamma}
 \end{equation}
 die Kinetische Energie
@@ -197,9 +197,9 @@ die Kinetische Energie
     E_{kin} = E_0\cdot(\gamma-1)
     \label{eq:ekin}
 \end{equation}
-und den Impuls des systems ausrechnen
+und den Impuls des Systems ausrechnen
 \begin{equation}
-    p = \frac{E_0}{c\cdot \sqrt{\gamma^2-1}}
+    p = \frac{E_0\cdot \sqrt{\gamma^2-1}}{c}
     \label{eq:p}
 \end{equation}
 Vor dem Start der Messung wird die Distanz $L$ zwischen dem benutzten Quadrupol und Schirm bestimmt.\\
@@ -304,7 +304,7 @@ Dieser erfolgreiche Strahltransport bildete die notwendige Grundlage für die pr
 Um sicherzustellen, dass der Strahl den Quadrupol Q57MATCH exakt auf der magnetischen Achse durchquert, wurde eine Strahlbasierte Justage durchgeführt.
 Durch Variation des Dipolstroms bei zwei unterschiedlichen Quadrupolstärken ($I_{Q1}$ und $I_{Q2}$) wurden Regressionsgeraden ermittelt, deren Schnittpunkt den magnetischen Mittelpunkt $I_{D0}$ definiert.
 \subsubsection{Horizontale Ausrichtung}
-Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{-0,344}{\ampere}$ und $I_{Q_{2}} = \qty{0,657}{\ampere}$, ergab sich ein Korrekturstrom von $I_{D0,x} = \qty{-1,236}{\A}\pm \qty{0,0532}{\A}$.
+Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{-0,344}{\ampere}$ und $I_{Q_{2}} = \qty{0,657}{\ampere}$, ergab sich ein Korrekturstrom von $I_{D0,x} = \qty{-1,236}{\A}\pm \qty{0,053}{\A}$.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{img/Strahlbasierte Justage_X-Ausrichtung.png}
@@ -313,7 +313,7 @@ Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den
 \end{figure}
 
 \subsubsection{Vertikale Ausrichtung}
-Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{1,685}{\A}$ und $I_{Q_{2}} = \qty{2,703}{\A}$, wurde ein Wert von $I_{D0,y} = \qty{-0,686}{\A}\pm \qty{0,0935}{\A}$ bestimmt.
+Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{1,685}{\A}$ und $I_{Q_{2}} = \qty{2,703}{\A}$, wurde ein Wert von $I_{D0,y} = \qty{-0,686}{\A}\pm \qty{0,094}{\A}$ bestimmt.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{img/Strahlbasierte Justage_Y-Ausrichtung.png}
@@ -324,7 +324,7 @@ Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Q
 \subsubsection{Kontrollmessung}
 
 Die Kontrollmessungen in \autoref{fig:ueberpruefung_justage_gesamt} bestätigen den Erfolg der Justage, da die Strahlposition innerhalb der Fehlergrenzen stabil bleibt, wenn die Quadrupolstärke variiert wird.
-
+Sowohl in \autoref{fig:Überprüfungstrahlbasiertejustagex}, als auch in \autoref{fig:Überprüfungstrahlbasiertejustagey}, ist die jeweilige Standardabweichung eine Größenordnung kleiner als der jeweilige mittlere Scanschritt. Dies deutet auf eine relativ geringe Streuung um den Mittelwert hin, auch wenn sowohl die Größe des mittleren Scanschrittes, als auch die Standardabweichung in y-Richtung leicht größer sind, als in x-Richtung.
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.8\textwidth}
@@ -347,22 +347,22 @@ Die Kontrollmessungen in \autoref{fig:ueberpruefung_justage_gesamt} bestätigen 
 
 \subsection{Energiemessung}
 
-Die kinetische Energie der Elektronen wurde über die vertikale Ablenkung in einem Dipolmagneten bestimmt. Aus der linearen Regression der Strahlposition über dem Magnetstrom ergab sich eine Steigung von $\frac{dy}{dI} = \qty{14,4384}{\mm\per\A} \pm \qty{0,106}{\mm\per\A}$ (\autoref{eq:herleitungbetagamma}). Unter Verwendung der dipolspezifischen Konstante $\kappa = 7,64 \cdot \qty{e-6}{\T\m\per\A}$, der Driftstrecke $L = \qty{0,52}{\m} \pm \qty{0,01}{\m}$ und der Ruheenergie der Elektronen von $E_0 = \qty{511}{\keV}$ wurde zunächst das Produkt $\beta\gamma = 0,1614 \pm 0,00332$ ermittelt, was aufgrund der geringen Geschwindigkeit näherungsweise $\beta$ entspricht (\autoref{eq:herleitungbetagamma}).\\
-Daraus resultiert ein Lorentzfaktor von $\gamma = 1,013 \pm 0,000529$ (\autoref{eq:gamma}), was auf ein nahezu klassisches Geschwindigkeitsregime hindeutet. Die finale kinetische Energie wurde zu $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ berechnet (\autoref{eq:ekin}). Der entsprechende Impuls der Teilchen wurde mit $p = 2,752 \cdot 10^{-7}\text{ keV/c} \pm 5,661 \cdot 10^{-9} \text{ keV/c}$ bestimmt (\autoref{eq:p}).
+Die kinetische Energie der Elektronen wurde über die vertikale Ablenkung in einem Dipolmagneten bestimmt. Aus der linearen Regression der Strahlposition über dem Magnetstrom ergab sich eine Steigung von $\frac{dy}{dI} = \qty{14,438}{\mm\per\A} \pm \qty{0,106}{\mm\per\A}$ (\autoref{eq:herleitungbetagamma}). Unter Verwendung der dipolspezifischen Konstante $\kappa = 7,64 \cdot \qty{e-6}{\T\m\per\A}$, der Driftstrecke $L = \qty{0,52}{\m} \pm \qty{0,01}{\m}$ und der Ruheenergie der Elektronen von $E_0 = \qty{511}{\keV}$ wurde zunächst das Produkt $\beta\gamma = 0,1614 \pm 0,0033$ ermittelt, was aufgrund der geringen Geschwindigkeit näherungsweise $\beta$ entspricht (\autoref{eq:herleitungbetagamma}).\\
+Daraus resultiert ein Lorentzfaktor von $\gamma = 1,013 \pm 0,000529$ (\autoref{eq:gamma}), was auf ein nahezu klassisches Geschwindigkeitsregime hindeutet. Die finale kinetische Energie wurde zu $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ berechnet (\autoref{eq:ekin}). Der entsprechende Impuls der Teilchen wurde mit $p = 2,752 \cdot 10^{-7}\text{ keV/c} \pm 0,057 \cdot 10^{-7} \text{ keV/c}$ bestimmt (\autoref{eq:p}).
 
 \subsection{Emittanz}
 Die Emittanz wurde mittels eines Quadrupol-Scans am Ort des Magneten bestimmt, indem die transversalen Strahlgrößen auf dem Schirm als Funktion der Quadrupolstärke $k$ gemessen wurden. Durch Anwendung der Normalengleichung für die lineare Regression \ref{eq:normalengllinreg} und \autoref{eq:emittanz}, ergaben sich folgende Werte für die Emittanz:
 \begin{itemize}
-    \item $\epsilon_x = \qty{0,72867}{\milli\metre\milli\radian} \pm \qty{0,07115}{\milli\metre\milli\radian}$
-    \item $\epsilon_y = \qty{1,98349}{\milli\metre\milli\radian} \pm \qty{0,09011}{\milli\metre\milli\radian}$
+    \item $\epsilon_x = \qty{0,73}{\milli\metre\milli\radian} \pm \qty{0,07}{\milli\metre\milli\radian}$
+    \item $\epsilon_y = \qty{1,98}{\milli\metre\milli\radian} \pm \qty{0,09}{\milli\metre\milli\radian}$
 \end{itemize}
 
 \subsubsection{Optische Funktionen}
 
 Basierend auf der Emittanz wurden die Twiss-Parameter am Eingang des Quadrupols berechnet (\autoref{eq:Twissparameter}). Diese beschreiben die Form und Ausrichtung der Phasenraumellipse. Die ermittelten Werte lauten:
 \begin{itemize}
-    \item $\beta_x = \qty{0,578}{\m} \pm  \qty{0,0565}{\m}, \, \alpha_x = \qty{-1,19}{\m} \pm \qty{0,117}{\m},\, \gamma_x = \qty{4,19}{\m} \pm \qty{0,41}{\m}$
-    \item $\beta_y = \qty{0,814}{\m} \pm \qty{0,037}{\m}, \, \alpha_y = \qty{-1,401}{\m} \pm \qty{0,0637}{\m},\, \gamma_y = \qty{3,639}{\m} \pm \qty{0,165}{\m}$
+    \item $\beta_x = \qty{0,58}{\m} \pm  \qty{0,06}{\m}, \, \alpha_x = \qty{-1,19}{\m} \pm \qty{0,12}{\m},\, \gamma_x = \qty{4,19}{\m} \pm \qty{0,41}{\m}$
+    \item $\beta_y = \qty{0,81}{\m} \pm \qty{0,04}{\m}, \, \alpha_y = \qty{-1,40}{\m} \pm \qty{0,06}{\m},\, \gamma_y = \qty{3,64}{\m} \pm \qty{0,17}{\m}$
 \end{itemize}
 
 
@@ -380,18 +380,18 @@ Die Entwicklung der $\beta$-Funktion zeigt die erwartete Fokussierungswirkung de
 
 \section{Diskussion der physikalischen Ergebnisse}
 \subsection{Energiemessung und Dynamik}
-Die experimentell ermittelte kinetische Energie von $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{keV}$ liegt im erwarteten Betriebsbereich von SALOME, der für Energien bis zu \qty{20}{keV} ausgelegt ist. Der berechnete Lorentzfaktor von $\gamma = 1,013 \pm 0,0005$ bestätigt, dass sich die Elektronen in einem nahezu klassischen Geschwindigkeitsregime bewegen ($v \approx 0,16\cdot c$).\\
+Die experimentell ermittelte kinetische Energie von $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{keV}$ liegt im erwarteten Betriebsbereich von SALOME, der für Energien bis zu \qty{20}{keV} ausgelegt ist. Der berechnete Lorentzfaktor von $\gamma = 1,013 \pm 0,001$ bestätigt, dass sich die Elektronen in einem nahezu klassischen Geschwindigkeitsregime bewegen ($v \approx 0,16\cdot c$).\\
 Die geringe Energie der Teilchen erklärt zudem die hohe Empfindlichkeit des Strahls gegenüber externen Störfeldern. Wie in der Versuchsdurchführung beobachtet, ist eine präzise Kompensation des Erdmagnetfeldes durch Korrekturdipole zwingend erforderlich, da der Strahl andernfalls bereits nach etwa \qty{60}{cm} die Wände des Aufbaus berühren würde.
 
-\subsection{Vergleich mit der thermischen Emittanz und Strahlqualität}
-Ein zentraler Aspekt der Strahlcharakterisierung ist der Vergleich der gemessenen Emittanz mit dem theoretisch erreichbaren Minimum, der thermischen Emittanz $\epsilon_{n,thermisch}$. An SALOME wird der Elektronenstrahl durch eine thermische Kathode (Wolfram, $\Phi_{aus} = \qty{4,5}{\eV}$) erzeugt, bei der Elektronen durch Erhitzen die nötige Energie erhalten, um die Austrittsarbeit des Metalls zu überwinden. Die theoretische normierte thermische Emittanz ist dabei durch die Strahlgröße an der Kathode $\sigma_x$ und die Temperatur $T$ definiert: $$\epsilon_{n,thermisch} = \sigma_x \cdot \sqrt{\frac{k_B T}{mc^2}}$$Diese stellt das physikalische Limit dar, da die Geschwindigkeitsverteilung der Elektronen direkt nach dem Austritt der Maxwell-Boltzmann-Verteilung folgt.\\\\
-In den Messungen wurden für die Emittanz folgende Werte am Ort des Quadrupols V46Match ermittelt: $\epsilon_x = \qty{0,72867}{\milli\metre\milli\radian} \pm \qty{0,07115}{\milli\metre\milli\radian}$, $\epsilon_y = \qty{1,98349}{\milli\metre\milli\radian} \pm \qty{0,09011}{\milli\metre\milli\radian}$\\
-Berücksichtigt man das Produkt $\beta\gamma \approx 0,1614$, ergeben sich die normierten Emittanzen zu $\epsilon_{n,x} \approx \qty{0,118}{\milli\metre\milli\radian}$ und $\epsilon_{n,y} \approx \qty{0,320}{\milli\metre\milli\radian}$. Es zeigt sich, dass die experimentellen Werte deutlich über dem theoretischen Minimum liegen (die in einer Größenordnung von unter \qty{0,1}{\milli\metre\milli\radian} liegen).\\Diese Zunahme der Emittanz lässt sich auf verschiedene physikalische Effekte zurückführen:
-\begin{enumerate}
-    \item Raumladungseffekte: Aufgrund der relativ geringen kinetischen Energie der Elektronen von nur $\qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ ist die gegenseitige Abstoßung der Elektronen (Coulomb-Kraft) sehr ausgeprägt. Diese Raumladung wirkt als nichtlineare Kraft, die die Teilchenbahnen im Phasenraum verzerrt und somit zu einer effektiven Zunahme der Emittanz führt.
-    \item Nicht-ideale Fokussierung und Aberrationen: Die Strahlführung durch die Solenoid- und Quadrupolmagnete (wie Q57MATCH) unterliegt in der Realität Aberrationen. Nichtlineare Feldkomponenten führen dazu, dass die Transformation im Phasenraum keine perfekte Ellipse erhält, was die gemessene Fläche vergrößert.
-    \item Einfluss des Erdmagnetfeldes: Da der Strahl bei diesen niedrigen Energien ohne Korrektur bereits nach ca. $\qty{50}{\cm}-\qty{60}{\cm}$ verloren ginge, muss er permanent durch Korrekturdipole (z. B. V14INJ, H25INJ) auf der Sollbahn gehalten werden. Jede kleinste Dezentrierung in den Quadrupolen führt zu einer Kopplung der Bewegungsebenen, was insbesondere die starke Asymmetrie zwischen $\epsilon_x$ und $\epsilon_y$ erklären könnte.
-\end{enumerate}
+%\subsection{Vergleich mit der thermischen Emittanz und Strahlqualität}
+%Ein zentraler Aspekt der Strahlcharakterisierung ist der Vergleich der gemessenen Emittanz mit dem theoretisch erreichbaren Minimum, der thermischen Emittanz $\epsilon_{n,thermisch}$. An SALOME wird der Elektronenstrahl durch eine thermische Kathode (Wolfram, $\Phi_{aus} = \qty{4,5}{\eV}$) erzeugt, bei der Elektronen durch Erhitzen die nötige Energie erhalten, um die Austrittsarbeit des Metalls zu überwinden. Die theoretische normierte thermische Emittanz ist dabei durch die Strahlgröße an der Kathode $\sigma_x$ und die Temperatur $T$ definiert: $$\epsilon_{n,thermisch} = \sigma_x \cdot \sqrt{\frac{k_B T}{mc^2}}$$Diese stellt das physikalische Limit dar, da die Geschwindigkeitsverteilung der Elektronen direkt nach dem Austritt der Maxwell-Boltzmann-Verteilung folgt.\\\\
+%In den Messungen wurden für die Emittanz folgende Werte am Ort des Quadrupols V46Match ermittelt: $\epsilon_x = \qty{0,72867}{\milli\metre\milli\radian} \pm \qty{0,07115}{\milli\metre\milli\radian}$, $\epsilon_y = \qty{1,98349}{\milli\metre\milli\radian} \pm \qty{0,09011}{\milli\metre\milli\radian}$\\
+%Berücksichtigt man das Produkt $\beta\gamma \approx 0,1614$, ergeben sich die normierten Emittanzen zu $\epsilon_{n,x} \approx \qty{0,118}{\milli\metre\milli\radian}$ und $\epsilon_{n,y} \approx \qty{0,320}{\milli\metre\milli\radian}$. Es zeigt sich, dass die experimentellen Werte deutlich über dem theoretischen Minimum liegen (die in einer Größenordnung von unter \qty{0,1}{\milli\metre\milli\radian} liegen).\\Diese Zunahme der Emittanz lässt sich auf verschiedene physikalische Effekte zurückführen:
+%\begin{enumerate}
+    %\item Raumladungseffekte: Aufgrund der relativ geringen kinetischen Energie der Elektronen von nur $\qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ ist die gegenseitige Abstoßung der Elektronen (Coulomb-Kraft) sehr ausgeprägt. Diese Raumladung wirkt als nichtlineare Kraft, die die Teilchenbahnen im Phasenraum verzerrt und somit zu einer effektiven Zunahme der Emittanz führt.
+    %\item Nicht-ideale Fokussierung und Aberrationen: Die Strahlführung durch die Solenoid- und Quadrupolmagnete (wie Q57MATCH) unterliegt in der Realität Aberrationen. Nichtlineare Feldkomponenten führen dazu, dass die Transformation im Phasenraum keine perfekte Ellipse erhält, was die gemessene Fläche vergrößert.
+    %\item Einfluss des Erdmagnetfeldes: Da der Strahl bei diesen niedrigen Energien ohne Korrektur bereits nach ca. $\qty{50}{\cm}-\qty{60}{\cm}$ verloren ginge, muss er permanent durch Korrekturdipole (z. B. V14INJ, H25INJ) auf der Sollbahn gehalten werden. Jede kleinste Dezentrierung in den Quadrupolen führt zu einer Kopplung der Bewegungsebenen, was insbesondere die starke Asymmetrie zwischen $\epsilon_x$ und $\epsilon_y$ erklären könnte.
+%\end{enumerate}
 
 \subsection{Optische Funktionen und F0D0-Zellen}
 Der Verlauf der $\beta$-Funktion (\autoref{fig:betafunc}) demonstriert anschaulich die Funktionsweise der F0D0-Struktur. Die Messpunkte folgen der erwarteten periodischen Oszillation der Einhüllenden (Envelope). Die berechneten Twiss-Parameter wie $\alpha_x = -1,19$ und $\alpha_y = -1,401$ beschreiben eine konvergente Phase der Phasenraumellipse am Eingang des Quadrupols, was auf eine korrekte Abstimmung der Matching Section hindeutet.
@@ -399,23 +399,23 @@ Der Verlauf der $\beta$-Funktion (\autoref{fig:betafunc}) demonstriert anschauli
 \subsection{Fehlerbetrachtung und Messpräzision}
 Die Genauigkeit der Ergebnisse wird durch zwei Hauptfaktoren limitiert:
 \begin{enumerate}
-    \item Schirmauflösung: Die Auflösung der Kameras von \qty{0,250}{px\per\mm} sowie die Schirmunsicherheit von $\qty{50}{\micro\m}$ beeinflussen direkt die Bestimmung der Strahlbreiten. Dies führt insbesondere bei der Fehlerfortpflanzung auf die $\beta$-Funktion zu Unsicherheiten im Bereich von \qtyrange{0,1}{0,5}{\m}.
+    \item Schirmauflösung: Die Auflösung der Kameras von \qty{0,250}{\mm\per px} sowie die Schirmunsicherheit von $\qty{50}{\micro\m}$ beeinflussen direkt die Bestimmung der Strahlbreiten. Dies führt insbesondere bei der Fehlerfortpflanzung auf die $\beta$-Funktion zu Unsicherheiten im Bereich von \qtyrange{0,1}{0,5}{\m}.
     \item Statistische Unsicherheit: Die Nutzung der halben Scanschrittweite ($\Delta I/2$) als Fehlermaß für die Justage ist ein konservativer Ansatz, der jedoch durch die stabilen Kontrollmessungen gerechtfertigt wird. Die Übereinstimmung der Schnittpunkte beim Beam-based Alignment belegt, dass systematische Fehler durch eine Dezentrierung des Strahls im Quadrupolfeld erfolgreich minimiert wurden.
 \end{enumerate}
 Es wurde für die Fehlerrechnung die Gauß'sche Fehlerfortpflanzung (Jacobimatrix-Verfahren) in Python implementiert, um die Unsicherheiten von $L$ und der Steigung $dy/dI$ auf die finalen Ergebnisse zu übertragen. Und bei der Emittanz wurde vorausgesetzt, dass der relative Fehler der optischen Funktionen direkt proportional zum relativen Fehler der Emittanzmessung ist.
 
 \section{Zusammenfassung}
 Im Rahmen des SALOME-Versuchs wurden grundlegende Messungen und Aufgaben an einem Linearbeschleuniger durchgeführt.\\
-Zunächst wurde der Strahltransport durch die \qty{6}{m} lange Anlage optimiert. Ein kritischer Arbeitsschritt war hierbei die Kompensation des Erdmagnetfeldes durch Korrekturdipole, ohne die der Strahl aufgrund seiner geringen Energie bereits nach ca. \qty{60}{cm} verloren gegangen wäre. Mittels strahlbasierter Justage wurde der Elektronenstrahl exakt auf der magnetischen Achse des Quadrupols Q57MATCH zentriert. Die daraus resultierenden Korrekturströme wurden zu $I_{D0,x} = \qty{-1,236}{\A} \pm \qty{0,0532}{\A}$ und $I_{D0,y} = \qty{-0,686}{\A} \pm \qty{0,0935}{\A}$ bestimmt, was durch anschließende Kontrollmessungen verifiziert werden konnte.\\\\
+Zunächst wurde der Strahltransport durch die \qty{6}{m} lange Anlage optimiert. Ein kritischer Arbeitsschritt war hierbei die Kompensation des Erdmagnetfeldes durch Korrekturdipole, ohne die der Strahl aufgrund seiner geringen Energie bereits nach ca. \qty{60}{cm} verloren gegangen wäre. Mittels strahlbasierter Justage wurde der Elektronenstrahl exakt auf der magnetischen Achse des Quadrupols Q57MATCH zentriert. Die daraus resultierenden Korrekturströme wurden zu $I_{D0,x} = \qty{-1,236}{\A} \pm \qty{0,053}{\A}$ und $I_{D0,y} = \qty{-0,686}{\A} \pm \qty{0,094}{\A}$ bestimmt, was durch anschließende Kontrollmessungen verifiziert werden konnte.\\\\
 Die Energiemessung erfolgte über die Analyse der vertikalen Ablenkung in einem Dipolfeld. Die Auswertung ergab folgende Kernwerte:
 \begin{itemize}
     \item Kinetische Energie: $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{\keV}$.
-    \item Lorentzfaktor: $\gamma = 1,013 \pm 0,000529$, was ein nahezu klassisches System bestätigt.
-    \item Impuls: $p = \qty{2,752e-7}{\keV\per c} \pm \qty{5,661e-9}{\keV\per c}$.
+    \item Lorentzfaktor: $\gamma = 1,013 \pm 0,001$, was ein nahezu klassisches System bestätigt.
+    \item Impuls: $p = \qty{2,752e-7}{\keV\per c} \pm \qty{0,057e-7}{\keV\per c}$.
 \end{itemize}
 Die Emittanz des Strahls wurde mittels eines Quadrupol-Scans und der Anwendung der Normalengleichung für die lineare Regression ermittelt. Die Ergebnisse lauten:
 \begin{itemize}
-    \item $\epsilon_x = \qty{0,72867}{\milli\metre\milli\radian} \pm \qty{0,07115}{\milli\metre\milli\radian}$, $\epsilon_y = \qty{1,98349}{\milli\metre\milli\radian} \pm \qty{0,09011}{\milli\metre\milli\radian}$
+    \item $\epsilon_x = \qty{0,73}{\milli\metre\milli\radian} \pm \qty{0,07}{\milli\metre\milli\radian}$, $\epsilon_y = \qty{1,98}{\milli\metre\milli\radian} \pm \qty{0,09}{\milli\metre\milli\radian}$
 \end{itemize}
 Aus der Emittanz wurden die Twiss-Parameter ($\alpha, \beta, \gamma$) am Eingang des Quadrupols berechnet, welche die Phasenraumellipse des Strahls beschreiben. Der Verlauf der $\beta$-Funktion entlang der z-Achse zeigt deutlich die erwartete Fokussierungswirkung der F0D0-Zellen in der Diagnostic Section. Die Fehlerdiskussion verdeutlicht, dass die Unsicherheiten maßgeblich durch die Schirmauflösung und die Schrittweiten der Scans begrenzt werden.\\\\
 Durch den Versuch wurde erfolgreich ein Einblick in die grundlegende Arbeit an Beschleunigern gewonnen. 
