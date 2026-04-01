@@ -42,7 +42,15 @@
     tabsize=2
 }
 \lstset{style=mystyle}
-
+\lstset{literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
 \usepackage[title,titletoc]{appendix}
 \renewcommand{\appendixtocname}{Anhang}
 \renewcommand{\appendixpagename}{Anhang}
