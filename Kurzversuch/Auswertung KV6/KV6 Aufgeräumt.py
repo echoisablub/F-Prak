@@ -131,14 +131,17 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     # UMRECHNUNG IN WELLENLÄNGE UND NEU-ÄQUIDISTANZEN
     # Formel: lambda = c / f. Da f in THz (1e12 Hz) vorliegt:
     # lambda [nm] = (c [m/s] / (f [THz] * 1e12)) * 1e9 [nm/m]
-    wl_raw = (c / (f_pos * 1e12)) * 1e9
+    wl_raw = (c / (f_pos)) * 1e-3
     wl_equi = np.linspace(400, 800, 2000) # 400nm bis 800nm [3]
     
     # Interpolation der Spektren auf das neue Wellenlängen-Gitter
     # WICHTIG: wl_raw muss für interp1d sortiert sein
-    f_interp_ref = interp1d(wl_raw[::-1], s_ref_pos[::-1], kind='cubic', fill_value="extrapolate")
-    f_interp_probe = interp1d(wl_raw[::-1], s_probe_pos[::-1], kind='cubic', fill_value="extrapolate")
-    
+    #f_interp_ref = interp1d(wl_raw[::-1], s_ref_pos[::-1], kind='cubic', fill_value="extrapolate")
+    f_interp_ref = UnivariateSpline(wl_raw[::-1], s_ref_pos[::-1], k=3, s=0)
+    #f_interp_probe = interp1d(wl_raw[::-1], s_probe_pos[::-1], kind='cubic', fill_value="extrapolate")
+    f_interp_probe = UnivariateSpline(wl_raw[::-1], s_probe_pos[::-1], k=3, s=0)
+
+
     s_ref_wl = f_interp_ref(wl_equi)
     s_probe_wl = f_interp_probe(wl_equi)
 
@@ -195,8 +198,10 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     wl_equi = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter
     
     # Kubische Interpolation auf nm-Gitter (wl_raw muss sortiert sein)
-    interp_ref = interp1d(wl_raw[::-1], s_ref[::-1], kind='cubic')
-    interp_filt = interp1d(wl_raw[::-1], s_filt[::-1], kind='cubic')
+    #interp_ref = interp1d(wl_raw[::-1], s_ref[::-1], kind='cubic')
+    interp_ref = UnivariateSpline(wl_raw[::-1], s_ref[::-1], k=3, s=0)
+    #interp_filt = interp1d(wl_raw[::-1], s_filt[::-1], kind='cubic')
+    interp_filt = UnivariateSpline(wl_raw[::-1], s_filt[::-1], k=3, s=0)
     
     s_ref_nm = interp_ref(wl_equi)
     s_filt_nm = interp_filt(wl_equi)
