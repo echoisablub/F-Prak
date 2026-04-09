@@ -51,8 +51,8 @@ sigma_E_kin = np.sqrt(V_E_kin)
 
 # p fehler (p=E_0/c *sqrt(gamma^2-1))
 
-# Da p = (E_0 / c_vak) * beta_gamma:
-J_p = E_0 / c_vak
+# Da p = E_0 * beta_gamma:
+J_p = E_0
 V_p = J_p * V_betagamma * J_p
 sigma_p = np.sqrt(V_p)
 
