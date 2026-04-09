@@ -58,8 +58,8 @@ sigma_p = np.sqrt(V_p)
 
 print(f"p = {p:.3e} [keV/c]")
 print(f"sigma_p = {sigma_p:.3e} [keV/c]")
-# p = 2.752e-07 [keV/c]
-# sigma_p = 5.661e-09 [keV/c]
+# p = 8.249e+01 [keV/c]
+# sigma_p = 1.697e+00 [keV/c]
 
 # Emittanzbestimmung duch Q-Scan
 '''zwei Messreihen, eine horizontal (x_RMS(I)), eine vertikal (y_RMS(I))'''
