@@ -52,6 +52,7 @@
 \section{Einleitung}
 %Aufgabenstellung, Ziel der Messungen
 Der Kurzversuch 6 - Fourier-Transform-Spektroskopie dient der Einführung in das universelle Konzept der Fourier-Transform-Spektroskopie und dem Erlernen des Programmierens einer Auswertungsroutine.\\
+Bei Fourier-Transform-Spektroskopie werden Spektren durch Messungen der Kohärenz der Strahlungsquelle bestimmt. Dafür wird die Intensität in Abhängigkeit der Zeit gemessen und das Spektrum durch die namensgebende Fouriertransformation berechnet.\\
 Zu didaktischen Zwecken wird hier sichtbares Licht verwendet, anstelle von dem gängigen Infrarotlicht.
 Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die Absorptionsspektren von einem Interferenz-Filter und von molekularem Iod zu bestimmen.\\
 Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt, aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
@@ -61,34 +62,34 @@ Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle erm
 %Für Details: Hinweise auf die Literatur
 \subsection{Weißlichtspektrum}
 
-Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden. \cite{5}
+Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden \cite{5}.
 
 \subsection{Interferometrie}
-Interferometrie ist das Prinzip, mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht. \cite{1}\\\\
-Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig. \cite{2}\\
-Die optische Weglängendifferenz $\Delta s_{opt}$ hängen beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft. \cite{1}
+Interferometrie ist das Prinzip, mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht \cite{1}.\\\\
+Das Michelson-Interferometer, das auch in diesem Versuch einen zentrale Rolle spielt, ist ein Zwei-Strahl-Interferometer in dem durch einen Strahlteiler zwei identische Strahlen erzeugt werden. Nur wenn die Kohärenzbedingung für die beiden Strahlen zutrifft, also nur wenn zwei sich zeitlich gleichverhaltende ebene Wellenfronten aufeinander treffen, erscheint das Interferenzmuster streifenförmig \cite{2}.\\
+Die optische Weglängendifferenz $\Delta s_{opt}$ hängt beim Michelson-Interferometer sowohl von der geometrischen Weglänge der Arme $s_1, s_2$ als auch von den Brechzahlen $n_1, n_2$ der durchlaufenen Medien ab: $\Delta s_{opt} = n_1s_1 - n_2s_2$. Für den Betrieb als Fourier-Transform-Spektrometer wird das System so justiert, dass die Detektoreinheit nur einen Bereich des Interferenzmusters vermisst, in dem eine einheitliche Phasendifferenz vorherrscht („ein Streifen“). Eine Variation der Weglängendifferenz um $\Delta x$ resultiert dabei in einer Änderung des optischen Weges um $2\Delta x$, da das Licht den veränderten Weg doppelt (hin und zurück) durchläuft \cite{1}.\\
 
 \subsection{Kohärenz und Autokorrelation}
-Es wird zwischen räumlicher und zeitlicher Kohärenz unterschieden, wenn es um die Interferenzfähigkeit von Wellen geht. Zeitliche Kohärenz ist die Fähigkeit von Wellen mit unterschiedlichen zurückgelegten optischen Wegen zu interferieren, also ist die Phasenbeziehung bezüglich der Zeitachse fest und die Phasenbeziehung bezüglich der Raumachse variiert. Für die zeitlich stationären Interferenzmuster, die wir bei einem Michelson-Interferometer betrachten, muss zeitliche Kohärenz der überlagernden Wellen vorliegen\\
-Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz stattfindet -- die Kohärenzzeit. Die Umkehrgröße zur Kohärenzzeit ist die spektrale Auflösung $\Delta\nu$. \cite{2}\\\\
+Es wird zwischen räumlicher und zeitlicher Kohärenz unterschieden, wenn es um die Interferenzfähigkeit von Wellen geht. Zeitliche Kohärenz ist die Fähigkeit von Wellen mit unterschiedlichen zurückgelegten optischen Wegen zu interferieren, also ist die Phasenbeziehung bezüglich der Zeitachse fest trotz möglicher Variation der Phasenbeziehung bezüglich der Raumachse. Für die zeitlich stationären Interferenzmuster, die wir bei einem Michelson-Interferometer betrachten, muss zeitliche Kohärenz der überlagernden Wellen vorliegen\\
+Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz vorliegt -- die Kohärenzzeit.\\\\
 Das genaue Maß der Kohärenz zweier Wellen lässt sich durch die Kohärenzfunktion beschreiben.
 Wir betrachten das einfallende Wellenfeld an einem festen Punkt und aufgeteilt in zwei Anteile mit gleich großer Amplitude:
-$$E(t)=E_1(t)+E_2(t)$$
+$$E(t)=E_1(t)+E_2(t).$$
 Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus \cite{2}:
 \begin{equation}
-I(\Delta t)=<(E_1+E_2)(E_1+E_2)^*>=I_1+I_2+2Re<(E^*_1E_2)>=I_1+I_1+2Re\Gamma(\Delta t)
+I(\Delta t)=\langle(E_1+E_2)(E_1+E_2)^*\rangle=I_1+I_2+2Re\langle E^*_1E_2 \rangle =I_1+I_1+2Re\Gamma(\Delta t).
 \end{equation}
-Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des lichtfeldes $E_1(t)$ entspricht \cite{2}:
+Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des Lichtfeldes $E_1(t)$ entspricht \cite{2}:
 \begin{equation}
-\Gamma(\Delta t)=<(E^*_1(t)\cdot E_1(t+\Delta t))> = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt
+\Gamma(\Delta t)=\langle E^*_1(t)\cdot E_1(t+\Delta t)\rangle = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt.
 \end{equation}
 
 Ein Maß für die Interferenzfähigkeit ist die Kohärenzlänge $l_K$, welche die räumliche Ausdehnung der Kohärenz beschreibt und über die spektrale Bandbreite $\Delta\lambda$ mit der Wellenlänge $\lambda$ verknüpft ist: $l_K = \lambda^2 / \Delta\lambda$. 
 In der experimentellen Praxis ist die Kohärenzfunktion $\Gamma(\Delta t)$ nicht direkt zugänglich. Stattdessen wird der Kontrast $K$ (oder Sichtbarkeit) des Interferenzmusters herangezogen, definiert über die Intensitätsmaxima und -minima $I_{max}, I_{min}$ \cite{2}:
 \begin{equation}
-K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}
+K(\Delta t) = \frac{I_{max} - I_{min}}{I_{max} + I_{min}}.
 \end{equation}
-Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$. \cite{2}
+Für den Spezialfall gleich intensiver Teilwellen entspricht die Kontrastfunktion exakt dem Betrag des komplexen Kohärenzgrades $|\gamma(\Delta t)|$ \cite{2}.
 
 
 \subsection{Fourier-Spektroskopie}
@@ -96,24 +97,24 @@ Das Funktionsprinzip der Fourier-Transform-Spektroskopie (FTS) beruht auf der Er
 
 Geht man von einem Wellenfeld mit beliebig vielen Frequenzkomponenten aus, lässt sich das elektrische Feld als Integral beschreiben:
 \begin{equation}
-E(t) = \frac{1}{2\pi} \int_{0}^{\infty} E_0(\omega)e^{-i\omega t}d\omega
+E(t) = \frac{1}{2\pi} \int_{0}^{\infty} E_0(\omega)e^{-i\omega t}d\omega.
 \end{equation}
 Unter der Annahme einer symmetrischen spektralen Energiedichte ($W(\omega) = W(-\omega)$) ergibt sich für den interferierenden Teil der Intensität $\Delta I(\Delta t)$ nach dem Wiener-Khinchin-Theorem der Zusammenhang:
 \begin{equation}
-\Delta I(\Delta t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} W(\omega) e^{-i\omega \Delta t} d\omega
+\Delta I(\Delta t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} W(\omega) e^{-i\omega \Delta t} d\omega.
 \end{equation}
 Durch eine numerische Rücktransformation (Inverse Fourier-Transformation) kann somit aus dem gemessenen Interferogramm das gesuchte Spektrum extrahiert werden:
 \begin{equation}
-W(\omega) = \int_{-\infty}^{\infty} \Delta I(\Delta t) e^{i\omega \Delta t} d(\Delta t)
+W(\omega) = \int_{-\infty}^{\infty} \Delta I(\Delta t) e^{i\omega \Delta t} d(\Delta t).
 \end{equation}\\
-In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal auflösbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$. \cite{2}
+In der Realität ist die spektrale Auflösung $\Delta\nu$ jedoch durch die maximale zeitliche Verzögerung $\Delta t_{max}$ begrenzt, die experimentell durch den Verfahrweg des Spiegels erreicht werden kann: $\Delta\nu = 1/\Delta t_{max}$. Zudem begrenzt das Nyquist-Shannon-Abtasttheorem die maximal messbare Frequenz $\nu_{max}$ durch das Zeitintervall $t_{sampl}$ zwischen zwei Messpunkten: $\nu_{max} = 1/(2 t_{sampl})$ \cite{2}.
 
 
 \section{Experimenteller Aufbau}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.75\linewidth]{img/versuchsaufbau.png}
-	\caption{Schematischer Aufbau des Fourier-Transform-Spektrometers}
+	\caption{Schematischer Aufbau des Fourier-Transform-Spektrometers.}
 	\label{fig: michint}
 \end{figure}
 
@@ -121,7 +122,7 @@ Das Fourier-Transform-Spektrometer, das in diesem Versuch verwendet wird, besteh
 Die Weißlichtquelle hier ist eine Weißlicht-LED und der Laser ist ein frequenzverdoppelter diode-pumped solid-state-Laser mit einer Wellenlänge von $\lambda_L=\qty{532}{nm}$.\\\\
 Das Michelson-Interferometer teilt die einfallenden Lichtbündel in zwei identische Lichtstrahlen auf, die beide über Spiegel wieder zurückgeworfen werden. Einer der beiden Spiegel des Interferometers lässt sich über einen Linearverschiebetisch angetrieben von einem Schrittmotor bewegen.\\
 Nach dem  Durchlaufen des Interferometers wird der Strahlengang des Lasers auf eine einzelne Fotodiode gelenkt, während der Weißlichtstrahl erneut durch einen halbdurchlässigen Spiegel geteilt wird. Einer der beiden Weißlichtstrahlen wird direkt auf eine Fotodiode gelenkt, der andere durchläuft die zu untersuchenden Proben, bevor er auch auf eine Fotodiode trifft.\\
-Alle drei messenden Photodioden sind über eine Signalverstärkung mit einem Computer verbunden.\\\\
+Die, von den drei Photodioden kommenden, Signale werden durch Operationsverstärker verstärkt und invertiert um an den Dynamikbereich eines Analog-Digital-Wandlers angepasst zu werden. Dann werden die Signale erst an den AD-Wandler und von dort an einen Computer weitergeleitet.\\\\
 Die Steuerung des Motors und die Aufnahme der Daten erfolgt über ein Python GUI.\\
 Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch \qty{50,5}{nm}. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, was in der Auswertung berücksichtigt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\\\
 Bevor die Messungen gestartet werden, muss die Position Null des Motors auf die Mitte des Interferenzmusters gesetzt werden.
@@ -154,7 +155,7 @@ Der erste Schritt im Skript ist die Mittelwertbildung der 20 Messwerte pro Posit
 \end{figure}
 
 \subsection{Kalibrierfunktion}
-Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verläuft und der Antrieb zudem ein gewisses Umkehrspiel aufweist, ist eine numerische Korrektur der Ortsachse nötig. Die Kalibrierung erfolgt anhand des Laser-Interferogramms (Kanal 2), da dessen Wellenlänge ($\lambda_{L}=\qty{532}{nm}$) exakt bekannt ist.\\
+Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verläuft und der Antrieb zudem ein gewisses Umkehrspiel aufweist, ist eine numerische Korrektur der Ortsachse nötig. Die Kalibrierung erfolgt anhand des Laser-Interferogramms (Kanal 2), da dessen Wellenlänge ($\lambda_{L}=\qty{532}{nm}$) exakt bekannt und die Form des Interferogramms genau vorhersagbar ist.\\
 Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 
 \begin{itemize}
@@ -169,13 +170,13 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{img/Code_stuff für korrekturfunktion.png}
-\caption{Hilfsfunktionen für die Kalibrierfunktion}
+\caption{Hilfsfunktionen für die Kalibrierfunktion.}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[scale=0.7]{img/Code_Korrekturfunktion.png}
-       \caption{Kalibrierfunktion}
+       \caption{Kalibrierfunktion.}
 \end{figure}
 
 \subsubsection{Graphen}
@@ -183,35 +184,36 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 \begin{figure}[H]
        \centering
        \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation vs Originaldaten.png}
-       \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte)}
+       \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte.)}
        \label{fig:LaserDatenInterpolationvsOriginaldaten}
+       %grafiken würde ich erst mit einer korrigierten Korrekturfunktion besser machen
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation mit Maxima (zoom).png}
-       \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot)}
+       \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot).}
        \label{fig:LaserDatenInterpolationmitMaxima}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[width=1\linewidth]{img/Kalibrierfunktion.png}
-       \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Maxima (gelbe x)}
+       \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Maxima (gelbe x).}
        \label{fig:Kalibrierfunktion}
 \end{figure}
 
 \begin{figure}[H]
        \centering
        \includegraphics[width=1\linewidth]{img/Korrektur der Motorposition.png}
-       \caption{Korrektur der Motorposition mit dem errechneten Delta (Soll Position - Ist Position)}
+       \caption{Korrektur der Motorposition mit dem errechneten Delta (Soll Position - Ist Position).}
        \label{fig:KorrekturderMotorposition}
 \end{figure}
 
 
 \subsection{Korrektur der Weißlichtdaten und äquidistantes Gitter}
 
-Nachdem die laserspezifische Korrekturfunktion bestimmt wurde, erfolgt im nächsten Schritt die Linearisierung der Messdaten für die Jod-Probe und die Referenzmessung (bzw. der Filter- und Weißlichtmessung). Dieser Prozess ist entscheidend, um die mechanischen Unzulänglichkeiten des Verschiebetisches rechnerisch zu kompensieren und eine valide Basis für die Spektralanalyse zu schaffen.
+Nachdem die jeweilige Korrekturfunktion anhand der Laserdaten bestimmt wurde, erfolgt im nächsten Schritt die Linearisierung der Messdaten für die Jod-Probe und die Referenzmessung (bzw. der Filter- und Weißlichtmessung). Dieser Prozess ist entscheidend, um die mechanischen Unzulänglichkeiten des Verschiebetisches rechnerisch zu kompensieren und eine valide Basis für die Spektralanalyse zu schaffen.
 
 \begin{itemize}
        \item Ortskorrektur der Weißlichtdaten: Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}=x_{ist}+\Delta(x_{ist})$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
@@ -235,7 +237,7 @@ Dieser Schritt stellt sicher, dass die resultierenden Spektren nach der Transfor
 Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitter transformiert wurden, erfolgt der Übergang von der räumlichen Domäne in die zeitliche Verzögerung und schließlich in den Frequenzraum.
 
 \begin{itemize}
-       \item Transformation der Ortsachse in die Zeitverzögerung $\Delta t$: Die korrigierte Motorachse $x_{\text{korr}}$ liegt zunächst in Einheiten von Motorschritten vor. Um eine physikalisch interpretierbare Zeitachse zu erhalten, wird die präzise bekannte Wellenlänge des Kalibrierlasers ($\lambda_L = \qty{532}{nm}$) herangezogen. Da der Abstand zwischen zwei Intensitätsmaxima im Interferogramm einer Änderung der optischen Weglängendifferenz um exakt $\lambda_L$ entspricht, lässt sich über die Steigung $a$ der Laserkalibrierung (Motorschritte pro Maximum) die geometrische Weglängen- differenz $\Delta s$ berechnen. Unter Berücksichtigung der Lichtgeschwindigkeit $c$ wird diese in die zeitliche Verzögerung $\Delta t$ der Teilstrahlen überführt: $$\Delta t = \frac{\Delta s}{c} = \frac{x_{\text{korr}} \cdot \lambda_L}{a \cdot c}$$ Diese äquidistante Zeitachse bildet die notwendige Basis für die diskrete Fouriertransformation.
+       \item Transformation der Ortsachse in die Zeitverzögerung $\Delta t$: Die korrigierte Motorachse $x_{\text{korr}}$ liegt zunächst in Einheiten von Motorschritten vor. Um eine physikalisch interpretierbare Zeitachse zu erhalten, wird die präzise bekannte Wellenlänge des Kalibrierlasers ($\lambda_L = \qty{532}{nm}$) herangezogen. Da der Abstand zwischen zwei Intensitätsmaxima im Interferogramm einer Änderung der optischen Weglängendifferenz um exakt $\lambda_L$ entspricht, lässt sich über die Steigung $a$ der Laserkalibrierung (Motorschritte pro Maximum) die geometrische Weglängendifferenz $\Delta s$ berechnen. Unter Berücksichtigung der Lichtgeschwindigkeit $c$ wird diese in die zeitliche Verzögerung $\Delta t$ der Teilstrahlen überführt: $$\Delta t = \frac{\Delta s}{c} = \frac{x_{\text{korr}} \cdot \lambda_L}{a \cdot c}.$$ Diese äquidistante Zeitachse bildet die notwendige Basis für die diskrete Fouriertransformation.
        \item Spektralanalyse via Fouriertransformation: Die physikalische Grundlage für die Extraktion der spektralen Informationen bildet das Wiener-Khinchin-Theorem. Dieses besagt, dass das gemessene Interferogramm $\Delta I(\Delta t)$ mathematisch der Autokorrelationsfunktion des elektrischen Feldes entspricht und somit die Fouriertransformierte der spektralen Energiedichte $W(\omega)$ darstellt. Für die numerische Berechnung im Skript werden die Funktionen `fft` und `fftshift` aus der SciPy-Bibliothek verwendet:
        \begin{itemize}
               \item 'fft' (Fast Fourier Transform): Transformiert das zeitliche Signal in den komplexen Frequenzraum. Um physikalisch korrekte Amplituden zu erhalten, wird das Resultat durch die Anzahl der Datenpunkte $N$ normiert.
@@ -376,11 +378,8 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 \pagenumbering{Alph}
 
 
-\section{Literatur}
-\thispagestyle{empty}
 \bibliographystyle{ieeetr}
 \bibliography{praktikum}
-\addcontentsline{toc}{chapter}{Bibliography}
 
 \newpage
 
