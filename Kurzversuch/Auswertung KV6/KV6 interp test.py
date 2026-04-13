@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from numpy import interp
 from scipy.interpolate import UnivariateSpline, interp1d
 from scipy.stats import linregress
 from scipy.signal import argrelextrema
@@ -19,6 +20,7 @@ def average_measurements(measurements):
 
 def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
     f_interpol = UnivariateSpline(x, y, k=3)
+    # f_interpol = interp(x, y)??? what xp, fp
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
     return x_new, y_new
@@ -34,7 +36,6 @@ def find_extrema(y):
     extrema_array=np.array(extrema_list)
 
     return extrema_array, peaks
-
 
 def linear_fit(extrema):
     r = np.linspace(0, len(extrema)-1, len(extrema))
@@ -63,7 +64,9 @@ def korrekturfunktion(data):
     for i in range(len(maxima_positions)):
         P_soll[i] = fit.intercept + fit.slope*i
     delta = P_soll - P_ist
+    # delta_interpolate, _ = interpolate(P_ist, delta)
     delta_interpolate = UnivariateSpline(P_ist, delta, k=3)
+    # print("type =",type(delta_interpolate))
 
     return delta_interpolate, fit.slope
 
@@ -75,6 +78,7 @@ def ortskorrektur(positions, values, delta_interpolate):
     x_eq = np.linspace(x_korr.min(), x_korr.max(), len(x_korr))
     
     # Erneute Interpolation auf das neue Gitter
+    # f_int,_ = interpolate(x_korr, values)
     f_int = UnivariateSpline(x_korr, values, k=3)
     y_eq = f_int(x_eq)
     
@@ -144,7 +148,9 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     wl_equi = np.linspace(400, 800, 2000) # 400nm bis 800nm [3]
     
     # Interpolation der Spektren auf das neue Wellenlängen-Gitter
+    # f_interp_ref = interpolate(wl_raw[::-1], s_ref_pos[::-1])
     f_interp_ref = UnivariateSpline(wl_raw[::-1], s_ref_pos[::-1], k=3, s=0)
+    # f_interp_probe = interpolate(wl_raw[::-1], s_probe_pos[::-1])
     f_interp_probe = UnivariateSpline(wl_raw[::-1], s_probe_pos[::-1], k=3, s=0)
 
 
@@ -203,7 +209,9 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     wl_raw = (c / (f_pos * 1e12)) * 1e9
     wl_equi = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter
     
+    # interp_ref = interpolate(wl_raw[::-1], s_ref[::-1])
     interp_ref = UnivariateSpline(wl_raw[::-1], s_ref[::-1], k=3, s=0)
+    # interp_filt = interpolate(wl_raw[::-1], s_filt[::-1])
     interp_filt = UnivariateSpline(wl_raw[::-1], s_filt[::-1], k=3, s=0)
     
     s_ref_nm = interp_ref(wl_equi)
@@ -236,12 +244,46 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.grid(True)
     plt.show()
 
+def plot_laser_green_analysis(freq_green, spec_laser_green):
+    mask = freq_green > 0
+    f_pos = freq_green[mask]
+    s_laser_pos = spec_laser_green[mask]
+
+    # Plotten
+    plt.figure(figsize=(15, 5))
+    plt.subplot(1, 2, 1)
+    plt.plot(f_pos, s_laser_pos/np.max(s_laser_pos), color='green', label="Spektrum Grüner Laser")
+    plt.xlabel("Frequenz [THz]")
+    plt.ylabel("Intensität [a.u.]")
+    plt.title("Laserspektrum (Channel 2)")
+    plt.xlim(400,750)
+    plt.grid(True)
+    plt.legend()
+
+    # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
+    lambda_green_nm = (c / f_pos) * 1e-3
+    wl_equi_green = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter
+    # interp_laser_green = interpolate(lambda_green_nm[::-1], s_laser_pos[::-1])
+    interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
+    s_green_nm = interp_laser_green(wl_equi_green)
+
+    # Plotten des Spektrums um 532 nm
+    plt.subplot(1, 2, 2)
+    plt.plot(lambda_green_nm, s_green_nm/ np.max(s_green_nm), color='green', label="Laser-Referenz (532 nm)")
+    plt.xlabel("Wellenlänge [nm]")
+    plt.ylabel("Intensität [a.u.]")
+    plt.title(f"Wellenlängenspektrum des grünen Lasers ({dataset})")
+    plt.xlim(400, 700)  # Zoom auf den Bereich um 532 nm
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+
 dataset = "Iod 2"
 dataset_filter= "Filter 2"
 
 # Korrekturfunktion für Datensatz
 delta_func, laser_slope = korrekturfunktion(dataset)
-delta_func_filt, slope_filt = korrekturfunktion(dataset_filter)
+# delta_func_filt, slope_filt = korrekturfunktion(dataset_filter)
 
 # Grüner Laser (Kanal 2)
 path_laser_green = f"data/{dataset}/Data Channel 2.dat"
@@ -249,7 +291,7 @@ pos_laser_green, meas_laser_green = load_data(path_laser_green)
 mean_laser_green = average_measurements(meas_laser_green)
 x_eq_green, y_eq_green = ortskorrektur(pos_laser_green, mean_laser_green, delta_func)
 
-# JOD-PROBE (Kanal 0)
+'''# JOD-PROBE (Kanal 0)
 path_jod = f"data/{dataset}/Data Channel 0.dat"
 pos_jod, meas_jod = load_data(path_jod)
 mean_jod = average_measurements(meas_jod)
@@ -271,52 +313,18 @@ x_final_f, y_filt_corr = ortskorrektur(pos_filt, mean_filt, delta_func_filt)
 path_ref_filt = f"data/{dataset_filter}/Data Channel 1.dat"
 pos_ref_f, meas_ref_f = load_data(path_ref_filt)
 mean_ref_f = average_measurements(meas_ref_f)
-x_final_f, y_ref_f_corr = ortskorrektur(pos_ref_f, mean_ref_f, delta_func_filt)
+x_final_f, y_ref_f_corr = ortskorrektur(pos_ref_f, mean_ref_f, delta_func_filt)'''
 
 # FFT BERECHNEN
 freq_green, spec_laser_green = fft_spectrum(x_eq_green, y_eq_green, laser_slope)
-freq, spec_ref = fft_spectrum(x_final, y_ref_final, laser_slope)
-freq, spec_jod = fft_spectrum(x_final, y_jod_final, laser_slope)
-freq_f, spec_ref_f = fft_spectrum(x_final_f, y_ref_f_corr, slope_filt)
-freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
+# freq, spec_ref = fft_spectrum(x_final, y_ref_final, laser_slope)
+# freq, spec_jod = fft_spectrum(x_final, y_jod_final, laser_slope)
+# freq_f, spec_ref_f = fft_spectrum(x_final_f, y_ref_f_corr, slope_filt)
+# freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
 
 # Plots
+plot_laser_green_analysis(freq_green, spec_laser_green)
 # plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
 # plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
-# plot_laser_green_analysis(freq_green, spec_laser_green)
 
 # Stuff ausprobieren
-def plot_laser_green_analysis(freq_green, spec_laser_green):
-    mask = freq_green > 0
-    f_pos = freq_green[mask]
-    s_laser_pos = spec_laser_green[mask]
-
-    # Plotten
-    plt.figure(figsize=(15, 5))
-    plt.subplot(1, 2, 1)
-    plt.plot(f_pos, s_laser_pos/np.max(s_laser_pos), color='green', label="Spektrum Grüner Laser")
-    plt.xlabel("Frequenz [THz]")
-    plt.ylabel("Intensität [a.u.]")
-    plt.title("Laserspektrum (Channel 2)")
-    plt.xlim(400,750)
-    plt.grid(True)
-    plt.legend()
-
-    # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
-    lambda_green_nm = (c / f_pos) * 1e-3
-    wl_equi_green = np.linspace(400, 800, 5000) # Neues äquidistantes nm-Gitter
-    interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
-    s_green_nm = interp_laser_green(wl_equi_green)
-
-    # Plotten des Spektrums um 532 nm
-    plt.subplot(1, 2, 2)
-    plt.plot(lambda_green_nm, s_green_nm/ np.max(s_green_nm), color='green', label="Laser-Referenz (532 nm)")
-    plt.xlabel("Wellenlänge [nm]")
-    plt.ylabel("Intensität [a.u.]")
-    plt.title(f"Wellenlängenspektrum des grünen Lasers ({dataset})")
-    plt.xlim(400, 700)  # Zoom auf den Bereich um 532 nm
-    plt.grid(True)
-    plt.legend()
-    plt.show()
-
-plot_laser_green_analysis(freq_green, spec_laser_green)

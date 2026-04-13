@@ -189,14 +189,14 @@ interpol_ref = UnivariateSpline(x_korr_ref, mean_ref, k=4)
 y_eq_filter = interpol_filter(x_eq)
 y_eq_ref = interpol_ref(x_eq)'''
 
-'''# Ortskorrektur Laser
+# Ortskorrektur Laser
 x= np.linspace(-5000, 5000, 10000)
 x_korr = x + delta_interpolate(x)
 x_korr_eq = np.arange(min(x_korr), max(x_korr), (max(x_korr)-min(x_korr))/len(x_korr))
 
 # Neue Interpolation nach Korrektur
 laser_interpolate_func = UnivariateSpline(x_korr, mean_data_laser, k=4)
-laser_interpolate_korr = laser_interpolate_func(x_korr_eq)'''
+laser_interpolate_korr = laser_interpolate_func(x_korr_eq)
 
 #vergleich der Interpolation vor und nach Korrektur
 '''fig, (ax1, ax2) = plt.subplots(1, 2)
@@ -212,9 +212,9 @@ ax2.legend()
 plt.show()'''
 
 # Ort zu Zeit Trafo
-#delta_s_laser = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
-#delta_t_laser = delta_s_laser / c
-#d_laser = delta_t_laser
+delta_s_laser = x_korr_eq*532*10**(-9)/fit.slope #: andere Gruppe
+delta_t_laser = delta_s_laser / c
+d_laser = delta_t_laser
 delta_s_led = x_eq * 532e-9 / fit.slope 
 delta_t_led = delta_s_led / c
 d_led = delta_t_led
@@ -228,14 +228,14 @@ d_led = delta_t_led
 # lambda_all = c / (freq_axis + 1e-12) * 1e9
 
 # FT Laser
-'''T_sample_laser= ((max(d_laser)-min(d_laser))/len(d))*1e12 #Ps
+T_sample_laser= ((max(d_laser)-min(d_laser))/len(d_laser))*1e12 #Ps
 f_max_laser=1/T_sample_laser
 L_laser=len(d_laser)
-f_Ny=f_max/2
+f_Ny=f_max_laser/2
 w=np.linspace(-f_Ny,f_Ny,L_laser)
-W=abs(fftshift(fft(laser_interpolate_korr/L)))
-W_imp=W/max(W) # normierung, weil?
-'''
+W=abs(fftshift(fft(laser_interpolate_korr/L_laser)))
+W_imp=W/max(W) # normierung
+
 # FT Jod
 T_sample_led= ((max(d_led)-min(d_led))/len(d_led))*1e12 #Ps
 f_max_led=1/T_sample_led
@@ -273,13 +273,13 @@ spectrum_ref_norm=spectrum_ref/max(spectrum_ref)'''
 # print(lambda_f)
 # =5.320037902684942e-07 =532nm yaaay
 
-'''plt.plot(w,W_imp, color='purple')
+plt.plot(w,W_imp, color='purple')
 plt.xlim(0,1000)
 plt.ylim(0,0.25)
-plt.xlabel("Frequenz [PHz]")
+plt.xlabel("Frequenz [THz]")
 plt.ylabel("Amplitude")
 plt.title("Laser Spektrum")
-plt.show()'''
+plt.show()
 
 # umrechnung frequenz zu wellenlänge
 # lambda_laser = c/(w*10**(12-9))
@@ -298,19 +298,19 @@ lamda_led_filter = c/ freq_axis * 1e9
 #plt.plot(w,W_imp,color='purple')
 #plt.plot(freq_axis,spectrum_jod_norm, color='purple', label='jod')
 #plt.plot(freq_axis,spectrum_ref_norm, color='orange', label='ref')
-plt.plot(lambda_led,spectrum_ref_norm, color='orange', label='ref')
-plt.plot(lambda_led,spectrum_jod_norm, color='purple',label='jod')
+#plt.plot(lambda_led,spectrum_ref_norm, color='orange', label='ref')
+#plt.plot(lambda_led,spectrum_jod_norm, color='purple',label='jod')
 #plt.xlim(350,700)
 #plt.ylim(0,0.00052)
 #plt.xlim(2e26, 10e26)
 #plt.ylim(0, 0.00052)
-plt.xlabel("Wellenlänge [nm]")
+#plt.xlabel("Wellenlänge [nm]")
 #plt.xlabel("Frequenz [Hz]")
-plt.ylabel("Amplitude")
-plt.title("Weißlichtspektrum Jod, Wellenlänge")
+#plt.ylabel("Amplitude")
+#plt.title("Weißlichtspektrum Jod, Wellenlänge")
 #plt.title("Weißlichtspektrum Jod,, Frequenz")
-plt.legend()
-plt.show()
+#plt.legend()
+#plt.show()
 
 # Filter Plot
 '''plt.plot(lambda_led,spectrum_ref_norm, color='orange', label='ref')
@@ -338,16 +338,16 @@ plt.show()'''
 # Formel: OD = -log10(I / I0)
 # Wir nutzen np.log10, da OD im physikalischen Kontext meist dekadisch ist.
 # Ein kleines epsilon verhindert Division durch Null.
-epsilon = 1e-12
-od = -np.log10((spectrum_jod_norm + epsilon) / (spectrum_ref_norm))
+# epsilon = 1e-12
+# od = -np.log10((spectrum_jod_norm + epsilon) / (spectrum_ref_norm))
 #smoothed_od = gaussian_filter1d(od, sigma=2)
 
 # 2. Berechnung der Differentiellen Optischen Transmission (DOT)
 # Formel: DOT = (I - I0) / I0
-dot = (spectrum_jod_norm - spectrum_ref_norm) / (spectrum_ref_norm)
+#dot = (spectrum_jod_norm - spectrum_ref_norm) / (spectrum_ref_norm)
 #smoothed_dot = gaussian_filter1d(dot, sigma=2)
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
+'''fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
 # Darstellung der Optischen Dichte (OD)
 ax1.plot(lambda_led, od, color='darkred', label='Optische Dichte (OD)')
 ax1.set_ylabel("OD")
@@ -366,4 +366,4 @@ ax2.legend()
 # Bereich auf den interessanten Teil begrenzen (z.B. 450nm bis 650nm für Jod)
 # plt.xlim(450, 700) 
 plt.tight_layout()
-plt.show()
+plt.show()'''
