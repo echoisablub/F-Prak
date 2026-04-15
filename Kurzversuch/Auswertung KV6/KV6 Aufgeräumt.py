@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.interpolate import UnivariateSpline, interp1d
+from scipy.interpolate import UnivariateSpline,make_interp_spline
 from scipy.stats import linregress
 from scipy.signal import argrelextrema
 from scipy.constants import c
@@ -18,7 +18,8 @@ def average_measurements(measurements):
     return np.mean(measurements, axis=1)
 
 def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
-    f_interpol = UnivariateSpline(x, y, k=3)
+    f_interpol = make_interp_spline(x, y, k=3)
+    #f_interpol = UnivariateSpline(x, y, k=3)
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
     return x_new, y_new
@@ -63,7 +64,8 @@ def korrekturfunktion(data):
     for i in range(len(maxima_positions)):
         P_soll[i] = fit.intercept + fit.slope*i
     delta = P_soll - P_ist
-    delta_interpolate = UnivariateSpline(P_ist, delta, k=3)
+    delta_interpolate = make_interp_spline(P_ist, delta, k=3)
+    #delta_interpolate = UnivariateSpline(P_ist, delta, k=3)
 
     return delta_interpolate, fit.slope
 
@@ -75,7 +77,8 @@ def ortskorrektur(positions, values, delta_interpolate):
     x_eq = np.linspace(x_korr.min(), x_korr.max(), len(x_korr))
     
     # Erneute Interpolation auf das neue Gitter
-    f_int = UnivariateSpline(x_korr, values, k=3)
+    f_int = make_interp_spline(x_korr, values, k=3)
+    #f_int = UnivariateSpline(x_korr, values, k=3)
     y_eq = f_int(x_eq)
     
     return x_eq, y_eq
@@ -144,8 +147,10 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     wl_equi = np.linspace(400, 800, 2000) # 400nm bis 800nm [3]
     
     # Interpolation der Spektren auf das neue Wellenlängen-Gitter
-    f_interp_ref = UnivariateSpline(wl_raw[::-1], s_ref_pos[::-1], k=3, s=0)
-    f_interp_probe = UnivariateSpline(wl_raw[::-1], s_probe_pos[::-1], k=3, s=0)
+    f_interp_ref = make_interp_spline(wl_raw[::-1], s_ref_pos[::-1], k=3)
+    f_interp_probe = make_interp_spline(wl_raw[::-1], s_probe_pos[::-1], k=3)
+    #f_interp_ref = UnivariateSpline(wl_raw[::-1], s_ref_pos[::-1], k=3, s=0)
+    #f_interp_probe = UnivariateSpline(wl_raw[::-1], s_probe_pos[::-1], k=3, s=0)
 
 
     s_ref_wl = f_interp_ref(wl_equi)
@@ -203,8 +208,10 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     wl_raw = (c / (f_pos * 1e12)) * 1e9
     wl_equi = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter
     
-    interp_ref = UnivariateSpline(wl_raw[::-1], s_ref[::-1], k=3, s=0)
-    interp_filt = UnivariateSpline(wl_raw[::-1], s_filt[::-1], k=3, s=0)
+    interp_ref = make_interp_spline(wl_raw[::-1], s_ref[::-1], k=3)
+    interp_filt = make_interp_spline(wl_raw[::-1], s_filt[::-1], k=3)    
+    #interp_ref = UnivariateSpline(wl_raw[::-1], s_ref[::-1], k=3, s=0)
+    #interp_filt = UnivariateSpline(wl_raw[::-1], s_filt[::-1], k=3, s=0)
     
     s_ref_nm = interp_ref(wl_equi)
     s_filt_nm = interp_filt(wl_equi)
@@ -281,9 +288,9 @@ freq_f, spec_ref_f = fft_spectrum(x_final_f, y_ref_f_corr, slope_filt)
 freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
 
 # Plots
-# plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
-# plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
-# plot_laser_green_analysis(freq_green, spec_laser_green)
+plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
+plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
+#plot_laser_green_analysis(freq_green, spec_laser_green)
 
 # Stuff ausprobieren
 def plot_laser_green_analysis(freq_green, spec_laser_green):
@@ -305,7 +312,8 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
     # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
     lambda_green_nm = (c / f_pos) * 1e-3
     wl_equi_green = np.linspace(400, 800, 5000) # Neues äquidistantes nm-Gitter
-    interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
+    interp_laser_green = make_interp_spline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3)    
+    #interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
     s_green_nm = interp_laser_green(wl_equi_green)
 
     # Plotten des Spektrums um 532 nm
