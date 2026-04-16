@@ -262,6 +262,7 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
 
     # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
     lambda_green_nm = (c / f_pos) * 1e-3
+    print("shape= ", lambda_green_nm)
     wl_equi_green = np.linspace(400, 800, 2000) # Neues äquidistantes nm-Gitter
     # interp_laser_green = interpolate(lambda_green_nm[::-1], s_laser_pos[::-1])
     interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
