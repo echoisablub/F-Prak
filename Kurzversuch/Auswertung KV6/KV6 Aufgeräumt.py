@@ -20,7 +20,6 @@ def average_measurements(measurements):
 
 def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
     f_interpol = make_interp_spline(x, y, k=3)
-    #f_interpol = UnivariateSpline(x, y, k=3)
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
     return x_new, y_new
@@ -37,12 +36,6 @@ def find_extrema(y):
 
     return extrema_array, peaks
 
-    # Laser-Signal glätten vor der Peak-Suche
-    # smooth_laser = savgol_filter(mean_data_laser, window_length=51, polyorder=3)
-    # Robuste Peaks finden (nur die großen Maxima der Laser-Fringes)
-    # peaks, _ = find_peaks(smooth_laser, distance=50, prominence=0.01)
-
-
 def linear_fit(extrema):
     r = np.linspace(0, len(extrema)-1, len(extrema))
     fit = linregress(r, extrema)
@@ -58,15 +51,12 @@ def korrekturfunktion(data):
     x_new, y_new = interpolate(positions, mean_data_laser, factor=10)
 
     # Bestimmung der Extrema
-    #smooth_laser = savgol_filter(mean_data_laser, window_length=51, polyorder=3)
-    #peaks, _ = find_peaks(smooth_laser, distance=50, prominence=0.01)
-    #maxima_positions = x_new[peaks]
     _, extrema_array = find_extrema(y_new)
     maxima_positions = x_new[extrema_array]
     print("maxima menge = ",len(maxima_positions))
     
     # Kalibrierfunktion bestimmen
-    r, fit = linear_fit(maxima_positions)
+    _, fit = linear_fit(maxima_positions)
 
     P_soll = np.empty(len(maxima_positions), dtype=int)
     P_ist = maxima_positions
@@ -74,51 +64,9 @@ def korrekturfunktion(data):
         P_soll[i] = fit.intercept + fit.slope*i
     delta = P_soll - P_ist
     delta_interpolate = make_interp_spline(P_ist, delta, k=3)
-    #delta_interpolate = UnivariateSpline(P_ist, delta, k=3)
 
     return delta_interpolate, fit.slope
 
-def find_extrema_robust(y, prominence=0.01, distance=20):
-    """
-    Findet Maxima und Minima robust gegenüber Rauschen.
-    """
-    # Maxima finden
-    peaks, _ = find_peaks(y, prominence=prominence, distance=distance)
-    # Minima finden (durch Invertieren des Signals)
-    troughs, _ = find_peaks(-y, prominence=prominence, distance=distance)
-    
-    # Kombinieren und sortieren
-    extrema = np.sort(np.concatenate((peaks, troughs)))
-    return extrema
-
-def korrekturfunktion_neu(data_name):
-    # 1. Laser-Daten laden (Kanal 2)
-    file_path = f"data/{data_name}/Data Channel 2.dat"
-    positions, measurements = load_data(file_path)
-    mean_data_laser = average_measurements(measurements)
-    
-    # 2. Glättung des Laser-Signals (entscheidend gegen Rauschen)
-    # (Hinweis: savgol_filter ist eine externe Funktion aus scipy.signal)
-    smooth_laser = savgol_filter(mean_data_laser, window_length=51, polyorder=3)
-    
-    # 3. Robuste Extrema finden
-    extrema_indices = find_extrema_robust(smooth_laser)
-    pos_extrema = positions[extrema_indices]
-    
-    # 4. Fit der Extrema zur Bestimmung der laser_slope
-    r, fit = linear_fit(extrema_indices)
-    laser_slope = fit.slope
-    
-    # 5. Delta-Berechnung für die Ortskorrektur
-    # Theoretische (lineare) Positionen vs. reale Peak-Positionen
-    theoretical_pos = fit.intercept + fit.slope * r
-    deltas = theoretical_pos - pos_extrema
-    
-    # 6. Kontinuierliche Korrekturfunktion via Spline
-    # 's' glättet den Spline zusätzlich
-    delta_func = UnivariateSpline(pos_extrema, deltas, s=1.0)
-    
-    return delta_func, laser_slope
 
 def ortskorrektur(positions, values, delta_interpolate):
     # Ursprüngliche Achse korrigieren
@@ -129,9 +77,7 @@ def ortskorrektur(positions, values, delta_interpolate):
     
     # Erneute Interpolation auf das neue Gitter
     f_int = make_interp_spline(x_korr, values, k=3)
-    # f_int = UnivariateSpline(x_korr, values, k=3)
     y_eq = f_int(x_eq)
-    # y_eq = np.interp(x_eq, x_korr, values)
     
     return x_eq, y_eq
 
@@ -185,7 +131,7 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
     plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
     plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(540,590)
-    plt.ylim(0,0.4)
+    plt.ylim(0,0.5)
     plt.grid(True)
     plt.legend()
 
@@ -203,7 +149,7 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
     plt.ylabel("Amplitude", fontsize=15)
     plt.title("Wellenlängenspektrum", fontsize=20)
     plt.xlim(510, 555)  # Zoom auf den Bereich um 532 nm
-    plt.ylim(0,0.4)
+    plt.ylim(0,0.5)
     plt.grid(True)
     plt.legend()
     plt.show()
@@ -226,7 +172,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
     plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(350, 750) # Bereich für sichtbares Licht (ca. 0.35 - 0.75 PHz) [2]
-    plt.ylim(0, 0.0005)
+    plt.ylim(0, 0.0006)
     plt.legend()
     plt.grid(True)
 
@@ -284,12 +230,12 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.subplot(1, 2, 1)
     plt.suptitle(f"Spektroskopische Analyse: Filter", fontsize=24, fontweight='bold', y=0.98)
     plt.plot(f_pos, s_ref / np.max(s_ref), label="Weißlicht (Ref)", color="gray")
-    plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter 2", color="orange")
+    plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter 1", color="orange")
     plt.xlabel("Frequenz $f$ [THz]", fontsize=15)
     plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
     plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(350, 750)
-    plt.ylim(0, 0.0008)
+    plt.ylim(0, 0.001)
     plt.legend()
     plt.grid(True)
 
@@ -310,7 +256,7 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     # PLOT 2: ÄQUIDISTANTES WELLENLÄNGENSPEKTRUM
     plt.subplot(1, 2, 2)
     plt.plot(wl_equi_filt, s_ref_nm / np.max(s_ref_nm), label="Weißlicht (Ref)", color="gray")
-    plt.plot(wl_equi_filt, s_filt_nm / np.max(s_ref_nm), label="Filter 2", color="blue")
+    plt.plot(wl_equi_filt, s_filt_nm / np.max(s_ref_nm), label="Filter 1", color="blue")
     plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=15)
     plt.ylabel("Amplitude", fontsize=15)
     plt.title("Wellenlängenspektrum", fontsize=20)
@@ -334,8 +280,8 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.grid(True)
     plt.show()
 
-dataset = "Iod 2"
-dataset_filter= "Filter 2"
+dataset = "Iod 1"
+dataset_filter= "Filter 1"
 
 # Korrekturfunktion für Datensatz
 delta_func, laser_slope = korrekturfunktion(dataset)
