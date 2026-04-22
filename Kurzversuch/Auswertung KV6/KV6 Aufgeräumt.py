@@ -171,6 +171,43 @@ def fft_spectrum(x_eq, y_eq, laser_slope):
 
     return freq_axis, spectrum_abs
 
+def plot_laser_green_analysis(freq_green, spec_laser_green):
+    mask = freq_green > 0
+    f_pos = freq_green[mask]
+    s_laser_pos = spec_laser_green[mask]
+
+    # Plotten
+    plt.figure(figsize=(15, 5))
+    plt.subplot(1, 2, 1)
+    plt.suptitle(f"Spektroskopische Analyse: Laser", fontsize=24, fontweight='bold', y=0.98)
+    plt.plot(f_pos, s_laser_pos/np.max(s_laser_pos), color='green', label="Spektrum Grüner Laser")
+    plt.xlabel("Frequenz $f$ [THz]", fontsize=15)
+    plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
+    plt.title("Frequenzspektrum", fontsize=20)
+    plt.xlim(540,590)
+    plt.ylim(0,0.4)
+    plt.grid(True)
+    plt.legend()
+
+    # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
+    lambda_green_nm = (c / f_pos) * 1e-3
+    # wl_equi_green = np.linspace(400, 800, 5000) # Neues äquidistantes nm-Gitter
+    # interp_laser_green = make_interp_spline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3)    
+    #interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
+    # s_green_nm = interp_laser_green(wl_equi_green)
+
+    # Plotten des Spektrums um 532 nm
+    plt.subplot(1, 2, 2)
+    plt.plot(lambda_green_nm, s_laser_pos/np.max(s_laser_pos), color='green', label="Laser-Referenz (532 nm)")
+    plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=15)
+    plt.ylabel("Amplitude", fontsize=15)
+    plt.title("Wellenlängenspektrum", fontsize=20)
+    plt.xlim(510, 555)  # Zoom auf den Bereich um 532 nm
+    plt.ylim(0,0.4)
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+
 def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     # 1. Vorbereitung: Nur positive Frequenzen betrachten (FFT ist symmetrisch)
     # Da freq von -f_nyquist bis +f_nyquist läuft, nehmen wir nur die rechte Hälfte
@@ -182,11 +219,12 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     # PLOT 1: FREQUENZSPEKTRUM
     plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
+    plt.suptitle(f"Spektroskopische Analyse: Iod", fontsize=24, fontweight='bold', y=0.98)
     plt.plot(f_pos, s_ref_pos / np.max(s_ref_pos), label="Referenz (normiert)", color="gray", alpha=0.5)
     plt.plot(f_pos, s_probe_pos / np.max(s_ref_pos), label=f"{label_probe} (normiert)", color="darkred")
-    plt.xlabel("Frequenz $f$ [THz]")
-    plt.ylabel("Spektrale Energiedichte $W(f)$")
-    plt.title("Iod Spektrum im Frequenzraum")
+    plt.xlabel("Frequenz $f$ [THz]", fontsize=15)
+    plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
+    plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(350, 750) # Bereich für sichtbares Licht (ca. 0.35 - 0.75 PHz) [2]
     plt.ylim(0, 0.0005)
     plt.legend()
@@ -196,14 +234,13 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     # Formel: lambda = c / f. Da f in THz (1e12 Hz) vorliegt:
     # lambda [nm] = (c [m/s] / (f [THz] * 1e12)) * 1e9 [nm/m]
     wl_raw = (c / (f_pos)) * 1e-3
-    wl_equi = np.linspace(400, 800, 5000) # 400nm bis 800nm [3]
+    wl_equi = np.linspace(400, 800, 5000)
     
     # Interpolation der Spektren auf das neue Wellenlängen-Gitter
     f_interp_ref = make_interp_spline(wl_raw[::-1], s_ref_pos[::-1], k=3)
     f_interp_probe = make_interp_spline(wl_raw[::-1], s_probe_pos[::-1], k=3)
     #f_interp_ref = UnivariateSpline(wl_raw[::-1], s_ref_pos[::-1], k=3, s=0)
     #f_interp_probe = UnivariateSpline(wl_raw[::-1], s_probe_pos[::-1], k=3, s=0)
-
 
     s_ref_wl = f_interp_ref(wl_equi)
     s_probe_wl = f_interp_probe(wl_equi)
@@ -212,9 +249,9 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     plt.subplot(1, 2, 2)
     plt.plot(wl_equi, s_ref_wl / np.max(s_ref_wl), label="Referenz", color="gray", alpha=0.5)
     plt.plot(wl_equi, s_probe_wl / np.max(s_ref_wl), label=label_probe, color="blue")
-    plt.xlabel("Wellenlänge $\lambda$ [nm]")
-    plt.ylabel("Amplitude")
-    plt.title("Wellenlängenspektren - Iod")
+    plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=15)
+    plt.ylabel("Amplitude", fontsize=15)
+    plt.title("Wellenlängenspektrum", fontsize=20)
     plt.xlim(400, 800)
     plt.legend()
     plt.grid(True)
@@ -227,11 +264,11 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     
     plt.figure(figsize=(10, 4))
     plt.plot(wl_equi, od, color="green")
-    plt.xlabel("Wellenlänge $\lambda$ [nm]")
-    plt.ylabel("Optische Dichte (OD)")
-    plt.title(f"Absorptionsprofil: {label_probe} (OD)")
-    plt.xlim(500, 700) # Fokus auf Iod-Übergänge
-    plt.ylim(0,0.7)
+    plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=20)
+    plt.ylabel("Optische Dichte (OD)", fontsize=20)
+    plt.title(f"Absorptionsprofil: {label_probe} (OD)", fontsize=24, fontweight='bold')
+    plt.xlim(475, 700) # Fokus auf Iod-Übergänge
+    plt.ylim(-0.2,1)
     plt.grid(True)
     plt.show()
     
@@ -245,11 +282,12 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     # PLOT 1: FREQUENZSPEKTRUM
     plt.figure(figsize=(15, 5))
     plt.subplot(1, 2, 1)
+    plt.suptitle(f"Spektroskopische Analyse: Filter", fontsize=24, fontweight='bold', y=0.98)
     plt.plot(f_pos, s_ref / np.max(s_ref), label="Weißlicht (Ref)", color="gray")
     plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter 2", color="orange")
-    plt.xlabel("Frequenz $f$ [THz]")
-    plt.ylabel("Normierte Intensität")
-    plt.title("Spektren im Frequenzraum")
+    plt.xlabel("Frequenz $f$ [THz]", fontsize=15)
+    plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
+    plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(350, 750)
     plt.ylim(0, 0.0008)
     plt.legend()
@@ -273,9 +311,9 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.subplot(1, 2, 2)
     plt.plot(wl_equi_filt, s_ref_nm / np.max(s_ref_nm), label="Weißlicht (Ref)", color="gray")
     plt.plot(wl_equi_filt, s_filt_nm / np.max(s_ref_nm), label="Filter 2", color="blue")
-    plt.xlabel("Wellenlänge $\lambda$ [nm]")
-    plt.ylabel("Intensität")
-    plt.title("Äquidistante Wellenlängenspektren")
+    plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=15)
+    plt.ylabel("Amplitude", fontsize=15)
+    plt.title("Wellenlängenspektrum", fontsize=20)
     plt.xlim(400, 800)
     plt.legend()
     plt.grid(True)
@@ -288,9 +326,9 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.figure(figsize=(10, 4))
     plt.plot(wl_equi_filt, dot, color="darkorange", lw=1.5)
     plt.axhline(0, color='black', linestyle='--')
-    plt.xlabel("Wellenlänge $\lambda$ [nm]")
-    plt.ylabel("DOT")
-    plt.title("Differentielle Transmission des Filters (2)")
+    plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=20)
+    plt.ylabel("DOT", fontsize=20)
+    plt.title("Differentielle Transmission des Filters", fontsize=24, fontweight='bold')
     plt.xlim(450, 650) # Fokus auf den Absorptionsbereich des Filters
     plt.ylim(-1,1)
     plt.grid(True)
@@ -344,43 +382,4 @@ freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
 # Plots
 plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
 plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
-#plot_laser_green_analysis(freq_green, spec_laser_green)
-
-# Stuff ausprobieren
-def plot_laser_green_analysis(freq_green, spec_laser_green):
-    mask = freq_green > 0
-    f_pos = freq_green[mask]
-    s_laser_pos = spec_laser_green[mask]
-
-    # Plotten
-    plt.figure(figsize=(15, 5))
-    plt.subplot(1, 2, 1)
-    plt.plot(f_pos, s_laser_pos/np.max(s_laser_pos), color='green', label="Spektrum Grüner Laser")
-    plt.xlabel("Frequenz [THz]")
-    plt.ylabel("Intensität [a.u.]")
-    plt.title("Laserspektrum (Channel 2)")
-    plt.xlim(540,590)
-    plt.ylim(0,0.4)
-    plt.grid(True)
-    plt.legend()
-
-    # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
-    lambda_green_nm = (c / f_pos) * 1e-3
-    # wl_equi_green = np.linspace(400, 800, 5000) # Neues äquidistantes nm-Gitter
-    # interp_laser_green = make_interp_spline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3)    
-    #interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
-    # s_green_nm = interp_laser_green(wl_equi_green)
-
-    # Plotten des Spektrums um 532 nm
-    plt.subplot(1, 2, 2)
-    plt.plot(lambda_green_nm, s_laser_pos/np.max(s_laser_pos), color='green', label="Laser-Referenz (532 nm)")
-    plt.xlabel("Wellenlänge [nm]")
-    plt.ylabel("Intensität [a.u.]")
-    plt.title(f"Wellenlängenspektrum des grünen Lasers ({dataset})")
-    plt.xlim(510, 555)  # Zoom auf den Bereich um 532 nm
-    plt.ylim(0,0.4)
-    plt.grid(True)
-    plt.legend()
-    plt.show()
-
 plot_laser_green_analysis(freq_green, spec_laser_green)
