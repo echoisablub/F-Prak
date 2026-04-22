@@ -132,7 +132,7 @@ def ortskorrektur(positions, values, delta_interpolate):
     # f_int = UnivariateSpline(x_korr, values, k=3)
     y_eq = f_int(x_eq)
     # y_eq = np.interp(x_eq, x_korr, values)
-
+    
     return x_eq, y_eq
 
 def fft_spectrum(x_eq, y_eq, laser_slope):
@@ -155,7 +155,7 @@ def fft_spectrum(x_eq, y_eq, laser_slope):
     t_range = np.max(delta_t_axis) - np.min(delta_t_axis)
     
     # Tsampl oft in Ts angegeben (Faktor 1e12), um handliche Frequenzwerte zu erhalten.
-    T_sampl = (t_range / L) * 1e12 
+    T_sampl = (t_range / L)  * 1e12
     f_max = 1 / T_sampl
     f_ny = f_max / 2
     
@@ -308,6 +308,7 @@ path_laser_green = f"data/{dataset}/Data Channel 2.dat"
 pos_laser_green, meas_laser_green = load_data(path_laser_green)
 mean_laser_green = average_measurements(meas_laser_green)
 x_eq_green, y_eq_green = ortskorrektur(pos_laser_green, mean_laser_green, delta_func)
+print(x_eq_green, y_eq_green)
 
 # JOD-PROBE (Kanal 0)
 path_jod = f"data/{dataset}/Data Channel 0.dat"
