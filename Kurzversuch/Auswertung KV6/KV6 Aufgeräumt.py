@@ -300,8 +300,8 @@ dataset = "Iod 2"
 dataset_filter= "Filter 2"
 
 # Korrekturfunktion für Datensatz
-delta_func, laser_slope = korrekturfunktion_neu(dataset)
-delta_func_filt, slope_filt = korrekturfunktion_neu(dataset_filter)
+delta_func, laser_slope = korrekturfunktion(dataset)
+delta_func_filt, slope_filt = korrekturfunktion(dataset_filter)
 
 # Grüner Laser (Kanal 2)
 path_laser_green = f"data/{dataset}/Data Channel 2.dat"
@@ -358,24 +358,26 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
     plt.xlabel("Frequenz [THz]")
     plt.ylabel("Intensität [a.u.]")
     plt.title("Laserspektrum (Channel 2)")
-    plt.xlim(400,750)
+    plt.xlim(540,590)
+    plt.ylim(0,0.4)
     plt.grid(True)
     plt.legend()
 
     # Umrechnung: Frequenz (Hz) -> Wellenlänge (nm)
     lambda_green_nm = (c / f_pos) * 1e-3
-    wl_equi_green = np.linspace(400, 800, 5000) # Neues äquidistantes nm-Gitter
-    interp_laser_green = make_interp_spline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3)    
+    # wl_equi_green = np.linspace(400, 800, 5000) # Neues äquidistantes nm-Gitter
+    # interp_laser_green = make_interp_spline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3)    
     #interp_laser_green = UnivariateSpline(lambda_green_nm[::-1], s_laser_pos[::-1], k=3, s=0)
-    s_green_nm = interp_laser_green(wl_equi_green)
+    # s_green_nm = interp_laser_green(wl_equi_green)
 
     # Plotten des Spektrums um 532 nm
     plt.subplot(1, 2, 2)
-    plt.plot(lambda_green_nm, s_green_nm/ np.max(s_green_nm), color='green', label="Laser-Referenz (532 nm)")
+    plt.plot(lambda_green_nm, s_laser_pos/np.max(s_laser_pos), color='green', label="Laser-Referenz (532 nm)")
     plt.xlabel("Wellenlänge [nm]")
     plt.ylabel("Intensität [a.u.]")
     plt.title(f"Wellenlängenspektrum des grünen Lasers ({dataset})")
-    plt.xlim(400, 700)  # Zoom auf den Bereich um 532 nm
+    plt.xlim(510, 555)  # Zoom auf den Bereich um 532 nm
+    plt.ylim(0,0.4)
     plt.grid(True)
     plt.legend()
     plt.show()
