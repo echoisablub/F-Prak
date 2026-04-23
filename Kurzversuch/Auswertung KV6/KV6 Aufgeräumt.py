@@ -64,6 +64,15 @@ def korrekturfunktion(data):
         P_soll[i] = fit.intercept + fit.slope*i
     delta = P_soll - P_ist
     delta_interpolate = make_interp_spline(P_ist, delta, k=3)
+        
+    plt.figure(figsize=(10, 4))
+    plt.plot(P_ist, delta, 'x', color="orange", label="Korrektur an Maxima")
+    plt.plot(x_new, delta_interpolate(x_new), color="blue", label="Interpolation der Korrektur")
+    plt.xlabel("Motorposition", fontsize=20)
+    plt.ylabel("Korrektur (Soll - Ist)", fontsize=20)
+    plt.title("Korrektur der Motorpositionen", fontsize=24, fontweight='bold')
+    plt.legend()
+    plt.show()
 
     return delta_interpolate, fit.slope
 

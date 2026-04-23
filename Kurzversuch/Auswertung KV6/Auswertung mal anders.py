@@ -106,6 +106,7 @@ plt.show()'''
 # Bestimmung der Extrema
 peaks, troughs = find_extrema(y_new)
 maxima_positions = x_new[peaks]
+max = f_interpol(maxima_positions)
 
 '''plt.plot(x_new, y_new, '-', color='red', label="Interpolation")
 plt.plot(maxima_positions, f_interpol(maxima_positions), 'x', color='green', label="Maxima")
