@@ -238,7 +238,7 @@ def linear_fit(extrema):
        fit = linregress(r, extrema)
        return r, fit
 \end{lstlisting}
-\\\\
+
 \begin{lstlisting}[language=Python, caption=Kalibrierfunktion]
 def korrekturfunktion(data):
        # Analyse der Laser-Daten:
@@ -271,7 +271,7 @@ def korrekturfunktion(data):
 
 \begin{figure}[H]
        \centering
-       \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation vs Originaldaten.png}
+       \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation vs Originaldaten_neu.png}
        \caption{Die Interpolierten Laser Daten (in rot) überlagert mit den Originaldaten (grüne Punkte.)}
        \label{fig:LaserDatenInterpolationvsOriginaldaten}
        %grafiken würde ich erst mit einer korrigierten Korrekturfunktion besser machen
@@ -279,14 +279,14 @@ def korrekturfunktion(data):
 
 \begin{figure}[H]
        \centering
-       \includegraphics[width=1\linewidth]{img/Laser Daten Interpolation mit Maxima (zoom).png}
+       \includegraphics[width=1\linewidth]{img/laser interpolation mit maxima_neu.png}
        \caption{Nach der Maximabestimmung: Maxima (grüne x) überlagert mit den interpolierten Laserdaten (rot).}
        \label{fig:LaserDatenInterpolationmitMaxima}
 \end{figure}
 
 \begin{figure}[H]
        \centering
-       \includegraphics[width=1\linewidth]{img/Kalibrierfunktion.png}
+       \includegraphics[width=1\linewidth]{img/Kalibrierfunktion_neu.png}
        \caption{Der linerare Fit der Extrema (Soll Position, blaue Linie) im Vergleich zu den Ist Positionen der Maxima (gelbe x).}
        \label{fig:Kalibrierfunktion}
 \end{figure}
@@ -512,7 +512,7 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 
 \begin{appendices}
 \section{Code}
-\lstinputlisting[language=Python]{KV6 Aufgeräumt.py}
+%\lstinputlisting[language=Python]{KV6 Aufgeräumt.py}
 
 \end{appendices}
 
