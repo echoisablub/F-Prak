@@ -22,7 +22,7 @@ def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
     f_interpol = make_interp_spline(x, y, k=3)
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
-    return x_new, y_new
+    return x_new, y_new, f_interpol
 
 def find_extrema(y):
     peaks = argrelextrema(y, np.greater)[0]
@@ -48,7 +48,7 @@ def korrekturfunktion(data):
     mean_data_laser = average_measurements(measurements)
     
     # Erste Interpolation der Laser-Daten
-    x_new, y_new = interpolate(positions, mean_data_laser, factor=10)
+    x_new, y_new,_ = interpolate(positions, mean_data_laser, factor=10)
 
     # Bestimmung der Extrema
     _, extrema_array = find_extrema(y_new)
@@ -66,7 +66,6 @@ def korrekturfunktion(data):
     delta_interpolate = make_interp_spline(P_ist, delta, k=3)
 
     return delta_interpolate, fit.slope
-
 
 def ortskorrektur(positions, values, delta_interpolate):
     # Ursprüngliche Achse korrigieren
@@ -326,6 +325,48 @@ freq_f, spec_ref_f = fft_spectrum(x_final_f, y_ref_f_corr, slope_filt)
 freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
 
 # Plots
-plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
-plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
-plot_laser_green_analysis(freq_green, spec_laser_green)
+# plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
+# plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
+# plot_laser_green_analysis(freq_green, spec_laser_green)
+
+# ==other shit==
+
+# Analyse der Laser-Daten:
+file_path = "data/Iod 1/Data Channel 2.dat"
+positions, measurements = load_data(file_path)
+mean_data_laser = average_measurements(measurements)
+x_new, y_new, f_interpol = interpolate(positions, mean_data_laser, factor=10)
+
+plt.plot(positions, mean_data_laser, 'x', color='purple', label="Datenpunkte")
+plt.plot(x_new, y_new, '-', color='green', label="Interpolation")
+plt.xlabel("Motorposition")
+plt.ylabel("Signal")
+plt.title("Laser-Daten: Interpolation vs. Originaldaten")
+plt.grid(True)
+plt.xlim(-200,200)
+plt.legend()
+plt.show()
+
+peaks = argrelextrema(y_new, np.greater)[0]
+extrema_array = np.sort(np.append(argrelextrema(y_new,np.greater),argrelextrema(y_new,np.less)))
+maxima_positions = x_new[extrema_array]
+r = np.linspace(0, len(maxima_positions)-1, len(maxima_positions))
+fit = linregress(r, maxima_positions)
+
+
+plt.plot(x_new, y_new, '-', color='red', label="Interpolation")
+plt.plot(extrema_array, f_interpol(maxima_positions), 'x', color='green', label="Maxima")
+plt.xlabel("Motorposition")
+plt.ylabel("Signal")
+plt.title("Laser-Daten: Interpolation mit Maxima")
+plt.xlim(0,4999)
+plt.legend()
+plt.show()
+
+plt.plot(r, maxima_positions, '.', color='purple', label="Maxima", alpha=1)
+plt.plot(r, fit.intercept + fit.slope*r, '-', color='pink', label="Lineare Anpassung")
+plt.xlabel("Maxima")
+plt.ylabel("Motorposition")
+plt.title("Kalibrierfunktion: Lineare Anpassung der Maxima")
+plt.legend()
+plt.show()

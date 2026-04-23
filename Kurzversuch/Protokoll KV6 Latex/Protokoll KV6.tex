@@ -238,7 +238,7 @@ def linear_fit(extrema):
        fit = linregress(r, extrema)
        return r, fit
 \end{lstlisting}
-
+\\\\
 \begin{lstlisting}[language=Python, caption=Kalibrierfunktion]
 def korrekturfunktion(data):
        # Analyse der Laser-Daten:
@@ -414,7 +414,7 @@ Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}),
 	\label{fig: filter2spek}
 \end{figure}
 Das Spektrum des Interferen-Filters weicht hauptsächlich in den Intensitäten von dem Referenzspektrum ab (siehe \autoref{fig: filter2spek}). Die genaueren Abweichungen lassen sich an der differentiellen optischen Transmission des Filters erkennen (siehe \autoref{fig: filter2dot}).\\
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Differentielle Transmission Filter 1 final.png}
 	\caption{Die differentielle Transmission des Filters bestimmt durch das Referenzspektrum der Weißlichtquelle}
@@ -423,16 +423,16 @@ Das Spektrum des Interferen-Filters weicht hauptsächlich in den Intensitäten v
 Auffällig sind hier vor allem die starke Absorption in einem Wellenlängenbereich von etwa \qtyrange{495}{520}{\nm}. Der Filter filtert also grünes Licht in einem schmalen Bereich, was für einen schmalbandigen Interferenz-Filter spricht.\\\\
 Die spektrale Bandbreite $B$ des Filters lässt sich mithilfe der DOT in Frequenzdarstellung bestimmen:
 $$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{493\si{\nm}}-\frac{c}{521\si{\nm}}=\qty{32,68}{\peta\hertz}$$
-Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_min+\frac{B}{2}}=\qty{506,6}{\nm}$. 
+Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_{min}+\frac{B}{2}}=\qty{506,6}{\nm}$.
 
 \subsubsection{Iod-Küvette}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Spektrum Iod 1 final.png}
 	\caption{Das gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
 	\label{fig: iod2spek}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Absorsptionsprofil Iod 1 OD final.png}
 	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette}
@@ -468,15 +468,8 @@ Experimentell lässt sich eine Signalbreite von \qty{0,6}{\peta\hertz} aus dem L
 \subsection{Fehlerdiskussion}
 Bei dem experimentellen Aufbau gibt es mehrere Fehlerquellen. Die Interpolation der Laserdaten zum Aufbauen der Kalibrierfunktion ist eine der grundlegenden, da das Signal des Lasers Schwankungen hat, die sich durch alle restlichen Ergebnisse fortpflanzen. Das würde auch heißen, dass die Linienbreite des Lasers größer ist als angenommen, das Experiment hat also eine schlechtere Auflösung, als jetzt bestimmt.
 
-Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Zur Kompensation dieses Fehlers wird in der Datenanalyse eine Kalibrierfunktion angewendet. Da die Spektren grundsätzlich den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur erfolgreich durchgeführt wurde. Diese Annahme wird zudem durch den Vergleich des Lasersignals mit der korrigierten Ortsachse und dem ursprünglich interpolierten Signal gestützt (siehe \autoref{fig: korrvgl}).
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\linewidth]{img/Vergleich Ursprüngliche vs Korrigierte Interpolation.png}
-	\caption{Vergleich zwischen der ursprünglichen Interpolation der Laserdaten und der Interpolation mit korrigierter Ortsachse}
-	\label{fig: korrvgl}
-\end{figure}
-\\\\
-Für jede Probe wurden jeweils zwei Messreihen durchgeführt.\\ %Die Ergebnisse der ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die der zweiten Messreihen. Dies deutet auf einen erheblichen systematischen Fehler hin, da die Auswertungsmethode bei allen Datensätzen einheitlich angewendet wurde. In der vorliegenden Auswertung sind daher die Ergebnisse der zweiten Messreihen dargestellt.
+Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Zur Kompensation dieses Fehlers wird in der Datenanalyse eine Kalibrierfunktion angewendet. Da die Spektren grundsätzlich den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur erfolgreich durchgeführt wurde.\\
+Für jede Probe wurden jeweils zwei Messreihen durchgeführt.%Die Ergebnisse der ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die der zweiten Messreihen. Dies deutet auf einen erheblichen systematischen Fehler hin, da die Auswertungsmethode bei allen Datensätzen einheitlich angewendet wurde. In der vorliegenden Auswertung sind daher die Ergebnisse der zweiten Messreihen dargestellt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Spektrum Filter final.png}
@@ -519,7 +512,7 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 
 \begin{appendices}
 \section{Code}
-%\lstinputlisting[language=Python]{KV6 Aufgeräumt.py}
+\lstinputlisting[language=Python]{KV6 Aufgeräumt.py}
 
 \end{appendices}
 
