@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[ngerman]{babel}
-\usepackage{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -24,6 +24,46 @@
 %\floatstyle{boxed}
 \restylefloat{figure}
 \usepackage{wrapfig}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{235, 235, 235}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+\lstset{literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
+\usepackage[title,titletoc]{appendix}
+\renewcommand{\appendixtocname}{Anhang}
+\renewcommand{\appendixpagename}{Anhang}
 
 \linespread{1.1}
 
@@ -58,11 +98,11 @@ Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die
 Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt, aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
 
 \section{Theoretische Grundlagen}
-%Kurze Zusammenfassung der wichtigsten Überlegungen (Formeln), die zum Verständnis des Versuches notwendig sind
+%Kurze Zusammenfassung der wichtigsten überlegungen (Formeln), die zum Verständnis des Versuches notwendig sind
 %Für Details: Hinweise auf die Literatur
 \subsection{Weißlichtspektrum}
 
-Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die Überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden \cite{5}.
+Die im Versuch verwendete Weißlichtquelle ist eine Weißlicht-LED. Ihr Spektrum setzt sich typischerweise aus zwei charakteristischen Komponenten zusammen: Eine blaue Leuchtdiode emittiert Licht im Bereich von ca. \qty{440}{nm} bis \qty{480}{nm}, welches teilweise von einem Farbstoff (Phosphor) absorbiert und als breitbandiges, gelbliches Licht im Bereich von ca. \qty{550}{nm} bis \qty{600}{nm} reemittiert wird. Da Blau und Gelb Komplementärfarben sind, ergibt die überlagerung dieser Anteile für das menschliche Auge den Eindruck von weißem Licht. Apparative Einflüsse können zudem zu „spektralen Löchern“ führen, wie sie im Versuchsaufbau oft bei \qty{604}{nm} und \qty{617}{nm} beobachtet werden \cite{5}.
 
 \subsection{Interferometrie}
 Interferometrie ist das Prinzip, mithilfe von Interferenzphänomenen Messungen zu vollziehen. Im Allgemeinen bezieht sich Interferometrie auf Wellen jeglicher Art, hier beschäftigen wir uns aber nur mit den elektromagnetischen - dem Licht \cite{1}.\\\\
@@ -75,11 +115,11 @@ Es gibt eine maximale Zeitraum $\Delta t$, in dem zeitliche Kohärenz vorliegt -
 Das genaue Maß der Kohärenz zweier Wellen lässt sich durch die Kohärenzfunktion beschreiben.
 Wir betrachten das einfallende Wellenfeld an einem festen Punkt und aufgeteilt in zwei Anteile mit gleich großer Amplitude:
 $$E(t)=E_1(t)+E_2(t).$$
-Die resultierende Intensität der Überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus \cite{2}:
+Die resultierende Intensität der überlagerung sieht in unserem Fall von zwei gleichen Wellen folgendermaßen aus \cite{2}:
 \begin{equation}
 I(\Delta t)=\langle(E_1+E_2)(E_1+E_2)^*\rangle=I_1+I_2+2Re\langle E^*_1E_2 \rangle =I_1+I_1+2Re\Gamma(\Delta t).
 \end{equation}
-Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der Überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des Lichtfeldes $E_1(t)$ entspricht \cite{2}:
+Der dritte Term $\Gamma(\Delta t)$ beinhaltet die Intensität des korrelierten Teils der überlagerung und nennt sich (Selbst-) Kohärenzfunktion oder auch Autokorrelationsfunktion, weil sie der Autokorrelation des Lichtfeldes $E_1(t)$ entspricht \cite{2}:
 \begin{equation}
 \Gamma(\Delta t)=\langle E^*_1(t)\cdot E_1(t+\Delta t)\rangle = \lim_{T\to\infty}\frac{1}{T}\int^{T/2}_{-T/2}E^*_1(t)\cdot E_1(t+\Delta t)dt.
 \end{equation}
@@ -148,11 +188,18 @@ Zu Beginn der Datenanalyse werden die Dateien des Lasersignals und später auch 
 Der erste Schritt im Skript ist die Mittelwertbildung der 20 Messwerte pro Position, um das Signal-zu-Rausch-Verhältnis zu verbessern.
 
 \subsubsection{Vorverarbeitung Code}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.85]{img/Code_einlesen_mitteln.png}
-\caption{Vorverarbeitung}
-\end{figure}
+
+\begin{lstlisting}[language=Python, caption=Vorverarbeitung]
+def load_data(filepath):
+       data = np.loadtxt(filepath)
+       positions = data[:, 0]
+       measurements = data[:, 1:20]  # N Spalten mit Messwerten
+       return positions, measurements
+   
+def average_measurements(measurements):
+       return np.mean(measurements, axis=1)
+\end{lstlisting}
+
 
 \subsection{Kalibrierfunktion}
 Da die mechanische Bewegung des Linearverschiebetisches nicht exakt linear verläuft und der Antrieb zudem ein gewisses Umkehrspiel aufweist, ist eine numerische Korrektur der Ortsachse nötig. Die Kalibrierung erfolgt anhand des Laser-Interferogramms (Kanal 2), da dessen Wellenlänge ($\lambda_{L}=\qty{532}{nm}$) exakt bekannt und die Form des Interferogramms genau vorhersagbar ist.\\
@@ -161,23 +208,64 @@ Die Bestimmung der Kalibrierfunktion gliedert sich in folgende Schritte:
 \begin{itemize}
        \item Interpolation zur Erhöhung der Abtastrate: Um die Genauigkeit der Peak-Suche zu steigern, werden die gemittelten Laserdaten zunächst um den Faktor 10 interpoliert. Hierbei kommt eine 'Univariate-Spline'-Funktion vierten Grades aus der SciPy-Bibliothek zum Einsatz. Die Wahl eines Splines vierten Grades begründet sich dadurch, dass sich die Extrema über die Nullstellen der Ableitung mathematisch besonders präzise bestimmen lassen. Graphisch wird das in \autoref{fig:LaserDatenInterpolationvsOriginaldaten} gezeigt.
        \item Identifikation der Ist-Positionen $P_{ist}$: Mithilfe der Funktion `argrelextrema` werden die Maxima des interpolierten Lasersignals identifiziert. Diese Maxima markieren die realen Positionen $P_{ist}$ des Spiegels im Interferogramm. In \autoref{fig:LaserDatenInterpolationmitMaxima} sieht man die interpolierten Laserdaten überlagert mit den Maxima.
-       \item Berechnung der Soll-Positionen $P_{soll}$ via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. Über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{fig:Kalibrierfunktion}.
+       \item Berechnung der Soll-Positionen $P_{soll}$ via linearer Regression: Im idealen Fall einer völlig linearen Bewegung müssten diese Maxima in äquidistanten Abständen liegen. über eine lineare Regression der Form $P_{soll}(i)=a\cdot i+b$ werden daher die theoretischen Soll-Positionen für jedes Maximum bestimmt. Diesen Fit sieht man in \autoref{fig:Kalibrierfunktion}.
        \item Erzeugung der kontinuierlichen Korrekturfunktion: Die lokale Abweichung der Motorbewegung berechnet sich an den Stützstellen zu $\Delta(i)=P_{soll}(i)-P_{ist}(i)$. Um diese Korrektur auf den gesamten Datensatz und beliebige Motorpositionen anwenden zu können, wird der diskrete Verlauf von $\Delta$ erneut interpoliert. Das resultierende Funktions-Objekt stellt somit für jeden Messpunkt einen individuellen Korrekturwert zur Linearisierung der Ortsachse bereit. Diesen Korrekturwert kann man daraufhin auf die ursprünglichen Laserdaten anwenden, was man in \autoref{fig:KorrekturderMotorposition} sieht.
 \end{itemize}
 
 \subsubsection{Kalibrierfunktion Code}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{img/Code_stuff für korrekturfunktion.png}
-\caption{Hilfsfunktionen für die Kalibrierfunktion.}
-\end{figure}
+\begin{lstlisting}[language=Python, caption=Hilfsfunktionen für die Kalibrierfunktion]
+def interpolate(x, y, factor=10): #for x positions und y avergae_measurements
+       f_interpol = make_interp_spline(x, y, k=3)
+       x_new = np.linspace(x.min(), x.max(), len(x)*factor)
+       y_new = f_interpol(x_new)
+       return x_new, y_new
+   
+def find_extrema(y):
+       peaks = argrelextrema(y, np.greater)[0]
+       troughs = argrelextrema(y, np.less)[0]
+       extrema_list = []
+       for i, j in zip(peaks, troughs):
+           extrema_list.append(i)
+           extrema_list.append(j)
+   
+       extrema_array=np.array(extrema_list)
+   
+       return extrema_array, peaks
+   
+def linear_fit(extrema):
+       r = np.linspace(0, len(extrema)-1, len(extrema))
+       fit = linregress(r, extrema)
+       return r, fit
+\end{lstlisting}
 
-\begin{figure}[H]
-       \centering
-       \includegraphics[scale=0.7]{img/Code_Korrekturfunktion.png}
-       \caption{Kalibrierfunktion.}
-\end{figure}
+\begin{lstlisting}[language=Python, caption=Kalibrierfunktion]
+def korrekturfunktion(data):
+       # Analyse der Laser-Daten:
+       file_path = "data/"+data+"/Data Channel 2.dat"
+       positions, measurements = load_data(file_path)
+       mean_data_laser = average_measurements(measurements)
+       
+       # Erste Interpolation der Laser-Daten
+       x_new, y_new = interpolate(positions, mean_data_laser, factor=10)
+   
+       # Bestimmung der Extrema
+       _, extrema_array = find_extrema(y_new)
+       maxima_positions = x_new[extrema_array]
+       print("maxima menge = ",len(maxima_positions))
+       
+       # Kalibrierfunktion bestimmen
+       _, fit = linear_fit(maxima_positions)
+   
+       P_soll = np.empty(len(maxima_positions), dtype=int)
+       P_ist = maxima_positions
+       for i in range(len(maxima_positions)):
+           P_soll[i] = fit.intercept + fit.slope*i
+       delta = P_soll - P_ist
+       delta_interpolate = make_interp_spline(P_ist, delta, k=3)
+   
+       return delta_interpolate, fit.slope
+\end{lstlisting}
 
 \subsubsection{Graphen}
 
@@ -218,23 +306,32 @@ Nachdem die jeweilige Korrekturfunktion anhand der Laserdaten bestimmt wurde, er
 \begin{itemize}
        \item Ortskorrektur der Weißlichtdaten: Zur Korrektur der ursprünglichen Ortsachse wird für jede Motorposition der entsprechende Korrekturwert aus der zuvor berechneten Kalibrierfunktion $\Delta(i)$ ermittelt und auf die jeweilige „Ist-Position“ addiert ($x_{korr}=x_{ist}+\Delta(x_{ist})$). Durch diese Transformation wird die nicht-lineare Bewegung des Schrittmotors begradigt, sodass die korrigierten Positionswerte den tatsächlichen optischen Weglängendifferenzen im Interferometer entsprechen.
        \item Erzeugung eines äquidistanten Gitters: Eine zwingende mathematische Voraussetzung für die Durchführung der diskreten Fouriertransformation (FFT) ist eine streng äquidistante Abtastung des Signals. Da die Ortsachse nach der Addition der Korrekturwerte zwar linearisiert, aber die Abstände zwischen den Punkten nun ungleichmäßig verteilt sind, müssen die Datenpunkte neu angeordnet werden.
-       \item Interpolation auf eine gemeinsame Basis: Um die Proben- und Referenzdaten später physikalisch miteinander verrechnen zu können (z. B. für die Bestimmung der optischen Dichte), müssen beide Datensätze auf ein exakt identisches und äquidistantes Gitter transformiert werden. Hierzu wird ein gemeinsamer Ortsbereich definiert, der den Überlappungsbereich beider Messungen abdeckt. Die gemittelten Amplitudenwerte werden anschließend mittels einer erneuten Spline-Interpolation den neuen, gleichmäßig beabstandeten Stützstellen zugeordnet.
+       \item Interpolation auf eine gemeinsame Basis: Um die Proben- und Referenzdaten später physikalisch miteinander verrechnen zu können (z. B. für die Bestimmung der optischen Dichte), müssen beide Datensätze auf ein exakt identisches und äquidistantes Gitter transformiert werden. Hierzu wird ein gemeinsamer Ortsbereich definiert, der den überlappungsbereich beider Messungen abdeckt. Die gemittelten Amplitudenwerte werden anschließend mittels einer erneuten Spline-Interpolation den neuen, gleichmäßig beabstandeten Stützstellen zugeordnet.
 \end{itemize}
 
 Dieser Schritt stellt sicher, dass die resultierenden Spektren nach der Transformation im Frequenzraum präzise aufeinanderliegen und apparative Einflüsse durch die Verrechnung mit dem Referenzstrahlengang effektiv eliminiert werden können.
 
 \subsubsection{Ortskorrektur Code}
 
-\begin{figure}[H]
-       \centering
-       \includegraphics[scale=0.75]{img/Code_Ortskorrektur.png}
-       \caption{Ortskorrektur}
-\end{figure}
+\begin{lstlisting}[language=Python, caption=Ortskorrektur]
+def ortskorrektur(positions, values, delta_interpolate):
+       # Ursprüngliche Achse korrigieren
+       x_korr = positions + delta_interpolate(positions)
+       
+       # Erzeugen eines äquidistanten Gitters für die FFT
+       x_eq = np.linspace(x_korr.min(), x_korr.max(), len(x_korr))
+       
+       # Erneute Interpolation auf das neue Gitter
+       f_int = make_interp_spline(x_korr, values, k=3)
+       y_eq = f_int(x_eq)
+       
+       return x_eq, y_eq
+\end{lstlisting}
 
 \subsection{Transformation in den Zeit- und Frequenzraum}
 
 
-Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitter transformiert wurden, erfolgt der Übergang von der räumlichen Domäne in die zeitliche Verzögerung und schließlich in den Frequenzraum.
+Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitter transformiert wurden, erfolgt der übergang von der räumlichen Domäne in die zeitliche Verzögerung und schließlich in den Frequenzraum.
 
 \begin{itemize}
        \item Transformation der Ortsachse in die Zeitverzögerung $\Delta t$: Die korrigierte Motorachse $x_{\text{korr}}$ liegt zunächst in Einheiten von Motorschritten vor. Um eine physikalisch interpretierbare Zeitachse zu erhalten, wird die präzise bekannte Wellenlänge des Kalibrierlasers ($\lambda_L = \qty{532}{nm}$) herangezogen. Da der Abstand zwischen zwei Intensitätsmaxima im Interferogramm einer Änderung der optischen Weglängendifferenz um exakt $\lambda_L$ entspricht, lässt sich über die Steigung $a$ der Laserkalibrierung (Motorschritte pro Maximum) die geometrische Weglängendifferenz $\Delta s$ berechnen. Unter Berücksichtigung der Lichtgeschwindigkeit $c$ wird diese in die zeitliche Verzögerung $\Delta t$ der Teilstrahlen überführt: $$\Delta t = \frac{\Delta s}{c} = \frac{x_{\text{korr}} \cdot \lambda_L}{a \cdot c}.$$ Diese äquidistante Zeitachse bildet die notwendige Basis für die diskrete Fouriertransformation.
@@ -248,11 +345,43 @@ Nachdem die Messdaten erfolgreich ortskorrigiert und auf ein äquidistantes Gitt
 
 \subsubsection{FFT Code}
 
-\begin{figure}[H]
-       \centering
-       \includegraphics[scale=0.62]{img/Code_fft.png}
-       \caption{FFT}
-\end{figure}
+\begin{lstlisting}[language=Python, caption=FFT]
+def fft_spectrum(x_eq, y_eq, laser_slope):
+       """
+       Führt die Ort-zu-Zeit Transformation und die FFT durch.
+       
+       Parameter:
+       x_eq: Äquidistante Ortsachse (Motorschritte)
+       y_eq: Interpolierte Signalwerte (Kanal 0, 1 oder 2)
+       laser_slope: Steigung aus der Laserkalibrierung (Schritte pro Maximum)
+       """
+       # Ort zu Zeit Transformation
+       #lambda_half = 266e-9 
+       delta_s = (x_eq * 532e-9) / laser_slope
+       delta_t_axis = delta_s / c
+   
+       # Sampling-Parameter für die FFT
+       # Wir benötigen das Zeitintervall T_sampl als Skalar für die Frequenzachse.
+       L = len(delta_t_axis)
+       t_range = np.max(delta_t_axis) - np.min(delta_t_axis)
+       
+       # Tsampl oft in Ts angegeben (Faktor 1e12), um handliche Frequenzwerte zu erhalten.
+       T_sampl = (t_range / L)  * 1e12
+       f_max = 1 / T_sampl
+       f_ny = f_max / 2
+       
+       # Frequenzachse erzeugen
+       # Die FFT liefert ein symmetrisches Signal um die Frequenz 0.
+       freq_axis = np.linspace(-f_ny, f_ny, L)
+   
+       # FFT berechnen und verschieben
+       # Division durch L reduziert die Signalamplitude auf physikalisch sinnvolle Werte.
+       spectrum_raw = fft(y_eq / L)
+       spectrum_shifted = fftshift(spectrum_raw)
+       spectrum_abs = np.abs(spectrum_shifted)
+   
+       return freq_axis, spectrum_abs
+\end{lstlisting}
 
 \subsection{Berechnung von OD und DOT}
 
@@ -271,7 +400,7 @@ Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spe
 \subsubsection{Laser}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Laser Spektrum Wellenlänge.png}
+	\includegraphics[width=1\linewidth]{img/Spektrum Laser 1 final.png}
 	\caption{Ausschnitt des Laserpektrums in Abhängigkeit der Wellenlänge}
 	\label{fig: laserspek}
 \end{figure}
@@ -280,14 +409,14 @@ Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}),
 \subsubsection{Interferenz-Filter}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Spektrum Filter 2.png}
+	\includegraphics[width=1\linewidth]{img/Spektrum Filter 1 final.png}
 	\caption{Das gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
 	\label{fig: filter2spek}
 \end{figure}
 Das Spektrum des Interferen-Filters weicht hauptsächlich in den Intensitäten von dem Referenzspektrum ab (siehe \autoref{fig: filter2spek}). Die genaueren Abweichungen lassen sich an der differentiellen optischen Transmission des Filters erkennen (siehe \autoref{fig: filter2dot}).\\
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Differentielle Transmission Filter 2.png}
+	\includegraphics[width=1\linewidth]{img/Differentielle Transmission Filter 1 final.png}
 	\caption{Die differentielle Transmission des Filters bestimmt durch das Referenzspektrum der Weißlichtquelle}
 	\label{fig: filter2dot}
 \end{figure}
@@ -299,13 +428,13 @@ Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_min+\frac{B}
 \subsubsection{Iod-Küvette}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Spektrum Iod 2.png}
+	\includegraphics[width=1\linewidth]{img/Spektrum Iod 1 final.png}
 	\caption{Das gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
 	\label{fig: iod2spek}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Absorsptionsprofil Iod 2 OD.png}
+	\includegraphics[width=1\linewidth]{img/Absorsptionsprofil Iod 1 OD final.png}
 	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette}
 	\label{fig: iod2od}
 \end{figure}
@@ -340,27 +469,27 @@ Experimentell lässt sich eine Signalbreite von \qty{0,6}{\peta\hertz} aus dem L
 Bei dem experimentellen Aufbau gibt es mehrere Fehlerquellen. Die Interpolation der Laserdaten zum Aufbauen der Kalibrierfunktion ist eine der grundlegenden, da das Signal des Lasers Schwankungen hat, die sich durch alle restlichen Ergebnisse fortpflanzen. Das würde auch heißen, dass die Linienbreite des Lasers größer ist als angenommen, das Experiment hat also eine schlechtere Auflösung, als jetzt bestimmt.
 
 Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Zur Kompensation dieses Fehlers wird in der Datenanalyse eine Kalibrierfunktion angewendet. Da die Spektren grundsätzlich den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur erfolgreich durchgeführt wurde. Diese Annahme wird zudem durch den Vergleich des Lasersignals mit der korrigierten Ortsachse und dem ursprünglich interpolierten Signal gestützt (siehe \autoref{fig: korrvgl}).
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{img/Vergleich Ursprüngliche vs Korrigierte Interpolation.png}
 	\caption{Vergleich zwischen der ursprünglichen Interpolation der Laserdaten und der Interpolation mit korrigierter Ortsachse}
 	\label{fig: korrvgl}
 \end{figure}
 \\\\
-Für jede Probe wurden jeweils zwei Messreihen durchgeführt. Die Ergebnisse der ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die der zweiten Messreihen. Dies deutet auf einen erheblichen systematischen Fehler hin, da die Auswertungsmethode bei allen Datensätzen einheitlich angewendet wurde. In der vorliegenden Auswertung sind daher die Ergebnisse der zweiten Messreihen dargestellt.\\
-\begin{figure}[h!]
+Für jede Probe wurden jeweils zwei Messreihen durchgeführt.\\ %Die Ergebnisse der ersten Messreihen entsprechen den theoretischen Erwartungen weniger gut als die der zweiten Messreihen. Dies deutet auf einen erheblichen systematischen Fehler hin, da die Auswertungsmethode bei allen Datensätzen einheitlich angewendet wurde. In der vorliegenden Auswertung sind daher die Ergebnisse der zweiten Messreihen dargestellt.
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Spektrum Filter.png}
-	\caption{Das in Messreihe 1 gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
+	\includegraphics[width=1\linewidth]{img/Spektrum Filter final.png}
+	\caption{Das in Messreihe 2 gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
 	\label{fig: filter1spek}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{img/Spektrum Iod.png}
-	\caption{Das in Messreihe 1 gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
+	\includegraphics[width=1\linewidth]{img/Spektrum Iod final.png}
+	\caption{Das in Messreihe 2 gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
 	\label{fig: iod1spek}
 \end{figure}
-Bei den ersten Messreihen fallen die Intensitäten sowie das Rauschen der Spektren deutlich stärker aus (\autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messdurchgängen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich daraus schließen, dass die Erstjustage qualitativ etwas ungenauer war. Zudem ist zwischen der ersten Justierung und den ersten Messreihen mehr Zeit vergangen als zwischen der zweiten Justierung und den zweiten Messreihen. Dadurch hatte das Spektrometer mehr Gelegenheit, sich durch äußere Einflüsse zu verändern, beispielsweise durch Temperaturschwankungen im Raum, kleine Vibrationen des Tisches oder das Ein- und Austreten aus dem Raum beim Probenaustausch.
+%Bei den ersten Messreihen fallen die Intensitäten sowie das Rauschen der Spektren deutlich stärker aus (\autoref{fig: filter1spek} und \autoref{fig: iod1spek}). Zwischen den beiden Messdurchgängen wurde das Spektrometer neu justiert und die Nullposition des Motors neu eingestellt. Es lässt sich daraus schließen, dass die Erstjustage qualitativ etwas ungenauer war. Zudem ist zwischen der ersten Justierung und den ersten Messreihen mehr Zeit vergangen als zwischen der zweiten Justierung und den zweiten Messreihen. Dadurch hatte das Spektrometer mehr Gelegenheit, sich durch äußere Einflüsse zu verändern, beispielsweise durch Temperaturschwankungen im Raum, kleine Vibrationen des Tisches oder das Ein- und Austreten aus dem Raum beim Probenaustausch.
 
 \section{Zusammenfassung}
 
@@ -385,5 +514,14 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 
 \listoffigures %lof
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+\newpage
+
+\begin{appendices}
+\section{Code}
+%\lstinputlisting[language=Python]{KV6 Aufgeräumt.py}
+
+\end{appendices}
+
 
 \end{document} 
