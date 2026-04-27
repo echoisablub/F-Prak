@@ -65,14 +65,14 @@ def korrekturfunktion(data):
     delta = P_soll - P_ist
     delta_interpolate = make_interp_spline(P_ist, delta, k=3)
         
-    plt.figure(figsize=(10, 4))
+    '''plt.figure(figsize=(10, 4))
     plt.plot(P_ist, delta, 'x', color="orange", label="Korrektur an Maxima")
     plt.plot(x_new, delta_interpolate(x_new), color="blue", label="Interpolation der Korrektur")
     plt.xlabel("Motorposition", fontsize=20)
     plt.ylabel("Korrektur (Soll - Ist)", fontsize=20)
     plt.title("Korrektur der Motorpositionen", fontsize=24, fontweight='bold')
     plt.legend()
-    plt.show()
+    plt.show()'''
 
     return delta_interpolate, fit.slope
 
@@ -334,9 +334,9 @@ freq_f, spec_ref_f = fft_spectrum(x_final_f, y_ref_f_corr, slope_filt)
 freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
 
 # Plots
-# plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
-# plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
-# plot_laser_green_analysis(freq_green, spec_laser_green)
+plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
+plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
+plot_laser_green_analysis(freq_green, spec_laser_green)
 
 # ==other shit==
 
