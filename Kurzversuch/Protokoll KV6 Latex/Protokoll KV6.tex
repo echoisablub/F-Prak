@@ -462,9 +462,9 @@ Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette lassen sich viel
 Die theoretische Auflösungsgrenze des Fourier-Transform-Spektrometers lässt sich bestimmen durch die Wegzeitdifferenz $\Delta t$. Da der benutzte Schrittmotor eine kleinstmögliche Verschiebung von \qty{50,5}{\nm} hat und wir 10000 Schritte pro Messreihe gelaufen sind, ist unsere Weglängendifferenz $\Delta s = 10000 \cdot 50,5 \cdot 10^{-9} \cdot 2 = \qty{1,01}{\mm}$.
 Daraus lässt sich $\Delta t = \frac{1,01 \cdot 10^{-3}}{c} = \qty{3,37}{\pm}$ bestimmen.\\
 Die theoretische spektrale Auflösungsgrenze ist dann:
-$$\Delta\nu=\frac{1}{\Delta t}=\qty{0,297}{\peta\hertz}=\qty{1.009e-3}{\nm}$$
+$$\Delta\nu=\frac{1}{\Delta t}=\qty{0,297}{\tera\hertz}=\qty{1.009e-3}{\nm}$$
 \\
-Experimentell lässt sich eine Signalbreite von \qty{0,6}{\peta\hertz} aus dem Laserspektrum ablesen. Die Auflösung im Experiment ist 50\% größer als die theoretische Auflösungsgrenze.
+Experimentell lässt sich eine Signalbreite von \qty{0,6}{\tera\hertz} aus dem Laserspektrum ablesen. Die Auflösung im Experiment ist 50\% größer als die theoretische Auflösungsgrenze.
 
 \subsection{Fehlerdiskussion}
 Bei dem experimentellen Aufbau gibt es mehrere Fehlerquellen. Die Interpolation der Laserdaten zum Aufbauen der Kalibrierfunktion ist eine der grundlegenden, da das Signal des Lasers Schwankungen hat, die sich durch alle restlichen Ergebnisse fortpflanzen. Das würde auch heißen, dass die Linienbreite des Lasers größer ist als angenommen, das Experiment hat also eine schlechtere Auflösung, als jetzt bestimmt.\\ 
@@ -497,7 +497,7 @@ Die physikalische Auswertung ergab folgende Resultate:
 \begin{itemize}
        \item Für den Interferenzfilter wurde eine Zentralwellenlänge von ca. \qty{506,6}{\nm} bei einer spektralen Bandbreite von \qty{9,18}{\nm} ermittelt.
        \item In den Iodspektren konnten die charakteristischen Absorptionslinien aufgelöst und als Vibrationsübergänge des Moleküls verifiziert werden.
-       \item Die experimentell bestimmte spektrale Auflösung lag mit ca. \qty{0,6}{\peta\hertz} in der Größenordnung der theoretischen Auflösungsgrenze von \qty{0,297}{\peta\hertz}.
+       \item Die experimentell bestimmte spektrale Auflösung lag mit ca. \qty{0,6}{\tera\hertz} in der Größenordnung der theoretischen Auflösungsgrenze von \qty{0,297}{\tera\hertz}.
 \end{itemize}
 Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtlinearität des Schrittmotors und thermische Instabilitäten, konnte das Funktionsprinzip der Fourier-Spektroskopie erfolgreich demonstriert und die Eignung der numerischen Datenkorrektur bestätigt werden.
 
@@ -517,7 +517,7 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 
 \begin{appendices}
 \section{Code}
-%\lstinputlisting[language=Python]{KV6 Aufgeräumt.py}
+\lstinputlisting[language=Python]{KV6 Aufgeraumt.py}
 
 \end{appendices}
 

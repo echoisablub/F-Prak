@@ -20,10 +20,9 @@ def average_measurements(measurements):
 
 def interpolate(x, y, factor=10): #für x positions und y avergae_measurements
     f_interpol = make_interp_spline(x, y, k=3)
-    #f_interpol = UnivariateSpline(x, y, k=3)
     x_new = np.linspace(x.min(), x.max(), len(x)*factor)
     y_new = f_interpol(x_new)
-    return x_new, y_new
+    return x_new, y_new, f_interpol
 
 def find_extrema(y):
     peaks = argrelextrema(y, np.greater)[0]
@@ -49,18 +48,15 @@ def korrekturfunktion(data):
     mean_data_laser = average_measurements(measurements)
     
     # Erste Interpolation der Laser-Daten
-    x_new, y_new = interpolate(positions, mean_data_laser, factor=10)
+    x_new, y_new,_ = interpolate(positions, mean_data_laser, factor=10)
 
     # Bestimmung der Extrema
-    #smooth_laser = savgol_filter(mean_data_laser, window_length=51, polyorder=3)
-    #peaks, _ = find_peaks(smooth_laser, distance=50, prominence=0.01)
-    #maxima_positions = x_new[peaks]
     _, extrema_array = find_extrema(y_new)
     maxima_positions = x_new[extrema_array]
     print("maxima menge = ",len(maxima_positions))
     
     # Kalibrierfunktion bestimmen
-    r, fit = linear_fit(maxima_positions)
+    _, fit = linear_fit(maxima_positions)
 
     P_soll = np.empty(len(maxima_positions), dtype=int)
     P_ist = maxima_positions
@@ -68,10 +64,8 @@ def korrekturfunktion(data):
         P_soll[i] = fit.intercept + fit.slope*i
     delta = P_soll - P_ist
     delta_interpolate = make_interp_spline(P_ist, delta, k=3)
-    #delta_interpolate = UnivariateSpline(P_ist, delta, k=3)
 
     return delta_interpolate, fit.slope
-
 
 def ortskorrektur(positions, values, delta_interpolate):
     # Ursprüngliche Achse korrigieren
@@ -82,9 +76,7 @@ def ortskorrektur(positions, values, delta_interpolate):
     
     # Erneute Interpolation auf das neue Gitter
     f_int = make_interp_spline(x_korr, values, k=3)
-    # f_int = UnivariateSpline(x_korr, values, k=3)
     y_eq = f_int(x_eq)
-    # y_eq = np.interp(x_eq, x_korr, values)
     
     return x_eq, y_eq
 
@@ -138,7 +130,7 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
     plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
     plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(540,590)
-    plt.ylim(0,0.4)
+    plt.ylim(0,0.5)
     plt.grid(True)
     plt.legend()
 
@@ -156,7 +148,7 @@ def plot_laser_green_analysis(freq_green, spec_laser_green):
     plt.ylabel("Amplitude", fontsize=15)
     plt.title("Wellenlängenspektrum", fontsize=20)
     plt.xlim(510, 555)  # Zoom auf den Bereich um 532 nm
-    plt.ylim(0,0.4)
+    plt.ylim(0,0.5)
     plt.grid(True)
     plt.legend()
     plt.show()
@@ -179,7 +171,7 @@ def plot_final_results(freq, spec_ref, spec_probe, label_probe="Iod 2"):
     plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
     plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(350, 750) # Bereich für sichtbares Licht (ca. 0.35 - 0.75 PHz) [2]
-    plt.ylim(0, 0.0005)
+    plt.ylim(0, 0.0006)
     plt.legend()
     plt.grid(True)
 
@@ -237,12 +229,12 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.subplot(1, 2, 1)
     plt.suptitle(f"Spektroskopische Analyse: Filter", fontsize=24, fontweight='bold', y=0.98)
     plt.plot(f_pos, s_ref / np.max(s_ref), label="Weißlicht (Ref)", color="gray")
-    plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter 2", color="orange")
+    plt.plot(f_pos, s_filt / np.max(s_ref), label="Filter 1", color="orange")
     plt.xlabel("Frequenz $f$ [THz]", fontsize=15)
     plt.ylabel("Spektrale Energiedichte $W(f)$", fontsize=15)
     plt.title("Frequenzspektrum", fontsize=20)
     plt.xlim(350, 750)
-    plt.ylim(0, 0.0008)
+    plt.ylim(0, 0.001)
     plt.legend()
     plt.grid(True)
 
@@ -263,7 +255,7 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     # PLOT 2: ÄQUIDISTANTES WELLENLÄNGENSPEKTRUM
     plt.subplot(1, 2, 2)
     plt.plot(wl_equi_filt, s_ref_nm / np.max(s_ref_nm), label="Weißlicht (Ref)", color="gray")
-    plt.plot(wl_equi_filt, s_filt_nm / np.max(s_ref_nm), label="Filter 2", color="blue")
+    plt.plot(wl_equi_filt, s_filt_nm / np.max(s_ref_nm), label="Filter 1", color="blue")
     plt.xlabel("Wellenlänge $\lambda$ [nm]", fontsize=15)
     plt.ylabel("Amplitude", fontsize=15)
     plt.title("Wellenlängenspektrum", fontsize=20)
@@ -287,8 +279,8 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.grid(True)
     plt.show()
 
-dataset = "Iod 2"
-dataset_filter= "Filter 2"
+dataset = "Iod 1"
+dataset_filter= "Filter 1"
 
 # Korrekturfunktion für Datensatz
 delta_func, laser_slope = korrekturfunktion(dataset)
@@ -327,6 +319,7 @@ x_final_f, y_ref_f_corr = ortskorrektur(pos_ref_f, mean_ref_f, delta_func_filt)
 
 # FFT BERECHNEN
 freq_green, spec_laser_green = fft_spectrum(x_eq_green, y_eq_green, laser_slope)
+freq, spec_ref = fft_spectrum(x_final, y_ref_final, laser_slope)
 freq, spec_jod = fft_spectrum(x_final, y_jod_final, laser_slope)
 freq_f, spec_ref_f = fft_spectrum(x_final_f, y_ref_f_corr, slope_filt)
 freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
@@ -335,57 +328,3 @@ freq_f, spec_filt_f = fft_spectrum(x_final_f, y_filt_corr, slope_filt)
 plot_final_results(freq, spec_ref, spec_jod, label_probe="Iod-Küvette")
 plot_filter_analysis(freq_f, spec_ref_f, spec_filt_f)
 plot_laser_green_analysis(freq_green, spec_laser_green)
-
-'''plt.figure(figsize=(10, 4))
-plt.plot(P_ist, delta, 'x', color="orange", label="Korrektur an Maxima")
-plt.plot(x_new, delta_interpolate(x_new), color="blue", label="Interpolation der Korrektur")
-plt.xlabel("Motorposition", fontsize=20)
-plt.ylabel("Korrektur (Soll - Ist)", fontsize=20)
-plt.title("Korrektur der Motorpositionen", fontsize=24, fontweight='bold')
-plt.legend()
-plt.show()'''
-
-# ==other shit==
-
-# Analyse der Laser-Daten:
-file_path = "data/Iod 1/Data Channel 2.dat"
-positions, measurements = load_data(file_path)
-mean_data_laser = average_measurements(measurements)
-x_new, y_new, f_interpol = interpolate(positions, mean_data_laser, factor=10)
-
-
-
-peaks = argrelextrema(y_new, np.greater)[0]
-extrema_array = np.sort(np.append(argrelextrema(y_new,np.greater),argrelextrema(y_new,np.less)))
-maxima_positions = x_new[extrema_array]
-r = np.linspace(0, len(maxima_positions)-1, len(maxima_positions))
-fit = linregress(r, maxima_positions)
-
-
-plt.plot(positions, mean_data_laser, 'x', color='purple', label="Datenpunkte")
-plt.plot(x_new, y_new, '-', color='green', label="Interpolation")
-plt.xlabel("Motorposition")
-plt.ylabel("Signal")
-plt.title("Laser-Daten: Interpolation vs. Originaldaten")
-plt.grid(True)
-plt.xlim(-200,200)
-plt.legend()
-plt.show()
-
-
-plt.plot(x_new, y_new, '-', color='red', label="Interpolation")
-plt.plot(extrema_array, f_interpol(maxima_positions), 'x', color='green', label="Maxima")
-plt.xlabel("Motorposition")
-plt.ylabel("Signal")
-plt.title("Laser-Daten: Interpolation mit Maxima")
-plt.xlim(0,4999)
-plt.legend()
-plt.show()
-
-plt.plot(r, maxima_positions, '.', color='purple', label="Maxima", alpha=1)
-plt.plot(r, fit.intercept + fit.slope*r, '-', color='pink', label="Lineare Anpassung")
-plt.xlabel("Maxima")
-plt.ylabel("Motorposition")
-plt.title("Kalibrierfunktion: Lineare Anpassung der Maxima")
-plt.legend()
-plt.show()
