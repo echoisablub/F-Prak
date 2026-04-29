@@ -162,7 +162,7 @@ Das Fourier-Transform-Spektrometer, das in diesem Versuch verwendet wird, besteh
 Die Weißlichtquelle hier ist eine Weißlicht-LED und der Laser ist ein frequenzverdoppelter diode-pumped solid-state-Laser mit einer Wellenlänge von $\lambda_L=\qty{532}{nm}$.\\\\
 Das Michelson-Interferometer teilt die einfallenden Lichtbündel in zwei identische Lichtstrahlen auf, die beide über Spiegel wieder zurückgeworfen werden. Einer der beiden Spiegel des Interferometers lässt sich über einen Linearverschiebetisch angetrieben von einem Schrittmotor bewegen.\\
 Nach dem  Durchlaufen des Interferometers wird der Strahlengang des Lasers auf eine einzelne Fotodiode gelenkt, während der Weißlichtstrahl erneut durch einen halbdurchlässigen Spiegel geteilt wird. Einer der beiden Weißlichtstrahlen wird direkt auf eine Fotodiode gelenkt, der andere durchläuft die zu untersuchenden Proben, bevor er auch auf eine Fotodiode trifft.\\
-Die, von den drei Photodioden kommenden, Signale werden durch Operationsverstärker verstärkt und invertiert um an den Dynamikbereich eines Analog-Digital-Wandlers angepasst zu werden. Dann werden die Signale erst an den AD-Wandler und von dort an einen Computer weitergeleitet.\\\\
+Die von den drei Photodioden kommenden Signale werden durch Operationsverstärker verstärkt und invertiert um an den Dynamikbereich eines Analog-Digital-Wandlers angepasst zu werden. Dann werden die Signale erst an den AD-Wandler und von dort an einen Computer weitergeleitet.\\\\
 Die Steuerung des Motors und die Aufnahme der Daten erfolgt über ein Python GUI.\\
 Die kleinstmögliche Schrittgröße des Schrittmotors beträgt rechnerisch \qty{50,5}{nm}. Allerdings ist die Bewegung des Verschiebetisches nicht exakt linear, was in der Auswertung berücksichtigt werden muss. Außerdem braucht der Antrieb ein gewisses Umkehrspiel, was kompensiert werden kann, indem Änderungen der Bewegungsrichtung nur in einer guten Entfernung von dem Startpunkt der Messungen aus vorgenommen werden - hier reichen etwa 1000 Schritte.\\\\
 Bevor die Messungen gestartet werden, muss die Position Null des Motors auf die Mitte des Interferenzmusters gesetzt werden.
@@ -401,7 +401,7 @@ Durch die Anwendung dieser Korrekturverfahren können subtile Details in den Spe
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Spektrum Laser 1 final.png}
-	\caption{Ausschnitt des Laserpektrums in Abhängigkeit der Wellenlänge}
+	\caption{Ausschnitt des Laserpektrums in Abhängigkeit der Wellenlänge.}
 	\label{fig: laserspek}
 \end{figure}
 Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}), lässt sich eine Wellenlänge von \qty{532,01}{nm} ablesen. Diese entspricht der tatsächlichen Wellenlänge des Lasers $\lambda_L=\qty{532}{nm}$ und zeugt von einer korrekten Kalibrierfunktion, die auch für die weiteren Messwerte angewendet werden kann.
@@ -411,35 +411,35 @@ Von dem experimentell bestimmten Laserspektrum (siehe \autoref{fig: laserspek}),
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Spektrum Filter 1 final.png}
-	\caption{Das gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle}
+	\caption{Das gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle.}
 	\label{fig: filter2spek}
 \end{figure}
-Das Spektrum des Interferen-Filters weicht hauptsächlich in den Intensitäten von dem Referenzspektrum ab (siehe \autoref{fig: filter2spek}). Die genaueren Abweichungen lassen sich an der differentiellen optischen Transmission des Filters erkennen (siehe \autoref{fig: filter2dot}).\\
+Das Spektrum des Interferenz-Filters weicht hauptsächlich in den Intensitäten von dem Referenzspektrum ab (siehe \autoref{fig: filter2spek}). Die genaueren Abweichungen lassen sich an der differentiellen optischen Transmission des Filters erkennen (siehe \autoref{fig: filter2dot}).\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Differentielle Transmission Filter 1 final.png}
-	\caption{Die differentielle Transmission des Filters bestimmt durch das Referenzspektrum der Weißlichtquelle}
+	\caption{Die differentielle Transmission des Filters bestimmt durch das Referenzspektrum der Weißlichtquelle.}
 	\label{fig: filter2dot}
 \end{figure}
-Auffällig sind hier vor allem die starke Absorption in einem Wellenlängenbereich von etwa \qtyrange{495}{520}{\nm}. Der Filter filtert also grünes Licht in einem schmalen Bereich, was für einen schmalbandigen Interferenz-Filter spricht.\\\\
+Auffällig sind hier vor allem die starke Absorption in einem Wellenlängenbereich von etwa \qtyrange{506}{521}{\nm}. Der Filter filtert also grünes Licht in einem schmalen Bereich, was für einen schmalbandigen Interferenz-Filter spricht.\\\\
 Die spektrale Bandbreite $B$ des Filters lässt sich mithilfe der DOT in Frequenzdarstellung bestimmen:
-$$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{493\si{\nm}}-\frac{c}{521\si{\nm}}=\qty{32,68}{\peta\hertz}$$
-Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_{min}+\frac{B}{2}}=\qty{506,6}{\nm}$.
+$$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{506\si{\nm}}-\frac{c}{521\si{\nm}}=592,5\si{\tera\hertz}-575,4\si{\tera\hertz}=\qty{17,0}{\tera\hertz}=$$
+Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_{min}+\frac{B}{2}}=\qty{513,4}{\nm}$.
 
 \subsubsection{Iod-Küvette}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Spektrum Iod 1 final.png}
-	\caption{Das gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette}
+	\caption{Das gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle gemessen durch eine leere Küvette.}
 	\label{fig: iod2spek}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/Absorsptionsprofil Iod 1 OD final.png}
-	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette}
+	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette.}
 	\label{fig: iod2od}
 \end{figure}
-Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass das Referenzspektrum der leeren Küvette deutlich mehr Rauschen enthält. Das Rauschen, was bei dem Spektrum der Iod-Küvette zu sehen ist, ist außerdem gleichförmiger. Wie auch am Absorptionsprofil erkennbar, dargestellt durch die optische Dichte (siehe \autoref{fig: iod2od}), wird durch das Iod unter anderem sehr viel von dem Rauschen absorbiert.\\
+Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass bei der Messung des Iod-Spektrums deutlich weniger von dem Signal angekommen ist, als bei der Aufnahme des Interferenz-Filter-Spektrums. Dadurch ist das Rauschen deutlich prominenter zu sehen.\\
 Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. \qtyrange{420}{670}{nm} deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
 \\\\
 Das gemessene Iod-Spektrum passt zu Iod-Spektren, die in einer anderen Studie gemessen wurden (siehe \autoref{fig: iodlit}) \cite{4}.\\
@@ -447,14 +447,14 @@ Das Maximum befindet sich im gleichen Wellenlängenbereich und hat eine ähnlich
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{img/iod literatur2.png}
-	\caption{Gemessener $I_2$ Absorptionsquerschnitt \cite{4}}
+	\caption{Gemessener $I_2$ Absorptionsquerschnitt \cite{4}.}
 	\label{fig: iodlit}
 \end{figure}
-Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette lassen sich viele klare Maxima erkennen. Diese spiegeln das Absorptionsspektrum von Iod wieder. Jedes Maximum repräsentiert eine Spektrallinie, die bei Iod im Bereich \qtyrange{500}{700}{nm} in hoher Anzahl auftreten. Das sind die Vibrationsübergänge des Moleküls. Das experimentell bestimmte Spektrum passt zu der theoretischen Erwartung (siehe \autoref{fig: iodtheo}). 
+Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette (siehe \autoref{fig: iod2od}) lassen sich viele klare Maxima erkennen. Diese spiegeln das Absorptionsspektrum von Iod wieder. Jedes Maximum repräsentiert eine Spektrallinie, die bei Iod im Bereich \qtyrange{500}{700}{nm} in hoher Anzahl auftreten. Das sind die Vibrationsübergänge des Moleküls. Das experimentell bestimmte Spektrum passt zu der theoretischen Erwartung (siehe \autoref{fig: iodtheo}). 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\linewidth]{img/960px-Iodine_spectrum_visible.png}
-	\caption{Das sichtbare Spektrum von Iod \cite{3}}
+	\caption{Das sichtbare Spektrum von Iod \cite{3}.}
 	\label{fig: iodtheo}
 \end{figure}
 
@@ -495,7 +495,7 @@ Im Rahmen des Versuchs KV6 wurde die Fourier-Transform-Spektroskopie (FTS) im si
 Die methodische Grundlage bildete die Vermessung der zeitlichen Kohärenzfunktion (Autokorrelationsfunktion) mithilfe eines Michelson-Interferometers. Da die mechanische Bewegung des Linearverschiebetisches keine exakte Linearität aufwies, wurde eine numerische Kalibrierfunktion basierend auf einem simultan aufgenommenen Laser-Interferogramm ($\lambda_L=\qty{532}{\nm}$) erstellt. Mithilfe einer in Python programmierten Auswerteroutine wurden die Messdaten ortskorrigiert, äquidistanziert und schließlich mittels Fouriertransformation in den Frequenzraum überführt.\\\\
 Die physikalische Auswertung ergab folgende Resultate:
 \begin{itemize}
-       \item Für den Interferenzfilter wurde eine Zentralwellenlänge von ca. \qty{506,6}{\nm} bei einer spektralen Bandbreite von \qty{9,18}{\nm} ermittelt.
+       \item Für den Interferenzfilter wurde eine Zentralwellenlänge von ca. \qty{513,4}{\nm} bei einer spektralen Bandbreite von \qty{17,0}{\tera\hertz} ermittelt.
        \item In den Iodspektren konnten die charakteristischen Absorptionslinien aufgelöst und als Vibrationsübergänge des Moleküls verifiziert werden.
        \item Die experimentell bestimmte spektrale Auflösung lag mit ca. \qty{0,6}{\tera\hertz} in der Größenordnung der theoretischen Auflösungsgrenze von \qty{0,297}{\tera\hertz}.
 \end{itemize}
