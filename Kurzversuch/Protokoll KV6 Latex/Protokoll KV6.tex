@@ -423,7 +423,7 @@ Das Spektrum des Interferenz-Filters weicht hauptsächlich in den Intensitäten 
 \end{figure}
 Auffällig sind hier vor allem die starke Absorption in einem Wellenlängenbereich von etwa \qtyrange{506}{521}{\nm}. Der Filter filtert also grünes Licht in einem schmalen Bereich, was für einen schmalbandigen Interferenz-Filter spricht.\\\\
 Die spektrale Bandbreite $B$ des Filters lässt sich mithilfe der DOT in Frequenzdarstellung bestimmen:
-$$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{506\si{\nm}}-\frac{c}{521\si{\nm}}=592,5\si{\tera\hertz}-575,4\si{\tera\hertz}=\qty{17,0}{\tera\hertz}=$$
+$$B=f_{max}-f_{min}=\frac{c}{\lambda_{min}}-\frac{c}{\lambda_{max}}=\frac{c}{506\si{\nm}}-\frac{c}{521\si{\nm}}=592,5\si{\tera\hertz}-575,4\si{\tera\hertz}=\qty{17,0}{\tera\hertz}$$
 Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_{min}+\frac{B}{2}}=\qty{513,4}{\nm}$.
 
 \subsubsection{Iod-Küvette}
@@ -440,11 +440,11 @@ Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_{min}+\frac{
 	\label{fig: iod2od}
 \end{figure}
 Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass bei der Messung des Iod-Spektrums deutlich weniger von dem Signal angekommen ist, als bei der Aufnahme des Interferenz-Filter-Spektrums. Dadurch ist das Rauschen deutlich prominenter zu sehen.\\
-Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. \qtyrange{420}{670}{nm} deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
+Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. \qtyrange{500}{650}{nm} deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
 \\\\
 Das gemessene Iod-Spektrum passt zu Iod-Spektren, die in einer anderen Studie gemessen wurden (siehe \autoref{fig: iodlit}) \cite{4}.\\
 Das Maximum befindet sich im gleichen Wellenlängenbereich und hat eine ähnliche Form. Die kleineren Peaks entlang der Kurve unterscheiden sich leicht in Form, zeigen aber beide die Emissions- bzw. Absorptionsspektrallinien charakteristisch für Iod.\\\\
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{img/iod literatur2.png}
 	\caption{Gemessener $I_2$ Absorptionsquerschnitt \cite{4}.}
@@ -520,6 +520,5 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 \lstinputlisting[language=Python]{KV6 Aufgeraumt.py}
 
 \end{appendices}
-
 
 \end{document} 
