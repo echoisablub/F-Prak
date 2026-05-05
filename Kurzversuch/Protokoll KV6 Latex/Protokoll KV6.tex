@@ -92,7 +92,7 @@
 \section{Einleitung}
 %Aufgabenstellung, Ziel der Messungen
 Der Kurzversuch 6 - Fourier-Transform-Spektroskopie dient der Einführung in das universelle Konzept der Fourier-Transform-Spektroskopie und dem Erlernen des Programmierens einer Auswertungsroutine.\\
-Bei Fourier-Transform-Spektroskopie werden Spektren durch Messungen der Kohärenz der Strahlungsquelle bestimmt. Dafür wird die Intensität in Abhängigkeit der Zeit gemessen und das Spektrum durch die namensgebende Fouriertransformation berechnet.\\
+Bei Fourier-Transform-Spektroskopie werden Spektren durch Messungen der Kohärenz der Strahlungsquelle bestimmt. Dafür wird die Intensität in Abhängigkeit der Motorposition gemessen, die Motorpositionen in eine Zeitachse umgerechnet, und das Spektrum durch die namensgebende Fouriertransformation berechnet.\\
 Zu didaktischen Zwecken wird hier sichtbares Licht verwendet, anstelle von dem gängigen Infrarotlicht.
 Ziel des Experiments ist sowohl das Spektrum einer Weißlichtlampe, als auch die Absorptionsspektren von einem Interferenz-Filter und von molekularem Iod zu bestimmen.\\
 Dafür wird zuerst die zeitliche Kohärenzfunktion für die Weißlichtquelle ermittelt, aus der dann durch eine Fourier-Transformation auf das Spektrum der Quelle geschlossen wird. 
@@ -439,7 +439,7 @@ Die Zentralwellenlänge $\lambda_Z$ liegt bei $\lambda_Z=\frac{c}{f_{min}+\frac{
 	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette.}
 	\label{fig: iod2od}
 \end{figure}
-Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist zu sehen, dass bei der Messung des Iod-Spektrums deutlich weniger von dem Signal angekommen ist, als bei der Aufnahme des Interferenz-Filter-Spektrums. Dadurch ist das Rauschen deutlich prominenter zu sehen.\\
+Bei der Betrachtung des Iod-Spektrums (siehe \autoref{fig: iod2spek}) ist auffällig, dass bei der Messung des Iod-Spektrums deutlich weniger von dem Signal angekommen ist, als bei der Aufnahme des Interferenz-Filter-Spektrums. Dadurch ist das Rauschen deutlich prominenter zu sehen.\\
 Die gemessene Intensität ist außerdem bei dem Iod-Spektrum in einem Wellenlängenbereich von ca. \qtyrange{500}{650}{nm} deutlich geringer als das Referenzspektrum, da Iod im Allgemeinen kurzwelliges Licht stärker absorbiert, als langwelliges Licht.
 \\\\
 Das gemessene Iod-Spektrum passt zu Iod-Spektren, die in einer anderen Studie gemessen wurden (siehe \autoref{fig: iodlit}) \cite{4}.\\
@@ -460,7 +460,7 @@ Bei genauerer Betrachtung der optischen Dichte der Iod-Küvette (siehe \autoref{
 
 \subsection{Spektrale Auflösung}
 Die theoretische Auflösungsgrenze des Fourier-Transform-Spektrometers lässt sich bestimmen durch die Wegzeitdifferenz $\Delta t$. Da der benutzte Schrittmotor eine kleinstmögliche Verschiebung von \qty{50,5}{\nm} hat und wir 10000 Schritte pro Messreihe gelaufen sind, ist unsere Weglängendifferenz $\Delta s = 10000 \cdot 50,5 \cdot 10^{-9} \cdot 2 = \qty{1,01}{\mm}$.
-Daraus lässt sich $\Delta t = \frac{1,01 \cdot 10^{-3}}{c} = \qty{3,37}{\pm}$ bestimmen.\\
+Daraus lässt sich $\Delta t = \frac{1,01 \cdot 10^{-3}}{c}\si{m} = \qty{3,37}{\ps}$ bestimmen.\\
 Die theoretische spektrale Auflösungsgrenze ist dann:
 $$\Delta\nu=\frac{1}{\Delta t}=\qty{0,297}{\tera\hertz}=\qty{1.009e-3}{\nm}$$
 \\
