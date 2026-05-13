@@ -470,10 +470,10 @@ Experimentell lässt sich eine Signalbreite von \qty{0,6}{\tera\hertz} aus dem L
 Bei dem experimentellen Aufbau gibt es mehrere Fehlerquellen. Einer der größten systematischen Fehler in diesem Experiment ist die Nichtlinearität des Schrittmotors. Durch die Kalibrierfunktion werden die Schwankungen der Signale zu einem großen Teil kompensiert. Allerdings kann es sein, dass trotzdem kleine Variationen bleiben, was heißen würde, dass die Linienbreite des Lasers größer ist als angenommen.\\
 %Die Interpolation der Laserdaten zum Aufbauen der Kalibrierfunktion ist eine der grundlegenden, da das Signal des Lasers Schwankungen hat, die sich durch alle restlichen Ergebnisse fortpflanzen. Das würde auch heißen, dass die Linienbreite des Lasers größer ist als angenommen, das Experiment hat also eine schlechtere Auflösung, als jetzt bestimmt.\\ 
 Bei Betrachtung des gesamten Laserspektrums nach Interpolation und Korrektur fällt auf, dass es entfernt von dem größten Peak in beide Richtungen auch kleinere Peaks, ungefähr symmetrisch um den großen Peak verteilt, gibt. Das entspricht nicht der theoretischen Erwartung und ist vermutlich ein Effekt davon, dass wir bei der FFT über ein endliches Zeitfenster integrieren.\\\\
-
 Die Spektren entsprechen grob den theoretischen Erwartungen. Das Spektrum des Filters ist leicht verrauscht, aber es ist klar zu erkennen, dass der Filter nur in einem bestimmten Frequenzbereich absorbiert.\\
 Das starke Verrauschen des Iod-Spektrums und das niedrige Signal liegt vermutlich an einer zu hohen Temperatur der Iod-Probe. Die Form des Spektrums stimmt mit den Literaturwerten insoweit überein, als dass der gleiche Teil des Referenzspektrums absorbiert wurde und das Maximum im gleichen Wellenlängenbereich liegt. Bei dem Absorptionsprofil, lassen sich die kleinen charakteristischen Minima des Iod-Spektrums erkennen, auch wenn die teilweise stark verrauscht sind, wodurch die charakteristische Form an einigen Stellen verloren geht.\\
-Eine weitere Fehlerquelle bei den Spektren ist die Einstellung des Michelson-Interferometers. Es ist möglich, dass sich die Einstellung im Laufe der unterschiedlichen Messungen leicht verschoben hat, durch Berührungen des optischen Tisches und ähnliche Effekte beim Wechseln der Proben.
+Eine weitere Fehlerquelle bei den Spektren ist die Einstellung des Michelson-Interferometers. Es ist möglich, dass sich die Einstellung im Laufe der unterschiedlichen Messungen leicht verschoben hat, durch Berührungen des optischen Tisches und ähnliche Effekte beim Wechseln der Proben.\\\\
+Für jede Probe wurden jeweils zwei Messreihen durchgeführt (siehe \autoref{sec: messreihe anhang}). Die diskutierten Ergebnisse sind die, der ersten Messreihe, da diese mehr Fehler aufweist als die zweite.\\Vor der zweiten Messreihe wurde das Michelson-Interferometer neu adjustiert, was zu einem saubereren Filter-Spektrum und einer klareren differentiellen Transmission führt. Das Iod-Spektrum ist ähnlich verrauscht, weswegen es hier nicht weiter ausgeführt wird.
 
 %Zur Kompensation dieses Fehlers wird in der Datenanalyse eine Kalibrierfunktion angewendet. Da die Spektren grundsätzlich den theoretischen Erwartungen entsprechen, ist davon auszugehen, dass die Korrektur erfolgreich durchgeführt wurde.\\
 
@@ -523,6 +523,33 @@ Trotz verbleibender systematischer Unsicherheiten, insbesondere durch die Nichtl
 \begin{appendices}
 \section{Code}
 \lstinputlisting[language=Python]{KV6 Aufgeraumt.py}
+
+\section{Messreihe 2}\label{sec: messreihe anhang}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Spektrum Laser 2 final.png}
+	\caption{Zwei Ausschnitte des Laserspektrums jeweils abhängig von Frequenz oder Wellenlänge.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Spektrum filter 2 final.png}
+	\caption{Das gemessene Spektrum des Filters in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum der Weißlichtquelle.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Differentielle Transmission Filter 2 final.png}
+	\caption{Die differentielle Transmission des Filter-Spektrums bestimmt durch das Referenzspektrum der Weißlichtquelle.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Spektrum Iod 2 final.png}
+	\caption{Das gemessene Iod-Spektrum in Abhängigkeit von Frequenz und Wellenlänge dargestellt und verglichen mit dem Referenzspektrum einer leeren Küvette.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Absorsptionsprofil Iod 2 OD final.png}
+	\caption{Die optische Dichte des Iod-Spektrums bestimmt durch das Referenzspektrum einer leeren Küvette.}
+\end{figure}
 
 \end{appendices}
 
