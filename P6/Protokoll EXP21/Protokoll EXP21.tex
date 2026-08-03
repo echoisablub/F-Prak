@@ -88,44 +88,8 @@
 
 
 
-\subsection{Emittanzmessung}
-\label{sec: emittanzmessung}
-Eins der Verfahren um die Emittanz zu bestimmen, lässt sich mit einem zentrierten Strahl, einem Quadrupolmagneten und dem Schirm hinter dem Quadrupolmagneten durchführen.\\
-Auf dem Schirm lassen sich die transversalen Strahlgrößen $\sigma_x=\sqrt{\Sigma^x_{11}}$ und $\sigma_y=\sqrt{\Sigma^y_{11}}$ in Abhängigkeit der Quadrupolstärke $k$ messen. Die transversalen Strahlengrößen am Schirm hängen über die, durch die Geometrie und Ströme des Beschleunigers bekannte, Transfermatrix $A$ mit den transversalen Strahlengrößen am Ort des Quadrupols zusammen:
-\begin{equation}
-	\vec{b} = A\cdot\begin{pmatrix} \langle x^2\rangle \\ \langle xx'\rangle \\ \langle x'^2\rangle \end{pmatrix}
-    \label{eq:vecb}
-\end{equation}
-$A$ ist hier eine $i\times 3$ Matrix mit $i$ der Anzahl an variierten Quadrupolstärken und $\vec{b}$ ist ein $i\times 1$ dimensionaler Vektor mit den korrespondierenden $\langle x^2_{screen}\rangle$ für jede variierte Quadrupolstärke. Damit der gesuchte Vektor $\vec{x}$ dreidimensional ist, wird die Normalengleichung der linearen Regressionen angewendet \cite{1}:
-\begin{equation}
-	(A^T\cdot A)^{-1}\cdot A^T\cdot \vec{b}=\vec{x}
-    \label{eq:normalengllinreg}
-\end{equation}
-Aus $\vec{x}$ lässt sich dann die Emittanz am Ort des Quadrupolmagneten bestimmen:
-\begin{equation}
-	\epsilon_{x,y}=\sqrt{\langle x^2\rangle \langle x'^2\rangle-\langle xx'\rangle^2}
-    \label{eq:emittanz}
-\end{equation}
-Anschließend lassen sich die Twiss-Parameter $\beta, \alpha, \gamma$ mithilfe der Emittanz und $\vec{x}$ bestimmen (hier als Beispiel in x-Richtung):
-\begin{equation}
-	\beta_x=\frac{\langle x^2\rangle}{\epsilon_x}, \alpha_x=\frac{-\langle xx'\rangle}{\epsilon_x}, \gamma_x=\frac{\langle x'^2\rangle}{\epsilon_x}
-    \label{eq:Twissparameter}
-\end{equation}
-Die so bestimmten Twiss-Parameter lassen sich mithilfe der Transformationsmatrix durch die Strahlführung transformieren.\\\\
-Für die Emittanzmessung werden zwei Messreihen aufgenommen: Eine horizontale Messung für $\epsilon_x$ und eine vertikale für $\epsilon_y$.\\
-Jede Messreihe ist folgendermaßen strukturiert: Zuerst wird der Quadrupolstrom $I_0$ bestimmt, für den die Strahlbreite in die betrachtete Richtung minimal ist, dann wird um diesen Strom in einem Rahmen von $I_0-\qty{0,5}{\ampere}$ bis $I_0+\qty{0,5}{\ampere}$ in $\qty{0,1}{\ampere}$ Schritten gemessen.\\
-Für die horizontale Messung ist der Quadrupolstrom positiv, für die vertikale negativ.
-
-
-\subsubsection{Beta-Funktion}
-Die experimentelle Bestimmung der Beta-Funktion $\beta(z)$, auch als Amplitudenfunktion bekannt, dient der Charakterisierung der transversalen Strahleinhüllenden (Envelope) entlang der Beschleunigerachse. Diese Entspricht auch des rechnerisch bestimmten Twiss-Parameters $\beta$ an Eingang des Quadrupols.
-Die Strahlgrößen $x_{RMS}$ und $y_{RMS}$ werden an den vier Schirmen im Aufbau gemessen. Dazugehörig werden auch die z-Positionen der Schirme entlang der Strahllänge gemessen.
-
 \section{Auswertung der Messergebnisse}
 
-\subsection{Strahltransport}
-
-Die für den stabilen Transport ermittelten Magneteinstellungen sind in \autoref{fig:einstellungenstrahltransport} dokumentiert.
 
 \begin{figure}[H]
     \centering
@@ -134,7 +98,6 @@ Die für den stabilen Transport ermittelten Magneteinstellungen sind in \autoref
     \label{fig:einstellungenstrahltransport}
 \end{figure}
 
-In \autoref{fig:fuenf_bilder_gesamt} sind die resultierenden Strahlprofile dargestellt, wie sie auf den Schirmen entlang der gesamten Beschleunigerstrecke bis zum Beam-Dump aufgenommen wurden. Die Aufnahmen zeigen einen gut fokussierten und zentrierten Strahl auf allen Stationen.
 
 \begin{figure}[H]
 
@@ -179,128 +142,13 @@ In \autoref{fig:fuenf_bilder_gesamt} sind die resultierenden Strahlprofile darge
     \label{fig:fuenf_bilder_gesamt}
 \end{figure}
 
-Dieser erfolgreiche Strahltransport bildete die notwendige Grundlage für die präzise Durchführung der nachfolgenden strahlbasierten Justage und der Emittanzmessung.
 
-\subsection{Strahlbasierte Justage}
-
-Um sicherzustellen, dass der Strahl den Quadrupol Q57MATCH exakt auf der magnetischen Achse durchquert, wurde eine Strahlbasierte Justage durchgeführt.
-Durch Variation des Dipolstroms bei zwei unterschiedlichen Quadrupolstärken ($I_{Q1}$ und $I_{Q2}$) wurden Regressionsgeraden ermittelt, deren Schnittpunkt den magnetischen Mittelpunkt $I_{D0}$ definiert.
-\subsubsection{Horizontale Ausrichtung}
-Für die horizontale Ausrichtung (\autoref{fig:strahlbasiertejustagex}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{-0,344}{\ampere}$ und $I_{Q_{2}} = \qty{0,657}{\ampere}$, ergab sich ein Korrekturstrom von $I_{D0,x} = \qty{-1,236}{\A}\pm \qty{0,053}{\A}$.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.35]{img/Strahlbasierte Justage_X-Ausrichtung.png}
-    \caption{Strahlbasierte Justage in x-Ausrichtung}
-    \label{fig:strahlbasiertejustagex}
-\end{figure}
-
-\subsubsection{Vertikale Ausrichtung}
-Für die vertikale Ausrichtung (\autoref{fig:strahlbasiertejustagey}), mit den Quadrupolstärken $I_{Q_{1}} = \qty{1,685}{\A}$ und $I_{Q_{2}} = \qty{2,703}{\A}$, wurde ein Wert von $I_{D0,y} = \qty{-0,686}{\A}\pm \qty{0,094}{\A}$ bestimmt.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.35]{img/Strahlbasierte Justage_Y-Ausrichtung.png}
-    \caption{Strahlbasierte Justage in y-Ausrichtung}
-    \label{fig:strahlbasiertejustagey}
-\end{figure}
-
-\subsubsection{Kontrollmessung}
-
-Die Kontrollmessungen in \autoref{fig:ueberpruefung_justage_gesamt} bestätigen den Erfolg der Justage, da die Strahlposition innerhalb der Fehlergrenzen stabil bleibt, wenn die Quadrupolstärke variiert wird.
-Sowohl in \autoref{fig:Überprüfungstrahlbasiertejustagex}, als auch in \autoref{fig:Überprüfungstrahlbasiertejustagey}, ist die jeweilige Standardabweichung eine Größenordnung kleiner als der jeweilige mittlere Scanschritt. Dies deutet auf eine relativ geringe Streuung um den Mittelwert hin, auch wenn sowohl die Größe des mittleren Scanschrittes, als auch die Standardabweichung in y-Richtung leicht größer sind, als in x-Richtung.
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.8\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/Überprüfung der Strahlbasierte Justage_x.png}
-        \caption{Überprüfung der Strahlbasierte Justage in x-Ausrichtung}
-        \label{fig:Überprüfungstrahlbasiertejustagex}
-    \end{subfigure}
-
-    \begin{subfigure}[b]{0.8\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/Überprüfung der Strahlbasierte Justage_y.png}
-        \caption{Überprüfung der Strahlbasierte Justage in y-Ausrichtung}
-        \label{fig:Überprüfungstrahlbasiertejustagey}
-    \end{subfigure}
-    
-    \caption{Zusammenfassende Darstellung der Kontrollmessungen zur strahlbasierten Justage.}
-    \label{fig:ueberpruefung_justage_gesamt}
-\end{figure}
-
-\subsection{Energiemessung}
-
-Die kinetische Energie der Elektronen wurde über die vertikale Ablenkung in einem Dipolmagneten bestimmt. Aus der linearen Regression der Strahlposition über dem Magnetstrom ergab sich eine Steigung von $\frac{dy}{dI} = \qty{14,438}{\mm\per\A} \pm \qty{0,106}{\mm\per\A}$ (\autoref{eq:herleitungbetagamma}). Unter Verwendung der dipolspezifischen Konstante $\kappa = 7,64 \cdot \qty{e-6}{\T\m\per\A}$, der Driftstrecke $L = \qty{0,52}{\m} \pm \qty{0,01}{\m}$ und der Ruheenergie der Elektronen von $E_0 = \qty{511}{\keV}$ wurde zunächst das Produkt $\beta\gamma = 0,1614 \pm 0,0033$ ermittelt, was aufgrund der geringen Geschwindigkeit näherungsweise $\beta$ entspricht (\autoref{eq:herleitungbetagamma}).\\
-Daraus resultiert ein Lorentzfaktor von $\gamma = 1,013 \pm 0,000529$ (\autoref{eq:gamma}), was auf ein nahezu klassisches Geschwindigkeitsregime hindeutet. Die finale kinetische Energie wurde zu $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ berechnet (\autoref{eq:ekin}). Der entsprechende Impuls der Teilchen wurde mit $p = 82,490 \text{ keV/c} \pm 1,697 \text{ keV/c}$ bestimmt (\autoref{eq:p}).
-
-\subsection{Emittanz}
-Die Emittanz wurde mittels eines Quadrupol-Scans am Ort des Magneten bestimmt, indem die transversalen Strahlgrößen auf dem Schirm als Funktion der Quadrupolstärke $k$ gemessen wurden. Durch Anwendung der Normalengleichung für die lineare Regression \ref{eq:normalengllinreg} und \autoref{eq:emittanz}, ergaben sich folgende Werte für die Emittanz:
-\begin{itemize}
-    \item $\epsilon_x = \qty{0,73}{\milli\metre\milli\radian} \pm \qty{0,07}{\milli\metre\milli\radian}$
-    \item $\epsilon_y = \qty{1,98}{\milli\metre\milli\radian} \pm \qty{0,09}{\milli\metre\milli\radian}$
-\end{itemize}
-
-\subsubsection{Optische Funktionen}
-
-Basierend auf der Emittanz wurden die Twiss-Parameter am Eingang des Quadrupols berechnet (\autoref{eq:Twissparameter}). Diese beschreiben die Form und Ausrichtung der Phasenraumellipse. Die ermittelten Werte lauten:
-\begin{itemize}
-    \item $\beta_x = \qty{0,58}{\m} \pm  \qty{0,06}{\m}, \, \alpha_x = \qty{-1,19}{\m} \pm \qty{0,12}{\m},\, \gamma_x = \qty{4,19}{\m} \pm \qty{0,41}{\m}$
-    \item $\beta_y = \qty{0,81}{\m} \pm \qty{0,04}{\m}, \, \alpha_y = \qty{-1,40}{\m} \pm \qty{0,06}{\m},\, \gamma_y = \qty{3,64}{\m} \pm \qty{0,17}{\m}$
-\end{itemize}
-
-
-
-\subsection{Beta-Funktion}
-
-In \autoref{fig:betafunc} ist der Verlauf der $\beta$-Funktion in Abhängigkeit der z-Position entlang des Beschleunigers dargestellt. Die Messpunkte umfassen die Daten der vier Diagnostikschirme sowie den extrapolierten Wert aus dem Q-Scan. Diese Punkte wurden wie beim Twiss-Parameter $\beta$ anhand von \autoref{eq:Twissparameter} berechnet (nur anstatt der Varianz $\langle x^2\rangle$, die verschiedenen Messungen $x_{RMS},\, y_{RMS}$).\\
-Die Entwicklung der $\beta$-Funktion zeigt die erwartete Fokussierungswirkung der Quadrupol-Zellen im diagnostischen Bereich.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.35]{img/beta func mit fehlerfortpflanzung.png}
-    \caption{$\beta$-Funktion[m] in Abhängigkeit der z-Position[cm] des Strahls}
-    \label{fig:betafunc}
-\end{figure}
 
 \section{Diskussion der physikalischen Ergebnisse}
-\subsection{Energiemessung und Dynamik}
-Die experimentell ermittelte kinetische Energie von $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{keV}$ liegt im erwarteten Betriebsbereich von SALOME, der für Energien bis zu \qty{20}{keV} ausgelegt ist. Der berechnete Lorentzfaktor von $\gamma = 1,013 \pm 0,001$ bestätigt, dass sich die Elektronen in einem nahezu klassischen Geschwindigkeitsregime bewegen ($v \approx 0,16\cdot c$).\\
-Die geringe Energie der Teilchen erklärt zudem die hohe Empfindlichkeit des Strahls gegenüber externen Störfeldern. Wie in der Versuchsdurchführung beobachtet, ist eine präzise Kompensation des Erdmagnetfeldes durch Korrekturdipole zwingend erforderlich, da der Strahl andernfalls bereits nach etwa \qty{60}{cm} die Wände des Aufbaus berühren würde.
 
-%\subsection{Vergleich mit der thermischen Emittanz und Strahlqualität}
-%Ein zentraler Aspekt der Strahlcharakterisierung ist der Vergleich der gemessenen Emittanz mit dem theoretisch erreichbaren Minimum, der thermischen Emittanz $\epsilon_{n,thermisch}$. An SALOME wird der Elektronenstrahl durch eine thermische Kathode (Wolfram, $\Phi_{aus} = \qty{4,5}{\eV}$) erzeugt, bei der Elektronen durch Erhitzen die nötige Energie erhalten, um die Austrittsarbeit des Metalls zu überwinden. Die theoretische normierte thermische Emittanz ist dabei durch die Strahlgröße an der Kathode $\sigma_x$ und die Temperatur $T$ definiert: $$\epsilon_{n,thermisch} = \sigma_x \cdot \sqrt{\frac{k_B T}{mc^2}}$$Diese stellt das physikalische Limit dar, da die Geschwindigkeitsverteilung der Elektronen direkt nach dem Austritt der Maxwell-Boltzmann-Verteilung folgt.\\\\
-%In den Messungen wurden für die Emittanz folgende Werte am Ort des Quadrupols V46Match ermittelt: $\epsilon_x = \qty{0,72867}{\milli\metre\milli\radian} \pm \qty{0,07115}{\milli\metre\milli\radian}$, $\epsilon_y = \qty{1,98349}{\milli\metre\milli\radian} \pm \qty{0,09011}{\milli\metre\milli\radian}$\\
-%Berücksichtigt man das Produkt $\beta\gamma \approx 0,1614$, ergeben sich die normierten Emittanzen zu $\epsilon_{n,x} \approx \qty{0,118}{\milli\metre\milli\radian}$ und $\epsilon_{n,y} \approx \qty{0,320}{\milli\metre\milli\radian}$. Es zeigt sich, dass die experimentellen Werte deutlich über dem theoretischen Minimum liegen (die in einer Größenordnung von unter \qty{0,1}{\milli\metre\milli\radian} liegen).\\Diese Zunahme der Emittanz lässt sich auf verschiedene physikalische Effekte zurückführen:
-%\begin{enumerate}
-    %\item Raumladungseffekte: Aufgrund der relativ geringen kinetischen Energie der Elektronen von nur $\qty{6,62}{\keV} \pm \qty{0,27}{\keV}$ ist die gegenseitige Abstoßung der Elektronen (Coulomb-Kraft) sehr ausgeprägt. Diese Raumladung wirkt als nichtlineare Kraft, die die Teilchenbahnen im Phasenraum verzerrt und somit zu einer effektiven Zunahme der Emittanz führt.
-    %\item Nicht-ideale Fokussierung und Aberrationen: Die Strahlführung durch die Solenoid- und Quadrupolmagnete (wie Q57MATCH) unterliegt in der Realität Aberrationen. Nichtlineare Feldkomponenten führen dazu, dass die Transformation im Phasenraum keine perfekte Ellipse erhält, was die gemessene Fläche vergrößert.
-    %\item Einfluss des Erdmagnetfeldes: Da der Strahl bei diesen niedrigen Energien ohne Korrektur bereits nach ca. $\qty{50}{\cm}-\qty{60}{\cm}$ verloren ginge, muss er permanent durch Korrekturdipole (z. B. V14INJ, H25INJ) auf der Sollbahn gehalten werden. Jede kleinste Dezentrierung in den Quadrupolen führt zu einer Kopplung der Bewegungsebenen, was insbesondere die starke Asymmetrie zwischen $\epsilon_x$ und $\epsilon_y$ erklären könnte.
-%\end{enumerate}
-
-\subsection{Optische Funktionen und F0D0-Zellen}
-Der Verlauf der $\beta$-Funktion (\autoref{fig:betafunc}) demonstriert anschaulich die Funktionsweise der F0D0-Struktur. Die Messpunkte folgen der erwarteten periodischen Oszillation der Einhüllenden (Envelope). Die berechneten Twiss-Parameter wie $\alpha_x = -1,19$ und $\alpha_y = -1,401$ beschreiben eine konvergente Phase der Phasenraumellipse am Eingang des Quadrupols, was auf eine korrekte Abstimmung der Matching Section hindeutet.
-
-\subsection{Fehlerbetrachtung und Messpräzision}
-Die Genauigkeit der Ergebnisse wird durch zwei Hauptfaktoren limitiert:
-\begin{enumerate}
-    \item Schirmauflösung: Die Auflösung der Kameras von \qty{0,250}{\mm\per px} sowie die Schirmunsicherheit von $\qty{50}{\micro\m}$ beeinflussen direkt die Bestimmung der Strahlbreiten. Dies führt insbesondere bei der Fehlerfortpflanzung auf die $\beta$-Funktion zu Unsicherheiten im Bereich von \qtyrange{0,1}{0,5}{\m}.
-    \item Statistische Unsicherheit: Die Nutzung der halben Scanschrittweite ($\Delta I/2$) als Fehlermaß für die Justage ist ein konservativer Ansatz, der jedoch durch die stabilen Kontrollmessungen gerechtfertigt wird. Die Übereinstimmung der Schnittpunkte beim Beam-based Alignment belegt, dass systematische Fehler durch eine Dezentrierung des Strahls im Quadrupolfeld erfolgreich minimiert wurden.
-\end{enumerate}
-Es wurde für die Fehlerrechnung die Gauß'sche Fehlerfortpflanzung (Jacobimatrix-Verfahren) in Python implementiert, um die Unsicherheiten von $L$ und der Steigung $dy/dI$ auf die finalen Ergebnisse zu übertragen. Und bei der Emittanz wurde vorausgesetzt, dass der relative Fehler der optischen Funktionen direkt proportional zum relativen Fehler der Emittanzmessung ist.
 
 \section{Zusammenfassung}
-Im Rahmen des SALOME-Versuchs wurden grundlegende Messungen und Aufgaben an einem Linearbeschleuniger durchgeführt.\\
-Zunächst wurde der Strahltransport durch die \qty{6}{m} lange Anlage optimiert. Ein kritischer Arbeitsschritt war hierbei die Kompensation des Erdmagnetfeldes durch Korrekturdipole, ohne die der Strahl aufgrund seiner geringen Energie bereits nach ca. \qty{60}{cm} verloren gegangen wäre. Mittels strahlbasierter Justage wurde der Elektronenstrahl exakt auf der magnetischen Achse des Quadrupols Q57MATCH zentriert. Die daraus resultierenden Korrekturströme wurden zu $I_{D0,x} = \qty{-1,236}{\A} \pm \qty{0,053}{\A}$ und $I_{D0,y} = \qty{-0,686}{\A} \pm \qty{0,094}{\A}$ bestimmt, was durch anschließende Kontrollmessungen verifiziert werden konnte.\\\\
-Die Energiemessung erfolgte über die Analyse der vertikalen Ablenkung in einem Dipolfeld. Die Auswertung ergab folgende Kernwerte:
-\begin{itemize}
-    \item Kinetische Energie: $E_{kin} = \qty{6,62}{\keV} \pm \qty{0,27}{\keV}$.
-    \item Lorentzfaktor: $\gamma = 1,013 \pm 0,001$, was ein nahezu klassisches System bestätigt.
-    \item Impuls: $p = 82,490 \text{ keV/c} \pm 1,697 \text{ keV/c}$.
-\end{itemize}
-Die Emittanz des Strahls wurde mittels eines Quadrupol-Scans und der Anwendung der Normalengleichung für die lineare Regression ermittelt. Die Ergebnisse lauten:
-\begin{itemize}
-    \item $\epsilon_x = \qty{0,73}{\milli\metre\milli\radian} \pm \qty{0,07}{\milli\metre\milli\radian}$, $\epsilon_y = \qty{1,98}{\milli\metre\milli\radian} \pm \qty{0,09}{\milli\metre\milli\radian}$
-\end{itemize}
-Aus der Emittanz wurden die Twiss-Parameter ($\alpha, \beta, \gamma$) am Eingang des Quadrupols berechnet, welche die Phasenraumellipse des Strahls beschreiben. Der Verlauf der $\beta$-Funktion entlang der z-Achse zeigt deutlich die erwartete Fokussierungswirkung der F0D0-Zellen in der Diagnostic Section. Die Fehlerdiskussion verdeutlicht, dass die Unsicherheiten maßgeblich durch die Schirmauflösung und die Schrittweiten der Scans begrenzt werden.\\\\
-Durch den Versuch wurde erfolgreich ein Einblick in die grundlegende Arbeit an Beschleunigern gewonnen. 
+
 
 \newpage
 
@@ -344,147 +192,9 @@ Durch den Versuch wurde erfolgreich ein Einblick in die grundlegende Arbeit an B
     \end{tabular}
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \caption{Messdaten des Quadrupol-Scans zur Bestimmung der transversalen Emittanz.}
-    \label{tab:daten_emittanz}
-    \begin{tabular}{|SS|SS|}
-        \toprule
-        \multicolumn{2}{|c|}{Horizontale Messung (x)} & \multicolumn{2}{c|}{Vertikale Messung (y)} \\
-        {$I_x$ [\unit{A}]} & {$x_{RMS}$ [\unit{mm}]} & {$I_y$ [\unit{A}]} & {$y_{RMS}$ [\unit{mm}]} \\
-        \midrule
-        0,923 & 0,6382 & -0,908 & 0,7756 \\
-        1,023 & 0,5164 & -1,004 & 0,8330 \\
-        1,121 & 0,4341 & -1,104 & 0,6934 \\
-        1,221 & 0,3888 & -1,206 & 0,6048 \\
-        1,316 & 0,3632 & -1,306 & 0,5542 \\
-        1,419 & 0,3888 & -1,404 & 0,5761 \\
-        1,519 & 0,4393 & -1,509 & 0,6442 \\
-        1,621 & 0,4941 & -1,607 & 0,7425 \\
-        1,724 & 0,5448 & -1,709 & 0,8711 \\
-        1,812 & 0,5355 & -1,802 & 0,9761 \\
-        1,919 & 0,5050 & -1,902 & 1,1601 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-Für die Bestimmung der Emittanz mittels Quadrupol-Scan wurde das lineare Gleichungssystem $\vec{b} = A \cdot \vec{x}$ gelöst. Da die Messreihen für die horizontale und vertikale Ebene mit den gleichen Parametern durchgeführt wurden, gilt $A_x = A_y = A$. Die Matrix $A \in \mathbb{R}^{11 \times 3}$ hat folgende numerische Form:
-\begin{equation}
-A_x = A_y = 
-\begin{pmatrix}
-0,0293 & -0,1312 & 0,1470 \\
-0,0874 & -0,2237 & 0,1432 \\
-0,1755 & -0,3129 & 0,1395 \\
-0,2927 & -0,3989 & 0,1359 \\
-0,4384 & -0,4816 & 0,1323 \\
-0,6116 & -0,5613 & 0,1288 \\
-0,8115 & -0,6379 & 0,1253 \\
-1,0375 & -0,7115 & 0,1220 \\
-1,2887 & -0,7821 & 0,1187 \\
-1,5643 & -0,8497 & 0,1154 \\
-1,8637 & -0,9145 & 0,1122
-\end{pmatrix}
-\end{equation}
-Die Matrixelemente verknüpfen die Strahlparameter am Ort des Quadrupols V46Match mit den auf Schirm 3 gemessenen quadrierten RMS-Breiten $\vec{b} = \langle x_{screen}^2 \rangle$.
-
-
-\begin{table}[H]
-    \centering
-    \caption{RMS-Strahlbreiten an den verschiedenen Diagnostikstationen zur Bestimmung der $\beta$-Funktion.}
-    \label{tab:daten_beta}
-    \begin{tabular}{|l|S|S|S|}
-        \toprule
-        Station & {$z$-Position [\unit{cm}]} & {$x_{RMS}$ [\unit{mm}]} & {$y_{RMS}$ [\unit{mm}]} \\
-        \midrule
-        Q-Eingang* & 140,0 & 0,2052 & 0,4019 \\ % Wurzel aus <x^2> und <y^2>
-        Schirm 3 & 176,5 & 1,4694 & 3,2704 \\
-        Schirm 4 & 233,0 & 1,6751 & 3,7657 \\
-        Schirm 5 & 288,0 & 1,8851 & 1,3811 \\
-        Schirm 6 & 343,5 & 0,4163 & 2,9141 \\
-        \bottomrule
-        \multicolumn{4}{l}{\small *Extrapolierter Wert basierend auf dem Beam-Matrix Vektor $x$.}
-    \end{tabular}
-\end{table}
-
-\begin{table}[H]
-    \centering
-    \caption{Messdaten der horizontalen Justage-Scans (V102MATCH) bei variierender Quadrupolstärke.}
-    \label{tab:justage_daten_x}
-    \begin{tabular}{|SS|SS|}
-        \toprule
-        \multicolumn{2}{|c|}{Scan 1 ($I_{Q1} = \qty{-0,344}{A}$)} & \multicolumn{2}{c|}{Scan 2 ($I_{Q2} = \qty{0,657}{A}$)} \\
-        {$I_D$ [\unit{A}]} & {$\langle x \rangle$ [\unit{mm}]} & {$I_D$ [\unit{A}]} & {$\langle x \rangle$ [\unit{mm}]} \\
-        \midrule
-        -1,568 & 2,381 & -0,806 & -8,138 \\
-        -1,492 & 1,701 & -0,904 & -6,398 \\
-        -1,407 & 0,543 & -1,009 & -4,907 \\
-        -1,309 & -0,559 & -1,101 & -3,324 \\
-        -1,192 & -1,598 & -1,194 & -1,859 \\
-        -1,096 & -2,669 & -1,294 & -0,200 \\
-        -0,989 & -3,963 & -1,394 & 1,271 \\
-        -0,891 & -5,084 & -1,455 & 1,971 \\
-        -0,789 & -6,340 & {---} & {---} \\
-        -0,694 & -7,617 & {---} & {---} \\
-        -0,505 & -9,388 & {---} & {---} \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[H]
-    \centering
-    \caption{Messdaten der vertikalen Justage-Scans (Q113MATCH).}
-    \label{tab:justage_daten_y}
-    \begin{tabular}{|SS|SS|}
-        \toprule
-        \multicolumn{2}{|c|}{Scan 1 ($I_{Q1} = \qty{1,685}{A}$)} & \multicolumn{2}{c|}{Scan 2 ($I_{Q2} = \qty{2,703}{A}$)} \\
-        {$I_D$ [\unit{A}]} & {$\langle y \rangle$ [\unit{mm}]} & {$I_D$ [\unit{A}]} & {$\langle y \rangle$ [\unit{mm}]} \\
-        \midrule
-        0,501 & 10,872  & -2,816 & -4,932 \\
-        0,305 & 9,890   & -2,615 & -3,840 \\
-        0,149 & 8,802   & -2,410 & -3,018 \\
-        -0,056 & 7,535  & -2,208 & -2,195 \\
-        -0,259 & 6,131  & -2,022 & -1,261 \\
-        -0,457 & 4,694  & -1,812 & -0,549 \\
-        -0,657 & 3,212  & -1,619 & 0,173 \\
-        -0,852 & 1,707  & -1,414 & 0,649 \\
-        -1,060 & 0,281  & -1,214 & 1,455 \\
-        -1,258 & -1,191 & -1,018 & 2,048 \\
-        -1,458 & -2,743 & -0,825 & 2,479 \\
-        -1,661 & -4,065 & -0,613 & 3,106 \\
-        -1,861 & -5,467 & -0,425 & 3,716 \\
-        -2,054 & -6,642 & -0,220 & 4,340 \\
-        -2,254 & -7,937 & -0,002 & 4,959 \\
-        -2,303 & -7,715 & 0,186  & 5,700 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[H]
-    \centering
-    \caption{Kontrollmessungen der Strahlposition bei fixiertem Korrekturstrom $I_{D0}$.}
-    \label{tab:kontrolle_justage}
-    \begin{tabular}{|SS|SS|}
-        \toprule
-        \multicolumn{2}{|c|}{Horizontal ($I_{D0,x} = \qty{-1,236}{A}$)} & \multicolumn{2}{c|}{Vertikal ($I_{D0,y} = \qty{-0,777}{A}$)} \\
-        {$I_Q$ [\unit{A}]} & {$\langle x \rangle$ [\unit{mm}]} & {$I_Q$ [\unit{A}]} & {$\langle y \rangle$ [\unit{mm}]} \\
-        \midrule
-        -0,342 & -1,470 & 1,685 & 2,743 \\
-        -0,247 & -1,435 & 1,773 & 2,801 \\
-        -0,149 & -1,548 & 1,900 & 2,780 \\
-        -0,046 & -1,603 & 1,966 & 2,792 \\
-        0,056  & -1,400 & 2,095 & 2,827 \\
-        0,151  & -1,516 & 2,176 & 2,808 \\
-        0,254  & -1,363 & 2,281 & 2,836 \\
-        0,352  & -1,542 & 2,376 & 2,855 \\
-        0,444  & -1,456 & 2,469 & 2,803 \\
-        0,547  & -1,573 & 2,567 & 2,884 \\
-        0,657  & -1,319 & 2,681 & 2,795 \\
-        {---}  & {---}  & 2,703 & 2,876 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
 
 \section{Code}
-\lstinputlisting[language=Python]{Auswertung exp9.py}
+%\lstinputlisting[language=Python]{Auswertung exp21.py}
 
 
 \end{appendices}
