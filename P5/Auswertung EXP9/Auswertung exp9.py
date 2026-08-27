@@ -75,6 +75,7 @@ x_vect_y = 1.0e-05 * np.array([0.1615, 0.2779, 0.7218])
 epsilon_x = np.sqrt(x_vect_x[0]*x_vect_x[2]-x_vect_x[1]**2) #result: 7.284044206345813e-07 m rad = 0.72867 mm mrad
 epsilon_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2) #result: 1.9834890975248643e-06 m rad = 1.98349 mm mrad
 
+
 # Emittanz Fehlerfortpflanzung
 # Fehlerfortpflanzung wurde in situ gemacht:
 sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.07115 mm mrad
