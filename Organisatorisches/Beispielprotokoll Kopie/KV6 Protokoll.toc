@@ -1,0 +1,16 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Hinweise zum Protokoll}{1}{section.1}%
+\contentsline {section}{\numberline {2}Einleitung}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Laser}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Formel 1}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Formel 2}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Grafik}{2}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{2}{section.3}%
+\contentsline {section}{\numberline {4}Experimenteller Aufbau}{2}{section.4}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung}{2}{section.5}%
+\contentsline {section}{\numberline {6}Auswertung der Messungen}{2}{section.6}%
+\contentsline {section}{\numberline {7}Diskussion der physikalischen Ergebnisse}{2}{section.7}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{2}{section.8}%
+\contentsline {subsection}{\numberline {8.1}}{2}{subsection.8.1}%
+\contentsline {section}{Literatur}{A}{subsection.8.1}%
+\contentsline {section}{Abbildungsverzeichnis}{A}{subsection.8.1}%

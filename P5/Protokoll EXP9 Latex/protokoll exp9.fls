@@ -1,6 +1,336 @@
 PWD /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex
-INPUT /usr/local/texlive/2020/texmf.cnf
-INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /usr/local/texlive/2026/texmf.cnf
+INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.tex
 OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.log
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrartcl.cls
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrartcl.cls
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrkbase.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrkbase.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/typearea.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/footmisc/footmisc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/typearea.sty
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/invalid/babel-ngerman.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/invalid/babel-ngerman.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/invalid/babel-ngerman.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/de/babel-de.ini
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/ngerman.ldf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/ngerman.ldf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/ngerman.ldf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/babel-german.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/marvosym/marvosym.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/marvosym/marvosym.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux
+INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.toc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.toc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.toc
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.toc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/dipol joch.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/dipol joch.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/dipol joch.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/dipol joch.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/dipol joch.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Magnetic_field_of_an_idealized_quadrupole_with_forces.png
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/f0d0.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/f0d0.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/f0d0.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/f0d0.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/f0d0.png
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/salome schematic.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/salome schematic.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/salome schematic.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/salome schematic.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/salome schematic.png
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm0500.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/strahltransport einstellungen.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/strahltransport einstellungen.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/strahltransport einstellungen.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/strahltransport einstellungen.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/strahltransport einstellungen.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/02_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/02_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/02_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/02_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/02_schirm.png
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/03_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/03_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/03_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/03_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/03_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/04_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/04_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/04_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/04_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/04_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/05_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/05_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/05_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/05_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/05_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/06_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/06_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/06_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/06_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/strahltransport/06_schirm.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_X-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_X-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_X-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_X-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_X-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_Y-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_Y-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_Y-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_Y-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Strahlbasierte Justage_Y-Ausrichtung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_x.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_x.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_x.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_x.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_x.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_y.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_y.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_y.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_y.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/Überprüfung der Strahlbasierte Justage_y.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/beta func mit fehlerfortpflanzung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/beta func mit fehlerfortpflanzung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/beta func mit fehlerfortpflanzung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/beta func mit fehlerfortpflanzung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/img/beta func mit fehlerfortpflanzung.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.bbl
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.lof
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.lof
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.lof
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.lof
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P5/Protokoll EXP9 Latex/protokoll exp9.aux
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
