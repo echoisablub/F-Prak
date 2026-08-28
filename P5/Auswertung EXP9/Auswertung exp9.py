@@ -8,6 +8,17 @@ import scipy.constants as const
 
 # Energiemessung
 '''Messung: <y>(I)'''
+
+# Messwerte
+Dip_I_A = np.array([
+    2.371, 2.278, 2.181, 2.076, 1.963,
+    1.868, 1.768, 1.678, 1.568, 1.477, 1.372])
+
+y_pos_mm = np.array([
+    -2.811637, -4.023143, -5.466812, -7.090669,
+    -8.824708, -10.06973, -11.37569, -12.95893,
+    -14.34587, -15.63977, -17.17929])
+
 dy_dI = 14.4384e-3 # in m/A
 sigma_dy_dI = (14.4384e-3 - 14.2273e-3)/2 # 1 sigma berechnung durch (value-lower)/2 mit value und lower 2 sigma fehler
 kappa = 7.64e-6 # in Tm/A, Eigenschaft des Dipols
@@ -23,6 +34,25 @@ p = E_0*np.sqrt(gamma**2-1) #result: p=82.4896058045521 keV/c
 print(p)
 # Energiemessung Fehlerfortpflanzung
 # fehlerbehaftete Größen: L, Steigung bzw. dy_dI
+
+# Lineare Regression
+m, b = np.polyfit(Dip_I_A, y_pos_mm, 1)
+# Regressionsgerade
+I_fit = np.linspace(Dip_I_A.min(), Dip_I_A.max(), 200)
+y_fit = m * I_fit + b
+
+# Plot
+plt.figure(figsize=(7, 5))
+plt.plot(I_fit,y_fit,color='red', label=fr"Lineare Regression")
+plt.plot(Dip_I_A,y_pos_mm,'bx',label="Messwerte")
+plt.xlabel(r"Dipolstrom I [A]")
+plt.ylabel(r"Vertikale Strahlposition y [mm]")
+plt.grid(True, alpha=0.3)
+plt.legend()
+plt.tight_layout()
+plt.savefig(r"Auswertung EXP9/output/Steigung_E_plot.png")
+plt.show()
+
 
 # todo: ekin fehler, beta fehler, impuls fehler
 
@@ -75,11 +105,35 @@ x_vect_y = 1.0e-05 * np.array([0.1615, 0.2779, 0.7218])
 epsilon_x = np.sqrt(x_vect_x[0]*x_vect_x[2]-x_vect_x[1]**2) #result: 7.284044206345813e-07 m rad = 0.72867 mm mrad
 epsilon_y = np.sqrt(x_vect_y[0]*x_vect_y[2]-x_vect_y[1]**2) #result: 1.9834890975248643e-06 m rad = 1.98349 mm mrad
 
+epsilon_x_n = epsilon_x * beta_gamma
+epsilon_y_n = epsilon_y * beta_gamma
+epsilon_n_ges= np.sqrt(epsilon_x_n*epsilon_y_n)
+print(f"transversale Gesamtemittanz: {epsilon_n_ges:.3e}")
+
 # Emittanz Fehlerfortpflanzung
 # Fehlerfortpflanzung wurde in situ gemacht:
 sigma_epsilon_x = 0.097674*epsilon_x #result: 7.11461733810621e-08 m rad = 0.07115 mm mrad
 sigma_epsilon_y = 0.045431*epsilon_y #result: 9.011189318965211e-08 m rad = 0.09011 mm mrad
 
+# Fehlerfortpflanzung
+rel_error_x = sigma_epsilon_x / epsilon_x
+rel_error_y = sigma_epsilon_y / epsilon_y
+
+rel_error_ges = 0.5 * np.sqrt(
+    rel_error_x**2 + rel_error_y**2
+)
+sigma_epsilon_n_ges = rel_error_ges * epsilon_n_ges
+
+epsilon_n_ges_mm_mrad = epsilon_n_ges * 1e6
+sigma_epsilon_n_ges_mm_mrad = sigma_epsilon_n_ges * 1e6
+
+print(f"Transversale Gesamtemittanz: "
+      f"{epsilon_n_ges_mm_mrad:.3e} ± "
+      f"{sigma_epsilon_n_ges_mm_mrad:.3e} mm mrad")
+
+#print(f"Transversale Gesamtemittanz: "
+#      f"{epsilon_n_ges:.3e} ± {sigma_epsilon_n_ges:.3e} m rad")
+#print(f"Relativer Fehler: {rel_error_ges:.3%}")
 
 # Optische Funktionen am eingang vom Quadripol (Twiss Parameter)
 beta_x = x_vect_x[0]/(epsilon_x)
