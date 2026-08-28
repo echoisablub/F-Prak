@@ -1,0 +1,203 @@
+\documentclass[10pt,a4paper, bibliography=totoc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{marvosym}
+%\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\sisetup{locale = DE}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{235, 235, 235}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+\lstset{literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
+\usepackage[title,titletoc]{appendix}
+\renewcommand{\appendixtocname}{Anhang}
+\renewcommand{\appendixpagename}{Anhang}
+
+
+%\renewcommand{\UrlFont}{\small\tt}
+\usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
+
+\linespread{1.1}
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+\title{Femtosekunden X-ray Experiments}
+\subtitle{Fortgeschrittenenpraktikum\\ Versuch EXP21}
+\author{Léonie Lanz \\ Nico Kalogerakis}
+\maketitle
+\newpage
+
+\tableofcontents
+\vfill
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Einleitung}
+
+
+\section{Theoretische Grundlagen}
+
+
+
+\section{Versuchsdurchführung}
+
+
+
+\section{Auswertung der Messergebnisse}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{img/strahltransport/strahltransport einstellungen.png}
+    \caption{Einstellungen: Strahltransport}
+    \label{fig:einstellungenstrahltransport}
+\end{figure}
+
+
+\begin{figure}[H]
+
+    \centering
+    
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/02_schirm.png}
+        \caption{Schirm 2}
+        \label{fig:schirm2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/03_schirm.png}
+        \caption{Schirm 3}
+        \label{fig:schirm3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/04_schirm.png}
+        \caption{Schirm 4}
+        \label{fig:schirm4}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/05_schirm.png}
+        \caption{Schirm 5}
+        \label{fig:schirm5}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Horizontaler Abstand zwischen den beiden unteren Bildern
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/strahltransport/06_schirm.png}
+        \caption{Schirm 6}
+        \label{fig:schirm6}
+    \end{subfigure}
+
+    \caption{Gesamtdarstellung der fünf Messungen: Strahlprofile auf den verschiedenen Schirmen}
+    \label{fig:fuenf_bilder_gesamt}
+\end{figure}
+
+
+
+\section{Diskussion der physikalischen Ergebnisse}
+
+
+\section{Zusammenfassung}
+
+
+\newpage
+
+\pagenumbering{Alph}
+
+\bibliographystyle{ieeetr}
+\bibliography{literatur}
+%\addcontentsline{toc}{chapter}{Bibliography}
+
+\newpage
+
+\listoffigures 
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+\newpage
+
+\begin{appendices}
+    
+\section{Tabellen}
+
+\begin{table}[H]
+    \centering
+    \caption{Messdaten des Dipol-Scans zur Bestimmung der kinetischen Energie (Schirm 3).}
+    \label{tab:daten_energie}
+    \begin{tabular}{|S|S|}
+        \toprule
+        {Dipolstrom $I$ [\unit{A}]} & {Vertikale Position $y$ [\unit{mm}]} \\
+        \midrule
+        2,371 & -2,8116 \\
+        2,278 & -4,0231 \\
+        2,181 & -5,4668 \\
+        2,076 & -7,0907 \\
+        1,963 & -8,8247 \\
+        1,868 & -10,0697 \\
+        1,768 & -11,3757 \\
+        1,678 & -12,9589 \\
+        1,568 & -14,3459 \\
+        1,477 & -15,6398 \\
+        1,372 & -17,1793 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section{Code}
+%\lstinputlisting[language=Python]{Auswertung exp21.py}
+
+
+\end{appendices}
+
+
+\end{document} 

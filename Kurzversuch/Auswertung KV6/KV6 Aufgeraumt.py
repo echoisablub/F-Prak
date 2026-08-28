@@ -279,8 +279,8 @@ def plot_filter_analysis(freq, spec_ref, spec_filt):
     plt.grid(True)
     plt.show()
 
-dataset = "Iod 1"
-dataset_filter= "Filter 1"
+dataset = "Iod 2"
+dataset_filter= "Filter 2"
 
 # Korrekturfunktion für Datensatz
 delta_func, laser_slope = korrekturfunktion(dataset)
