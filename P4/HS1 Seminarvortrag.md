@@ -29,6 +29,9 @@ Rotationskurve
 	systematische fehler:
 		geschwindigkeitsauflösung
 		3sigma grenze zu niedrig
+		Auflösung whack, also je näher desto besser sieht man, und wenn radius klein ist, ist es weiter weg -> mehr fehler
+		Anpassung von Graf roationsgeschwindikeit zu Antennentemp (soll um null schwingend) muss man selbst machen (schätzen, mal gucken, ob wir ne idee haben, das so genau wie möglich zu machen)
+			das ne große fehlerquelle für end rotationskurve
 	immer vergleich mit lit grafen/kurven, und dann gucken :)
 
 Dunkle Materie
