@@ -1,0 +1,26 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Erzeugung der Röntgenstrahlung}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Synchrotronstrahlung (SR) vs. Freie-Elektronen-Laser (FEL)}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}SASE-Effekt (Self-Amplified Spontaneous Emission)}{1}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Das untersuchte Molekülsystem \& Photophysik}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Pump-Probe-Prinzip}{1}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Der Pump-Puls}{1}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Der optische Anregungsprozess}{1}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Der optische Relaxationsprozess}{1}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Der Probe-Puls}{1}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Element- und schalen-spezifische Röntgenabsorption}{1}{subsubsection.2.5.1}%
+\contentsline {paragraph}{\nonumberline Photoelektronen-Wellenzahl (EXAFS-Analogie)}{1}{paragraph*.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Röntgenemissionsspektroskopie (XES) \& Fluoreszenzausbeute}{1}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Spin-Sensitivität der $K\beta $-Emissionslinien}{1}{subsubsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.6}Experimenteller Aufbau, Strahlmanipulation \& Diagnosekomponenten}{1}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Versuchsdurchführung}{2}{section.3}%
+\contentsline {section}{\numberline {4}Auswertung der Messergebnisse}{2}{section.4}%
+\contentsline {section}{\numberline {5}Diskussion der physikalischen Ergebnisse}{2}{section.5}%
+\contentsline {section}{\numberline {6}Zusammenfassung}{2}{section.6}%
+\contentsline {section}{\nonumberline Literatur}{A}{section*.2}%
+\contentsline {section}{Abbildungsverzeichnis}{B}{section*.2}%
+\contentsline {section}{Anhang \numberline {A}Tabellen}{C}{appendix.1.A}%
+\contentsline {section}{Anhang \numberline {B}Code}{C}{appendix.1.B}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

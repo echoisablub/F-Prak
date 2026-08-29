@@ -82,66 +82,61 @@
 
 \section{Theoretische Grundlagen}
 
+\subsection{Erzeugung der Röntgenstrahlung}
+
+\subsubsection{Synchrotronstrahlung (SR) vs. Freie-Elektronen-Laser (FEL)}
+
+\subsubsection{SASE-Effekt (Self-Amplified Spontaneous Emission)}
+
+\subsection{Das untersuchte Molekülsystem \& Photophysik}
+
+\subsection{Pump-Probe-Prinzip}
+
+\subsection{Der Pump-Puls}
+\subsubsection{Der optische Anregungsprozess}
+
+\subsubsection{Der optische Relaxationsprozess}
+
+\subsection{Der Probe-Puls}
+\subsubsection{Element- und schalen-spezifische Röntgenabsorption}
+
+Dominanz des photoelektrischen Effekts im harten Röntgenbereich.\\
+Die K-Absorptionskante von Eisen bei ca. $7112\text{ eV}$ 
+(Anregung von 1s-Rumpfelektronen) im Vergleich zu leichteren Elementen der Lösung.
+
+\paragraph{Photoelektronen-Wellenzahl (EXAFS-Analogie)}
+Die kinetische Energie des durch den harten Röntgen-puls ausgelösten 
+K-Schalen-Photoelektrons und dessen De-Broglie-Wellenzahl $k$ (wichtig für
+den physikalischen Hintergrund der Streuung an Nachbaratomen) ist aus der
+relativistischen Energiespaltung des Photoelektrons gegeben:
+\begin{align*}
+    k &= \frac{\sqrt{2m_e (E_{Xray} - |E_{1s}|)}}{\hbar} \\
+      &\approx 0{,}512 \cdot \sqrt{E_{Xray} - |E_{1s}| \text{ [in eV]}} \quad
+      (\text{in } \text{AA}^{-1}).
+\end{align*}
+$E_{Xray}$: Die Energie des einfallenden Röntgenquants
+(oberhalb der K-Kante, $E_{Xray} > 7112\text{ eV}$).\\
+$E_{1s}$: Die Bindungsenergie des Fe-1s-Rumpfelektrons ($7112\text{ eV}$).
+
+\subsubsection{Röntgenemissionsspektroskopie (XES) \& Fluoreszenzausbeute}
+- Zerfall des Lochzustands im 1s-Orbital durch Nachrücken von Elektronen aus höheren Schalen.\\
+- Konkurrenz zwischen strahlungslosem Auger-Effekt (ca. 70 \%) und Röntgenfluoreszenz (ca. 30 \% bei Eisen).
+- Unterscheidung zwischen resonantem und nicht-resonantem XES.\\
+- Nomenklatur der Emissionslinien $(K\alpha$ für $2p \rightarrow 1s$, $K\beta$ für $3p \rightarrow 1s$).
+
+\subsubsection{Spin-Sensitivität der \texorpdfstring{$K\beta$}{Kbeta}-Emissionslinien}
+- Physikalische Ursache des Satellitenpeaks $(K\beta'$) durch Austauschwechselwirkung zwischen den ungepaarten Elektronen im $3d$-Zustand und dem Loch im $3p$-Zustand.\\
+- Verwendung des $K\beta$-Spektrums zur eindeutigen Unterscheidung zwischen dem LS-Grundzustand und dem optisch erzeugten HS-Zustand.
+
+\subsection{Experimenteller Aufbau, Strahlmanipulation \& Diagnosekomponenten}
+
+Quelle Versuchsmappe: \cite{1}
 
 
 \section{Versuchsdurchführung}
 
 
-
 \section{Auswertung der Messergebnisse}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.35]{img/strahltransport/strahltransport einstellungen.png}
-    \caption{Einstellungen: Strahltransport}
-    \label{fig:einstellungenstrahltransport}
-\end{figure}
-
-
-\begin{figure}[H]
-
-    \centering
-    
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/02_schirm.png}
-        \caption{Schirm 2}
-        \label{fig:schirm2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/03_schirm.png}
-        \caption{Schirm 3}
-        \label{fig:schirm3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/04_schirm.png}
-        \caption{Schirm 4}
-        \label{fig:schirm4}
-    \end{subfigure}
-
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/05_schirm.png}
-        \caption{Schirm 5}
-        \label{fig:schirm5}
-    \end{subfigure}
-    \hspace{0.05\textwidth} % Horizontaler Abstand zwischen den beiden unteren Bildern
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/06_schirm.png}
-        \caption{Schirm 6}
-        \label{fig:schirm6}
-    \end{subfigure}
-
-    \caption{Gesamtdarstellung der fünf Messungen: Strahlprofile auf den verschiedenen Schirmen}
-    \label{fig:fuenf_bilder_gesamt}
-\end{figure}
-
 
 
 \section{Diskussion der physikalischen Ergebnisse}
@@ -156,7 +151,6 @@
 
 \bibliographystyle{ieeetr}
 \bibliography{literatur}
-%\addcontentsline{toc}{chapter}{Bibliography}
 
 \newpage
 
@@ -168,29 +162,6 @@
 \begin{appendices}
     
 \section{Tabellen}
-
-\begin{table}[H]
-    \centering
-    \caption{Messdaten des Dipol-Scans zur Bestimmung der kinetischen Energie (Schirm 3).}
-    \label{tab:daten_energie}
-    \begin{tabular}{|S|S|}
-        \toprule
-        {Dipolstrom $I$ [\unit{A}]} & {Vertikale Position $y$ [\unit{mm}]} \\
-        \midrule
-        2,371 & -2,8116 \\
-        2,278 & -4,0231 \\
-        2,181 & -5,4668 \\
-        2,076 & -7,0907 \\
-        1,963 & -8,8247 \\
-        1,868 & -10,0697 \\
-        1,768 & -11,3757 \\
-        1,678 & -12,9589 \\
-        1,568 & -14,3459 \\
-        1,477 & -15,6398 \\
-        1,372 & -17,1793 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
 
 
 \section{Code}
