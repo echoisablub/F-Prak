@@ -70,7 +70,8 @@ Was löst die optische Anregung im Molekül aus?
 ### Lambert-Beer-Gesetz
 Die Abschwächung der Intensität $I(\lambda)$ beim Durchgang durch die Probe der Dicke $d$ wird chemisch (dekadisch) beschrieben durch:$$
 I(\lambda) = I_0(\lambda) \cdot 10^{-\varepsilon(\lambda) \cdot c \cdot d}
-$$- **$\varepsilon(\lambda)$:** Der molare, dekadische Extinktionskoeffizient (in $\text{L mol}^{-1}\text{cm}^{-1}$).
+$$
+- **$\varepsilon(\lambda)$:** Der molare, dekadische Extinktionskoeffizient (in $\text{L mol}^{-1}\text{cm}^{-1}$).
 - **$c$:** Die Stoffmengenkonzentration der Lösung (in $\text{mol L}^{-1}$).
 - **$d$:** Die Schichtdicke des Flüssigkeitsstrahls (Liquid Jet, $d \approx 25,\mu\text{m}$ bis $100,\mu\text{m}$).
 
@@ -121,7 +122,6 @@ Die experimentell zugänglichen Halbwertsbreiten (**FWHM**) hängen mit diesen P
 \end{align}$$Die effektive Bestrahlungsfläche $A_{eff}$ der Probe im Fokus ergibt sich zu:$$
 A_{eff} = \frac{\pi \cdot d_{FWHM}^2}{4 \ln 2} \approx 1{,}13 \cdot d_{FWHM}^2
 $$
-
 ## Strahlablenkung und Transport
 - Planarspiegel (M1, M2, M3) zur Elimination hochenergetischer Untergrundstrahlung.
 ## Monochromatisierung (Bragg-Reflexion)
