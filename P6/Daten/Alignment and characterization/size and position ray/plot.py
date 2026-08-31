@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
 # Load data
-filename = "Daten/Alignment and characterization/size and position ray/BeamImagingUnit2 26-08-31 13-49-38"
+filename = "Daten/Alignment and characterization/size and position ray/pulse_data_7400eV/BeamImagingUnit2 26-08-31 14-07-30.txt"
 
 data = np.loadtxt(filename, delimiter=",", comments="#")
 

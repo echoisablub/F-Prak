@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-folder = Path("Daten/Alignment and characterization/size and position ray/pulse_data")
+folder = Path("Daten/Alignment and characterization/size and position ray/pulse_data_7400eV")
 
 files = sorted(folder.glob("*"))   # all files in folder
 
