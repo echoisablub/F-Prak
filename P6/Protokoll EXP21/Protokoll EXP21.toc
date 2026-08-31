@@ -15,6 +15,7 @@
 \contentsline {subsubsection}{\numberline {2.5.2}Röntgenemissionsspektroskopie (XES) \& Fluoreszenzausbeute}{1}{subsubsection.2.5.2}%
 \contentsline {subsubsection}{\numberline {2.5.3}Spin-Sensitivität der $K\beta $-Emissionslinien}{1}{subsubsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.6}Experimenteller Aufbau, Strahlmanipulation \& Diagnosekomponenten}{1}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Software}{1}{subsubsection.2.6.1}%
 \contentsline {section}{\numberline {3}Versuchsdurchführung}{2}{section.3}%
 \contentsline {section}{\numberline {4}Auswertung der Messergebnisse}{2}{section.4}%
 \contentsline {section}{\numberline {5}Diskussion der physikalischen Ergebnisse}{2}{section.5}%
