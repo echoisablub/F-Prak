@@ -1,31 +1,47 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  28 AUG 2026 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  31 AUG 2026 09:20
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex"
-(/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex
+**"./Protokoll EXP21.tex"
+(Protokoll EXP21.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cl
+s
+Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article
+)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent
+ basics and keyval usage)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independen
+t basics and keyval usage)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
 Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hooks)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
+s)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
 Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
-))) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+))) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
 Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
+y
 Package: tocbasic 2026/02/02 v3.49.2 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip49
 \scr@dte@tocline@numbox=\box53
@@ -39,10 +55,16 @@ Package scrartcl Info: You've used standard option `10pt'.
 (scrartcl)             If you'd like to set the option with \KOMAoptions,
 (scrartcl)             you'd have to use `fontsize=10pt' there
 (scrartcl)             instead of `10pt', too.
-Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input line 2489.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
-File: scrsize10pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (10pt)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/typearea.sty
+Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input l
+ine 2489.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize10pt
+.clo
+File: scrsize10pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (10
+pt)
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
+y
 Package: typearea 2026/02/02 v3.49.2 KOMA-Script package (type area)
 \ta@bcor=\skip50
 \ta@div=\count275
@@ -123,47 +145,77 @@ Package tocbasic Info: omitting babel extension for `lot'
 \c@table=\count283
 Class scrartcl Info: Redefining `\numberline' on input line 6469.
 \bibindent=\dimen148
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2026/03/08 v26.4 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
 \babel@savecnt=\count284
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
 \U@D=\dimen149
-\l@unhyphenated=\language91
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
+\l@unhyphenated=\language79
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count285
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/invalid/babel-ngerman.tex)
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/invalid\
+babel-ngerman.tex)
 Package babel Info: Importing font and identification data for ngerman
 (babel)             from babel-de.ini. Reported on input line 4330.
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/ngerman.ldf
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ld
+f
 Language: ngerman 
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel-german/babel-german.def
-Package babel Info: Making " an active character on input line 496.
-))) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\babel-germ
+an.def
+Package babel Info: Making " an active character on input line 470.
+)))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen150
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen151
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count286
@@ -213,82 +265,114 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/marvosym/marvosym.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/marvosym\marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen159
 \Gin@req@width=\dimen160
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count298
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count299
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen161
 \Hy@linkcounter=\count300
 \Hy@pagecounter=\count301
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count302
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+ (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -301,16 +385,21 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count303
- (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen162
- (/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count304
 \Field@Width=\dimen163
@@ -327,26 +416,34 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Hfootnote=\count307
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count308
 \c@bookmark@seq@number=\count309
- (/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
 )
 \Hy@SectionHShift=\skip68
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count310
 \float@exts=\toks25
 \float@box=\box57
 \@float@everytoks=\toks26
 \@floatcapt=\box58
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count311
 \l__siunitx_number_exponent_fixed_int=\count312
@@ -362,8 +459,11 @@ Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_angle_marker_box=\box59
 \l__siunitx_angle_unit_box=\box60
 \l__siunitx_compound_count_int=\count321
- (/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
 )
 \l__siunitx_table_tmp_box=\box61
 \l__siunitx_table_tmp_dim=\dimen166
@@ -378,7 +478,7 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 \l__siunitx_unit_tmp_int=\count322
 \l__siunitx_unit_position_int=\count323
 \l__siunitx_unit_total_int=\count324
- (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+ (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen170
 \ar@mcellbox=\box67
@@ -387,12 +487,16 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip69
 \backup@length=\skip70
 \ar@cellbox=\box68
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
 \BKM@id=\count325
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen172
 \lightrulewidth=\dimen173
@@ -411,15 +515,18 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count328
 \@lastruleclass=\count329
 \@thisrulewidth=\dimen184
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 Package tocbasic Info: Loading of class-dependent code for package caption3
 (tocbasic)             prevented on line 50.
 
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen185
 \captionmargin=\dimen186
@@ -439,7 +546,7 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count332
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count333
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count334
 \lst@gtempboxa=\box69
 \lst@token=\toks28
@@ -452,31 +559,34 @@ Package caption Info: New subtype `subtable' on input line 238.
 \lst@newlines=\count338
 \lst@lineno=\count339
 \lst@maxwidth=\dimen196
- (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count340
 \lst@skipnumbers=\count341
 \lst@framebox=\box70
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
-
 ==> First Aid for listings.sty no longer applied!
     Expected:
         2024/09/23 1.10c (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -486,14 +596,14 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/appendix/appendix.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count342
 \c@@ppsavesec=\count343
 \c@@ppsaveapp=\count344
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count345
@@ -508,10 +618,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen259
 \Gm@layoutvoffset=\dimen260
 \Gm@dimlist=\toks29
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count348
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux
+) (Protokoll EXP21.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 10.
 )
@@ -535,7 +649,9 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
- (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count349
 \scratchdimen=\dimen261
@@ -548,17 +664,26 @@ LaTeX Font Info:    ... okay on input line 64.
 \MPnumerator=\count353
 \makeMPintoPDFobject=\count354
 \everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 64.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
-File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `trans
+lations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 64.
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `german'. on input line 64.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -601,42 +726,58 @@ Package tocbasic Info: setting babel extension for `lol' on input line 64.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+[1
 
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.toc)
+{C:/Users/emmak/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(Protokoll EXP21.toc)
 \tf@toc=\write3
 \openout3 = `"Protokoll EXP21.toc"'.
 
- [2] [1] [2] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl) [1] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.lof)
+ [2] [1] [2] (Protokoll EXP21.bbl) [1]
+(Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
- [2] [3] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux)
+ [2] [3] (Protokoll EXP21.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22561 strings out of 467525
- 448369 string characters out of 5418982
- 959991 words of memory out of 5000000
- 51227 multiletter control sequences out of 15000+600000
+ 22580 strings out of 467867
+ 449633 string characters out of 5418334
+ 959362 words of memory out of 5000000
+ 51214 multiletter control sequences out of 15000+600000
  633546 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,107p,11374b,1130s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (7 pages, 120025 bytes).
+ 108i,11n,107p,11249b,1130s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmex10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/emmak/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/emmak/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
+s/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on "Protokoll EXP21.pdf" (7 pages, 142747 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 183 compressed objects within 2 object streams
+ 211 PDF objects out of 1000 (max. 8388607)
  32 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
