@@ -23,7 +23,41 @@
 		  Center = 207.15 px
 		  FWHM   = 98.48 px==
 	Afterward, download about 20 single images (20 different X-ray pulses) and determine the horizontal and vertical position (x,y) of the maximum for each pulse. Then calculate the overall mean position and the standard deviation (±1SD), where the latter is a measure of the spatial jitter of every X-ray pulse as seen on BIU2. Discuss your results in terms of relevance for the actual experiment (e.g., is the experiment feasible or not under these fluctuating conditions?). 
-		
+		File: BeamImagingUnit2 26-08-31 14-07-22, x_max: 188, y_max: 210
+		File: BeamImagingUnit2 26-08-31 14-07-24, x_max: 176, y_max: 207
+		File: BeamImagingUnit2 26-08-31 14-07-27, x_max: 194, y_max: 207
+		File: BeamImagingUnit2 26-08-31 14-07-28, x_max: 193, y_max: 208
+		File: BeamImagingUnit2 26-08-31 14-07-30, x_max: 231, y_max: 205
+		File: BeamImagingUnit2 26-08-31 14-07-32, x_max: 202, y_max: 210
+		File: BeamImagingUnit2 26-08-31 14-07-33, x_max: 191, y_max: 212
+		File: BeamImagingUnit2 26-08-31 14-07-35, x_max: 240, y_max: 211
+		File: BeamImagingUnit2 26-08-31 14-07-37, x_max: 215, y_max: 214
+		File: BeamImagingUnit2 26-08-31 14-07-38, x_max: 215, y_max: 214
+		File: BeamImagingUnit2 26-08-31 14-07-39, x_max: 215, y_max: 210
+		File: BeamImagingUnit2 26-08-31 14-07-41, x_max: 200, y_max: 212
+		File: BeamImagingUnit2 26-08-31 14-07-42, x_max: 200, y_max: 212
+		File: BeamImagingUnit2 26-08-31 14-07-44, x_max: 244, y_max: 214
+		File: BeamImagingUnit2 26-08-31 14-07-45, x_max: 221, y_max: 213
+		File: BeamImagingUnit2 26-08-31 14-07-47, x_max: 253, y_max: 210
+		File: BeamImagingUnit2 26-08-31 14-07-48, x_max: 239, y_max: 214
+		File: BeamImagingUnit2 26-08-31 14-07-50, x_max: 235, y_max: 209
+		File: BeamImagingUnit2 26-08-31 14-07-52, x_max: 201, y_max: 209
+		File: BeamImagingUnit2 26-08-31 14-07-53, x_max: 172, y_max: 213
+		File: BeamImagingUnit2 26-08-31 14-07-54, x_max: 214, y_max: 208
+		File: BeamImagingUnit2 26-08-31 14-07-56, x_max: 227, y_max: 209
+		File: BeamImagingUnit2 26-08-31 14-07-58, x_max: 250, y_max: 209
+		File: BeamImagingUnit2 26-08-31 14-07-59, x_max: 250, y_max: 209
+		File: BeamImagingUnit2 26-08-31 14-08-00, x_max: 206, y_max: 213
+		File: BeamImagingUnit2 26-08-31 14-08-02, x_max: 194, y_max: 204
+		File: BeamImagingUnit2 26-08-31 14-08-03, x_max: 196, y_max: 210
+		File: BeamImagingUnit2 26-08-31 14-08-05, x_max: 196, y_max: 214
+		File: BeamImagingUnit2 26-08-31 14-08-06, x_max: 202, y_max: 206
+		File: BeamImagingUnit2 26-08-31 14-08-07, x_max: 244, y_max: 206
+		File: BeamImagingUnit2 26-08-31 14-08-09, x_max: 169, y_max: 210
+		==Beam position from 20 X-ray pulses
+		x = 212.03 ± 23.61 px
+		y = 210.06 ± 2.80 px==
+		optical resolution roughly: 25 μm per pixel
 3. The X-ray beam exhibits a broader energy distribution of ∆ESASE around E0, the SASE spectrum. It is also called the “pink” X-ray beam, because it is neither truly monochromatic nor as broadband. By inserting the four-bounce crystalmonochromator (Sec. 6.3.2) into the beam path, the spectral bandwidth can be significantly reduced to ∆EMono. 
 	**Go to the monochromator and observe i) the pink and ii) the monochromatic X-ray beam on the BIU2. Document the change in intensity of the beam in your lab book, using screenshots and 3D-plotted image data. **
 4. **Record the spectrum of the pink X-ray beam with the dispersive single-shot spectrum analyzer (SpA1, Sec. 6.4.3)**
