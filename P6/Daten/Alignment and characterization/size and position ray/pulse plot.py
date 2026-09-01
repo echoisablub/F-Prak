@@ -37,6 +37,14 @@ y_mean = np.mean(y_max)
 x_std = np.std(x_max)
 y_std = np.std(y_max)
 
+# Pixel -> mm conversion
+grid_size_mm = 10.0
+n_pixels = 420
+mm_per_pixel = grid_size_mm / n_pixels
+
+x = np.arange(n_pixels) * mm_per_pixel
+y = np.arange(n_pixels) * mm_per_pixel
+
 
 print("Beam position from 20 X-ray pulses")
 print(f"x = {x_mean:.2f} ± {x_std:.2f} px")
@@ -48,19 +56,19 @@ fig, ax = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
 
 # Horizontal position
 ax[0].plot(pulse, x_max, "o-", label="Pulse position")
-ax[0].axhline(x_mean, linestyle="--", label=f"Mean = {x_mean:.2f} px")
-ax[0].axhspan(x_mean - x_std, x_mean + x_std, alpha=0.2, label=f"±1 SD = {x_std:.2f} px")
-ax[0].set_ylabel("x [pixel]")
+ax[0].axhline(x_mean, linestyle="--", label=f"Mean = {x_mean:.2f} mm")
+ax[0].axhspan(x_mean - x_std, x_mean + x_std, alpha=0.2, label=f"±1 SD = {x_std:.2f} mm")
+ax[0].set_ylabel("x [mm]")
 ax[0].set_title("Horizontal beam position")
 ax[0].grid(True)
 ax[0].legend()
 
 # Vertical position
 ax[1].plot(pulse, y_max, "o-", label="Pulse position")
-ax[1].axhline(y_mean, linestyle="--", label=f"Mean = {y_mean:.2f} px")
-ax[1].axhspan(y_mean - y_std, y_mean + y_std, alpha=0.2, label=f"±1 SD = {y_std:.2f} px")
+ax[1].axhline(y_mean, linestyle="--", label=f"Mean = {y_mean:.2f} mm")
+ax[1].axhspan(y_mean - y_std, y_mean + y_std, alpha=0.2, label=f"±1 SD = {y_std:.2f} mm")
 ax[1].set_xlabel("X-ray pulse")
-ax[1].set_ylabel("y [pixel]")
+ax[1].set_ylabel("y [mm]")
 ax[1].set_title("Vertical beam position")
 ax[1].grid(True)
 ax[1].legend()
@@ -74,14 +82,14 @@ plt.figure(figsize=(7, 6))
 
 plt.scatter(x_max, y_max, s=50, label="Individual pulses")
 # Mean position
-plt.scatter(x_mean, y_mean, marker="x",s=120, label=f"Mean position ({x_mean:.1f}, {y_mean:.1f}) px")
+plt.scatter(x_mean, y_mean, marker="x",s=120, label=f"Mean position ({x_mean:.1f}, {y_mean:.1f}) mm")
 # Horizontal ±1 SD
 plt.axvspan(x_mean - x_std, x_mean + x_std, alpha=0.15)
 # Vertical ±1 SD
 plt.axhspan(y_mean - y_std, y_mean + y_std, alpha=0.15)
 
-plt.xlabel("x [pixel]")
-plt.ylabel("y [pixel]")
+plt.xlabel("x [mm]")
+plt.ylabel("y [mm]")
 plt.title("Spatial jitter of X-ray pulses on BIU2")
 plt.axis("equal")
 plt.grid(True)
