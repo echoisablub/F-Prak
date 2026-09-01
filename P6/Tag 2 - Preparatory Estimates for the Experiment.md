@@ -90,12 +90,12 @@
     **Calculate the concentration c of the solution for these three wavelengths for a desired optical density OD = 1 and a liquid jet thickness of d=25 μm.** 
     Note: The optical density is given by OD = $\epsilon$ · c · d (Sec. 3.1 and exercise 13), where d is the thickness of the liquid beam and (λ) is the wavelength-dependent extinction coefficient of [Fe(bipy)3]2+ in water. 
 		$\epsilon*c*d=1$, $c_{[Fe(bipy)_3]Cl_2 \cdot 3H_2O} = 0,308 \frac{mol}{L}$, $d=25\mu m$
-		$\epsilon(\lambda)$ aus Abb 3.3 geschätzt
-		355nm: $\epsilon(355nm)=12000\, mol^{-1}cm^{-1}$, $c=\frac{1}{\epsilon \cdot d}= \frac{1}{12000\, mol^{-1}cm^{-1} \cdot 25 \cdot10^{-2}cm}$
+		$\epsilon(\lambda)$ aus Abb 3.3 geschätzt mit $M=\frac{mol}{L}$
+		355nm: $\epsilon(355nm)=12000\, M^{-1}cm^{-1}$, $c=\frac{1}{\epsilon \cdot d}= \frac{1}{12000\, (\frac{mol}{L})^{-1}cm^{-1} \cdot 25 \cdot10^{-2}cm}$
 			$c_{355}=0{,}0333\text{ mol/L}$
-		400nm: $\epsilon(400nm)=4000\, mol^{-1}cm^{-1}$, $c=\frac{1}{\epsilon \cdot d}= \frac{1}{4000\, mol^{-1}cm^{-1} \cdot 25 \cdot10^{-2}cm}$
+		400nm: $\epsilon(400nm)=4000\, M^{-1}cm^{-1}$, $c=\frac{1}{\epsilon \cdot d}= \frac{1}{4000\, (\frac{mol}{L})^{-1}cm^{-1} \cdot 25 \cdot10^{-2}cm}$
 			$c_{400}=0{,}100\text{ mol/L}$
-		515nm: $\epsilon(515nm)=8000\, mol^{-1}cm^{-1}$, $c=\frac{1}{\epsilon \cdot d}= \frac{1}{8000\, mol^{-1}cm^{-1} \cdot 25 \cdot10^{-5}cm}$
+		515nm: $\epsilon(515nm)=8000\, M^{-1}cm^{-1}$, $c=\frac{1}{\epsilon \cdot d}= \frac{1}{8000\, (\frac{mol}{L})^{-1}cm^{-1} \cdot 25 \cdot10^{-5}cm}$
 			$c_{515}=0{,}050\text{ mol/L}$
 		vegleich zu $c_{solution}=0,308 \, mol/L$
 16. **Select a laser excitation wavelength and justify your choice. The following pulse energies are available: 5 μJ (355 nm), 15 μJ (515 nm) and 50 μJ (400 nm).** 
@@ -140,11 +140,17 @@
 		1$00 \mu m$, $5{,}26 \times 10^{13}$, $20{,}3\ \mu\text{J}$
 			bei 515 nm steht eine max Pulsenergie 15 µJ zur Verfügung: bei einem Spot-Durchmesser von 100 µm knapp unterhalb der berechneten Sättigungsgrenze (~20,3 µJ)
 			also maximale Anregungseffizienz ohne Multiphotonen-Absorptionen :)
+			Multiphoton Absorption ist was bisschen anderes
+				1 photon pro wirkungsquerschnitt
 		Anternativen bisschen whack: 
 		Spot-Durchmesser $d_{\text{laser}}$: $50 \mu m$ / $250 \mu m$, Moleküle im Volumen:$1{,}31 \times 10^{13}$ / $1{,}18 \times 10^{14}$, Kritische Pulsenergie: $5{,}1\ \mu\text{J}$ / $45{,}5\ \mu\text{J}$
+		Änderung zu $\lambda=400nm$, weil reasons (look ex 16)
+			$d_{laser}=150\mu m$ ($E_{Puls}=58,7\mu J$) chosen weil $E_{\lambda}=50\mu J$
 	c) **Verify your calculation with the calculator built into the vLab / Laser. Document this with a screenshot**. 
-		Laser Power: Pulse Energy * Rep Rate $=15\mu J*0,55MHz=8,25W$
+		Laser Power: 
+			Pulse Energy * Rep Rate $=15\mu J*0,55MHz=8,25W$
 			bzw $=20,3\mu J*0,55MHz=11,625W$ 
+			bei $\lambda=400nm$: $P=27,5W$ mit Rep Rate $=0,55MHz$ (Wir arbeiten weiter mit dem 400nm)
 		Zahlen Stimmen Überein, bei Watt mit $E_{Puls_{eff}}$
 		sonst halt größenordnung passen, aber bisschen anders, weil Puls Energie nur $15\mu J$ kann, rest ist Overshooting, für Jitter Kompensation?
 20. Two X-ray crystal spectrometers are available at the FXE instrument of European XFEL: one von Hamos and one Johann spectrometer (Sec. 6.5.2). 

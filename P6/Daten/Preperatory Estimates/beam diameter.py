@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 c_sol = 0.308           # mol/L
 N_A = 6.022e23          # 1/mol
 d_jet = 25e-6           # m
-lambda_laser = 515e-9   # m
+lambda_laser = 400e-9   # m
 h = 6.626e-34           # J s
 c_light = 2.998e8       # m/s
 # Photon energy
@@ -32,7 +32,7 @@ E_critical = N_molecules * E_photon
 E_critical_uJ = E_critical * 1e6
 
 # Comparison points
-beam_sizes = np.array([50, 100, 250])   # µm
+beam_sizes = np.array([50, 100, 150, 250])   # µm
 
 A = 1.133 * (beam_sizes * 1e-6)**2
 V = A * d_jet * 1000    # L
@@ -44,11 +44,12 @@ fig, ax = plt.subplots(figsize=(8, 5))
 ax.plot(d_beam,E_critical_uJ,linewidth=2,label='Critical pulse energy')
 
 # Available laser pulse energy
-ax.axhline(15,linestyle='--',linewidth=1.5,label='Maximum available: 15 µJ')
-ax.scatter(beam_sizes,E,s=60,zorder=3)
+ax.axhline(50,linestyle='--',linewidth=1.5,label='Maximum available: 50 µJ')
+ax.scatter(beam_sizes,E,s=60,zorder=4)
 offsets = [
     (-20, 20),    # 50 µm
     (-20, 15),    # 100 µm
+    (-20, 15),    # 150 µm
     (-20, -35)    # 250 µm
 ]
 for d, e, n, offset in zip(beam_sizes, E, N, offsets):
@@ -62,10 +63,10 @@ V_100 = A_100 * d_jet * 1000
 N_100 = c_sol * N_A * V_100
 E_100 = N_100 * E_photon * 1e6
 
-ax.scatter(d_selected,E_100,s=70,zorder=3,label=f'100 µm → {E_100:.1f} µJ')
+ax.scatter(d_selected,E_100,s=70,zorder=4,label=f'100 µm → {E_100:.1f} µJ')
 ax.set_xlabel('Beam diameter $d_{FWHM}$ ($\mu m$)')
 ax.set_ylabel('Critical pulse energy ($\mu J$)')
-ax.set_title('Critical laser pulse energy vs. beam size\n'r'$\lambda = 515$ nm, $d_{jet}=25\,\mu$m')
+ax.set_title('Critical laser pulse energy vs. beam size\n'r'$\lambda = 400$ nm, $d_{jet}=25\,\mu$m')
 
 ax.grid(True, alpha=0.3)
 ax.legend()
