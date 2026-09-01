@@ -87,7 +87,4 @@
 			4: 0.4 C
 		![[Pasted image 20260901102648.png]]
 		$F=\frac{R}{2N\delta}$ 
-		wir haben $F=$
-		$N=1+6+9=16$
-		$R=0,5+1,5+1,0=3$
-		$\delta$ very small so?
+		
