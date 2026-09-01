@@ -57,7 +57,12 @@
 	i) the pink and 
 	ii) the monochromatic X-ray beam on the BIU2.
 	Document the change in intensity of the beam in your lab book, using screenshots and 3D-plotted image data** 
-		
+		![[beam_profile_2d_mono.png]]
+		![[beam_profile_2d_pink.png]]
+		![[beam_profile_3d_mono.png]]
+		![[beam_profile_3d_pink.png]]
+		![[mono_BIU_2.png]]
+		![[pink_BIU_2.png]]
 4. **Record the spectrum of the pink X-ray beam with the dispersive single-shot spectrum analyzer (SpA1, Sec. 6.4.3)**
 	Plot 
 	a) three single-shot spectra of an X-ray pulse 

@@ -32,10 +32,6 @@ A_total = A_h2o + A_fe
 T_h2o = np.exp(-A_h2o)
 T_fe = np.exp(-A_fe)
 T_total = np.exp(-A_total)
-# 4. Umrechnung in prozentuale Absorption
-Abs_h2o = (1.0 - T_h2o) * 100.0
-Abs_fe = (1.0 - T_fe) * 100.0
-Abs_total = (1.0 - T_total) * 100.0
 
 # 4. KONTROLLAUSGABE FÜR DIE TABELLEN IM PROTOKOLL
 for E_target in E:
@@ -49,28 +45,28 @@ for E_target in E:
 
 # 5. PLOT
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
-fig.suptitle('Vergleich der Röntgen-Abschwächung im wässrigen Jet (EXP21)\n'
-             r'Wasserstrahl ($25\ \mu\mathregular{m}$) vs. Eisen-Äquivalent ($54.6\ \mathregular{nm}$)', 
-             fontsize=14, fontweight='bold')
+fig.suptitle('Comparison of X-ray Attenuation in Aqueous Jet (EXP21)\n'
+             r'Water Stream ($25\ \mu m$) vs. Iron Equivalent ($54.6\ nm$)', 
+             fontsize=12, fontweight='bold')
 
 # --- Linker Plot: Transmission ---
-ax1.plot(E / 1000.0, T_h2o * 100, label='Reines Wasser (25 µm)', color='#2ca02c', linestyle='--', linewidth=2)
-ax1.plot(E / 1000.0, T_fe * 100, label='Eisen-Äquivalent (54.6 nm)', color='#d62728', linestyle=':', linewidth=2)
-ax1.plot(E / 1000.0, T_total * 100, label='Gesamtsystem (Wasser + Eisen)', color='#1f77b4', linewidth=2.5)
-ax1.axvline(E_edge / 1000.0, color='gray', linestyle='-', alpha=0.5, label='Fe K-Kante (7.112 keV)')
+ax1.plot(E / 1000.0, T_h2o * 100, label='water (25 µm)', color='#2ca02c', linestyle='--', linewidth=2)
+ax1.plot(E / 1000.0, T_fe * 100, label='iron equivalent (54.6 nm)', color='#d62728', linestyle=':', linewidth=2)
+ax1.plot(E / 1000.0, T_total * 100, label='total system (water + iron)', color='#1f77b4', linewidth=2.5)
+ax1.axvline(E_edge / 1000.0, color='gray', linestyle='-', alpha=0.5, label='Fe K-edge (7.112 keV)')
 
-ax1.set_title('Transmission (%)', fontsize=12, fontweight='bold')
-ax1.set_xlabel('Photonenenergie (keV)', fontsize=11)
-ax1.set_ylabel('Transmission $I/I_0$ (%)', fontsize=11)
+ax1.set_title('transmission (%)', fontsize=12, fontweight='bold')
+ax1.set_xlabel('photon energy (keV)', fontsize=11)
+ax1.set_ylabel('transmission $I/I_0$ (%)', fontsize=11)
 ax1.set_ylim(92, 100.5)
 ax1.legend(loc='lower left', frameon=True)
 ax1.grid(True, which='both', linestyle=':', alpha=0.5)
 
 # --- Rechter Plot: Absorbance ---
-ax2.plot(E / 1000.0, A_h2o, label='Reines Wasser (25 µm)', color='#2ca02c', linestyle='--', linewidth=2)
-ax2.plot(E / 1000.0, A_fe, label='Eisen-Äquivalent (54.6 nm)', color='#d62728', linestyle=':', linewidth=2)
-ax2.plot(E / 1000.0, A_total, label='Gesamtsystem (Wasser + Eisen)', color='#1f77b4', linewidth=2.5)
-ax2.axvline(E_edge / 1000.0, color='gray', linestyle='-', alpha=0.5)
+ax2.plot(E / 1000.0, A_h2o, label='pure water (25 µm)', color='#2ca02c', linestyle='--', linewidth=2)
+ax2.plot(E / 1000.0, A_fe, label='iron equivalent (54.6 nm)', color='#d62728', linestyle=':', linewidth=2)
+ax2.plot(E / 1000.0, A_total, label='total system (water + iron)', color='#1f77b4', linewidth=2.5)
+ax2.axvline(E_edge / 1000.0, color='gray', linestyle='-', alpha=0.5, label='Fe K-edge (7.112 keV)')
 
 # Kennzeichnung der quantitativen Punkte aus Aufgabe 12d
 E_targets=[7050,7150]
@@ -84,9 +80,9 @@ for E_target, color in zip(E_targets, ['darkorange', 'purple']):
                  #arrowprops=dict(arrowstyle="->", color=color),
                  color=color, fontweight='bold', fontsize=9)
 
-ax2.set_title('Absorbanz / Natürliche Optische Dichte', fontsize=12, fontweight='bold')
-ax2.set_xlabel('Photonenenergie (keV)', fontsize=11)
-ax2.set_ylabel(r'Absorbanz $A = \ln(I_0/I)$', fontsize=11)
+ax2.set_title('absorbance', fontsize=12, fontweight='bold')
+ax2.set_xlabel('photon energy (keV)', fontsize=11)
+ax2.set_ylabel(r'absorbance $A = \ln(I_0/I)$', fontsize=11)
 ax2.set_ylim(-0.005, 0.07)
 ax2.legend(loc='upper left', frameon=True)
 ax2.grid(True, which='both', linestyle=':', alpha=0.5)
