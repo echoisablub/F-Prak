@@ -1,27 +1,33 @@
-\babel@toc {ngerman}{}\relax 
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
 \contentsline {section}{\numberline {2}Theoretische Grundlagen}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Erzeugung der Röntgenstrahlung}{1}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Synchrotronstrahlung (SR) vs. Freie-Elektronen-Laser (FEL)}{1}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}SASE-Effekt (Self-Amplified Spontaneous Emission)}{1}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Das untersuchte Molekülsystem \& Photophysik}{1}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Pump-Probe-Prinzip}{1}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Der Pump-Puls}{1}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Der optische Anregungsprozess}{1}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Der optische Relaxationsprozess}{1}{subsubsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.5}Der Probe-Puls}{1}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Element- und schalen-spezifische Röntgenabsorption}{1}{subsubsection.2.5.1}%
-\contentsline {paragraph}{\nonumberline Photoelektronen-Wellenzahl (EXAFS-Analogie)}{1}{paragraph*.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Röntgenemissionsspektroskopie (XES) \& Fluoreszenzausbeute}{1}{subsubsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.3}Spin-Sensitivität der $K\beta $-Emissionslinien}{1}{subsubsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.6}Experimenteller Aufbau, Strahlmanipulation \& Diagnosekomponenten}{1}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Software}{1}{subsubsection.2.6.1}%
-\contentsline {section}{\numberline {3}Versuchsdurchführung}{2}{section.3}%
-\contentsline {section}{\numberline {4}Auswertung der Messergebnisse}{2}{section.4}%
-\contentsline {section}{\numberline {5}Diskussion der physikalischen Ergebnisse}{2}{section.5}%
-\contentsline {section}{\numberline {6}Zusammenfassung}{2}{section.6}%
-\contentsline {section}{\nonumberline Literatur}{A}{section*.2}%
-\contentsline {section}{Abbildungsverzeichnis}{B}{section*.2}%
-\contentsline {section}{Anhang \numberline {A}Tabellen}{C}{appendix.1.A}%
-\contentsline {section}{Anhang \numberline {B}Code}{C}{appendix.1.B}%
+\contentsline {subsection}{\numberline {2.1}Synchrotronradiation}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Free Electron Laser (FEL)}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Undulators}{1}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}The investigated Molecule}{1}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Electronic Structure of \([Fe(bipy)_{3}]^{2+}\)}{1}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Photophysics}{1}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Pump-Probe-Principle}{1}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}The Pump-Pulse}{1}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}The Probe-Pulse}{1}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Experimental Setup}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Software: VLab}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Undulator and Beamline}{1}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Monochromator and Focusing Optics}{1}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Spectrum Analyser}{1}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Time-arrival Detector}{1}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Sample Environment}{1}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Laser System}{1}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Von Hamos Spectrometer}{1}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Versuchsdurchführung}{1}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Preparation of the Experiment}{1}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Alignment and Characterization of the X-ray Beam}{1}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Preparatory Estimates for the Experiment}{2}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Performing the Experiment with Data Acquisition}{2}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Auswertung der Messergebnisse}{2}{section.5}%
+\contentsline {section}{\numberline {6}Diskussion der physikalischen Ergebnisse}{2}{section.6}%
+\contentsline {section}{\numberline {7}Zusammenfassung}{2}{section.7}%
+\contentsline {section}{\nonumberline References}{A}{section*.3}%
+\contentsline {section}{Abbildungsverzeichnis}{B}{section*.4}%
+\contentsline {section}{Appendix \numberline {A}Tabellen}{C}{appendix.1.A}%
+\contentsline {section}{Appendix \numberline {B}Code}{C}{appendix.1.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

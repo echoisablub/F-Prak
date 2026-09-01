@@ -4,28 +4,20 @@ from scipy.interpolate import interp1d
 
 # Load data
 filename = "Daten/Alignment and characterization/size and position ray/pulse_data_7400eV/BeamImagingUnit2 26-08-31 14-07-30.txt"
-
 data = np.loadtxt(filename, delimiter=",", comments="#")
 
 # Pixel -> mm conversion
 grid_size_mm = 10.0
 n_pixels = 420
-
 mm_per_pixel = grid_size_mm / n_pixels
-
 x = np.arange(n_pixels) * mm_per_pixel
 y = np.arange(n_pixels) * mm_per_pixel
 
 # BIU2 image is 420 x 420 pixels
 image = data.reshape(420, 420)
 
-# Pixel coordinates
-x = np.arange(image.shape[1])
-y = np.arange(image.shape[0])
-
 # Horizontal profile: sum over rows
 profile_x = np.sum(image, axis=0)
-
 # Vertical profile: sum over columns
 profile_y = np.sum(image, axis=1)
 
@@ -76,12 +68,12 @@ fwhm_y, center_y, half_y, left_y, right_y = \
     calculate_fwhm(y, profile_y)
 
 print(f"Horizontal:")
-print(f"  Center = {center_x:.2f} px")
-print(f"  FWHM   = {fwhm_x:.2f} px")
+print(f"  Center = {center_x:.2f} mm")
+print(f"  FWHM   = {fwhm_x:.2f} mm")
 print()
 print(f"Vertical:")
-print(f"  Center = {center_y:.2f} px")
-print(f"  FWHM   = {fwhm_y:.2f} px")
+print(f"  Center = {center_y:.2f} mm")
+print(f"  FWHM   = {fwhm_y:.2f} mm")
 
 
 # Plot profiles
@@ -93,11 +85,11 @@ ax[0].axhline(half_x, linestyle="--", label="Half maximum")
 ax[0].axvline(left_x, linestyle=":")
 ax[0].axvline(right_x, linestyle=":")
 ax[0].axvline(center_x, linestyle="--",
-              label=f"Center = {center_x:.1f} px")
+              label=f"Center = {center_x:.1f} mm")
 
-ax[0].set_xlabel("x [pixel]")
+ax[0].set_xlabel("x [mm]")
 ax[0].set_ylabel("Integrated intensity")
-ax[0].set_title(f"Horizontal profile — FWHM = {fwhm_x:.1f} px")
+ax[0].set_title(f"Horizontal profile — FWHM = {fwhm_x:.1f} mm")
 ax[0].legend()
 ax[0].grid(True)
 
@@ -107,11 +99,11 @@ ax[1].axhline(half_y, linestyle="--", label="Half maximum")
 ax[1].axvline(left_y, linestyle=":")
 ax[1].axvline(right_y, linestyle=":")
 ax[1].axvline(center_y, linestyle="--",
-              label=f"Center = {center_y:.1f} px")
+              label=f"Center = {center_y:.1f} mm")
 
 ax[1].set_xlabel("y [pixel]")
 ax[1].set_ylabel("Integrated intensity")
-ax[1].set_title(f"Vertical profile — FWHM = {fwhm_y:.1f} px")
+ax[1].set_title(f"Vertical profile — FWHM = {fwhm_y:.1f} mm")
 ax[1].legend()
 ax[1].grid(True)
 

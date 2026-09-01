@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper, bibliography=totoc]{scrartcl}
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
+%\usepackage[nenglish]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -65,8 +65,8 @@
 
 \pagenumbering{Roman}
 
-\title{Femtosekunden X-ray Experiments}
-\subtitle{Fortgeschrittenenpraktikum\\ Versuch EXP21}
+\title{Ultrafast X-Ray Experiments}
+\subtitle{Virtual Experiments at the X-Ray Laser European XFEL\\ Versuch EXP21}
 \author{Léonie Lanz \\ Nico Kalogerakis}
 \maketitle
 \newpage
@@ -82,61 +82,72 @@
 
 \section{Theoretische Grundlagen}
 
-\subsection{Erzeugung der Röntgenstrahlung}
+\subsection{Synchrotronradiation}
 
-\subsubsection{Synchrotronstrahlung (SR) vs. Freie-Elektronen-Laser (FEL)}
+\subsubsection{Free Electron Laser (FEL)}
 
-\subsubsection{SASE-Effekt (Self-Amplified Spontaneous Emission)}
+\subsubsection{Undulators}
 
-\subsection{Das untersuchte Molekülsystem \& Photophysik}
+\subsection{The investigated Molecule}
+\subsubsection{Electronic Structure of \([Fe(bipy)_{3}]^{2+}\)}
 
-\subsection{Pump-Probe-Prinzip}
+\subsubsection{Photophysics}
 
-\subsection{Der Pump-Puls}
-\subsubsection{Der optische Anregungsprozess}
+\subsection{Pump-Probe-Principle}
 
-\subsubsection{Der optische Relaxationsprozess}
+\subsubsection{The Pump-Pulse}
 
-\subsection{Der Probe-Puls}
-\subsubsection{Element- und schalen-spezifische Röntgenabsorption}
+\subsubsection{The Probe-Pulse}
 
-Dominanz des photoelektrischen Effekts im harten Röntgenbereich.\\
-Die K-Absorptionskante von Eisen bei ca. $7112\text{ eV}$ 
-(Anregung von 1s-Rumpfelektronen) im Vergleich zu leichteren Elementen der Lösung.
+\section{Experimental Setup}
+\subsection{Software: VLab}
+\subsection{Undulator and Beamline}
+\subsection{Monochromator and Focusing Optics}
+monochromator 
+focusing optics: mirrors,  power slits, solid attenuators, refractive Lenses, X-ray eye
+\subsection{Spectrum Analyser}
+diffraction gratings
+\subsection{Time-arrival Detector}
+\subsection{Sample Environment}
+\subsection{Laser System}
+\subsection{Von Hamos Spectrometer}
 
-\paragraph{Photoelektronen-Wellenzahl (EXAFS-Analogie)}
-Die kinetische Energie des durch den harten Röntgen-puls ausgelösten 
-K-Schalen-Photoelektrons und dessen De-Broglie-Wellenzahl $k$ (wichtig für
-den physikalischen Hintergrund der Streuung an Nachbaratomen) ist aus der
-relativistischen Energiespaltung des Photoelektrons gegeben:
-\begin{align*}
-    k &= \frac{\sqrt{2m_e (E_{Xray} - |E_{1s}|)}}{\hbar} \\
-      &\approx 0{,}512 \cdot \sqrt{E_{Xray} - |E_{1s}| \text{ [in eV]}} \quad
-      (\text{in } \text{AA}^{-1}).
-\end{align*}
-$E_{Xray}$: Die Energie des einfallenden Röntgenquants
-(oberhalb der K-Kante, $E_{Xray} > 7112\text{ eV}$).\\
-$E_{1s}$: Die Bindungsenergie des Fe-1s-Rumpfelektrons ($7112\text{ eV}$).
-
-\subsubsection{Röntgenemissionsspektroskopie (XES) \& Fluoreszenzausbeute}
-- Zerfall des Lochzustands im 1s-Orbital durch Nachrücken von Elektronen aus höheren Schalen.\\
-- Konkurrenz zwischen strahlungslosem Auger-Effekt (ca. 70 \%) und Röntgenfluoreszenz (ca. 30 \% bei Eisen).
-- Unterscheidung zwischen resonantem und nicht-resonantem XES.\\
-- Nomenklatur der Emissionslinien $(K\alpha$ für $2p \rightarrow 1s$, $K\beta$ für $3p \rightarrow 1s$).
-
-\subsubsection{Spin-Sensitivität der \texorpdfstring{$K\beta$}{Kbeta}-Emissionslinien}
-- Physikalische Ursache des Satellitenpeaks $(K\beta'$) durch Austauschwechselwirkung zwischen den ungepaarten Elektronen im $3d$-Zustand und dem Loch im $3p$-Zustand.\\
-- Verwendung des $K\beta$-Spektrums zur eindeutigen Unterscheidung zwischen dem LS-Grundzustand und dem optisch erzeugten HS-Zustand.
-
-\subsection{Experimenteller Aufbau, Strahlmanipulation \& Diagnosekomponenten}
-
-\subsubsection{Software}
-
-Quelle Versuchsmappe: \cite{1}
+Quelle Versuchsmappe:\cite{1}
 
 
 \section{Versuchsdurchführung}
+\subsection{Preparation of the Experiment}
+\subsubsection{Alignment and Characterization of the X-ray Beam}
+X-ray energy \(E_0=7400eV\) 
 
+Alignment:
+size and position of the beam plots (FWHM) (jitter neu!)
+pink vs mono beam 2D/3D plots
+
+Characterization:
+spectrum of the pink vs mono beam plots
+myb noch ex 7+8, aber idk
+
+Focusing:
+plots of the focused beam size and position (FWHM)
+
+\subsubsection{Preparatory Estimates for the Experiment}
+Fun Facts:
+molar mass: \(M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}\) 
+concentration of the sample: \(c=0,380\frac{mol}{L}\)
+total attenuation of X-rays: attenuation comparison plot
+flow speed of the jet: \(v_{jet}=11\frac{m}{s}\)
+
+Laser:
+excitation wavelength: \(\lambda_{pump}=400nm\) (dazu alle fun facts mit MLCT Zuständen und so, und nicht overshooten lol)
+focussing,  diameter of the focus 
+Overfilling: beam sizes of the optical laser and the X-ray pulse relative to each other (plot beam diameter)
+
+Spectromter:
+Van Hamos Spectrometer vs Johann Spectrometer (plot of the two geometries)
+crystal selection: \(Si(531)\) vs \(Ge(531)\) (plot of the two crystal reflections)
+
+\subsection{Performing the Experiment with Data Acquisition}
 
 \section{Auswertung der Messergebnisse}
 

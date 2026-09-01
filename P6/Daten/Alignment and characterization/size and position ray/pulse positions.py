@@ -16,9 +16,6 @@ for file in files:
     # BIU2 image is 420 x 420 pixels
     image = data #.reshape(420, 420)
 
-    x = np.arange(data.shape[1])
-    y = np.arange(data.shape[0])
-
     # Horizontal profile: sum over rows
     profile_x = np.sum(image, axis=0)
     # Vertical profile: sum over columns
@@ -29,44 +26,42 @@ for file in files:
 
     print(f"File: {file.name}, x_max: {x_max[-1]}, y_max: {y_max[-1]}")
 
-# Mean position and spatial jitter
-
-x_mean = np.mean(x_max)
-y_mean = np.mean(y_max)
-
-x_std = np.std(x_max)
-y_std = np.std(y_max)
-
-# Pixel -> mm conversion
+# Pixel -> mm
 grid_size_mm = 10.0
 n_pixels = 420
 mm_per_pixel = grid_size_mm / n_pixels
 
-x = np.arange(n_pixels) * mm_per_pixel
-y = np.arange(n_pixels) * mm_per_pixel
+x_max_mm = np.array(x_max) * mm_per_pixel
+y_max_mm = np.array(y_max) * mm_per_pixel
 
+# Mean position and spatial jitter in mm
+x_mean_mm = np.mean(x_max_mm)
+y_mean_mm = np.mean(y_max_mm)
 
-print("Beam position from 20 X-ray pulses")
-print(f"x = {x_mean:.2f} ± {x_std:.2f} px")
-print(f"y = {y_mean:.2f} ± {y_std:.2f} px")
+x_std_mm = np.std(x_max_mm)
+y_std_mm = np.std(y_max_mm)
+
+'''print("Beam position from 20 X-ray pulses")
+print(f"x = {x_mean_mm:.3f} ± {x_std_mm:.3f} mm")
+print(f"y = {y_mean_mm:.3f} ± {y_std_mm:.3f} mm")'''
 
 # PLOT max positions
 pulse = np.arange(1, len(files) + 1)
 fig, ax = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
 
 # Horizontal position
-ax[0].plot(pulse, x_max, "o-", label="Pulse position")
-ax[0].axhline(x_mean, linestyle="--", label=f"Mean = {x_mean:.2f} mm")
-ax[0].axhspan(x_mean - x_std, x_mean + x_std, alpha=0.2, label=f"±1 SD = {x_std:.2f} mm")
+ax[0].plot(pulse, x_max_mm, "o-", label="Pulse position")
+ax[0].axhline(x_mean_mm, linestyle="--", label=f"Mean = {x_mean_mm:.2f} mm")
+ax[0].axhspan(x_mean_mm - x_std_mm, x_mean_mm + x_std_mm, alpha=0.2, label=f"±1 SD = {x_std_mm:.2f} mm")
 ax[0].set_ylabel("x [mm]")
 ax[0].set_title("Horizontal beam position")
 ax[0].grid(True)
 ax[0].legend()
 
 # Vertical position
-ax[1].plot(pulse, y_max, "o-", label="Pulse position")
-ax[1].axhline(y_mean, linestyle="--", label=f"Mean = {y_mean:.2f} mm")
-ax[1].axhspan(y_mean - y_std, y_mean + y_std, alpha=0.2, label=f"±1 SD = {y_std:.2f} mm")
+ax[1].plot(pulse, y_max_mm, "o-", label="Pulse position")
+ax[1].axhline(y_mean_mm, linestyle="--", label=f"Mean = {y_mean_mm:.2f} mm")
+ax[1].axhspan(y_mean_mm - y_std_mm, y_mean_mm + y_std_mm, alpha=0.2, label=f"±1 SD = {y_std_mm:.2f} mm")
 ax[1].set_xlabel("X-ray pulse")
 ax[1].set_ylabel("y [mm]")
 ax[1].set_title("Vertical beam position")
@@ -80,13 +75,13 @@ plt.show()
 # PLOT x-y distribution of pulse positions
 plt.figure(figsize=(7, 6))
 
-plt.scatter(x_max, y_max, s=50, label="Individual pulses")
+plt.scatter(x_max_mm, y_max_mm, s=50, label="Individual pulses")
 # Mean position
-plt.scatter(x_mean, y_mean, marker="x",s=120, label=f"Mean position ({x_mean:.1f}, {y_mean:.1f}) mm")
+plt.scatter(x_mean_mm, y_mean_mm, marker="x", s=120, label=f"Mean position ({x_mean_mm:.1f}, {y_mean_mm:.1f}) mm")
 # Horizontal ±1 SD
-plt.axvspan(x_mean - x_std, x_mean + x_std, alpha=0.15)
+plt.axvspan(x_mean_mm - x_std_mm, x_mean_mm + x_std_mm, alpha=0.15)
 # Vertical ±1 SD
-plt.axhspan(y_mean - y_std, y_mean + y_std, alpha=0.15)
+plt.axhspan(y_mean_mm - y_std_mm, y_mean_mm + y_std_mm, alpha=0.15)
 
 plt.xlabel("x [mm]")
 plt.ylabel("y [mm]")
