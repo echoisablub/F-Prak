@@ -82,9 +82,14 @@
 		lenses: 1,2,5
 		rod changes: 
 			1: 0.8 b4c
-			2: 0.1 si
-			3: 0.2 si
+			2: 0.1 Si
+			3: 0.2 Si
 			4: 0.4 C
 		![[Pasted image 20260901102648.png]]
 		$F=\frac{R}{2N\delta}$ 
-		
+		$\delta=7\cdot10^{-6}$
+		$\frac{1}{F_{ges}}=\frac{1}{F_{1}}+\frac{1}{F_{2}}+\frac{1}{F_{2}}$
+		$\frac{1}{F_{ges}}= \frac{2\cdot\delta \cdot N_{1}}{R_{1}}+\frac{2\cdot\delta \cdot N_{2}}{R_{2}}+\frac{2\cdot \delta \cdot N_{5}}{R_{5}}$
+		$F_{ges}=\left( 2\delta\left( \frac{N_{1}}{R_{1}}+\frac{N_{2}}{R_{2}}+\frac{N_{5}}{R_{5}} \right) \right)^{-1}$
+		$F_{ges}\approx4,76m$
+
