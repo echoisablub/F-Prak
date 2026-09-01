@@ -5,11 +5,18 @@
 		jet speed locked? obwohl größerer Laser durchschnitt
     Document your achieved maximum intensity well. When readjusting, for example after each restart of the software, you only have to return to this maximum intensity. 
 24. **Adjust the X-ray emission spectrometer.** 
-    Set the correct Bragg angle range for the selected crystal (ex. 21) and orient the detector perpendicular to the incoming dispersive spectrum. Make sure that you are in the line focus of the horizontally focusing emission beam. Check and optimize the cylindrical focusing using the 2D display of the Jungfrau detector, and document your geometric setting by suitable screenshots. 
+    Set the correct Bragg angle range for the selected crystal (ex. 21) and orient the detector perpendicular to the incoming dispersive spectrum. 
+    Make sure that you are in the line focus of the horizontally focusing emission beam. 
+    Check and optimize the cylindrical focusing using the 2D display of the Jungfrau detector, and document your geometric setting by suitable screenshots. 
     **Download the 1D data and plot the Kβ1,3 spectrum of the ground state sample (laser off).** 
 25. Use the excitation laser with appropriated pulse energy (ex. 19), to prepare for your first pump-probe measurements: 
+		$\lambda=400nm$ 
 		$25\mu m$??? 
     a) Adjust the focus of the excitation laser (ex. 18) to obtain your desired beam diameter in the sample plane. 
+	    $d=150\mu m$ aber bei $f=250mm$ $\Longrightarrow d_{\text{FWHM, Airy}} \approx \mathbf{13{,}26\ \mu\text{m}}$
+	    $d_{\text{Airy}} = 2{,}44 \cdot \frac{\lambda \cdot f}{D} \Longrightarrow f=\frac{d\cdot D}{2,44\cdot \lambda}=  \frac{150\cdot10^{-8}}{2,44\cdot 400\cdot 10^{-9}}= \frac{150}{97,6}$  
+	    also for laser at $400nm$, with $50\mu J$ pulse energy and $150\mu m$ of diameter
+		    $f=1.537m$
 	b) Adjust the spatial overlap between laser and X-ray beam. To do this, adjust the excitation laser beam by moving the focusing lens in x and y direction. 
 	c) Document the profile of the excitation laser and the X-ray beam on the sample with the X-ray microscope. To do this, alternatingly move in strong X-ray attenuators to turn off the x-ray beam, and set the laser energy to zero to measure only the x-ray beam. Afterward, you can also take an image of both pulses together (with appropriate laser and x-ray intensity levels). 
 26. **Record your first time-resolved spectra:**
