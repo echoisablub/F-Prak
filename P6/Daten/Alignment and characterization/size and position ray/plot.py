@@ -7,6 +7,15 @@ filename = "Daten/Alignment and characterization/size and position ray/pulse_dat
 
 data = np.loadtxt(filename, delimiter=",", comments="#")
 
+# Pixel -> mm conversion
+grid_size_mm = 10.0
+n_pixels = 420
+
+mm_per_pixel = grid_size_mm / n_pixels
+
+x = np.arange(n_pixels) * mm_per_pixel
+y = np.arange(n_pixels) * mm_per_pixel
+
 # BIU2 image is 420 x 420 pixels
 image = data.reshape(420, 420)
 

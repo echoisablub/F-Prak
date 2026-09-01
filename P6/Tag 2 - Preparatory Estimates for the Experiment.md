@@ -1,6 +1,5 @@
 10. The objective of the experiment is to study the transition metal complex $[Fe(bipy)_3]^{2+}$ in aqueous solution. For this purpose, the salt $[Fe(bipy)_3]Cl_{2}$ is dissolved in deionized water to the desired concentration. 
     **Calculate the molar mass of $[Fe(bipy)_3]^{2+}$ and that of a full salt molecule with its two chloride counterions**. 
-		$M([Fe(bipy)_3]Cl_{2})= 595,315 \frac{g}{mol}$
 			- **Iron (Fe):** $55.845 \text{ g/mol}$
 			- **Carbon (C):** $12.011 \text{ g/mol}$
 			- **Hydrogen (H):** $1.008 \text{ g/mol}$
@@ -8,6 +7,10 @@
 			- **Chlorine (Cl):** $35.453 \text{ g/mol}$
 			- **Oxygen (O):** $15.999 \text{ g/mol}$
 			- ($\text{bipy} = \text{C}_{10}\text{H}_8\text{N}_2$)
+			- Elektron: $5,4854 \cdot 10^{-7} g/mol$
+		$M([Fe(bipy)_3]Cl_{2})= 595,315 \frac{g}{mol}$
+		$M([Fe(bipy)_3]^{2+})= M([Fe(bipy)_3])-2\cdot M(e^{-1})= 524,409 \frac{g}{mol} - 2\cdot 5,4854 \cdot 10^{-7} \frac{g}{mol}$
+		$\Longrightarrow M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}$
 11. The actual sample is a powder consisting of small microcrystals. In addition to the salt described above, it also contains incorporated water. This water of crystallization remains in the crystal lattice after the crystallization process. Assume that three water molecules are bound in the crystal per $[Fe(bipy)_3]Cl_{2}$ formula unit. A minimum volume of 50 ml is required to operate the liquid jet in the experiment. 
 	**Calculate the concentration if you dissolve 10 g of the sample powder in demineralized water to a total volume of 50 ml. Compare this value with the concentration of pure water.** 
 		$[\text{Fe(bipy)}_3]\text{Cl}_2 \cdot 3\text{H}_2\text{O}$
@@ -139,9 +142,11 @@
 			also maximale Anregungseffizienz ohne Multiphotonen-Absorptionen :)
 		Anternativen bisschen whack: 
 		Spot-Durchmesser $d_{\text{laser}}$: $50 \mu m$ / $250 \mu m$, Moleküle im Volumen:$1{,}31 \times 10^{13}$ / $1{,}18 \times 10^{14}$, Kritische Pulsenergie: $5{,}1\ \mu\text{J}$ / $45{,}5\ \mu\text{J}$
-		
 	c) **Verify your calculation with the calculator built into the vLab / Laser. Document this with a screenshot**. 
-		==TODO==
+		Laser Power: Pulse Energy * Rep Rate $=15\mu J*0,55MHz=8,25W$
+			bzw $=20,3\mu J*0,55MHz=11,625W$ 
+		Zahlen Stimmen Überein, bei Watt mit $E_{Puls_{eff}}$
+		sonst halt größenordnung passen, aber bisschen anders, weil Puls Energie nur $15\mu J$ kann, rest ist Overshooting, für Jitter Kompensation?
 20. Two X-ray crystal spectrometers are available at the FXE instrument of European XFEL: one von Hamos and one Johann spectrometer (Sec. 6.5.2). 
     **Which spectrometer would you use for the present X-ray emission experiment to record the Fe Kβ lines?** 
 		Von Hamos Spektrometer:
