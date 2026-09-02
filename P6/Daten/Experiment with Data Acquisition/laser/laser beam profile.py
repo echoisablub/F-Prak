@@ -4,8 +4,9 @@ from scipy.optimize import curve_fit
 from pathlib import Path
 
 
-file = Path(r"Daten\Experiment with Data Acquisition\laser\X-RayEye 26-09-01 20-09-26.txt")
+folder = Path("Daten/Experiment with Data Acquisition/laser/xray profile")
 
+files = sorted(folder.glob("*"))
 
 # ============================================================
 # Pixel -> mm conversion
@@ -16,39 +17,24 @@ n_pixels = 420
 
 mm_per_pixel = grid_size_mm / n_pixels
 
-# Pixel centers
-x = (np.arange(n_pixels) + 0.5) * mm_per_pixel
-y = (np.arange(n_pixels) + 0.5) * mm_per_pixel
+x = np.arange(n_pixels) * mm_per_pixel
+y = np.arange(n_pixels) * mm_per_pixel
 
 
 # ============================================================
 # Load image
 # ============================================================
 
-data = np.loadtxt(file, delimiter=",", comments="#")
+for file in files:
+    data = np.loadtxt(file, delimiter=",", comments="#")
 
-print("Data shape:", data.shape)
-print("NaN:", np.isnan(data).sum())
-print("Inf:", np.isinf(data).sum())
-print("Min:", np.nanmin(data))
-print("Max:", np.nanmax(data))
+    image = data.reshape(420, 420)
 
-data = np.nan_to_num(
-    data,
-    nan=0.0,
-    posinf=0.0,
-    neginf=0.0
-)
+    # Horizontal profile
+    profile_x = np.sum(image, axis=0)
 
-image = data.reshape(n_pixels, n_pixels)
-
-
-# ============================================================
-# Profiles
-# ============================================================
-
-profile_x = np.sum(image, axis=0)
-profile_y = np.sum(image, axis=1)
+    # Vertical profile
+    profile_y = np.sum(image, axis=1)
 
 
 # ============================================================
@@ -236,7 +222,8 @@ ax[0].set_title(
     f"FWHM = {fwhm_x * 1000:.1f} µm"
 )
 
-ax[0].set_xlim(x.min(), x.max())
+ax[0].set_xlim(0.95, 1.05)
+#ax[0].set_xlim(x.min(), x.max())
 
 ax[0].legend()
 ax[0].grid(True)
@@ -284,7 +271,8 @@ ax[1].set_title(
     f"FWHM = {fwhm_y * 1000:.1f} µm"
 )
 
-ax[1].set_xlim(y.min(), y.max())
+ax[1].set_xlim(0.95, 1.05)
+#ax[1].set_xlim(y.min(), y.max())
 
 ax[1].legend()
 ax[1].grid(True)
@@ -293,7 +281,7 @@ ax[1].grid(True)
 plt.tight_layout()
 
 plt.savefig(
-    "Daten/Experiment with Data Acquisition/laser/laser_beam_profile_f005mm_ISHG.png",
+    "Daten/Experiment with Data Acquisition/laser/xray_beam_profile.png",
     dpi=300
 )
 
