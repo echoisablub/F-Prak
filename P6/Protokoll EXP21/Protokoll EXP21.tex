@@ -101,6 +101,7 @@
 
 \section{Experimental Setup}
 \subsection{Software: VLab}
+Datenstruktur (beam imaging and xray eye): 420x420 pixel, bei biu screen dim von 10mm x10mm, bei xray eye screen 2mm x 2mm
 \subsection{Undulator and Beamline}
 \subsection{Monochromator and Focusing Optics}
 monochromator 
@@ -118,11 +119,35 @@ Quelle Versuchsmappe:\cite{1}
 \section{Versuchsdurchführung}
 \subsection{Preparation of the Experiment}
 \subsubsection{Alignment and Characterization of the X-ray Beam}
-X-ray energy \(E_0=7400eV\) 
+Before doing anything on a beam line it's important to characterize it.\\
+As the absorption edge for the Fe K$\beta_{1,3}$ line of 7065 eV, the energy of the xray beam is set to 7400 eV, to avoid the ripples near the reaction (siehe \autoref{img: }) but without too strong of a loss in intensity. 
+To measure the initial X-ray beam the power slits are fully opened and the following attenuator foils are used to bring the beam to an intensity just below saturatuion of the beam imaging unit 2 (BIU2): 
+\begin{align*}
+	% insert the table of used attenuators here
+\end{align*}
+
+The size and position of the x-ray is now measured using BIU2. Now the four-bounce crystal-monochromator is turned on and then off again to record the reduction of the spectral bandwidth. Then the dispersive single-shot spectrum analyser is used to record the spectrum of the pink X-ray beam with a bragg angle of 24°. 
+
+For the following experiment the monochromatic beam is used as it leads to a higher resolution than the pink x-ray, even though the intensity of the beam suffers. 
+
+The last step of diagnosing the beam line is using the refractive beryllium x-ray lenses to focus the beam at the imaging unit x-ray eye. It's important to appropiately adjust the attentuator foils as to not burn the imaging unit with a focussed beam. 
+
+With beryllium lenses 1, 2 and 5 (taken from \autoref{tab: lenses}) and the attentuator foils listed here \autoref{tab: attenuator final}, a beam with the FWHM of ~13 um (siehe \autoref{img: strahlbreite}) is achievd. The total focus length is calculated with $\delta \approx 7\cdot 10^{-6}$ \cite{} and the properties of the lenses themself taken from \autoref{tab: lenses}:
+\begin{align*}
+	F=\frac{R}{2\delta N} &\Leftrightarrow \frac{1}{F_{ges}}=\frac{2\delta N_1}{R_1}+\frac{2\delta N_2}{R_2}+\frac{2\delta N_5}{R_5}\\
+	&\Leftrightarrow F_{ges}=\frac{1}{2\delta(\frac{N_1}{R_1}+\frac{N_2}{R_2}+\frac{N_5}{R_5})} \approx \qty{4,76}{m}
+\end{align*}
+
+---Notes---
+
+X-ray energy \(E_0=7400eV\) (has to be a good bit away from reaction edge of 7065 keV to be stable)
 
 Alignment:
+attenuators to not burn through out screens (here: 4: B4C 0.8, 3: C 0.4, 2: Si 0.05, C 0.1)
 size and position of the beam plots (FWHM) (jitter neu!)
 pink vs mono beam 2D/3D plots
+
+optical resolution: ~25 um/px
 
 Characterization:
 spectrum of the pink vs mono beam plots
@@ -149,10 +174,10 @@ crystal selection: \(Si(531)\) vs \(Ge(531)\) (plot of the two crystal reflectio
 
 \subsection{Performing the Experiment with Data Acquisition}
 
-\section{Auswertung der Messergebnisse}
+\section{Analysis and Interpretation}
 
 
-\section{Diskussion der physikalischen Ergebnisse}
+\section{Discussion of the physical meaning}
 
 
 \section{Zusammenfassung}
