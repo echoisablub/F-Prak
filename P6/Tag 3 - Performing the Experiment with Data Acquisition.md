@@ -44,3 +44,23 @@
 
 ---
 
+Analysis and Interpretation 
+The goal is to determine the excited state pathway(s) of [Fe(bipy)3]2+: Which state is present at long pump-prob time delays? Are there any short-lived intermediate states? What is the time-dependent population of the respective states? 
+To do this, compare your measured spectra with reference spectra from a series of iron complexes (fig: 4.4, data file is provided separately). 
+This series covers, for each reference sample in its ground state, the different spin multiplicities (2S + 1) between one and five (singlet to quintet). 
+30. Plot the reference spectra. Compare your extracted [Fe(bipy)3]2+ spectrum in its ground state (ex. 23) to the reference spectra. 
+	![[Pasted image 20260902171259.png]]
+31. Take all possible differences between singlet and higher spin states from the reference spectra and plot these. 
+	![[Pasted image 20260902184804.png]]
+    From exercise 25, compare 
+    (i) the measured 100 ps spectrum with the reference spectra and 
+    (ii) the measured transient with the differences of the reference spectra. In which spin state is the [Fe(bipy)3]2+ molecule after 100 ps? 
+	
+33. Plot your time-resolved difference spectra from exercise 29. How does the difference spectrum change qualitatively and quantitatively over time? 
+	
+34. Generate a 3D false-color plot of the time-resolved spectra, i.e., plot the emission intensity color-coded as a function of X-ray energy (yaxis) and time delay between pump and probe pulses (x-axis). Discuss this plot. 
+    
+35. Plot the so-called kinetic traces, i.e., plot the emission intensity as a function of the time delay. To do this, choose suitable discrete emission energies and represent them by different colors. From this, determine the rise time of the population of the excited state of [Fe(bipy)3]2+. 
+    
+36. Can you also identify a possible ultrafast intermediate state in the relaxation cascade?
+    
