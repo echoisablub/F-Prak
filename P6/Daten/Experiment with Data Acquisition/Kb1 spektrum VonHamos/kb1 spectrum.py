@@ -4,7 +4,9 @@ from scipy.interpolate import interp1d
 from pathlib import Path
 import pandas as pd
 
-folder = Path("Daten/Experiment with Data Acquisition/Kb1 spektrum VonHamos/dif spectrum kb1/pink_acc/")
+#folder = Path("Daten/Experiment with Data Acquisition/Kb1 spektrum VonHamos/dif spectrum kb1/pink_acc/")
+folder = Path("Daten/(Experiment with Data Acquisition/Kb1 spektrum VonHamos/data kb1 spectrum/pink_new/")
+
 
 files = sorted(folder.glob("*"))   # all files in folder
 
@@ -17,7 +19,7 @@ spectra = []
 
 plt.figure(figsize=(8, 5))
 
-for file in files[1:5]:
+'''for file in files[1:5]:
 
     df = pd.read_table(
         file,
@@ -163,7 +165,7 @@ plt.title("Averaged Kb1 spectrum")
 plt.grid(True)
 plt.xlim(7000, 7100)
 plt.legend()
-plt.savefig("Daten/Experiment with Data Acquisition/Kb1 spektrum VonHamos/kb1_spectrum.png", dpi=300)
+plt.savefig("Daten/Experiment with Data Acquisition/Kb1 spektrum VonHamos/kb1_spectrum_new.png", dpi=300)
 plt.show()
-'''
+
 
