@@ -1,3 +1,5 @@
+from scipy.signal import find_peaks
+from matplotlib.pylab import norm
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,6 +7,7 @@ from pathlib import Path
 from scipy.interpolate import interp1d
 from matplotlib import cm
 from matplotlib.colors import Normalize
+import plotly.graph_objects as go
 
 folder = Path("Daten/Experiment with Data Acquisition/messreihe")
 
@@ -75,56 +78,44 @@ delays = delays[sort_idx]
 print(delays)
 all_spectra = all_spectra[sort_idx]*1e-5 #Intensity is in a.u., so it is scaled down for better readability in the plot (*10^5)
 
-# 3D false-color plot
+# Find peaks in the spectra
 
-fig, ax = plt.subplots(figsize=(10, 7))
+spectrum = np.nanmean(all_spectra, axis=0)  # Average spectrum across all delays
+peaks, properties = find_peaks(spectrum, 
+                               prominence=0.01*np.nanmax(spectrum),
+                               distance=20)  # find peaks in the spectrum
+minima,properties = find_peaks(-spectrum, 
+                                prominence=0.01*np.nanmax(spectrum),
+                               distance=20)
 
-# Normalize delay for colormap
-norm = Normalize(vmin=delays.min(), vmax=delays.max())
-cmap = cm.turbo
 
-selected_delays = [400, 800]
+plt.figure(figsize=(10, 6))
+plt.plot(energy_grid, spectrum, label='$\Delta$ Emission Intensity', color='blue')
+plt.plot(energy_grid[peaks], spectrum[peaks], "x", label='Detected Peaks', color='red')
+plt.plot(energy_grid[minima], spectrum[minima], "x", label='Detected Minima',color='green')
 
-for delay, spectrum in zip(delays, all_spectra):
-
-    color = cmap(norm(delay))
-
-    ax.plot(
-        energy_grid*0.001, #energy is converted to keV for better readability
-        spectrum,
-        color=cmap(norm(delay)),
-        linewidth=1.5
+for p in peaks:
+    plt.annotate(
+        f"{energy_grid[p]:.1f} eV",
+        (energy_grid[p], spectrum[p]),
+        xytext=(0, 8),
+        textcoords="offset points",
+        ha="center"
     )
 
-    '''if delay in selected_delays:
-        ax.fill_between(
-            energy_grid,
-            spectrum - sd,
-            spectrum + sd,
-            color=color,
-            alpha=0.2
-        )'''
 
-ax.set_xlabel("Energy [keV]")
-ax.set_ylabel("Difference Emission Intensity [a.u.]")
+for m in minima:
+    plt.annotate(
+        f"{energy_grid[m]:.1f} eV",
+        (energy_grid[m], spectrum[m]),
+        xytext=(0, 8),
+        textcoords="offset points",
+        ha="center"
+    )
 
-ax.set_xlim(7.030, 7.080)
-
-# Colorbar
-sm = cm.ScalarMappable(norm=norm, cmap=cmap)
-sm.set_array([])  
-
-cbar = fig.colorbar(sm, ax=ax, pad=0.1)
-cbar.mappable.set_clim(min(delays) - 50, max(delays) + 50) # Extend the range for better color representation
-cbar.ax.plot([0.115] *len(delays), delays, ">", color='k', markersize=5, label="Selected Delays", clip_on=False)
-cbar.set_label("Time delay [fs]")
-
-plt.tight_layout()
-plt.grid()
-
-plt.savefig(
-    "Daten/Analysis and Interpretation/Time_resolved_spectrum.png",
-    dpi=300
-)
-
+plt.title('$\Delta$ Emission Intensity vs Energy')
+plt.xlabel('Energy [eV]')
+plt.ylabel('$\Delta$ Emission Intensity [a.u.]')
+plt.legend()
+plt.grid(True)
 plt.show()

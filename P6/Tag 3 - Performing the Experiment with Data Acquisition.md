@@ -57,10 +57,12 @@ This series covers, for each reference sample in its ground state, the different
     (ii) the measured transient with the differences of the reference spectra. In which spin state is the [Fe(bipy)3]2+ molecule after 100 ps? 
 	
 33. Plot your time-resolved difference spectra from exercise 29. How does the difference spectrum change qualitatively and quantitatively over time? 
-	
+	![[Pasted image 20260902222432.png]]
 34. Generate a 3D false-color plot of the time-resolved spectra, i.e., plot the emission intensity color-coded as a function of X-ray energy (yaxis) and time delay between pump and probe pulses (x-axis). Discuss this plot. 
-    
-35. Plot the so-called kinetic traces, i.e., plot the emission intensity as a function of the time delay. To do this, choose suitable discrete emission energies and represent them by different colors. From this, determine the rise time of the population of the excited state of [Fe(bipy)3]2+. 
-    
-36. Can you also identify a possible ultrafast intermediate state in the relaxation cascade?
-    
+35. ![[Pasted image 20260903015913.png]]
+    ![[Pasted image 20260902222619.png]]
+36. Plot the so-called kinetic traces, i.e., plot the emission intensity as a function of the time delay. To do this, choose suitable discrete emission energies and represent them by different colors. From this, determine the rise time of the population of the excited state of [Fe(bipy)3]2+. 
+    ![[Pasted image 20260903011420.png]]![[Pasted image 20260903015951.png]]![[Pasted image 20260903020002.png]]
+37. Can you also identify a possible ultrafast intermediate state in the relaxation cascade?
+	$_{}^{3}T$-State?
+	 seeeeeeeeehr schwach bei 7053.7 (100fs) zu sehen
