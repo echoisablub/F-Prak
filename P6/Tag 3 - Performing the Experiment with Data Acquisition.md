@@ -66,3 +66,11 @@ This series covers, for each reference sample in its ground state, the different
 37. Can you also identify a possible ultrafast intermediate state in the relaxation cascade?
 	$_{}^{3}T$-State?
 	 seeeeeeeeehr schwach bei 7053.7 (100fs) zu sehen
+
+---
+superposition fit
+$$\Delta I_{\text{fit}}(E, t) = w_{\text{Triplet}}(t) \cdot \left[ S_{\text{Triplet}}(E) - S_{\text{Singlet}}(E) \right] + w_{\text{Quintet}}(t) \cdot \left[ S_{\text{Quintet}}(E) - S_{\text{Singlet}}(E) \right]$$
+
+$I_{fit}​(E)=I_{singlet}​(E)+I_{doublet}​(E)+I_{triplet}​(E)+I_{quartet}​(E)+I_{quintet}​(E)+b$
+
+
