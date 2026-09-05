@@ -74,3 +74,5 @@ $$\Delta I_{\text{fit}}(E, t) = w_{\text{Triplet}}(t) \cdot \left[ S_{\text{Trip
 $I_{fit}​(E)=I_{singlet}​(E)+I_{doublet}​(E)+I_{triplet}​(E)+I_{quartet}​(E)+I_{quintet}​(E)+b$
 
 
+$ΔI(E,t)=p_D​(t)[R_D​(E)−R_S​(E)]+p_T​(t)[R_T​(E)−R_S​(E)]+p_Q​(t)[R_Q​(E)−R_S​(E)]+p_5​(t)[R_5​(E)−R_S​(E)]$
+mit $p_S​(t)=1−p_D​−p_T​−p_Q​−p_5​$
