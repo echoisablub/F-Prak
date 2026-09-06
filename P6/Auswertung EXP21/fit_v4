@@ -122,7 +122,7 @@ def gaussian_irf(t, sigma):
 FWHM_fs = 50
 sigma_fs = FWHM_fs / (2 * np.sqrt(2 * np.log(2)))
 
-def kinetics_cascade_irf(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
+def kinetics_cascade_irf_v2(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
     # feines, gleichmäßiges Zeitraster
     t_grid_fs = np.linspace(-300, 1200, 5000)
 
@@ -134,9 +134,8 @@ def kinetics_cascade_irf(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
 
     # Gauß-IRF
     irf = gaussian_irf(t_grid_fs, sigma_fs)
-
-    # normieren
     irf /= np.trapezoid(irf, t_grid_fs)
+    # irf /= np.sum(irf, t_grid_fs)
 
     # Faltung
     dt = t_grid_fs[1] - t_grid_fs[0]
@@ -152,12 +151,30 @@ def kinetics_cascade_irf(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
 
     return P1_out, P3_out, P5_out
 
+def kinetics_cascade_irf(t_fs, k1, k2, sigma_fs):
+    # ideale Populationen
+    t_ps = t_fs / 1000.0
+
+    P1, P3, P5 = kinetics_cascade(t_ps, k1, k2)
+
+    # IRF
+    irf = gaussian_irf(t_fs, sigma_fs)
+    irf /= np.sum(irf)
+
+    # Faltung
+    P1_conv = fftconvolve(P1, irf, mode="same")
+    P3_conv = fftconvolve(P3, irf, mode="same")
+    P5_conv = fftconvolve(P5, irf, mode="same")
+
+    return P1_conv, P3_conv, P5_conv
+
 #residuen definieren für least squares fitting
-def residual_cascade_reference(params, t_ps, dI, sigma, D1, D3, D5):
+def residual_cascade_reference(params, t_fs, dI, sigma, D1, D3, D5):
     k1, k2, dt0 = params
     t = t_fs - dt0
     # P1, P3, P5 = kinetics_cascade(t, k1, k2) # t odrr t_ps???
-    P1, P3, P5 = kinetics_cascade_irf(t, k1, k2, dt0, sigma_fs)
+    P1, P3, P5 = kinetics_cascade_irf(t_fs, k1, k2, sigma_fs)
+    #P1, P3, P5 = kinetics_cascade_irf_v2(t_fs, k1, k2, dt0, sigma_fs)
 
     model = (
         P1[:, None] * D1[None, :]
@@ -271,7 +288,8 @@ def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
     t_plot_ps = t_plot_fs / 1000.0
     t_eff = t_plot_ps - dt0
     P1, P3, P5 = kinetics_cascade(t_eff, k1, k2)
-    # P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, dt0, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf_v2(t_eff, k1, k2, dt0, sigma_fs)
 
     plt.figure(figsize=(7, 4.5))
     plt.plot(t_plot_fs,P1,lw=2,label=r"$^1$MLCT")
@@ -283,6 +301,8 @@ def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
     plt.ylabel("Population")
     plt.title(f"Cascade model (with ref data): k1 = {k1:.3g}, k2 = {k2:.3g} ps-1^{{-1}}-1")
     plt.ylim(-0.05, 1.05)
+    plt.xlim(-5,10)
+    #plt.xlim(-150,800)
     plt.legend()
     plt.tight_layout()
     plt.show()
