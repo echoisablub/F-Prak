@@ -105,9 +105,7 @@ def kinetics_cascade(t, k1, k2):
     tp = t[positive]
 
     # 1MLCT population
-    mlct = t >= -150
-    t_p1 = t[mlct]
-    P1[mlct] = np.exp(-k1 * t_p1)
+    P1[positive] = np.exp(-k1 * tp)
     # 3T1 population
     if abs(k2 - k1) < 1e-10:
         # limiting case k1 = k2
@@ -157,9 +155,9 @@ def kinetics_cascade_irf(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
 #residuen definieren für least squares fitting
 def residual_cascade_reference(params, t_ps, dI, sigma, D1, D3, D5):
     k1, k2, dt0 = params
-    t = t_ps - dt0
-    P1, P3, P5 = kinetics_cascade(t_ps, k1, k2) # t odrr t_ps???
-    # P1, P3, P5 = kinetics_cascade_irf(t_ps, k1, k2, dt0, sigma_fs)
+    t = t_fs - dt0
+    # P1, P3, P5 = kinetics_cascade(t, k1, k2) # t odrr t_ps???
+    P1, P3, P5 = kinetics_cascade_irf(t, k1, k2, dt0, sigma_fs)
 
     model = (
         P1[:, None] * D1[None, :]
@@ -273,7 +271,7 @@ def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
     t_plot_ps = t_plot_fs / 1000.0
     t_eff = t_plot_ps - dt0
     P1, P3, P5 = kinetics_cascade(t_eff, k1, k2)
-    #P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, dt0, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, dt0, sigma_fs)
 
     plt.figure(figsize=(7, 4.5))
     plt.plot(t_plot_fs,P1,lw=2,label=r"$^1$MLCT")
