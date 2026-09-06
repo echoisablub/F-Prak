@@ -1,0 +1,293 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+from scipy.interpolate import interp1d
+from scipy.optimize import least_squares
+from scipy.signal import fftconvolve
+
+def load_spectrum(file):
+    data = np.loadtxt(
+        file,
+        #sep=r'\s+',
+        comments="#"
+    )
+    number = data[:, 0]
+    energy = data[:, 1]
+    intensity = data[:, 2]
+
+    return energy, intensity
+
+def load_reference_spectra(ref_file):
+
+    data = np.loadtxt(
+        ref_file,
+        delimiter=",",
+        comments="#",
+        skiprows=1
+    )
+
+    energy_ref = data[:, 0]
+    I1 = data[:, 1]   # singlet / 1MLCT?
+    I3 = data[:, 3]   # triplet / 3T1
+    I5 = data[:, 5]   # quintet / 5T2
+
+    return energy_ref, I1, I3, I5
+
+def build_deltaI_matrix_from_folders(
+    data_folder: Path,
+    delays,
+    delay_names,
+    load_spectrum,
+):
+    all_means = []
+    all_sigmas = []
+    t_fs_list = []
+
+    energy_common = None
+
+    for delay, delay_name in zip(delays, delay_names):
+        folder = data_folder / delay_name
+        files = sorted(folder.glob("*"))
+
+        spectra_interp = []
+        energies = []
+
+        #print(f"Delay: {delay} fs")
+
+        for file in files:
+            energy, intensity = load_spectrum(file)
+            energies.append(energy)
+
+        #common energy grid
+        energy_common = energies[0]
+        spectra = []
+
+        #interpolate to common grid
+        for file in files:
+            energy, intensity = load_spectrum(file)
+            f = interp1d(energy, intensity, bounds_error=False, fill_value=np.nan)
+            spectra.append(f(energy_common))
+
+        spectra = np.array(spectra)  # (n_shots, NE)
+
+        mean_intensity = np.nanmean(spectra, axis=0)  # (NE,)
+        std_intensity = np.nanstd(spectra, axis=0, ddof=1)
+
+        n_shots = np.sum(~np.isnan(spectra[:, 0]))  
+
+        #assume same n_shots across bins:
+        sem_intensity = std_intensity / np.sqrt(len(spectra))
+
+        #avoid sigma=0 bc no dividing by zero
+        sigma = sem_intensity.copy()
+        positive_sigma = sigma[sigma > 0]
+        minimum_sigma = np.min(positive_sigma) if len(positive_sigma) > 0 else 1.0
+        sigma[sigma <= 0] = minimum_sigma
+
+        all_means.append(mean_intensity)
+        all_sigmas.append(sigma)
+        t_fs_list.append(delay)
+
+    dI_mean = np.array(all_means)
+    sigma = np.array(all_sigmas)
+    t_fs = np.array(t_fs_list)
+
+    return t_fs, energy_common, dI_mean, sigma
+
+
+#for finding kinetic populations
+def kinetics_cascade(t, k1, k2):
+    P1 = np.zeros_like(t, dtype=float)
+    P3 = np.zeros_like(t, dtype=float)
+    P5 = np.zeros_like(t, dtype=float)
+
+    positive = t >= 0
+    tp = t[positive]
+
+    # 1MLCT population
+    mlct = t >= -150
+    t_p1 = t[mlct]
+    P1[mlct] = np.exp(-k1 * t_p1)
+    # 3T1 population
+    if abs(k2 - k1) < 1e-10:
+        # limiting case k1 = k2
+        P3[positive] = k1 * tp * np.exp(-k1 * tp)
+    else:
+        P3[positive] = (k1 / (k2 - k1) * (np.exp(-k1 * tp) - np.exp(-k2 * tp)))
+    # 5T2 population
+    P5[positive] = 1 - P1[positive] - P3[positive]
+    return P1, P3, P5
+
+def gaussian_irf(t, sigma):
+    return np.exp(-t**2 / (2 * sigma**2))
+
+FWHM_fs = 50
+sigma_fs = FWHM_fs / (2 * np.sqrt(2 * np.log(2)))
+
+def kinetics_cascade_irf(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
+    # feines, gleichmäßiges Zeitraster
+    t_grid_fs = np.linspace(-300, 1200, 5000)
+
+    # verschobene Zeitachse
+    t_eff_ps = (t_grid_fs - dt0_fs) / 1000.0
+
+    # ideale Populationen
+    P1, P3, P5 = kinetics_cascade(t_eff_ps, k1, k2)
+
+    # Gauß-IRF
+    irf = gaussian_irf(t_grid_fs, sigma_fs)
+
+    # normieren
+    irf /= np.trapezoid(irf, t_grid_fs)
+
+    # Faltung
+    dt = t_grid_fs[1] - t_grid_fs[0]
+
+    P1_conv = fftconvolve(P1, irf, mode="same") * dt
+    P3_conv = fftconvolve(P3, irf, mode="same") * dt
+    P5_conv = fftconvolve(P5, irf, mode="same") * dt
+
+    # auf experimentelle Zeiten interpolieren
+    P1_out = np.interp(t_eval_fs, t_grid_fs, P1_conv)
+    P3_out = np.interp(t_eval_fs, t_grid_fs, P3_conv)
+    P5_out = np.interp(t_eval_fs, t_grid_fs, P5_conv)
+
+    return P1_out, P3_out, P5_out
+
+#residuen definieren für least squares fitting
+def residual_cascade_reference(params, t_ps, dI, sigma, D1, D3, D5):
+    k1, k2, dt0 = params
+    t = t_ps - dt0
+    P1, P3, P5 = kinetics_cascade(t_ps, k1, k2) # t odrr t_ps???
+    # P1, P3, P5 = kinetics_cascade_irf(t_ps, k1, k2, dt0, sigma_fs)
+
+    model = (
+        P1[:, None] * D1[None, :]
+        + P3[:, None] * D3[None, :]
+        + P5[:, None] * D5[None, :]
+    )
+
+    residual = (dI - model) / sigma
+    return residual.ravel()
+
+# Fit wrappers
+def fit_cascade_reference(t_fs, energy, dI_mean, sigma, D1, D3, D5, dt0_guess_fs=0.0, dt0_bounds_fs=50.0):
+    t_ps = t_fs / 1000.0
+
+    dt0_guess = dt0_guess_fs / 1000.0
+    dt0_max = dt0_bounds_fs / 1000.0
+
+    # initial guess:
+    # tau1 ~ 0.1 ps -> k1 = 10 ps^-1
+    # tau2 ~ 0.5 ps -> k2 = 2 ps^-1
+
+    x0 = np.array([
+        10.0,     # k1
+        2.0,      # k2
+        dt0_guess
+    ])
+    bounds = ([0.001, 0.001, -dt0_max], [1000.0, 1000.0, dt0_max])
+
+    result = least_squares(residual_cascade_reference, x0, bounds=bounds, args=(t_ps, dI_mean, sigma, D1, D3, D5), max_nfev=2000, verbose=2)
+    k1, k2, dt0 = result.x
+
+    return {"k1": k1, "k2": k2, "dt0": dt0, "result": result}
+
+
+#---lets try it out---yippieyippieyippie
+ref_file = Path("Daten/Analysis and Interpretation/Ref Spectrum/Reference_Data_Fig_4_4.csv")
+data_folder = Path("Daten/Experiment with Data Acquisition/messreihe")
+
+delays = [-150, -100, -50, 0, 50, 100, 150, 200, 300, 400, 600, 800]
+delay_names = ["min150 fs", "min100 fs", "min50 fs", "0 fs", "50 fs", "100 fs", "150 fs", "200 fs", "300 fs", "400 fs", "600 fs", "800 fs"]
+
+# deltaI matrix aus measurements
+t_fs, energy_common, dI_mean, sigma = build_deltaI_matrix_from_folders(data_folder=data_folder, delays=delays, delay_names=delay_names, load_spectrum=load_spectrum)
+# load ref spectrum
+energy_ref, I1_ref, I3_ref, I5_ref = load_reference_spectra(ref_file)
+
+I1 = interp1d(energy_ref, I1_ref, bounds_error=False, fill_value=np.nan)(energy_common)
+I3 = interp1d(energy_ref, I3_ref, bounds_error=False, fill_value=np.nan)(energy_common)
+I5 = interp1d(energy_ref, I5_ref, bounds_error=False, fill_value=np.nan)(energy_common)
+
+IG = I1
+D1 = I1 - IG
+D3 = I3 - IG
+D5 = I5 - IG
+
+valid = (
+    np.isfinite(dI_mean).all(axis=0)
+    & np.isfinite(sigma).all(axis=0)
+    & np.isfinite(D1)
+    & np.isfinite(D3)
+    & np.isfinite(D5)
+    & (sigma > 0).all(axis=0)
+)
+
+print("Total energy bins:", len(energy_common))
+print("Valid energy bins:", np.sum(valid))
+
+energy_fit = energy_common[valid]
+
+dI_fit = dI_mean[:, valid]
+sigma_fit = sigma[:, valid]
+
+D1_fit = D1[valid]
+D3_fit = D3[valid]
+D5_fit = D5[valid]
+
+# Fit cascade mit ref
+fit_cascade = fit_cascade_reference(t_fs, energy_fit, dI_fit, sigma_fit, D1_fit, D3_fit, D5_fit)
+
+print("k1 =", fit_cascade["k1"], "ps^-1")
+print("k2 =", fit_cascade["k2"], "ps^-1")
+print("dt0 =", fit_cascade["dt0"] * 1000, "fs")
+print("tau1 =", 1 / fit_cascade["k1"], "ps")
+print("tau2 =", 1 / fit_cascade["k2"], "ps")
+
+'''def populations_cascade(t_ps, k1, k2):
+    P1 = np.zeros_like(t_ps, dtype=float)
+    P3 = np.zeros_like(t_ps, dtype=float)
+    P5 = np.zeros_like(t_ps, dtype=float)
+
+    mask = t_ps >= 0
+    t = t_ps[mask]
+
+    # 1MLCT -> 3T1 -> 5T2
+    P1[mask] = np.exp(-k1 * t)
+    if np.isclose(k1, k2):
+        # limiting case k1 = k2
+        P3[mask] = k1 * t * np.exp(-k1 * t)
+    else:
+        P3[mask] = (k1 / (k2 - k1) * (np.exp(-k1 * t) - np.exp(-k2 * t)))
+    P5[mask] = 1 - P1[mask] - P3[mask]
+
+    return P1, P3, P5'''
+
+def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
+    k1 = fit_result["k1"]
+    k2 = fit_result["k2"]
+    dt0 = fit_result["dt0"]
+
+    t_plot_fs = np.linspace(t_min_fs, t_max_fs, 1000)
+    t_plot_ps = t_plot_fs / 1000.0
+    t_eff = t_plot_ps - dt0
+    P1, P3, P5 = kinetics_cascade(t_eff, k1, k2)
+    #P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, dt0, sigma_fs)
+
+    plt.figure(figsize=(7, 4.5))
+    plt.plot(t_plot_fs,P1,lw=2,label=r"$^1$MLCT")
+    plt.plot(t_plot_fs,P3,lw=2,label=r"$^3$T$_1$")
+    plt.plot(t_plot_fs,P5,lw=2,label=r"$^5$T$_2$")
+    plt.axvline(dt0 * 1000,color="k",lw=0.8,alpha=0.5, label=f"$t_0=$ {dt0*1000:.3g}") # fitted punkt 0 
+
+    plt.xlabel("Time delay [fs]")
+    plt.ylabel("Population")
+    plt.title(f"Cascade model (with ref data): k1 = {k1:.3g}, k2 = {k2:.3g} ps-1^{{-1}}-1")
+    plt.ylim(-0.05, 1.05)
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+# After fitting:
+plot_populations_cascade_ref(t_fs, fit_cascade)
