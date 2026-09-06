@@ -96,28 +96,32 @@ def build_deltaI_matrix_from_folders(
 
 
 #for finding kinetic populations
-def kinetics_cascade(t, k1, k2):
-    P1 = np.zeros_like(t, dtype=float)
-    P3 = np.zeros_like(t, dtype=float)
-    P5 = np.zeros_like(t, dtype=float)
+def kinetics_cascade(t_ps, k1, k2):
+    P1 = np.zeros_like(t_ps, dtype=float)
+    P3 = np.zeros_like(t_ps, dtype=float)
+    P5 = np.zeros_like(t_ps, dtype=float)
 
-    positive = t >= 0
-    tp = t[positive]
+    positive = t_ps >= 0
+    t = t_ps[positive]
+    # try to fix curve, but idfk
+    mlct = t_ps > -150 
+    t_mlct = t_ps[mlct]
 
     # 1MLCT population
-    P1[positive] = np.exp(-k1 * tp)
+    # P1[mlct] = np.exp(-k1 * t_mlct)
+    P1[positive] = np.exp(-k1 * t)
     # 3T1 population
     if abs(k2 - k1) < 1e-10:
         # limiting case k1 = k2
-        P3[positive] = k1 * tp * np.exp(-k1 * tp)
+        P3[positive] = k1 * t * np.exp(-k1 * t)
     else:
-        P3[positive] = (k1 / (k2 - k1) * (np.exp(-k1 * tp) - np.exp(-k2 * tp)))
+        P3[positive] = (k1 / (k2 - k1) * (np.exp(-k1 * t) - np.exp(-k2 * t)))
     # 5T2 population
     P5[positive] = 1 - P1[positive] - P3[positive]
     return P1, P3, P5
 
-def gaussian_irf(t, sigma):
-    return np.exp(-t**2 / (2 * sigma**2))
+def gaussian_irf(t_fs, sigma_fs):
+    return np.exp(-t_fs**2 / (2 * sigma_fs**2))
 
 FWHM_fs = 50
 sigma_fs = FWHM_fs / (2 * np.sqrt(2 * np.log(2)))
@@ -125,9 +129,10 @@ sigma_fs = FWHM_fs / (2 * np.sqrt(2 * np.log(2)))
 def kinetics_cascade_irf_v2(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
     # feines, gleichmäßiges Zeitraster
     t_grid_fs = np.linspace(-300, 1200, 5000)
-
     # verschobene Zeitachse
-    t_eff_ps = (t_grid_fs - dt0_fs) / 1000.0
+    t_eff_fs = t_grid_fs - dt0_fs
+    # Convert fs -> ps ONLY here
+    t_eff_ps = t_eff_fs / 1000.0
 
     # ideale Populationen
     P1, P3, P5 = kinetics_cascade(t_eff_ps, k1, k2)
@@ -135,8 +140,6 @@ def kinetics_cascade_irf_v2(t_eval_fs, k1, k2, dt0_fs, sigma_fs):
     # Gauß-IRF
     irf = gaussian_irf(t_grid_fs, sigma_fs)
     irf /= np.trapezoid(irf, t_grid_fs)
-    # irf /= np.sum(irf, t_grid_fs)
-
     # Faltung
     dt = t_grid_fs[1] - t_grid_fs[0]
 
@@ -170,11 +173,11 @@ def kinetics_cascade_irf(t_fs, k1, k2, sigma_fs):
 
 #residuen definieren für least squares fitting
 def residual_cascade_reference(params, t_fs, dI, sigma, D1, D3, D5):
-    k1, k2, dt0 = params
-    t = t_fs - dt0
+    k1, k2, dt0_fs = params
+    # t = t_fs - dt0_fs
     # P1, P3, P5 = kinetics_cascade(t, k1, k2) # t odrr t_ps???
-    P1, P3, P5 = kinetics_cascade_irf(t_fs, k1, k2, sigma_fs)
-    #P1, P3, P5 = kinetics_cascade_irf_v2(t_fs, k1, k2, dt0, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf(t_fs, k1, k2, sigma_fs)
+    P1, P3, P5 = kinetics_cascade_irf_v2(t_fs, k1, k2, dt0_fs, sigma_fs)
 
     model = (
         P1[:, None] * D1[None, :]
@@ -187,10 +190,10 @@ def residual_cascade_reference(params, t_fs, dI, sigma, D1, D3, D5):
 
 # Fit wrappers
 def fit_cascade_reference(t_fs, energy, dI_mean, sigma, D1, D3, D5, dt0_guess_fs=0.0, dt0_bounds_fs=50.0):
-    t_ps = t_fs / 1000.0
+    '''t_ps = t_fs / 1000.0
 
     dt0_guess = dt0_guess_fs / 1000.0
-    dt0_max = dt0_bounds_fs / 1000.0
+    dt0_max = dt0_bounds_fs / 1000.0'''
 
     # initial guess:
     # tau1 ~ 0.1 ps -> k1 = 10 ps^-1
@@ -199,11 +202,11 @@ def fit_cascade_reference(t_fs, energy, dI_mean, sigma, D1, D3, D5, dt0_guess_fs
     x0 = np.array([
         10.0,     # k1
         2.0,      # k2
-        dt0_guess
+        dt0_guess_fs
     ])
-    bounds = ([0.001, 0.001, -dt0_max], [1000.0, 1000.0, dt0_max])
+    bounds = ([0.001, 0.001, -dt0_bounds_fs], [1000.0, 1000.0, dt0_bounds_fs])
 
-    result = least_squares(residual_cascade_reference, x0, bounds=bounds, args=(t_ps, dI_mean, sigma, D1, D3, D5), max_nfev=2000, verbose=2)
+    result = least_squares(residual_cascade_reference, x0, bounds=bounds, args=(t_fs, dI_mean, sigma, D1, D3, D5), max_nfev=2000, verbose=2)
     k1, k2, dt0 = result.x
 
     return {"k1": k1, "k2": k2, "dt0": dt0, "result": result}
@@ -282,12 +285,11 @@ print("tau2 =", 1 / fit_cascade["k2"], "ps")
 def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
     k1 = fit_result["k1"]
     k2 = fit_result["k2"]
-    dt0 = fit_result["dt0"]
+    dt0_fs = fit_result["dt0"]
 
     t_plot_fs = np.linspace(t_min_fs, t_max_fs, 1000)
-    t_plot_ps = t_plot_fs / 1000.0
-    t_eff = t_plot_ps - dt0
-    P1, P3, P5 = kinetics_cascade(t_eff, k1, k2)
+    t_eff_ps = (t_plot_fs - dt0_fs) / 1000.0
+    P1, P3, P5 = kinetics_cascade(t_eff_ps, k1, k2)
     # P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, sigma_fs)
     # P1, P3, P5 = kinetics_cascade_irf_v2(t_eff, k1, k2, dt0, sigma_fs)
 
@@ -295,14 +297,14 @@ def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
     plt.plot(t_plot_fs,P1,lw=2,label=r"$^1$MLCT")
     plt.plot(t_plot_fs,P3,lw=2,label=r"$^3$T$_1$")
     plt.plot(t_plot_fs,P5,lw=2,label=r"$^5$T$_2$")
-    plt.axvline(dt0 * 1000,color="k",lw=0.8,alpha=0.5, label=f"$t_0=$ {dt0*1000:.3g}") # fitted punkt 0 
+    plt.axvline(dt0_fs * 1000,color="k",lw=0.8,alpha=0.5, label=f"$t_0=$ {dt0_fs:.2f}") # fitted punkt 0 
 
     plt.xlabel("Time delay [fs]")
     plt.ylabel("Population")
-    plt.title(f"Cascade model (with ref data): k1 = {k1:.3g}, k2 = {k2:.3g} ps-1^{{-1}}-1")
+    plt.title(f"Cascade model: "f"$k_1$ = {k1:.3g} ps$^{{-1}}$, "f"$k_2$ = {k2:.3g} ps$^{{-1}}$")
     plt.ylim(-0.05, 1.05)
-    plt.xlim(-5,10)
-    #plt.xlim(-150,800)
+    # plt.xlim(-5,10)
+    plt.xlim(-150,800)
     plt.legend()
     plt.tight_layout()
     plt.show()
