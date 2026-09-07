@@ -83,7 +83,7 @@ observations = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 left = range(0, 1024)
 right = range(0, 1024)
 
-cal_left = 1./5e7 * 0.7
+cal_left = 1./5e7 * 10
 cal_right = cal_left
 
 line_free = range(400,450)
