@@ -174,10 +174,10 @@ def kinetics_cascade_irf(t_fs, k1, k2, sigma_fs):
 #residuen definieren für least squares fitting
 def residual_cascade_reference(params, t_fs, dI, sigma, D1, D3, D5):
     k1, k2, dt0_fs = params
-    # t = t_fs - dt0_fs
+    t = t_fs - dt0_fs
     # P1, P3, P5 = kinetics_cascade(t, k1, k2) # t odrr t_ps???
-    # P1, P3, P5 = kinetics_cascade_irf(t_fs, k1, k2, sigma_fs)
-    P1, P3, P5 = kinetics_cascade_irf_v2(t_fs, k1, k2, dt0_fs, sigma_fs)
+    P1, P3, P5 = kinetics_cascade_irf(t_fs, k1, k2, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf_v2(t_fs, k1, k2, dt0_fs, sigma_fs)
 
     model = (
         P1[:, None] * D1[None, :]
@@ -290,8 +290,8 @@ def plot_populations_cascade_ref(t_fs, fit_result, t_min_fs=-150, t_max_fs=800):
     t_plot_fs = np.linspace(t_min_fs, t_max_fs, 1000)
     t_eff_ps = (t_plot_fs - dt0_fs) / 1000.0
     P1, P3, P5 = kinetics_cascade(t_eff_ps, k1, k2)
-    # P1, P3, P5 = kinetics_cascade_irf(t_eff, k1, k2, sigma_fs)
-    # P1, P3, P5 = kinetics_cascade_irf_v2(t_eff, k1, k2, dt0, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf(t_eff_ps, k1, k2, sigma_fs)
+    # P1, P3, P5 = kinetics_cascade_irf_v2(t_eff_ps, k1, k2, dt0_fs, sigma_fs)
 
     plt.figure(figsize=(7, 4.5))
     plt.plot(t_plot_fs,P1,lw=2,label=r"$^1$MLCT")
