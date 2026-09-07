@@ -293,8 +293,5 @@ def plot_populations_cascade_separate(t_fs, fit_b):
 
     plt.show()
 
-# After fitting:
-# fit_a = fit_direct_target_analysis(...)
-# fit_b = fit_cascade_target_analysis(...)
 plot_populations_direct_separate(t_fs, fit_a)
 plot_populations_cascade_separate(t_fs, fit_b)
