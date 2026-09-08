@@ -1,0 +1,25 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Radioastronomy}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}The 21cm Radiation Line}{1}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Observation and Evaluation}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The KRT3 telescope}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Weather Conditions}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Calibration}{1}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Determination of the system temperature}{1}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Background Radiation}{1}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Determination of the angular resolution of the KRT3}{1}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Determination of the Sensitivity of the instrument}{1}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Observation of neutral hydrogen in the Milky Way}{1}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Results}{2}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Determination of the system temperature}{2}{subsubsection.3.0.1}%
+\contentsline {subsubsection}{\numberline {3.0.2}Background Radiation}{2}{subsubsection.3.0.2}%
+\contentsline {subsection}{\numberline {3.1}Determination of the angular resolution of the KRT3}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Determination of the Sensitivity of the instrument}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Observation of neutral hydrogen in the Milky Way}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Discussion}{2}{section.4}%
+\contentsline {section}{\numberline {5}Summary}{2}{section.5}%
+\contentsline {section}{List of Figures}{A}{section.5}%
+\contentsline {section}{Anhang \numberline {A}Tabellen}{B}{appendix.1.A}%
+\contentsline {section}{Anhang \numberline {B}Code}{B}{appendix.1.B}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

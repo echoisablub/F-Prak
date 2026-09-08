@@ -65,8 +65,8 @@
 
 \pagenumbering{Roman}
 
-\title{Radioastronomie}
-\subtitle{Fortgeschrittenenpraktikum\\ Versuch HS1}
+\title{Radioastronomy}
+\subtitle{Fortgeschrittenenpraktikum\\ HS1 Radioastronomy}
 \author{Léonie Lanz \\ Nico Kalogerakis}
 \maketitle
 \newpage
@@ -78,10 +78,11 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-
+The experiment HS1-Radioastronomy is there to give an overview for operating a radio telescope and to introduce the prerequitites such as characterising and calibrating the telescope before carrying out the experiments. The main experiment to be conducted is the observation of neutral hydrogen in the Milky Way to determine the rotational velocity in order to derive the mass distribution.
 
 \subsection{Radioastronomy}
-\subsection{The 21cm Radiation Line}}
+
+\subsection{The 21cm Radiation Line}
 
 
 \section{Observation and Evaluation}
@@ -93,67 +94,53 @@
 \subsubsection{Determination of the system temperature}
 \subsubsection{Background Radiation}
 \subsection{Determination of the angular resolution of the KRT3}
+The expected half-width is $q=1.02 \lambda /D= ...$ with the wavelength $\lambda=...$ and the antenna diameter $D=\qty{3}{m}$.
+
 \subsection{Determination of the Sensitivity of the instrument}
+To determine the theoretical sensitivity of the instrument, the weakest detectable flux density $\Delta S_\nu$ for a given system temperature $T'_{sys}$ can be given by the radiometer equation:
+\begin{align}
+\label{eq: radiometer}
+\Delta S_\nu=\frac{2k}{A_e}\frac{C_sT'_{sys}}{\sqrt{\Delta\nu\tau}}
+\end{align}
+where $C_s\approx 2$ is a dimensionless instrumental constant and $\tau$ the integration time. 
+With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to $\Delta S_\nu=...$.
+
+The measurement is carried out with the radio source Vir A with an elevation of ...° at the time of measurement. The necessary integration time is calcuated to be $\tau=...$, taking the flux density at $\nu=\qty{1420.4}{MHz}$ to be $S_\nu=\qty{211}{Jy}\pm\qty{11}{Jy}$ after Baars et al. (1977). 
+
 \subsection{Observation of neutral hydrogen in the Milky Way}
+The preamplifier has a frequency range of 1398.00-1460.56 MHz divided into 1024 channels. The frequency resolution of a single channel (the bandwidth) is calculated ...
+As we observe the H1 line in a single channel, the velocity resolution is ...
+If we assume a radial velocity of 0 km/s 
 
 \section{Results}
-\subsection{Calibration}
+
 \subsubsection{Determination of the system temperature}
 \subsubsection{Background Radiation}
 \subsection{Determination of the angular resolution of the KRT3}
 \subsection{Determination of the Sensitivity of the instrument}
 \subsection{Observation of neutral hydrogen in the Milky Way}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.35]{img/strahltransport/strahltransport einstellungen.png}
-    \caption{Einstellungen: Strahltransport}
-    \label{fig:einstellungenstrahltransport}
-\end{figure}
+%\begin{figure}[H]
 
-
-\begin{figure}[H]
-
-    \centering
+    %\centering
     
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/02_schirm.png}
-        \caption{Schirm 2}
-        \label{fig:schirm2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/03_schirm.png}
-        \caption{Schirm 3}
-        \label{fig:schirm3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/04_schirm.png}
-        \caption{Schirm 4}
-        \label{fig:schirm4}
-    \end{subfigure}
+    %\begin{subfigure}[b]{0.3\textwidth}
+     %   \centering
+     %   \includegraphics[width=\linewidth]{img/strahltransport/02_schirm.png}
+     %   \caption{Schirm 2}
+     %   \label{fig:schirm2}
+    %\end{subfigure}
+    %\hfill
+    %\begin{subfigure}[b]{0.3\textwidth}
+     %   \centering
+     %   \includegraphics[width=\linewidth]{img/strahltransport/03_schirm.png}
+     %   \caption{Schirm 3}
+     %   \label{fig:schirm3}
+    %\end{subfigure}
 
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/05_schirm.png}
-        \caption{Schirm 5}
-        \label{fig:schirm5}
-    \end{subfigure}
-    \hspace{0.05\textwidth} % Horizontaler Abstand zwischen den beiden unteren Bildern
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/strahltransport/06_schirm.png}
-        \caption{Schirm 6}
-        \label{fig:schirm6}
-    \end{subfigure}
-
-    \caption{Gesamtdarstellung der fünf Messungen: Strahlprofile auf den verschiedenen Schirmen}
-    \label{fig:fuenf_bilder_gesamt}
-\end{figure}
+    %\caption{Gesamtdarstellung der fünf Messungen: Strahlprofile auf den verschiedenen Schirmen}
+    %\label{fig:fuenf_bilder_gesamt}
+%\end{figure}
 
 
 
