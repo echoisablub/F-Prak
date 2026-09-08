@@ -4,4 +4,19 @@
 P.~Willmott, {\em An Introduction to Synchrotron Radiation}.
 \newblock Wiley, 2019.
 
+\bibitem{3}
+A.~Owens, ``Synchrotron light sources and radiation detector metrology,'' {\em
+  Nuclear Instruments and Methods in Physics Research Section A: Accelerators,
+  Spectrometers, Detectors and Associated Equipment}, vol.~695, pp.~1--12,
+  2012.
+
+\bibitem{2}
+R.~L. K.~Kim, Z.~Huang, {\em Synchrotron Radiation and Free-Electron Lasers -
+  Principles of Coherent X-Ray Generation}.
+\newblock Cambridge University Press, 2017.
+
+\bibitem{0}
+C.~Bressler, ``Ultrafast x-ray experiments virtual experiments at the x-ray
+  laser european xfel.''
+
 \end{thebibliography}
