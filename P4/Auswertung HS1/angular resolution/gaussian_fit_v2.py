@@ -36,38 +36,62 @@ y_lon_r = y_lon_r * T_A_sun / (P_off_r_mean * 10)
 y_lat_l = y_lat_l * T_A_sun / (P_off_l_mean * 10)
 y_lat_r = y_lat_r * T_A_sun / (P_off_r_mean * 10)
 
+# Fehler
+path = "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Auswertung HS1/angular resolution/sigma_l_r_background.txt"
+sigma= np.loadtxt(path, skiprows=1)
 
-def gaussian(angle, amplitude, sigma, offset):
-    return offset + amplitude * np.exp(-angle**2 / (2 * sigma**2))
+sigma_lat_l = sigma[0]
+sigma_lat_r = sigma[1]
+sigma_lon_l = sigma[2]
+sigma_lon_r = sigma[3]
 
-def fit_scan(angle, signal):
+# Gauss-Modell
+def gaussian(angle, amplitude, sigma, offset, x0):
+    return offset + amplitude * np.exp(-(angle - x0)**2 / (2 * sigma**2))
+
+# fit
+def fit_scan(angle, signal, fit_angle_offset=False):
     signal_error = np.std(signal)
+
+    if fit_angle_offset:
+        initial_guess = [
+            max(signal) - min(signal),  # amplitude
+            1.0,                        # sigma
+            min(signal),                # offset
+            angle[np.argmax(signal)]    # x0
+        ]
+    else:
+        initial_guess = [
+            max(signal) - min(signal),
+            1.0,
+            min(signal),
+            0.0
+        ]
 
     parameters, covariance = curve_fit(
         gaussian,
         angle,
         signal,
-        p0=[
-            max(signal) - min(signal),
-            1.0,
-            min(signal)
-        ],
+        p0=initial_guess,
         sigma=signal_error,
         absolute_sigma=True
     )
 
-    amplitude, sigma, offset = parameters
+    amplitude, sigma, offset, x0 = parameters
+
     sigma_error = np.sqrt(covariance[1, 1])
+    x0_error = np.sqrt(covariance[3, 3])
 
     fwhm = 2 * np.sqrt(2 * np.log(2)) * sigma
     fwhm_error = 2 * np.sqrt(2 * np.log(2)) * sigma_error
 
-    return parameters, fwhm, fwhm_error
+    return parameters, fwhm, fwhm_error, x0_error
 
-fit_lon_l, fwhm_lon_l, fwhm_lon_l_error = fit_scan(x_lon, y_lon_l)
-fit_lon_r, fwhm_lon_r, fwhm_lon_r_error = fit_scan(x_lon, y_lon_r)
-fit_lat_l, fwhm_lat_l, fwhm_lat_l_error = fit_scan(x_lat, y_lat_l)
-fit_lat_r, fwhm_lat_r, fwhm_lat_r_error = fit_scan(x_lat, y_lat_r)
+# ergebnisse
+fit_lon_l, fwhm_lon_l, fwhm_lon_l_error, x0_lon_l_error = fit_scan(x_lon, y_lon_l, fit_angle_offset=True)
+fit_lon_r, fwhm_lon_r, fwhm_lon_r_error, x0_lon_r_error = fit_scan(x_lon, y_lon_r, fit_angle_offset=True)
+fit_lat_l, fwhm_lat_l, fwhm_lat_l_error, fwhm_lat_l_error = fit_scan(x_lat, y_lat_l, fit_angle_offset=True)
+fit_lat_r, fwhm_lat_r, fwhm_lat_r_error, fwhm_lat_r_error = fit_scan(x_lat, y_lat_r, fit_angle_offset=True)
 
 # Korrektur des Longitude-Winkels
 ELV = 42.0
@@ -80,8 +104,9 @@ fwhm_lon_r_corrected_error = fwhm_lon_r_error * correction
 # Plot
 fig, axes = plt.subplots(1, 2, figsize=(13, 5))
 
-def plot_scan(axis, angle, signal, parameters, fwhm, label):
-    amplitude, sigma, offset = parameters
+def plot_scan(axis, angle, signal, yerr, parameters, fwhm, label):
+    amplitude, sigma, offset, x0 = parameters
+
     angle_model = np.linspace(angle.min(), angle.max(), 300)
     signal_model = gaussian(angle_model, *parameters)
 
@@ -90,7 +115,7 @@ def plot_scan(axis, angle, signal, parameters, fwhm, label):
     axis.errorbar(
         angle,
         signal,
-        yerr=np.std(signal),
+        yerr=yerr,
         fmt="o",
         color="red",
         capsize=2,
@@ -111,16 +136,29 @@ def plot_scan(axis, angle, signal, parameters, fwhm, label):
         label="Half maximum"
     )
 
+    axis.axvline(
+        x0 - fwhm / 2,
+        color="blue",
+        linestyle=":"
+    )
+
+    axis.axvline(
+        x0 + fwhm / 2,
+        color="blue",
+        linestyle=":"
+    )
+
     axis.set_xlabel("Winkel [deg]")
     axis.set_ylabel(r"$T_A$ [K]")
     axis.grid(True)
-    axis.legend()
+    axis.legend(loc="best")
 
 
-'''plot_scan(
+plot_scan(
     axes[0],
     x_lon,
     y_lon_l,
+    sigma_lon_l,
     fit_lon_l,
     fwhm_lon_l_corrected,
     label="Left polarised longitude scan"
@@ -130,15 +168,18 @@ plot_scan(
     axes[1],
     x_lat,
     y_lat_l,
+    sigma_lat_l,
     fit_lat_l,
     fwhm_lat_l,
     label="Left polarised latitude scan"
-)'''
+)
+'''
 
 plot_scan(
     axes[0],
     x_lon,
     y_lon_r,
+    sigma_lon_r,
     fit_lon_r,
     fwhm_lon_r_corrected,
     label="Right polarised longitude scan"
@@ -148,14 +189,15 @@ plot_scan(
     axes[1],
     x_lat,
     y_lat_r,
+    sigma_lat_r,
     fit_lat_r,
     fwhm_lat_r,
     label="Right polarised latitude scan"
-)
+)'''
 
 axes[0].set_title("Longitude")
 axes[1].set_title("Latitude")
-
+# plt.legend()
 plt.tight_layout()
 plt.show()
 

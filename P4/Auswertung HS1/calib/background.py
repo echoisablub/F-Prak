@@ -39,14 +39,21 @@ data_lat_r_n = data_lat_r*T_sys_r / P_off_r_mean
 data_lon_l_n = data_lon_l*T_sys_l / P_off_l_mean
 data_lon_r_n = data_lon_r*T_sys_r / P_off_r_mean
 
-# big ?
-'''T_sys_lat_l_eff = T_sys_l - data_lat_l_n
-T_sys_lat_r_eff = T_sys_r - data_lat_r_n
-T_sys_lon_l_eff = T_sys_l - data_lon_l_n
-T_sys_lon_r_eff = T_sys_r - data_lon_r_n'''
+# Fehlerbalken
+sigma_lat_l = np.std(data_lat_l_n[2:13])
+sigma_lat_r = np.std(data_lat_r_n[2:13])
+sigma_lon_l = np.std(data_lon_l_n[2:13])
+sigma_lon_r = np.std(data_lon_r_n[2:13])
 
-# 
-# Fehler!!!
+sigma_data = np.column_stack((sigma_lat_l, sigma_lat_r, sigma_lon_l, sigma_lon_r))
+filepath="Auswertung HS1/angular resolution/sigma_l_r_background"
+np.savetxt(
+    filepath,
+    sigma_data,
+    header="lat_l lat_r lon_l lon_r",
+    comments="",
+    fmt=["%.3f", "%.3f", "%.3f", "%.3f"]
+)
 
 #PLOT
 import matplotlib.pyplot as plt
@@ -54,8 +61,8 @@ import matplotlib.pyplot as plt
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
 # T'_sys als Funktion der Elevation
-axes[0].plot(data_lat_el, data_lat_l_n, "o-", label="left circular polarisation")
-axes[0].plot(data_lat_el, data_lat_r_n, "o-", label="right circular polarisation")
+axes[0].errorbar(data_lat_el, data_lat_l_n, yerr=sigma_lat_l, fmt="o-", capsize=3, label="left circular polarisation")
+axes[0].errorbar(data_lat_el, data_lat_r_n, yerr=sigma_lat_r, fmt="o-", capsize=3, label="right circular polarisation")
 
 axes[0].set_xlabel("Elevation [deg]")
 axes[0].set_ylabel(r"$T_{h_n} = TPI \cdot T'_{\mathrm{sys}} / \overline{P_{off}}$ [K]")
@@ -65,8 +72,8 @@ axes[0].grid(True)
 axes[0].legend()
 
 # T'_sys als Funktion des Azimuts
-axes[1].plot(data_lon_az, data_lon_l_n, "o-", label="left circular polarisation")
-axes[1].plot(data_lon_az, data_lon_r_n, "o-", label="right circular polarisation")
+axes[1].errorbar(data_lon_az, data_lon_l_n, yerr=sigma_lon_l, fmt="o-", capsize=3, label="left circular polarisation")
+axes[1].errorbar(data_lon_az, data_lon_r_n, yerr=sigma_lon_r, fmt="o-", capsize=3, label="right circular polarisation")
 
 axes[1].set_xlabel("Azimuth [deg]")
 axes[1].set_ylabel(r"$T_{h_n} = TPI \cdot T'_{\mathrm{sys}} / \overline{P_{off}}$ [K]")
@@ -104,8 +111,8 @@ print(f"Increase right = {increase_r:.2f}")
 
 plt.figure(figsize=(7, 5))
 
-plt.plot(data_lat_el, data_lat_l_n, "o", label="left")
-plt.plot(data_lat_el, data_lat_r_n, "o", label="right")
+plt.errorbar(data_lat_el, data_lat_l_n, yerr=sigma_lat_l, fmt="o-", capsize=3, label="left")
+plt.errorbar(data_lat_el, data_lat_r_n, yerr=sigma_lat_r, fmt="o-", capsize=3, label="right")
 
 elevation_fit = np.linspace(0, max(data_lat_el), 200)
 plt.plot(elevation_fit,np.polyval(fit_l, elevation_fit),"--",label="linear fit, left")

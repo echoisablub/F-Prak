@@ -39,9 +39,9 @@ $\Rightarrow T_A = 972,753 K$
 USB 1-5, 9-13
 position of the sun calculated by the control software
 
-| Source | RA       | DEC       | AZ         | EL        | HA        | Type | Note |
-| ------ | -------- | --------- | ---------- | --------- | --------- | ---- | ---- |
-| Sun    | 110410.1 | +055810.9 | +1684733.7 | +420048.8 | -003253.9 | Star | East |
+| Source | RA       | DEC       | AZ         | EL          | HA        | Type | Note |
+| ------ | -------- | --------- | ---------- | ----------- | --------- | ---- | ---- |
+| Sun    | 110410.1 | +055810.9 | +1684733.7 | +42 00 48.8 | -003253.9 | Star | East |
 in ordner cscan ist der screenshot
 in ordner FITS sind die daten (lon vs lat)
 
