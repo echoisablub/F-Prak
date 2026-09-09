@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  8 SEP 2026 21:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  9 SEP 2026 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,7 +573,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 64.
+h' as default language. on input line 65.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
@@ -582,33 +582,33 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (Protokoll EXP21.aux)
 \openout1 = `"Protokoll EXP21.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-Package scrbase Info: activating english \abstractname on input line 64.
-Package scrbase Info: activating english \partname on input line 64.
-Package scrbase Info: activating english \figurename on input line 64.
-Package scrbase Info: activating english \tablename on input line 64.
-Package scrbase Info: activating english \contentsname on input line 64.
-Package scrbase Info: activating english \listfigurename on input line 64.
-Package scrbase Info: activating english \listtablename on input line 64.
-Package scrbase Info: activating english \refname on input line 64.
-Package scrbase Info: activating english \indexname on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+Package scrbase Info: activating english \abstractname on input line 65.
+Package scrbase Info: activating english \partname on input line 65.
+Package scrbase Info: activating english \figurename on input line 65.
+Package scrbase Info: activating english \tablename on input line 65.
+Package scrbase Info: activating english \contentsname on input line 65.
+Package scrbase Info: activating english \listfigurename on input line 65.
+Package scrbase Info: activating english \listtablename on input line 65.
+Package scrbase Info: activating english \refname on input line 65.
+Package scrbase Info: activating english \indexname on input line 65.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -635,7 +635,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 65.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
 slations-basic-dictionary-english.trsl
@@ -643,13 +643,13 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 64.
+or `english'. on input line 65.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count353
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 64.
+(tocbasic)             because of missing \bbl@set@language on input line 65.
 \scr@dte@lstlisting@maxnumwidth=\skip71
 
 *geometry* driver: auto-detecting
@@ -686,12 +686,12 @@ Package tocbasic Info: omitting babel extension for `lol'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -706,56 +706,85 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `"Protokoll EXP21.toc"'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
  []
 
 [1]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 107.
+(hyperref)                removing `subscript' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 108.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
 
-LaTeX Warning: Reference `img: ' on page 2 undefined on input line 136.
+LaTeX Warning: Reference `img: ' on page 2 undefined on input line 137.
 
 [2]
 
-LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 148.
+LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 149.
 
 
 LaTeX Warning: Reference `tab: attenuator final' on page 3 undefined on input l
-ine 148.
+ine 149.
 
 
 LaTeX Warning: Reference `img: strahlbreite' on page 3 undefined on input line 
-148.
+149.
 
 
-LaTeX Warning: Citation `' on page 3 undefined on input line 148.
+LaTeX Warning: Citation `' on page 3 undefined on input line 149.
 
 
-LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 148.
+LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 149.
+
+
+Overfull \hbox (16.45132pt too wide) in paragraph at lines 174--176
+\OT1/cmr/m/n/10 The tran-si-tion metal com-plex $[[]([])[]][]$ to be stud-ied i
+s ob-tained through dis-solv-ing the salt $[[]([])[]][][]$
+ []
+
+<img/abs spec aqu sol.png, id=112, 412.54124pt x 328.97906pt>
+File: img/abs spec aqu sol.png Graphic file (type png)
+<use img/abs spec aqu sol.png>
+Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 182.
+(pdftex.def)             Requested size: 268.14864pt x 213.83385pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--189
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
 
 [3{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc}] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
+er-ts1.enc}] [4 <./img/abs spec aqu sol.png>] (Protokoll EXP21.bbl) [1]
+(Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
- [2] [3]
-(Protokoll EXP21.aux)
+ [2] [3] (Protokoll EXP21.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -766,13 +795,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21360 strings out of 467867
- 426141 string characters out of 5418334
- 926102 words of memory out of 5000000
- 50001 multiletter control sequences out of 15000+600000
- 634535 words of font info for 64 fonts, out of 8000000 for 9000
+ 21389 strings out of 467867
+ 426746 string characters out of 5418334
+ 932497 words of memory out of 5000000
+ 50026 multiletter control sequences out of 15000+600000
+ 635213 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,9n,107p,11249b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,9n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -787,9 +816,9 @@ C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmti10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfrm1000.pfb>
-Output written on "Protokoll EXP21.pdf" (8 pages, 189663 bytes).
+Output written on "Protokoll EXP21.pdf" (9 pages, 226670 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 
