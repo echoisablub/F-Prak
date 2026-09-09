@@ -87,26 +87,34 @@ When accelerating electrons or other charged particles to relativistic speeds al
 Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as x-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract x-ray beams and the interference patterns can be measured \cite{1}.
 
 There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipolmagnets with alternating polarity to achieve synchrotron radiation a linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and a higher brilliance \cite{3}.
-The fourth generation in synchrotron radiation are the so-called free electron lasers (FELs).
 
 \subsubsection{Free Electron Laser (FEL)}
+Free-electron lasers are coherent tradiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are in theory able to operate at any arbitrary wavelength or spectrum of wavelength with the limit being the energy and quality of the accelerated electron beam \cite{2}. 
+The duration of a single X-ray pulse can also be reduced to even less than a few femtoseconds. This allows for an investigation of molecular processes and photochemical reactions through a form of sequential snapshots with a characteristic time of under a picosecond \cite{1}. \\\\
+They use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundert metres. The light waves emitted by the electron bunches will line up in place and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component pf the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.
 
 \subsubsection{Undulators}
+
+\subsection{Pump-Probe-Principle}
+The principle of pump-probe-spectroscopy is sending two lasers at the same object with a certain time delay so that the first laser, an optical laser, can excite the system in some way and the second laser, an X-ray pulse can measure the response. In a FEL such as the European XFEL this can be done with ultrafast X-ray pulses on a timescale of a few femtoseconds ($\qty{e-15}{s}$). Variating the time delay allows for a series of sequential snapshots of the process observed and variating the wavelength of the excitation laser allows for an investigation of different processces \cite{0}.
+
+\subsubsection{The Pump-Pulse}
+When absorbing the energy of a photon, the energy of an atoms increases as an electron in promoted into an excited energy level. 
+
+\subsubsection{The Probe-Pulse}
 
 \subsection{The investigated Molecule}
 \subsubsection{Electronic Structure of \([Fe(bipy)_{3}]^{2+}\)}
 
 \subsubsection{Photophysics}
 
-\subsection{Pump-Probe-Principle}
-
-\subsubsection{The Pump-Pulse}
-
-\subsubsection{The Probe-Pulse}
-
 \section{Experimental Setup}
-\subsection{Software: VLab}
+The entrire experiment is conducted in VLab, a software modeled after a hutch in the experimental hall of the European XFEL in Schenefeld. The European XFEL is \qty{3.4}{km} long and runs from the DESY research center to the European XFEL campus. A \qty{1.9}{km} long superconducting linear accelerator feeds electrons with energies up to \qty{17.5}{GeV} into a branched tunnel system with two \qty{212}{m} long undulators that generate hard X-radiation in the range of \qty{5}{keV} to \qty{25}{keV} and one \qty{125}{m} long undulator that generates soft X-radiation in the range of \qty{0.25}{keV} to \qty{3}{keV}.\\\\
+VLab recreates the Femtoseconf X-ray Experiment research platform. 
+
 Datenstruktur (beam imaging and xray eye): 420x420 pixel, bei biu screen dim von 10mm x10mm, bei xray eye screen 2mm x 2mm
+
+For further elaboration see \autoref{Anh: VLab}.
 \subsection{Undulator and Beamline}
 \subsection{Monochromator and Focusing Optics}
 monochromator 
@@ -162,6 +170,10 @@ Focusing:
 plots of the focused beam size and position (FWHM)
 
 \subsubsection{Preparatory Estimates for the Experiment}
+The transition metal complex $[\text{Fe}(\text{bipy})_3]^{2+}$ to be studied is obtained through dissolving the salt $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ in deionized water to the desired concentration. As the actual sample is a powder consisting of small microcrystals that contain incorporated water which remained in the crystal lattice after the crystallization process.\\
+A minimmum volume of \qty{50}{ml} is required to operate the liquid jet in the experiment. To ensure that the sample is completely refreshed between probe pulses, the jet needs to have a flow speed of $v_{jet}=\qty{11}{m/s}$ with an assumed repition rate of the X-ray pulse train of \qty{1.1}{MHz}.\\\\\
+
+
 Fun Facts:
 molar mass: \(M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}\) 
 concentration of the sample: \(c=0,380\frac{mol}{L}\)
@@ -206,6 +218,8 @@ crystal selection: \(Si(531)\) vs \(Ge(531)\) (plot of the two crystal reflectio
     
 \section{Tabellen}
 
+\section{VLab}
+\label{Anh: VLab}
 
 \section{Code}
 %\lstinputlisting[language=Python]{Auswertung exp21.py}

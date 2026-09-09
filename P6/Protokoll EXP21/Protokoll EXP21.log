@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=latex 2026.2.26)  8 SEP 2026 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  8 SEP 2026 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -245,10 +245,10 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 106.
+Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\dvips.def
-File: dvips.def 2025/01/21 v3.2a Graphics/color driver for dvips
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
@@ -284,7 +284,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 ))
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
@@ -367,20 +367,12 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Item=\count304
 \c@Hfootnote=\count305
 )
-Package hyperref Info: Driver (default): hdvips.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hdvips.def
-File: hdvips.def 2026-01-29 v7.01p Hyperref driver for dvips
-
-(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pdfmark.def
-File: pdfmark.def 2026-01-29 v7.01p Hyperref definitions for pdfmark specials
-\pdf@docset=\toks25
-\pdf@box=\box57
-\pdf@toks=\toks26
-\pdf@defaulttoks=\toks27
-\HyField@AnnotCount=\count306
-\Fld@listcount=\count307
-\c@bookmark@seq@number=\count308
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count306
+\c@bookmark@seq@number=\count307
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -394,68 +386,69 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
 \Hy@SectionHShift=\skip68
-))
+)
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count309
-\float@exts=\toks28
-\float@box=\box58
-\@float@everytoks=\toks29
-\@floatcapt=\box59
+\c@float@type=\count308
+\float@exts=\toks25
+\float@box=\box57
+\@float@everytoks=\toks26
+\@floatcapt=\box58
 )
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count310
-\l__siunitx_number_exponent_fixed_int=\count311
-\l__siunitx_number_min_decimal_int=\count312
-\l__siunitx_number_min_integer_int=\count313
-\l__siunitx_number_round_precision_int=\count314
-\l__siunitx_number_lower_threshold_int=\count315
-\l__siunitx_number_upper_threshold_int=\count316
-\l__siunitx_number_group_first_int=\count317
-\l__siunitx_number_group_size_int=\count318
-\l__siunitx_number_group_minimum_int=\count319
+\l__siunitx_number_uncert_offset_int=\count309
+\l__siunitx_number_exponent_fixed_int=\count310
+\l__siunitx_number_min_decimal_int=\count311
+\l__siunitx_number_min_integer_int=\count312
+\l__siunitx_number_round_precision_int=\count313
+\l__siunitx_number_lower_threshold_int=\count314
+\l__siunitx_number_upper_threshold_int=\count315
+\l__siunitx_number_group_first_int=\count316
+\l__siunitx_number_group_size_int=\count317
+\l__siunitx_number_group_minimum_int=\count318
 \l__siunitx_angle_tmp_dim=\dimen164
-\l__siunitx_angle_marker_box=\box60
-\l__siunitx_angle_unit_box=\box61
-\l__siunitx_compound_count_int=\count320
+\l__siunitx_angle_marker_box=\box59
+\l__siunitx_angle_unit_box=\box60
+\l__siunitx_compound_count_int=\count319
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
 ns.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
-\l__siunitx_table_tmp_box=\box62
+\l__siunitx_table_tmp_box=\box61
 \l__siunitx_table_tmp_dim=\dimen165
 \l__siunitx_table_column_width_dim=\dimen166
-\l__siunitx_table_integer_box=\box63
-\l__siunitx_table_decimal_box=\box64
-\l__siunitx_table_uncert_box=\box65
-\l__siunitx_table_before_box=\box66
-\l__siunitx_table_after_box=\box67
+\l__siunitx_table_integer_box=\box62
+\l__siunitx_table_decimal_box=\box63
+\l__siunitx_table_uncert_box=\box64
+\l__siunitx_table_before_box=\box65
+\l__siunitx_table_after_box=\box66
 \l__siunitx_table_before_dim=\dimen167
 \l__siunitx_table_carry_dim=\dimen168
-\l__siunitx_unit_tmp_int=\count321
-\l__siunitx_unit_position_int=\count322
-\l__siunitx_unit_total_int=\count323
+\l__siunitx_unit_tmp_int=\count320
+\l__siunitx_unit_position_int=\count321
+\l__siunitx_unit_total_int=\count322
  (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen169
-\ar@mcellbox=\box68
+\ar@mcellbox=\box67
 \extrarowheight=\dimen170
-\NC@list=\toks30
+\NC@list=\toks27
 \extratabsurround=\skip69
 \backup@length=\skip70
-\ar@cellbox=\box69
+\ar@cellbox=\box68
 ))
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
-(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-dvips.def
-File: bkm-dvips.def 2023-12-10 v1.31 bookmark driver for dvips (HO)
-\BKM@id=\count324
-)) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.st
-y
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count323
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen171
 \lightrulewidth=\dimen172
@@ -467,12 +460,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen178
 \cmidrulekern=\dimen179
 \defaultaddspace=\dimen180
-\@cmidla=\count325
-\@cmidlb=\count326
+\@cmidla=\count324
+\@cmidlb=\count325
 \@aboverulesep=\dimen181
 \@belowrulesep=\dimen182
-\@thisruleclass=\count327
-\@lastruleclass=\count328
+\@thisruleclass=\count326
+\@lastruleclass=\count327
 \@thisrulewidth=\dimen183
 )
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
@@ -496,27 +489,27 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@parindent=\dimen190
 \caption@hangindent=\dimen191
 )
-\c@caption@flags=\count329
-\c@continuedfloat=\count330
+\c@caption@flags=\count328
+\c@continuedfloat=\count329
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count331
+\c@subfigure=\count330
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count332
+\c@subtable=\count331
 ) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count333
-\lst@gtempboxa=\box70
-\lst@token=\toks31
-\lst@length=\count334
+\lst@mode=\count332
+\lst@gtempboxa=\box69
+\lst@token=\toks28
+\lst@length=\count333
 \lst@currlwidth=\dimen192
-\lst@column=\count335
-\lst@pos=\count336
+\lst@column=\count334
+\lst@pos=\count335
 \lst@lostspace=\dimen193
 \lst@width=\dimen194
-\lst@newlines=\count337
-\lst@lineno=\count338
+\lst@newlines=\count336
+\lst@lineno=\count337
 \lst@maxwidth=\dimen195
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
@@ -524,9 +517,9 @@ File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count339
-\lst@skipnumbers=\count340
-\lst@framebox=\box71
+\c@lstnumber=\count338
+\lst@skipnumbers=\count339
+\lst@framebox=\box70
 )
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
@@ -544,9 +537,10 @@ Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 274.
+Package xcolor Info: Driver file: pdftex.def on input line 274.
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
@@ -556,17 +550,17 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count341
-\c@@ppsavesec=\count342
-\c@@ppsaveapp=\count343
+\c@@pps=\count340
+\c@@ppsavesec=\count341
+\c@@ppsaveapp=\count342
 ) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count344
-\Gm@cntv=\count345
-\c@Gm@tempcnt=\count346
+\Gm@cnth=\count343
+\Gm@cntv=\count344
+\c@Gm@tempcnt=\count345
 \Gm@bindingoffset=\dimen196
 \Gm@wd@mp=\dimen197
 \Gm@odd@mp=\dimen198
@@ -575,20 +569,16 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen257
 \Gm@layouthoffset=\dimen258
 \Gm@layoutvoffset=\dimen259
-\Gm@dimlist=\toks32
+\Gm@dimlist=\toks29
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 64.
 
-(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-dvi
-ps.def
-File: l3backend-dvips.def 2025-10-09 L3 backend support: dvips
-\l__pdfannot_backend_content_box=\box72
-\l__pdfannot_backend_model_box=\box73
-\g__pdfannot_backend_int=\count347
-\g__pdfannot_backend_link_int=\count348
-\g__pdfannot_backend_link_sf_int=\count349
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count346
 ) (Protokoll EXP21.aux)
 \openout1 = `"Protokoll EXP21.aux"'.
 
@@ -619,6 +609,32 @@ Package scrbase Info: activating english \listfigurename on input line 64.
 Package scrbase Info: activating english \listtablename on input line 64.
 Package scrbase Info: activating english \refname on input line 64.
 Package scrbase Info: activating english \indexname on input line 64.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count347
+\scratchdimen=\dimen260
+\scratchbox=\box71
+\nofMPsegments=\count348
+\nofMParguments=\count349
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen261
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
+\everyMPtoPDFconversion=\toks31
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
 Package hyperref Info: Link coloring OFF on input line 64.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
@@ -631,15 +647,15 @@ or `english'. on input line 64.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count350
+\c@lstlisting=\count353
 Package tocbasic Info: omitting babel extension for `lol'
 (tocbasic)             because of missing \bbl@set@language on input line 64.
 \scr@dte@lstlisting@maxnumwidth=\skip71
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -684,53 +700,61 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 
-] (Protokoll EXP21.toc)
+{C:/Users/emmak/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(Protokoll EXP21.toc)
 \tf@toc=\write3
 \openout3 = `"Protokoll EXP21.toc"'.
 
  [2]
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 97.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 97.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 97.
+ []
 
 [1]
 
-LaTeX Warning: Reference `img: ' on page 2 undefined on input line 128.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
 
 
-LaTeX Warning: Reference `tab: lenses' on page 2 undefined on input line 140.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 107.
 
 
-LaTeX Warning: Reference `tab: attenuator final' on page 2 undefined on input l
-ine 140.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 107.
 
 
-LaTeX Warning: Reference `img: strahlbreite' on page 2 undefined on input line 
-140.
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
+ []
 
 
-LaTeX Warning: Citation `' on page 2 undefined on input line 140.
+LaTeX Warning: Reference `img: ' on page 2 undefined on input line 136.
+
+[2]
+
+LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 148.
 
 
-LaTeX Warning: Reference `tab: lenses' on page 2 undefined on input line 140.
+LaTeX Warning: Reference `tab: attenuator final' on page 3 undefined on input l
+ine 148.
 
-[2] [3] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
+
+LaTeX Warning: Reference `img: strahlbreite' on page 3 undefined on input line 
+148.
+
+
+LaTeX Warning: Citation `' on page 3 undefined on input line 148.
+
+
+LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 148.
+
+[3{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc}] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
- [2]
-\BKM@file=\write5
-\openout5 = `"Protokoll EXP21.out.ps"'.
-
- [3]
+ [2] [3]
 (Protokoll EXP21.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -742,12 +766,30 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 20926 strings out of 467868
- 419936 string characters out of 5418360
- 929227 words of memory out of 5000000
- 49621 multiletter control sequences out of 15000+600000
+ 21360 strings out of 467867
+ 426141 string characters out of 5418334
+ 926102 words of memory out of 5000000
+ 50001 multiletter control sequences out of 15000+600000
  634535 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,9n,107p,11249b,1110s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,9n,107p,11249b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/emmak/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/emmak/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/
+emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmti10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/cm-super/sfrm1000.pfb>
+Output written on "Protokoll EXP21.pdf" (8 pages, 189663 bytes).
+PDF statistics:
+ 292 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on "Protokoll EXP21.dvi" (8 pages, 38784 bytes).
