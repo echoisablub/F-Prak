@@ -59,6 +59,15 @@ time needed for mapping:
 screenshot auf ubuntu und nicht windows!
 files bei ordner maps und in FITS als imageproJ01 VirA 01
 
+TODO:
+## Theoretical Sensitivity
+everything
+
+## Determination of the uncertainty of radiant flux measurements
+
+preliminary work und eval
+
+
 # 5.1.2 background radiation
 ## moon
 for moon: elevation 30° 52' 32.0''
@@ -81,6 +90,22 @@ for Virgo A: at 15.28
 elevation 47° 56' 18''
 azimuth= 196°
 span = 74
+
+# Observation of neutral hydrogen in the Milky Way
+## frequency setting of the receiver
+
+preliminary work
+
+## measurement
+
+done
+only discussion left
+
+## distrib dark matter
+
+$M_{DM}(R_0)=66411575447.22 ± 3593349279.00$
+
+
 
 
 
