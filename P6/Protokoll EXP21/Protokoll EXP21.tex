@@ -11,9 +11,10 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage{siunitx}
+\DeclareSIUnit{\Greatmol}{M}
 \usepackage{bookmark}
 \usepackage{booktabs}
-\sisetup{locale = DE}
+%\sisetup{locale = DE}
 \usepackage{subcaption}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -171,7 +172,23 @@ plots of the focused beam size and position (FWHM)
 
 \subsubsection{Preparatory Estimates for the Experiment}
 The transition metal complex $[\text{Fe}(\text{bipy})_3]^{2+}$ to be studied is obtained through dissolving the salt $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ in deionized water to the desired concentration. As the actual sample is a powder consisting of small microcrystals that contain incorporated water which remained in the crystal lattice after the crystallization process.\\
-A minimmum volume of \qty{50}{ml} is required to operate the liquid jet in the experiment. To ensure that the sample is completely refreshed between probe pulses, the jet needs to have a flow speed of $v_{jet}=\qty{11}{m/s}$ with an assumed repition rate of the X-ray pulse train of \qty{1.1}{MHz}.\\\\\
+A minimum volume of \qty{50}{ml} is required to operate the liquid jet in the experiment. To ensure that the sample is completely refreshed between probe pulses, the jet needs to have a certain flow speed with an assumed repition rate of the X-ray pulse train of \qty{1.1}{MHz} and an assumed top hat beam profile of the X-ray laser with the dimension $\qty{10}{\micro\m}\times\qty{10}{\micro\m}$. The minimum required flowspeed is calculated as follows:
+$$\Delta x_{\text{travel}} \ge w \quad \Rightarrow \quad v_{\text{min}} \cdot \Delta \tau \ge w \quad \Rightarrow \quad v_{\text{min}} \ge \frac{w}{\Delta \tau}\Rightarrow v_{\text{min}}=\qty{11}{\m\per\s}$$
+With $w=\qty{10}{\micro\m}$ being the spatial width and $\Delta\tau=\frac{1}{f}=\frac{1}{\qty{1.1e6}{Hz}}\approx\qty{9.09e-7}{s}$ the characteristic time.\\\\
+There are three laser wavelengths available for excitation: \qty{355}{nm}, \qty{400}{nm} and \qty{515}{nm}. To evaluate which fits the experiment best, the concentration $c$ of the solution for the three wavelengths for a desired optical density of $OD=1$ and a liquid jet thickness of $d=\qty{25}{\mu\m}$.
+The optical density is defined as $OD=\epsilon\cdot c\cdot d$ with $\epsilon(\lambda)$ the wavelength dependent extinction coefficient of $[\text{Fe}(\text{bipy})_3]^{2+}$ in water. The extinction coefficients can be estimated to be $\epsilon(\qty{355}{nm})=\qty{12000}{\per\Greatmol\per\cm}, \epsilon(\qty{400}{nm})=\qty{4000}{\per\Greatmol\per\cm}, \epsilon(\qty{515}{nm})=\qty{8000}{\per\Greatmol\per\cm}$ as taken from \autoref{fig: ext coeff}.\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.65]{img/abs spec aqu sol.png}
+     \caption{UV/VIS absorption spectrum of an aqueous $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ solution. The
+different CT transitions are indicated. The measured molar absorptivity $\epsilon$ values lie in the
+expected range of $10^{-4}\text{\, l}\text{\,mol}^{-1}\text{\,cm}^{-1}$ to $10^{-5}\text{\, l}\text{\,mol}^{-1}\text{\,cm}^{-1}$ for dipole-allowed transitions\cite{0}}
+     \label{fig: ext coeff}
+\end{figure}
+The following concentrations were calculated:
+$$c_{355}=\qty{0.033}{mol\per\l}, c_{400}=\qty{0.100}{mol\per\l}, c_{515}=\qty{0.050}{mol\per\l}$$
+There are different pulse energies available for each excitation wavelength: \qty{5}{\mu\J}(\qty{355}{nm}), \qty{15}{\mu\J}(\qty{400}{nm}) and \qty{50}{\mu\J}(\qty{515}{nm}). With that in mind the wavelangth of \qty{400}{nm} was chosen, as it has a higher pulse energy, even though it's not ideal when looking at the low absorption rate. The extinction coefficien of the \qty{515}{nm} is slightly better but with the low pulse energy it will be hard to see anything.\\\\
+
 
 
 Fun Facts:
