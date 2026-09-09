@@ -99,8 +99,8 @@ bbc 3,11
 
 $mean= 1455,83$
 $std=212,206$
-$std_{scaled}= 15,71K$
-$mean_{scaled} = T_{A}(OFF) = 156938,474K$
+$std_{scaled}=\sigma[K]=\frac{std}{mean}\cdot T'_{sys}= 15,71K$
+$mean_{scaled}[K] = T_{A}(OFF) = 156938,474K$
 $T_{A}(ON)=3067\cdot 107,8K=330622,6K$
 ![[Pasted image 20260909134522.png]]
 Antenna Temp of source $T_{s} = \frac{T_{A}(ON)-T_{A}(OFF)+T'_{syy}}{T'_{sys}}=1612,17K$
@@ -108,13 +108,13 @@ Rauschen sehr viel größer als erwartet
 	vergleich mit theoretischer empflindlichkeit (600Jy, ca. 1K)
 	bei uns jtz 128Kanäle, 10s integrierzeit
 		also eig sollte es noch besser sein( <<1K)
-		aber bei uns viel rfi stuff was rauscht
+		aber bei uns viel einfluss von RFI -> ~15K std/rauschen
 	empfänger/verstärker sensibilität ist ein problem
+		termisches rauschen begrenzt nicht
 		aber besser als 1K kanns eig nicht werden
 
 $\frac{S}{N}$ gesucht
-
-- 25 karten für s/n=10
+- 25 karten für S/N=10
 # 5.1.2 background radiation
 ## moon
 for moon: elevation 30° 52' 32.0''
@@ -153,10 +153,23 @@ span = 74
 	- 
 
 ## measurement
+$R=R_{0}\cdot \sin(l)$, $R_{0}=8,5kpc$
 
-done
-only discussion left
-
+| $l [deg]$ | $R [kpc]$ | $v_{max} [\frac{km}{s}]$ | $v_{R} \left[ \frac{km}{s} \right]$ |
+| --------- | --------- | ------------------------ | ----------------------------------- |
+| 10        | 1,48±4,09 | -                        | -                                   |
+| 20        | 2,91±4,0  | 70,70±14,50              | ...                                 |
+$v_{max}$ grafisch bestimmt (schnittwert mit der organgenen $\sigma$-linie)
+$v_{R}=v_{max}+\omega_{0}R_{0}\cdot \sin(l)$
+$\omega_{0}R_{0}=220 \frac{km}{s}$
+$v_{max,err}$ grafisch über blauen bereich bestimmt (schnittpunkt min-schnittpunkt max/2)
+$\Delta l=\pm {2}°$
+Fehlerfortpflanzung für R:
+	$\Delta R=|\frac{\delta R}{\delta l}|\cdot \Delta l=|R_{0}\cdot \cos(l)|\cdot\Delta l$
+	$\sigma_{R}=\sqrt{ |R_{0}\cos(l)|\Delta l }$
+$M(R)=0,234\cdot{10}^{10}\left( \frac{v(R)}{\frac{100km}{s}}^2 \right)\left( \frac{R}{kpc} \right)\cdot M_{sun}$
+$1M_{sun}=1,98\cdot{10^{30}}kg$
+ges: eingeschlossene Masse
 ## distrib dark matter
 
 $M_{DM}(R_0)=66411575447.22 ± 3593349279.00$
