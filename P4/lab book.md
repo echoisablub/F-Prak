@@ -39,9 +39,9 @@ $\Rightarrow T_A = 972,753 K$
 USB 1-5, 9-13
 position of the sun calculated by the control software
 
-| Source | RA       | DEC       | AZ         | EL        | HA        | Type | Note |
-| ------ | -------- | --------- | ---------- | --------- | --------- | ---- | ---- |
-| Sun    | 110410.1 | +055810.9 | +1684733.7 | +420048.8 | -003253.9 | Star | East |
+| Source | RA       | DEC       | AZ         | EL          | HA        | Type | Note |
+| ------ | -------- | --------- | ---------- | ----------- | --------- | ---- | ---- |
+| Sun    | 110410.1 | +055810.9 | +1684733.7 | +42 00 48.8 | -003253.9 | Star | East |
 in ordner cscan ist der screenshot
 in ordner FITS sind die daten (lon vs lat)
 
@@ -58,6 +58,15 @@ time needed for mapping:
 
 screenshot auf ubuntu und nicht windows!
 files bei ordner maps und in FITS als imageproJ01 VirA 01
+
+TODO:
+## Theoretical Sensitivity
+everything
+
+## Determination of the uncertainty of radiant flux measurements
+
+preliminary work und eval
+
 
 # 5.1.2 background radiation
 ## moon
@@ -81,6 +90,22 @@ for Virgo A: at 15.28
 elevation 47° 56' 18''
 azimuth= 196°
 span = 74
+
+# Observation of neutral hydrogen in the Milky Way
+## frequency setting of the receiver
+
+preliminary work
+
+## measurement
+
+done
+only discussion left
+
+## distrib dark matter
+
+$M_{DM}(R_0)=66411575447.22 ± 3593349279.00$
+
+
 
 
 
