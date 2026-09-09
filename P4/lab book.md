@@ -15,13 +15,11 @@ data structure in programm (RadioUniversePro)
 | rep | dev   | sb  | on_tbi   | off_tbi | cal_tbi | flux  | SEFD  |
 | --- | ----- | --- | -------- | ------- | ------- | ----- | ----- |
 | 1   | bbc01 | u   | 12195,30 | 1001,40 | 2634,20 | 00,00 | 00,00 |
-P_on_left_mean  = 13680.82 ± 3444.69
-P_off_left_mean = 1023.63 ± 196.40
-P_cal_left_mean = 2785.62 ± 723.30
-P_on_right_mean  = 16597.42 ± 4814.85
-P_off_right_mean = 1292.15 ± 340.61
-P_cal_right_mean = 3329.96 ± 1009.47
-
+$T_{b}\cdot \Omega_{S}=T_{A}\Omega_{A}$
+	$\Omega_{A}=\frac{\lambda^2}{A_{e}}$, $\Omega_{S}=\frac{S_{\nu}}{B_{\nu}}$, $B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}$
+	$S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}=f(T_{A},A_{e})$
+$A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5=1,125\pi m^2$
+$T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}$
 
 ==T_sys_left  = 98.76 ± 22.54 K
 T_sys_right = 107.80 ± 31.65 K
@@ -29,12 +27,9 @@ T_sun_left  = 1237.79 +- 89.62 K
 T_sun_right = 1302.59 +- 119.16 K==
 
 With $S_{\nu}$ of the Sun (aus SWC): 
-76 sup $76\cdot10^{-11}Wm^{-2}Hz^{-1}=76\cdot10000Jy =760000 Jy$
-$S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}$
+76 sfu(solar flux units): $76\cdot10^{-11}Wm^{-2}Hz^{-1}=76\cdot10000Jy =760000 Jy$
 $\Rightarrow T_A = 972,753 K$
-
 - störung wegen rfi
-- 
 # 5.2 angular resolution
 USB 1-5, 9-13
 position of the sun calculated by the control software
@@ -61,13 +56,65 @@ files bei ordner maps und in FITS als imageproJ01 VirA 01
 
 TODO:
 ## Theoretical Sensitivity
-everything
+$\Delta S_{\nu}= \frac{2k}{A_{e}} \frac{C_{S}T'_{sys}}{\sqrt{ \Delta \nu \tau}}$
+spectral flux density
+$C_{S}\approx2$
+$T'_{sys, left}  = 98.76 ± 22.54 K$
+$T'_{sys,right} = 107.80 ± 31.65 K$
+$A_{e}=1.125\pi$
+$\tau=1s$
+$\Delta \nu= 61kHz$
+$\Delta S_{\nu, left}= 6,248 \cdot 10^{-24} \frac{W}{m^2Hz}= 624,92 Jy$
+$\Delta S_{\nu, right}= 6,82 \cdot 10^{-24} \frac{W}{m^2Hz}= 682,02 Jy$
 
+Necessary integration time τ to detected the selected source with the KRT 3 with a signal-to-noise ratio S/N = 10 in each channel:
+- Virgo A: Flux density $=211 ± 11 Jy$, Radiogalaxy
+- for 5 channel each side ($\Delta \nu= 5*61kHz= 305kHz$)
+- $\frac{S}{N}=10$
+- $\tau= \left( \frac{2k\cdot C_{S}\cdot T'_{sys}}{\Delta S_{\nu}\cdot A_{E}} \right)^{2} \cdot \frac{\Delta\nu}{\frac{S}{N}}$
+- $\tau_{l}=4,12s$
+- $\tau_{r}=5,22s$
 ## Determination of the uncertainty of radiant flux measurements
 
-preliminary work und eval
+### preliminary work
+$S_{\nu}=\frac{P}{4\pi d^2\sqrt{ 2\pi }\sigma}=1263,16Jy$
+für mobile radio on the moon (tranmitting with 2W, 900MHz, FWHM:80kHz, $\sigma=34kHz$, recieved on earth
 
+$S_{\nu} \propto \nu^{\alpha}$, $\alpha=-0,7$
 
+bei $\nu=1420.4 MHz$: $S_{\nu,CasA}=1420 ± 70 Jy$
+$\frac{1420,4^{-0,7}MHz}{1420 Jy}=c$
+$S_{\nu, Cas A}= \frac{900^{-0,7}}{c} Jy = 1954,37 Jy$
+
+$T_{A}= \frac{S_{\nu}A_{e}}{2k_{B}}=1,82K$, für $\nu=1420.4 MHz$ again
+
+TODO: Fehlerfortpflanzung
+### evaluation
+bbc 3,11
+![[Pasted image 20260909124324.png]]
+über ds9:
+![[Pasted image 20260909134422.png]]
+
+![[Pasted image 20260909134436.png]]
+
+$mean= 1455,83$
+$std=212,206$
+$std_{scaled}= 15,71K$
+$mean_{scaled} = T_{A}(OFF) = 156938,474K$
+$T_{A}(ON)=3067\cdot 107,8K=330622,6K$
+![[Pasted image 20260909134522.png]]
+Antenna Temp of source $T_{s} = \frac{T_{A}(ON)-T_{A}(OFF)+T'_{syy}}{T'_{sys}}=1612,17K$
+Rauschen sehr viel größer als erwartet
+	vergleich mit theoretischer empflindlichkeit (600Jy, ca. 1K)
+	bei uns jtz 128Kanäle, 10s integrierzeit
+		also eig sollte es noch besser sein( <<1K)
+		aber bei uns viel rfi stuff was rauscht
+	empfänger/verstärker sensibilität ist ein problem
+		aber besser als 1K kanns eig nicht werden
+
+$\frac{S}{N}$ gesucht
+
+- 25 karten für s/n=10
 # 5.1.2 background radiation
 ## moon
 for moon: elevation 30° 52' 32.0''
@@ -94,7 +141,16 @@ span = 74
 # Observation of neutral hydrogen in the Milky Way
 ## frequency setting of the receiver
 
-preliminary work
+### preliminary work
+
+- What is the frequency resolution δ ν, i.e. the bandwidth of a single channel? Then what is the velocity resolution δ υ when observing the H I line?
+	- 
+- In which channel would you expect the H I line at ν0 = 1420.4 MHz, assuming a radial velocity of 0 kms^−1?
+	- 
+- You want to measure the radio continuum of a source. What frequencies are allowed within the bandwidth so that the measurement is not be contaminated by the 21cm line. Assume a maximum radial velocity of the H I of ± 200 kms^−1;
+	- 
+- So which frequency bands should be selected in BBC Tools if you want to observe the H I line once and the continuum once?
+	- 
 
 ## measurement
 

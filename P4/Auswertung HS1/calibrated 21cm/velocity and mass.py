@@ -19,6 +19,8 @@ M_R = []
 M_R_err = []
 v_d = []
 v_d_err = []
+M_d = []
+M_d_err = []
 M_dm = []
 M_dm_err = []
 
@@ -55,6 +57,8 @@ for i in range(len(l)):
     M_R_err.append(M_R_err_i)
     v_d.append(v_d_i)
     v_d_err.append(v_d_err_i)
+    M_d.append(M_d_i)
+    M_d_err.append(M_d_err_i)
     M_dm.append(M_dm_i)
     M_dm_err.append(M_dm_err_i)
 
@@ -64,6 +68,8 @@ M_R = np.array(M_R)
 M_R_err = np.array(M_R_err)
 v_d = np.array(v_d)
 v_d_err = np.array(v_d_err)
+M_d = np.array(M_d)
+M_d_err = np.array(M_d_err)
 M_dm = np.array(M_dm)
 M_dm_err = np.array(M_dm_err)
 
@@ -101,7 +107,7 @@ plt.errorbar(
 
 plt.xlabel(r"$R$ [kpc]")
 plt.ylabel(r"velocity [kms^{-1}]")
-plt.title("Velocities (radian + dark) at each distance R")
+plt.title("Velocities (radian + bayronic) at each distance R")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
@@ -116,9 +122,27 @@ plt.errorbar(
     label=r"$M_R$ mit Fehlerbalken"
 )
 
+plt.errorbar(
+    R[1:],
+    M_d[1:],
+    yerr=M_d_err[1:],
+    fmt="x",
+    capsize=3,
+    label=r"$M_d$ mit Fehlerbalken"
+)
+
+plt.errorbar(
+    R[1:],
+    M_dm[1:],
+    yerr=abs(M_dm_err[1:]),
+    fmt="x",
+    capsize=3,
+    label=r"$M_{DM}$ mit Fehlerbalken"
+)
+
 plt.xlabel(r"$R$ [kpc]")
 plt.ylabel(r"$M_R$ [solar masses]")
-plt.title("Enclosed mass of the Milky Way at each distance R")
+plt.title("Enclosed mass of the Milky Way ($M_R, M_d, M_{DM}$) at each distance R")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
