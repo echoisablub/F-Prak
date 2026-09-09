@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  9 SEP 2026 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  9 SEP 2026 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -759,7 +759,7 @@ s ob-tained through dis-solv-ing the salt $[[]([])[]][][]$
 File: img/abs spec aqu sol.png Graphic file (type png)
 <use img/abs spec aqu sol.png>
 Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 182.
-(pdftex.def)             Requested size: 268.14864pt x 213.83385pt.
+(pdftex.def)             Requested size: 206.27011pt x 164.48912pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 176--189
 
@@ -779,7 +779,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--191
  []
 
 [3{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc}] [4 <./img/abs spec aqu sol.png>] (Protokoll EXP21.bbl) [1]
+er-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
+
+ []
+
+[4 <./img/abs spec aqu sol.png>] [5] (Protokoll EXP21.bbl) [1]
 (Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
@@ -795,9 +800,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21389 strings out of 467867
- 426746 string characters out of 5418334
- 932497 words of memory out of 5000000
+ 21390 strings out of 467867
+ 426752 string characters out of 5418334
+ 932495 words of memory out of 5000000
  50026 multiletter control sequences out of 15000+600000
  635213 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -816,9 +821,9 @@ C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmti10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfrm1000.pfb>
-Output written on "Protokoll EXP21.pdf" (9 pages, 226670 bytes).
+Output written on "Protokoll EXP21.pdf" (10 pages, 228075 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
  262 words of extra memory for PDF output out of 10000 (max. 10000000)
 
