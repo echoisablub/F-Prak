@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  9 SEP 2026 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  10 SEP 2026 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,90 +706,140 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `"Protokoll EXP21.toc"'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 93--96
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
 [1]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 108.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 108.
+(hyperref)                removing `subscript' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 108.
+(hyperref)                removing `superscript' on input line 107.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
+<img/xas terpy.png, id=108, 499.11469pt x 316.18124pt>
+File: img/xas terpy.png Graphic file (type png)
+<use img/xas terpy.png>
+Package pdftex.def Info: img/xas terpy.png  used on input line 139.
+(pdftex.def)             Requested size: 249.55672pt x 158.09023pt.
 
-LaTeX Warning: Reference `img: ' on page 2 undefined on input line 137.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]
 
-LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 149.
+LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 167.
 
 
 LaTeX Warning: Reference `tab: attenuator final' on page 3 undefined on input l
-ine 149.
+ine 167.
 
 
 LaTeX Warning: Reference `img: strahlbreite' on page 3 undefined on input line 
-149.
+167.
 
 
-LaTeX Warning: Citation `' on page 3 undefined on input line 149.
+LaTeX Warning: Citation `' on page 3 undefined on input line 167.
 
 
-LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 149.
+LaTeX Warning: Reference `tab: lenses' on page 3 undefined on input line 167.
 
 
-Overfull \hbox (16.45132pt too wide) in paragraph at lines 174--176
+Overfull \hbox (16.45132pt too wide) in paragraph at lines 192--194
 \OT1/cmr/m/n/10 The tran-si-tion metal com-plex $[[]([])[]][]$ to be stud-ied i
 s ob-tained through dis-solv-ing the salt $[[]([])[]][][]$
  []
 
-<img/abs spec aqu sol.png, id=112, 412.54124pt x 328.97906pt>
+[3{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc} <./img/xas terpy.png>]
+<img/abs spec aqu sol.png, id=129, 412.54124pt x 328.97906pt>
 File: img/abs spec aqu sol.png Graphic file (type png)
 <use img/abs spec aqu sol.png>
-Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 182.
+Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 200.
 (pdftex.def)             Requested size: 206.27011pt x 164.48912pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--189
+Underfull \hbox (badness 10000) in paragraph at lines 194--207
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
-[3{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 192--197
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--216
 
  []
 
-[4 <./img/abs spec aqu sol.png>] [5] (Protokoll EXP21.bbl) [1]
-(Protokoll EXP21.lof)
+[4 <./img/abs spec aqu sol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
+
+ []
+
+<img/100 ps Screenshot 2026-09-03 093257.png, id=139, 1444.64719pt x 812.28468p
+t>
+File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
+<use img/100 ps Screenshot 2026-09-03 093257.png>
+Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on i
+nput line 230.
+(pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
+<img/Reference_Spectrum.png, id=140, 462.528pt x 346.896pt>
+File: img/Reference_Spectrum.png Graphic file (type png)
+<use img/Reference_Spectrum.png>
+Package pdftex.def Info: img/Reference_Spectrum.png  used on input line 249.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+[5 <./img/100 ps Screenshot 2026-09-03 093257.png>]
+File: img/Reference_Spectrum.png Graphic file (type png)
+<use img/Reference_Spectrum.png>
+Package pdftex.def Info: img/Reference_Spectrum.png  used on input line 256.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+
+
+Package caption Warning: \label without proper reference on input line 280.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:100ps all spec' on page 6 undefined on input line
+ 262.
+
+<img/100ps spektrum.png, id=151, 722.7pt x 505.89pt>
+File: img/100ps spektrum.png Graphic file (type png)
+<use img/100ps spektrum.png>
+Package pdftex.def Info: img/100ps spektrum.png  used on input line 268.
+(pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
+<img/100ps diff spektrum.png, id=152, 722.7pt x 505.89pt>
+File: img/100ps diff spektrum.png Graphic file (type png)
+<use img/100ps diff spektrum.png>
+Package pdftex.def Info: img/100ps diff spektrum.png  used on input line 275.
+(pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
+[6 <./img/Reference_Spectrum.png> <./img/100ps spektrum.png> <./img/100ps diff 
+spektrum.png>] [7] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
- [2] [3] (Protokoll EXP21.aux)
+ [2] [3]
+(Protokoll EXP21.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -800,13 +850,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21390 strings out of 467867
- 426752 string characters out of 5418334
- 932495 words of memory out of 5000000
- 50026 multiletter control sequences out of 15000+600000
- 635213 words of font info for 66 fonts, out of 8000000 for 9000
+ 21479 strings out of 467867
+ 428763 string characters out of 5418334
+ 930667 words of memory out of 5000000
+ 50099 multiletter control sequences out of 15000+600000
+ 638315 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,9n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -815,15 +865,16 @@ ublic/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
 eX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/emmak/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/emmak/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/
-emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-y7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmti10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/cm-super/sfrm1000.pfb>
-Output written on "Protokoll EXP21.pdf" (10 pages, 228075 bytes).
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/emma
+k/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
+/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmti10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/cm-super/sfrm1000.pfb>
+Output written on "Protokoll EXP21.pdf" (12 pages, 2927063 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 

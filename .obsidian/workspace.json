@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
+                "file": "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tag 2 - Preparatory Estimates for the Experiment"
+              "title": "Tag 3 - Performing the Experiment with Data Acquisition"
             }
           }
         ]
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
+                "file": "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
+                "file": "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
+                "file": "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -192,19 +192,25 @@
   "active": "dde9774ec6120660",
   "lastOpenFiles": [
     "P6/Protokoll EXP21/Protokoll EXP21.synctex(busy)",
+    "P6/Protokoll EXP21/img/von hamos.png",
+    "P6/Protokoll EXP21/img/pump probe 1.png",
+    "P6/Protokoll EXP21/img/pump probe 2.png",
+    "P6/Protokoll EXP21/img/Screenshot 2026-08-09 105638.png",
+    "P6/Protokoll EXP21/img/Screenshot 2026-08-09 140910.png",
+    "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
+    "P6/Auswertung EXP21/fit/xes_superposition_fit_v3.py",
+    "P6/Auswertung EXP21/fit/xes_superposition_fit_v2.py",
+    "P6/Auswertung EXP21/fit/xes_superposition_fit.py",
+    "P6/Auswertung EXP21/fit/population_fit_try1.py",
+    "P6/Auswertung EXP21/fit/fit_without_quarlets.png",
+    "P6/Auswertung EXP21/fit/fit_v5.py",
+    "P6/Auswertung EXP21/fit/fit_v4.py",
+    "P6/Auswertung EXP21/fit",
     "P4/Auswertung HS1/map/map_VIRA_12.52_12.39_2461291,02004652.png",
     "P4/Auswertung HS1/map/map_VIRA_12.52_12.39_2461291,01986131.png",
     "P4/Auswertung HS1/map",
     "P4/Auswertung HS1/calibrated 21cm/mass all plot.png",
     "P4/Auswertung HS1/calibrated 21cm/velocity and mass.py",
-    "P4/Auswertung HS1/calibrated 21cm/v R und d plot.png",
-    "P4/Auswertung HS1/calib/Temperatur.py",
-    "P4/Auswertung HS1/calib/background.py",
-    "P4/Auswertung HS1/calib/extrapolation background plot.png",
-    "P4/Auswertung HS1/calib/background plot.png",
-    "P4/Auswertung HS1/calib",
-    "P4/Auswertung HS1/angular resolution/sigma_l_r_background.txt",
-    "P6/Protokoll EXP21/Protokoll EXP21.synctex.gz",
-    "P6/Protokoll EXP21/img/abs spec aqu sol.png"
+    "P4/Auswertung HS1/calibrated 21cm/v R und d plot.png"
   ]
 }

@@ -85,12 +85,11 @@
 
 \subsection{Synchrotronradiation}
 When accelerating electrons or other charged particles to relativistic speeds along a curved trajectory they emit so-called synchrotron radiation. It gains is name from the ring accelerators, the sychrotrons, where it was first observed. A typical synchrotron facility consists of a linear accelarator leading into a booster ring in which the electrons are brought up to relativistic speeds \cite{1}\cite{3}. The electrons are then fed into a storage ring in which they continue to circulate at relativistic speeds. From the storage ring the beam-lines lead tangentially away in which the synchrotron radiation is utilized in experimental hutches \cite{1}\cite{3}. 
-Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as x-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract x-ray beams and the interference patterns can be measured \cite{1}.
-
+Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as x-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract x-ray beams and the interference patterns can be measured \cite{1}.\\\\
 There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipolmagnets with alternating polarity to achieve synchrotron radiation a linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and a higher brilliance \cite{3}.
 
 \subsubsection{Free Electron Laser (FEL)}
-Free-electron lasers are coherent tradiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are in theory able to operate at any arbitrary wavelength or spectrum of wavelength with the limit being the energy and quality of the accelerated electron beam \cite{2}. 
+Free-electron lasers are coherent tradiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are in theory able to operate at any arbitrary wavelength or spectrum of wavelength with the limit being the energy and quality of the accelerated electron beam \cite{2}. \\
 The duration of a single X-ray pulse can also be reduced to even less than a few femtoseconds. This allows for an investigation of molecular processes and photochemical reactions through a form of sequential snapshots with a characteristic time of under a picosecond \cite{1}. \\\\
 They use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundert metres. The light waves emitted by the electron bunches will line up in place and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component pf the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.
 
@@ -127,20 +126,40 @@ diffraction gratings
 \subsection{Laser System}
 \subsection{Von Hamos Spectrometer}
 
-Quelle Versuchsmappe:\cite{1}
+Quelle Versuchsmappe:\cite{0}
 
 
 \section{Experimental Procedure}
 \subsection{Preparation of the Experiment}
 \subsubsection{Alignment and Characterization of the X-ray Beam}
 Before doing anything on a beam line it's important to characterize it.\\
-As the absorption edge for the Fe K$\beta_{1,3}$ line of 7065 eV, the energy of the xray beam is set to 7400 eV, to avoid the ripples near the reaction (siehe \autoref{img: }) but without too strong of a loss in intensity. 
-To measure the initial X-ray beam the power slits are fully opened and the following attenuator foils are used to bring the beam to an intensity just below saturatuion of the beam imaging unit 2 (BIU2): 
-\begin{align*}
-	% insert the table of used solid attenuators here
-\end{align*}
+As the absorption edge for the Fe K$\beta_{1,3}$ line of 7065 eV, the energy of the xray beam is set to 7400 eV, to avoid the ripples near the reaction (as illustrated by the X-ray absorption spectrum of $[\text{Fe}(\text{terpy})_2]^{2+}$ \autoref{fig:xas terpy}) but without too strong of a loss in intensity.\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/xas terpy.png}
+     \caption{X-Ray absorption spectrum of $[\text{Fe}(\text{terpy})_2]^{2+}$ (terpy: terpyridin) at the Fe K edge displaying the XANES and EXAFS regions including the background absorption contributions $\mu_0$. The inset zooms into the weak pre edge features \cite{0}.}
+     \label{fig:xas terpy}
+\end{figure}
 
-The size and position of the x-ray is now measured using BIU2. Now the four-bounce crystal-monochromator is turned on and then off again to record the reduction of the spectral bandwidth. Then the dispersive single-shot spectrum analyser is used to record the spectrum of the pink X-ray beam with a bragg angle of 24°. 
+To measure the initial X-ray beam the power slits are fully opened and the following attenuator foils are used to bring the beam to an intensity just below saturatuion of the beam imaging unit 2 (BIU2): 
+\begin{table}[H]
+    \centering
+    \caption{Attenuator foils used}
+    \label{tab:atten initial}
+    \begin{tabular}{|S|S|}
+        \toprule
+        {Rod} & {Attenuator foil} \\
+        \midrule
+        1 & {C }0.1 \\
+        2 & {--} \\
+        3 & {Si }0.1 \\
+        4 & {B4C }0.8 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The size and position of the x-ray is now measured using BIU2. %do we want the pictures here?
+Now the four-bounce crystal-monochromator is turned on and then off again to record the reduction of the spectral bandwidth. Then the dispersive single-shot spectrum analyser is used to record the spectrum of the pink X-ray beam with a bragg angle of 24°. 
 
 For the following experiment the monochromatic beam is used as it leads to a higher resolution than the pink x-ray, even though the intensity of the beam suffers. 
 
@@ -192,28 +211,75 @@ There are different pulse energies available for each excitation wavelength: \qt
 As we want to ensure that the X-ray beam always hits excited molecules we need to determine the diameter of the optical laser beam as well as the diameter of the X-ray beam correctly in relation to each other. 
 %The optical laser beam profile is approximately Gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jetz by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ or rather $d_{FWHM}=?$ with our chosen wavelength of \qty{400}{nm}.
 If the optical laser and the X-ray laser had the same diameter, the x-ray would also investigate molecules that were excited only weakly or even not at all, as the optical laser has an approximately Gaussian beam shape. Ideally, the X-ray is positioned exactly in the centre of the ca. 10 times bigger optical laser beam. Then it can investigate a maximal volume of excited molecules. This also compensates for the fact that the optical laser jitters in the focus layer of the X-ray due to not being focussed there itself.\\
-These estimates have consequences for our estimate of the needed flow speed of the liquid jet which needs to be adjusted to the new diameter of the optical laser to be 10 times faster.\\\\
-Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelyhood
+These estimates have consequences for our needed flow speed of the liquid jet which has to be 10 times faster to adjust to the new diameter of the optical laser.\\\\
+Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelyhood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules. 
+%hier muss noch der abschnitt 19 erläutert werden
 
-Fun Facts:
-molar mass: \(M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}\) 
-concentration of the sample: \(c=0,380\frac{mol}{L}\)
-total attenuation of X-rays: attenuation comparison plot
-flow speed of the jet: \(v_{jet}=11\frac{m}{s}\)
+There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength seperately and requires normalization to the sáccumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
+In order to choose the correct crystal for the emission spectrometer the Bragg reflection angle needs to be considered. 
+%hier fehlt noch der Prozess der Kristall-auswahl mit bragg und so
 
-Laser:
-excitation wavelength: \(\lambda_{pump}=400nm\) (dazu alle fun facts mit MLCT Zuständen und so, und nicht overshooten lol)
-focussing,  diameter of the focus 
-Overfilling: beam sizes of the optical laser and the X-ray pulse relative to each other (plot beam diameter)
-
-Spectromter:
-Van Hamos Spectrometer vs Johann Spectrometer (plot of the two geometries)
-crystal selection: \(Si(531)\) vs \(Ge(531)\) (plot of the two crystal reflections)
+%Fun Facts: molar mass: \(M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}\), concentration of the sample: \(c=0,380\frac{mol}{L}\), total attenuation of X-rays: attenuation comparison plot, flow speed of the jet: \(v_{jet}=11\frac{m}{s}\)
+%Laser: excitation wavelength: \(\lambda_{pump}=400nm\) (dazu alle fun facts mit MLCT Zuständen und so, und nicht overshooten lol), focussing,  diameter of the focus, Overfilling: beam sizes of the optical laser and the X-ray pulse relative to each other (plot beam diameter)
+%Spectromter: Van Hamos Spectrometer vs Johann Spectrometer (plot of the two geometries), crystal selection: \(Si(531)\) vs \(Ge(531)\) (plot of the two crystal reflections)
 
 \subsection{Performing the Experiment with Data Acquisition}
+Using the Large Pixel Detector one can optimize the position of the liquid jet in the X-ray beam for maximal intensity of elastic scattering. The maximal intensity achieved with a pink beam was $3.8\cdot10^{15}$.\\
+The X-ray emission spectrometer was adjusted by setting the Bragg angle range to ... and orienting the detector perpendicular to the incoming dispersive spectrum (see \autoref{fig:von hamos}).
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.2]{img/100 ps Screenshot 2026-09-03 093257.png}
+     \caption{The Von Hamos spectrometer in operating position. with the read-out of the Jungfrau detector as well as the settings for the position to the left.}
+     \label{fig:von hamos}
+\end{figure}
+
+%couldnt find the kb1,3 spectrum :( but that still needs to be inserten here
+
+The excitation laser was set to $\lambda=\qty{400}{nm}$ and $f=0.02$ with a beam diameter of $d=\qty{150}{\mu\m}$ in the sample plane. The spatial overlap between laser and X-ray beam was adjusted so that the X-ray laser always overlapped with the optical laser even with the jitter of the optical laser.
+
+%pictures picture pictures
+
+First the time delay of the laser was set to \qty{100}{ps}. This time delay means the laser pulse definitely strikes the sample before the X-ray pulse arrives. XES spectra with the laser on and off were recorded, as well as a difference spectrum.
+
+For the main measurement of the photophysical/photochemical reaction of $[\text{Fe}(\text{bipy})_3]^{2+}$ the range of delays was chosen to be \qty{-150}{fs} to \qty{800}{fs} with a step size of \qty{50}{fs} between \qty{-150}{fs} and \qty{400}{fs} and a step size of \qty{200}{fs} between \qty{400}{fs} and \qty{800}{fs}. For each delay ten difference spectra were recorded with an accumulation time of $\qty{60}{s}\pm\qty{2}{s}$ each, which was tracked using a stopwatch.
 
 \section{Analysis and Interpretation}
 
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/Reference_Spectrum.png}
+     \caption{The reference spectra plotted with provided data for different spin states.}
+     \label{fig:ref spectra}
+\end{figure}
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/Reference_Spectrum.png}
+     \caption{The reference difference spectra with transient signals plotted with provided data for different transitions.}
+     \label{fig:ref diff spectra}
+\end{figure}
+
+\subsection{XES spectra at 100ps}
+When plotting the XES spectrum and the difference spectrum for a time delay of \qty{100}{ps}(see \autoref{fig:100ps all spec}), a clear transient signal is recognisable with the expected peaks from the reference spectrum (see \autoref{fig:ref diff spectra}). The XES spectrum shows similarities with the singlet spectrum from the reference (see \autoref{fig:ref spectra}).
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/100ps spektrum.png}
+        \caption{XES spectrum with the excitation laser on at a delay of \qty{100}{ps}.}
+        \label{fig:100ps spec}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/100ps diff spektrum.png}
+        %diese grafiken müssen adjusted werden was größe der beschriftung angeht
+        \caption{Difference spectrum at a delay of \qty{100}{ps}.}
+        \label{fig:100ps diff spec}
+    \end{subfigure}
+    \label{fig:100ps all spec}
+\end{figure}
 
 \section{Discussion of the physical meaning}
 
