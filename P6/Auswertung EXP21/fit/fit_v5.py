@@ -1,15 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
 
 plt.rcParams.update({
-    "font.size": 16,
-    "axes.titlesize": 16,
-    "axes.labelsize": 16,
-    "xtick.labelsize": 16,
-    "ytick.labelsize": 16,
-    "legend.fontsize": 16,
-    "legend.title_fontsize": 16,
+    "font.size": 14,
+    "axes.titlesize": 14,
+    "axes.labelsize": 14,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14,
+    "legend.title_fontsize": 14,
 })
 
 from pathlib import Path
