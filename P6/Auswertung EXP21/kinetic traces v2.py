@@ -7,6 +7,16 @@ from scipy.ndimage import gaussian_filter1d
 from scipy.optimize import curve_fit
 from scipy.special import erf
 
+plt.rcParams.update({
+    "font.size": 12,
+    "axes.titlesize": 12,
+    "axes.labelsize": 12,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "legend.fontsize": 12,
+    "legend.title_fontsize": 12,
+})
+
 folder = Path("Daten/Experiment with Data Acquisition/messreihe")
 
 folders = sorted(folder.glob("*"))

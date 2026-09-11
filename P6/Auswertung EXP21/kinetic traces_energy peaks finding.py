@@ -9,6 +9,16 @@ from matplotlib import cm
 from matplotlib.colors import Normalize
 import plotly.graph_objects as go
 
+plt.rcParams.update({
+    "font.size": 12,
+    "axes.titlesize": 12,
+    "axes.labelsize": 12,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "legend.fontsize": 12,
+    "legend.title_fontsize": 12,
+})
+
 folder = Path("Daten/Experiment with Data Acquisition/messreihe")
 
 folders = sorted(folder.glob("*"))

@@ -6,6 +6,16 @@ from scipy.interpolate import interp1d
 from matplotlib import cm
 from matplotlib.colors import Normalize
 
+plt.rcParams.update({
+    "font.size": 12,
+    "axes.titlesize": 12,
+    "axes.labelsize": 12,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "legend.fontsize": 12,
+    "legend.title_fontsize": 12,
+})
+
 energy_grid = np.linspace(7000, 7110, 1000) #common energy grid
 
 file = Path("Daten/Experiment with Data Acquisition/diff 100 ps spektrum/acc_1min_GotthardVonHamos 26-09-02 19-10-44")
