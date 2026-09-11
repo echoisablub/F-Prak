@@ -56,6 +56,8 @@
 \renewcommand{\appendixtocname}{Anhang}
 \renewcommand{\appendixpagename}{Anhang}
 
+\usepackage{caption}
+\captionsetup{font=small}
 
 %\renewcommand{\UrlFont}{\small\tt}
 \usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
@@ -273,14 +275,21 @@ For the main measurement of the photophysical/photochemical reaction of $[\text{
 
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.4]{img/Reference_Spectrum.png}
+     \includegraphics[scale=0.5]{img/fit_with_quarlets.png}
+     \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
+     \label{fig:femtosec}
+\end{figure}
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/Reference_Spectrum.png}
      \caption{The reference spectra plotted with provided data for different spin states.}
      \label{fig:ref spectra}
 \end{figure}
 
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.4]{img/Reference_Spectrum.png}
+     \includegraphics[scale=0.4]{img/Differences_Reference_Spectrum.png}
      \caption{The reference difference spectra with transient signals plotted with provided data for different transitions.}
      \label{fig:ref diff spectra}
 \end{figure}

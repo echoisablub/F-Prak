@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  10 SEP 2026 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  11 SEP 2026 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,7 +573,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 65.
+h' as default language. on input line 67.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
@@ -582,33 +582,33 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (Protokoll EXP21.aux)
 \openout1 = `"Protokoll EXP21.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-Package scrbase Info: activating english \abstractname on input line 65.
-Package scrbase Info: activating english \partname on input line 65.
-Package scrbase Info: activating english \figurename on input line 65.
-Package scrbase Info: activating english \tablename on input line 65.
-Package scrbase Info: activating english \contentsname on input line 65.
-Package scrbase Info: activating english \listfigurename on input line 65.
-Package scrbase Info: activating english \listtablename on input line 65.
-Package scrbase Info: activating english \refname on input line 65.
-Package scrbase Info: activating english \indexname on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+Package scrbase Info: activating english \abstractname on input line 67.
+Package scrbase Info: activating english \partname on input line 67.
+Package scrbase Info: activating english \figurename on input line 67.
+Package scrbase Info: activating english \tablename on input line 67.
+Package scrbase Info: activating english \contentsname on input line 67.
+Package scrbase Info: activating english \listfigurename on input line 67.
+Package scrbase Info: activating english \listtablename on input line 67.
+Package scrbase Info: activating english \refname on input line 67.
+Package scrbase Info: activating english \indexname on input line 67.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -635,7 +635,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
 slations-basic-dictionary-english.trsl
@@ -643,13 +643,13 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 65.
+or `english'. on input line 67.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count353
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 65.
+(tocbasic)             because of missing \bbl@set@language on input line 67.
 \scr@dte@lstlisting@maxnumwidth=\skip71
 
 *geometry* driver: auto-detecting
@@ -686,12 +686,12 @@ Package tocbasic Info: omitting babel extension for `lol'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
 
 
 (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -706,19 +706,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `"Protokoll EXP21.toc"'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
 <img/pump probe 1.png, id=95, 200.24812pt x 124.96687pt>
 File: img/pump probe 1.png Graphic file (type png)
 <use img/pump probe 1.png>
-Package pdftex.def Info: img/pump probe 1.png  used on input line 101.
+Package pdftex.def Info: img/pump probe 1.png  used on input line 103.
 (pdftex.def)             Requested size: 160.19872pt x 99.97363pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -726,120 +726,127 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 112.
+(hyperref)                removing `math shift' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 112.
+(hyperref)                removing `subscript' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 112.
+(hyperref)                removing `superscript' on input line 114.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 
  []
 
 <img/xas terpy.png, id=112, 499.11469pt x 316.18124pt>
 File: img/xas terpy.png Graphic file (type png)
 <use img/xas terpy.png>
-Package pdftex.def Info: img/xas terpy.png  used on input line 144.
+Package pdftex.def Info: img/xas terpy.png  used on input line 146.
 (pdftex.def)             Requested size: 249.55672pt x 158.09023pt.
 [2 <./img/pump probe 1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 166--169
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--169
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
  []
 
 [3{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
 er-ts1.enc} <./img/xas terpy.png>]
-
-LaTeX Warning: Reference `fig:strahlbreite' on page 4 undefined on input line 1
-86.
-
-<img/FWHM_gaussian.png, id=134, 867.24pt x 361.35pt>
+<img/FWHM_gaussian.png, id=138, 867.24pt x 361.35pt>
 File: img/FWHM_gaussian.png Graphic file (type png)
 <use img/FWHM_gaussian.png>
-Package pdftex.def Info: img/FWHM_gaussian.png  used on input line 195.
+Package pdftex.def Info: img/FWHM_gaussian.png  used on input line 197.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
 
-Overfull \hbox (16.45132pt too wide) in paragraph at lines 219--221
+Overfull \hbox (16.45132pt too wide) in paragraph at lines 221--223
 \OT1/cmr/m/n/10 The tran-si-tion metal com-plex $[[]([])[]][]$ to be stud-ied i
 s ob-tained through dis-solv-ing the salt $[[]([])[]][][]$
  []
 
-<img/abs spec aqu sol.png, id=136, 412.54124pt x 328.97906pt>
+<img/abs spec aqu sol.png, id=140, 412.54124pt x 328.97906pt>
 File: img/abs spec aqu sol.png Graphic file (type png)
 <use img/abs spec aqu sol.png>
-Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 227.
+Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 229.
 (pdftex.def)             Requested size: 206.27011pt x 164.48912pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--234
+Underfull \hbox (badness 10000) in paragraph at lines 223--236
 
  []
 
 [4 <./img/FWHM_gaussian.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--243
+Underfull \hbox (badness 10000) in paragraph at lines 239--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 246--249
 
  []
 
 [5 <./img/abs spec aqu sol.png>]
-<img/100 ps Screenshot 2026-09-03 093257.png, id=157, 1444.64719pt x 812.28468p
+<img/100 ps Screenshot 2026-09-03 093257.png, id=162, 1444.64719pt x 812.28468p
 t>
 File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
 <use img/100 ps Screenshot 2026-09-03 093257.png>
 Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on i
-nput line 257.
+nput line 259.
 (pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
-<img/Reference_Spectrum.png, id=158, 462.528pt x 346.896pt>
-File: img/Reference_Spectrum.png Graphic file (type png)
-<use img/Reference_Spectrum.png>
-Package pdftex.def Info: img/Reference_Spectrum.png  used on input line 276.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+<img/fit_with_quarlets.png, id=163, 505.89pt x 325.215pt>
+File: img/fit_with_quarlets.png Graphic file (type png)
+<use img/fit_with_quarlets.png>
+Package pdftex.def Info: img/fit_with_quarlets.png  used on input line 278.
+(pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<img/Reference_Spectrum.png, id=164, 462.528pt x 346.896pt>
 File: img/Reference_Spectrum.png Graphic file (type png)
 <use img/Reference_Spectrum.png>
-Package pdftex.def Info: img/Reference_Spectrum.png  used on input line 283.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+Package pdftex.def Info: img/Reference_Spectrum.png  used on input line 285.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/100ps spektrum.png, id=161, 722.7pt x 505.89pt>
+<img/Differences_Reference_Spectrum.png, id=165, 722.7pt x 433.62pt>
+File: img/Differences_Reference_Spectrum.png Graphic file (type png)
+<use img/Differences_Reference_Spectrum.png>
+Package pdftex.def Info: img/Differences_Reference_Spectrum.png  used on input 
+line 292.
+(pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/100ps spektrum.png, id=168, 722.7pt x 505.89pt>
 File: img/100ps spektrum.png Graphic file (type png)
 <use img/100ps spektrum.png>
-Package pdftex.def Info: img/100ps spektrum.png  used on input line 295.
+Package pdftex.def Info: img/100ps spektrum.png  used on input line 304.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/100ps diff spektrum.png, id=162, 722.7pt x 505.89pt>
+<img/100ps diff spektrum.png, id=169, 722.7pt x 505.89pt>
 File: img/100ps diff spektrum.png Graphic file (type png)
 <use img/100ps diff spektrum.png>
-Package pdftex.def Info: img/100ps diff spektrum.png  used on input line 302.
+Package pdftex.def Info: img/100ps diff spektrum.png  used on input line 311.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-[6 <./img/100 ps Screenshot 2026-09-03 093257.png>] [7 <./img/Reference_Spectru
-m.png> <./img/100ps spektrum.png> <./img/100ps diff spektrum.png>]
-(Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
+[6 <./img/100 ps Screenshot 2026-09-03 093257.png>] [7 <./img/fit_with_quarlets
+.png> <./img/Reference_Spectrum.png> <./img/100ps spektrum.png> <./img/100ps di
+ff spektrum.png>] (Protokoll EXP21.bbl) [1 <./img/Differences_Reference_Spectru
+m.png>] (Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
@@ -848,44 +855,37 @@ m.png> <./img/100ps spektrum.png> <./img/100ps diff spektrum.png>]
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 21494 strings out of 467867
- 429152 string characters out of 5418334
- 933892 words of memory out of 5000000
- 50111 multiletter control sequences out of 15000+600000
- 638315 words of font info for 78 fonts, out of 8000000 for 9000
+ 21520 strings out of 467867
+ 429815 string characters out of 5418334
+ 935208 words of memory out of 5000000
+ 50133 multiletter control sequences out of 15000+600000
+ 639858 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section*.10} has been referenced but does not exist
-, replaced by a fixed one
-
-<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/emmak/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/emmak/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/emmak/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/U
-sers/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmti10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/cm-super/sfrm1000.pfb>
-Output written on "Protokoll EXP21.pdf" (12 pages, 3158355 bytes).
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/emmak/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/emm
+ak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
+ers/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmssbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/emmak/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/emmak/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "Protokoll EXP21.pdf" (12 pages, 3319033 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
+ 404 PDF objects out of 1000 (max. 8388607)
  59 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 words of extra memory for PDF output out of 10000 (max. 10000000)
 
