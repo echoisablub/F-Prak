@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 plt.rcParams.update({
-    "font.size": 12,
-    "axes.titlesize": 12,
-    "axes.labelsize": 12,
-    "xtick.labelsize": 12,
-    "ytick.labelsize": 12,
-    "legend.fontsize": 12,
-    "legend.title_fontsize": 12,
+    "font.size": 13,
+    "axes.titlesize": 13,
+    "axes.labelsize": 13,
+    "xtick.labelsize": 13,
+    "ytick.labelsize": 13,
+    "legend.fontsize": 13,
+    "legend.title_fontsize": 13,
 })
 
 from pathlib import Path
