@@ -131,6 +131,70 @@ def fit_difference_spectrum(energy, difference, sigma, reference_spectra):
     fitted, populations = model(result.x)
     return amplitude, populations, fitted, result
 
+def fit_negative_delays_joint(differences, sigmas, reference_spectra):
+    """Fit t <= 0 with one population and one amplitude per delay."""
+    ground_state = reference_spectra[:, 0]
+    number_of_delays = differences.shape[0]
+
+    def model(parameters):
+        excited_populations = parameters[:4]
+        amplitudes = parameters[4:]
+        singlet_population = 1.0 - np.sum(excited_populations)
+        populations = np.concatenate(([singlet_population], excited_populations))
+        spectral_shape = reference_spectra @ populations - ground_state
+        fitted = amplitudes[:, None] * spectral_shape[None, :]
+        return fitted, populations
+
+    def objective(parameters):
+        fitted, _ = model(parameters)
+        return np.sum(((differences - fitted) / sigmas) ** 2)
+
+    initial_amplitudes = np.maximum(np.max(np.abs(differences), axis=1), 1.0)
+    x0 = np.concatenate((np.zeros(4), initial_amplitudes))
+    result = minimize(
+        objective,
+        x0,
+        method="SLSQP",
+        bounds=[(0.0, 1.0)] * 4 + [(0.0, None)] * number_of_delays,
+        constraints={"type": "ineq", "fun": lambda parameters: 1.0 - np.sum(parameters[:4])},
+        options={"ftol": 1e-12, "maxiter": 2000},
+    )
+
+    fitted, populations = model(result.x)
+    return result.x[4:], populations, fitted, result
+
+def estimate_joint_population_uncertainties(result, differences, sigmas, reference_spectra):
+    """Estimate population uncertainties for the joint negative-delay fit."""
+    parameters = result.x
+    ground_state = reference_spectra[:, 0]
+
+    def weighted_residuals(parameters):
+        excited_populations = parameters[:4]
+        amplitudes = parameters[4:]
+        singlet_population = 1.0 - np.sum(excited_populations)
+        populations = np.concatenate(([singlet_population], excited_populations))
+        spectral_shape = reference_spectra @ populations - ground_state
+        fitted = amplitudes[:, None] * spectral_shape[None, :]
+        return ((differences - fitted) / sigmas).ravel()
+
+    jacobian = np.empty((differences.size, parameters.size))
+    for parameter_index, parameter in enumerate(parameters):
+        step = np.sqrt(np.finfo(float).eps) * max(1.0, abs(parameter))
+        shifted_plus = parameters.copy()
+        shifted_minus = parameters.copy()
+        shifted_plus[parameter_index] += step
+        shifted_minus[parameter_index] -= step
+        jacobian[:, parameter_index] = (
+            weighted_residuals(shifted_plus) - weighted_residuals(shifted_minus)
+        ) / (2 * step)
+
+    covariance = np.linalg.pinv(jacobian.T @ jacobian)
+    population_transform = np.zeros((5, 4))
+    population_transform[0, :] = -1.0
+    population_transform[1:, :] = np.eye(4)
+    population_covariance = population_transform @ covariance[:4, :4] @ population_transform.T
+    return np.sqrt(np.maximum(np.diag(population_covariance), 0.0))
+
 def estimate_population_uncertainties(result, difference, sigma, reference_spectra):
     parameters = result.x
     ground_state = reference_spectra[:, 0]
@@ -207,11 +271,36 @@ amplitudes = []
 populations = []
 population_uncertainties = []
 fitted_spectra = []
+nonpositive = t_fs <= 0
+negative_amplitudes, negative_population, negative_fitted_spectra, negative_result = fit_negative_delays_joint(
+    dI_fit[nonpositive],
+    sigma_fit[nonpositive],
+    reference_fit,
+)
+negative_uncertainties = estimate_joint_population_uncertainties(
+    negative_result,
+    dI_fit[nonpositive],
+    sigma_fit[nonpositive],
+    reference_fit,
+)
+negative_index = 0
 for delay, difference, uncertainty in zip(t_fs, dI_fit, sigma_fit):
-    amplitude, population, fitted, result = fit_difference_spectrum(energy_fit, difference, uncertainty, reference_fit)
+    if delay <= 0:
+        amplitude = negative_amplitudes[negative_index]
+        population = negative_population
+        fitted = negative_fitted_spectra[negative_index]
+        population_uncertainty = negative_uncertainties
+        negative_index += 1
+    else:
+        amplitude, population, fitted, result = fit_difference_spectrum(
+            energy_fit, difference, uncertainty, reference_fit
+        )
+        population_uncertainty = estimate_population_uncertainties(
+            result, difference, uncertainty, reference_fit
+        )
     amplitudes.append(amplitude)
     populations.append(population)
-    population_uncertainties.append(estimate_population_uncertainties(result, difference, uncertainty, reference_fit))
+    population_uncertainties.append(population_uncertainty)
     fitted_spectra.append(fitted)
     print(f"{delay:>5.0f} fs: A = {amplitude:.5g}, populations = {population}")
 
@@ -238,7 +327,7 @@ plt.ylabel("Population $a_M$")
 plt.ylim(-0.02, 1.02)
 plt.legend()
 plt.tight_layout()
-plt.savefig("Auswertung EXP21/fit/fit_all.png")
+plt.savefig("Auswertung EXP21/fit/fit_try_to_fix_lol.png")
 plt.show()
 
 plt.figure(figsize=(7, 4.5))
@@ -253,7 +342,7 @@ plt.xlabel("Time delay [fs]")
 plt.ylabel(r"Measured intensity $N = (\Delta N)^2$")
 plt.legend()
 plt.tight_layout()
-plt.savefig("Auswertung EXP21/fit/poisson_counts_negative_delays.png")
+plt.savefig("Auswertung EXP21/fit/counts_negative_delays_try_to_fix.png")
 plt.show()
 
 
