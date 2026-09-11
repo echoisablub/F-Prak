@@ -2,6 +2,16 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({
+    "font.size": 13,
+    "axes.titlesize": 13,
+    "axes.labelsize": 13,
+    "xtick.labelsize": 13,
+    "ytick.labelsize": 13,
+    "legend.fontsize": 13,
+    "legend.title_fontsize": 13,
+})
+
 path = "Daten/Analysis and Interpretation/Ref Spectrum/Reference_Data.csv"
 
 df = pd.read_csv(path, sep=';', decimal=',')
