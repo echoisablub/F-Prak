@@ -256,6 +256,42 @@ plt.tight_layout()
 plt.savefig("Auswertung EXP21/fit/poisson_counts_negative_delays.png")
 plt.show()
 
+state_colors = plt.rcParams["axes.prop_cycle"].by_key()["color"][:len(state_names)]
+number_of_negative_delays = len(negative_delays)
+number_of_columns = 2
+number_of_rows = int(np.ceil(number_of_negative_delays / number_of_columns))
+fig, axes = plt.subplots(
+    number_of_rows,
+    number_of_columns,
+    figsize=(12, 3.5 * number_of_rows),
+    sharey=True,
+    squeeze=False,
+)
+axes = axes.ravel()
+
+negative_indices = np.flatnonzero(t_fs <= 0)
+for panel_index, (delay, counts, fit_index) in enumerate(
+    zip(negative_delays, poisson_counts, negative_indices)
+):
+    bars = axes[panel_index].bar(state_names, counts, color=state_colors)
+    axes[panel_index].set_title(
+        f"{delay:.0f} fs, A = {amplitudes[fit_index]:.5g}"
+    )
+    axes[panel_index].set_ylabel(r"$N = (\Delta N)^2$")
+    axes[panel_index].tick_params(axis="x", rotation=35)
+    axes[panel_index].grid(axis="y", alpha=0.25)
+    axes[panel_index].bar_label(bars, fmt="%.4g", padding=3)
+    axes[panel_index].set_ylim(0.0,40)
+
+for axis in axes[number_of_negative_delays:]:
+    axis.set_visible(False)
+
+
+
+fig.tight_layout()
+fig.savefig("Auswertung EXP21/fit/counts_negative_delays_per_delay.png", dpi=200)
+plt.show()
+
 
 # Poisson-Statistik
 # Beim Zählen von Photonen mit einem Detektor misst man
