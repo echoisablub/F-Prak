@@ -1,5 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 16,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 16,
+    "ytick.labelsize": 16,
+    "legend.fontsize": 16,
+    "legend.title_fontsize": 16,
+})
+
 from pathlib import Path
 from scipy.interpolate import interp1d
 from scipy.optimize import minimize
@@ -109,7 +121,7 @@ def fit_difference_spectrum(energy, difference, sigma, reference_spectra):
         return np.sum(((difference - fitted) / sigma) ** 2)
 
     # für alle states
-    '''x0 = np.array([1.0, 0.1, 0.1, 0.1, 0.1])
+    x0 = np.array([0.1, 1.0, 0.1, 0.1, 0.0])
     result = minimize(
         objective,
         x0,
@@ -118,10 +130,9 @@ def fit_difference_spectrum(energy, difference, sigma, reference_spectra):
         constraints={"type": "ineq", "fun": lambda parameters: 1.0 - np.sum(parameters[1:])},
         options={"ftol": 1e-12, "maxiter": 2000},
     )
-    '''
 
-    # für alle außer quartet
-    x0 = np.array([1.0, 0.1, 0.1, 0.1])
+    '''# für alle außer quartet
+    x0 = np.array([0.3, 1.0, 0.1, 0.0])
     result = minimize(
         objective,
         x0,
@@ -129,7 +140,7 @@ def fit_difference_spectrum(energy, difference, sigma, reference_spectra):
         bounds=[(0.0, None),(0.0, 1.0),(0.0, 1.0),(0.0, 1.0),],
         constraints={"type": "ineq","fun": lambda parameters: 1.0 - np.sum(parameters[1:])},
         options={"ftol": 1e-12, "maxiter": 2000},
-    )
+    )'''
 
     amplitude = result.x[0]
     fitted, populations = model(result.x)
@@ -147,14 +158,14 @@ delay_names = ["min150 fs", "min100 fs", "min50 fs", "0 fs", "50 fs", "100 fs", 
 t_fs, energy_common, dI_mean, sigma = build_deltaI_matrix_from_folders(data_folder=data_folder, delays=delays, delay_names=delay_names, load_spectrum=load_spectrum)
 # load and interpolate all five reference spectra
 energy_ref, reference_ref = load_reference_spectra(ref_file)
-'''reference_spectra = np.column_stack([
-    interp1d(energy_ref, reference_ref[:, state], bounds_error=False, fill_value=np.nan)(energy_common)
-    for state in range(reference_ref.shape[1])
-])'''
 reference_spectra = np.column_stack([
     interp1d(energy_ref, reference_ref[:, state], bounds_error=False, fill_value=np.nan)(energy_common)
-    for state in [0, 1, 2, 4]
+    for state in range(reference_ref.shape[1])
 ])
+'''reference_spectra = np.column_stack([
+    interp1d(energy_ref, reference_ref[:, state], bounds_error=False, fill_value=np.nan)(energy_common)
+    for state in [0, 1, 2, 4]
+])'''
 
 valid = (
     np.isfinite(dI_mean).all(axis=0)
@@ -186,8 +197,8 @@ populations = np.array(populations)
 fitted_spectra = np.array(fitted_spectra)
 
 plt.figure(figsize=(7, 4.5))
-#state_names = ["singlet", "doublet", "triplet", "quartet", "quintet"]
-state_names = ["singlet", "doublet", "triplet", "quintet"]
+state_names = ["singlet", "doublet", "triplet", "quartet", "quintet"]
+#state_names = ["singlet", "doublet", "triplet", "quintet"]
 for index, state_name in enumerate(state_names):
     plt.plot(t_fs, populations[:, index], "o-", label=state_name)
 plt.xlabel("Time delay [fs]")
@@ -195,5 +206,5 @@ plt.ylabel("Population $a_M$")
 plt.ylim(-0.02, 1.02)
 plt.legend()
 plt.tight_layout()
-plt.savefig("Auswertung EXP21/fit/fit_without_quarlets.png")
+plt.savefig("Auswertung EXP21/fit/fit_with_quarlets.png")
 plt.show()
