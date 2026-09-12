@@ -7,13 +7,13 @@ from matplotlib import cm
 from matplotlib.colors import Normalize
 
 plt.rcParams.update({
-    "font.size": 12,
-    "axes.titlesize": 12,
-    "axes.labelsize": 12,
-    "xtick.labelsize": 12,
-    "ytick.labelsize": 12,
-    "legend.fontsize": 12,
-    "legend.title_fontsize": 12,
+    "font.size": 14,
+    "axes.titlesize": 14,
+    "axes.labelsize": 14,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14,
+    "legend.title_fontsize": 14,
 })
 
 folder = Path("Daten/Experiment with Data Acquisition/messreihe")

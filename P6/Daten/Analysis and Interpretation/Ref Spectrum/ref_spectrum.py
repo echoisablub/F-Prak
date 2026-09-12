@@ -3,43 +3,44 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 plt.rcParams.update({
-    "font.size": 13,
-    "axes.titlesize": 13,
-    "axes.labelsize": 13,
-    "xtick.labelsize": 13,
-    "ytick.labelsize": 13,
-    "legend.fontsize": 13,
-    "legend.title_fontsize": 13,
+    "font.size": 14,
+    "axes.titlesize": 14,
+    "axes.labelsize": 14,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14,
+    "legend.title_fontsize": 14,
 })
 
 path = "Daten/Analysis and Interpretation/Ref Spectrum/Reference_Data.csv"
 
 df = pd.read_csv(path, sep=';', decimal=',')
 
-plt.plot(df["emission energy"], df["singlet"], label="Singlet")
-plt.plot(df["emission energy"], df["doublet"], label="Doublet")
-plt.plot(df["emission energy"], df["triplet"], label="Triplet")
-plt.plot(df["emission energy"], df["quartet"], label="Quartet")
-plt.plot(df["emission energy"], df["quintet"], label="Quintet")
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 6), constrained_layout=True)
 
-plt.xlabel("Energy")
-plt.ylabel("Intensity")
-plt.legend()
-plt.title("Reference Spectrum")
-plt.savefig("Daten/Analysis and Interpretation/Reference_Spectrum.png")
+ax1.plot(df["emission energy"], df["singlet"], label="Singlet")
+ax1.plot(df["emission energy"], df["doublet"], label="Doublet")
+ax1.plot(df["emission energy"], df["triplet"], label="Triplet")
+ax1.plot(df["emission energy"], df["quartet"], label="Quartet")
+ax1.plot(df["emission energy"], df["quintet"], label="Quintet")
+
+ax1.set_xlabel("Energy")
+ax1.set_ylabel("Intensity")
+ax1.legend()
+ax1.set_title("Reference Spectrum")
 
 # Take all possible differences between singlet and higher spin states from the reference spectra and plot these.
 
-plt.figure(figsize=(10, 6))
-plt.plot(df["emission energy"], df["singlet"] - df["singlet"], label="Singlet - Singlet")
-plt.plot(df["emission energy"], df["doublet"] - df["singlet"], label="Doublet - Singlet")
-plt.plot(df["emission energy"], df["triplet"] - df["singlet"], label="Triplet - Singlet")
-plt.plot(df["emission energy"], df["quartet"] - df["singlet"], label="Quartet - Singlet")
-plt.plot(df["emission energy"], df["quintet"] - df["singlet"], label="Quintet - Singlet")
+ax2.plot(df["emission energy"], df["singlet"] - df["singlet"], label="Singlet - Singlet")
+ax2.plot(df["emission energy"], df["doublet"] - df["singlet"], label="Doublet - Singlet")
+ax2.plot(df["emission energy"], df["triplet"] - df["singlet"], label="Triplet - Singlet")
+ax2.plot(df["emission energy"], df["quartet"] - df["singlet"], label="Quartet - Singlet")
+ax2.plot(df["emission energy"], df["quintet"] - df["singlet"], label="Quintet - Singlet")
 
-plt.xlabel("Energy")
-plt.ylabel("Intensity")
-plt.legend()
-plt.title("Differences in Reference Spectrum")
-plt.savefig("Daten/Analysis and Interpretation/Differences_Reference_Spectrum.png")
+ax2.set_xlabel("Energy")
+ax2.set_ylabel("Intensity")
+ax2.legend()
+ax2.set_title("Differences in Reference Spectrum")
+
+fig.savefig("Daten/Analysis and Interpretation/Reference_Spectra.png")
 plt.show()
