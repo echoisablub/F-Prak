@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Tag 3 - Performing the Experiment with Data Acquisition"
             }
+          },
+          {
+            "id": "b3e9c9b0e1bcdeae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "P6/Theoretische Grundlagen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Theoretische Grundlagen"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "da3d6c435cbb4957",
@@ -189,9 +203,12 @@
       "bases:Neue Base erstellen": false
     }
   },
-  "active": "dde9774ec6120660",
+  "active": "b3e9c9b0e1bcdeae",
   "lastOpenFiles": [
     "P6/Protokoll EXP21/Protokoll EXP21.synctex(busy)",
+    "P6/The investigated Molecule.md",
+    "P6/Protokoll EXP21/img/tris(2,2'-bipyridine)iron(II).png",
+    "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
     "P6/Protokoll EXP21/img/FWHM_gaussian.png",
     "P6/Protokoll EXP21/img/FWHM_profiles.png",
     "P6/Protokoll EXP21/img/xas terpy.png",
@@ -209,7 +226,6 @@
     "P6/Auswertung EXP21/fit/fit_v5.py",
     "P6/Auswertung EXP21/fit/fit_v4.py",
     "P6/Auswertung EXP21/fit",
-    "P4/Auswertung HS1/map/map_VIRA_12.52_12.39_2461291,02004652.png",
     "P4/Auswertung HS1/map",
     "P4/Auswertung HS1/calibrated 21cm/velocity and mass.py"
   ]
