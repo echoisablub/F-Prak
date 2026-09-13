@@ -272,7 +272,7 @@ First the time delay of the laser was set to \qty{100}{ps}. This time delay mean
 For the main measurement of the photophysical/photochemical reaction of $[\text{Fe}(\text{bipy})_3]^{2+}$ the range of delays was chosen to be \qty{-150}{fs} to \qty{800}{fs} with a step size of \qty{50}{fs} between \qty{-150}{fs} and \qty{400}{fs} and a step size of \qty{200}{fs} between \qty{400}{fs} and \qty{800}{fs}. For each delay ten difference spectra were recorded with an accumulation time of $\qty{60}{s}\pm\qty{2}{s}$ each, which was tracked using a stopwatch.
 
 \section{Analysis and Interpretation}
-
+The analysis of the measured data is carried out using provided reference spectra resolved into the different spin states (see \autoref{fig:ref spectra}).
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.33]{img/spectra/Reference_Spectra.png}
@@ -281,14 +281,14 @@ For the main measurement of the photophysical/photochemical reaction of $[\text{
 \end{figure}
 
 \subsection{XES spectra at 100ps}
-When plotting the XES spectrum and the difference spectrum for a time delay of \qty{100}{ps}, a clear transient signal is recognisable with the expected peaks from the reference spectrum and the XES spectrum shows similarities with the singlet spectrum from the reference (see \autoref{fig:ref spectra}).
+When plotting the XES spectrum and the difference spectrum for a time delay of \qty{100}{ps}, a clear transient signal is recognisable with the expected peaks from the reference spectrum and the XES spectrum shows similarities with the singlet spectrum from the reference (see \autoref{fig:100ps all spec}).
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\linewidth]{img/spectra/100ps spektrum.png}
-        \caption{XES spectrum with the excitation laser on at a delay of \qty{100}{ps}.}
+        %\caption{XES spectrum with the excitation laser on at a delay of \qty{100}{ps}.}
         \label{fig:100ps spec}
     \end{subfigure}
     \hfill
@@ -296,13 +296,19 @@ When plotting the XES spectrum and the difference spectrum for a time delay of \
         \centering
         \includegraphics[width=\linewidth]{img/spectra/100ps diff spektrum.png}
         %diese grafiken müssen adjusted werden was größe der beschriftung angeht
-        \caption{Difference spectrum between a laser-off and laser-on measurement at a delay of \qty{100}{ps}.}
+        %\caption{Difference spectrum between a laser-off and laser-on measurement at a delay of \qty{100}{ps}.}
         \label{fig:100ps diff spec}
     \end{subfigure}
+    \caption{On the left the XES spectrum with the excitation laser on at a delay of \qty{100}{ps} is plotted. On the right there's the difference spectrum at the same time delay.}
+    \label{fig:100ps all spec}
 \end{figure}
 
 \subsection{Difference spectra for different pump-probe delays}
-%Which stateis present at long pump-prob time delays? 
+From the time resolved difference spectra of the measurements we can tell ...
+
+%Which state is present at long pump-prob time delays? 
+To 
+
 %Are there any short-lived intermediate states?
 %What is the time-dependent population of the respective states?
 To get at the time-dependant population of the respective states present during the different time delays, a fitting-function is contructed in which the different possibilities of states are weighted differntly. 
