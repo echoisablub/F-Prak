@@ -342,7 +342,7 @@ for axis in axes[number_of_negative_delays:]:
     axis.set_visible(False)
 
 fig.tight_layout()
-fig.savefig("Auswertung EXP21/fit/actual fit/counts_negative_delays_per_delay.png", dpi=200)
+#fig.savefig("Auswertung EXP21/fit/actual fit/counts_negative_delays_per_delay.png", dpi=200)
 plt.show()
 
 

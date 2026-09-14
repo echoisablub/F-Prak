@@ -335,21 +335,61 @@ When plotting the XES spectrum and the difference spectrum for a time delay of \
 \end{figure}
 
 \subsection{Difference spectra for different pump-probe delays}
-From the time resolved difference spectra of the measurements we can tell ...
-
-%Which state is present at long pump-prob time delays? 
-To 
-
-%Are there any short-lived intermediate states?
-%What is the time-dependent population of the respective states?
-To get at the time-dependant population of the respective states present during the different time delays, a fitting-function is contructed in which the different possibilities of states are weighted differntly. 
-
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/Time_resolved_spectrum_errbars.png}
+     \caption{Transient spectra of the X-ray emission at different pump-probe time delays.}
+     \label{fig:time res spec}
+\end{figure}
+From the time resolved difference spectra of the measurements (see \autoref{fig:time res spec}) we can see multiple developments in the transient signal over the different time delays: at an energy around \qty{7045.0}{eV} the difference emission intensity grows (the intensity for the excited state is more intense than that of the ground state), at about \qty{7053.7}{eV} a shoulder in intensity difference initially emerges and then flattens out again for time delays $\Delta t>\qty{350}{fs}$. The two most prominent features of the transient signal are the minimum at \qty{7057.8}{eV} and the maximum at \qty{7060.5}{eV} which both match up with the difference spectrum provided.\\
+Another thing to note is how little the change in spectrum between \qty{600}{fs} and \qty{800}{fs} is. The reaction has clearly landed on a more stable state, even though we can tell that it is still an excited state when comparing to the reference spectrum as it most closely matches the quintet-singlet transition denoted there. The comparison with the reference specrtum also tells us that there likely is a short-lived intermediate state as the shoulder we see resembles the triplet or quartet spectra.\\\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/Kinetic traces.png}
+     \caption{Kinetic traces at selected emission energies.}
+     \label{fig:kin traces}
+\end{figure}
+The kinetic traces at these energies (see \autoref{fig:kin traces}) can be used to determine the rise time of the population of the excited states of $[\text{Fe}(\text{bipy})_3]^{2+}$ during the relaxation. To do this we use a function to parametise our reference spectrum:
+\begin{align}
+	S(E)=A\cdot\sum^5_{s=1}f_s\cdot S_s(E)
+\end{align}
+With $A$ being the amplitude, $s=\{1,2,3,4,5\}$ describing the multiplicity and $f_s$ being the population coefficients of the corresponding reference spectra $S_s(E)$. This means the population of the ground state - the singlet state - is described through $f_1$.\\
+The population $T$ of our difference spectrum can now be described as:
+\begin{align}
+	T(E)=S(E)-S_1(E)=A\cdot\left(\sum^5_{s=1} f_s \cdot S_s(E)-S_1(E)\right)
+\end{align}
+The fitting function can be found in \autoref{py:fit}.\\
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.5]{img/fit/fit_all.png}
      \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
-     \label{fig:femtosec}
+     \label{fig:pop bigerr}
 \end{figure}
+Now that we have a fit for the time-dependant population of the respective states present during the different time delays (see \autoref{fig:pop bigerr}), we can see that our population curves have huge errorbars for the time delays $\Delta t\leq0$. This explains the occurence of any spin multiplicity other than singlet for our negative delays, as they should not occur. Our data is noisy for these delays and the fitting function struggles to get a read on the data.\\
+To confirm this, we looked at the squared errors over the negative time delays (see \autoref{fig:counts}) and surmised that our photon count was much too low to justify the peaks seen in our popukation curve. This is also corroborated by looking at the residuals together with the measurements and seeing how noisy the measurements for a time delay of $\Delta t\leq0$ are in comparison to the one at \qty{50}{fs} (see \autoref{fig:resids}).
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/fit/residuals_and_spectra_minus150_to_50fs.png}
+     \caption{The normalised residuals together with the actual measurements and a fit over ... for time delays of $\Delta t=\{\qty{-150}{fs},\qty{-100}{fs},\qty{-50}{fs},\qty{0}{fs},\qty{50}{fs}\}$}
+     \label{fig:resids}
+\end{figure}
+We then used this information to fix our population curves (see \autoref{fig:pop fixed}) by ...%ich check den code v6 noch nicht ganz
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/fit/counts_negative_delays_per_delay.png}
+     \caption{The photon counts of the different excited states for negative time delays.}
+     \label{fig:counts}
+\end{figure}
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/fit/fit_try_to_fix_lol.png}
+     \caption{The adjusted population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
+     \label{fig:pop fixed}
+\end{figure}
+With this version of our fit we can see that nothing really changed for our positive delays. We see a population change from majority singlet to almost no singlets around our \qty{50}{fs} and \qty{100}{fs} delay with only small peaks at later delays with errorbars too big to really be definite peaks. Our triplet population grows rapidly for our \qty{100}{fs} delay which is a bit late when compared to our literature value $\tau<\qty{100}{fs}$ for our lifetime of the MLCT state, but still roughly in the order of magnitude. After that peak our triplet population steadily decreases and is overtaken by the quintet population which grows steadily from a delay of \qty{50}{fs}. At our latest time delay of \qty{800}{fs} the population is made up of almost only quintets with all other states being near 0. The doublet and quartet populations are near 0 for almost all time delays which is to be expected with the predicted intermediate states of the reaction. That they still exist is a result of ...%forgot :/
+
+
 
 \section{Discussion of the physical meaning}
 
