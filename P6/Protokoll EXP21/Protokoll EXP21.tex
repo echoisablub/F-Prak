@@ -151,15 +151,23 @@ The energy difference $\Delta_{oct}$ is smaller for HS configs, because the $e_g
 Excitation to the HS state occurs in this experimental setup through photoexcitation to higher lying MLCT bands followed by relaxation.
 
 \subsubsection{Relaxation process}
+The actual process we want to look at is the relaxation process that occurs after exciting the iron compound from the  singlet state $^1A_1$ into the MLCT (metal to ligand charge transfer) band. In the electronic ground state $[\text{Fe}(\text{bipy})_3]^{2+}$ is a low spin complex while it's a high spin complex when excited to the MLCT band.\\
+There are two different ways the deactivation could occur. Either directly to the high spin state $^5T_{2g}$ or indirectly via the transient state $^3T_{1g}$. Both processes are equally possible. The average lifetime of the MLCT band is $\tau_{MLCT}\approx\qty{100}{fs}$ while the average lifetimes of the transient state $^3T_{1g}$ and the high spin state $^5T_{2g}$ are $\tau_3<\qty{100}{fs}$ and $\tau_5\approx\qty{1}{ns}$ respectively (see \autoref{fig:decay}) \cite{0}.
 
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.35]{img/relax.png}
+     \caption{The potential energy curves of the excited state dynamics of $[\text{Fe}(\text{bipy})_3]^{2+}$ in $\text{H}_2\text{O}$ after the excitation to the MLCT band. \cite{0}.}
+     \label{fig:decay}
+\end{figure}
 
 \section{Experimental setup}
 The entire experiment is conducted in VLab, a software modeled after a hutch in the experimental hall of the European XFEL in Schenefeld. The European XFEL is \qty{3.4}{km} long and runs from the DESY research center to the European XFEL campus. A \qty{1.9}{km} long superconducting linear accelerator feeds electrons with energies up to \qty{17.5}{GeV} into a branched tunnel system with two \qty{212}{m} long undulators that generate hard X-radiation in the range of \qty{5}{keV} to \qty{25}{keV} and one \qty{125}{m} long undulator that generates soft X-radiation in the range of \qty{0.25}{keV} to \qty{3}{keV}.\\\\
-VLab recreates the Femtoseconf X-ray Experiment research platform FXE. The simulation has no built-in structural errors, but there are statistical errors.
+VLab recreates the Femtosecond X-ray Experiment research platform FXE. The simulation has no built-in structural errors, but there are statistical errors when it comes to the photon count.
 
 %For further elaboration see \autoref{Anh: VLab}.
 \subsection{Beamline}
-After the SASE process in the undulators, the beam is neither monochromatic enough nor actually polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch. The beamline in VLab uses a four-crystal monochromator (see \autoref{fig:mono}) which uses the diffranction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}. The four crystal setup ensures that the monochromatic beam follows the same path after the monochromator the pink beam would have. 
+After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a four-crystal monochromator (see \autoref{fig:mono}) which uses the diffranction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}. The four crystal setup ensures that the monochromatic beam follows the same path after the monochromator the pink beam would have.\\\\ 
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.4]{img/4crystal.png}
@@ -175,8 +183,8 @@ Before entering the optical bench there's also a beam splitter built with a line
      \caption{The optical bench in the FXE hut with the following components implemented: BIU 1,2,3 (beam imaging units), SpA (spectrum analyser), TAD (time arrival detector), PS 1,2 (power slits), SAA (solid attenuator assembly), IPM1 (intensity position monitor), CRLs (compound refractive lenses) \cite{0}.}
      \label{fig:opt bench}
 \end{figure}
-In VLab as well as in real life, there are multiple optical elements for controlling and characterising the beam (see \autoref{fig:opt bench}). Listed here are the ones actively used during this experiment.\\
-There are three BIUs which measure the intensity distribution of the beam perpendicular to its propagation direction. In VLab these intensity distributions can be saved as files with a size of 420x420 pixel and the screen dimension \qty{10}{mm}x\qty{10}{mm} leading to a resolution of $0.024\text{\,mm/px}$.\\
+In VLab as well as in real life, there are multiple optical elements for controlling and characterising the beam (see \autoref{fig:opt bench}). Listed here are the ones we actively used during this experiment.\\\\
+There are three BIUs which measure the intensity distribution of the beam perpendicular to its propagation direction. In VLab these intensity distributions can be saved as files with a size of 420x420 pixel and the screen dimension \qty{10}{mm} x\qty{10}{mm} leading to a resolution of $0.024\text{\,mm/px}$.\\
 The power slits are there to restrict the areas of the beam, for this experiment they are fully opened.\\
 As some components and detectors of the beamline will be damaged when hit with the full force of the X-ray beam (such as the BIUs), it is necessary to have a way of weakening the beam without changing anything else about its optics. This is done with the solid attenuators of the SAA which are able to weaken the beam by multipe orders of magnitude. It consists of an assembly of four arms (or rods) which each have a selection of foils of varying thicknesses to hold into the beam. The foils are made of diamond (C*), silicon (Si) and boron carbide ($\text{B}_4\text{C}$) \cite{0}.\\\\
 To focus the beam, compound refractive lenses made of beryllium are used. X-ray optics need a different approach to lenses than UV/VIS light as can be seen when looking at the dimensionless wavelength dependent index of refraction: $n(\lambda)=n_R(\lambda)+in_I(\lambda)$. The real part $n_R$ is the refractive index and measures the phase velocity of light. For wavelengths in the X-ray regime it drops to less than unity, which means the refractive power is extremely low. This means focusing of the beam has to be performed with concave lenses rather than with the optical lenses one would use to focus an optical beam. The lenses are made of beryllium as it is one of the available matrials with a low atomic number which means that the lenses have low X-ray absorption \cite{0}.\\
@@ -194,14 +202,11 @@ The next section of the hutch modeled in VLab is the sample environment in which
 There are two secondary spectrometers available in VLab: the Vom Hamos spectrometer and the Johann spectrometer. The Von Hamos is a dispersive spectrometer which means that it is better suited for recording an entire spectrum while the Johann is a monochromatic spectrometer and better suited for accurately measuring the wavelength of single small wavelength ranges of interest. The Von Hamos in VLab consists of up to 16 cylindrically curved crystals \cite{0}.\\
 The output of the spectrometers can be measured by two different detectors: the Gotthard detector which is a \unit{MHz} compatible strip detector or the Jungfrau detector which is a \qty{10}{Hz} compatible pixel detector. These detectors are made out of silicon and work because of the X-ray generating conduction band electrons whose charge quantity is then measured. This means the detectors sensitivity is energy-dependent.\\
 The LPD was developed specifically for the European XFEL. It's an 1 mega pixel detector with the ability to resolve single pulses within a pulse train. To ensure that the directly transmitted X-ray beam doesn't destroy any of the sensors in the detector theres a small hole which allows the beam to pass without directly hitting any of them.\\
-In this section there's also another more precise BIU - the X-ray eye - which also measures intensity distributions with a size of 420x420 pixel and the screen dimension \qty{2}{mm}x\qty{2}{mm} leading to a resolution of $0.005\text{\,mm/px}$.
+In this section there's also another more precise BIU - the X-ray eye - which also measures intensity distributions with a size of 420x420 pixel and the screen dimension \qty{2}{mm} x\qty{2}{mm} leading to a resolution of $0.005\text{\,mm/px}$.
 
 \subsection{Diagnostic table}
-The last section of the setup contains the 
-
-
-
-
+The relevant part of this last section of the beamline is the final beam stop, made of a sequential set of B4C and Cu attenuators. The failsafe is a "burn-through" monitor placed infront of the beam stop matreials. If the beam is accidentally focussed to the end of the hutch, it will burn a holen in this monitor and generate visible light which switches off the electron photoinjector.\\
+In VLab the worst thing that can happen in regards to radiation safety is that you burn through one of your detector screens and have to start over again which is much less punishing than a potentially life threatening scenario in real life.
 
 \section{Experimental Procedure}
 \subsection{Preparation of the Experiment}
