@@ -23,10 +23,10 @@
 \contentsline {subsection}{\numberline {5.1}XES spectra at 100ps}{9}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Difference spectra for different pump-probe delays}{10}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Discussion of the physical meaning}{13}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion and Outlook}{13}{section.7}%
+\contentsline {subsection}{\numberline {6.1}Error analysis}{14}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Conclusion and Outlook}{14}{section.7}%
 \contentsline {section}{\nonumberline References}{A}{section*.19}%
 \contentsline {section}{Abbildungsverzeichnis}{B}{section*.19}%
 \contentsline {section}{Appendix \numberline {A}Tabellen}{C}{appendix.1.A}%
-\contentsline {section}{Appendix \numberline {B}VLab}{C}{appendix.1.B}%
-\contentsline {section}{Appendix \numberline {C}Code}{C}{appendix.1.C}%
+\contentsline {section}{Appendix \numberline {B}Code}{C}{appendix.1.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

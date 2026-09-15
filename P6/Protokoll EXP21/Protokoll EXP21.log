@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  14 SEP 2026 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  15 SEP 2026 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,7 +579,11 @@ h' as default language. on input line 67.
 tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count346
-) (Protokoll EXP21.aux)
+) (Protokoll EXP21.aux
+
+LaTeX Warning: Label `fig:mono' multiply defined.
+
+)
 \openout1 = `"Protokoll EXP21.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -716,12 +720,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--97
  []
 
 [1]
-<img/pump probe 1.png, id=109, 200.24812pt x 124.96687pt>
+<img/pump probe 1.png, id=101, 200.24812pt x 124.96687pt>
 File: img/pump probe 1.png Graphic file (type png)
 <use img/pump probe 1.png>
 Package pdftex.def Info: img/pump probe 1.png  used on input line 104.
 (pdftex.def)             Requested size: 160.19872pt x 99.97363pt.
-<img/tris(2,2'-bipyridine)iron(II).png, id=113, 225.84375pt x 225.84375pt>
+<img/tris(2,2'-bipyridine)iron(II).png, id=105, 225.84375pt x 225.84375pt>
 File: img/tris(2,2'-bipyridine)iron(II).png Graphic file (type png)
 <use img/tris(2,2'-bipyridine)iron(II).png>
 Package pdftex.def Info: img/tris(2,2'-bipyridine)iron(II).png  used on input l
@@ -748,10 +752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
-
-LaTeX Warning: Reference `fig:mono' on page 3 undefined on input line 155.
-
-<img/4crystal.png, id=123, 337.26pt x 150.5625pt>
+<img/4crystal.png, id=116, 337.26pt x 150.5625pt>
 File: img/4crystal.png Graphic file (type png)
 <use img/4crystal.png>
 Package pdftex.def Info: img/4crystal.png  used on input line 158.
@@ -765,7 +766,7 @@ LaTeX Warning: Citation `4' on page 3 undefined on input line 159.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/opt bench.png, id=125, 668.4975pt x 214.8025pt>
+<img/opt bench.png, id=118, 668.4975pt x 214.8025pt>
 File: img/opt bench.png Graphic file (type png)
 <use img/opt bench.png>
 Package pdftex.def Info: img/opt bench.png  used on input line 167.
@@ -784,7 +785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--177
 LaTeX Warning: Reference `fig:lenses' on page 4 undefined on input line 180.
 
 [4 <./img/4crystal.png> <./img/opt bench.png>]
-<img/xas terpy.png, id=153, 499.11469pt x 316.18124pt>
+<img/xas terpy.png, id=146, 499.11469pt x 316.18124pt>
 File: img/xas terpy.png Graphic file (type png)
 <use img/xas terpy.png>
 Package pdftex.def Info: img/xas terpy.png  used on input line 206.
@@ -804,7 +805,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--231
  []
 
 [5]
-<img/FWHM_gaussian.png, id=168, 867.24pt x 361.35pt>
+<img/FWHM_gaussian.png, id=162, 867.24pt x 361.35pt>
 File: img/FWHM_gaussian.png Graphic file (type png)
 <use img/FWHM_gaussian.png>
 Package pdftex.def Info: img/FWHM_gaussian.png  used on input line 257.
@@ -821,7 +822,7 @@ s ob-tained through dis-solv-ing the salt $[[]([])[]][][]$
 
 [6{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
 er-ts1.enc} <./img/xas terpy.png>]
-<img/abs spec aqu sol.png, id=182, 412.54124pt x 328.97906pt>
+<img/abs spec aqu sol.png, id=174, 412.54124pt x 328.97906pt>
 File: img/abs spec aqu sol.png Graphic file (type png)
 <use img/abs spec aqu sol.png>
 Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 289.
@@ -854,7 +855,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 306--309
 
  []
 
-<img/100 ps Screenshot 2026-09-03 093257.png, id=193, 1444.64719pt x 812.28468p
+<img/100 ps Screenshot 2026-09-03 093257.png, id=184, 1444.64719pt x 812.28468p
 t>
 File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
 <use img/100 ps Screenshot 2026-09-03 093257.png>
@@ -864,7 +865,7 @@ nput line 319.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/spectra/Reference_Spectra.png, id=195, 1389.7521pt x 433.62pt>
+<img/spectra/Reference_Spectra.png, id=186, 1389.7521pt x 433.62pt>
 File: img/spectra/Reference_Spectra.png Graphic file (type png)
 <use img/spectra/Reference_Spectra.png>
 Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 
@@ -876,13 +877,13 @@ Overfull \hbox (3.3755pt too wide) in paragraph at lines 338--339
  []
 
 [8 <./img/abs spec aqu sol.png>]
-<img/spectra/100ps spektrum.png, id=204, 722.7pt x 505.89pt>
+<img/spectra/100ps spektrum.png, id=195, 722.7pt x 505.89pt>
 File: img/spectra/100ps spektrum.png Graphic file (type png)
 <use img/spectra/100ps spektrum.png>
 Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 350
 .
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/spectra/100ps diff spektrum.png, id=205, 722.7pt x 505.89pt>
+<img/spectra/100ps diff spektrum.png, id=196, 722.7pt x 505.89pt>
 File: img/spectra/100ps diff spektrum.png Graphic file (type png)
 <use img/spectra/100ps diff spektrum.png>
 Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input lin
@@ -890,13 +891,13 @@ e 357.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
  [9 <./img/100 ps Screenshot 2026-09-03 093257.png> <./img/spectra/Reference_Sp
 ectra.png>]
-<img/Time_resolved_spectrum_errbars.png, id=214, 722.7pt x 505.89pt>
+<img/Time_resolved_spectrum_errbars.png, id=205, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_errbars.png Graphic file (type png)
 <use img/Time_resolved_spectrum_errbars.png>
 Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input 
 line 369.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/Kinetic traces.png, id=216, 722.7pt x 433.62pt>
+<img/Kinetic traces.png, id=207, 722.7pt x 433.62pt>
 File: img/Kinetic traces.png Graphic file (type png)
 <use img/Kinetic traces.png>
 Package pdftex.def Info: img/Kinetic traces.png  used on input line 377.
@@ -911,25 +912,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--382
 
 LaTeX Warning: Reference `py:fit' on page 11 undefined on input line 390.
 
-<img/fit/fit_all.png, id=227, 505.89pt x 325.215pt>
+<img/fit/fit_all.png, id=217, 505.89pt x 325.215pt>
 File: img/fit/fit_all.png Graphic file (type png)
 <use img/fit/fit_all.png>
 Package pdftex.def Info: img/fit/fit_all.png  used on input line 393.
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=231, 1011.78pt x 823.15
+<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=221, 1011.78pt x 823.15
 53pt>
 File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png
 )
 <use img/fit/residuals_and_spectra_minus150_to_50fs.png>
 Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  us
 ed on input line 401.
-(pdftex.def)             Requested size: 505.88876pt x 411.57664pt.
-
-Overfull \hbox (50.64465pt too wide) in paragraph at lines 401--402
- [][] 
- []
-
-<img/fit/counts_negative_delays_per_delay.png, id=233, 867.24pt x 505.89pt>
+(pdftex.def)             Requested size: 455.2968pt x 370.41646pt.
+<img/fit/counts_negative_delays_per_delay.png, id=223, 867.24pt x 505.89pt>
 File: img/fit/counts_negative_delays_per_delay.png Graphic file (type png)
 <use img/fit/counts_negative_delays_per_delay.png>
 Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on 
@@ -939,7 +935,7 @@ input line 408.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/fit/fit_try_to_fix_lol.png, id=246, 505.89pt x 325.215pt>
+<img/fit/fit_try_to_fix_lol.png, id=236, 505.89pt x 325.215pt>
 File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
 <use img/fit/fit_try_to_fix_lol.png>
 Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 415
@@ -948,9 +944,23 @@ Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 415
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--428
+
+ []
+
 [12 <./img/fit/residuals_and_spectra_minus150_to_50fs.png>] [13 <./img/fit/coun
-ts_negative_delays_per_delay.png> <./img/fit/fit_try_to_fix_lol.png>]
-(Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
+ts_negative_delays_per_delay.png> <./img/fit/fit_try_to_fix_lol.png>] [14]
+(Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof
+
+LaTeX Warning: Citation `4' on page B undefined on input line 3.
+
+)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
@@ -964,69 +974,42 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 21593 strings out of 467867
- 432140 string characters out of 5418334
- 932993 words of memory out of 5000000
- 50186 multiletter control sequences out of 15000+600000
+ 21586 strings out of 467867
+ 432038 string characters out of 5418334
+ 932335 words of memory out of 5000000
+ 50185 multiletter control sequences out of 15000+600000
  638623 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/emmak/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
+emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
+/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.
+pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmssbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/emmak/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/emmak/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
+s/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-pdfTeX warning (dest): name{figure.caption.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.5} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.17} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.6} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmbx9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/emmak/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/em
-mak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/U
-sers/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pf
-b><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmssbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/emmak/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/
-emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Protokoll EXP21.pdf" (18 pages, 5268975 bytes).
+Output written on "Protokoll EXP21.pdf" (19 pages, 5272611 bytes).
 PDF statistics:
  496 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
+ 76 named destinations out of 1000 (max. 500000)
  334 words of extra memory for PDF output out of 10000 (max. 10000000)
 
