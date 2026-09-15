@@ -166,7 +166,7 @@ Before entering the optical bench there's also a beam splitter built with a line
      \centering
      \includegraphics[scale=0.4]{img/opt bench.png}
      \caption{The optical bench in the FXE hut with the following components implemented: BIU 1,2,3 (beam imaging units), SpA (spectrum analyser), TAD (time arrival detector), PS 1,2 (power slits), SAA (solid attenuator assembly), IPM1 (intensity position monitor), CRLs (compound refractive lenses) \cite{0}.}
-     \label{fig:mono}
+     \label{fig:opt bench}
 \end{figure}
 In VLab as well as in real life, there are multiple optical elements for controlling and characterising the beam (see \autoref{fig:opt bench}). Listed here are the ones actively used during this experiment.\\
 There are three BIUs which measure the intensity distribution of the beam perpendicular to its propagation direction. In VLab these intensity distributions can be saved as files with a size of 420x420 pixel and the screen dimension \qty{10}{mm}x\qty{10}{mm} leading to a resolution of $0.024\text{\,mm/px}$.\\
@@ -177,7 +177,7 @@ The focal distance $F$ of single refractive X-ray lenses is dependent on the len
 \begin{align}
 	F=\frac{R}{2N\delta}
 \end{align} 
-The CRLs in VLab are in the form of ten retractable carrier cassettes which are each loaded with up to ten individual Be lenses with varying $R$ (see \autoref{fig:lenses}). The carrier cassettes can be placed into the beam at fixed positions which are already aligned to perfectly focus the beam - saving the work of manually finding the right positions that would be required when actually working at the FXE \cite{0}.
+The CRLs in VLab are in the form of ten retractable carrier cassettes which are each loaded with up to ten individual Be lenses with varying $R$ (see \autoref{tab:lenses}). The carrier cassettes can be placed into the beam at fixed positions which are already aligned to perfectly focus the beam - saving the work of manually finding the right positions that would be required when actually working at the FXE \cite{0}.
 
 %focusing optics: mirrors,  power slits, solid attenuators, refractive Lenses, X-ray eye
 %Datenstruktur (beam imaging and xray eye): 420x420 pixel, bei biu screen dim von 10mm x10mm, bei xray eye screen 2mm x 2mm
@@ -429,8 +429,19 @@ These errors in our fitting function are also the reason that our first populati
 \subsection{Error analysis}
 Our errorbars for our difference spectrum measurement are a result of the statistical nature of the data which the one kind of error that is programmed into VLab. They have a size that is about two orders of magnitude smaller than the highest peak in arbitrary units. To get smaller errorbars by half we would have to accumulate the difference spectra for four times the length of time which wasn't feasible on the day we took our measurements especially since our program had crashed two times already and we preferred getting all the data we wanted with suboptimal errors over risking getting only part of the time delays done.
 
-\section{Conclusion and Outlook}
-In conclusion, we
+\section{Conclusion and outlook}
+During the experiment the X-ray beam was successfully characterised and focussed to a usable point with a FWHM of \qty{13.4}{\mu\m}. 
+The following settings for the pump-laser were determined:
+\begin{itemize}
+	\item laser power: \qty{}{W}
+	\item rep rate: \qty{550000}{Hz}
+	\item pulse energy: \qty{}{J}
+	\item wavelength: \qty{515}{nm}
+	\item full width vertical: \qty{150}{\mu\m}
+	\item full width horizontal: \qty{150}{\mu\m}
+\end{itemize}
+Then a successfull series of pump-probe-measurements was carried out in which we can see the occurance of an ultrafast intermediate state can be seen. The identification was carried out using a provided reference spectrum with which it was possible to fit time delay-dependant population curves resolved after the differnt spin states present during the relaxation process.\\\\
+The experiment successfully provided insight into the work on a real beamline.
 
 \newpage
 
