@@ -86,16 +86,16 @@ The experiment EXP21 - Ultrafast X-ray experiments is there to gain basic hands-
 \section{Theoretical Background}
 
 \subsection{Synchrotronradiation}
-When accelerating electrons or other charged particles to relativistic speeds along a curved trajectory they emit so-called synchrotron radiation. It gains is name from the ring accelerators, the sychrotrons, where it was first observed. A typical synchrotron facility consists of a linear accelarator leading into a booster ring in which the electrons are brought up to relativistic speeds \cite{1}\cite{3}. The electrons are then fed into a storage ring in which they continue to circulate at relativistic speeds. From the storage ring the beam-lines lead tangentially away in which the synchrotron radiation is utilized in experimental hutches \cite{1}\cite{3}. 
-Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as x-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract x-ray beams and the interference patterns can be measured \cite{1}.\\\\
-There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipolmagnets with alternating polarity to achieve synchrotron radiation a linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and a higher brilliance \cite{3}.
+When accelerating electrons or other charged particles to relativistic speeds along a curved trajectory they emit so-called synchrotron radiation. It gains its name from the ring accelerators, the sychrotrons, where it was first observed. A typical synchrotron facility consists of a linear accelarator leading into a booster ring in which the electrons are brought up to relativistic speeds \cite{1}\cite{3}. The electrons are then fed into a storage ring in which they continue to circulate at relativistic speeds. From the storage ring the beam-lines lead tangentially away in which the synchrotron radiation is utilized in experimental hutches \cite{1}\cite{3}.\\
+Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as X-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract X-ray beams and the interference patterns can be measured \cite{1}.\\\\
+There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipolmagnets with alternating polarity to achieve synchrotron radiation a linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and higher brilliance \cite{3}.
 
 \subsubsection{Free Electron Laser (FEL)}
-Free-electron lasers are coherent tradiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are in theory able to operate at any arbitrary wavelength or spectrum of wavelength with the limit being the energy and quality of the accelerated electron beam \cite{2}. \\
-They use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundert metres. The light waves emitted by the electron bunches will line up in place and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component pf the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.\\\\
+Free-electron lasers are coherent tradiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are, in theory, able to operate at any arbitrary wavelength or spectrum of wavelengths with the limit being the energy and quality of the accelerated electron beam \cite{2}. \\
+FELs use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundert metres. The light waves emitted by the electron bunches will line up in place and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component pf the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.\\\\
 The duration of a single X-ray pulse can also be reduced to even less than a few femtoseconds. This allows for an investigation of molecular processes and photochemical reactions through a form of sequential snapshots with a characteristic time of under a picosecond \cite{1}.
 
-\subsection{Pump-probe-principle}
+\subsection{Pump-probe-spectroscopy}
 The principle of pump-probe-spectroscopy is sending two lasers at the same object with a certain time delay so that the first laser, an optical laser, can excite the system in some way and the second laser, an X-ray pulse can measure the response (see \autoref{fig:pump probe}). In a FEL such as the European XFEL this can be done with ultrafast X-ray pulses on a timescale of a few femtoseconds ($\qty{e-15}{s}$). Variating the time delay allows for a series of sequential snapshots of the process observed and variating the wavelength of the excitation laser allows for an investigation of different processces \cite{0}.\\
 The selection of the different discrete time delays is important. For negative time delays ($\Delta t<0$) the probe pulse arrives before the pump pulse and thus measures just the ground state and for a delay of $\Delta t=0$ both pulses overlap exactly. Whereas for positive delays ($\Delta t>0$) the probe pulse measures the developing dynamics.
 
@@ -107,23 +107,23 @@ The selection of the different discrete time delays is important. For negative t
 \end{figure}
 
 \subsubsection{The pump-pulse}
-The pump pulse acts as a kick-off signal for the process. It excites the molecule at a well-defined time ($t=0$) from it's thermal ground state into a higher energetic state.\\
-In this experiment specifically the pump pulse is an ultra-short optical laser-pulse with a wavelength in the VIS/UV range which excites the iron-compound $[\text{Fe}(\text{bipy})_3]^{2+}$ from it's singlet low-spin-state ($^1A_1$) into the excited state $^1\text{MLCT}$ (metal-to-ligand charge transfer). This starts the photophysical reaction.
+The pump pulse acts as a kick-off signal for the process. It excites the molecule at a well-defined time ($t=0$) from it's thermal ground state into a higher energetic state \cite{0}.\\
+In this experiment specifically the pump pulse is an ultra-short optical laser-pulse with a wavelength in the VIS/UV range which excites the iron-compound $[\text{Fe}(\text{bipy})_3]^{2+}$ from it's singlet low-spin-state ($^1A_1$) into the excited state $^1\text{MLCT}$ (metal-to-ligand charge transfer) after which the relaxation process starts \cite{0}.
 
 \subsubsection{The probe-pulse}
-The probe pulse is a second pulse that hits the probe with a known time delay to 'photograph' the current state. In this experiment an ultra-short X-ray pulse from the European XFEL is used. It ionises the 1s core electron of the central iron atom. The resulting X-ray emission ($K\beta$-XES) is measured which is sensitive to spin- and structure changes of the iron.
+The probe pulse is a second pulse that hits the probe with a known time delay to 'photograph' the current state. In this experiment an ultra-short X-ray pulse from the European XFEL is used. It ionises the 1s core electron of the central iron atom. The resulting X-ray emission ($K\beta$-XES) is measured which is sensitive to spin- and structure changes of the iron \cite{0}.
 
 \subsubsection{Transient difference spectrum}
 Most of the time during the experiment, only a fraction of the molecules in the probe are in an excited state. This means the pure excited spectrum is hard to see directly. To get a useful reading of the data the transient signal in the difference spectrum is used:
 \begin{align}
 \text{transient signal}=I_{\text{laser on}}(\Delta t)-I_{\text{laser off}}
 \end{align}
-The transient signal shows the physical changes the best: Negative parts of the signal mean a depopulation - places in the spectrum where the intensität lessened as the ground state was emptied because of the laser, positive parts are new spectral features such as the growing of a spin-sensitive satellite peak which indicates the existance of intermediate states.\\
+The transient signal shows the physical changes the best: Negative parts of the signal mean a depopulation - places in the spectrum where the intensity lessens as the ground state is emptied because of the laser, positive parts are new spectral features such as the growing of a spin-sensitive satellite peak which indicates the existance of intermediate states.\\
 When plotting the intensity of these notable energies against the time delays, you get so-called kinetic traces from which the lifespans of the intermediate states is able to be determined.
 
 \subsection{The investigated molecule}
-We investigated a molecule formed of an Iron center ($Fe^{2+}$), a transition metal ion, and 3 attached ligands (bipyridine). This forms a chemical complex compound. 
-The central atom acts as an electron acceptor, while the ligand acts as the electron donor.
+We investigated a molecule formed of an Iron center ($\text{Fe}^{2+}$), a transition metal ion, and 3 attached ligands (bipyridine). This forms a chemical complex compound. 
+The central atom acts as an electron acceptor, while the ligands act as the electron donor.
 
 \begin{figure}[h]
      \centering
@@ -132,19 +132,26 @@ The central atom acts as an electron acceptor, while the ligand acts as the elec
      \label{fig:schem bipy}
 \end{figure}
 
-This bonding can take place because of the $d^6$ electron configuartion of $Fe^{2+}$ and the nitrogene atoms in the pyridine rings. In our case we have two bridged pyridine rings that form the uncharged bidentate ligand bipyridine (abbreviated bipy). Both nitrogen atoms in each of the 3 ligands bind to the central $Fe^{2+}$ atom.
+This bonding can take place because of the $d^6$ electron configuartion of $\text{Fe}^{2+}$ and the nitrogene atoms in the pyridine rings. In our case we have two bridged pyridine rings that form the uncharged bidentate ligand bipyridine (abbreviated bipy). Both nitrogen atoms in each of the 3 ligands bind to the central $\text{Fe}^{2+}$ atom.
 
-\subsubsection{Electronic Structure of \([Fe(bipy)_{3}]^{2+}\)}
-Because of the electrostatic interaction between the ligands and the d electrons of the $Fe^{2+}$, the 5 d orbitals, that normally would be energetically equivalent, with a maximised spin multiplicity, are now energetically raised or lowered due to the nature of interaction with the ligand field. 
-the energy of d orbitals pointing to the ligands ($e_g$) is raised, while the energy of those pointing between the ligands is lowered ($t_{2g}$). 
+\subsubsection{Electronic Structure of \([\text{Fe}(\text{bipy})_{3}]^{2+}\)}
+Because of the electrostatic interaction between the ligands and the d electrons of the $\text{Fe}^{2+}$, the 5 d orbitals, that normally would be energetically equivalent, with a maximised spin multiplicity, are now energetically raised or lowered due to the nature of interaction with the ligand field (see \autoref{fig:d orbs}). The energy of d orbitals pointing to the ligands ($e_g$) is raised, while the energy of those pointing between the ligands is lowered ($t_{2g}$). 
 The difference of energy $\Delta_{oct}$ is called the strength of the crystal field.
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/d shift.png}
+     \caption{Energy level diagram of the d orbitals of a $d^6$ transition metal ion in an octahedral crystal field. An assumed spherical ligand field raises the energy of the d orbitals uniformly by approximately 20 eV to 40 eV. The degeneracy of the d orbitals is removed by the actual octahedral field of the point-charged ligands. \cite{0}}
+     \label{fig:d orbs}
+\end{figure}
 
-\subsubsection{High spin and low spin states}
 Following Hund's rule the lower-energy orbitals ($t_{2g}$) are filled first (one by one with electrons of the same spin).
 In the low-spin state our $d^6$ metal ion has no unpaired electrons (total Spin $S=0$). That represents the singlet state $^1A_1$. 
 In the high spin state it has the maximum of unpaired electrons ($S=2$). We habe a quinted state $^5T_2$.
 The energy difference $\Delta_{oct}$ is smaller for HS configs, because the $e_g$ level is filled and those electrons can push the ligand atoms further away that in LS configs. 
 Excitation to the HS state occurs in this experimental setup through photoexcitation to higher lying MLCT bands followed by relaxation.
+
+\subsubsection{Relaxation process}
+
 
 \section{Experimental setup}
 The entire experiment is conducted in VLab, a software modeled after a hutch in the experimental hall of the European XFEL in Schenefeld. The European XFEL is \qty{3.4}{km} long and runs from the DESY research center to the European XFEL campus. A \qty{1.9}{km} long superconducting linear accelerator feeds electrons with energies up to \qty{17.5}{GeV} into a branched tunnel system with two \qty{212}{m} long undulators that generate hard X-radiation in the range of \qty{5}{keV} to \qty{25}{keV} and one \qty{125}{m} long undulator that generates soft X-radiation in the range of \qty{0.25}{keV} to \qty{3}{keV}.\\\\
