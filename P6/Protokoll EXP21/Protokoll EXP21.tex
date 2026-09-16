@@ -336,9 +336,23 @@ Now to determine the pulse energy at which the number of photons per pulse is eq
 	E_{\text{pulse}} = N_{\text{molecules}} \cdot E_{\text{photon}}=(3.838 \times 10^{16}) \cdot (4.966 \times 10^{-19}\ \text{J}) \approx 19.06 \times 10^{-3}\ \text{J}
 \end{align}
 For a wavelength of \qty{400}{nm} there's a maximal pulse energy of \qty{19059.51}{mJ} available for a spot diameter of \qty{150}{\mu\m}\\\\
-There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength seperately and requires normalization to the sáccumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
-In order to choose the correct crystal for the emission spectrometer the Bragg reflection angle needs to be considered. 
-%hier fehlt noch der Prozess der Kristall-auswahl mit bragg und so
+There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength seperately and requires normalization to the accumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
+In order to choose the correct crystal for the emission spectrometer the Bragg reflection angle needs to be considered which means we need to calculate the Bragg reflection angle for the Fe K$\beta_{1,3}$ emission line. From the FXE website \cite{5} we preselect the Si(531) crystal and the Ge(531) crystal. The Bragg angle is calculated through:
+\begin{align}
+	\lambda = 2d_{hkl}\cdot\sin(\theta_B)
+\end{align}
+with $\lambda_m=\qty{1.7566}{\angstrom}$ for the Fe K$\beta_{1,3}$ main line ($E_m=\qty{7058}{eV}$), $\lambda_s=\qty{1.7596}{\angstrom}$ for the Fe K$\beta'$ satellite line ($E_s=\qty{7046}{eV}$), $d$ calculated through the crystal planes (hkl) and the lattice constants $a_{\text{Si}}\approx\qty{5.431}{\angstrom}$ \& $a_{\text{Ge}}\approx\qty{5.658}{\angstrom}$ to $d_\text{Si}=\frac{5.431}{\sqrt{35}}\approx\qty{0.918}{\angstrom}$ and $d_\text{Ge}=\frac{5.658}{\sqrt{35}}\approx\qty{0.956}{\angstrom}$.\\
+For the Fe K$\beta_{1,3}$ main emission line the following Bragg angles were calculated:
+\begin{align}
+	\theta_{B_{\text{Si}}} = \arcsin\left(\frac{1.7566}{2 \cdot 0.9180}\right) \approx 73.09^\circ\\
+	\theta_{B_{\text{Ge}}} = \arcsin\left(\frac{1.7566}{2 \cdot 0.9564}\right) \approx 66.69^\circ
+\end{align}
+For the Fe K$\beta'$ satellite line the following Bragg angles were calculated:
+\begin{align}
+	\theta_{B_{\text{Si}}} = \arcsin\left(\frac{1.7596}{2 \cdot 0.9180}\right) \approx 73.42^\circ\\
+	\theta_{B_{\text{Ge}}} = \arcsin\left(\frac{1.7596}{2 \cdot 0.9564}\right) \approx 66.92^\circ
+\end{align}
+For a Bragg angle that is closer to \qty{90}{\degree} the spectral resolution is better. As Si(531) has a Bragg angle of \qty{73.1}{\degree} which is the highest of the two materials, it was chosen for the Von Hamos even though germanium has a higher atomic number than silicium and would have a higher reflection-efficiency.
 
 %Fun Facts: molar mass: \(M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}\), concentration of the sample: \(c=0,380\frac{mol}{L}\), total attenuation of X-rays: attenuation comparison plot, flow speed of the jet: \(v_{jet}=11\frac{m}{s}\)
 %Laser: excitation wavelength: \(\lambda_{pump}=400nm\) (dazu alle fun facts mit MLCT Zuständen und so, und nicht overshooten lol), focussing,  diameter of the focus, Overfilling: beam sizes of the optical laser and the X-ray pulse relative to each other (plot beam diameter)
@@ -346,7 +360,7 @@ In order to choose the correct crystal for the emission spectrometer the Bragg r
 
 \subsection{Performing the Experiment with Data Acquisition}
 Using the Large Pixel Detector one can optimize the position of the liquid jet in the X-ray beam for maximal intensity of elastic scattering. The maximal intensity achieved with a pink beam was $3.8\cdot10^{15}$.\\
-The X-ray emission spectrometer was adjusted by setting the Bragg angle range to ... and orienting the detector perpendicular to the incoming dispersive spectrum (see \autoref{fig:von hamos}).
+The X-ray emission spectrometer was adjusted by setting the Bragg angle range to \qty{74.49}{\degree} to \qty{72.03}{\degree} on the crystal and \qty{70.43}{\degree} to \qty{75.53}{\degree} on the detector and orienting the detector perpendicular to the incoming dispersive spectrum (see \autoref{fig:von hamos}).
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.2]{img/100 ps Screenshot 2026-09-03 093257.png}
@@ -356,9 +370,26 @@ The X-ray emission spectrometer was adjusted by setting the Bragg angle range to
 
 %couldnt find the kb1,3 spectrum :( but that still needs to be inserten here
 
-The excitation laser was set to $\lambda=\qty{400}{nm}$ and $f=0.02$ with a beam diameter of $d=\qty{150}{\mu\m}$ in the sample plane. The spatial overlap between laser and X-ray beam was adjusted so that the X-ray laser always overlapped with the optical laser even with the jitter of the optical laser.
-
+The excitation laser was set to $\lambda=\qty{400}{nm}$ and $f=0.02$ with a beam diameter of $d=\qty{150}{\mu\m}$ in the sample plane. The spatial overlap between laser and X-ray beam was adjusted so that the X-ray laser always overlapped with the optical laser even with the jitter of the optical laser. The corresponding beam profiles can be seen in \autoref{fig:xary laser both}, while the laser beam profile can be seen in \autoref{fig:laser} and the X-ray beam profile in \autoref{fig:xray}.
 %pictures picture pictures
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/beams/xray_beam_profile.png}
+     \caption{The profile of the X-ray beam measured in the sample plane.}
+     \label{fig:xray}
+\end{figure}
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/beams/laser_beam_profile.png}
+     \caption{The profile of the laser beam measured in the sample plane.}
+     \label{fig:laser}
+\end{figure}
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/beams/laser_xray_beam_profile.png}
+     \caption{The profile of the overlapping laser and X-ray beams in the sample plane.}
+     \label{fig:xary laser both}
+\end{figure}
 
 First the time delay of the laser was set to \qty{100}{ps}. This time delay means the laser pulse definitely strikes the sample before the X-ray pulse arrives. XES spectra with the laser on and off were recorded, as well as a difference spectrum.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  16 SEP 2026 09:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  16 SEP 2026 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,124 +879,174 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--325
  []
 
 [10 <./img/abs spec aqu sol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 337--342
+
+LaTeX Warning: Citation `5' on page 11 undefined on input line 340.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--342
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
+
+
+Package siunitx Warning: Unit macro \angstrom has been deprecated in this
+(siunitx)                release.
+(siunitx)                
+(siunitx)                The BIPM have removed this unit from the SI Brochure.
+(siunitx)                You should define it yourself using \DeclareSIUnit in
+(siunitx)                your source. The current definition is
+(siunitx)                
+(siunitx)                \DeclareSIUnit\angstrom{\text {Å}}
 
 <img/100 ps Screenshot 2026-09-03 093257.png, id=231, 1444.64719pt x 812.28468p
 t>
 File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
 <use img/100 ps Screenshot 2026-09-03 093257.png>
 Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on i
-nput line 352.
+nput line 366.
 (pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
-<img/spectra/Reference_Spectra.png, id=233, 1389.7521pt x 433.62pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/beams/xray_beam_profile.png, id=235, 867.24pt x 361.35pt>
+File: img/beams/xray_beam_profile.png Graphic file (type png)
+<use img/beams/xray_beam_profile.png>
+Package pdftex.def Info: img/beams/xray_beam_profile.png  used on input line 37
+7.
+(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
+<img/beams/laser_beam_profile.png, id=236, 867.24pt x 361.35pt>
+File: img/beams/laser_beam_profile.png Graphic file (type png)
+<use img/beams/laser_beam_profile.png>
+Package pdftex.def Info: img/beams/laser_beam_profile.png  used on input line 3
+83.
+(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
+<img/beams/laser_xray_beam_profile.png, id=237, 867.24pt x 361.35pt>
+File: img/beams/laser_xray_beam_profile.png Graphic file (type png)
+<use img/beams/laser_xray_beam_profile.png>
+Package pdftex.def Info: img/beams/laser_xray_beam_profile.png  used on input l
+ine 389.
+(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
+<img/spectra/Reference_Spectra.png, id=254, 1389.7521pt x 433.62pt>
 File: img/spectra/Reference_Spectra.png Graphic file (type png)
 <use img/spectra/Reference_Spectra.png>
 Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 
-371.
+402.
 (pdftex.def)             Requested size: 458.61961pt x 143.09503pt.
 
-Overfull \hbox (3.3755pt too wide) in paragraph at lines 371--372
+Overfull \hbox (3.3755pt too wide) in paragraph at lines 402--403
  [][] 
  []
 
-[11 <./img/100 ps Screenshot 2026-09-03 093257.png>]
-<img/spectra/100ps spektrum.png, id=245, 722.7pt x 505.89pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/spectra/100ps spektrum.png, id=256, 722.7pt x 505.89pt>
 File: img/spectra/100ps spektrum.png Graphic file (type png)
 <use img/spectra/100ps spektrum.png>
-Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 383
+Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 414
 .
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/spectra/100ps diff spektrum.png, id=246, 722.7pt x 505.89pt>
+<img/spectra/100ps diff spektrum.png, id=257, 722.7pt x 505.89pt>
 File: img/spectra/100ps diff spektrum.png Graphic file (type png)
 <use img/spectra/100ps diff spektrum.png>
 Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input lin
-e 390.
+e 421.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/Time_resolved_spectrum_errbars.png, id=247, 722.7pt x 505.89pt>
+[12 <./img/100 ps Screenshot 2026-09-03 093257.png> <./img/beams/xray_beam_prof
+ile.png>]
+<img/Time_resolved_spectrum_errbars.png, id=269, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_errbars.png Graphic file (type png)
 <use img/Time_resolved_spectrum_errbars.png>
 Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input 
-line 402.
+line 433.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/Kinetic traces.png, id=249, 722.7pt x 433.62pt>
+<img/Kinetic traces.png, id=271, 722.7pt x 433.62pt>
 File: img/Kinetic traces.png Graphic file (type png)
 <use img/Kinetic traces.png>
-Package pdftex.def Info: img/Kinetic traces.png  used on input line 410.
+Package pdftex.def Info: img/Kinetic traces.png  used on input line 441.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--415
+Underfull \hbox (badness 10000) in paragraph at lines 437--446
 
  []
 
-[12 <./img/spectra/Reference_Spectra.png> <./img/spectra/100ps spektrum.png> <.
-/img/spectra/100ps diff spektrum.png>] [13 <./img/Time_resolved_spectrum_errbar
-s.png> <./img/Kinetic traces.png>]
+[13 <./img/beams/laser_beam_profile.png> <./img/beams/laser_xray_beam_profile.p
+ng> <./img/spectra/100ps spektrum.png> <./img/spectra/100ps diff spektrum.png>]
 
-LaTeX Warning: Reference `py:fit' on page 14 undefined on input line 423.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/fit/fit_all.png, id=270, 505.89pt x 325.215pt>
+[14 <./img/spectra/Reference_Spectra.png> <./img/Time_resolved_spectrum_errbars
+.png>]
+
+LaTeX Warning: Reference `py:fit' on page 15 undefined on input line 454.
+
+<img/fit/fit_all.png, id=289, 505.89pt x 325.215pt>
 File: img/fit/fit_all.png Graphic file (type png)
 <use img/fit/fit_all.png>
-Package pdftex.def Info: img/fit/fit_all.png  used on input line 426.
+Package pdftex.def Info: img/fit/fit_all.png  used on input line 457.
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=274, 1011.78pt x 823.15
+<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=293, 1011.78pt x 823.15
 53pt>
 File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png
 )
 <use img/fit/residuals_and_spectra_minus150_to_50fs.png>
 Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  us
-ed on input line 434.
+ed on input line 465.
 (pdftex.def)             Requested size: 455.2968pt x 370.41646pt.
-<img/fit/counts_negative_delays_per_delay.png, id=276, 867.24pt x 505.89pt>
+<img/fit/counts_negative_delays_per_delay.png, id=295, 867.24pt x 505.89pt>
 File: img/fit/counts_negative_delays_per_delay.png Graphic file (type png)
 <use img/fit/counts_negative_delays_per_delay.png>
 Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on 
-input line 441.
+input line 472.
 (pdftex.def)             Requested size: 433.61894pt x 252.94437pt.
+[15 <./img/Kinetic traces.png> <./img/fit/fit_all.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/fit/fit_try_to_fix_lol.png, id=277, 505.89pt x 325.215pt>
+<img/fit/fit_try_to_fix_lol.png, id=305, 505.89pt x 325.215pt>
 File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
 <use img/fit/fit_try_to_fix_lol.png>
-Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 448
+Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 479
 .
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
 
  []
 
-[14 <./img/fit/fit_all.png>] [15 <./img/fit/residuals_and_spectra_minus150_to_5
-0fs.png>] [16 <./img/fit/counts_negative_delays_per_delay.png> <./img/fit/fit_t
-ry_to_fix_lol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 476--478
+[16 <./img/fit/residuals_and_spectra_minus150_to_50fs.png>] [17 <./img/fit/coun
+ts_negative_delays_per_delay.png> <./img/fit/fit_try_to_fix_lol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 507--509
 
  []
 
-[17] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof
+[18] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof
 
 LaTeX Warning: Citation `4' on page B undefined on input line 5.
 
@@ -1015,13 +1065,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21647 strings out of 467867
- 433444 string characters out of 5418334
- 936226 words of memory out of 5000000
- 50234 multiletter control sequences out of 15000+600000
+ 21679 strings out of 467867
+ 434435 string characters out of 5418334
+ 939513 words of memory out of 5000000
+ 50257 multiletter control sequences out of 15000+600000
  639211 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,107p,11249b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1044,9 +1094,9 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
 s/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-Output written on "Protokoll EXP21.pdf" (22 pages, 7412122 bytes).
+Output written on "Protokoll EXP21.pdf" (23 pages, 8024694 bytes).
 PDF statistics:
- 557 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

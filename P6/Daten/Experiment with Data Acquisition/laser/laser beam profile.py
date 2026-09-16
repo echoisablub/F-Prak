@@ -280,9 +280,9 @@ ax[1].grid(True)
 
 plt.tight_layout()
 
-plt.savefig(
+'''plt.savefig(
     "Daten/Experiment with Data Acquisition/laser/xray_beam_profile.png",
     dpi=300
-)
+)'''
 
 plt.show()
