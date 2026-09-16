@@ -26,7 +26,8 @@
 \contentsline {subsection}{\numberline {6.1}Error analysis}{18}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Conclusion and outlook}{18}{section.7}%
 \contentsline {section}{\nonumberline References}{A}{section*.27}%
-\contentsline {section}{Abbildungsverzeichnis}{B}{section*.27}%
+\contentsline {paragraph}{\nonumberline Usage of AI}{A}{paragraph*.28}%
+\contentsline {section}{Abbildungsverzeichnis}{B}{paragraph*.28}%
 \contentsline {section}{Appendix \numberline {A}Additional Plots}{C}{appendix.1.A}%
 \contentsline {section}{Appendix \numberline {B}Code}{E}{appendix.1.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
