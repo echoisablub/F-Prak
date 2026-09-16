@@ -516,7 +516,7 @@ The following settings for the pump-laser were determined:
      \begin{tabular}{cccccc}
           Laser power & Repetition rate & Pulse energy & Wavelength & Full width, vertical & Full width, horizontal \\
           \midrule
-          \qty{}{W} & \qty{550000}{Hz} & \qty{50}{J} & \qty{515}{nm} & \qty{150}{\mu\m} & \qty{150}{\mu\m} \\
+          \qty{27.5}{W} & \qty{550000}{Hz} & \qty{5.0e-5}{J} & \qty{515}{nm} & \qty{150}{\mu\m} & \qty{150}{\mu\m} \\
      \end{tabular}
 \end{table}
 Then a successfull series of pump-probe-measurements was carried out in which we can see the occurance of an ultrafast intermediate state can be seen. The identification was carried out using a provided reference spectrum with which it was possible to fit time delay-dependant population curves resolved after the differnt spin states present during the relaxation process.\\\\
@@ -580,12 +580,12 @@ The experiment successfully provided insight into the work on a real beamline.
 \section{Code}
 \lstinputlisting[language=Python,
     caption={Time resolved difference spectra (2D)},
-    label={lst:v6},
+    label={lst:time res},
     captionpos=t]{py/time resolved difference spectra v2.py}
 
 \lstinputlisting[language=Python,
     caption={kinetic traces plots},
-    label={lst:v6},
+    label={lst:kin trace},
     captionpos=t]{py/kinetic traces v2.py}
 
 \lstinputlisting[language=Python,
