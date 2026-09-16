@@ -3,37 +3,38 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Protokoll EXP21.aux
 The style file: ieeetr.bst
 Database file #1: literatur.bib
-Warning--I didn't find a database entry for "5"
-You've used 5 entries,
+Warning--empty journal in 5
+Warning--empty year in 5
+You've used 6 entries,
             1876 wiz_defined-function locations,
-            501 strings with 4377 characters,
-and the built_in function-call counts, 1155 in all, are:
-= -- 99
-> -- 57
+            503 strings with 4413 characters,
+and the built_in function-call counts, 1283 in all, are:
+= -- 107
+> -- 61
 < -- 0
-+ -- 22
-- -- 17
-* -- 77
-:= -- 178
++ -- 24
+- -- 18
+* -- 86
+:= -- 197
 add.period$ -- 6
-call.type$ -- 5
-change.case$ -- 3
+call.type$ -- 6
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 53
-empty$ -- 115
-format.name$ -- 17
-if$ -- 278
+cite$ -- 8
+duplicate$ -- 62
+empty$ -- 132
+format.name$ -- 18
+if$ -- 306
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 6
-newline$ -- 20
-num.names$ -- 5
-pop$ -- 20
+int.to.str$ -- 6
+missing$ -- 7
+newline$ -- 23
+num.names$ -- 6
+pop$ -- 27
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 36
+skip$ -- 38
 stack$ -- 0
 substring$ -- 51
 swap$ -- 18
@@ -41,8 +42,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 9
-width$ -- 6
-write$ -- 46
-(There was 1 warning)
+warning$ -- 2
+while$ -- 10
+width$ -- 7
+write$ -- 52
+(There were 2 warnings)
