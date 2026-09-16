@@ -223,7 +223,7 @@ ax[1].set_xlabel("y [mm]")
 ax[1].set_ylabel("Integrated intensity")
 ax[1].set_title(
     f"Vertical profile\n"
-    f"Gaussian FWHM = {fwhm_y * 1000:.1f} $mu m$"
+    f"Gaussian FWHM = {fwhm_y * 1000:.1f} $\mu m$"
 )
 
 ax[1].set_xlim(0.8, 1.2)

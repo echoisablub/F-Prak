@@ -206,7 +206,7 @@ In this section there's also another more precise BIU - the X-ray eye - which al
 
 \subsection{Diagnostic table}
 The relevant part of this last section of the beamline is the final beam stop, made of a sequential set of B4C and Cu attenuators. The failsafe is a "burn-through" monitor placed infront of the beam stop matreials. If the beam is accidentally focussed to the end of the hutch, it will burn a holen in this monitor and generate visible light which switches off the electron photoinjector.\\
-In VLab the worst thing that can happen in regards to radiation safety is that you burn through one of your detector screens and have to start over again which is much less punishing than a potentially life threatening scenario in real life.
+In VLab the worst thing that can happen in regards to radiation safety is that you burn through one of your detector screens and have to start over again which is of course much less punishing than a potentially life threatening scenario in real life.
 
 \section{Experimental Procedure}
 \subsection{Preparation of the Experiment}
@@ -219,7 +219,6 @@ As the absorption edge for the Fe K$\beta_{1,3}$ line of 7065 eV, the energy of 
      \caption{X-Ray absorption spectrum of $[\text{Fe}(\text{terpy})_2]^{2+}$ (terpy: terpyridin) at the Fe K edge displaying the XANES and EXAFS regions including the background absorption contributions $\mu_0$. The inset zooms into the weak pre edge features \cite{0}.}
      \label{fig:xas terpy}
 \end{figure}
-
 To measure the initial X-ray beam the power slits are fully opened and the following attenuator foils are used to bring the beam to an intensity just below saturatuion of the beam imaging unit 2 (BIU2): 
 \begin{table}[H]
     \centering
@@ -230,19 +229,46 @@ To measure the initial X-ray beam the power slits are fully opened and the follo
         {Rod} & {Attenuator foil} \\
         \midrule
         1 & {C }0.1 \\
-        2 & {--} \\
-        3 & {Si }0.1 \\
+        2 & {Si }0.05 \\
+        3 & {C }0.4 \\
         4 & {B4C }0.8 \\
         \bottomrule
     \end{tabular}
 \end{table}
-
 The size and position of the x-ray is now measured using BIU2. %do we want the pictures here?
 Then the four-bounce crystal-monochromator is turned on and then off again to record the reduction of the spectral bandwidth. Then the dispersive single-shot spectrum analyser is used to record the spectrum of the pink X-ray beam with a bragg angle of 24°. \\
-For the following experiment the pink X-ray beam is used even though the monochromatic has a higher resolution, as the intensity of the beam suffers about three orders of magnitude under the monochromator.\\\\
-
-The last step of diagnosing the beam line is using the refractive beryllium x-ray lenses to focus the beam at the imaging unit x-ray eye. It's important to appropiately adjust the attentuator foils as to not burn the imaging unit with a focussed beam. 
-
+For the following experiment the pink X-ray beam is used even though the monochromatic has a higher resolution, as the intensity of the beam suffers about three orders of magnitude under the monochromator (see \autoref{fig:int change1} and ).\\\\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/pink_BIU_2.png}
+        %\caption{XES spectrum with the excitation laser on at a delay of \qty{100}{ps}.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/mono_BIU_2.png}
+    \end{subfigure}
+    \caption{To the left is the attenuated pink beam, to the right the monochromatic beam with the same attenuators in.}
+    \label{fig:int change1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/beam_profile_3d_pink.png}
+        %\caption{XES spectrum with the excitation laser on at a delay of \qty{100}{ps}.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/beam_profile_3d_mono.png}
+    \end{subfigure}
+    \caption{To the left is a 3D intensity plot of the pink beam, to the right the 3D intensity plot of the monochromatic beam with the same attenuators in.}
+    \label{fig:int change2}
+\end{figure}
+The last step of diagnosing the beam line is using the refractive beryllium X-ray lenses to focus the beam at the imaging unit X-ray eye. It's important to appropiately adjust the attentuator foils as to not burn the imaging unit with a focussed beam. \\
 \begin{table}[H]
     \centering
     \caption{A list of the beryllium lenses available in VLab together with the arms they were mounted on (arm 10 the most downstream), the Number of lenses in each cassette $N$ and the central curvature of the lenses $R$ \cite{0}.}
@@ -256,8 +282,7 @@ The last step of diagnosing the beam line is using the refractive beryllium x-ra
         \bottomrule
     \end{tabular}
 \end{table}
-
-With beryllium lenses 1, 2 and 5 (taken from \autoref{tab:lenses}) and appropiate attenuator foils inserted, a beam with the FWHM of ~13 um (siehe \autoref{fig:strahlbreite}) is achievd. The total focus length is calculated with $\delta \approx 7\cdot 10^{-6}$ \cite{0} and the properties of the lenses themself taken from \autoref{tab:lenses}:
+With beryllium lenses 1, 2 and 5 (taken from \autoref{tab:lenses}) and appropiate attenuator foils inserted, a beam with the FWHM of $\approx\qty{13}{\mu\m}$ (siehe \autoref{fig:strahlbreite}) is achievd. The total focus length is calculated with $\delta \approx 7\cdot 10^{-6}$ \cite{0} and the properties of the lenses themself taken from \autoref{tab:lenses}:
 \begin{align*}
 	F=\frac{R}{2\delta N} &\Leftrightarrow \frac{1}{F_{ges}}=\frac{2\delta N_1}{R_1}+\frac{2\delta N_2}{R_2}+\frac{2\delta N_5}{R_5}\\
 	&\Leftrightarrow F_{ges}=\frac{1}{2\delta(\frac{N_1}{R_1}+\frac{N_2}{R_2}+\frac{N_5}{R_5})} \approx \qty{4,76}{m}
@@ -271,26 +296,8 @@ With beryllium lenses 1, 2 and 5 (taken from \autoref{tab:lenses}) and appropiat
      \label{fig:strahlbreite}
 \end{figure}
 
----Notes---
-
-X-ray energy \(E_0=7400eV\) (has to be a good bit away from reaction edge of 7065 keV to be stable)
-
-Alignment:
-attenuators to not burn through out screens (here: 4: B4C 0.8, 3: C 0.4, 2: Si 0.05, C 0.1)
-size and position of the beam plots (FWHM) (jitter neu!)
-pink vs mono beam 2D/3D plots
-
-optical resolution: ~25 um/px
-
-Characterization:
-spectrum of the pink vs mono beam plots
-myb noch ex 7+8, aber idk
-
-Focusing:
-plots of the focused beam size and position (FWHM)
-
 \subsubsection{Preparatory Estimates for the Experiment}
-The transition metal complex $[\text{Fe}(\text{bipy})_3]^{2+}$ to be studied is obtained through dissolving the salt $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ in deionized water to the desired concentration. As the actual sample is a powder consisting of small microcrystals that contain incorporated water which remained in the crystal lattice after the crystallization process.\\
+The transition metal complex to be studied, $[\text{Fe}(\text{bipy})_3]^{2+}$, is obtained through dissolving the salt $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ in deionized water to the desired concentration. As the actual sample is a powder consisting of small microcrystals that contain incorporated water which remained in the crystal lattice after the crystallization process.\\
 A minimum volume of \qty{50}{ml} is required to operate the liquid jet in the experiment. To ensure that the sample is completely refreshed between probe pulses, the jet needs to have a certain flow speed with an assumed repition rate of the X-ray pulse train of \qty{1.1}{MHz} and an assumed top hat beam profile of the X-ray laser with the dimension $\qty{10}{\micro\m}\times\qty{10}{\micro\m}$. The minimum required flowspeed is calculated as follows:
 $$\Delta x_{\text{travel}} \ge w \quad \Rightarrow \quad v_{\text{min}} \cdot \Delta \tau \ge w \quad \Rightarrow \quad v_{\text{min}} \ge \frac{w}{\Delta \tau}\Rightarrow v_{\text{min}}=\qty{11}{\m\per\s}$$
 With $w=\qty{10}{\micro\m}$ being the spatial width and $\Delta\tau=\frac{1}{f}=\frac{1}{\qty{1.1e6}{Hz}}\approx\qty{9.09e-7}{s}$ the characteristic time.\\\\
@@ -308,8 +315,8 @@ The following concentrations were calculated:
 $$c_{355}=\qty{0.033}{mol\per\l}, c_{400}=\qty{0.100}{mol\per\l}, c_{515}=\qty{0.050}{mol\per\l}$$
 There are different pulse energies available for each excitation wavelength: \qty{5}{\mu\J}(\qty{355}{nm}), \qty{15}{\mu\J}(\qty{400}{nm}) and \qty{50}{\mu\J}(\qty{515}{nm}). With that in mind the wavelangth of \qty{400}{nm} was chosen, as it has a higher pulse energy, even though it's not ideal when looking at the low absorption rate. The extinction coefficien of the \qty{515}{nm} is slightly better but with the low pulse energy it will be hard to see anything.\\\\
 
-As we want to ensure that the X-ray beam always hits excited molecules we need to determine the diameter of the optical laser beam as well as the diameter of the X-ray beam correctly in relation to each other. 
-%The optical laser beam profile is approximately Gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jetz by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ or rather $d_{FWHM}=?$ with our chosen wavelength of \qty{400}{nm}.
+As we want to ensure that the X-ray beam always hits excited molecules we need to determine the diameter of the optical laser beam as well as the diameter of the X-ray beam correctly in relation to each other.\\
+The optical laser beam profile is approximately gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jet by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ or rather $d_{FWHM}=?$ with our chosen wavelength of \qty{400}{nm}.\\
 If the optical laser and the X-ray laser had the same diameter, the x-ray would also investigate molecules that were excited only weakly or even not at all, as the optical laser has an approximately Gaussian beam shape. Ideally, the X-ray is positioned exactly in the centre of the ca. 10 times bigger optical laser beam. Then it can investigate a maximal volume of excited molecules. This also compensates for the fact that the optical laser jitters in the focus layer of the X-ray due to not being focussed there itself.\\
 These estimates have consequences for our needed flow speed of the liquid jet which has to be 10 times faster to adjust to the new diameter of the optical laser.\\\\
 Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelyhood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules. 

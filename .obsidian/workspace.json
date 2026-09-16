@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
+                "file": "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tag 3 - Performing the Experiment with Data Acquisition"
+              "title": "Tag 2 - Preparatory Estimates for the Experiment"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "Theoretische Grundlagen"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "da3d6c435cbb4957",
@@ -203,9 +203,15 @@
       "bases:Neue Base erstellen": false
     }
   },
-  "active": "b3e9c9b0e1bcdeae",
+  "active": "dde9774ec6120660",
   "lastOpenFiles": [
+    "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
+    "P6/Theoretische Grundlagen.md",
     "P6/Protokoll EXP21/Protokoll EXP21.synctex(busy)",
+    "P6/Protokoll EXP21/img/pink_BIU_2.png",
+    "P6/Protokoll EXP21/img/mono_BIU_2.png",
+    "P6/Protokoll EXP21/img/beam_profile_3d_pink.png",
+    "P6/Protokoll EXP21/img/beam_profile_3d_mono.png",
     "P6/Protokoll EXP21/img/relax.png",
     "P6/Protokoll EXP21/img/d shift.png",
     "P6/Protokoll EXP21/Protokoll EXP21.synctex.gz",
@@ -213,12 +219,7 @@
     "P6/Protokoll EXP21/img/4crystal.png",
     "P6/The investigated Molecule.md",
     "P6/Protokoll EXP21/img/tris(2,2'-bipyridine)iron(II).png",
-    "P6/Tag 3 - Performing the Experiment with Data Acquisition.md",
     "P6/Protokoll EXP21/img/FWHM_gaussian.png",
-    "P6/Protokoll EXP21/img/FWHM_profiles.png",
-    "P6/Protokoll EXP21/img/xas terpy.png",
-    "P6/Protokoll EXP21/img/von hamos.png",
-    "P6/Protokoll EXP21/img/pump probe 1.png",
     "P6/Tag 2 - Preparatory Estimates for the Experiment.md",
     "P6/Auswertung EXP21/fit/xes_superposition_fit_v3.py",
     "P6/Auswertung EXP21/fit/xes_superposition_fit_v2.py",
