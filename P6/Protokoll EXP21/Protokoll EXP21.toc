@@ -28,5 +28,5 @@
 \contentsline {section}{\nonumberline References}{A}{section*.26}%
 \contentsline {section}{Abbildungsverzeichnis}{B}{section*.26}%
 \contentsline {section}{Appendix \numberline {A}Additional Plots}{C}{appendix.1.A}%
-\contentsline {section}{Appendix \numberline {B}Code}{C}{appendix.1.B}%
+\contentsline {section}{Appendix \numberline {B}Code}{E}{appendix.1.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

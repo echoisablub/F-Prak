@@ -464,7 +464,7 @@ The population $T$ of our difference spectrum can now be described as:
 \begin{align}
 	T(E)=S(E)-S_1(E)=A\cdot\left(\sum^5_{s=1} f_s \cdot S_s(E)-S_1(E)\right)
 \end{align}
-The fitting function can be found in \autoref{py:fit}.\\
+The fitting function can be found in \autoref{lst:fit}.\\
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/fit/fit_all.png}
@@ -485,7 +485,7 @@ To confirm this, we looked at the squared errors over the negative time delays (
      \caption{The photon counts of the different excited states for negative time delays.}
      \label{fig:counts}
 \end{figure}
-We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{py:v6}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
+We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{lst:fit fit}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
 
 \begin{figure}[h]
      \centering
@@ -510,9 +510,9 @@ Our errorbars for our difference spectrum measurement are a result of the statis
 During the experiment the X-ray beam was successfully characterised and focussed to a usable point with a FWHM of \qty{13.4}{\mu\m}. 
 The following settings for the pump-laser were determined:
 \begin{itemize}
-	\item laser power: \qty{}{W}
+	\item laser power: \qty{27.5}{W}
 	\item rep rate: \qty{550000}{Hz}
-	\item pulse energy: \qty{}{J}
+	\item pulse energy: \qty{5.0e-5}{J}
 	\item wavelength: \qty{515}{nm}
 	\item full width vertical: \qty{150}{\mu\m}
 	\item full width horizontal: \qty{150}{\mu\m}
@@ -539,6 +539,27 @@ The experiment successfully provided insight into the work on a real beamline.
 \section{Additional Plots}
 \begin{figure}[H]
      \centering
+     \includegraphics[scale=0.5]{img/pulse_positions_jitter.png}
+     \caption{A scatterplot of the spatial jitter of the X-ray beam measured on BIU2.}
+     \label{fig:jitter}
+\end{figure}
+
+\begin{figure}[H]
+     \centering
+     \includegraphics[scale=0.5]{img/spectrum_average_pink.png}
+     \caption{The average of three seperate measurements of the spectrum of a pink X-ray beam measured on the Gotthard Spectrum Analyser 1.}
+     \label{fig:spectrum pink}
+\end{figure}
+
+\begin{figure}[H]
+     \centering
+     \includegraphics[scale=0.5]{img/spectrum_average_mono.png}
+     \caption{The average of three seperate measurements of the spectrum of a monochromatic X-ray beam measured on the Gotthard Spectrum Analyser 1.}
+     \label{fig:spectrum mono}
+\end{figure}
+
+\begin{figure}[H]
+     \centering
      \includegraphics[scale=0.5]{img/Time_resolved_spectrum_3D.png}
      \caption{}
      \label{fig:spectrum 3D}
@@ -557,22 +578,22 @@ The experiment successfully provided insight into the work on a real beamline.
 \section{Code}
 \lstinputlisting[language=Python,
     caption={Time resolved difference spectra (2D)},
-    label={lst:v6},
+    label={lst:time res},
     captionpos=t]{py/time resolved difference spectra v2.py}
 
 \lstinputlisting[language=Python,
     caption={kinetic traces plots},
-    label={lst:v6},
+    label={lst:kin trace},
     captionpos=t]{py/kinetic traces v2.py}
 
 \lstinputlisting[language=Python,
     caption={Fit for population curves},
-    label={lst:v6},
+    label={lst:fit},
     captionpos=t]{py/fit_v5.py}
 
 \lstinputlisting[language=Python,
     caption={stabilized fit for negativ time delays},
-    label={lst:v6},
+    label={lst:fit fit},
     captionpos=t]{py/v6.py}
 
 

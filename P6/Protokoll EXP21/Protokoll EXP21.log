@@ -1,31 +1,47 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  16 SEP 2026 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  16 SEP 2026 18:28
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex"
-(/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex
+**"./Protokoll EXP21.tex"
+(Protokoll EXP21.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cl
+s
+Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article
+)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent
+ basics and keyval usage)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independen
+t basics and keyval usage)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
 Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hooks)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
+s)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
 Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
-))) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+))) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
 Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
+y
 Package: tocbasic 2026/02/02 v3.49.2 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip49
 \scr@dte@tocline@numbox=\box53
@@ -39,10 +55,16 @@ Package scrartcl Info: You've used standard option `10pt'.
 (scrartcl)             If you'd like to set the option with \KOMAoptions,
 (scrartcl)             you'd have to use `fontsize=10pt' there
 (scrartcl)             instead of `10pt', too.
-Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input line 2489.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
-File: scrsize10pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (10pt)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/typearea.sty
+Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input l
+ine 2489.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize10pt
+.clo
+File: scrsize10pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (10
+pt)
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
+y
 Package: typearea 2026/02/02 v3.49.2 KOMA-Script package (type area)
 \ta@bcor=\skip50
 \ta@div=\count275
@@ -123,25 +145,29 @@ Package tocbasic Info: omitting babel extension for `lot'
 \c@table=\count283
 Class scrartcl Info: Redefining `\numberline' on input line 6469.
 \bibindent=\dimen148
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen149
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen150
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count284
@@ -191,82 +217,114 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/marvosym/marvosym.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/marvosym\marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count296
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count297
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen160
 \Hy@linkcounter=\count298
 \Hy@pagecounter=\count299
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count300
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+ (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -279,16 +337,21 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count301
- (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen161
- (/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count302
 \Field@Width=\dimen162
@@ -305,26 +368,34 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Hfootnote=\count305
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count306
 \c@bookmark@seq@number=\count307
- (/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
 )
 \Hy@SectionHShift=\skip68
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count308
 \float@exts=\toks25
 \float@box=\box57
 \@float@everytoks=\toks26
 \@floatcapt=\box58
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count309
 \l__siunitx_number_exponent_fixed_int=\count310
@@ -340,8 +411,11 @@ Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_angle_marker_box=\box59
 \l__siunitx_angle_unit_box=\box60
 \l__siunitx_compound_count_int=\count319
- (/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
 )
 \l__siunitx_table_tmp_box=\box61
 \l__siunitx_table_tmp_dim=\dimen165
@@ -356,7 +430,7 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 \l__siunitx_unit_tmp_int=\count320
 \l__siunitx_unit_position_int=\count321
 \l__siunitx_unit_total_int=\count322
- (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+ (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen169
 \ar@mcellbox=\box67
@@ -365,12 +439,16 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip69
 \backup@length=\skip70
 \ar@cellbox=\box68
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
 \BKM@id=\count323
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+))
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen171
 \lightrulewidth=\dimen172
@@ -389,15 +467,18 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count326
 \@lastruleclass=\count327
 \@thisrulewidth=\dimen183
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 Package tocbasic Info: Loading of class-dependent code for package caption3
 (tocbasic)             prevented on line 50.
 
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen184
 \captionmargin=\dimen185
@@ -417,7 +498,7 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count330
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count331
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count332
 \lst@gtempboxa=\box69
 \lst@token=\toks28
@@ -430,31 +511,34 @@ Package caption Info: New subtype `subtable' on input line 238.
 \lst@newlines=\count336
 \lst@lineno=\count337
 \lst@maxwidth=\dimen195
- (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count338
 \lst@skipnumbers=\count339
 \lst@framebox=\box70
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
-
 ==> First Aid for listings.sty no longer applied!
     Expected:
         2024/09/23 1.10c (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -464,14 +548,14 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/appendix/appendix.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count340
 \c@@ppsavesec=\count341
 \c@@ppsaveapp=\count342
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count343
@@ -486,22 +570,16 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen258
 \Gm@layoutvoffset=\dimen259
 \Gm@dimlist=\toks29
-)
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 67.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 67.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count346
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux
-
-LaTeX Warning: Label `lst:v6' multiply defined.
-
-
-LaTeX Warning: Label `lst:v6' multiply defined.
-
-
-LaTeX Warning: Label `lst:v6' multiply defined.
-
-)
+) (Protokoll EXP21.aux)
 \openout1 = `"Protokoll EXP21.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -531,7 +609,9 @@ Package scrbase Info: activating english \listfigurename on input line 67.
 Package scrbase Info: activating english \listtablename on input line 67.
 Package scrbase Info: activating english \refname on input line 67.
 Package scrbase Info: activating english \indexname on input line 67.
- (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count347
 \scratchdimen=\dimen260
@@ -544,17 +624,26 @@ Package scrbase Info: activating english \indexname on input line 67.
 \MPnumerator=\count351
 \makeMPintoPDFobject=\count352
 \everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 67.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 67.
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 67.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -598,16 +687,21 @@ Package tocbasic Info: omitting babel extension for `lol'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+[1
 
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.toc)
+{C:/Users/emmak/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(Protokoll EXP21.toc)
 \tf@toc=\write3
 \openout3 = `"Protokoll EXP21.toc"'.
 
@@ -622,18 +716,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--97
  []
 
 [1]
-<img/pump probe 1.png, id=100, 200.24812pt x 124.96687pt>
+<img/pump probe 1.png, id=99, 200.24812pt x 124.96687pt>
 File: img/pump probe 1.png Graphic file (type png)
 <use img/pump probe 1.png>
 Package pdftex.def Info: img/pump probe 1.png  used on input line 104.
 (pdftex.def)             Requested size: 160.19872pt x 99.97363pt.
- [2 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/pump probe 1.png>]
-<img/tris(2,2'-bipyridine)iron(II).png, id=119, 225.84375pt x 225.84375pt>
+ [2 <./img/pump probe 1.png>]
+<img/tris(2,2'-bipyridine)iron(II).png, id=118, 225.84375pt x 225.84375pt>
 File: img/tris(2,2'-bipyridine)iron(II).png Graphic file (type png)
 <use img/tris(2,2'-bipyridine)iron(II).png>
-Package pdftex.def Info: img/tris(2,2'-bipyridine)iron(II).png  used on input line 132.
+Package pdftex.def Info: img/tris(2,2'-bipyridine)iron(II).png  used on input l
+ine 132.
 (pdftex.def)             Requested size: 135.50728pt x 135.50728pt.
-<img/fe bipy 3 2+ 3d.png, id=122, 551.05875pt x 534.99875pt>
+<img/fe bipy 3 2+ 3d.png, id=121, 551.05875pt x 534.99875pt>
 File: img/fe bipy 3 2+ 3d.png Graphic file (type png)
 <use img/fe bipy 3 2+ 3d.png>
 Package pdftex.def Info: img/fe bipy 3 2+ 3d.png  used on input line 139.
@@ -651,13 +746,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 150.
 
-<img/d shift.png, id=126, 702.37407pt x 296.60812pt>
+<img/d shift.png, id=125, 702.37407pt x 296.60812pt>
 File: img/d shift.png Graphic file (type png)
 <use img/d shift.png>
 Package pdftex.def Info: img/d shift.png  used on input line 155.
 (pdftex.def)             Requested size: 351.18617pt x 148.3037pt.
-[3 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/tris(2,2'-bipyridine)iron(II).png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fe bipy 3 2+ 3d.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/d shift.png>]
-<img/relax.png, id=143, 519.44063pt x 481.8pt>
+[3 <./img/tris(2,2'-bipyridine)iron(II).png> <./img/fe bipy 3 2+ 3d.png> <./img
+/d shift.png>]
+<img/relax.png, id=142, 519.44063pt x 481.8pt>
 File: img/relax.png Graphic file (type png)
 <use img/relax.png>
 Package pdftex.def Info: img/relax.png  used on input line 172.
@@ -667,7 +763,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
-<img/4crystal.png, id=148, 337.26pt x 150.5625pt>
+<img/4crystal.png, id=147, 337.26pt x 150.5625pt>
 File: img/4crystal.png Graphic file (type png)
 <use img/4crystal.png>
 Package pdftex.def Info: img/4crystal.png  used on input line 186.
@@ -680,8 +776,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--191
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/relax.png>]
-<img/opt bench.png, id=159, 668.4975pt x 214.8025pt>
+[4 <./img/relax.png>]
+<img/opt bench.png, id=158, 668.4975pt x 214.8025pt>
 File: img/opt bench.png Graphic file (type png)
 <use img/opt bench.png>
 Package pdftex.def Info: img/opt bench.png  used on input line 195.
@@ -696,8 +792,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--205
 
  []
 
-[5 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/4crystal.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/opt bench.png>]
-<img/xas terpy.png, id=181, 499.11469pt x 316.18124pt>
+[5 <./img/4crystal.png> <./img/opt bench.png>]
+<img/xas terpy.png, id=179, 499.11469pt x 316.18124pt>
 File: img/xas terpy.png Graphic file (type png)
 <use img/xas terpy.png>
 Package pdftex.def Info: img/xas terpy.png  used on input line 231.
@@ -707,12 +803,12 @@ Package pdftex.def Info: img/xas terpy.png  used on input line 231.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]
-<img/pink_BIU_2.png, id=191, 575.14874pt x 824.07875pt>
+<img/pink_BIU_2.png, id=189, 575.14874pt x 824.07875pt>
 File: img/pink_BIU_2.png Graphic file (type png)
 <use img/pink_BIU_2.png>
 Package pdftex.def Info: img/pink_BIU_2.png  used on input line 258.
 (pdftex.def)             Requested size: 159.33821pt x 228.30104pt.
-<img/mono_BIU_2.png, id=192, 577.15625pt x 824.07875pt>
+<img/mono_BIU_2.png, id=190, 577.15625pt x 824.07875pt>
 File: img/mono_BIU_2.png Graphic file (type png)
 <use img/mono_BIU_2.png>
 Package pdftex.def Info: img/mono_BIU_2.png  used on input line 264.
@@ -727,28 +823,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--268
 
  []
 
-<img/beam_profile_3d_pink.png, id=193, 722.7pt x 578.16pt>
+<img/beam_profile_3d_pink.png, id=191, 722.7pt x 578.16pt>
 File: img/beam_profile_3d_pink.png Graphic file (type png)
 <use img/beam_profile_3d_pink.png>
 Package pdftex.def Info: img/beam_profile_3d_pink.png  used on input line 273.
 (pdftex.def)             Requested size: 204.85846pt x 163.88629pt.
-<img/beam_profile_3d_mono.png, id=194, 722.7pt x 578.16pt>
+<img/beam_profile_3d_mono.png, id=192, 722.7pt x 578.16pt>
 File: img/beam_profile_3d_mono.png Graphic file (type png)
 <use img/beam_profile_3d_mono.png>
 Package pdftex.def Info: img/beam_profile_3d_mono.png  used on input line 279.
 (pdftex.def)             Requested size: 204.85846pt x 163.88629pt.
-[7{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/xas terpy.png>]
+[7{C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc} <./img/xas terpy.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 284--297
 
  []
 
-[8 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/pink_BIU_2.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/mono_BIU_2.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beam_profile_3d_pink.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beam_profile_3d_mono.png>]
-<img/FWHM_gaussian.png, id=220, 867.24pt x 361.35pt>
+[8 <./img/pink_BIU_2.png> <./img/mono_BIU_2.png> <./img/beam_profile_3d_pink.pn
+g> <./img/beam_profile_3d_mono.png>]
+<img/FWHM_gaussian.png, id=218, 867.24pt x 361.35pt>
 File: img/FWHM_gaussian.png Graphic file (type png)
 <use img/FWHM_gaussian.png>
 Package pdftex.def Info: img/FWHM_gaussian.png  used on input line 307.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<img/abs spec aqu sol.png, id=222, 412.54124pt x 328.97906pt>
+<img/abs spec aqu sol.png, id=220, 412.54124pt x 328.97906pt>
 File: img/abs spec aqu sol.png Graphic file (type png)
 <use img/abs spec aqu sol.png>
 Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 321.
@@ -771,7 +869,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
-[9 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/FWHM_gaussian.png>]
+[9 <./img/FWHM_gaussian.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 331--338
 
  []
@@ -781,7 +879,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 331--338
 
  []
 
-[10 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/abs spec aqu sol.png>]
+[10 <./img/abs spec aqu sol.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 350--354
 
  []
@@ -801,58 +899,69 @@ Package siunitx Warning: Unit macro \angstrom has been deprecated in this
 (siunitx)                
 (siunitx)                \DeclareSIUnit\angstrom{\text {Å}}
 
-<img/100 ps Screenshot 2026-09-03 093257.png, id=242, 1444.64719pt x 812.28468pt>
+<img/100 ps Screenshot 2026-09-03 093257.png, id=240, 1444.64719pt x 812.28468p
+t>
 File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
 <use img/100 ps Screenshot 2026-09-03 093257.png>
-Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on input line 379.
+Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on i
+nput line 379.
 (pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/beams/xray_beam_profile.png, id=246, 867.24pt x 361.35pt>
+<img/beams/xray_beam_profile.png, id=244, 867.24pt x 361.35pt>
 File: img/beams/xray_beam_profile.png Graphic file (type png)
 <use img/beams/xray_beam_profile.png>
-Package pdftex.def Info: img/beams/xray_beam_profile.png  used on input line 390.
+Package pdftex.def Info: img/beams/xray_beam_profile.png  used on input line 39
+0.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<img/beams/laser_beam_profile.png, id=247, 867.24pt x 361.35pt>
+<img/beams/laser_beam_profile.png, id=245, 867.24pt x 361.35pt>
 File: img/beams/laser_beam_profile.png Graphic file (type png)
 <use img/beams/laser_beam_profile.png>
-Package pdftex.def Info: img/beams/laser_beam_profile.png  used on input line 396.
+Package pdftex.def Info: img/beams/laser_beam_profile.png  used on input line 3
+96.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
 [11]
-<img/beams/laser_xray_beam_profile.png, id=264, 867.24pt x 361.35pt>
+<img/beams/laser_xray_beam_profile.png, id=262, 867.24pt x 361.35pt>
 File: img/beams/laser_xray_beam_profile.png Graphic file (type png)
 <use img/beams/laser_xray_beam_profile.png>
-Package pdftex.def Info: img/beams/laser_xray_beam_profile.png  used on input line 402.
+Package pdftex.def Info: img/beams/laser_xray_beam_profile.png  used on input l
+ine 402.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
- [12 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/100 ps Screenshot 2026-09-03 093257.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beams/xray_beam_profile.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beams/laser_beam_profile.png>]
-<img/spectra/Reference_Spectra.png, id=276, 1389.7521pt x 433.62pt>
+ [12 <./img/100 ps Screenshot 2026-09-03 093257.png> <./img/beams/xray_beam_pro
+file.png> <./img/beams/laser_beam_profile.png>]
+<img/spectra/Reference_Spectra.png, id=274, 1389.7521pt x 433.62pt>
 File: img/spectra/Reference_Spectra.png Graphic file (type png)
 <use img/spectra/Reference_Spectra.png>
-Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 415.
+Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 
+415.
 (pdftex.def)             Requested size: 458.61961pt x 143.09503pt.
 
 Overfull \hbox (3.3755pt too wide) in paragraph at lines 415--416
  [][] 
  []
 
-<img/spectra/100ps spektrum.png, id=278, 722.7pt x 505.89pt>
+<img/spectra/100ps spektrum.png, id=276, 722.7pt x 505.89pt>
 File: img/spectra/100ps spektrum.png Graphic file (type png)
 <use img/spectra/100ps spektrum.png>
-Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 427.
+Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 427
+.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/spectra/100ps diff spektrum.png, id=279, 722.7pt x 505.89pt>
+<img/spectra/100ps diff spektrum.png, id=277, 722.7pt x 505.89pt>
 File: img/spectra/100ps diff spektrum.png Graphic file (type png)
 <use img/spectra/100ps diff spektrum.png>
-Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input line 434.
+Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input lin
+e 434.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-[13 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beams/laser_xray_beam_profile.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/Reference_Spectra.png>]
-<img/Time_resolved_spectrum_errbars.png, id=288, 722.7pt x 505.89pt>
+[13 <./img/beams/laser_xray_beam_profile.png> <./img/spectra/Reference_Spectra.
+png>]
+<img/Time_resolved_spectrum_errbars.png, id=286, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_errbars.png Graphic file (type png)
 <use img/Time_resolved_spectrum_errbars.png>
-Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input line 446.
+Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input 
+line 446.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/Kinetic traces.png, id=290, 722.7pt x 433.62pt>
+<img/Kinetic traces.png, id=288, 722.7pt x 433.62pt>
 File: img/Kinetic traces.png Graphic file (type png)
 <use img/Kinetic traces.png>
 Package pdftex.def Info: img/Kinetic traces.png  used on input line 454.
@@ -862,11 +971,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--459
 
  []
 
-[14 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/100ps spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/100ps diff spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Time_resolved_spectrum_errbars.png>]
-
-LaTeX Warning: Reference `py:fit' on page 15 undefined on input line 467.
-
-<img/fit/fit_all.png, id=300, 505.89pt x 325.215pt>
+[14 <./img/spectra/100ps spektrum.png> <./img/spectra/100ps diff spektrum.png> 
+<./img/Time_resolved_spectrum_errbars.png>]
+<img/fit/fit_all.png, id=299, 505.89pt x 325.215pt>
 File: img/fit/fit_all.png Graphic file (type png)
 <use img/fit/fit_all.png>
 Package pdftex.def Info: img/fit/fit_all.png  used on input line 470.
@@ -876,25 +983,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 466--473
 
  []
 
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=305, 1011.78pt x 823.1553pt>
-File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png)
+<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=304, 1011.78pt x 823.15
+53pt>
+File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png
+)
 <use img/fit/residuals_and_spectra_minus150_to_50fs.png>
-Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  used on input line 478.
+Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  us
+ed on input line 478.
 (pdftex.def)             Requested size: 455.2968pt x 370.41646pt.
-[15 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Kinetic traces.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_all.png>]
-<img/fit/counts_negative_delays_per_delay.png, id=318, 867.24pt x 505.89pt>
+[15 <./img/Kinetic traces.png> <./img/fit/fit_all.png>]
+<img/fit/counts_negative_delays_per_delay.png, id=317, 867.24pt x 505.89pt>
 File: img/fit/counts_negative_delays_per_delay.png Graphic file (type png)
 <use img/fit/counts_negative_delays_per_delay.png>
-Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on input line 484.
+Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on 
+input line 484.
 (pdftex.def)             Requested size: 346.88986pt x 202.3524pt.
- [16 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/residuals_and_spectra_minus150_to_50fs.png>]
-
-LaTeX Warning: Reference `py:v6' on page 17 undefined on input line 488.
-
+ [16 <./img/fit/residuals_and_spectra_minus150_to_50fs.png>]
 <img/fit/fit_try_to_fix_lol.png, id=328, 505.89pt x 325.215pt>
 File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
 <use img/fit/fit_try_to_fix_lol.png>
-Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 492.
+Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 492
+.
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 500--505
@@ -906,46 +1015,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--505
 
  []
 
-[17 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/counts_negative_delays_per_delay.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_try_to_fix_lol.png>]
+[17 <./img/fit/counts_negative_delays_per_delay.png> <./img/fit/fit_try_to_fix_
+lol.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 520--522
 
  []
 
-[18] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl) [1] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.lof)
+[18] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll EXP21.lof"'.
 
  [2]
-<img/Time_resolved_spectrum_3D.png, id=404, 722.7pt x 505.89pt>
+<img/pulse_positions_jitter.png, id=413, 505.89pt x 433.62pt>
+File: img/pulse_positions_jitter.png Graphic file (type png)
+<use img/pulse_positions_jitter.png>
+Package pdftex.def Info: img/pulse_positions_jitter.png  used on input line 542
+.
+(pdftex.def)             Requested size: 252.94437pt x 216.80946pt.
+<img/spectrum_average_pink.png, id=414, 578.16pt x 361.35pt>
+File: img/spectrum_average_pink.png Graphic file (type png)
+<use img/spectrum_average_pink.png>
+Package pdftex.def Info: img/spectrum_average_pink.png  used on input line 549.
+
+(pdftex.def)             Requested size: 289.07928pt x 180.67456pt.
+<img/spectrum_average_mono.png, id=415, 578.16pt x 361.35pt>
+File: img/spectrum_average_mono.png Graphic file (type png)
+<use img/spectrum_average_mono.png>
+Package pdftex.def Info: img/spectrum_average_mono.png  used on input line 556.
+
+(pdftex.def)             Requested size: 289.07928pt x 180.67456pt.
+ [3 <./img/pulse_positions_jitter.png> <./img/spectrum_average_pink.png>]
+<img/Time_resolved_spectrum_3D.png, id=422, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_3D.png Graphic file (type png)
 <use img/Time_resolved_spectrum_3D.png>
-Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 542.
+Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 
+563.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/fit/fit_big errorbars.png, id=405, 505.89pt x 325.215pt>
+<img/fit/fit_big errorbars.png, id=423, 505.89pt x 325.215pt>
 File: img/fit/fit_big errorbars.png Graphic file (type png)
 <use img/fit/fit_big errorbars.png>
-Package pdftex.def Info: img/fit/fit_big errorbars.png  used on input line 549.
+Package pdftex.def Info: img/fit/fit_big errorbars.png  used on input line 570.
+
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+ [4 <./img/spectrum_average_mono.png> <./img/Time_resolved_spectrum_3D.png>]
+(C:\Users\emmak\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py [3 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Time_resolved_spectrum_3D.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_big errorbars.png>] [4]
+)
+(py/time resolved difference spectra v2.py [5 <./img/fit/fit_big errorbars.png>
+]
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py:106: LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...n to sparsify error bars so it doesn’t 
-                                                  become unreadable
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py:106: LaTeX Error: Invalid UTF-8 byte "80.
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -960,7 +1079,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py:106: LaTeX Error: Invalid UTF-8 byte "99.
+! LaTeX Error: Invalid UTF-8 byte "80.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -974,45 +1093,60 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[5]) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py [6] [7] [8]
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:231: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+! LaTeX Error: Invalid UTF-8 byte "99.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231 plt.ylabel("Normalized Δ 
-                                Emission Intensity")
+l.106 ...n to sparsify error bars so it doesn’t 
+                                                  become unreadable
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
 or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:231: LaTeX Error: Invalid UTF-8 byte "94.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 plt.ylabel("Normalized Δ 
-                                Emission Intensity")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has been already used, duplicate ignored
+[6]) (py/kinetic traces v2.py [7] [8]
+pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 print(
-            f"Energy: {energy_grid[idx]:.1f} eV") [9]
+l.159 baseline 
+               = np.mean(trace[pre_mask]) [9] [10]
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:276: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.231 plt.ylabel("Normalized Δ 
+                                Emission Intensity")
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "94.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.231 plt.ylabel("Normalized Δ 
+                                Emission Intensity")
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1027,7 +1161,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:276: LaTeX Error: Invalid UTF-8 byte "94.
+! LaTeX Error: Invalid UTF-8 byte "94.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1041,24 +1175,9 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py [10] [11] [12] [13] [14]
+) (py/fit_v5.py [11] [12] [13] [14] [15] [16]
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:353: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:353: LaTeX Error: Invalid UTF-8 byte "83.
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1073,7 +1192,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:353: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
+! LaTeX Error: Invalid UTF-8 byte "83.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1088,7 +1207,22 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.353 # Varianz = Mittelwert (σ² 
+                                   = N)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1103,7 +1237,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte "94.
+! LaTeX Error: Invalid UTF-8 byte "94.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1118,7 +1252,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1133,7 +1267,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte "83.
+! LaTeX Error: Invalid UTF-8 byte "83.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1147,24 +1281,9 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[15]) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py [16] [17] [18] [19] [20]
+) (py/v6.py [17] [18] [19] [20] [21]
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:327: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:327: LaTeX Error: Invalid UTF-8 byte "83.
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1179,7 +1298,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:327: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
+! LaTeX Error: Invalid UTF-8 byte "83.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1194,7 +1313,22 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.327 # Varianz = Mittelwert (σ² 
+                                   = N)
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1209,7 +1343,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte "94.
+! LaTeX Error: Invalid UTF-8 byte "94.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1224,7 +1358,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1239,7 +1373,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte "83.
+! LaTeX Error: Invalid UTF-8 byte "83.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1253,32 +1387,51 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-) [21] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux)
+) [22] (Protokoll EXP21.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 23653 strings out of 467525
- 461670 string characters out of 5418982
- 1648525 words of memory out of 5000000
- 51089 multiletter control sequences out of 15000+600000
+ 23688 strings out of 467867
+ 462494 string characters out of 5418334
+ 1630508 words of memory out of 5000000
+ 51092 multiletter control sequences out of 15000+600000
  639835 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,107p,11374b,2920s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (41 pages, 8889067 bytes).
+ 108i,12n,107p,11249b,2920s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/emmak/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/e
+mmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
+Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmssbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/emmak/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/emmak/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
+/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><
+C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm10
+00.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-supe
+r/sftt0800.pfb>
+Output written on "Protokoll EXP21.pdf" (42 pages, 9823195 bytes).
 PDF statistics:
- 2067 PDF objects out of 2073 (max. 8388607)
- 1896 compressed objects within 19 object streams
- 1246 named destinations out of 1440 (max. 500000)
- 394 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2068 PDF objects out of 2073 (max. 8388607)
+ 1250 named destinations out of 1440 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
 
