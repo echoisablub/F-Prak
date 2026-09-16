@@ -319,9 +319,23 @@ As we want to ensure that the X-ray beam always hits excited molecules we need t
 The optical laser beam profile is approximately gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jet by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ or rather $d_{FWHM}=?$ with our chosen wavelength of \qty{400}{nm}.\\
 If the optical laser and the X-ray laser had the same diameter, the x-ray would also investigate molecules that were excited only weakly or even not at all, as the optical laser has an approximately Gaussian beam shape. Ideally, the X-ray is positioned exactly in the centre of the ca. 10 times bigger optical laser beam. Then it can investigate a maximal volume of excited molecules. This also compensates for the fact that the optical laser jitters in the focus layer of the X-ray due to not being focussed there itself.\\
 These estimates have consequences for our needed flow speed of the liquid jet which has to be 10 times faster to adjust to the new diameter of the optical laser.\\\\
-Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelyhood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules. 
-%hier muss noch der abschnitt 19 erläutert werden
-
+Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelyhood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules.\\\\
+To ensure the optical laser excites the sample efficiently, the laser intensity ideally is in a range where the number of optical laser photons is less than or approximately equal to the number of sample molecules in the laser-excited volume.\\
+First we calculate the number of $[\text{Fe}(\text{bipy})_3]^{2+}$ molecules in the volume illuminated by the laser with a chosen beam size of $d_L=\qty{150}{\mu\m}$, a concentration of $c=\qty{1.00e-4}{\mol\per\cm^3}$, a wavelength of $\lambda=\qty{400}{nm}$ and a jet size of $d_{jet}=\qty{25}{\mu\m}$. The particle density is calculated by:
+\begin{align}
+	\mathcal{N} = c \cdot N_A = 0.100 \, \text{mol/L} \cdot 6.022 \times 10^{23}\ \text{L}^{-1}\ \text{mol}^{-1} = 6.022 \times 10^{22}\ \text{molecules/cm}^3
+\end{align}
+The illuminated cross-section area $A$ of the gaussian beam is $A_{\text{eff}} = 1.133 \cdot d_{\text{FWHM}}^2 = 1{,}133 \cdot (0.015\ \text{cm})^2 \approx 2.549 \times 10^{-4}\ \text{cm}^2$ from which the effective volume can be calculated: $V_{\text{eff}} = A_{\text{eff}} \cdot d_{\text{jet}} = 2.549 \times 10^{-4}\ \text{cm}^2 \cdot 25 \times 10^{-4}\ \text{cm} = 6.373 \times 10^{-10}\ \text{L}$. The number of molecules is then calculated:
+\begin{align}
+	N_{\text{molecules, eff}} = \mathcal{N} \cdot V_{\text{eff}} = (6.022 \times 10^{22}\ \text{cm}^{-3}) \cdot (6.373 \times 10^{-7}\ \text{cm}^3) \approx 3.838 \times 10^{16}\ \text{molecules}
+\end{align}
+Now to determine the pulse energy at which the number of photons per pulse is equal to the number of molecules just calculated:
+\begin{align}
+	N_{\text{photons}} = N_{\text{molecules}}\\
+	E_{\text{photon}} = \frac{h \cdot c}{\lambda} = \frac{(6{,}626 \times 10^{-34}\ \text{J}\cdot\text{s}) \cdot (2{,}998 \times 10^8\ \text{m/s})}{400 \times 10^{-9}\ \text{m}} \approx 4.966 \times 10^{-19}\ \text{J}\\
+	E_{\text{pulse}} = N_{\text{molecules}} \cdot E_{\text{photon}}=(3.838 \times 10^{16}) \cdot (4.966 \times 10^{-19}\ \text{J}) \approx 19.06 \times 10^{-3}\ \text{J}
+\end{align}
+For a wavelength of \qty{400}{nm} there's a maximal pulse energy of \qty{19059.51}{mJ} available for a spot diameter of \qty{150}{\mu\m}\\\\
 There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength seperately and requires normalization to the sáccumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
 In order to choose the correct crystal for the emission spectrometer the Bragg reflection angle needs to be considered. 
 %hier fehlt noch der Prozess der Kristall-auswahl mit bragg und so

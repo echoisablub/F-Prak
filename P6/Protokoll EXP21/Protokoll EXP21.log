@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  16 SEP 2026 08:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  16 SEP 2026 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -869,118 +869,134 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--317
  []
 
 [9 <./img/FWHM_gaussian.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 318--324
+Underfull \hbox (badness 10000) in paragraph at lines 318--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--328
+Underfull \hbox (badness 10000) in paragraph at lines 318--325
 
  []
 
-<img/100 ps Screenshot 2026-09-03 093257.png, id=223, 1444.64719pt x 812.28468p
+[10 <./img/abs spec aqu sol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
+
+ []
+
+<img/100 ps Screenshot 2026-09-03 093257.png, id=231, 1444.64719pt x 812.28468p
 t>
 File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
 <use img/100 ps Screenshot 2026-09-03 093257.png>
 Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on i
-nput line 338.
+nput line 352.
 (pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
-[10 <./img/abs spec aqu sol.png>]
-<img/spectra/Reference_Spectra.png, id=231, 1389.7521pt x 433.62pt>
+<img/spectra/Reference_Spectra.png, id=233, 1389.7521pt x 433.62pt>
 File: img/spectra/Reference_Spectra.png Graphic file (type png)
 <use img/spectra/Reference_Spectra.png>
 Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 
-357.
+371.
 (pdftex.def)             Requested size: 458.61961pt x 143.09503pt.
 
-Overfull \hbox (3.3755pt too wide) in paragraph at lines 357--358
+Overfull \hbox (3.3755pt too wide) in paragraph at lines 371--372
  [][] 
  []
 
-<img/spectra/100ps spektrum.png, id=233, 722.7pt x 505.89pt>
+[11 <./img/100 ps Screenshot 2026-09-03 093257.png>]
+<img/spectra/100ps spektrum.png, id=245, 722.7pt x 505.89pt>
 File: img/spectra/100ps spektrum.png Graphic file (type png)
 <use img/spectra/100ps spektrum.png>
-Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 369
+Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 383
 .
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/spectra/100ps diff spektrum.png, id=234, 722.7pt x 505.89pt>
+<img/spectra/100ps diff spektrum.png, id=246, 722.7pt x 505.89pt>
 File: img/spectra/100ps diff spektrum.png Graphic file (type png)
 <use img/spectra/100ps diff spektrum.png>
 Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input lin
-e 376.
+e 390.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-[11 <./img/100 ps Screenshot 2026-09-03 093257.png> <./img/spectra/Reference_Sp
-ectra.png>]
-<img/Time_resolved_spectrum_errbars.png, id=245, 722.7pt x 505.89pt>
+<img/Time_resolved_spectrum_errbars.png, id=247, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_errbars.png Graphic file (type png)
 <use img/Time_resolved_spectrum_errbars.png>
 Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input 
-line 388.
+line 402.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/Kinetic traces.png, id=247, 722.7pt x 433.62pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/Kinetic traces.png, id=249, 722.7pt x 433.62pt>
 File: img/Kinetic traces.png Graphic file (type png)
 <use img/Kinetic traces.png>
-Package pdftex.def Info: img/Kinetic traces.png  used on input line 396.
+Package pdftex.def Info: img/Kinetic traces.png  used on input line 410.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--401
+Underfull \hbox (badness 10000) in paragraph at lines 406--415
 
  []
 
-[12 <./img/spectra/100ps spektrum.png> <./img/spectra/100ps diff spektrum.png> 
-<./img/Time_resolved_spectrum_errbars.png>]
+[12 <./img/spectra/Reference_Spectra.png> <./img/spectra/100ps spektrum.png> <.
+/img/spectra/100ps diff spektrum.png>] [13 <./img/Time_resolved_spectrum_errbar
+s.png> <./img/Kinetic traces.png>]
 
-LaTeX Warning: Reference `py:fit' on page 13 undefined on input line 409.
+LaTeX Warning: Reference `py:fit' on page 14 undefined on input line 423.
 
-<img/fit/fit_all.png, id=257, 505.89pt x 325.215pt>
+<img/fit/fit_all.png, id=270, 505.89pt x 325.215pt>
 File: img/fit/fit_all.png Graphic file (type png)
 <use img/fit/fit_all.png>
-Package pdftex.def Info: img/fit/fit_all.png  used on input line 412.
+Package pdftex.def Info: img/fit/fit_all.png  used on input line 426.
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=261, 1011.78pt x 823.15
+<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=274, 1011.78pt x 823.15
 53pt>
 File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png
 )
 <use img/fit/residuals_and_spectra_minus150_to_50fs.png>
 Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  us
-ed on input line 420.
+ed on input line 434.
 (pdftex.def)             Requested size: 455.2968pt x 370.41646pt.
-<img/fit/counts_negative_delays_per_delay.png, id=263, 867.24pt x 505.89pt>
+<img/fit/counts_negative_delays_per_delay.png, id=276, 867.24pt x 505.89pt>
 File: img/fit/counts_negative_delays_per_delay.png Graphic file (type png)
 <use img/fit/counts_negative_delays_per_delay.png>
 Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on 
-input line 427.
+input line 441.
 (pdftex.def)             Requested size: 433.61894pt x 252.94437pt.
-[13 <./img/Kinetic traces.png> <./img/fit/fit_all.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/fit/fit_try_to_fix_lol.png, id=275, 505.89pt x 325.215pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/fit/fit_try_to_fix_lol.png, id=277, 505.89pt x 325.215pt>
 File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
 <use img/fit/fit_try_to_fix_lol.png>
-Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 434
+Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 448
 .
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--447
+Underfull \hbox (badness 10000) in paragraph at lines 456--461
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--447
+Underfull \hbox (badness 10000) in paragraph at lines 456--461
 
  []
 
-[14 <./img/fit/residuals_and_spectra_minus150_to_50fs.png>] [15 <./img/fit/coun
-ts_negative_delays_per_delay.png> <./img/fit/fit_try_to_fix_lol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 462--464
+[14 <./img/fit/fit_all.png>] [15 <./img/fit/residuals_and_spectra_minus150_to_5
+0fs.png>] [16 <./img/fit/counts_negative_delays_per_delay.png> <./img/fit/fit_t
+ry_to_fix_lol.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
 
-[16] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof
+[17] (Protokoll EXP21.bbl) [1] (Protokoll EXP21.lof
 
 LaTeX Warning: Citation `4' on page B undefined on input line 5.
 
@@ -999,13 +1015,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21641 strings out of 467867
- 433387 string characters out of 5418334
+ 21647 strings out of 467867
+ 433444 string characters out of 5418334
  936226 words of memory out of 5000000
  50234 multiletter control sequences out of 15000+600000
  639211 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,107p,11249b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,107p,11249b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1028,9 +1044,9 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
 s/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-Output written on "Protokoll EXP21.pdf" (21 pages, 7405281 bytes).
+Output written on "Protokoll EXP21.pdf" (22 pages, 7412122 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
+ 557 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
  364 words of extra memory for PDF output out of 10000 (max. 10000000)
 
