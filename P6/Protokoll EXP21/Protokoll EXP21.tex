@@ -81,23 +81,23 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-The experiment EXP21 - Ultrafast X-ray experiments is there to gain basic hands-on knowledge about the methods of ultrafast pump-probe spectroscopy as well as X-ray emission spectroscopy and related X-ray techniques. This is done through the usage of the virtual environment VLab - a software that simulates a beamline of the European XFEL. The following procedures are part of the experiment: characterising the optics of the X-ray beam used, making the preparatory estimates and calculations surrounding the setup of the experiment and finally executing a pump-probe measurement of the relaxation process of the iron-compound $[\text{Fe}(\text{bipy})_3]^{2+}$ at different time delays.
+The experiment EXP21 - Ultrafast X-ray experiments is designed to provide basic hands-on knowledge about the methods of ultrafast pump-probe spectroscopy as well as X-ray emission spectroscopy and related X-ray techniques. This is done through the usage of the virtual environment VLab - a software that simulates a beamline of the European XFEL. The following procedures are part of the experiment: characterising the optics of the X-ray beam used, making the preparatory estimates and calculations surrounding the setup of the experiment and finally executing a pump-probe measurement of the relaxation process of the iron-compound $[\text{Fe}(\text{bipy})_3]^{2+}$ at different time delays.
 
 \section{Theoretical Background}
 
 \subsection{Synchrotronradiation}
-When accelerating electrons or other charged particles to relativistic speeds along a curved trajectory they emit so-called synchrotron radiation. It gains its name from the ring accelerators, the sychrotrons, where it was first observed. A typical synchrotron facility consists of a linear accelarator leading into a booster ring in which the electrons are brought up to relativistic speeds \cite{1}\cite{3}. The electrons are then fed into a storage ring in which they continue to circulate at relativistic speeds. From the storage ring the beam-lines lead tangentially away in which the synchrotron radiation is utilized in experimental hutches \cite{1}\cite{3}.\\
+When accelerating electrons or other charged particles to relativistic speeds along a curved trajectory they emit so-called synchrotron radiation. It gets its name from the ring accelerators, the synchrotrons, where it was first observed. A typical synchrotron facility consists of a linear accelerator leading into a booster ring in which the electrons are brought up to relativistic speeds \cite{1}\cite{3}. The electrons are then fed into a storage ring in which they continue to circulate at relativistic speeds. From the storage ring the beam-lines lead tangentially away in which the synchrotron radiation is utilized in experimental hutches \cite{1}\cite{3}.\\
 Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as X-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract X-ray beams and the interference patterns can be measured \cite{1}.\\\\
-There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipolmagnets with alternating polarity to achieve synchrotron radiation a linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and higher brilliance \cite{3}.
+There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipol magnets with alternating polarity to achieve synchrotron radiation along linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and higher brilliance \cite{3}.
 
 \subsubsection{Free Electron Laser (FEL)}
-Free-electron lasers are coherent tradiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are, in theory, able to operate at any arbitrary wavelength or spectrum of wavelengths with the limit being the energy and quality of the accelerated electron beam \cite{2}. \\
-FELs use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundert metres. The light waves emitted by the electron bunches will line up in place and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component pf the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.\\\\
+Free-electron lasers are coherent radiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are, in theory, able to operate at any arbitrary wavelength or spectrum of wavelengths with the limit being the energy and quality of the accelerated electron beam \cite{2}. \\
+FELs use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundred metres. The light waves emitted by the electron bunches will line up in phase and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component of the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.\\\\
 The duration of a single X-ray pulse can also be reduced to even less than a few femtoseconds. This allows for an investigation of molecular processes and photochemical reactions through a form of sequential snapshots with a characteristic time of under a picosecond \cite{1}.
 
 \subsection{Pump-probe-spectroscopy}
-The principle of pump-probe-spectroscopy is sending two lasers at the same object with a certain time delay so that the first laser, an optical laser, can excite the system in some way and the second laser, an X-ray pulse can measure the response (see \autoref{fig:pump probe}). In a FEL such as the European XFEL this can be done with ultrafast X-ray pulses on a timescale of a few femtoseconds ($\qty{e-15}{s}$). Variating the time delay allows for a series of sequential snapshots of the process observed and variating the wavelength of the excitation laser allows for an investigation of different processces \cite{0}.\\
-The selection of the different discrete time delays is important. For negative time delays ($\Delta t<0$) the probe pulse arrives before the pump pulse and thus measures just the ground state and for a delay of $\Delta t=0$ both pulses overlap exactly. Whereas for positive delays ($\Delta t>0$) the probe pulse measures the developing dynamics.
+The principle of pump-probe-spectroscopy is directing two lasers at the same sample with a certain time delay so that the first laser, an optical laser, can excite the system in some way and the second laser, an X-ray pulse can measure the response (see \autoref{fig:pump probe}). In a FEL such as the European XFEL this can be done with ultrafast X-ray pulses on a timescale of a few femtoseconds ($\qty{e-15}{s}$). Varying the time delay allows for a series of sequential snapshots of the process observed and varying the wavelength of the excitation laser allows for an investigation of different processes \cite{0}.\\
+The selection of the different discrete time delays is important. For negative time delays ($\Delta t<0$) the probe pulse arrives before the pump pulse and thus measures just the ground state and for a delay of $\Delta t=0$ both pulses overlap exactly, whereas for positive delays ($\Delta t>0$) the probe pulse measures the developing dynamics.
 
 \begin{figure}[h]
      \centering
@@ -107,18 +107,18 @@ The selection of the different discrete time delays is important. For negative t
 \end{figure}
 
 \subsubsection{The pump-pulse}
-The pump pulse acts as a kick-off signal for the process. It excites the molecule at a well-defined time ($t=0$) from it's thermal ground state into a higher energetic state \cite{0}.\\
-In this experiment specifically the pump pulse is an ultra-short optical laser-pulse with a wavelength in the VIS/UV range which excites the iron-compound $[\text{Fe}(\text{bipy})_3]^{2+}$ from it's singlet low-spin-state ($^1A_1$) into the excited state $^1\text{MLCT}$ (metal-to-ligand charge transfer) after which the relaxation process starts \cite{0}.
+The pump pulse acts as a kick-off signal for the process. It excites the molecule at a well-defined time ($t=0$) from its thermal ground state into a higher energetic state \cite{0}.\\
+In this experiment specifically the pump pulse is an ultra-short optical laser-pulse with a wavelength in the VIS/UV range which excites the iron-compound $[\text{Fe}(\text{bipy})_3]^{2+}$ from its singlet low-spin-state ($^1A_1$) into the excited state $^1\text{MLCT}$ (metal-to-ligand charge transfer) after which the relaxation process starts \cite{0}.
 
 \subsubsection{The probe-pulse}
-The probe pulse is a second pulse that hits the probe with a known time delay to 'photograph' the current state. In this experiment an ultra-short X-ray pulse from the European XFEL is used. It ionises the 1s core electron of the central iron atom. The resulting X-ray emission ($K\beta$-XES) is measured which is sensitive to spin- and structure changes of the iron \cite{0}.
+The probe pulse is a second pulse that hits the sample with a known time delay to 'photograph' the current state. In this experiment an ultra-short X-ray pulse from the European XFEL is used. It ionises the 1s core electron of the central iron atom. The resulting X-ray emission ($K\beta$-XES) is measured which is sensitive to spin- and structure changes of the iron \cite{0}.
 
 \subsubsection{Transient difference spectrum}
 Most of the time during the experiment, only a fraction of the molecules in the probe are in an excited state. This means the pure excited spectrum is hard to see directly. To get a useful reading of the data the transient signal in the difference spectrum is used:
 \begin{align}
 \text{transient signal}=I_{\text{laser on}}(\Delta t)-I_{\text{laser off}}
 \end{align}
-The transient signal shows the physical changes the best: Negative parts of the signal mean a depopulation - places in the spectrum where the intensity lessens as the ground state is emptied because of the laser, positive parts are new spectral features such as the growing of a spin-sensitive satellite peak which indicates the existance of intermediate states.\\
+The transient signal shows the physical changes the best: Negative parts of the signal mean a depopulation - places in the spectrum where the intensity lessens as the ground state is emptied because of the laser, positive parts are new spectral features such as the growing of a spin-sensitive satellite peak which indicates the existence of intermediate states.\\
 When plotting the intensity of these notable energies against the time delays, you get so-called kinetic traces from which the lifespans of the intermediate states is able to be determined.
 
 \subsection{The investigated molecule}
@@ -145,7 +145,7 @@ The central atom acts as an electron acceptor, while the ligands act as the elec
 \end{figure}
 
 
-This bonding can take place because of the $d^6$ electron configuartion of $\text{Fe}^{2+}$ and the nitrogene atoms in the pyridine rings. In our case we have two bridged pyridine rings that form the uncharged bidentate ligand bipyridine (abbreviated bipy). Both nitrogen atoms in each of the 3 ligands bind to the central $\text{Fe}^{2+}$ atom.
+This bonding can take place because of the $d^6$ electron configuration of $\text{Fe}^{2+}$ and the nitrogen atoms in the pyridine rings. In our case we have two bridged pyridine rings that form the uncharged bidentate ligand bipyridine (abbreviated bipy). Both nitrogen atoms in each of the 3 ligands bind to the central $\text{Fe}^{2+}$ atom.
 
 \subsubsection{Electronic Structure of \([\text{Fe}(\text{bipy})_{3}]^{2+}\)}
 Because of the electrostatic interaction between the ligands and the d electrons of the $\text{Fe}^{2+}$, the 5 d orbitals, that normally would be energetically equivalent, with a maximised spin multiplicity, are now energetically raised or lowered due to the nature of interaction with the ligand field (see \autoref{fig:d orbs}). The energy of d orbitals pointing to the ligands ($e_g$) is raised, while the energy of those pointing between the ligands is lowered ($t_{2g}$). 
@@ -159,13 +159,13 @@ The difference of energy $\Delta_{oct}$ is called the strength of the crystal fi
 
 Following Hund's rule the lower-energy orbitals ($t_{2g}$) are filled first (one by one with electrons of the same spin).
 In the low-spin state our $d^6$ metal ion has no unpaired electrons (total Spin $S=0$). That represents the singlet state $^1A_1$. 
-In the high spin state it has the maximum of unpaired electrons ($S=2$). We habe a quinted state $^5T_2$.
-The energy difference $\Delta_{oct}$ is smaller for HS configs, because the $e_g$ level is filled and those electrons can push the ligand atoms further away that in LS configs. 
+In the high spin state it has the maximum of unpaired electrons ($S=2$). We have a quintet state $^5T_2$.
+The energy difference $\Delta_{oct}$ is smaller for HS configurations, because the $e_g$ level is filled and those electrons can push the ligand atoms further away than in LS configurations. 
 Excitation to the HS state occurs in this experimental setup through photoexcitation to higher lying MLCT bands followed by relaxation.
 
 \subsubsection{Relaxation process}
 The actual process we want to look at is the relaxation process that occurs after exciting the iron compound from the  singlet state $^1A_1$ into the MLCT (metal to ligand charge transfer) band. In the electronic ground state $[\text{Fe}(\text{bipy})_3]^{2+}$ is a low spin complex while it's a high spin complex when excited to the MLCT band.\\
-There are two different ways the deactivation could occur. Either directly to the high spin state $^5T_{2g}$ or indirectly via the transient state $^3T_{1g}$. Both processes are equally possible. The average lifetime of the MLCT band is $\tau_{MLCT}\approx\qty{100}{fs}$ while the average lifetimes of the transient state $^3T_{1g}$ and the high spin state $^5T_{2g}$ are $\tau_3<\qty{100}{fs}$ and $\tau_5\approx\qty{1}{ns}$ respectively (see \autoref{fig:decay}) \cite{0}.
+There are two different ways the deactivation could occur. It can occur either directly to the high spin state $^5T_{2g}$ or indirectly via the transient state $^3T_{1g}$. Both processes are equally possible. The average lifetime of the MLCT band is $\tau_{MLCT}\approx\qty{100}{fs}$ while the average lifetimes of the transient state $^3T_{1g}$ and the high spin state $^5T_{2g}$ are $\tau_3<\qty{100}{fs}$ and $\tau_5\approx\qty{1}{ns}$ respectively (see \autoref{fig:decay}) \cite{0}.
 
 \begin{figure}[h]
      \centering
@@ -180,7 +180,7 @@ VLab recreates the Femtosecond X-ray Experiment research platform FXE. The simul
 
 %For further elaboration see \autoref{Anh: VLab}.
 \subsection{Beamline}
-After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a four-crystal monochromator (see \autoref{fig:mono}) which uses the diffranction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}. The four crystal setup ensures that the monochromatic beam follows the same path after the monochromator the pink beam would have.\\\\ 
+After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a four-crystal monochromator (see \autoref{fig:mono}) which uses the diffraction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}. The four crystal setup ensures that the monochromatic beam follows the same path after the monochromator the pink beam would have.\\\\ 
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.4]{img/4crystal.png}
@@ -199,8 +199,8 @@ Before entering the optical bench there's also a beam splitter built with a line
 In VLab as well as in real life, there are multiple optical elements for controlling and characterising the beam (see \autoref{fig:opt bench}). Listed here are the ones we actively used during this experiment.\\\\
 There are three BIUs which measure the intensity distribution of the beam perpendicular to its propagation direction. In VLab these intensity distributions can be saved as files with a size of 420x420 pixel and the screen dimension \qty{10}{mm} x\qty{10}{mm} leading to a resolution of $0.024\text{\,mm/px}$.\\
 The power slits are there to restrict the areas of the beam, for this experiment they are fully opened.\\
-As some components and detectors of the beamline will be damaged when hit with the full force of the X-ray beam (such as the BIUs), it is necessary to have a way of weakening the beam without changing anything else about its optics. This is done with the solid attenuators of the SAA which are able to weaken the beam by multipe orders of magnitude. It consists of an assembly of four arms (or rods) which each have a selection of foils of varying thicknesses to hold into the beam. The foils are made of diamond (C*), silicon (Si) and boron carbide ($\text{B}_4\text{C}$) \cite{0}.\\\\
-To focus the beam, compound refractive lenses made of beryllium are used. X-ray optics need a different approach to lenses than UV/VIS light as can be seen when looking at the dimensionless wavelength dependent index of refraction: $n(\lambda)=n_R(\lambda)+in_I(\lambda)$. The real part $n_R$ is the refractive index and measures the phase velocity of light. For wavelengths in the X-ray regime it drops to less than unity, which means the refractive power is extremely low. This means focusing of the beam has to be performed with concave lenses rather than with the optical lenses one would use to focus an optical beam. The lenses are made of beryllium as it is one of the available matrials with a low atomic number which means that the lenses have low X-ray absorption \cite{0}.\\
+As some components and detectors of the beamline will be damaged when hit with the full force of the X-ray beam (such as the BIUs), it is necessary to have a way of weakening the beam without changing anything else about its optics. This is done with the solid attenuators of the SAA which are able to weaken the beam by multiple orders of magnitude. It consists of an assembly of four arms (or rods) which each have a selection of foils of varying thicknesses to hold into the beam. The foils are made of diamond (C*), silicon (Si) and boron carbide ($\text{B}_4\text{C}$) \cite{0}.\\\\
+To focus the beam, compound refractive lenses made of beryllium are used. X-ray optics need a different approach to lenses than UV/VIS light as can be seen when looking at the dimensionless wavelength dependent index of refraction: $n(\lambda)=n_R(\lambda)+in_I(\lambda)$. The real part $n_R$ is the refractive index and measures the phase velocity of light. For wavelengths in the X-ray regime it drops to less than unity, which means the refractive power is extremely low. This means focusing of the beam has to be performed with concave lenses rather than convex lenses one would use to focus an optical beam. The lenses are made of beryllium as it is one of the available materials with a low atomic number which means that the lenses have low X-ray absorption \cite{0}.\\
 The focal distance $F$ of single refractive X-ray lenses is dependent on the lens radius $R$ and the refractive decrement $\delta$ through $F=\frac{R}{2\delta}$ but as $\delta$ is very low it's necessary to use stacks of several lenses. Now the focal distance of $N$ lens elements is given by:
 \begin{align}
 	F=\frac{R}{2N\delta}
@@ -212,27 +212,27 @@ The CRLs in VLab are in the form of ten retractable carrier cassettes which are 
 
 \subsection{Sample environment}
 The next section of the hutch modeled in VLab is the sample environment in which the actual experiment takes place. It consists of the sample table on which the pump-laser and the X-ray hit the probe and secondary spectrometers as well as the large pixel detector (LPD). For this experiment the liquid beam injector on the sample table is used to make sure that the probe for every pump and probe cycle is fresh \cite{0}.\\
-There are two secondary spectrometers available in VLab: the Vom Hamos spectrometer and the Johann spectrometer. The Von Hamos is a dispersive spectrometer which means that it is better suited for recording an entire spectrum while the Johann is a monochromatic spectrometer and better suited for accurately measuring the wavelength of single small wavelength ranges of interest. The Von Hamos in VLab consists of up to 16 cylindrically curved crystals \cite{0}.\\
+There are two secondary spectrometers available in VLab: the Von Hamos spectrometer and the Johann spectrometer. The Von Hamos is a dispersive spectrometer which means that it is better suited for recording an entire spectrum while the Johann is a monochromatic spectrometer and better suited for accurately measuring the wavelength of single small wavelength ranges of interest. The Von Hamos in VLab consists of up to 16 cylindrically curved crystals \cite{0}.\\
 The output of the spectrometers can be measured by two different detectors: the Gotthard detector which is a \unit{MHz} compatible strip detector or the Jungfrau detector which is a \qty{10}{Hz} compatible pixel detector. These detectors are made out of silicon and work because of the X-ray generating conduction band electrons whose charge quantity is then measured. This means the detectors sensitivity is energy-dependent.\\
-The LPD was developed specifically for the European XFEL. It's an 1 mega pixel detector with the ability to resolve single pulses within a pulse train. To ensure that the directly transmitted X-ray beam doesn't destroy any of the sensors in the detector theres a small hole which allows the beam to pass without directly hitting any of them.\\
-In this section there's also another more precise BIU - the X-ray eye - which also measures intensity distributions with a size of 420x420 pixel and the screen dimension \qty{2}{mm} x\qty{2}{mm} leading to a resolution of $0.005\text{\,mm/px}$.
+The LPD was developed specifically for the European XFEL. It's an 1 mega pixel detector with the ability to resolve single pulses within a pulse train. To ensure that the directly transmitted X-ray beam doesn't destroy any of the sensors in the detector there's a small hole which allows the beam to pass without directly hitting any of them.\\
+In this section there's also another more precise BIU - the X-ray eye - which also measures intensity distributions with a size of 420x420 pixel and the screen dimension \qty{2}{mm}x\qty{2}{mm} leading to a resolution of $0.005\text{\,mm/px}$.
 
 \subsection{Diagnostic table}
-The relevant part of this last section of the beamline is the final beam stop, made of a sequential set of B4C and Cu attenuators. The failsafe is a "burn-through" monitor placed infront of the beam stop matreials. If the beam is accidentally focussed to the end of the hutch, it will burn a holen in this monitor and generate visible light which switches off the electron photoinjector.\\
+The relevant part of this last section of the beamline is the final beam stop, made of a sequential set of B4C and Cu attenuators. The failsafe is a "burn-through" monitor placed in front of the beam stop matreials. If the beam is accidentally focussed to the end of the hutch, it will burn a hole in this monitor and generate visible light which switches off the electron photoinjector.\\
 In VLab the worst thing that can happen in regards to radiation safety is that you burn through one of your detector screens and have to start over again which is of course much less punishing than a potentially life threatening scenario in real life.
 
 \section{Experimental Procedure}
 \subsection{Preparation of the Experiment}
 \subsubsection{Alignment and Characterization of the X-ray Beam}
 Before doing anything on a beam line it's important to characterize it.\\
-As the absorption edge for the Fe K$\beta_{1,3}$ line of 7065 eV, the energy of the xray beam is set to 7400 eV, to avoid the ripples near the reaction (as illustrated by the X-ray absorption spectrum of $[\text{Fe}(\text{terpy})_2]^{2+}$ \autoref{fig:xas terpy}) but without too strong of a loss in intensity.\\
+As the absorption edge for the Fe K$\beta_{1,3}$ line is at 7065 eV, the energy of the X-ray beam is set to 7400 eV, to avoid the ripples near the reaction (as illustrated by the X-ray absorption spectrum of $[\text{Fe}(\text{terpy})_2]^{2+}$ \autoref{fig:xas terpy}) but without too strong of a loss in intensity.\\
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.5]{img/xas terpy.png}
      \caption{X-Ray absorption spectrum of $[\text{Fe}(\text{terpy})_2]^{2+}$ (terpy: terpyridin) at the Fe K edge displaying the XANES and EXAFS regions including the background absorption contributions $\mu_0$. The inset zooms into the weak pre edge features \cite{0}.}
      \label{fig:xas terpy}
 \end{figure}
-To measure the initial X-ray beam the power slits are fully opened and the following attenuator foils are used to bring the beam to an intensity just below saturatuion of the beam imaging unit 2 (BIU2): 
+To measure the initial X-ray beam the power slits are fully opened and the following attenuator foils are used to bring the beam to an intensity just below saturation of the beam imaging unit 2 (BIU2): 
 \begin{table}[H]
     \centering
     \caption{Attenuator foils used}
@@ -250,7 +250,7 @@ To measure the initial X-ray beam the power slits are fully opened and the follo
 \end{table}
 The size and position of the x-ray is now measured using BIU2. %do we want the pictures here?
 Then the four-bounce crystal-monochromator is turned on and then off again to record the reduction of the spectral bandwidth. Then the dispersive single-shot spectrum analyser is used to record the spectrum of the pink X-ray beam with a bragg angle of 24°. \\
-For the following experiment the pink X-ray beam is used even though the monochromatic has a higher resolution, as the intensity of the beam suffers about three orders of magnitude under the monochromator (see \autoref{fig:int change1} and ).\\\\
+For the following experiment the pink X-ray beam is used even though the monochromatic has a higher resolution, as the intensity of the beam suffers about three orders of magnitude under the monochromator (see \autoref{fig:int change1}).\\\\
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.35\textwidth}
@@ -281,7 +281,7 @@ For the following experiment the pink X-ray beam is used even though the monochr
     \caption{To the left is a 3D intensity plot of the pink beam, to the right the 3D intensity plot of the monochromatic beam with the same attenuators in.}
     \label{fig:int change2}
 \end{figure}
-The last step of diagnosing the beam line is using the refractive beryllium X-ray lenses to focus the beam at the imaging unit X-ray eye. It's important to appropiately adjust the attentuator foils as to not burn the imaging unit with a focussed beam. \\
+The last step of diagnosing the beam line is using the refractive beryllium X-ray lenses to focus the beam at the imaging unit X-ray eye. It's important to appropriately adjust the attenuator foils as to not burn the imaging unit with a focussed beam. \\
 \begin{table}[H]
     \centering
     \caption{A list of the beryllium lenses available in VLab together with the arms they were mounted on (arm 10 the most downstream), the Number of lenses in each cassette $N$ and the central curvature of the lenses $R$ \cite{0}.}
@@ -295,7 +295,7 @@ The last step of diagnosing the beam line is using the refractive beryllium X-ra
         \bottomrule
     \end{tabular}
 \end{table}
-With beryllium lenses 1, 2 and 5 (taken from \autoref{tab:lenses}) and appropiate attenuator foils inserted, a beam with the FWHM of $\approx\qty{13}{\mu\m}$ (siehe \autoref{fig:strahlbreite}) is achievd. The total focus length is calculated with $\delta \approx 7\cdot 10^{-6}$ \cite{0} and the properties of the lenses themself taken from \autoref{tab:lenses}:
+With beryllium lenses 1, 2 and 5 (taken from \autoref{tab:lenses}) and appropiate attenuator foils inserted, a beam with the FWHM of $\approx\qty{13}{\mu\m}$ (siehe \autoref{fig:strahlbreite}) is achieved. The total focus length is calculated with $\delta \approx 7\cdot 10^{-6}$ \cite{0} and the properties of the lenses themselves taken from \autoref{tab:lenses}:
 \begin{align*}
 	F=\frac{R}{2\delta N} &\Leftrightarrow \frac{1}{F_{ges}}=\frac{2\delta N_1}{R_1}+\frac{2\delta N_2}{R_2}+\frac{2\delta N_5}{R_5}\\
 	&\Leftrightarrow F_{ges}=\frac{1}{2\delta(\frac{N_1}{R_1}+\frac{N_2}{R_2}+\frac{N_5}{R_5})} \approx \qty{4,76}{m}
@@ -310,11 +310,11 @@ With beryllium lenses 1, 2 and 5 (taken from \autoref{tab:lenses}) and appropiat
 \end{figure}
 
 \subsubsection{Preparatory Estimates for the Experiment}
-The transition metal complex to be studied, $[\text{Fe}(\text{bipy})_3]^{2+}$, is obtained through dissolving the salt $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ in deionized water to the desired concentration. As the actual sample is a powder consisting of small microcrystals that contain incorporated water which remained in the crystal lattice after the crystallization process.\\
-A minimum volume of \qty{50}{ml} is required to operate the liquid jet in the experiment. To ensure that the sample is completely refreshed between probe pulses, the jet needs to have a certain flow speed with an assumed repition rate of the X-ray pulse train of \qty{1.1}{MHz} and an assumed top hat beam profile of the X-ray laser with the dimension $\qty{10}{\micro\m}\times\qty{10}{\micro\m}$. The minimum required flowspeed is calculated as follows:
+The transition metal complex to be studied, $[\text{Fe}(\text{bipy})_3]^{2+}$, is obtained through dissolving the salt $[\text{Fe}(\text{bipy})_3]\text{Cl}_2$ in deionized water to the desired concentration. The actual sample is a powder consisting of small microcrystals that contain incorporated water which remained in the crystal lattice after the crystallization process.\\
+A minimum volume of \qty{50}{ml} is required to operate the liquid jet in the experiment. To ensure that the sample is completely refreshed between probe pulses, the jet needs to have a certain flow speed with an assumed repetition rate of the X-ray pulse train of \qty{1.1}{MHz} and an assumed top hat beam profile of the X-ray laser with the dimension $\qty{10}{\micro\m}\times\qty{10}{\micro\m}$. The minimum required flowspeed is calculated as follows:
 $$\Delta x_{\text{travel}} \ge w \quad \Rightarrow \quad v_{\text{min}} \cdot \Delta \tau \ge w \quad \Rightarrow \quad v_{\text{min}} \ge \frac{w}{\Delta \tau}\Rightarrow v_{\text{min}}=\qty{11}{\m\per\s}$$
 With $w=\qty{10}{\micro\m}$ being the spatial width and $\Delta\tau=\frac{1}{f}=\frac{1}{\qty{1.1e6}{Hz}}\approx\qty{9.09e-7}{s}$ the characteristic time.\\\\
-There are three laser wavelengths available for excitation: \qty{355}{nm}, \qty{400}{nm} and \qty{515}{nm}. To evaluate which fits the experiment best, the concentration $c$ of the solution for the three wavelengths for a desired optical density of $OD=1$ and a liquid jet thickness of $d=\qty{25}{\mu\m}$.
+There are three laser wavelengths available for excitation: \qty{355}{nm}, \qty{400}{nm} and \qty{515}{nm}. To evaluate which fits the experiment best, the concentration $c$ of the solution for the three wavelengths for a desired optical density of $OD=1$ and a liquid jet thickness of $d=\qty{25}{\mu\m}$ was calculated.
 The optical density is defined as $OD=\epsilon\cdot c\cdot d$ with $\epsilon(\lambda)$ the wavelength dependent extinction coefficient of $[\text{Fe}(\text{bipy})_3]^{2+}$ in water. The extinction coefficients can be estimated to be $\epsilon(\qty{355}{nm})=\qty{12000}{\per\Greatmol\per\cm}, \epsilon(\qty{400}{nm})=\qty{4000}{\per\Greatmol\per\cm}, \epsilon(\qty{515}{nm})=\qty{8000}{\per\Greatmol\per\cm}$ as taken from \autoref{fig: ext coeff}.\\
 \begin{figure}[h]
      \centering
@@ -326,19 +326,19 @@ expected range of $10^{-4}\text{\, l}\text{\,mol}^{-1}\text{\,cm}^{-1}$ to $10^{
 \end{figure}
 The following concentrations were calculated:
 $$c_{355}=\qty{0.033}{mol\per\l}, c_{400}=\qty{0.100}{mol\per\l}, c_{515}=\qty{0.050}{mol\per\l}$$
-There are different pulse energies available for each excitation wavelength: \qty{5}{\mu\J}(\qty{355}{nm}), \qty{15}{\mu\J}(\qty{400}{nm}) and \qty{50}{\mu\J}(\qty{515}{nm}). With that in mind the wavelangth of \qty{400}{nm} was chosen, as it has a higher pulse energy, even though it's not ideal when looking at the low absorption rate. The extinction coefficien of the \qty{515}{nm} is slightly better but with the low pulse energy it will be hard to see anything.\\\\
+There are different pulse energies available for each excitation wavelength: \qty{5}{\mu\J}(\qty{355}{nm}), \qty{15}{\mu\J}(\qty{400}{nm}) and \qty{50}{\mu\J}(\qty{515}{nm}). With that in mind the wavelength of \qty{400}{nm} was chosen, as it has a higher pulse energy, even though it's not ideal when looking at the low absorption rate. The extinction coefficient of the \qty{515}{nm} is slightly better but with the low pulse energy it will be hard to see anything.\\\\
 
 As we want to ensure that the X-ray beam always hits excited molecules we need to determine the diameter of the optical laser beam as well as the diameter of the X-ray beam correctly in relation to each other.\\
 The optical laser beam profile is approximately gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jet by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ or rather $d_{FWHM}=?$ with our chosen wavelength of \qty{400}{nm}.\\
-If the optical laser and the X-ray laser had the same diameter, the x-ray would also investigate molecules that were excited only weakly or even not at all, as the optical laser has an approximately Gaussian beam shape. Ideally, the X-ray is positioned exactly in the centre of the ca. 10 times bigger optical laser beam. Then it can investigate a maximal volume of excited molecules. This also compensates for the fact that the optical laser jitters in the focus layer of the X-ray due to not being focussed there itself.\\
+If the optical laser and the X-ray laser had the same diameter, the x-ray beam would also probe molecules that were excited only weakly or even not at all, as the optical laser has an approximately Gaussian beam shape. Ideally, the X-ray is positioned exactly in the centre of the ca. 10 times bigger optical laser beam. Thereby it can investigate a maximal volume of excited molecules. This also compensates for the fact that the optical laser jitters in the focus layer of the X-ray due to not being focussed there itself.\\
 These estimates have consequences for our needed flow speed of the liquid jet which has to be 10 times faster to adjust to the new diameter of the optical laser.\\\\
-Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelyhood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules.\\\\
+Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelihood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules.\\\\
 To ensure the optical laser excites the sample efficiently, the laser intensity ideally is in a range where the number of optical laser photons is less than or approximately equal to the number of sample molecules in the laser-excited volume.\\
 First we calculate the number of $[\text{Fe}(\text{bipy})_3]^{2+}$ molecules in the volume illuminated by the laser with a chosen beam size of $d_L=\qty{150}{\mu\m}$, a concentration of $c=\qty{1.00e-4}{\mol\per\cm^3}$, a wavelength of $\lambda=\qty{400}{nm}$ and a jet size of $d_{jet}=\qty{25}{\mu\m}$. The particle density is calculated by:
 \begin{align}
 	\mathcal{N} = c \cdot N_A = 0.100 \, \text{mol/L} \cdot 6.022 \times 10^{23}\ \text{L}^{-1}\ \text{mol}^{-1} = 6.022 \times 10^{22}\ \text{molecules/cm}^3
 \end{align}
-The illuminated cross-section area $A$ of the gaussian beam is $A_{\text{eff}} = 1.133 \cdot d_{\text{FWHM}}^2 = 1{,}133 \cdot (0.015\ \text{cm})^2 \approx 2.549 \times 10^{-4}\ \text{cm}^2$ from which the effective volume can be calculated: $V_{\text{eff}} = A_{\text{eff}} \cdot d_{\text{jet}} = 2.549 \times 10^{-4}\ \text{cm}^2 \cdot 25 \times 10^{-4}\ \text{cm} = 6.373 \times 10^{-10}\ \text{L}$. The number of molecules is then calculated:
+The illuminated cross-section area $A$ of the Gaussian beam is $A_{\text{eff}} = 1.133 \cdot d_{\text{FWHM}}^2 = 1{,}133 \cdot (0.015\ \text{cm})^2 \approx 2.549 \times 10^{-4}\ \text{cm}^2$ from which the effective volume can be calculated: $V_{\text{eff}} = A_{\text{eff}} \cdot d_{\text{jet}} = 2.549 \times 10^{-4}\ \text{cm}^2 \cdot 25 \times 10^{-4}\ \text{cm} = 6.373 \times 10^{-10}\ \text{L}$. The number of molecules is then calculated:
 \begin{align}
 	N_{\text{molecules, eff}} = \mathcal{N} \cdot V_{\text{eff}} = (6.022 \times 10^{22}\ \text{cm}^{-3}) \cdot (6.373 \times 10^{-7}\ \text{cm}^3) \approx 3.838 \times 10^{16}\ \text{molecules}
 \end{align}
@@ -349,12 +349,12 @@ Now to determine the pulse energy at which the number of photons per pulse is eq
 	E_{\text{pulse}} = N_{\text{molecules}} \cdot E_{\text{photon}}=(3.838 \times 10^{16}) \cdot (4.966 \times 10^{-19}\ \text{J}) \approx 19.06 \times 10^{-3}\ \text{J}
 \end{align}
 For a wavelength of \qty{400}{nm} there's a maximal pulse energy of \qty{19059.51}{mJ} available for a spot diameter of \qty{150}{\mu\m}\\\\
-There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength seperately and requires normalization to the accumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
+There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength separately and requires normalization to the accumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
 In order to choose the correct crystal for the emission spectrometer the Bragg reflection angle needs to be considered which means we need to calculate the Bragg reflection angle for the Fe K$\beta_{1,3}$ emission line. From the FXE website \cite{5} we preselect the Si(531) crystal and the Ge(531) crystal. The Bragg angle is calculated through:
 \begin{align}
 	\lambda = 2d_{hkl}\cdot\sin(\theta_B)
 \end{align}
-with $\lambda_m=\qty{1.7566}{\angstrom}$ for the Fe K$\beta_{1,3}$ main line ($E_m=\qty{7058}{eV}$), $\lambda_s=\qty{1.7596}{\angstrom}$ for the Fe K$\beta'$ satellite line ($E_s=\qty{7046}{eV}$), $d$ calculated through the crystal planes (hkl) and the lattice constants $a_{\text{Si}}\approx\qty{5.431}{\angstrom}$ \& $a_{\text{Ge}}\approx\qty{5.658}{\angstrom}$ to $d_\text{Si}=\frac{5.431}{\sqrt{35}}\approx\qty{0.918}{\angstrom}$ and $d_\text{Ge}=\frac{5.658}{\sqrt{35}}\approx\qty{0.956}{\angstrom}$.\\
+With $\lambda_m=\qty{1.7566}{\angstrom}$ for the Fe K$\beta_{1,3}$ main line ($E_m=\qty{7058}{eV}$), $\lambda_s=\qty{1.7596}{\angstrom}$ for the Fe K$\beta'$ satellite line ($E_s=\qty{7046}{eV}$), $d$ calculated through the crystal planes (hkl) and the lattice constants $a_{\text{Si}}\approx\qty{5.431}{\angstrom}$ \& $a_{\text{Ge}}\approx\qty{5.658}{\angstrom}$ to $d_\text{Si}=\frac{5.431}{\sqrt{35}}\approx\qty{0.918}{\angstrom}$ and $d_\text{Ge}=\frac{5.658}{\sqrt{35}}\approx\qty{0.956}{\angstrom}$.\\
 For the Fe K$\beta_{1,3}$ main emission line the following Bragg angles were calculated:
 \begin{align}
 	\theta_{B_{\text{Si}}} = \arcsin\left(\frac{1.7566}{2 \cdot 0.9180}\right) \approx 73.09^\circ\\
@@ -365,14 +365,14 @@ For the Fe K$\beta'$ satellite line the following Bragg angles were calculated:
 	\theta_{B_{\text{Si}}} = \arcsin\left(\frac{1.7596}{2 \cdot 0.9180}\right) \approx 73.42^\circ\\
 	\theta_{B_{\text{Ge}}} = \arcsin\left(\frac{1.7596}{2 \cdot 0.9564}\right) \approx 66.92^\circ
 \end{align}
-For a Bragg angle that is closer to \qty{90}{\degree} the spectral resolution is better. As Si(531) has a Bragg angle of \qty{73.1}{\degree} which is the highest of the two materials, it was chosen for the Von Hamos even though germanium has a higher atomic number than silicium and would have a higher reflection-efficiency.
+For a Bragg angle that is closer to \qty{90}{\degree} the spectral resolution is better. As Si(531) has a Bragg angle of \qty{73.1}{\degree} which is the highest of the two materials, it was chosen for the Von Hamos even though germanium has a higher atomic number than silicon and would have a higher reflection-efficiency.
 
 %Fun Facts: molar mass: \(M([Fe(bipy)_3]^{2+})\approx M([Fe(bipy)_3])=524,409 \frac{g}{mol}\), concentration of the sample: \(c=0,380\frac{mol}{L}\), total attenuation of X-rays: attenuation comparison plot, flow speed of the jet: \(v_{jet}=11\frac{m}{s}\)
 %Laser: excitation wavelength: \(\lambda_{pump}=400nm\) (dazu alle fun facts mit MLCT Zuständen und so, und nicht overshooten lol), focussing,  diameter of the focus, Overfilling: beam sizes of the optical laser and the X-ray pulse relative to each other (plot beam diameter)
 %Spectromter: Van Hamos Spectrometer vs Johann Spectrometer (plot of the two geometries), crystal selection: \(Si(531)\) vs \(Ge(531)\) (plot of the two crystal reflections)
 
 \subsection{Performing the Experiment with Data Acquisition}
-Using the Large Pixel Detector one can optimize the position of the liquid jet in the X-ray beam for maximal intensity of elastic scattering. The maximal intensity achieved with a pink beam was $3.8\cdot10^{15}$.\\
+Using the Large Pixel Detector one can optimize the position of the liquid jet in the X-ray beam for maximum intensity of elastic scattering. The maximum intensity achieved with a pink beam was $3.8\cdot10^{15}$.\\
 The X-ray emission spectrometer was adjusted by setting the Bragg angle range to \qty{74.49}{\degree} to \qty{72.03}{\degree} on the crystal and \qty{70.43}{\degree} to \qty{75.53}{\degree} on the detector and orienting the detector perpendicular to the incoming dispersive spectrum (see \autoref{fig:von hamos}).
 \begin{figure}[h]
      \centering
@@ -448,14 +448,14 @@ When plotting the XES spectrum and the difference spectrum for a time delay of \
      \label{fig:time res spec}
 \end{figure}
 From the time resolved difference spectra of the measurements (see \autoref{fig:time res spec}) we can see multiple developments in the transient signal over the different time delays: at an energy around \qty{7045.0}{eV} the difference emission intensity grows (the intensity for the excited state is more intense than that of the ground state), at about \qty{7053.7}{eV} a shoulder in intensity difference initially emerges and then flattens out again for time delays $\Delta t>\qty{350}{fs}$. The two most prominent features of the transient signal are the minimum at \qty{7057.8}{eV} and the maximum at \qty{7060.5}{eV} which both match up with the difference spectrum provided.\\
-Another thing to note is how little the change in spectrum between \qty{600}{fs} and \qty{800}{fs} is. The reaction has clearly landed on a more stable state, even though we can tell that it is still an excited state when comparing to the reference spectrum as it most closely matches the quintet-singlet transition denoted there. The comparison with the reference specrtum also tells us that there likely is a short-lived intermediate state as the shoulder we see resembles the triplet or quartet spectra.\\\\
+Another thing to note is how little the change in spectrum between \qty{600}{fs} and \qty{800}{fs} is. The reaction has clearly landed on a more stable state, even though we can tell that it is still an excited state when comparing to the reference spectrum as it most closely matches the quintet-singlet transition denoted there. The comparison with the reference spectrum also tells us that there likely is a short-lived intermediate state as the shoulder we see resembles the triplet or quartet spectra.\\\\
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.4]{img/Kinetic traces.png}
      \caption{Kinetic traces at selected emission energies.}
      \label{fig:kin traces}
 \end{figure}
-The kinetic traces at these energies (see \autoref{fig:kin traces}) can be used to determine the rise time of the population of the excited states of $[\text{Fe}(\text{bipy})_3]^{2+}$ during the relaxation. To do this we use a function to parametise our reference spectrum:
+The kinetic traces at these energies (see \autoref{fig:kin traces}) can be used to determine the rise time of the population of the excited states of $[\text{Fe}(\text{bipy})_3]^{2+}$ during the relaxation. To do this we use a function to parametrise our reference spectrum:
 \begin{align}
 	S(E)=A\cdot\sum^5_{s=1}f_s\cdot S_s(E)
 \end{align}
@@ -464,15 +464,15 @@ The population $T$ of our difference spectrum can now be described as:
 \begin{align}
 	T(E)=S(E)-S_1(E)=A\cdot\left(\sum^5_{s=1} f_s \cdot S_s(E)-S_1(E)\right)
 \end{align}
-The fitting function can be found in \autoref{py:fit}.\\
+The fitting function can be found in \autoref{lst:fit}.\\
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/fit/fit_all.png}
      \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
      \label{fig:pop bigerr}
 \end{figure}
-Now that we have a fit for the time-dependant population of the respective states present during the different time delays (see \autoref{fig:pop bigerr}), we can see that our population curves have huge errorbars for the time delays $\Delta t\leq0$ (better represented in \autoref{fig:pop errors big}). This explains the occurence of any spin multiplicity other than singlet for our negative delays, as they should not occur. Our data is noisy for these delays and the fitting function struggles to get a read on the data.\\
-To confirm this, we looked at the squared errors over the negative time delays (see \autoref{fig:counts}) and surmised that our photon count was much too low to justify the peaks seen in our popukation curve. This is also corroborated by looking at the residuals together with the measurements and seeing how noisy the measurements for a time delay of $\Delta t\leq0$ are in comparison to the one at \qty{50}{fs} (see \autoref{fig:resids}).
+Now that we have a fit for the time-dependent population of the respective states present during the different time delays (see \autoref{fig:pop bigerr}), we can see that our population curves have huge errorbars for the time delays $\Delta t\leq0$ (better represented in \autoref{fig:pop errors big}). Those off-the-charts errors explain the occurence of any spin multiplicity other than singlet for our negative delays, as they should not occur. Our data is noisy for these delays and the fitting function struggles to get a read on the data.\\
+To confirm this, we looked at the squared errors over the negative time delays (see \autoref{fig:counts}) and surmised that our photon count was much too low to justify the peaks seen in our population curve. This is also corroborated by looking at the residuals together with the measurements and seeing how noisy the measurements for a time delay of $\Delta t\leq0$ are in comparison to the one at \qty{50}{fs} (see \autoref{fig:resids}).
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.45]{img/fit/residuals_and_spectra_minus150_to_50fs.png}
@@ -481,15 +481,15 @@ To confirm this, we looked at the squared errors over the negative time delays (
 \end{figure}
 \begin{figure}[H]
      \centering
-     \includegraphics[scale=0.4]{img/fit/counts_negative_delays_per_delay.png}
+     \includegraphics[scale=0.5]{img/fit/counts_negative_delays_per_delay.png}
      \caption{The photon counts of the different excited states for negative time delays.}
      \label{fig:counts}
 \end{figure}
-We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{py:v6}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
+We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{lst:v6}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
 
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.5]{img/fit/fit_try_to_fix_lol.png}
+     \includegraphics[scale=0.55]{img/fit/fit_try_to_fix_lol.png}
      \caption{The adjusted population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
      \label{fig:pop fixed}
 \end{figure}
@@ -497,27 +497,28 @@ With this version of our fit we can see that nothing really changed for our posi
 
 
 \section{Discussion of the physical meaning}
-In both our versions of our population curves we can see the triplet population spike. This is indicative of an ultrafast intermediate state - the $^3T_1$ state - in the relaxation chain. Approximately 80\% of our excited molecules had a relaxation chain of $^{1,3}\text{MLCT}\rightarrow ^3T_1 \rightarrow ^5T_2$ while about 20\% directly transitioned from the $^{1,3}\text{MLCT}$ state into the high spin $^5T_2$ state.\\
+In both our versions of our population curves we can see the triplet population spike. This is indicative of an ultrafast intermediate state - the $^3T_1$ state - in the relaxation chain. Approximately 80\% of our excited molecules followed a relaxation chain of $^{1,3}\text{MLCT}\rightarrow ^3T_1 \rightarrow ^5T_2$ while about 20\% directly transitioned from the $^{1,3}\text{MLCT}$ state into the high spin $^5T_2$ state.\\
 The relaxation timescale matches roughly to our literature value of $\tau<\qty{100}{fs}$, even though with a peak at \qty{100}{fs} it's a bit later than expected. This could have happened because of an error in determining our origin (no time delay).\\\\
-While talking about our relaxation timeline we can also see that in our chosen time delays the relaxation doesn't fully end, as we end at a maximal quintet population at our time delay of \qty{800}{fs} and with a difference spectrum that still shows small differences when compared to the difference spectrum at \qty{100}{ps} but not majorly so. This matches our literature value for the relaxation time of the $^5T_2$ state being \qty{1}{ns} which is much larger than our latest time delay but not that much more bigger than our \qty{100}{ps} measurement.\\\\
-In our population curves we also see doublet and quartet states, which shouldn't necessarily be part of our relaxation chain. The doublets can occur because the whole molecule can look like a doublet. But they, like our quartets only really occur because of errors in our fitting function which struggles with strongly correlated data for low photon counts.\\
+While talking about our relaxation timeline we can also see that in our chosen time delays the relaxation doesn't fully end, as we end at a maximal quintet population at our time delay of \qty{800}{fs} and with a difference spectrum that still shows small differences when compared to the difference spectrum at \qty{100}{ps} but not majorly so. This matches our literature value for the relaxation time of the $^5T_2$ state being \qty{1}{ns} which is much larger than our latest time delay but not that much larger than our \qty{100}{ps} measurement.\\\\
+In our population curves we also see doublet and quartet states, which shouldn't necessarily be part of our relaxation chain. The doublets can occur because the whole molecule can look like a doublet. But they, like our quartets, only really occur because of errors in our fitting function which struggles with strongly correlated data for low photon counts.\\
 These errors in our fitting function are also the reason that our first population curve looks the way it does. The algorithm struggles with the noise present at low photon counts.
 
 \subsection{Error analysis}
-Our errorbars for our difference spectrum measurement are a result of the statistical nature of the data which the one kind of error that is programmed into VLab. They have a size that is about two orders of magnitude smaller than the highest peak in arbitrary units. To get smaller errorbars by half we would have to accumulate the difference spectra for four times the length of time which wasn't feasible on the day we took our measurements especially since our program had crashed two times already and we preferred getting all the data we wanted with suboptimal errors over risking getting only part of the time delays done.
+The error bars of the difference-spectrum measurements arise from statistical fluctuations in the data, which are the only source of error modeled in VLab. They are about two orders of magnitude smaller than the largest peak in arbitrary units. To reduce the error bars by half, the difference spectra would have had to be accumulated for four times as long. This was not feasible during the measurements, especially because the program had already crashed twice. Therefore, we preferred collecting data for all time delays with somewhat larger uncertainties rather than risking incomplete measurements.
 
 \section{Conclusion and outlook}
 During the experiment the X-ray beam was successfully characterised and focussed to a usable point with a FWHM of \qty{13.4}{\mu\m}. 
 The following settings for the pump-laser were determined:
-\begin{itemize}
-	\item laser power: \qty{}{W}
-	\item rep rate: \qty{550000}{Hz}
-	\item pulse energy: \qty{}{J}
-	\item wavelength: \qty{515}{nm}
-	\item full width vertical: \qty{150}{\mu\m}
-	\item full width horizontal: \qty{150}{\mu\m}
-\end{itemize}
-Then a successfull series of pump-probe-measurements was carried out in which we can see the occurance of an ultrafast intermediate state can be seen. The identification was carried out using a provided reference spectrum with which it was possible to fit time delay-dependant population curves resolved after the differnt spin states present during the relaxation process.\\\\
+\begin{table}[H]
+     \centering
+     \small
+     \begin{tabular}{cccccc}
+          Laser power & Repetition rate & Pulse energy & Wavelength & Full width, vertical & Full width, horizontal \\
+          \midrule
+          \qty{8.25}{W} & \qty{550000}{Hz} & \qty{50}{J} & \qty{515}{nm} & \qty{150}{\mu\m} & \qty{150}{\mu\m} \\
+     \end{tabular}
+\end{table}
+Then a successful series of pump-probe-measurements was carried out in which we can see the occurence of an ultrafast intermediate state. The identification was carried out using a provided reference spectrum with which it was possible to fit time delay-dependent population curves resolved after the different spin states present during the relaxation process.\\\\
 The experiment successfully provided insight into the work on a real beamline.
 
 \newpage
@@ -557,25 +558,23 @@ The experiment successfully provided insight into the work on a real beamline.
 \section{Code}
 \lstinputlisting[language=Python,
     caption={Time resolved difference spectra (2D)},
-    label={lst:v6},
+    label={lst:spectra},
     captionpos=t]{py/time resolved difference spectra v2.py}
 
 \lstinputlisting[language=Python,
     caption={kinetic traces plots},
-    label={lst:v6},
+    label={lst:kintrace},
     captionpos=t]{py/kinetic traces v2.py}
 
 \lstinputlisting[language=Python,
     caption={Fit for population curves},
-    label={lst:v6},
+    label={lst:fit},
     captionpos=t]{py/fit_v5.py}
 
 \lstinputlisting[language=Python,
     caption={stabilized fit for negativ time delays},
     label={lst:v6},
     captionpos=t]{py/v6.py}
-
-
 \end{appendices}
 
 

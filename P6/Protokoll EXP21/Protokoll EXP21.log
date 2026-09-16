@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  16 SEP 2026 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  16 SEP 2026 20:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,17 +491,7 @@ Package translations Info: No language package found. I am going to use `english
  (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count346
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux
-
-LaTeX Warning: Label `lst:v6' multiply defined.
-
-
-LaTeX Warning: Label `lst:v6' multiply defined.
-
-
-LaTeX Warning: Label `lst:v6' multiply defined.
-
-)
+) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux)
 \openout1 = `"Protokoll EXP21.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -863,10 +853,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--459
  []
 
 [14 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/100ps spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/100ps diff spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Time_resolved_spectrum_errbars.png>]
-
-LaTeX Warning: Reference `py:fit' on page 15 undefined on input line 467.
-
-<img/fit/fit_all.png, id=300, 505.89pt x 325.215pt>
+<img/fit/fit_all.png, id=301, 505.89pt x 325.215pt>
 File: img/fit/fit_all.png Graphic file (type png)
 <use img/fit/fit_all.png>
 Package pdftex.def Info: img/fit/fit_all.png  used on input line 470.
@@ -876,26 +863,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 466--473
 
  []
 
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=305, 1011.78pt x 823.1553pt>
+<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=306, 1011.78pt x 823.1553pt>
 File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png)
 <use img/fit/residuals_and_spectra_minus150_to_50fs.png>
 Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  used on input line 478.
 (pdftex.def)             Requested size: 455.2968pt x 370.41646pt.
 [15 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Kinetic traces.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_all.png>]
-<img/fit/counts_negative_delays_per_delay.png, id=318, 867.24pt x 505.89pt>
+<img/fit/counts_negative_delays_per_delay.png, id=320, 867.24pt x 505.89pt>
 File: img/fit/counts_negative_delays_per_delay.png Graphic file (type png)
 <use img/fit/counts_negative_delays_per_delay.png>
 Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on input line 484.
-(pdftex.def)             Requested size: 346.88986pt x 202.3524pt.
+(pdftex.def)             Requested size: 433.61894pt x 252.94437pt.
  [16 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/residuals_and_spectra_minus150_to_50fs.png>]
-
-LaTeX Warning: Reference `py:v6' on page 17 undefined on input line 488.
-
-<img/fit/fit_try_to_fix_lol.png, id=328, 505.89pt x 325.215pt>
+<img/fit/fit_try_to_fix_lol.png, id=331, 505.89pt x 325.215pt>
 File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
 <use img/fit/fit_try_to_fix_lol.png>
 Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 492.
-(pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
+(pdftex.def)             Requested size: 278.24034pt x 178.86879pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 500--505
 
@@ -907,7 +891,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--505
  []
 
 [17 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/counts_negative_delays_per_delay.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_try_to_fix_lol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
 
  []
 
@@ -916,15 +900,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 520--522
 \openout4 = `"Protokoll EXP21.lof"'.
 
  [2]
-<img/Time_resolved_spectrum_3D.png, id=404, 722.7pt x 505.89pt>
+<img/Time_resolved_spectrum_3D.png, id=409, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_3D.png Graphic file (type png)
 <use img/Time_resolved_spectrum_3D.png>
-Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 542.
+Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 543.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/fit/fit_big errorbars.png, id=405, 505.89pt x 325.215pt>
+<img/fit/fit_big errorbars.png, id=410, 505.89pt x 325.215pt>
 File: img/fit/fit_big errorbars.png Graphic file (type png)
 <use img/fit/fit_big errorbars.png>
-Package pdftex.def Info: img/fit/fit_big errorbars.png  used on input line 549.
+Package pdftex.def Info: img/fit/fit_big errorbars.png  used on input line 550.
 (pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -1258,27 +1242,20 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 23653 strings out of 467525
- 461670 string characters out of 5418982
- 1648525 words of memory out of 5000000
- 51089 multiletter control sequences out of 15000+600000
+ 23652 strings out of 467525
+ 461635 string characters out of 5418982
+ 1648634 words of memory out of 5000000
+ 51087 multiletter control sequences out of 15000+600000
  639835 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,107p,11374b,2920s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (41 pages, 8889067 bytes).
+Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (41 pages, 8888799 bytes).
 PDF statistics:
- 2067 PDF objects out of 2073 (max. 8388607)
- 1896 compressed objects within 19 object streams
- 1246 named destinations out of 1440 (max. 500000)
+ 2070 PDF objects out of 2073 (max. 8388607)
+ 1899 compressed objects within 19 object streams
+ 1247 named destinations out of 1440 (max. 500000)
  394 words of extra memory for PDF output out of 10000 (max. 10000000)
 
