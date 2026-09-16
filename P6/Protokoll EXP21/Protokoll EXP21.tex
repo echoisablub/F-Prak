@@ -372,19 +372,19 @@ The X-ray emission spectrometer was adjusted by setting the Bragg angle range to
 
 The excitation laser was set to $\lambda=\qty{400}{nm}$ and $f=0.02$ with a beam diameter of $d=\qty{150}{\mu\m}$ in the sample plane. The spatial overlap between laser and X-ray beam was adjusted so that the X-ray laser always overlapped with the optical laser even with the jitter of the optical laser. The corresponding beam profiles can be seen in \autoref{fig:xary laser both}, while the laser beam profile can be seen in \autoref{fig:laser} and the X-ray beam profile in \autoref{fig:xray}.
 %pictures picture pictures
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/beams/xray_beam_profile.png}
      \caption{The profile of the X-ray beam measured in the sample plane.}
      \label{fig:xray}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/beams/laser_beam_profile.png}
      \caption{The profile of the laser beam measured in the sample plane.}
      \label{fig:laser}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/beams/laser_xray_beam_profile.png}
      \caption{The profile of the overlapping laser and X-ray beams in the sample plane.}
@@ -438,7 +438,7 @@ From the time resolved difference spectra of the measurements (see \autoref{fig:
 Another thing to note is how little the change in spectrum between \qty{600}{fs} and \qty{800}{fs} is. The reaction has clearly landed on a more stable state, even though we can tell that it is still an excited state when comparing to the reference spectrum as it most closely matches the quintet-singlet transition denoted there. The comparison with the reference specrtum also tells us that there likely is a short-lived intermediate state as the shoulder we see resembles the triplet or quartet spectra.\\\\
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.5]{img/Kinetic traces.png}
+     \includegraphics[scale=0.4]{img/Kinetic traces.png}
      \caption{Kinetic traces at selected emission energies.}
      \label{fig:kin traces}
 \end{figure}
@@ -452,27 +452,27 @@ The population $T$ of our difference spectrum can now be described as:
 	T(E)=S(E)-S_1(E)=A\cdot\left(\sum^5_{s=1} f_s \cdot S_s(E)-S_1(E)\right)
 \end{align}
 The fitting function can be found in \autoref{py:fit}.\\
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/fit/fit_all.png}
      \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
      \label{fig:pop bigerr}
 \end{figure}
-Now that we have a fit for the time-dependant population of the respective states present during the different time delays (see \autoref{fig:pop bigerr}), we can see that our population curves have huge errorbars for the time delays $\Delta t\leq0$. This explains the occurence of any spin multiplicity other than singlet for our negative delays, as they should not occur. Our data is noisy for these delays and the fitting function struggles to get a read on the data.\\
+Now that we have a fit for the time-dependant population of the respective states present during the different time delays (see \autoref{fig:pop bigerr}), we can see that our population curves have huge errorbars for the time delays $\Delta t\leq0$ (better represented in \autoref{fig:pop errors big}). This explains the occurence of any spin multiplicity other than singlet for our negative delays, as they should not occur. Our data is noisy for these delays and the fitting function struggles to get a read on the data.\\
 To confirm this, we looked at the squared errors over the negative time delays (see \autoref{fig:counts}) and surmised that our photon count was much too low to justify the peaks seen in our popukation curve. This is also corroborated by looking at the residuals together with the measurements and seeing how noisy the measurements for a time delay of $\Delta t\leq0$ are in comparison to the one at \qty{50}{fs} (see \autoref{fig:resids}).
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.45]{img/fit/residuals_and_spectra_minus150_to_50fs.png}
      \caption{The normalised residuals together with the actual measurements and a fit over ... for time delays of $\Delta t=\{\qty{-150}{fs},\qty{-100}{fs},\qty{-50}{fs},\qty{0}{fs},\qty{50}{fs}\}$}
      \label{fig:resids}
 \end{figure}
-We then used this information to fix our population curves (see \autoref{fig:pop fixed}) by ...%ich check den code v6 noch nicht ganz
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
-     \includegraphics[scale=0.5]{img/fit/counts_negative_delays_per_delay.png}
+     \includegraphics[scale=0.4]{img/fit/counts_negative_delays_per_delay.png}
      \caption{The photon counts of the different excited states for negative time delays.}
      \label{fig:counts}
 \end{figure}
+We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{py:v6}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
 
 \begin{figure}[h]
      \centering
@@ -523,13 +523,32 @@ The experiment successfully provided insight into the work on a real beamline.
 
 \begin{appendices}
     
-\section{Tabellen}
+\section{Additional Plots}
+\begin{figure}[H]
+     \centering
+     \includegraphics[scale=0.5]{img/Time_resolved_spectrum_3D.png}
+     \caption{}
+     \label{fig:spectrum 3D}
+\end{figure}
+
+\begin{figure}[H]
+     \centering
+     \includegraphics[scale=0.5]{img/fit/fit_big errorbars.png}
+     \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds with another y-axes scale to see the errorbars better.}
+     \label{fig:pop errors big}
+\end{figure}
 
 %\section{VLab}
 %\label{Anh: VLab}
 
 \section{Code}
-%\lstinputlisting[language=Python]{Auswertung exp21.py}
+\lstinputlisting[language=Python]{py/time resolved difference spectra v2.py}
+
+\lstinputlisting[language=Python]{py/kinetic traces v2.py}
+
+\lstinputlisting[language=Python]{py/fit_v5.py}
+
+\lstinputlisting[language=Python]{py/v6.py}
 
 
 \end{appendices}
