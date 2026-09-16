@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  16 SEP 2026 20:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  16 SEP 2026 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -597,33 +597,96 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.toc)
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+No file "Protokoll EXP21".toc.
 \tf@toc=\write3
 \openout3 = `"Protokoll EXP21.toc"'.
 
- [2]
+[2]
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 89.
+
+
+LaTeX Warning: Citation `3' on page 1 undefined on input line 89.
+
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 89.
+
+
+LaTeX Warning: Citation `3' on page 1 undefined on input line 89.
+
+
+LaTeX Warning: Citation `3' on page 1 undefined on input line 90.
+
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 90.
+
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 91.
+
+
+LaTeX Warning: Citation `3' on page 1 undefined on input line 91.
+
+
+LaTeX Warning: Citation `3' on page 1 undefined on input line 91.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
+
+
+LaTeX Warning: Citation `2' on page 1 undefined on input line 94.
+
+
+LaTeX Warning: Citation `2' on page 1 undefined on input line 94.
+
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 95.
+
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 96.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
+
+LaTeX Warning: Reference `fig:pump probe' on page 1 undefined on input line 99.
+
+
+LaTeX Warning: Citation `0' on page 1 undefined on input line 99.
+
 [1]
-<img/pump probe 1.png, id=100, 200.24812pt x 124.96687pt>
+<img/pump probe 1.png, id=26, 200.24812pt x 124.96687pt>
 File: img/pump probe 1.png Graphic file (type png)
 <use img/pump probe 1.png>
 Package pdftex.def Info: img/pump probe 1.png  used on input line 104.
 (pdftex.def)             Requested size: 160.19872pt x 99.97363pt.
- [2 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/pump probe 1.png>]
-<img/tris(2,2'-bipyridine)iron(II).png, id=119, 225.84375pt x 225.84375pt>
+
+
+LaTeX Warning: Citation `0' on page 2 undefined on input line 105.
+
+
+LaTeX Warning: Citation `0' on page 2 undefined on input line 105.
+
+
+LaTeX Warning: Citation `0' on page 2 undefined on input line 110.
+
+
+LaTeX Warning: Citation `0' on page 2 undefined on input line 111.
+
+
+LaTeX Warning: Citation `0' on page 2 undefined on input line 114.
+
+[2 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/pump probe 1.png>]
+<img/tris(2,2'-bipyridine)iron(II).png, id=44, 225.84375pt x 225.84375pt>
 File: img/tris(2,2'-bipyridine)iron(II).png Graphic file (type png)
 <use img/tris(2,2'-bipyridine)iron(II).png>
 Package pdftex.def Info: img/tris(2,2'-bipyridine)iron(II).png  used on input line 132.
 (pdftex.def)             Requested size: 135.50728pt x 135.50728pt.
-<img/fe bipy 3 2+ 3d.png, id=122, 551.05875pt x 534.99875pt>
+<img/fe bipy 3 2+ 3d.png, id=47, 551.05875pt x 534.99875pt>
 File: img/fe bipy 3 2+ 3d.png Graphic file (type png)
 <use img/fe bipy 3 2+ 3d.png>
 Package pdftex.def Info: img/fe bipy 3 2+ 3d.png  used on input line 139.
@@ -641,27 +704,63 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 150.
 
-<img/d shift.png, id=126, 702.37407pt x 296.60812pt>
+
+LaTeX Warning: Reference `fig:d orbs' on page 3 undefined on input line 151.
+
+<img/d shift.png, id=50, 702.37407pt x 296.60812pt>
 File: img/d shift.png Graphic file (type png)
 <use img/d shift.png>
 Package pdftex.def Info: img/d shift.png  used on input line 155.
 (pdftex.def)             Requested size: 351.18617pt x 148.3037pt.
+
+LaTeX Warning: Citation `0' on page 3 undefined on input line 156.
+
+
+LaTeX Warning: Citation `0' on page 3 undefined on input line 156.
+
 [3 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/tris(2,2'-bipyridine)iron(II).png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fe bipy 3 2+ 3d.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/d shift.png>]
-<img/relax.png, id=143, 519.44063pt x 481.8pt>
+
+LaTeX Warning: Reference `fig:decay' on page 4 undefined on input line 168.
+
+
+LaTeX Warning: Citation `0' on page 4 undefined on input line 168.
+
+<img/relax.png, id=65, 519.44063pt x 481.8pt>
 File: img/relax.png Graphic file (type png)
 <use img/relax.png>
 Package pdftex.def Info: img/relax.png  used on input line 172.
 (pdftex.def)             Requested size: 181.80695pt x 168.63252pt.
 
+LaTeX Warning: Citation `0' on page 4 undefined on input line 173.
+
+
+LaTeX Warning: Citation `0' on page 4 undefined on input line 173.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
-<img/4crystal.png, id=148, 337.26pt x 150.5625pt>
+
+LaTeX Warning: Reference `fig:mono' on page 4 undefined on input line 183.
+
+
+LaTeX Warning: Citation `0' on page 4 undefined on input line 183.
+
+<img/4crystal.png, id=66, 337.26pt x 150.5625pt>
 File: img/4crystal.png Graphic file (type png)
 <use img/4crystal.png>
 Package pdftex.def Info: img/4crystal.png  used on input line 186.
 (pdftex.def)             Requested size: 134.9016pt x 60.22392pt.
+
+LaTeX Warning: Citation `4' on page 4 undefined on input line 187.
+
+
+LaTeX Warning: Citation `4' on page 4 undefined on input line 187.
+
+
+LaTeX Warning: Citation `0' on page 4 undefined on input line 190.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 183--191
 
@@ -671,12 +770,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--191
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/relax.png>]
-<img/opt bench.png, id=159, 668.4975pt x 214.8025pt>
+<img/opt bench.png, id=76, 668.4975pt x 214.8025pt>
 File: img/opt bench.png Graphic file (type png)
 <use img/opt bench.png>
 Package pdftex.def Info: img/opt bench.png  used on input line 195.
 (pdftex.def)             Requested size: 267.39426pt x 85.91946pt.
 
+
+LaTeX Warning: Citation `0' on page 5 undefined on input line 196.
+
+
+LaTeX Warning: Citation `0' on page 5 undefined on input line 196.
+
+
+LaTeX Warning: Reference `fig:opt bench' on page 5 undefined on input line 199.
+
+
+LaTeX Warning: Citation `0' on page 5 undefined on input line 202.
+
+
+LaTeX Warning: Citation `0' on page 5 undefined on input line 203.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 199--205
 
  []
@@ -685,24 +800,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--205
 Underfull \hbox (badness 10000) in paragraph at lines 199--205
 
  []
+
+
+LaTeX Warning: Reference `tab:lenses' on page 5 undefined on input line 208.
+
+
+LaTeX Warning: Citation `0' on page 5 undefined on input line 208.
 
 [5 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/4crystal.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/opt bench.png>]
-<img/xas terpy.png, id=181, 499.11469pt x 316.18124pt>
+
+LaTeX Warning: Citation `0' on page 6 undefined on input line 214.
+
+
+LaTeX Warning: Citation `0' on page 6 undefined on input line 215.
+
+
+LaTeX Warning: Reference `fig:xas terpy' on page 6 undefined on input line 228.
+
+<img/xas terpy.png, id=88, 499.11469pt x 316.18124pt>
 File: img/xas terpy.png Graphic file (type png)
 <use img/xas terpy.png>
 Package pdftex.def Info: img/xas terpy.png  used on input line 231.
 (pdftex.def)             Requested size: 249.55672pt x 158.09023pt.
 
+LaTeX Warning: Citation `0' on page 6 undefined on input line 232.
+
+
+LaTeX Warning: Citation `0' on page 6 undefined on input line 232.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]
-<img/pink_BIU_2.png, id=191, 575.14874pt x 824.07875pt>
+
+LaTeX Warning: Reference `fig:int change1' on page 7 undefined on input line 253.
+
+<img/pink_BIU_2.png, id=98, 575.14874pt x 824.07875pt>
 File: img/pink_BIU_2.png Graphic file (type png)
 <use img/pink_BIU_2.png>
 Package pdftex.def Info: img/pink_BIU_2.png  used on input line 258.
 (pdftex.def)             Requested size: 159.33821pt x 228.30104pt.
-<img/mono_BIU_2.png, id=192, 577.15625pt x 824.07875pt>
+<img/mono_BIU_2.png, id=99, 577.15625pt x 824.07875pt>
 File: img/mono_BIU_2.png Graphic file (type png)
 <use img/mono_BIU_2.png>
 Package pdftex.def Info: img/mono_BIU_2.png  used on input line 264.
@@ -717,545 +855,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--268
 
  []
 
-<img/beam_profile_3d_pink.png, id=193, 722.7pt x 578.16pt>
+<img/beam_profile_3d_pink.png, id=100, 722.7pt x 578.16pt>
 File: img/beam_profile_3d_pink.png Graphic file (type png)
 <use img/beam_profile_3d_pink.png>
 Package pdftex.def Info: img/beam_profile_3d_pink.png  used on input line 273.
 (pdftex.def)             Requested size: 204.85846pt x 163.88629pt.
-<img/beam_profile_3d_mono.png, id=194, 722.7pt x 578.16pt>
+<img/beam_profile_3d_mono.png, id=101, 722.7pt x 578.16pt>
 File: img/beam_profile_3d_mono.png Graphic file (type png)
 <use img/beam_profile_3d_mono.png>
 Package pdftex.def Info: img/beam_profile_3d_mono.png  used on input line 279.
 (pdftex.def)             Requested size: 204.85846pt x 163.88629pt.
 [7{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/xas terpy.png>]
+
+LaTeX Warning: Citation `0' on page 8 undefined on input line 287.
+
+
+LaTeX Warning: Citation `0' on page 8 undefined on input line 287.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 284--297
 
  []
 
-[8 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/pink_BIU_2.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/mono_BIU_2.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beam_profile_3d_pink.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beam_profile_3d_mono.png>]
-<img/FWHM_gaussian.png, id=220, 867.24pt x 361.35pt>
-File: img/FWHM_gaussian.png Graphic file (type png)
-<use img/FWHM_gaussian.png>
-Package pdftex.def Info: img/FWHM_gaussian.png  used on input line 307.
-(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<img/abs spec aqu sol.png, id=222, 412.54124pt x 328.97906pt>
-File: img/abs spec aqu sol.png Graphic file (type png)
-<use img/abs spec aqu sol.png>
-Package pdftex.def Info: img/abs spec aqu sol.png  used on input line 321.
-(pdftex.def)             Requested size: 206.27011pt x 164.48912pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--328
+LaTeX Warning: Reference `tab:lenses' on page 8 undefined on input line 298.
 
- []
 
+LaTeX Warning: Reference `fig:strahlbreite' on page 8 undefined on input line 298.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
-
- []
-
-[9 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/FWHM_gaussian.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 331--338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--338
-
- []
-
-[10 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/abs spec aqu sol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 350--354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 350--354
-
- []
-
-
-Package siunitx Warning: Unit macro \angstrom has been deprecated in this
-(siunitx)                release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\angstrom{\text {Å}}
-
-<img/100 ps Screenshot 2026-09-03 093257.png, id=242, 1444.64719pt x 812.28468pt>
-File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
-<use img/100 ps Screenshot 2026-09-03 093257.png>
-Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on input line 379.
-(pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/beams/xray_beam_profile.png, id=246, 867.24pt x 361.35pt>
-File: img/beams/xray_beam_profile.png Graphic file (type png)
-<use img/beams/xray_beam_profile.png>
-Package pdftex.def Info: img/beams/xray_beam_profile.png  used on input line 390.
-(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<img/beams/laser_beam_profile.png, id=247, 867.24pt x 361.35pt>
-File: img/beams/laser_beam_profile.png Graphic file (type png)
-<use img/beams/laser_beam_profile.png>
-Package pdftex.def Info: img/beams/laser_beam_profile.png  used on input line 396.
-(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-[11]
-<img/beams/laser_xray_beam_profile.png, id=264, 867.24pt x 361.35pt>
-File: img/beams/laser_xray_beam_profile.png Graphic file (type png)
-<use img/beams/laser_xray_beam_profile.png>
-Package pdftex.def Info: img/beams/laser_xray_beam_profile.png  used on input line 402.
-(pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
- [12 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/100 ps Screenshot 2026-09-03 093257.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beams/xray_beam_profile.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beams/laser_beam_profile.png>]
-<img/spectra/Reference_Spectra.png, id=276, 1389.7521pt x 433.62pt>
-File: img/spectra/Reference_Spectra.png Graphic file (type png)
-<use img/spectra/Reference_Spectra.png>
-Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 415.
-(pdftex.def)             Requested size: 458.61961pt x 143.09503pt.
-
-Overfull \hbox (3.3755pt too wide) in paragraph at lines 415--416
- [][] 
- []
-
-<img/spectra/100ps spektrum.png, id=278, 722.7pt x 505.89pt>
-File: img/spectra/100ps spektrum.png Graphic file (type png)
-<use img/spectra/100ps spektrum.png>
-Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 427.
-(pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/spectra/100ps diff spektrum.png, id=279, 722.7pt x 505.89pt>
-File: img/spectra/100ps diff spektrum.png Graphic file (type png)
-<use img/spectra/100ps diff spektrum.png>
-Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input line 434.
-(pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-[13 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/beams/laser_xray_beam_profile.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/Reference_Spectra.png>]
-<img/Time_resolved_spectrum_errbars.png, id=288, 722.7pt x 505.89pt>
-File: img/Time_resolved_spectrum_errbars.png Graphic file (type png)
-<use img/Time_resolved_spectrum_errbars.png>
-Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input line 446.
-(pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/Kinetic traces.png, id=290, 722.7pt x 433.62pt>
-File: img/Kinetic traces.png Graphic file (type png)
-<use img/Kinetic traces.png>
-Package pdftex.def Info: img/Kinetic traces.png  used on input line 454.
-(pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--459
-
- []
-
-[14 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/100ps spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/spectra/100ps diff spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Time_resolved_spectrum_errbars.png>]
-<img/fit/fit_all.png, id=301, 505.89pt x 325.215pt>
-File: img/fit/fit_all.png Graphic file (type png)
-<use img/fit/fit_all.png>
-Package pdftex.def Info: img/fit/fit_all.png  used on input line 470.
-(pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 466--473
-
- []
-
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=306, 1011.78pt x 823.1553pt>
-File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png)
-<use img/fit/residuals_and_spectra_minus150_to_50fs.png>
-Package pdftex.def Info: img/fit/residuals_and_spectra_minus150_to_50fs.png  used on input line 478.
-(pdftex.def)             Requested size: 455.2968pt x 370.41646pt.
-[15 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Kinetic traces.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_all.png>]
-<img/fit/counts_negative_delays_per_delay.png, id=320, 867.24pt x 505.89pt>
-File: img/fit/counts_negative_delays_per_delay.png Graphic file (type png)
-<use img/fit/counts_negative_delays_per_delay.png>
-Package pdftex.def Info: img/fit/counts_negative_delays_per_delay.png  used on input line 484.
-(pdftex.def)             Requested size: 433.61894pt x 252.94437pt.
- [16 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/residuals_and_spectra_minus150_to_50fs.png>]
-<img/fit/fit_try_to_fix_lol.png, id=331, 505.89pt x 325.215pt>
-File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
-<use img/fit/fit_try_to_fix_lol.png>
-Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 492.
-(pdftex.def)             Requested size: 278.24034pt x 178.86879pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--505
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--505
-
- []
-
-[17 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/counts_negative_delays_per_delay.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_try_to_fix_lol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 521--523
-
- []
-
-[18] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl) [1] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.lof)
-\tf@lof=\write4
-\openout4 = `"Protokoll EXP21.lof"'.
-
- [2]
-<img/Time_resolved_spectrum_3D.png, id=409, 722.7pt x 505.89pt>
-File: img/Time_resolved_spectrum_3D.png Graphic file (type png)
-<use img/Time_resolved_spectrum_3D.png>
-Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 543.
-(pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/fit/fit_big errorbars.png, id=410, 505.89pt x 325.215pt>
-File: img/fit/fit_big errorbars.png Graphic file (type png)
-<use img/fit/fit_big errorbars.png>
-Package pdftex.def Info: img/fit/fit_big errorbars.png  used on input line 550.
-(pdftex.def)             Requested size: 252.94437pt x 162.6071pt.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py [3 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/Time_resolved_spectrum_3D.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/img/fit/fit_big errorbars.png>] [4]
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py:106: LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...n to sparsify error bars so it doesn’t 
-                                                  become unreadable
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py:106: LaTeX Error: Invalid UTF-8 byte "80.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...n to sparsify error bars so it doesn’t 
-                                                  become unreadable
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/time resolved difference spectra v2.py:106: LaTeX Error: Invalid UTF-8 byte "99.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...n to sparsify error bars so it doesn’t 
-                                                  become unreadable
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-[5]) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py [6] [7] [8]
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:231: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 plt.ylabel("Normalized Δ 
-                                Emission Intensity")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:231: LaTeX Error: Invalid UTF-8 byte "94.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 plt.ylabel("Normalized Δ 
-                                Emission Intensity")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.262 print(
-            f"Energy: {energy_grid[idx]:.1f} eV") [9]
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:276: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.276 plt.ylabel("Normalized Δ 
-                                Emission Intensity")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/kinetic traces v2.py:276: LaTeX Error: Invalid UTF-8 byte "94.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.276 plt.ylabel("Normalized Δ 
-                                Emission Intensity")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py [10] [11] [12] [13] [14]
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:353: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:353: LaTeX Error: Invalid UTF-8 byte "83.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:353: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.354 # Da der Fehlerbalken Δ 
-                               N der Standardabweichung σ entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte "94.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.354 # Da der Fehlerbalken Δ 
-                               N der Standardabweichung σ entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.354 ...lerbalken Δ N der Standardabweichung σ 
-                                                  entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/fit_v5.py:354: LaTeX Error: Invalid UTF-8 byte "83.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.354 ...lerbalken Δ N der Standardabweichung σ 
-                                                  entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-[15]) (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py [16] [17] [18] [19] [20]
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:327: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:327: LaTeX Error: Invalid UTF-8 byte "83.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:327: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 # Varianz = Mittelwert (σ² 
-                                   = N)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 # Da der Fehlerbalken Δ 
-                               N der Standardabweichung σ entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte "94.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 # Da der Fehlerbalken Δ 
-                               N der Standardabweichung σ entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 ...lerbalken Δ N der Standardabweichung σ 
-                                                  entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/py/v6.py:328: LaTeX Error: Invalid UTF-8 byte "83.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 ...lerbalken Δ N der Standardabweichung σ 
-                                                  entspricht, gilt:
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-) [21] (/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
- ***********
- ) 
-Here is how much of TeX's memory you used:
- 23652 strings out of 467525
- 461635 string characters out of 5418982
- 1648634 words of memory out of 5000000
- 51087 multiletter control sequences out of 15000+600000
- 639835 words of font info for 84 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 108i,12n,107p,11374b,2920s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (41 pages, 8888799 bytes).
-PDF statistics:
- 2070 PDF objects out of 2073 (max. 8388607)
- 1899 compressed objects within 19 object streams
- 1247 named destinations out of 1440 (max. 500000)
- 394 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+LaTeX Warning: Citation `0' on page 8 undefined on input line 298
