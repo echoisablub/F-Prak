@@ -80,7 +80,10 @@
 \section{Introduction}
 The experiment HS1-Radioastronomy is there to give an overview for operating a radio telescope and to introduce the prerequitites such as characterising and calibrating the telescope before carrying out the experiments. The main experiment to be conducted is the observation of neutral hydrogen in the Milky Way to determine the rotational velocity in order to derive the mass distribution.
 
+%Describe: aim of the practical experiment, procedure, the objective should be the rotation curve of the Milky Way in order to derive the mass distribution. Radio observations are particularly suitable for this purpose because, unlike optical observations, absorption by dust plays only a minor role. In addition, radio observations of the Earth’s surface are possible, which is otherwise only the case with optical observations. Here we can also briefly discuss the emission process behind the 21cm radiation
+
 \subsection{Radioastronomy}
+% What, Why, How
 
 \subsection{The 21cm Radiation Line}
 
@@ -89,8 +92,32 @@ The experiment HS1-Radioastronomy is there to give an overview for operating a r
 \subsection{The KRT3 telescope}
 
 \subsection{Weather Conditions}
+The experiment was carried out on 07.09.2026, starting at around 12:35. The weather was stable throughout the day with partial cloud coverage and temperatures around \qty{19}{\degree}.
 
 \subsection{Calibration}
+As the reciever recieves radiation not only from the source $T_S$ but also from the environment $T_h$. In addition to those two external sources of radiation, the antenna also picks up on the radiation it's own system emits $T_{sys}$. This means the measured power of the reciever, represented by the antenna temperature, can be broken down the following way:
+\begin{align}
+	T_A=T_S+T_h+T_{sys}
+\end{align}
+It is difficult to seperate the pure system temperature and the background radiation, so these temperatures are usually combined into an effective system temperature:
+\begin{align}
+	T'_{sys}=T_{sys}+T_h
+\end{align}
+The effective system temperature now includes all unwanted contributions. This means that to know the contribution of a source, one must know the effective system temperature. Determining the effective system temperature is calibrating the telescope by doing a 'On-Off' measurement through measuring a source with a known flux density and then measuring a piece of empty sky. The KRT3 however, can only measure the sun as a source with high enough flux density but the sun is not a constant source which is why a noise generator needs to be used.\\
+The noise generator injects a signal directly into the antenna horn. The calibration temperature $T_{cal}=\qty{170}{K}$ is the expected antenna temperature that is observed additionally when the noise generator is switched on.\\
+When assuming the sun to be a point-like source \autoref{eq:pointsrc} can be used in the form of:
+\begin{align}
+	T_b\Omega_s=T_A\Omega_A
+\end{align}
+with $T_b$ being the brightness temperature, $\Omega_s$ being the solid angle of the sun, $T_A$ being the antenna temperature and $\Omega_A$ being the solid angle of the antenna main lobe.\\
+The goal is measuring the antenna temperature of the sun and converting it into a flux density. For this we need the following identities: the antenna theorem $A_e\Omega_A=\lambda^2$, the Rayleigh-Jeans law $B_\nu=2kT_b/\lambda^2$, the flux density $S_\nu=B_\nu\Omega_s$ and the aperture efficiency $\eta=A_e/A_g=0.5$ with $A_g$ being the geometric antenna surface assumed to be a circle.
+\begin{align}
+	T_b\Omega_s=T_A\Omega_A\\
+	\Omega_{A}=\frac{\lambda^2}{A_{e}}, \Omega_{S}=\frac{S_{\nu}}{B_{\nu}}, B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}\\
+	S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}=f(T_{A},A_{e})\\
+	A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5=\pi\qty{1,125}{m^2}2\\
+	\Rightarrow T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}=\frac{S_{\nu}\pi\qty{1,125}{m^2}}{2k_{B}}
+\end{align}
 \subsubsection{Determination of the system temperature}
 \subsubsection{Background Radiation}
 \subsection{Determination of the angular resolution of the KRT3}
