@@ -1,4 +1,16 @@
 import numpy as np
+import matplotlib as plt
+
+plt.rcParams.update({
+    "font.size": 14,
+    "axes.titlesize": 14,
+    "axes.labelsize": 14,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14,
+    "legend.title_fontsize": 14,
+})
+
 
 file_lon = "Data/HS1 Tag 1/FITS/20260907-133042_TPI-CSCAN_LON-VIRA_03#_01#_t1.txt"
 file_lat = "Data/HS1 Tag 1/FITS/20260907-133622_TPI-CSCAN_LAT-VIRA_03#_02#_t1.txt"

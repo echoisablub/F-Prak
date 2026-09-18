@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper, bibliography=totoc]{scrartcl}
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
+%\usepackage[ngerman]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -83,8 +83,6 @@
 The experiment HS1-Radioastronomy is there to give an overview for operating a radio telescope and to introduce the prerequitites such as characterising and calibrating the telescope before carrying out the experiments. The main experiment to be conducted is the observation of neutral hydrogen in the Milky Way to determine the rotational velocity in order to derive the mass distribution.
 
 %Describe: aim of the practical experiment, procedure, the objective should be the rotation curve of the Milky Way in order to derive the mass distribution. Radio observations are particularly suitable for this purpose because, unlike optical observations, absorption by dust plays only a minor role. In addition, radio observations of the Earth’s surface are possible, which is otherwise only the case with optical observations. Here we can also briefly discuss the emission process behind the 21cm radiation
-\section{Theoretical Background}
-
 \subsection{Radioastronomy}
 
 Radio astronomy is the study of electromagnetic radiation in the radio wavelength range, typically from a few MHz to several hundred GHz. Compared to optical astronomy, radio waves are much less affected by interstellar dust and gas, which allows astronomers to observe cold and dense regions of space that are often hidden in the optical regime. Radio telescopes usually consist of large parabolic antennas that collect incoming radiation and direct it to a receiver. The receiver amplifies the weak signal and converts it into an electrical voltage, from which the intensity, spectral distribution, and temperature of the observed source can be determined.
@@ -94,7 +92,7 @@ A central quantity in radio astronomy is the brightness temperature. In the Rayl
 I_\nu \approx \frac{2k_\mathrm{B} T_\mathrm{B} \nu^2}{c^2} = \frac{2k_\mathrm{B} T_\mathrm{B}}{\lambda^2},
 \] 
 % aus background 2.4.3 (gl 44)
-where $I_\nu$ is the spectral intensity, $k_\mathrm{B}$ is the Boltzmann constant, $T_\mathrm{B}$ is the brightness temperature, $\nu$ is the frequency, and $c$ is the speed of light. This relation shows that the observed radio signal is directly linked to the temperature of the emitting medium. This makes radio astronomy a powerful method for studying cold molecular clouds, ionized gas regions, and neutral hydrogen structures in the Milky Way and beyond.
+where $I_\nu$ is the spectral intensity, $k_\mathrm{B}$ is the Boltzmann constant, $T_\mathrm{B}$ is the brightness temperature, $\nu$ is the frequency, and $c$ is the speed of light. This relation shows that the observed radio signal is directly linked to the temperature of the emitting medium \cite{1}. This makes radio astronomy a powerful method for studying cold molecular clouds, ionized gas regions, and neutral hydrogen structures in the Milky Way and beyond.
 
 One of the most important spectral lines in radio astronomy is the 21 cm line emitted by neutral hydrogen.
 
@@ -113,7 +111,6 @@ This transition is therefore called the 21 cm line.
 This line is of great importance in astronomy because hydrogen is the most abundant element in the interstellar medium. Neutral hydrogen emits strongly at 21 cm, allowing astronomers to map the distribution of gas in galaxies. The 21 cm line is especially useful because it is only weakly absorbed by interstellar dust, so it can reveal regions that are difficult or impossible to observe in the optical range.
 
 The 21 cm line also enables the measurement of Doppler shifts. If the hydrogen gas is moving relative to the observer, the frequency of the emission is shifted. From this shift, the radial velocity of the gas can be determined. This makes it possible to study galactic rotation, gas dynamics, and the mass distribution of galaxies. For this reason, the 21 cm line is one of the most important tools in modern radio astronomy and is fundamental for studying neutral hydrogen in the universe.
-
 
 \section{Observation and Evaluation}
 \subsection{The KRT3 telescope}
@@ -139,6 +136,7 @@ When assuming the sun to be a point-like source \autoref{eq:pointsrc} can be use
 with $T_b$ being the brightness temperature, $\Omega_s$ being the solid angle of the sun, $T_A$ being the antenna temperature and $\Omega_A$ being the solid angle of the antenna main lobe.\\
 The goal is measuring the antenna temperature of the sun and converting it into a flux density. For this we need the following identities: the antenna theorem $A_e\Omega_A=\lambda^2$, the Rayleigh-Jeans law $B_\nu=2kT_b/\lambda^2$, the flux density $S_\nu=B_\nu\Omega_s$ and the aperture efficiency $\eta=A_e/A_g=0.5$ with $A_g$ being the geometric antenna surface assumed to be a circle.
 \begin{align}
+    \label{eq: flux density}
 	T_b\Omega_s=T_A\Omega_A\\
 	\Omega_{A}=\frac{\lambda^2}{A_{e}}, \Omega_{S}=\frac{S_{\nu}}{B_{\nu}}, B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}\\
 	S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}=f(T_{A},A_{e})\\
@@ -168,16 +166,66 @@ If we assume a radial velocity of 0 km/s
 
 \section{Results}
 
-\subsubsection{Determination of the system temperature}
-\subsubsection{Background Radiation}
+\subsection{Determination of the system temperature}
+The system temperature was determined from the calibration measurements using the relation
+\[
+T'_{\mathrm{sys}} = T_{\mathrm{cal}} \frac{P_{\mathrm{off}}}{P_{\mathrm{cal}}-P_{\mathrm{off}}},
+\]
+where $T_{\mathrm{cal}}$ is the calibration temperature and $P_{\mathrm{off}}$ and $P_{\mathrm{cal}}$ are the received powers with the noise source switched off and on, respectively. The resulting values were averaged separately for the left circular polarization (BBC 1--8) and the right circular polarization (BBC 9--16), yielding
+\[
+T'_{\mathrm{sys,left}} = 98.76 \pm 22.54\,\mathrm{K},
+\qquad
+T'_{\mathrm{sys,right}} = 107.80 \pm 31.65\,\mathrm{K}.
+\]
+Using these system temperatures, the antenna temperature of the Sun was then calculated from the corresponding calibration data, giving
+\[
+T_{\mathrm{sun,left}} = 1237.79 \pm 89.62\,\mathrm{K},
+\qquad
+T_{\mathrm{sun,right}} = 1302.59 \pm 119.16\,\mathrm{K}.
+\]
+The larger uncertainty in the right polarization reflects the larger scatter of the corresponding measurements. 
+With \autoref{eq: flux density} and the current measured flux densities provided by the SWC of the Australian Gouvernment ($S_{\nu} \approxeq 76 \, \text{sfu}$) the expected antenna temperature was estimated to be
+\[
+T_A = 972.753\,\mathrm{K}.
+\]
+This value is in reasonable agreement with the measured temperature, confirming that the calibration procedure yields a consistent estimate of the solar signal.
+
+\subsection{Background Radiation}
+In order to convert the raw TPI signal into the actual background temperature, the measured data was normalized using the mean off-source power and the effective system temperature according to
+\[
+T_{h,n}=\frac{\mathrm{TPI}\cdot T'_{\mathrm{sys}}}{\bar{P}_{\mathrm{off}}}.
+\]
+Here, $T'_{\mathrm{sys}}$ is the effective system temperature and $\bar{P}_{\mathrm{off}}$ is the mean reference power measured during the off-source observation. This normalization removes the dependence on the receiver gain and instantaneous power level and rescales the measured TPI signal into an effective temperature. The resulting background curve (see \autoref{fig: background}) therefore represents the true elevation-dependent contribution of the environment to the antenna temperature, which must be corrected for in order to recover the source signal reliably.
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=\linewidth]{img/calib/background plot.png}
+    \caption{Normalised Background Temperature as a function elevation (left figure) or azimuth (right figure)}
+    \label{fig: background}
+\end{figure}
+The background temperature $T_h$ is not constant, but varies significantly with elevation. The background plot shows a clear increase toward lower elevations, indicating that the antenna receives additional radiation from the atmosphere and surrounding environment when observing near the horizon. At higher elevations, the environmental contribution decreases and $T_h$ approaches a lower value set mainly by sky brightness and instrumental noise.
+
+The background temperature also varies with azimuth, showing that the local environment contributes differently depending on the telescope pointing direction. This is consistent with differing amounts of ground spillover and thermal emission from nearby structures in different azimuthal directions.
+
+The uncertainty is significantly larger for the right-hand polarization than for the left-hand polarization, especially as a function of azimuth. This suggests that the right channel is more strongly affected by instrumental systematics and environmental variations. The smaller uncertainties in the left polarization indicate a more stable response and a more reliable background determination.
+
+Using the extrapolated course of $T'_{h}$ (see \autoref{fig: extrap_background}) up to an elevation of $0^\circ$, it becomes clear that the background temperature rises strongly at low elevations. A comparison with the Earth's effective radiation temperature, $T_{\mathrm{Earth}} \approx 252\,\mathrm{K}$, shows that this increase is of a comparable magnitude and therefore reflects the dominance of atmospheric and ground emission at low elevation.
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/calib/extrapolation background plot.png}
+    \caption{The extrapolated course of $T'_{h}$ up to an elevation of o° (for left and right hand polarisation)}
+    \label{fig: extrap_background}
+\end{figure}
+
 \subsection{Determination of the angular resolution of the KRT3}
+hiu
+
 \subsection{Determination of the Sensitivity of the instrument}
+
+
 \subsection{Observation of neutral hydrogen in the Milky Way}
 
 %\begin{figure}[H]
-
     %\centering
-    
     %\begin{subfigure}[b]{0.3\textwidth}
      %   \centering
      %   \includegraphics[width=\linewidth]{img/strahltransport/02_schirm.png}
@@ -191,7 +239,6 @@ If we assume a radial velocity of 0 km/s
      %   \caption{Schirm 3}
      %   \label{fig:schirm3}
     %\end{subfigure}
-
     %\caption{Gesamtdarstellung der fünf Messungen: Strahlprofile auf den verschiedenen Schirmen}
     %\label{fig:fuenf_bilder_gesamt}
 %\end{figure}
@@ -220,11 +267,74 @@ If we assume a radial velocity of 0 km/s
 \newpage
 
 \appendix
+\section{$H_1$ spetra}
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_10.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_20.png}
+    \end{subfigure}
+
+    \vspace{0.25em}
+
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_30.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_40.png}
+    \end{subfigure}
+
+    \vspace{0.25em}
+
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_50.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_60.png}
+    \end{subfigure}
+\end{figure}
+
 \clearpage
-\appendix
+
+\begin{figure}[p]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_70.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_80_without_ref.png}
+    \end{subfigure}
+
+    \vspace{0.8em}
+
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_80.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/21cm/cal_l_90.png}
+    \end{subfigure}
+\end{figure}
+
 \clearpage
-\addcontentsline{toc}{section}{Lab book}
-%\section{Lab book}
-\input{../labbook.tex}
+%\section{B. Lab book}
+\addcontentsline{toc}{section}{B. Lab book}
+%\input{../labbook.tex}
 
 \end{document} 

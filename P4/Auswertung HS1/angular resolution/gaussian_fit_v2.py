@@ -3,6 +3,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
+plt.rcParams.update({
+    "font.size": 14,
+    "axes.titlesize": 14,
+    "axes.labelsize": 14,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14,
+    "legend.title_fontsize": 14,
+})
 
 filename_lon = sys.argv[1]
 filename_lat = sys.argv[2]
@@ -154,7 +163,7 @@ def plot_scan(axis, angle, signal, yerr, parameters, fwhm, label):
     axis.legend(loc="best")
 
 
-plot_scan(
+'''plot_scan(
     axes[0],
     x_lon,
     y_lon_l,
@@ -193,7 +202,7 @@ plot_scan(
     fit_lat_r,
     fwhm_lat_r,
     label="Right polarised latitude scan"
-)'''
+)
 
 axes[0].set_title("Longitude")
 axes[1].set_title("Latitude")
