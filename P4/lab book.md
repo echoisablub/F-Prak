@@ -21,8 +21,8 @@ $T_{b}\cdot \Omega_{S}=T_{A}\Omega_{A}$
 $A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5=1,125\pi m^2$
 $T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}$
 
-==T_sys_left  = 98.76 ± 22.54 K
-T_sys_right = 107.80 ± 31.65 K
+==T_sys_left  = 98.76 \pm 22.54 K
+T_sys_right = 107.80 \pm 31.65 K
 T_sun_left  = 1237.79 +- 89.62 K
 T_sun_right = 1302.59 +- 119.16 K==
 
@@ -59,16 +59,16 @@ TODO:
 $\Delta S_{\nu}= \frac{2k}{A_{e}} \frac{C_{S}T'_{sys}}{\sqrt{ \Delta \nu \tau}}$
 spectral flux density
 $C_{S}\approx2$
-$T'_{sys, left}  = 98.76 ± 22.54 K$
-$T'_{sys,right} = 107.80 ± 31.65 K$
+$T'_{sys, left}  = 98.76 \pm 22.54 K$
+$T'_{sys,right} = 107.80 \pm 31.65 K$
 $A_{e}=1.125\pi$
 $\tau=1s$
 $\Delta \nu= 61kHz$
 $\Delta S_{\nu, left}= 6,248 \cdot 10^{-24} \frac{W}{m^2Hz}= 624,92 Jy$
 $\Delta S_{\nu, right}= 6,82 \cdot 10^{-24} \frac{W}{m^2Hz}= 682,02 Jy$
 
-Necessary integration time τ to detected the selected source with the KRT 3 with a signal-to-noise ratio S/N = 10 in each channel:
-- Virgo A: Flux density $=211 ± 11 Jy$, Radiogalaxy
+Necessary integration time \tau to detected the selected source with the KRT 3 with a signal-to-noise ratio S/N = 10 in each channel:
+- Virgo A: Flux density $=211 \pm 11 Jy$, Radiogalaxy
 - for 5 channel each side ($\Delta \nu= 5*61kHz= 305kHz$)
 - $\frac{S}{N}=10$
 - $\tau= \left( \frac{2k\cdot C_{S}\cdot T'_{sys}}{\Delta S_{\nu}\cdot A_{E}} \right)^{2} \cdot \frac{\Delta\nu}{\frac{S}{N}}$
@@ -82,7 +82,7 @@ für mobile radio on the moon (tranmitting with 2W, 900MHz, FWHM:80kHz, $\sigma=
 
 $S_{\nu} \propto \nu^{\alpha}$, $\alpha=-0,7$
 
-bei $\nu=1420.4 MHz$: $S_{\nu,CasA}=1420 ± 70 Jy$
+bei $\nu=1420.4 MHz$: $S_{\nu,CasA}=1420 \pm 70 Jy$
 $\frac{1420,4^{-0,7}MHz}{1420 Jy}=c$
 $S_{\nu, Cas A}= \frac{900^{-0,7}}{c} Jy = 1954,37 Jy$
 
@@ -147,7 +147,7 @@ span = 74
 	- 
 - In which channel would you expect the H I line at ν0 = 1420.4 MHz, assuming a radial velocity of 0 kms^−1?
 	- 
-- You want to measure the radio continuum of a source. What frequencies are allowed within the bandwidth so that the measurement is not be contaminated by the 21cm line. Assume a maximum radial velocity of the H I of ± 200 kms^−1;
+- You want to measure the radio continuum of a source. What frequencies are allowed within the bandwidth so that the measurement is not be contaminated by the 21cm line. Assume a maximum radial velocity of the H I of \pm 200 kms^−1;
 	- 
 - So which frequency bands should be selected in BBC Tools if you want to observe the H I line once and the continuum once?
 	- 
@@ -157,8 +157,8 @@ $R=R_{0}\cdot \sin(l)$, $R_{0}=8,5kpc$
 
 | $l [deg]$ | $R [kpc]$ | $v_{max} [\frac{km}{s}]$ | $v_{R} \left[ \frac{km}{s} \right]$ |
 | --------- | --------- | ------------------------ | ----------------------------------- |
-| 10        | 1,48±4,09 | -                        | -                                   |
-| 20        | 2,91±4,0  | 70,70±14,50              | ...                                 |
+| 10        | 1,48\pm4,09 | -                        | -                                   |
+| 20        | 2,91\pm4,0  | 70,70\pm14,50              | ...                                 |
 $v_{max}$ grafisch bestimmt (schnittwert mit der organgenen $\sigma$-linie)
 $v_{R}=v_{max}+\omega_{0}R_{0}\cdot \sin(l)$
 $\omega_{0}R_{0}=220 \frac{km}{s}$
@@ -172,7 +172,7 @@ $1M_{sun}=1,98\cdot{10^{30}}kg$
 ges: eingeschlossene Masse
 ## distrib dark matter
 
-$M_{DM}(R_0)=66411575447.22 ± 3593349279.00$
+$M_{DM}(R_0)=66411575447.22 \pm 3593349279.00$
 
 
 
