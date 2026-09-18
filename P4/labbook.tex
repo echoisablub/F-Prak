@@ -1,0 +1,230 @@
+\begin{document}
+
+\title{Labbook}
+\date{07. - 09. September 2026}
+\maketitle
+
+\subsection*{Wetter}
+\noindent
+\textbf{Datum:} 07/09/26 \\
+\textbf{Uhrzeit:} 12:35 Uhr \\
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/labbook/wetter_hs1.png}
+\end{figure}
+\begin{itemize}
+    \item Teilweise bedeckter Himmel
+    \item Kein Niederschlag
+\end{itemize}
+
+\subsection*{5.1.1 Calibration (Systemtemperatur)}
+USB 1-5, 9-13 \\
+Datendatei-Struktur im Programm (RadioUniversePro):
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cccccccc}
+\toprule
+rep & dev & sb & on\_tbi & off\_tbi & cal\_tbi & flux & SEFD \\
+\midrule
+1 & bbc01 & u & 12195,30 & 1001,40 & 2634,20 & 00,00 & 00,00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{align}
+T_{b}\cdot \Omega_{S} &= T_{A}\Omega_{A} \\
+\Omega_{A} &= \frac{\lambda^2}{A_{e}}, \quad \Omega_{S}=\frac{S_{\nu}}{B_{\nu}}, \quad B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2} \\
+S_{\nu} &= \frac{T_{A}\cdot 2k_{B}}{A_{e}} = f(T_{A},A_{e}) \\
+A_{e} &= \pi r^{2}\cdot\eta = 1,5^2\pi\cdot0,5 = 1,125\pi \, \text{m}^2 \\
+T_{A} &= \frac{S_{\nu}A_{e}}{2k_{B}}
+\end{align}
+
+\begin{quote}
+$T_{\text{sys,left}} = 98.76 \pm 22.54 \text{ K}$ \\
+$T_{\text{sys,right}} = 107.80 \pm 31.65 \text{ K}$ \\
+$T_{\text{sun,left}} = 1237.79 \pm 89.62 \text{ K}$ \\
+$T_{\text{sun,right}} = 1302.59 \pm 119.16 \text{ K}$
+\end{quote}
+
+Mit $S_{\nu}$ der Sonne (aus SWC):
+\begin{itemize}
+    \item 76 sfu (solar flux units): $76 \cdot 10^{-11} \, \text{Wm}^{-2}\text{Hz}^{-1} = 76 \cdot 10000 \, \text{Jy} = 760000 \, \text{Jy}$
+    \item $\Rightarrow T_A = 972,753 \text{ K}$
+    \item Störung wegen RFI
+\end{itemize}
+
+\subsection*{5.2 Angular Resolution}
+USB 1-5, 9-13 \\
+Position der Sonne berechnet durch die Steuerungssoftware:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cccccccc}
+\toprule
+Source & RA & DEC & AZ & EL & HA & Type & Note \\
+\midrule
+Sun & 110410.1 & +055810.9 & +1684733.7 & +42 00 48.8 & -003253.9 & Star & East \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Im Ordner \texttt{cscan} befindet sich der Screenshot.
+    \item Im Ordner \texttt{FITS} befinden sich die Daten (lon vs. lat).
+\end{itemize}
+
+\subsection*{5.3 Sensitivity of the Instrument}
+Antennentemperatur von VirA (BBC 3,11 zeigt geringsten RFI-Einfluss).
+
+Benötigte Zeit für das Mapping:
+\begin{itemize}
+    \item 28:35.4s (Software)
+    \item 29:27.8s (Eigener Timer)
+\end{itemize}
+
+\textit{Hinweis: Screenshot auf Ubuntu und nicht Windows! Files im Ordner \texttt{maps} und in \texttt{FITS} als \texttt{imageproJ01 VirA 01}.}
+
+\subsubsection*{TODO: Theoretical Sensitivity}
+\begin{align}
+\Delta S_{\nu} &= \frac{2k}{A_{e}} \frac{C_{S}T'_{\text{sys}}}{\sqrt{\Delta \nu \tau}} \quad \text{(spektrale Flussdichte)}
+\end{align}
+Mit $C_{S} \approx 2$, $T'_{\text{sys,left}} = 98.76 \pm 22.54 \text{ K}$, $T'_{\text{sys,right}} = 107.80 \pm 31.65 \text{ K}$, $A_{e} = 1.125\pi$, $\tau = 1\text{s}$, $\Delta \nu = 61\text{kHz}$:
+\begin{align}
+\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624,92 \text{ Jy} \\
+\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682,02 \text{ Jy}
+\end{align}
+
+Benötigte Integrationszeit $\tau$ zum Detektieren der ausgewählten Quelle mit dem KRT 3 mit einem Signal-Rausch-Verhältnis $S/N = 10$ in jedem Kanal:
+\begin{itemize}
+    \item Virgo A: Flussdichte $= 211 \pm 11 \text{ Jy}$, Radiogalaxie
+    \item Für 5 Kanäle jede Seite ($\Delta \nu = 5 \cdot 61\text{kHz} = 305\text{kHz}$)
+    \item $S/N = 10$
+    \item Formel: $\tau = \left( \frac{2k\cdot C_{S}\cdot T'_{\text{sys}}}{\Delta S_{\nu}\cdot A_{E}} \right)^{2} \cdot \frac{\Delta\nu}{S/N}$
+    \item $\tau_{l} = 4,12\text{s}$
+    \item $\tau_{r} = 5,22\text{s}$
+\end{itemize}
+
+\subsubsection*{Determination of the Uncertainty of Radiant Flux Measurements}
+
+\subsubsection*{Preliminary Work}
+\begin{align}
+S_{\nu} &= \frac{P}{4\pi d^2\sqrt{2\pi}\sigma} = 1263,16 \text{ Jy}
+\end{align}
+Für Mobile Radio on the Moon (übertragen mit 2W, 900MHz, FWHM: 80kHz, $\sigma = 34\text{kHz}$, empfangen auf der Erde).
+
+\begin{align}
+S_{\nu} &\propto \nu^{\alpha}, \quad \alpha = -0,7
+\end{align}
+Bei $\nu = 1420.4\text{ MHz}$: $S_{\nu,\text{CasA}} = 1420 \pm 70 \text{ Jy}$.
+\begin{align}
+c &= \frac{1420,4^{-0,7}\text{ MHz}}{1420\text{ Jy}} \\
+S_{\nu,\text{Cas A}} &= \frac{900^{-0,7}}{c} \text{ Jy} = 1954,37 \text{ Jy} \\
+T_{A} &= \frac{S_{\nu}A_{e}}{2k_{B}} = 1,82 \text{ K} \quad (\text{für } \nu = 1420.4\text{ MHz})
+\end{align}
+
+\noindent\textbf{TODO: Fehlerfortpflanzung}
+
+\subsubsection*{Evaluation}
+BBC 3,11
+\begin{figure}[h]
+     \centering
+    \includegraphics[scale=0.25]{img/labbook/map vira red.png}
+\end{figure}
+\begin{figure}[h]
+     \centering
+    \includegraphics[scale=0.3]{img/labbook/ds9 region data.png}
+\end{figure}
+\begin{figure}[h]
+     \centering
+    \includegraphics[scale=0.25]{img/labbook/ds9 region screenshot.png}
+\end{figure}
+
+\begin{align}
+\text{mean} &= 1455,83 \\
+\text{std} &= 212,206 \\
+\sigma[K] &= \frac{\text{std}}{\text{mean}}\cdot T'_{\text{sys}} = 15,71 \text{ K} \\
+\text{mean}_{\text{scaled}}[K] &= T_{A}(\text{OFF}) = 156938,474 \text{ K} \\
+T_{A}(\text{ON}) &= 3067 \cdot 107,8\text{K} = 330622,6 \text{ K}
+\end{align}
+
+Antennentemperatur der Quelle:
+\begin{align}
+T_{s} &= \frac{T_{A}(\text{ON})-T_{A}(\text{OFF})+T'_{\text{sys}}}{T'_{\text{sys}}} = 1612,17 \text{ K}
+\end{align}
+
+\begin{itemize}
+    \item Rauschen ist viel größer als erwartet.
+    \item Vergleich mit theoretischer Empfindlichkeit (600 Jy, ca. 1 K).
+    \item Bei uns jetzt 128 Kanäle, 10s Integrationszeit $\rightarrow$ eigentlich sollte es noch besser sein ($\ll 1\text{ K}$).
+    \item Bei uns jedoch viel Einfluss von RFI $\rightarrow \sim 15\text{ K}$ Std./Rauschen.
+    \item Empfänger-/Verstärkersensibilität ist ein Problem; thermisches Rauschen begrenzt nicht, aber besser als 1 K kann es eigentlich nicht werden.
+\end{itemize}
+
+Gesucht: $S/N$ (25 Karten für $S/N = 10$).
+
+\subsection*{5.1.2 Background Radiation}
+\subsubsection*{Mond}
+Elevation: $30^\circ \, 52' \, 32.0''$ (in Grad, Minuten, Sekunden) \\
+Für BBC 1-5, 9-13 (wie zuvor für die Sonne, auch bei schlechter Qualität).
+\begin{align}
+\text{Span} &= 2(\text{ELV} - 10^\circ) = 2(30^\circ - 10^\circ) = 40^\circ
+\end{align}
+Da der Azimut bei $268^\circ \, 03' \, 32.7''$ liegt, wählen wir einen etwas kleineren Span: $\text{Span} = 38^\circ$. \\
+Zeitpunkt: ca. 14:56 Uhr. \\
+Daten in FITS: \texttt{LON-MOON} und \texttt{LAT-MOON} + Screenshot in \texttt{cscan}: \texttt{CSCAN-MOON}.
+
+\subsubsection*{Virgo A}
+Zeitpunkt: 15:28 Uhr \\
+Elevation: $47^\circ \, 56' \, 18''$, Azimut: $196^\circ$, $\text{Span} = 74$.
+
+\subsection*{Observation of Neutral Hydrogen in the Milky Way}
+\subsubsection*{Frequency Setting of the Receiver}
+\subsubsection*{Preliminary Work}
+\begin{itemize}
+    \item Was ist die Frequenzauflösung $\delta\nu$ (Bandbreite eines einzelnen Kanals) und wie lautet die Geschwindigkeitsauflösung $\delta\upsilon$ bei der Beobachtung der H I-Linie?
+    \item In welchem Kanal würden Sie die H I-Linie bei $\nu_0 = 1420.4\text{ MHz}$ erwarten, unter Annahme einer Radialgeschwindigkeit von $0\text{ km s}^{-1}$?
+    \item Sie wollen das Radiokontinuum einer Quelle messen. Welche Frequenzen sind innerhalb der Bandbreite erlaubt, damit die Messung nicht durch die 21cm-Linie kontaminiert wird? (Maximale Radialgeschwindigkeit des H I: $\pm 200\text{ km s}^{-1}$).
+    \item Welche Frequenzbänder sollten in BBC Tools ausgewählt werden, wenn man einmal die H I-Linie und einmal das Kontinuum beobachten möchte?
+\end{itemize}
+
+\subsubsection*{Measurement}
+\begin{align}
+R &= R_{0}\cdot \sin(l), \quad R_{0} = 8,5\text{ kpc}
+\end{align}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cccc}
+\toprule
+$l$ [deg] & $R$ [kpc] & $v_{\max}$ [km/s] & $v_{R}$ [km/s] \\
+\midrule
+10 & $1,48 \pm 4,09$ & -- & -- \\
+20 & $2,91 \pm 4,0$ & $70,70 \pm 14,50$ & $\dots$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item $v_{\max}$ grafisch bestimmt (Schnittwert mit der orangen $\sigma$-Linie).
+    \item $v_{R} = v_{\max} + \omega_{0}R_{0}\cdot \sin(l)$ mit $\omega_{0}R_{0} = 220\text{ km/s}$.
+    \item $v_{\max,\text{err}}$ grafisch über blauen Bereich bestimmt (Schnittpunkt min -- Schnittpunkt max / 2).
+    \item $\Delta l = \pm 2^\circ$.
+    \item Fehlerfortpflanzung für $R$:
+    \begin{align}
+    \Delta R &= \left|\frac{\partial R}{\partial l}\right|\cdot \Delta l = |R_{0}\cdot \cos(l)|\cdot \Delta l \\
+    \sigma_{R} &= \sqrt{|R_{0}\cos(l)|\Delta l}
+    \end{align}
+    \item Eingeschlossene Masse:
+    \begin{align}
+    M(R) &= 0,234 \cdot 10^{10} \left( \frac{v(R)}{100\text{ km/s}} \right)^2 \left( \frac{R}{\text{kpc}} \right) M_{\odot}, \quad 1 M_{\odot} = 1,98 \cdot 10^{30}\text{ kg}
+    \end{align}
+\end{itemize}
+
+\subsubsection*{Distribution of Dark Matter}
+\begin{align}
+M_{\text{DM}}(R_0) &= 66411575447.22 \pm 3593349279.00 \, M_{\odot}
+\end{align}
+
+\end{document}

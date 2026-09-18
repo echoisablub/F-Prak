@@ -152,6 +152,46 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/markdown/markdown.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/markdown/markdown.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/markdown/markdown.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/lt3luabridge/lt3luabridge.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/markdown/markdownthemewitiko_markdown_defaults.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/markdown/markdownthemewitiko_markdown_defaults.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/markdown/markdownthemewitiko_markdown_defaults.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/markdown/markdownthemewitiko_markdown_defaults.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/markdown/markdownthemewitiko_markdown_defaults.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/paralist/paralist.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/paralist/paralist.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/csvsimple/csvsimple-legacy.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/csvsimple/csvsimple-legacy.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -169,8 +209,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
@@ -228,16 +266,38 @@ INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/re
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
 OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
-INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/../lab book.md
-INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/../lab book.md
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/../labbook.tex
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/../labbook.tex
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/../labbook.tex
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/wetter_hs1.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/wetter_hs1.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/wetter_hs1.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/wetter_hs1.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/wetter_hs1.png
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
-INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/../lab book.md
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tctt0800.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmitt10.tfm
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/map vira red.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/map vira red.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/map vira red.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/map vira red.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/map vira red.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region data.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region data.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region data.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region data.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region data.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
 INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -245,7 +305,8 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb

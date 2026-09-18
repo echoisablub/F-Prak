@@ -16,6 +16,7 @@
 \sisetup{locale = DE}
 \usepackage{subcaption}
 \usepackage{listings}
+\usepackage[settings]{markdown}
 \usepackage{listingsutf8}
 \usepackage{xcolor}
 
@@ -82,6 +83,7 @@
 The experiment HS1-Radioastronomy is there to give an overview for operating a radio telescope and to introduce the prerequitites such as characterising and calibrating the telescope before carrying out the experiments. The main experiment to be conducted is the observation of neutral hydrogen in the Milky Way to determine the rotational velocity in order to derive the mass distribution.
 
 %Describe: aim of the practical experiment, procedure, the objective should be the rotation curve of the Milky Way in order to derive the mass distribution. Radio observations are particularly suitable for this purpose because, unlike optical observations, absorption by dust plays only a minor role. In addition, radio observations of the Earth’s surface are possible, which is otherwise only the case with optical observations. Here we can also briefly discuss the emission process behind the 21cm radiation
+\section{Theoretical Background}
 
 \subsection{Radioastronomy}
 
@@ -89,8 +91,9 @@ Radio astronomy is the study of electromagnetic radiation in the radio wavelengt
 
 A central quantity in radio astronomy is the brightness temperature. In the Rayleigh-Jeans regime, which is valid for most radio astronomical observations, the spectral intensity is approximately
 \[
-I_\nu \approx \frac{2k_\mathrm{B} T_\mathrm{B} \nu^2}{c^2},
-\]
+I_\nu \approx \frac{2k_\mathrm{B} T_\mathrm{B} \nu^2}{c^2} = \frac{2k_\mathrm{B} T_\mathrm{B}}{\lambda^2},
+\] 
+% aus background 2.4.3 (gl 44)
 where $I_\nu$ is the spectral intensity, $k_\mathrm{B}$ is the Boltzmann constant, $T_\mathrm{B}$ is the brightness temperature, $\nu$ is the frequency, and $c$ is the speed of light. This relation shows that the observed radio signal is directly linked to the temperature of the emitting medium. This makes radio astronomy a powerful method for studying cold molecular clouds, ionized gas regions, and neutral hydrogen structures in the Milky Way and beyond.
 
 One of the most important spectral lines in radio astronomy is the 21 cm line emitted by neutral hydrogen.
@@ -216,39 +219,12 @@ If we assume a radial velocity of 0 km/s
 
 \newpage
 
-\begin{appendices}
-    
-\section{Tabellen}
-
-\begin{table}[H]
-    \centering
-    \caption{Messdaten des Dipol-Scans zur Bestimmung der kinetischen Energie (Schirm 3).}
-    \label{tab:daten_energie}
-    \begin{tabular}{|S|S|}
-        \toprule
-        {Dipolstrom $I$ [\unit{A}]} & {Vertikale Position $y$ [\unit{mm}]} \\
-        \midrule
-        2,371 & -2,8116 \\
-        2,278 & -4,0231 \\
-        2,181 & -5,4668 \\
-        2,076 & -7,0907 \\
-        1,963 & -8,8247 \\
-        1,868 & -10,0697 \\
-        1,768 & -11,3757 \\
-        1,678 & -12,9589 \\
-        1,568 & -14,3459 \\
-        1,477 & -15,6398 \\
-        1,372 & -17,1793 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-
-\section{Lab book}
-\lstinputlisting{../lab book.md}
-
-
-\end{appendices}
-
+\appendix
+\clearpage
+\appendix
+\clearpage
+\addcontentsline{toc}{section}{Lab book}
+%\section{Lab book}
+\input{../labbook.tex}
 
 \end{document} 
