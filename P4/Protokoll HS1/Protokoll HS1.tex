@@ -136,11 +136,11 @@ When assuming the sun to be a point-like source \autoref{eq:pointsrc} can be use
 with $T_b$ being the brightness temperature, $\Omega_s$ being the solid angle of the sun, $T_A$ being the antenna temperature and $\Omega_A$ being the solid angle of the antenna main lobe.\\
 The goal is measuring the antenna temperature of the sun and converting it into a flux density. For this we need the following identities: the antenna theorem $A_e\Omega_A=\lambda^2$, the Rayleigh-Jeans law $B_\nu=2kT_b/\lambda^2$, the flux density $S_\nu=B_\nu\Omega_s$ and the aperture efficiency $\eta=A_e/A_g=0.5$ with $A_g$ being the geometric antenna surface assumed to be a circle.
 \begin{align}
-    \label{eq: flux density}
 	T_b\Omega_s=T_A\Omega_A\\
 	\Omega_{A}=\frac{\lambda^2}{A_{e}}, \Omega_{S}=\frac{S_{\nu}}{B_{\nu}}, B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}\\
 	S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}=f(T_{A},A_{e})\\
 	A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5=\pi\qty{1,125}{m^2}2\\
+    \label{eq: antenna temp}
 	\Rightarrow T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}=\frac{S_{\nu}\pi\qty{1,125}{m^2}}{2k_{B}}
 \end{align}
 \subsubsection{Determination of the system temperature}
@@ -184,7 +184,7 @@ T_{\mathrm{sun,left}} = 1237.79 \pm 89.62\,\mathrm{K},
 T_{\mathrm{sun,right}} = 1302.59 \pm 119.16\,\mathrm{K}.
 \]
 The larger uncertainty in the right polarization reflects the larger scatter of the corresponding measurements. 
-With \autoref{eq: flux density} and the current measured flux densities provided by the SWC of the Australian Gouvernment ($S_{\nu} \approxeq 76 \, \text{sfu}$) the expected antenna temperature was estimated to be
+With \autoref{eq: antenna temp} and the current measured flux densities provided by the SWC of the Australian Gouvernment ($S_{\nu} \approxeq 76 \, \text{sfu}$) the expected antenna temperature was estimated to be
 \[
 T_A = 972.753\,\mathrm{K}.
 \]
