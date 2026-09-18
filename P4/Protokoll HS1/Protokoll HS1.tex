@@ -16,7 +16,7 @@
 \sisetup{locale = DE}
 \usepackage{subcaption}
 \usepackage{listings}
-\usepackage[settings]{markdown}
+%\usepackage[settings]{markdown}
 \usepackage{listingsutf8}
 \usepackage{xcolor}
 
@@ -116,9 +116,10 @@ The 21 cm line also enables the measurement of Doppler shifts. If the hydrogen g
 \subsection{The KRT3 telescope}
 
 \subsection{Weather Conditions}
-The experiment was carried out on 07.09.2026, starting at around 12:35. The weather was stable throughout the day with partial cloud coverage and temperatures around \qty{19}{\degree}.
+The experiment was carried out on 07.09.2026, starting at around 12:35. The weather was stable throughout the day with partial cloud coverage and temperatures around \qty{19}{\degree}, a relative humidity of 60\% and a windspeed of \qty{1}{\m\per\s}.
 
 \subsection{Calibration}
+\subsubsection{Determination of the system temperature}
 As the reciever recieves radiation not only from the source $T_S$ but also from the environment $T_h$. In addition to those two external sources of radiation, the antenna also picks up on the radiation it's own system emits $T_{sys}$. This means the measured power of the reciever, represented by the antenna temperature, can be broken down the following way:
 \begin{align}
 	T_A=T_S+T_h+T_{sys}
@@ -136,28 +137,84 @@ When assuming the sun to be a point-like source \autoref{eq:pointsrc} can be use
 with $T_b$ being the brightness temperature, $\Omega_s$ being the solid angle of the sun, $T_A$ being the antenna temperature and $\Omega_A$ being the solid angle of the antenna main lobe.\\
 The goal is measuring the antenna temperature of the sun and converting it into a flux density. For this we need the following identities: the antenna theorem $A_e\Omega_A=\lambda^2$, the Rayleigh-Jeans law $B_\nu=2kT_b/\lambda^2$, the flux density $S_\nu=B_\nu\Omega_s$ and the aperture efficiency $\eta=A_e/A_g=0.5$ with $A_g$ being the geometric antenna surface assumed to be a circle.
 \begin{align}
-	T_b\Omega_s=T_A\Omega_A\\
-	\Omega_{A}=\frac{\lambda^2}{A_{e}}, \Omega_{S}=\frac{S_{\nu}}{B_{\nu}}, B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}\\
-	S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}=f(T_{A},A_{e})\\
-	A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5=\pi\qty{1,125}{m^2}2\\
-    \label{eq: antenna temp}
-	\Rightarrow T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}=\frac{S_{\nu}\pi\qty{1,125}{m^2}}{2k_{B}}
+	T_b\Omega_s&=T_A\Omega_A\\
+	\Omega_{A}=\frac{\lambda^2}{A_{e}}, \Omega_{S}&=\frac{S_{\nu}}{B_{\nu}}, B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}\\
+	S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}&=f(T_{A},A_{e})\\
+	A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5&=\pi\qty{1,125}{m^2}2\\
+	\Rightarrow T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}&=\frac{S_{\nu}\pi\qty{1,125}{m^2}}{2k_{B}}
 \end{align}
-\subsubsection{Determination of the system temperature}
+
 \subsubsection{Background Radiation}
+The determination of the background radiation is done at the calibration position where $T_A\approx T'_{sys}$. With the control software of the KRT3 RadioUniversePro the easiest way to measure the background radiation is to do a cross scan over a weak source that barely stands out from the background.\\
+For our purposes we chose the moon as it was at an elevaltion of \qty{30}{\degree}\qty{52}{min} and the recommended range of elevation is between 30 and 40 degrees of elevation.
+
 \subsection{Determination of the angular resolution of the KRT3}
-The expected half-width is $q=1.02 \lambda /D= ...$ with the wavelength $\lambda=...$ and the antenna diameter $D=\qty{3}{m}$.
+The expected half-width is $q=1.02 \lambda /D= ...$ with the wavelength $\lambda=...$ and the antenna diameter $D=\qty{3}{m}$. To determine the angular resolution the radio telescope is moved step wise over the sun and the antenna temperatures are measured.\\
+The concrete settings in RadioUniversePro are a cross-scan in the Total Power Plots-tab with:
+\begin{itemize}
+	\item Reference frame: Horizon
+	\item Span [deg]: 20
+	\item Step [deg]: 1
+	\item Average [s]: 3
+	\item Devices: BBCs
+	\item Save as FITS
+\end{itemize}
 
 \subsection{Determination of the Sensitivity of the instrument}
+\subsubsection{Theoretical sensitivity}
 To determine the theoretical sensitivity of the instrument, the weakest detectable flux density $\Delta S_\nu$ for a given system temperature $T'_{sys}$ can be given by the radiometer equation:
 \begin{align}
 \label{eq: radiometer}
 \Delta S_\nu=\frac{2k}{A_e}\frac{C_sT'_{sys}}{\sqrt{\Delta\nu\tau}}
 \end{align}
 where $C_s\approx 2$ is a dimensionless instrumental constant and $\tau$ the integration time. 
-With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to $\Delta S_\nu=...$.
+With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to:
+\begin{align}
+	\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624,92 \text{ Jy} \\
+	\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682,02 \text{ Jy}
+\end{align}
+With $T'_{\text{sys,left}} = 98.76 \pm 22.54 \text{ K}$, $T'_{\text{sys,right}} = 107.80 \pm 31.65 \text{ K}$, $A_{e} = 1.125\pi$, $\tau = 1\text{s}$, $\Delta \nu = 61\text{kHz}$.
 
-The measurement is carried out with the radio source Vir A with an elevation of ...° at the time of measurement. The necessary integration time is calcuated to be $\tau=...$, taking the flux density at $\nu=\qty{1420.4}{MHz}$ to be $S_\nu=\qty{211}{Jy}\pm\qty{11}{Jy}$ after Baars et al. (1977). 
+The measurement is carried out with the radio source Vir A.\\
+The necessary integration time for detecting Vir A with a signal-to-noise ratio of $S/N=10$ in each channel is calcuated, taking the flux density at $\nu=\qty{1420.4}{MHz}$ to be $S_\nu=\qty{211}{Jy}\pm\qty{11}{Jy}$ after Baars et al. (1977):
+\begin{itemize}
+    \item Virgo A: Flux density $= 211 \pm 11 \text{ Jy}$, Radiogalaxy
+    \item For 5 channels on each side ($\Delta \nu = 5 \cdot 61\text{kHz} = 305\text{kHz}$)
+    \item $S/N = 10$
+    \item $\tau = \left( \frac{2k\cdot C_{S}\cdot T'_{\text{sys}}}{\Delta S_{\nu}\cdot A_{E}} \right)^{2} \cdot \frac{\Delta\nu}{S/N}$
+    \item $\tau_{l} = 4,12\text{s}$
+    \item $\tau_{r} = 5,22\text{s}$
+\end{itemize}
+
+\subsubsection{Determination of the uncertainty of radiant flux measurements}
+The radio signals from space recieved on earth are weak. This can be illustrated by the thought experiment of recieving the signal of a mobile radio on the moon transmitting with \qty{2}{W}, \qty{900}{MHz} and a FWHM of \qty{80}{kHz}, $\sigma=\qty{34}{kHz}$ being recieved on earth. In this scenario the flux density is:
+\begin{align}
+	S_{\nu} &= \frac{P}{4\pi d^2\sqrt{2\pi}\sigma} = \qty{1263.16}{Jy}
+\end{align}
+When compared with the flux density of Cas A at \qty{900}{MHz} ($\qty{1420}{Jy}\pm\qty{70}{Jy}$), it's surprisingly high.\\
+To calculate the flux density of Cas A, we assume the spectral response is a simple power law of $S_{\nu} \propto \nu^{\alpha}, \quad \alpha = -0,7$:
+$\nu = 1420.4\text{ MHz}$: $S_{\nu,\text{CasA}} = 1420 \pm 70 \text{ Jy}$.\\
+Using the previous equation $S_\nu=f(T_A,A_e)$, the antenna temperature $T_A$ for Cas A can be calculated:
+\begin{align}
+c &= \frac{1420,4^{-0,7}\text{ MHz}}{1420\text{ Jy}} \\
+S_{\nu,\text{Cas A}} &= \frac{900^{-0,7}}{c} \text{ Jy} = 1954,37 \text{ Jy} \\
+T_{A} &= \frac{S_{\nu}A_{e}}{2k_{B}} = 1,82 \text{ K} \quad (\text{für } \nu = 1420.4\text{ MHz})
+\end{align}
+
+To measure the flux density means to measure the source (On) and then to do a measurements without the source (Off). As we need to separate the background from the antenna temperature, a so-called Beamswitch measurement needs to carried out in which the position of the source and a reference position next to the source are measured alternately.\\
+From this On-Off measurement the temperature of the source $T_s$ can be determined the following way:
+\begin{align}
+	T_A(ON)-T_A(OFF)=(T_s+T'_{sys})-T'_{sys}
+\end{align}
+The source Vir A was chosen to be observed in a grid pattern on the sky where the KRT3 takes measurements line by line at differnt positions. This means different columns are scanned to assemble the grid pattern into a map in the shape of $\text{pixel} = \text{rows} \times \text{columns}$. The reason Vir A was chosen and not one of the brighter sources, was that Vir A was the only source that fit the parameters of an elevation between \qty{30}{\degree} and \qty{60}{\degree}.\\
+The BBCs 3 and 11 were chosen as they showed the smallest RFI influence even though they show the H1 line.\\
+The measurements were carried out in the tab Mapping with the following settings:
+\begin{itemize}
+	\item Width: 10 deg; Height: 10 deg
+	\item Delta: 0.5 HPBW
+	\item Average: \qty{10}{s}
+\end{itemize}
+The mapping process took 28:35.4\,s according to the software and 29:27.8\,s according to our own timer.
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
 The preamplifier has a frequency range of 1398.00-1460.56 MHz divided into 1024 channels. The frequency resolution of a single channel (the bandwidth) is calculated ...
