@@ -276,9 +276,10 @@ This value is in reasonable agreement with the measured temperature, confirming 
 
 \subsection{Background Radiation}
 In order to convert the raw TPI signal into the actual background temperature, the measured data was normalized using the mean off-source power and the effective system temperature according to
-\[
-T_{h,n}=\frac{\mathrm{TPI}\cdot T'_{\mathrm{sys}}}{\bar{P}_{\mathrm{off}}}.
-\]
+\begin{equation}
+    T_{h,n}=\frac{\mathrm{TPI}\cdot T'_{\mathrm{sys}}}{\bar{P}_{\mathrm{off}}}.
+    \label{eq: normalization}
+\end{equation}
 Here, $T'_{\mathrm{sys}}$ is the effective system temperature and $\bar{P}_{\mathrm{off}}$ is the mean reference power measured during the off-source observation. This normalization removes the dependence on the receiver gain and instantaneous power level and rescales the measured TPI signal into an effective temperature. The resulting background curve (see \autoref{fig: background}) therefore represents the true elevation-dependent contribution of the environment to the antenna temperature, which must be corrected for in order to recover the source signal reliably.
 \begin{figure}[H]
      \centering
@@ -300,7 +301,59 @@ Using the extrapolated course of $T'_{h}$ (see \autoref{fig: extrap_background})
     \label{fig: extrap_background}
 \end{figure}
 
-\subsection{Determination of the angular resolution of the KRT3}
+\subsection{Determination of the Angular Resolution of the KRT3}
+
+The angular resolution of the KRT3 was determined by scanning the Sun in longitude and latitude. The measured signal was normalized to the expected solar antenna temperature $T_{A,\mathrm{Sun}}$. The resulting beam profiles were fitted with Gaussian functions, as shown in Figures~\ref{fig:gaus_fit_left} and~\ref{fig:gaus_fit_right}. The angular resolution was obtained from the full width at half maximum (FWHM) of the fitted Gaussian profiles.
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=\linewidth]{img/ang res/gaussian fit left plot.png}
+    \caption{Gaussian fit of the }
+    \label{fig:gaus_fit_left}
+\end{figure}
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=\linewidth]{img/ang res/gaussian fit right plot.png}
+    \caption{Gaussian fit of the }
+    \label{fig:gaus_fit_right}
+\end{figure}
+The resolution was determined separately for the longitude and latitude scans and for both circular polarization channels. In the longitude scans, the measured angular offset does not correspond directly to a great-circle distance on the sky. Therefore, the angular width was corrected using the factor $\cos(\mathrm{ELV})$, where $\mathrm{ELV}$ is the elevation of the Sun ($\mathrm{ELV} = 42°$):
+\[
+\theta_{\mathrm{lon}} =
+\mathrm{FWHM}_{\mathrm{lon}}\cos(\mathrm{ELV}).
+\]
+For the latitude scans, no such correction is required because the scan follows a great circle approximately directly in elevation.
+
+The theoretical angular resolution of the KRT3 is estimated using
+\[
+\theta_{\mathrm{theo}} \approx 1.02\frac{\lambda}{D},
+\]
+where $D=\qty{3}{m}$ is the antenna diameter and
+$\lambda=\qty{21.1}{cm}=\qty{0.211}{m}$ is the observing wavelength. This gives
+\[
+\theta_{\mathrm{theo}}
+\approx 1.02\frac{0.211}{3}
+\approx 0.0717\,\mathrm{rad}
+\approx 4.11^\circ.
+\]
+
+The measured resolutions are slightly larger than this value for all scans. For the longitude scan, the measured values are
+\[
+\theta_{\mathrm{lon,left}} = 4.60^\circ,
+\qquad
+\theta_{\mathrm{lon,right}} = 4.78^\circ,
+\]
+which are larger than the theoretical value by approximately $11.9\%$ and $16.3\%$, respectively. For the latitude scan, the measured resolutions are
+\[
+\theta_{\mathrm{lat,left}} = 4.39^\circ,
+\qquad
+\theta_{\mathrm{lat,right}} = 4.63^\circ,
+\]
+corresponding to deviations of approximately $6.8\%$ and $12.7\%$.
+
+The measured values are therefore in reasonable agreement with the theoretical resolution. The small systematic increase can be explained by pointing uncertainties, limited sampling, atmospheric fluctuations, imperfections in the Gaussian fit, and the finite angular diameter of the Sun. The right-circular polarization gives slightly larger values than the left-circular polarization, which is consistent with its larger measurement uncertainties and less stable receiver response.
+
+\subsection{Determination of the Sensitivity of the instrument}
+
 We used the software SAOImageDS9 for the evaluation of the measured map \autoref{fig:map vira}. The mean of the map was calculated using a selected region of 35 pixels (see \autoref{fig:map selection}) to be $1455.83\pm 212.206$.\\
 The map was normalised to the system temperature $T'_{sys}$ which is then the $T_A(OFF)$ from \autoref{eq:antenna onoff}. This equation is then used to calculate the antenna temperature of the source $T_s=\qty{1612.17}{K}$.
 
@@ -317,10 +370,6 @@ The map was normalised to the system temperature $T'_{sys}$ which is then the $T
     \caption{The selected region for the mean of the map, avoiding the probable disturbance.}
     \label{fig:map selection}
 \end{figure}
-
-
-\subsection{Determination of the Sensitivity of the instrument}
-
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
 
