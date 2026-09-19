@@ -222,7 +222,7 @@ One of the approximations for doing exactly that, is the assumption that the hyd
 \begin{align}
 	v(R)^2=\frac{GM_R}{R}
 \end{align}
-With $M_R$ being the mass of the Milky Way within the radius $R$ and the gravitational constant $G=\qty{6.67e-^^}{m^3\per\kg\per\s^2}$.\\\\
+With $M_R$ being the mass of the Milky Way within the radius $R$ and the gravitational constant $G=\qty{6.67e-11}{m^3\per\kg\per\s^2}$.\\\\
 As we observe from a point in the same system we want to measure, we need to think about how to actually measure the variable $R$. We observe along a line of sight defined through the relative angle $l$ with respect to the line connecting the sun and the galactic centre (see \autoref{fig:angle}). This means our calculation for $R$, the distance to the point with the highest radial velocity, is $R=R_0\sin(l)$ with $R_0=\qty{8.5}{kpc}$ being the distance of the sun from the galactic centre.\\
 \begin{figure}[h]
      \centering
@@ -235,12 +235,12 @@ The orbital velocity at the tangential point is $v=\omega R$ with $\omega$ being
 	v_\text{rad}&=\omega(R)R-\omega_0 R_0\sin(l)\\
 	&=v(R)-\omega_0R
 \end{align}
-The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0°, b=0°$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and variied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
+The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0$, $b=0$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and variied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
 For that, the telescope is aligned to the galactic plane using the command line in RadioUniversePro. The USBs 3 and 11 in the BBC Tools tab were selected and the following settings were used:
 \begin{itemize}
 	\item Repetitions: 10
 	\item Average [s]: 10
-	\item Elev cutoff [°]: 60
+	\item Elev cutoff [deg]: 60
 	\item Distance [beam]: 4
 	\item galoff
 	\item Aquire OnOff Spectra
