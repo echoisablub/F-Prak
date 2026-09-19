@@ -354,8 +354,43 @@ The measured values are therefore in reasonable agreement with the theoretical r
 
 \subsection{Determination of the Sensitivity of the instrument}
 
-We used the software SAOImageDS9 for the evaluation of the measured map \autoref{fig:map vira}. The mean of the map was calculated using a selected region of 35 pixels (see \autoref{fig:map selection}) to be $1455.83\pm 212.206$.\\
-The map was normalised to the system temperature $T'_{sys}$ which is then the $T_A(OFF)$ from \autoref{eq:antenna onoff}. This equation is then used to calculate the antenna temperature of the source $T_s=\qty{1612.17}{K}$.
+% Measure the mean and standard deviation of the map in the uncalibrated units. This can be done with the software ds9;12 use a sufficiently large (at least 20 pixels) area of the map in which you position a box (Menu Region → Shape → Box); • Now normalise the mean to the system temperature T ′ sys, which is then also our TA(OFF). Then you can also determine the map noise in units of Kelvin with this scaling. Now one still determines the antenna temperature at the source position TA(ON) by converting the measured value in ds9 again with the scaling; • Calculate the antenna temperature of the source using equation (8); • What can you tell about the background? Is constant? Discuss the results quantitatively by determining the value of S/N; • From the log you can get the actual measurement times. What percentage of the measurement time is accounted for by the observation of the source (ON measurement), if 10 seconds are integrated per measurement point? How many maps do you use to detect the source with a signal-to-noise ratio S/N = 10 for the source? Assume the ideal case where S/N ∝ √τ holds. Compare this result with the theoretical expected value. What conclusions do you draw from the mapping of the source and what influences the quality of the measurement significantly?
+The map was evaluated using SAOImageDS9. A region containing 35 pixels was selected away from the source and from the visible disturbance (see \autoref{fig:map selection}). In the uncalibrated map units, the mean and standard deviation were
+\begin{align}
+    \overline{P}_{\mathrm{off}} &= 1455.83, \\
+    \sigma_P &= 212.206.
+\end{align}
+The map was then calibrated by scaling the mean off-source value to the effective system temperature. This gives
+\begin{align}
+    T_A(\mathrm{OFF}) &= \qty{156938.474}{K}, \\
+    \sigma_T &= \frac{\sigma_P}{\overline{P}_{\mathrm{off}}}T'_{\mathrm{sys}}
+    = \qty{15.71}{K}.
+\end{align}
+The measured value at the position of Virgo A was converted using the same scale, resulting in
+\begin{align}
+    T_A(\mathrm{ON}) &= \qty{330622.6}{K}.
+\end{align}
+Using the on-off relation from \autoref{eq:antenna onoff}, the antenna temperature of the source is therefore
+\begin{align}
+    T_s &= \frac{T_A(\mathrm{ON})-T_A(\mathrm{OFF})+T'_{\mathrm{sys}}}
+    {T'_{\mathrm{sys}}}
+    = \qty{1612.17}{K}.
+\end{align}
+
+The background is not perfectly constant across the map. Its variation is reflected by the standard deviation of approximately \qty{15.71}{K}. This noise level is considerably larger than the approximately \qty{1}{K} expected from the theoretical sensitivity for an integration time of \qty{10}{s}. The resulting signal-to-noise ratio is approximately
+\begin{align}
+    \frac{S}{N} = \frac{T_s}{\sigma_T} \approx 102.6.
+\end{align}
+The dominant limitation is therefore not thermal receiver noise, but radio-frequency interference and variations in the receiver and amplifier response. These effects also explain why the background is not spatially uniform.
+
+The complete mapping required about $28\,\mathrm{min}\,35.4\,\mathrm{s}$ according to the software, or $29\,\mathrm{min}\,27.8\,\mathrm{s}$ according to the independent timer. 
+With an integration time of \qty{10}{s} per measurement point and a $5\times5$ map, the source was observed for approximately $250\,\mathrm{s}$. Thus, the on-source measurement accounted for about $14.1\%$ of the total measurement time.
+
+Assuming the ideal relation $S/N\propto\sqrt{\tau}$, the number of equivalent maps required to reach $S/N=10$ can be estimated from
+\begin{align}
+    N_{10} = \left(\frac{10}{S/N}\right)^2.
+\end{align}
+Using the measured values above gives $N_{10}\approx0.01$, meaning that one map would already be sufficient in the ideal statistical case. In practice, we estimate about 25 maps for a reliable detection with $S/N=10$. This difference demonstrates that the ideal square-root scaling does not fully describe the measurement: RFI, receiver instabilities, background variations, and calibration uncertainties dominate the actual data quality.
 
 \begin{figure}[h]
      \centering
@@ -551,6 +586,6 @@ Regarding the angular resolution, the noise is much larger than expected, especi
 \clearpage
 %\section{B. Lab book}
 \addcontentsline{toc}{section}{B. Lab book}
-%\input{../labbook.tex}
+\input{../labbook.tex}
 
 \end{document} 
