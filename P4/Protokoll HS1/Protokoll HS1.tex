@@ -113,7 +113,14 @@ This line is of great importance in astronomy because hydrogen is the most abund
 The 21 cm line also enables the measurement of Doppler shifts. If the hydrogen gas is moving relative to the observer, the frequency of the emission is shifted. From this shift, the radial velocity of the gas can be determined. This makes it possible to study galactic rotation, gas dynamics, and the mass distribution of galaxies. For this reason, the 21 cm line is one of the most important tools in modern radio astronomy and is fundamental for studying neutral hydrogen in the universe.
 
 \section{Observation and Evaluation}
-\subsection{The KRT3 telescope}
+\subsection{The KRT3 Telescope}
+The KRT3 is a SPIDER 300A radio telescope manufactured by PrimaLuceLab SpA. It was installed in 2019 and consists of a parabolic antenna with a diameter of \qty{3}{m} and a digital receiver. The antenna is mounted on an alt-azimuth mount, allowing it to move independently in elevation and azimuth and to track astronomical sources automatically.
+
+The antenna focuses incoming radio waves onto a receiving horn located at its primary focus. A septum inside the horn separates the radiation into left-hand circular polarization (LHCP) and right-hand circular polarization (RHCP). Each polarization is amplified by a separate low-noise amplifier located directly behind the horn. This arrangement minimizes signal losses before the first amplification stage. The low-noise amplifiers provide a gain of approximately \qty{33}{dB}.
+
+The digital superheterodyne receiver covers a frequency range from \qty{1398}{MHz} to \qty{1460.5}{MHz}. This range includes the 21-cm hydrogen line at approximately \qty{1420.4}{MHz}. The total bandwidth is divided into 1024 channels, each with a bandwidth of approximately \qty{61}{kHz}. The channels are grouped into 16 Base Band Converters (BBCs): BBCs 1--8 record the left-hand circular polarization, while BBCs 9--16 record the right-hand circular polarization.
+
+The received signals are mixed down to a lower intermediate frequency and digitized using a 14-bit analogue-to-digital converter. A digital signal processor then calculates the spectrum using a Fourier transform. The telescope and receiver are controlled with the software RADIOUNIVERSEPRO, which is used to point the antenna, record measurements, and display the resulting data.
 
 \subsection{Weather Conditions}
 The experiment was carried out on 07.09.2026, starting at around 12:35. The weather was stable throughout the day with partial cloud coverage and temperatures around \qty{19}{\degree}, a relative humidity of 60\% and a windspeed of \qty{1}{\m\per\s}.
