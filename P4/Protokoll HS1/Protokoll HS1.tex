@@ -205,6 +205,7 @@ To measure the flux density means to measure the source (On) and then to do a me
 From this On-Off measurement the temperature of the source $T_s$ can be determined the following way:
 \begin{align}
 	T_A(ON)-T_A(OFF)=(T_s+T'_{sys})-T'_{sys}
+\label{eq:antenna onoff}
 \end{align}
 The source Vir A was chosen to be observed in a grid pattern on the sky where the KRT3 takes measurements line by line at differnt positions. This means different columns are scanned to assemble the grid pattern into a map in the shape of $\text{pixel} = \text{rows} \times \text{columns}$. The reason Vir A was chosen and not one of the brighter sources, was that Vir A was the only source that fit the parameters of an elevation between \qty{30}{\degree} and \qty{60}{\degree}.\\
 The BBCs 3 and 11 were chosen as they showed the smallest RFI influence even though they show the H1 line.\\
@@ -300,7 +301,23 @@ Using the extrapolated course of $T'_{h}$ (see \autoref{fig: extrap_background})
 \end{figure}
 
 \subsection{Determination of the angular resolution of the KRT3}
-hiu
+We used the software SAOImageDS9 for the evaluation of the measured map \autoref{fig:map vira}. The mean of the map was calculated using a selected region of 35 pixels (see \autoref{fig:map selection}) to be $1455.83\pm 212.206$.\\
+The map was normalised to the system temperature $T'_{sys}$ which is then the $T_A(OFF)$ from \autoref{eq:antenna onoff}. This equation is then used to calculate the antenna temperature of the source $T_s=\qty{1612.17}{K}$.
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/map/map_VIRA_12.52_12.39_2461291,01986131.png}
+    \caption{Map of the galaxy Virgo A}
+    \label{fig:map vira}
+\end{figure}
+
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.5]{img/labbook/ds9 region screenshot.png}
+    \caption{The selected region for the mean of the map, avoiding the probable disturbance.}
+    \label{fig:map selection}
+\end{figure}
+
 
 \subsection{Determination of the Sensitivity of the instrument}
 
@@ -330,6 +347,7 @@ hiu
 
 \section{Discussion}
 
+Regarding the angular resolution, the noise is much larger than expected, especially when compared to the theoretical sensitivity of \qty{600}{Jy}. 
 
 \section{Summary}
 
