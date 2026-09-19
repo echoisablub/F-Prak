@@ -218,8 +218,7 @@ The measurements were carried out in the tab Mapping with the following settings
 The mapping process took 28:35.4\,s according to the software and 29:27.8\,s according to our own timer.
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
-Hydrogen can be detected with the help of the \qty{21}{cm} line. The line exists because of a transition into the ground state of the neutral atom. Because Hydrogen is the most abundant element in the atmosphere and because radio waves aren't blocked by the intersteller dust, it's so practical to use the \qty{21}{cm} line. Due to the doppler effect impacting the observed frequencies, the radial velocities of gas along a line of sight can be determined.\\
-One of the approximations for doing exactly that, is the assumption that the hydrogen is distributed in the plane on circular orbits around the galactic centre. This approximation leads to the following orbital velocity:
+One of the approximations determining the radial velocity is the assumption that the hydrogen is distributed in the plane on circular orbits around the galactic centre. This approximation leads to the following orbital velocity:
 \begin{align}
 	v(R)^2=\frac{GM_R}{R}
 \end{align}
@@ -227,7 +226,7 @@ With $M_R$ being the mass of the Milky Way within the radius $R$ and the gravita
 As we observe from a point in the same system we want to measure, we need to think about how to actually measure the variable $R$. We observe along a line of sight defined through the relative angle $l$ with respect to the line connecting the sun and the galactic centre (see \autoref{fig:angle}). This means our calculation for $R$, the distance to the point with the highest radial velocity, is $R=R_0\sin(l)$ with $R_0=\qty{8.5}{kpc}$ being the distance of the sun from the galactic centre.\\
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.5]{img/angle_of_measurement.png}
+     \includegraphics[scale=0.4]{img/angle_of_measurement.png}
     \caption{A schematic representation of the rotation of H1 clouds around the galactic centre together with the resulting line profile to the right \cite{0}.}
     \label{fig:angle}
 \end{figure}
@@ -235,6 +234,7 @@ The orbital velocity at the tangential point is $v=\omega R$ with $\omega$ being
 \begin{align}
 	v_\text{rad}&=\omega(R)R-\omega_0 R_0\sin(l)\\
 	&=v(R)-\omega_0R
+	\label{eq:ang vel}
 \end{align}
 The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0$, $b=0$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and variied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
 For that, the telescope is aligned to the galactic plane using the command line in RadioUniversePro. The USBs 3 and 11 in the BBC Tools tab were selected and the following settings were used:
@@ -359,19 +359,85 @@ The map was normalised to the system temperature $T'_{sys}$ which is then the $T
 
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.5]{img/map/map_VIRA_12.52_12.39_2461291,01986131.png}
+     \includegraphics[scale=0.45]{img/map/map_VIRA_12.52_12.39_2461291,01986131.png}
     \caption{Map of the galaxy Virgo A}
     \label{fig:map vira}
 \end{figure}
 
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.5]{img/labbook/ds9 region screenshot.png}
+     \includegraphics[scale=0.3]{img/labbook/ds9 region screenshot.png}
     \caption{The selected region for the mean of the map, avoiding the probable disturbance.}
     \label{fig:map selection}
 \end{figure}
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
+The measured spectra for the varying gelactic longitudes were averaged using the provided python script \textsc{spectrum.py}.\\
+When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/21cm/cal_l_80.png}
+    \caption{The measured \qty{21}{cm}-line spectrum for $l=\qty{80}{\degree}$ overlaid with the LAB data of the spectrum for the same position.}
+    \label{fig:21ref comp}
+\end{figure}
+For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done grafically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
+Now the orbital velocities at the tangential points are calculated using \autoref{eq:ang vel}: \autoref{tab:21 ergebnisse}.\\
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\toprule
+		l [deg] & R [kpc] & $v_{max}$ [\unit{\kilo\m\per\s}] & $v_R$ [\unit{\kilo\m\per\s}] \\
+		\midrule
+		10 & $1.48\pm4.09$ & -- & $38.31\pm4.09$\\
+		20 & $2.91\pm4.00$ & $70.70\pm14.50$ & $146.02\pm15.04$\\
+		30 & $4.25\pm3.84$ & $89.23\pm16.67$ & $199.23\pm 17.11$\\
+		40 & $5.46\pm3.61$ & $71.20\pm 5.38$ & $212.52\pm6.48$\\
+		50 & $6.51\pm3.31$ & $69.26\pm 4.07$ & $237.75\pm5.25$\\
+		60 & $7.36\pm2.92$ & $30.67\pm 3.87$ & $221.16\pm4.85$\\
+		70 & $7.99\pm2.41$ & $19.89\pm 1.01$ & $226.69\pm2.61$\\
+		80 & $8.37\pm1.72$ & $30.95\pm11.00$ & $247.59\pm11.13$\\
+		90 & $8.50\pm0.00$ & $15.85\pm 3.83$ & $235.85\pm3.83$\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:21 ergebnisse}
+\end{table}
+When plotting the rotation curve against the distance from the galactic center (see \autoref{fig:radian vel}), the expected form of the curve is a constant line, however we can clearly see a rise in velocity for bigger distances.\\\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/21cm/v(R) plot.png}
+    \caption{The radian velocity at each distance R.}
+    \label{fig:radian vel}
+\end{figure}
+Now we calculate the enclosed mass $M_R$ of the milky way using:
+\begin{align}
+	M_R = 0.234\times 10^{10}\left(\frac{v(R)}{\qty{100}{km\per\s}}\right)^2\left(\frac{R}{\text{kpc}}\right)M_\text{sun}
+\end{align}
+with $1\text{\, M}_\text{sun}=\qty{1.98e30}{kg}$ being one solar mass. When plotting the enclosed mass (see \autoref{fig:encl mass}), a steady rise of mass can be observed. The discrepancy with the expected distribution for the visible matter (a thin disc), can be explained with the existance of dark matter.\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/21cm/enclosed mass of the milky way plot.png}
+    \caption{The enclosed mass of the milky way at each distance R.}
+    \label{fig:encl mass}
+\end{figure}
+To separate the baryonic from the dark matter in both distributions, we need to calculate the orbital velocity of the baryonic matter using the approximation of the shape as a disc:
+\begin{align}
+	v_d=452\sqrt{\frac{\text{kpc}}{R}\left[1-\left(\frac{R}{2\text{kpc}}\right)\right]}\text{\,kms}^{-1}
+\end{align}
+With the distinction between baryonic and dark matter in our distributions (see \autoref{fig:radian baryon vel} and \autoref{fig:encl mass all}) we can clearly see that while baryonic matter is distributed approximately evenly across the galaxy, dark matter bunches at the outskirts of the milky way. The mass of dark matter enclosed within the solar orbit is $M_{\text{DM}}(R_0) = 66411575447.22 \pm 3593349279.00 \, M_{\odot}$.\\
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/21cm/v R und d plot.png}
+    \caption{The radian and baryonic velocities at each distance R.}
+    \label{fig:radian baryon vel}
+\end{figure}
+\begin{figure}[h]
+     \centering
+     \includegraphics[scale=0.4]{img/21cm/mass all plot.png}
+    \caption{The enclosed mass of the milky way at each distance R broken down for the differnt mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
+    \label{fig:encl mass all}
+\end{figure}
+Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\pi\langle\rho_{DM}\rangle R_0^3$, the mean density $\langle\rho_{DM}\rangle = ...$ of the dark matter within the solar orbit can be calculated.
+
 
 %\begin{figure}[H]
     %\centering
