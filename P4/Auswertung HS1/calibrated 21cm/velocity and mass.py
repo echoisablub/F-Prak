@@ -1,6 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({
+    "font.size": 14,
+    "axes.titlesize": 14,
+    "axes.labelsize": 14,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14,
+    "legend.title_fontsize": 14,
+})
+
 filepath="Auswertung HS1/calibrated 21cm/cm21_tab.txt"
 data = np.loadtxt(filepath, skiprows=1)
 l = data[:,0]
@@ -96,14 +106,14 @@ plt.errorbar(
     label=r"$v_R$ mit Fehlerbalken"
 )
 
-plt.errorbar(
+'''plt.errorbar(
     R[1:],
     v_d[1:],
     yerr=v_d_err[1:],
     fmt="x",
     capsize=3,
     label=r"$v_d$ mit Fehlerbalken"
-)
+)'''
 
 plt.xlabel(r"$R$ [kpc]")
 plt.ylabel(r"velocity [kms^{-1}]")
@@ -122,7 +132,7 @@ plt.errorbar(
     label=r"$M_R$ mit Fehlerbalken"
 )
 
-plt.errorbar(
+'''plt.errorbar(
     R[1:],
     M_d[1:],
     yerr=M_d_err[1:],
@@ -138,7 +148,7 @@ plt.errorbar(
     fmt="x",
     capsize=3,
     label=r"$M_{DM}$ mit Fehlerbalken"
-)
+)'''
 
 plt.xlabel(r"$R$ [kpc]")
 plt.ylabel(r"$M_R$ [solar masses]")

@@ -153,7 +153,7 @@ The goal is measuring the antenna temperature of the sun and converting it into 
 
 \subsubsection{Background Radiation}
 The determination of the background radiation is done at the calibration position where $T_A\approx T'_{sys}$. With the control software of the KRT3 RadioUniversePro the easiest way to measure the background radiation is to do a cross scan over a weak source that barely stands out from the background.\\
-For our purposes we chose the moon as it was at an elevaltion of \qty{30}{\degree}\qty{52}{min} and the recommended range of elevation is between 30 and 40 degrees of elevation.
+For our purposes we chose the source Virgo A as it was at an elevaltion of \qty{47}{\degree}\qty{56}{min}. Even when the recommended range of elevation is between 30 and 40 degrees of elevation, we chose the VirA source in coordination with the supervisor.
 
 \subsection{Determination of the angular resolution of the KRT3}
 The expected half-width is $q=1.02 \lambda /D= ...$ with the wavelength $\lambda=...$ and the antenna diameter $D=\qty{3}{m}$. To determine the angular resolution the radio telescope is moved step wise over the sun and the antenna temperatures are measured.\\
@@ -416,19 +416,19 @@ Using the measured values above gives $N_{10}\approx0.01$, meaning that one map 
 \subsection{Observation of neutral hydrogen in the Milky Way}
 The measured spectra for the varying gelactic longitudes were averaged using the provided python script \textsc{spectrum.py}.\\
 When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
-     \includegraphics[scale=0.4]{img/21cm/cal_l_80.png}
+     \includegraphics[scale=0.5]{img/21cm/cal_l_80.png}
     \caption{The measured \qty{21}{cm}-line spectrum for $l=\qty{80}{\degree}$ overlaid with the LAB data of the spectrum for the same position.}
     \label{fig:21ref comp}
 \end{figure}
 For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done grafically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
 Now the orbital velocities at the tangential points are calculated using \autoref{eq:ang vel}: \autoref{tab:21 ergebnisse}.\\
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\toprule
-		l [deg] & R [kpc] & $v_{max}$ [\unit{\kilo\m\per\s}] & $v_R$ [\unit{\kilo\m\per\s}] \\
+		l $ \pm 2$ [deg] & R [kpc] & $v_{max}$ [\unit{\kilo\m\per\s}] & $v_R$ [\unit{\kilo\m\per\s}] \\
 		\midrule
 		10 & $1.48\pm4.09$ & -- & $38.31\pm4.09$\\
 		20 & $2.91\pm4.00$ & $70.70\pm14.50$ & $146.02\pm15.04$\\
@@ -443,6 +443,7 @@ Now the orbital velocities at the tangential points are calculated using \autore
 	\end{tabular}
 	\label{tab:21 ergebnisse}
 \end{table}
+
 When plotting the rotation curve against the distance from the galactic center (see \autoref{fig:radian vel}), the expected form of the curve is a constant line, however we can clearly see a rise in velocity for bigger distances.\\\\
 \begin{figure}[h]
      \centering
@@ -466,13 +467,13 @@ To separate the baryonic from the dark matter in both distributions, we need to 
 	v_d=452\sqrt{\frac{\text{kpc}}{R}\left[1-\left(\frac{R}{2\text{kpc}}\right)\right]}\text{\,kms}^{-1}
 \end{align}
 With the distinction between baryonic and dark matter in our distributions (see \autoref{fig:radian baryon vel} and \autoref{fig:encl mass all}) we can clearly see that while baryonic matter is distributed approximately evenly across the galaxy, dark matter bunches at the outskirts of the milky way. The mass of dark matter enclosed within the solar orbit is $M_{\text{DM}}(R_0) = 66411575447.22 \pm 3593349279.00 \, M_{\odot}$.\\
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.4]{img/21cm/v R und d plot.png}
     \caption{The radian and baryonic velocities at each distance R.}
     \label{fig:radian baryon vel}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
      \includegraphics[scale=0.4]{img/21cm/mass all plot.png}
     \caption{The enclosed mass of the milky way at each distance R broken down for the differnt mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
@@ -504,7 +505,22 @@ Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\p
 
 \section{Discussion}
 
-Regarding the angular resolution, the noise is much larger than expected, especially when compared to the theoretical sensitivity of \qty{600}{Jy}. 
+The main objectives of the experiment were to characterise the KRT3 radio telescope, determine its angular resolution and sensitivity, and use the 21-cm line to investigate the rotation of the Milky Way. Overall, these objectives were achieved, although several measurements were affected by systematic uncertainties and external influences.
+
+The system temperatures were determined separately for the two circular polarization channels. The left-hand polarization yielded
+$T'_{sys,left}=98.76\pm22.54K$, while the right-hand polarization yielded
+$T'_{sys,right}=107.80\pm31.65K$. The larger uncertainty in the right-hand channel indicates a less stable receiver response or stronger interference in this polarization. The measured solar antenna temperatures were somewhat higher than the theoretical value of approximately \qty{972.75}{K}. This difference can be caused by radio-frequency interference, calibration uncertainties, and variations in the solar flux during the measurement.
+
+The background radiation showed a clear dependence on elevation and azimuth. The background temperature increased at low elevations because the antenna received more atmospheric emission, ground radiation, and radiation from nearby structures. The azimuthal variation indicates that the local environment was not uniform around the telescope.
+
+The measured angular resolutions were close to the theoretical value of approximately \qty{4.11}{\degree}. The measured values were between \qty{4.39}{\degree} and \qty{4.78}{\degree}, and were therefore slightly larger than expected. This agreement is reasonable considering the positioning accuracy of the telescope, the finite angular diameter of the Sun, atmospheric fluctuations, limited sampling, and uncertainties in the Gaussian fits. The slightly larger values obtained for the right-hand polarization are consistent with its greater measurement uncertainty.
+
+The mapping of Virgo A confirmed the presence of a source signal. The source antenna temperature was determined to be approximately \qty{1612.17}{K}, while the map noise was about \qty{15.71}{K}. This corresponds to a measured signal-to-noise ratio of approximately $\frac{S}{N}\approx 103$.
+Thus, the source was clearly detected. However, the measured noise was considerably larger than expected from the theoretical sensitivity. The main causes are likely radio-frequency interference, receiver instabilities, background variations, and calibration uncertainties. Consequently, the ideal relation $S/N\propto\sqrt{\tau}$ cannot be expected to describe the measurement perfectly.
+
+The 21-cm measurements successfully revealed the spectral line of neutral hydrogen at different galactic longitudes. The measured spectra showed the expected changes in the radial velocity of the hydrogen gas. However, the derived rotation curve deviated from the ideal expectation of a nearly constant orbital velocity. The uncertainties in identifying the line maximum, the limited frequency resolution, baseline variations, and the relatively small number of measurements contribute to this deviation.
+
+The choice of baseline is particularly important for the H~I measurements. The baseline represents the continuum level and instrumental background, which must be subtracted before determining the line intensity and its maximum velocity. If the baseline is chosen incorrectly, the position of the line maximum and therefore the derived radial velocity can be shifted. This effect is especially relevant for weak or broad spectral features and can produce systematic errors in the rotation curve. In addition, radio-frequency interference and residual background structure may distort the baseline. Despite these limitations, the measurements provide a qualitatively consistent demonstration of the distribution and kinematics of neutral hydrogen in the Milky Way.
 
 \section{Summary}
 

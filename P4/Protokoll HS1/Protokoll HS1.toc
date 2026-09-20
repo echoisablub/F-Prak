@@ -15,11 +15,11 @@
 \contentsline {section}{\numberline {3}Results}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Determination of the system temperature}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Background Radiation}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Determination of the Angular Resolution of the KRT3}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Determination of the Angular Resolution of the KRT3}{8}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Determination of the Sensitivity of the instrument}{9}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Observation of neutral hydrogen in the Milky Way}{10}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Discussion}{11}{section.4}%
-\contentsline {section}{\numberline {5}Summary}{11}{section.5}%
+\contentsline {section}{\numberline {4}Discussion}{13}{section.4}%
+\contentsline {section}{\numberline {5}Summary}{14}{section.5}%
 \contentsline {section}{\nonumberline References}{A}{section*.14}%
 \contentsline {section}{List of Figures}{B}{section*.14}%
 \contentsline {section}{\numberline {A}$H_1$ spetra}{C}{appendix.A}%
