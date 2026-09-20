@@ -13,7 +13,7 @@
 \usepackage{siunitx}
 \usepackage{bookmark}
 \usepackage{booktabs}
-\sisetup{locale = DE}
+%\sisetup{locale = DE}
 \usepackage{subcaption}
 \usepackage{listings}
 %\usepackage[settings]{markdown}
@@ -118,16 +118,16 @@ The KRT3 is a SPIDER 300A radio telescope manufactured by PrimaLuceLab SpA. It w
 
 The antenna focuses incoming radio waves onto a receiving horn located at its primary focus. A septum inside the horn separates the radiation into left-hand circular polarization (LHCP) and right-hand circular polarization (RHCP). Each polarization is amplified by a separate low-noise amplifier located directly behind the horn. This arrangement minimizes signal losses before the first amplification stage. The low-noise amplifiers provide a gain of approximately \qty{33}{dB}.
 
-The digital superheterodyne receiver covers a frequency range from \qty{1398}{MHz} to \qty{1460.5}{MHz}. This range includes the 21-cm hydrogen line at approximately \qty{1420.4}{MHz}. The total bandwidth is divided into 1024 channels, each with a bandwidth of approximately \qty{61}{kHz}. The channels are grouped into 16 Base Band Converters (BBCs): BBCs 1--8 record the left-hand circular polarization, while BBCs 9--16 record the right-hand circular polarization.
+The digital superheterodyne receiver covers a frequency range from \qty{1398}{MHz} to \qty{1460.5}{MHz}. This range includes the \qty{21}{cm} hydrogen line at approximately \qty{1420.4}{MHz}. The total bandwidth is divided into 1024 channels, each with a bandwidth of approximately \qty{61}{kHz}. The channels are grouped into 16 Base Band Converters (BBCs): BBCs 1--8 record the left-hand circular polarization, while BBCs 9--16 record the right-hand circular polarization.
 
-The received signals are mixed down to a lower intermediate frequency and digitized using a 14-bit analogue-to-digital converter. A digital signal processor then calculates the spectrum using a Fourier transform. The telescope and receiver are controlled with the software RADIOUNIVERSEPRO, which is used to point the antenna, record measurements, and display the resulting data.
+The received signals are mixed down to a lower intermediate frequency and digitized using a 14-bit analogue-to-digital converter. A digital signal processor then calculates the spectrum using a Fourier transform. The telescope and receiver are controlled with the software \textsc{RadioUniversePro}, which is used to point the antenna, record measurements, and display the resulting data.
 
 \subsection{Weather Conditions}
 The experiment was carried out on 07.09.2026, starting at around 12:35. The weather was stable throughout the day with partial cloud coverage and temperatures around \qty{19}{\degree}, a relative humidity of 60\% and a windspeed of \qty{1}{\m\per\s}.
 
 \subsection{Calibration}
 \subsubsection{Determination of the system temperature}
-As the reciever recieves radiation not only from the source $T_S$ but also from the environment $T_h$. In addition to those two external sources of radiation, the antenna also picks up on the radiation it's own system emits $T_{sys}$. This means the measured power of the reciever, represented by the antenna temperature, can be broken down the following way:
+The reciever recieves radiation not only from the source $T_S$ but also from the environment $T_h$. In addition to those two external sources of radiation, the antenna also picks up on the radiation it's own system emits $T_{sys}$. This means the measured power of the reciever, represented by the antenna temperature, can be broken down the following way:
 \begin{align}
 	T_A=T_S+T_h+T_{sys}
 \end{align}
@@ -137,7 +137,7 @@ It is difficult to seperate the pure system temperature and the background radia
 \end{align}
 The effective system temperature now includes all unwanted contributions. This means that to know the contribution of a source, one must know the effective system temperature. Determining the effective system temperature is calibrating the telescope by doing a 'On-Off' measurement through measuring a source with a known flux density and then measuring a piece of empty sky. The KRT3 however, can only measure the sun as a source with high enough flux density but the sun is not a constant source which is why a noise generator needs to be used.\\
 The noise generator injects a signal directly into the antenna horn. The calibration temperature $T_{cal}=\qty{170}{K}$ is the expected antenna temperature that is observed additionally when the noise generator is switched on.\\
-When assuming the sun to be a point-like source \autoref{eq:pointsrc} can be used in the form of:
+When assuming the sun to be a point-like source, the following approximation can be used:
 \begin{align}
 	T_b\Omega_s=T_A\Omega_A
 \end{align}
@@ -147,17 +147,17 @@ The goal is measuring the antenna temperature of the sun and converting it into 
 	T_b\Omega_s&=T_A\Omega_A\\
 	\Omega_{A}=\frac{\lambda^2}{A_{e}}, \Omega_{S}&=\frac{S_{\nu}}{B_{\nu}}, B_{\nu}=\frac{2k_{B}T_{b}}{\lambda^2}\\
 	S_{\nu}=\frac{T_{A}\cdot 2k_{B}}{A_{e}}&=f(T_{A},A_{e})\\
-	A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5&=\pi\qty{1,125}{m^2}2\\
-	\Rightarrow T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}&=\frac{S_{\nu}\pi\qty{1,125}{m^2}}{2k_{B}}
+	A_{e}=\pi r^{2}\cdot\eta=1,5^2\pi\cdot0,5&=\pi\cdot\qty{1,125}{m^2}\\
+	\Rightarrow T_{A}=\frac{S_{\nu}A_{e}}{2k_{B}}&=\frac{S_{\nu}\cdot\pi\cdot\qty{1,125}{m^2}}{2k_{B}}
 \end{align}
 
 \subsubsection{Background Radiation}
-The determination of the background radiation is done at the calibration position where $T_A\approx T'_{sys}$. With the control software of the KRT3 RadioUniversePro the easiest way to measure the background radiation is to do a cross scan over a weak source that barely stands out from the background.\\
-For our purposes we chose the source Virgo A as it was at an elevaltion of \qty{47}{\degree}\qty{56}{min}. Even when the recommended range of elevation is between 30 and 40 degrees of elevation, we chose the VirA source in coordination with the supervisor.
+The determination of the background radiation is done at the calibration position where $T_A\approx T'_{sys}$. With the control software of the KRT3 \textsc{RadioUniversePro} the easiest way to measure the background radiation is to do a cross scan over a weak source that barely stands out from the background.\\
+For our purposes we chose the source Virgo A as it was at an elevaltion of \qty{47}{\degree}\,\qty{56}{min}. Even when the recommended range of elevation is between 30 and 40 degrees of elevation, we chose the VirA source in coordination with the supervisor.
 
 \subsection{Determination of the angular resolution of the KRT3}
-The expected half-width is $q=1.02 \lambda /D= ...$ with the wavelength $\lambda=...$ and the antenna diameter $D=\qty{3}{m}$. To determine the angular resolution the radio telescope is moved step wise over the sun and the antenna temperatures are measured.\\
-The concrete settings in RadioUniversePro are a cross-scan in the Total Power Plots-tab with:
+The expected half-width is $q=1.02 \lambda /D$ with wavelength $\lambda$ and antenna diameter $D=\qty{3}{m}$. To determine the angular resolution the radio telescope is moved step wise over the sun and the antenna temperatures are measured.\\
+The concrete settings in \textsc{RadioUniversePro} are a cross-scan in the Total Power Plots-tab with:
 \begin{itemize}
 	\item Reference frame: Horizon
 	\item Span [deg]: 20
@@ -172,7 +172,7 @@ The concrete settings in RadioUniversePro are a cross-scan in the Total Power Pl
 To determine the theoretical sensitivity of the instrument, the weakest detectable flux density $\Delta S_\nu$ for a given system temperature $T'_{sys}$ can be given by the radiometer equation:
 \begin{align}
 \label{eq: radiometer}
-\Delta S_\nu=\frac{2k}{A_e}\frac{C_sT'_{sys}}{\sqrt{\Delta\nu\tau}}
+\Delta S_\nu=\frac{2k}{A_e}\cdot\frac{C_sT'_{sys}}{\sqrt{\Delta\nu\tau}}
 \end{align}
 where $C_s\approx 2$ is a dimensionless instrumental constant and $\tau$ the integration time. 
 With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to:
@@ -199,13 +199,13 @@ The radio signals from space recieved on earth are weak. This can be illustrated
 	S_{\nu} &= \frac{P}{4\pi d^2\sqrt{2\pi}\sigma} = \qty{1263.16}{Jy}
 \end{align}
 When compared with the flux density of Cas A at \qty{900}{MHz} ($\qty{1420}{Jy}\pm\qty{70}{Jy}$), it's surprisingly high.\\
-To calculate the flux density of Cas A, we assume the spectral response is a simple power law of $S_{\nu} \propto \nu^{\alpha}, \quad \alpha = -0,7$:
+To calculate the flux density of Cas A, we assume the spectral response is a simple power law of $S_{\nu} \propto \nu^{\alpha}, \quad \alpha = -0.7$:
 $\nu = 1420.4\text{ MHz}$: $S_{\nu,\text{CasA}} = 1420 \pm 70 \text{ Jy}$.\\
 Using the previous equation $S_\nu=f(T_A,A_e)$, the antenna temperature $T_A$ for Cas A can be calculated:
 \begin{align}
-c &= \frac{1420,4^{-0,7}\text{ MHz}}{1420\text{ Jy}} \\
-S_{\nu,\text{Cas A}} &= \frac{900^{-0,7}}{c} \text{ Jy} = 1954,37 \text{ Jy} \\
-T_{A} &= \frac{S_{\nu}A_{e}}{2k_{B}} = 1,82 \text{ K} \quad (\text{für } \nu = 1420.4\text{ MHz})
+c &= \frac{1420,4^{-0.7}\text{ MHz}}{1420\text{ Jy}} \\
+S_{\nu,\text{Cas A}} &= \frac{900^{-0.7}}{c} \text{Jy} = \qty{1954.37}{Jy} \\
+T_{A} &= \frac{S_{\nu}A_{e}}{2k_{B}} = \qty{1.82}{K} \quad (\text{für } \nu = 1420.4\text{ MHz}) \label{eq: antenna temp}
 \end{align}
 
 To measure the flux density means to measure the source (On) and then to do a measurements without the source (Off). As we need to separate the background from the antenna temperature, a so-called Beamswitch measurement needs to carried out in which the position of the source and a reference position next to the source are measured alternately.\\
@@ -225,6 +225,16 @@ The measurements were carried out in the tab Mapping with the following settings
 The mapping process took 28:35.4\,s according to the software and 29:27.8\,s according to our own timer.
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
+\subsubsection{Determine the frequency settings of the reciever}
+The KRT3 has a frequency range of \qtyrange[range-units = repeat]{1398.00}{1460.56}{MHz} divided up into 1024 channels with a preset bandwidth of \qty{8}{MHz}.\\
+With the bandwidth of a single channel $\delta\nu=\frac{\Delta\nu}{1024}=\frac{\qty{1460.56}{MHz}-\qty{1398.00}{MHz}}{1024}=\qty{62.56}{MHz}$ and the lab frequency of the \qty{21}{cm} line being $\nu_{0}=\qty{1420.4}{MHz}$, the velocity resolution can be calculated:
+\begin{align}
+	\frac{\delta v}{c}&=\frac{\delta\nu}{\nu_{0}}\\
+	\Leftrightarrow \delta v &= \frac{c}{\nu_{0}}\cdot \delta\nu=\qty{12.89}{km\per\s}
+\end{align}
+To measure the H1 line at the lab frequency and a radial velocity of \qty{0}{km\per\s} the channels BBC 3 and 11 can be used. Even with an assumed maximal radial velocity of $\pm\qty{200}{km\per\s}$ those channels are sufficient as the frequency shift due to the Doppler effect is only \qty{0.94}{MHz} and the single channels have a frequency range of \qty{8}{MHz}.
+
+\subsubsection{Measurement of the 21cm line along the Milky Way plane}
 One of the approximations determining the radial velocity is the assumption that the hydrogen is distributed in the plane on circular orbits around the galactic centre. This approximation leads to the following orbital velocity:
 \begin{align}
 	v(R)^2=\frac{GM_R}{R}
@@ -244,7 +254,7 @@ The orbital velocity at the tangential point is $v=\omega R$ with $\omega$ being
 	\label{eq:ang vel}
 \end{align}
 The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0$, $b=0$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and variied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
-For that, the telescope is aligned to the galactic plane using the command line in RadioUniversePro. The USBs 3 and 11 in the BBC Tools tab were selected and the following settings were used:
+For that, the telescope is aligned to the galactic plane using the command line in \textsc{RadioUniversePro}. The USBs 3 and 11 in the BBC Tools tab were selected and the following settings were used:
 \begin{itemize}
 	\item Repetitions: 10
 	\item Average [s]: 10
@@ -423,8 +433,8 @@ When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile o
     \label{fig:21ref comp}
 \end{figure}
 For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done grafically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
-Now the orbital velocities at the tangential points are calculated using \autoref{eq:ang vel}: \autoref{tab:21 ergebnisse}.\\
 \begin{table}[H]
+	\label{tab:21 ergebnisse}
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\toprule
@@ -441,9 +451,9 @@ Now the orbital velocities at the tangential points are calculated using \autore
 		90 & $8.50\pm0.00$ & $15.85\pm 3.83$ & $235.85\pm3.83$\\
 		\bottomrule
 	\end{tabular}
-	\label{tab:21 ergebnisse}
-    \caption{}
+    \caption{The values of $R$, $v_{max}$ and $v_R$ for each galactic longitude measured.}
 \end{table}
+Now the orbital velocities at the tangential points are calculated using \autoref{eq:ang vel}: \autoref{tab:21 ergebnisse}.\\
 
 When plotting the rotation curve against the distance from the galactic center (see \autoref{fig:radian vel}), the expected form of the curve is a constant line, however we can clearly see a rise in velocity for bigger distances.\\\\
 \begin{figure}[h]
@@ -468,7 +478,8 @@ To separate the baryonic from the dark matter in both distributions, we need to 
 \begin{align}
 	v_d=452\sqrt{\frac{\text{kpc}}{R}\left[1-\left(\frac{R}{2\text{kpc}}\right)\right]}\text{\,kms}^{-1}
 \end{align}
-With the distinction between baryonic and dark matter in our distributions (see \autoref{fig:radian baryon vel} and \autoref{fig:encl mass all}) we can clearly see that while baryonic matter is distributed approximately evenly across the galaxy, dark matter bunches at the outskirts of the milky way. The mass of dark matter enclosed within the solar orbit is $M_{\text{DM}}(R_0) = 66411575447.22 \pm 3593349279.00 \, M_{\odot}$.\\
+With the distinction between baryonic and dark matter in our distributions (see \autoref{fig:radian baryon vel} and \autoref{fig:encl mass all}) we can clearly see that while baryonic matter is distributed approximately evenly across the galaxy, dark matter bunches at the outskirts of the milky way. The mass of dark matter enclosed within the solar orbit is $M_{\text{DM}}(R_0) \approx 66.41 \times 10^9 \pm 3.59 \times 10^9 \, M_{\odot}$.\\
+%M_{\text{DM}}(R_0) = 66411575447.22 \pm 3593349279.00 \, M_{\odot}
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/v R und d plot.png}
@@ -481,7 +492,7 @@ With the distinction between baryonic and dark matter in our distributions (see 
     \caption{The enclosed mass of the milky way at each distance R broken down for the differnt mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
     \label{fig:encl mass all}
 \end{figure}
-Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\pi\langle\rho_{DM}\rangle R_0^3$, the mean density $\langle\rho_{DM}\rangle = ...$ of the dark matter within the solar orbit can be calculated.
+Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\pi\langle\rho_{DM}\rangle R_0^3$, the mean density $\langle\rho_{DM}\rangle c^2 = \qty{0.98}{GeV\per cm^3}\pm\qty{0.05}{GeV\per cm^3}$ of the dark matter within the solar orbit can be calculated.
 
 
 %\begin{figure}[H]
@@ -507,25 +518,17 @@ Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\p
 
 \section{Discussion}
 
-The main objectives of the experiment were to characterise the KRT3 radio telescope, determine its angular resolution and sensitivity, and use the 21-cm line to investigate the rotation of the Milky Way. Overall, these objectives were achieved, although several measurements were affected by systematic uncertainties and external influences.
-
+The main objectives of the experiment were to characterise the KRT3 radio telescope, determine its angular resolution and sensitivity, and use the 21-cm line to investigate the rotation of the Milky Way. Overall, these objectives were achieved, although several measurements were affected by systematic uncertainties and external influences.\\\\
 The system temperatures were determined separately for the two circular polarization channels. The left-hand polarization yielded
 $T'_{sys,left}=98.76\pm22.54K$, while the right-hand polarization yielded
-$T'_{sys,right}=107.80\pm31.65K$. The larger uncertainty in the right-hand channel indicates a less stable receiver response or stronger interference in this polarization. The measured solar antenna temperatures were somewhat higher than the theoretical value of approximately \qty{972.75}{K}. This difference can be caused by radio-frequency interference, calibration uncertainties, and variations in the solar flux during the measurement.
-
-The background radiation showed a clear dependence on elevation and azimuth. The background temperature increased at low elevations because the antenna received more atmospheric emission, ground radiation, and radiation from nearby structures. The azimuthal variation indicates that the local environment was not uniform around the telescope.
-
-The measured angular resolutions were close to the theoretical value of approximately \qty{4.11}{\degree}. The measured values were between \qty{4.39}{\degree} and \qty{4.78}{\degree}, and were therefore slightly larger than expected. This agreement is reasonable considering the positioning accuracy of the telescope, the finite angular diameter of the Sun, atmospheric fluctuations, limited sampling, and uncertainties in the Gaussian fits. The slightly larger values obtained for the right-hand polarization are consistent with its greater measurement uncertainty.
-
-The mapping of Virgo A confirmed the presence of a source signal. The source antenna temperature was determined to be approximately \qty{1612.17}{K}, while the map noise was about \qty{15.71}{K}. This corresponds to a measured signal-to-noise ratio of approximately $\frac{S}{N}\approx 103$.
-Thus, the source was clearly detected. However, the measured noise was considerably larger than expected from the theoretical sensitivity. The main causes are likely radio-frequency interference, receiver instabilities, background variations, and calibration uncertainties. Consequently, the ideal relation $S/N\propto\sqrt{\tau}$ cannot be expected to describe the measurement perfectly.
-
-The 21-cm measurements successfully revealed the spectral line of neutral hydrogen at different galactic longitudes. The measured spectra showed the expected changes in the radial velocity of the hydrogen gas. However, the derived rotation curve deviated from the ideal expectation of a nearly constant orbital velocity. The uncertainties in identifying the line maximum, the limited frequency resolution, baseline variations, and the relatively small number of measurements contribute to this deviation.
-
+$T'_{sys,right}=107.80\pm31.65K$. The larger uncertainty in the right-hand channel indicates a less stable receiver response or stronger interference in this polarization. The measured solar antenna temperatures were somewhat higher than the theoretical value of approximately \qty{972.75}{K}. This difference can be caused by radio-frequency interference, calibration uncertainties, and variations in the solar flux during the measurement.\\
+The background radiation showed a clear dependence on elevation and azimuth. The background temperature increased at low elevations because the antenna received more atmospheric emission, ground radiation, and radiation from nearby structures. The azimuthal variation indicates that the local environment was not uniform around the telescope.\\\\
+The measured angular resolutions were close to the theoretical value of approximately \qty{4.11}{\degree}. The measured values were between \qty{4.39}{\degree} and \qty{4.78}{\degree}, and were therefore slightly larger than expected. This agreement is reasonable considering the positioning accuracy of the telescope, the finite angular diameter of the Sun, atmospheric fluctuations, limited sampling, and uncertainties in the Gaussian fits. The slightly larger values obtained for the right-hand polarization are consistent with its greater measurement uncertainty.\\\\
+The mapping of Virgo A confirmed the presence of a source signal. The source antenna temperature was determined to be approximately \qty{1612.17}{K}, while the map noise was about \qty{15.71}{K}. This corresponds to a measured signal-to-noise ratio of approximately $\frac{S}{N}\approx 103$.\\
+Thus, the source was clearly detected. However, the measured noise was considerably larger than expected from the theoretical sensitivity. The main causes are likely radio-frequency interference, receiver instabilities, background variations, and calibration uncertainties. Consequently, the ideal relation $S/N\propto\sqrt{\tau}$ cannot be expected to describe the measurement perfectly.\\\\
+The 21-cm measurements successfully revealed the spectral line of neutral hydrogen at different galactic longitudes. The measured spectra showed the expected changes in the radial velocity of the hydrogen gas. However, the derived rotation curve deviated from the ideal expectation of a nearly constant orbital velocity. The uncertainties in identifying the line maximum, the limited frequency resolution, baseline variations, and the relatively small number of measurements contribute to this deviation.\\
+The determined value of the mean density of dark matter within the solar orbit was calculated to be $\langle\rho_{DM}\rangle c^2 = \qty{0.98}{GeV\per cm^3}\pm\qty{0.05}{GeV\per cm^3}$, a slightly higher value than the literature value of $\langle\rho_{DM}\rangle c^2 = \qty{0.43}{GeV\per cm^3}\pm \qty{0.11}{GeV\per cm^3}$. These differences can be attributed to the mentioned measurement uncertainties as well.\\\\
 The choice of baseline is particularly important for the H~I measurements. The baseline represents the continuum level and instrumental background, which must be subtracted before determining the line intensity and its maximum velocity. If the baseline is chosen incorrectly, the position of the line maximum and therefore the derived radial velocity can be shifted. This effect is especially relevant for weak or broad spectral features and can produce systematic errors in the rotation curve. In addition, radio-frequency interference and residual background structure may distort the baseline. Despite these limitations, the measurements provide a qualitatively consistent demonstration of the distribution and kinematics of neutral hydrogen in the Milky Way.
-
-\section{Summary}
-
 
 \newpage
 
