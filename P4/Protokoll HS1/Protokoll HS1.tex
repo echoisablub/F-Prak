@@ -277,7 +277,7 @@ T_{\mathrm{sun,right}} = 1302.59 \pm 119.16\,\mathrm{K}.
 The larger uncertainty in the right polarization reflects the larger scatter of the corresponding measurements. 
 With \autoref{eq: antenna temp} and the current measured flux densities provided by the SWC of the Australian Gouvernment ($S_{\nu} \approxeq 76 \, \text{sfu}$) the expected antenna temperature was estimated to be
 \[
-T_A = 972.753\,\mathrm{K}.
+T_A = 972.75\,\mathrm{K}.
 \]
 This value is in reasonable agreement with the measured temperature, confirming that the calibration procedure yields a consistent estimate of the solar signal.
 
@@ -345,19 +345,19 @@ $\lambda=\qty{21.1}{cm}=\qty{0.211}{m}$ is the observing wavelength. This gives
 
 The measured resolutions are slightly larger than this value for all scans. For the longitude scan, the measured values are
 \[
-\theta_{\mathrm{lon,left}} = 4.60^\circ,
+\theta_{\mathrm{lon,left}} = 4.60^\circ \pm 1.41^\circ,
 \qquad
-\theta_{\mathrm{lon,right}} = 4.78^\circ,
+\theta_{\mathrm{lon,right}} = 4.78^\circ \pm 1.47^\circ,
 \]
 which are larger than the theoretical value by approximately $11.9\%$ and $16.3\%$, respectively. For the latitude scan, the measured resolutions are
 \[
-\theta_{\mathrm{lat,left}} = 4.39^\circ,
+\theta_{\mathrm{lat,left}} = 4.39^\circ \pm 1.31^\circ,
 \qquad
-\theta_{\mathrm{lat,right}} = 4.63^\circ,
+\theta_{\mathrm{lat,right}} = 4.63^\circ \pm 1.38^\circ,
 \]
 corresponding to deviations of approximately $6.8\%$ and $12.7\%$.
 
-The measured values are therefore in reasonable agreement with the theoretical resolution. The small systematic increase can be explained by pointing uncertainties, limited sampling, atmospheric fluctuations, imperfections in the Gaussian fit, and the finite angular diameter of the Sun. The right-circular polarization gives slightly larger values than the left-circular polarization, which is consistent with its larger measurement uncertainties and less stable receiver response.
+The measured values are therefore in reasonable agreement with the theoretical resolution. The small systematic increase can be explained by pointing uncertainties, limited sampling, atmospheric fluctuations, imperfections in the Gaussian fit, and the finite angular diameter of the Sun. The comparatively large uncertainties result from the scatter of the measurement points and the limited number of data points used for the Gaussian fits.
 
 \subsection{Determination of the Sensitivity of the instrument}
 
@@ -442,15 +442,17 @@ Now the orbital velocities at the tangential points are calculated using \autore
 		\bottomrule
 	\end{tabular}
 	\label{tab:21 ergebnisse}
+    \caption{}
 \end{table}
 
 When plotting the rotation curve against the distance from the galactic center (see \autoref{fig:radian vel}), the expected form of the curve is a constant line, however we can clearly see a rise in velocity for bigger distances.\\\\
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.4]{img/21cm/v(R) plot.png}
+     \includegraphics[scale=0.5]{img/21cm/v(R) plot.png}
     \caption{The radian velocity at each distance R.}
     \label{fig:radian vel}
 \end{figure}
+
 Now we calculate the enclosed mass $M_R$ of the milky way using:
 \begin{align}
 	M_R = 0.234\times 10^{10}\left(\frac{v(R)}{\qty{100}{km\per\s}}\right)^2\left(\frac{R}{\text{kpc}}\right)M_\text{sun}
@@ -458,7 +460,7 @@ Now we calculate the enclosed mass $M_R$ of the milky way using:
 with $1\text{\, M}_\text{sun}=\qty{1.98e30}{kg}$ being one solar mass. When plotting the enclosed mass (see \autoref{fig:encl mass}), a steady rise of mass can be observed. The discrepancy with the expected distribution for the visible matter (a thin disc), can be explained with the existance of dark matter.\\
 \begin{figure}[h]
      \centering
-     \includegraphics[scale=0.4]{img/21cm/enclosed mass of the milky way plot.png}
+     \includegraphics[scale=0.5]{img/21cm/enclosed mass of the milky way plot.png}
     \caption{The enclosed mass of the milky way at each distance R.}
     \label{fig:encl mass}
 \end{figure}
@@ -469,13 +471,13 @@ To separate the baryonic from the dark matter in both distributions, we need to 
 With the distinction between baryonic and dark matter in our distributions (see \autoref{fig:radian baryon vel} and \autoref{fig:encl mass all}) we can clearly see that while baryonic matter is distributed approximately evenly across the galaxy, dark matter bunches at the outskirts of the milky way. The mass of dark matter enclosed within the solar orbit is $M_{\text{DM}}(R_0) = 66411575447.22 \pm 3593349279.00 \, M_{\odot}$.\\
 \begin{figure}[H]
      \centering
-     \includegraphics[scale=0.4]{img/21cm/v R und d plot.png}
+     \includegraphics[scale=0.5]{img/21cm/v R und d plot.png}
     \caption{The radian and baryonic velocities at each distance R.}
     \label{fig:radian baryon vel}
 \end{figure}
 \begin{figure}[H]
      \centering
-     \includegraphics[scale=0.4]{img/21cm/mass all plot.png}
+     \includegraphics[scale=0.5]{img/21cm/mass all plot.png}
     \caption{The enclosed mass of the milky way at each distance R broken down for the differnt mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
     \label{fig:encl mass all}
 \end{figure}

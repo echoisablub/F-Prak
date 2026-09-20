@@ -99,8 +99,8 @@ def fit_scan(angle, signal, fit_angle_offset=False):
 # ergebnisse
 fit_lon_l, fwhm_lon_l, fwhm_lon_l_error, x0_lon_l_error = fit_scan(x_lon, y_lon_l, fit_angle_offset=True)
 fit_lon_r, fwhm_lon_r, fwhm_lon_r_error, x0_lon_r_error = fit_scan(x_lon, y_lon_r, fit_angle_offset=True)
-fit_lat_l, fwhm_lat_l, fwhm_lat_l_error, fwhm_lat_l_error = fit_scan(x_lat, y_lat_l, fit_angle_offset=True)
-fit_lat_r, fwhm_lat_r, fwhm_lat_r_error, fwhm_lat_r_error = fit_scan(x_lat, y_lat_r, fit_angle_offset=True)
+fit_lat_l, fwhm_lat_l, fwhm_lat_l_error, x0_lat_l_error = fit_scan(x_lat, y_lat_l, fit_angle_offset=True)
+fit_lat_r, fwhm_lat_r, fwhm_lat_r_error, x0_lat_r_error = fit_scan(x_lat, y_lat_r, fit_angle_offset=True)
 
 # Korrektur des Longitude-Winkels
 ELV = 42.0
