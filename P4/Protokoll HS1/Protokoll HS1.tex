@@ -80,7 +80,7 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-The experiment HS1-Radioastronomy is there to give an overview for operating a radio telescope and to introduce the prerequitites such as characterising and calibrating the telescope before carrying out the experiments. The main experiment to be conducted is the observation of neutral hydrogen in the Milky Way to determine the rotational velocity in order to derive the mass distribution.
+The experiment HS1-Radioastronomy is there to give an overview for operating a radio telescope and to introduce the prerequisites such as characterising and calibrating the telescope before carrying out the experiments. The main experiment to be conducted is the observation of neutral hydrogen in the Milky Way to determine the rotational velocity in order to derive the mass distribution.
 
 %Describe: aim of the practical experiment, procedure, the objective should be the rotation curve of the Milky Way in order to derive the mass distribution. Radio observations are particularly suitable for this purpose because, unlike optical observations, absorption by dust plays only a minor role. In addition, radio observations of the Earth’s surface are possible, which is otherwise only the case with optical observations. Here we can also briefly discuss the emission process behind the 21cm radiation
 \subsection{Radioastronomy}
@@ -92,7 +92,7 @@ A central quantity in radio astronomy is the brightness temperature. In the Rayl
 I_\nu \approx \frac{2k_\mathrm{B} T_\mathrm{B} \nu^2}{c^2} = \frac{2k_\mathrm{B} T_\mathrm{B}}{\lambda^2},
 \] 
 % aus background 2.4.3 (gl 44)
-where $I_\nu$ is the spectral intensity, $k_\mathrm{B}$ is the Boltzmann constant, $T_\mathrm{B}$ is the brightness temperature, $\nu$ is the frequency, and $c$ is the speed of light. This relation shows that the observed radio signal is directly linked to the temperature of the emitting medium \cite{1}. This makes radio astronomy a powerful method for studying cold molecular clouds, ionized gas regions, and neutral hydrogen structures in the Milky Way and beyond.
+where $I_\nu$ is the spectral intensity, $k_\mathrm{B}$ is the Boltzmann constant, $T_\mathrm{B}$ is the brightness temperature, $\nu$ is the frequency, and $c$ is the speed of light. This relation shows that the observed radio signal is directly linked to the temperature of the emitting medium. This makes radio astronomy a powerful method for studying cold molecular clouds, ionized gas regions, and neutral hydrogen structures in the Milky Way and beyond \cite{0}.
 
 One of the most important spectral lines in radio astronomy is the 21 cm line emitted by neutral hydrogen.
 
@@ -108,7 +108,7 @@ which corresponds to a wavelength of
 \]
 This transition is therefore called the 21 cm line.
 
-This line is of great importance in astronomy because hydrogen is the most abundant element in the interstellar medium. Neutral hydrogen emits strongly at 21 cm, allowing astronomers to map the distribution of gas in galaxies. The 21 cm line is especially useful because it is only weakly absorbed by interstellar dust, so it can reveal regions that are difficult or impossible to observe in the optical range.
+This line is of great importance in astronomy because hydrogen is the most abundant element in the interstellar medium. Neutral hydrogen emits strongly at 21 cm, allowing astronomers to map the distribution of gas in galaxies. The 21 cm line is especially useful because it is only weakly absorbed by interstellar dust, so it can reveal regions that are difficult or impossible to observe in the optical range \cite{0}.
 
 The 21 cm line also enables the measurement of Doppler shifts. If the hydrogen gas is moving relative to the observer, the frequency of the emission is shifted. From this shift, the radial velocity of the gas can be determined. This makes it possible to study galactic rotation, gas dynamics, and the mass distribution of galaxies. For this reason, the 21 cm line is one of the most important tools in modern radio astronomy and is fundamental for studying neutral hydrogen in the universe.
 
@@ -120,18 +120,18 @@ The antenna focuses incoming radio waves onto a receiving horn located at its pr
 
 The digital superheterodyne receiver covers a frequency range from \qty{1398}{MHz} to \qty{1460.5}{MHz}. This range includes the \qty{21}{cm} hydrogen line at approximately \qty{1420.4}{MHz}. The total bandwidth is divided into 1024 channels, each with a bandwidth of approximately \qty{61}{kHz}. The channels are grouped into 16 Base Band Converters (BBCs): BBCs 1--8 record the left-hand circular polarization, while BBCs 9--16 record the right-hand circular polarization.
 
-The received signals are mixed down to a lower intermediate frequency and digitized using a 14-bit analogue-to-digital converter. A digital signal processor then calculates the spectrum using a Fourier transform. The telescope and receiver are controlled with the software \textsc{RadioUniversePro}, which is used to point the antenna, record measurements, and display the resulting data.
+The received signals are mixed down to a lower intermediate frequency and digitized using a 14-bit analogue-to-digital converter. A digital signal processor then calculates the spectrum using a Fourier transform. The telescope and receiver are controlled with the software \textsc{RadioUniversePro}, which is used to point the antenna, record measurements, and display the resulting data \cite{0}.
 
 \subsection{Weather Conditions}
 The experiment was carried out on 07.09.2026, starting at around 12:35. The weather was stable throughout the day with partial cloud coverage and temperatures around \qty{19}{\degree}, a relative humidity of 60\% and a windspeed of \qty{1}{\m\per\s}.
 
 \subsection{Calibration}
 \subsubsection{Determination of the system temperature}
-The reciever recieves radiation not only from the source $T_S$ but also from the environment $T_h$. In addition to those two external sources of radiation, the antenna also picks up on the radiation it's own system emits $T_{sys}$. This means the measured power of the reciever, represented by the antenna temperature, can be broken down the following way:
+The receiver receives radiation not only from the source $T_S$ but also from the environment $T_h$. In addition to those two external sources of radiation, the antenna also picks up on the radiation its own system emits $T_{sys}$. This means the measured power of the receiver, represented by the antenna temperature, can be broken down the following way:
 \begin{align}
 	T_A=T_S+T_h+T_{sys}
 \end{align}
-It is difficult to seperate the pure system temperature and the background radiation, so these temperatures are usually combined into an effective system temperature:
+It is difficult to separate the pure system temperature and the background radiation, so these temperatures are usually combined into an effective system temperature:
 \begin{align}
 	T'_{sys}=T_{sys}+T_h
 \end{align}
@@ -153,7 +153,7 @@ The goal is measuring the antenna temperature of the sun and converting it into 
 
 \subsubsection{Background Radiation}
 The determination of the background radiation is done at the calibration position where $T_A\approx T'_{sys}$. With the control software of the KRT3 \textsc{RadioUniversePro} the easiest way to measure the background radiation is to do a cross scan over a weak source that barely stands out from the background.\\
-For our purposes we chose the source Virgo A as it was at an elevaltion of \qty{47}{\degree}\,\qty{56}{min}. Even when the recommended range of elevation is between 30 and 40 degrees of elevation, we chose the VirA source in coordination with the supervisor.
+For our purposes we chose the source Virgo A as it was at an elevation of \qty{47}{\degree}\,\qty{56}{min}. Even when the recommended range of elevation is between 30 and 40 degrees of elevation, we chose the VirA source in coordination with the supervisor.
 
 \subsection{Determination of the angular resolution of the KRT3}
 The expected half-width is $q=1.02 \lambda /D$ with wavelength $\lambda$ and antenna diameter $D=\qty{3}{m}$. To determine the angular resolution the radio telescope is moved step wise over the sun and the antenna temperatures are measured.\\
@@ -194,7 +194,7 @@ The necessary integration time for detecting Vir A with a signal-to-noise ratio 
 \end{itemize}
 
 \subsubsection{Determination of the uncertainty of radiant flux measurements}
-The radio signals from space recieved on earth are weak. This can be illustrated by the thought experiment of recieving the signal of a mobile radio on the moon transmitting with \qty{2}{W}, \qty{900}{MHz} and a FWHM of \qty{80}{kHz}, $\sigma=\qty{34}{kHz}$ being recieved on earth. In this scenario the flux density is:
+The radio signals from space received on earth are weak. This can be illustrated by the thought experiment of recieving the signal of a mobile radio on the moon transmitting with \qty{2}{W}, \qty{900}{MHz} and a FWHM of \qty{80}{kHz}, $\sigma=\qty{34}{kHz}$ being received on earth. In this scenario the flux density is:
 \begin{align}
 	S_{\nu} &= \frac{P}{4\pi d^2\sqrt{2\pi}\sigma} = \qty{1263.16}{Jy}
 \end{align}
@@ -214,7 +214,7 @@ From this On-Off measurement the temperature of the source $T_s$ can be determin
 	T_A(ON)-T_A(OFF)=(T_s+T'_{sys})-T'_{sys}
 \label{eq:antenna onoff}
 \end{align}
-The source Vir A was chosen to be observed in a grid pattern on the sky where the KRT3 takes measurements line by line at differnt positions. This means different columns are scanned to assemble the grid pattern into a map in the shape of $\text{pixel} = \text{rows} \times \text{columns}$. The reason Vir A was chosen and not one of the brighter sources, was that Vir A was the only source that fit the parameters of an elevation between \qty{30}{\degree} and \qty{60}{\degree}.\\
+The source Vir A was chosen to be observed in a grid pattern on the sky where the KRT3 takes measurements line by line at different positions. This means different columns are scanned to assemble the grid pattern into a map in the shape of $\text{pixel} = \text{rows} \times \text{columns}$. The reason Vir A was chosen and not one of the brighter sources, was that Vir A was the only source that fit the parameters of an elevation between \qty{30}{\degree} and \qty{60}{\degree}.\\
 The BBCs 3 and 11 were chosen as they showed the smallest RFI influence even though they show the H1 line.\\
 The measurements were carried out in the tab Mapping with the following settings:
 \begin{itemize}
@@ -225,7 +225,7 @@ The measurements were carried out in the tab Mapping with the following settings
 The mapping process took 28:35.4\,s according to the software and 29:27.8\,s according to our own timer.
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
-\subsubsection{Determine the frequency settings of the reciever}
+\subsubsection{Determine the frequency settings of the receiver}
 The KRT3 has a frequency range of \qtyrange[range-units = repeat]{1398.00}{1460.56}{MHz} divided up into 1024 channels with a preset bandwidth of \qty{8}{MHz}.\\
 With the bandwidth of a single channel $\delta\nu=\frac{\Delta\nu}{1024}=\frac{\qty{1460.56}{MHz}-\qty{1398.00}{MHz}}{1024}=\qty{62.56}{MHz}$ and the lab frequency of the \qty{21}{cm} line being $\nu_{0}=\qty{1420.4}{MHz}$, the velocity resolution can be calculated:
 \begin{align}
@@ -253,7 +253,7 @@ The orbital velocity at the tangential point is $v=\omega R$ with $\omega$ being
 	&=v(R)-\omega_0R
 	\label{eq:ang vel}
 \end{align}
-The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0$, $b=0$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and variied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
+The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0$, $b=0$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and varied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
 For that, the telescope is aligned to the galactic plane using the command line in \textsc{RadioUniversePro}. The USBs 3 and 11 in the BBC Tools tab were selected and the following settings were used:
 \begin{itemize}
 	\item Repetitions: 10
@@ -285,7 +285,7 @@ T_{\mathrm{sun,left}} = 1237.79 \pm 89.62\,\mathrm{K},
 T_{\mathrm{sun,right}} = 1302.59 \pm 119.16\,\mathrm{K}.
 \]
 The larger uncertainty in the right polarization reflects the larger scatter of the corresponding measurements. 
-With \autoref{eq: antenna temp} and the current measured flux densities provided by the SWC of the Australian Gouvernment ($S_{\nu} \approxeq 76 \, \text{sfu}$) the expected antenna temperature was estimated to be
+With \autoref{eq: antenna temp} and the current measured flux densities provided by the SWC of the Australian Government ($S_{\nu} \approxeq 76 \, \text{sfu}$) the expected antenna temperature was estimated to be
 \[
 T_A = 972.75\,\mathrm{K}.
 \]
@@ -424,7 +424,7 @@ Using the measured values above gives $N_{10}\approx0.01$, meaning that one map 
 \end{figure}
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
-The measured spectra for the varying gelactic longitudes were averaged using the provided python script \textsc{spectrum.py}.\\
+The measured spectra for the varying galactic longitudes were averaged using the provided python script \textsc{spectrum.py}.\\
 When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
 \begin{figure}[H]
      \centering
@@ -432,7 +432,7 @@ When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile o
     \caption{The measured \qty{21}{cm}-line spectrum for $l=\qty{80}{\degree}$ overlaid with the LAB data of the spectrum for the same position.}
     \label{fig:21ref comp}
 \end{figure}
-For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done grafically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
+For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done graphically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
 \begin{table}[H]
 	\label{tab:21 ergebnisse}
 	\centering
@@ -459,7 +459,7 @@ When plotting the rotation curve against the distance from the galactic center (
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.5]{img/21cm/v(R) plot.png}
-    \caption{The radian velocity at each distance R.}
+    \caption{The radial velocity at each distance R.}
     \label{fig:radian vel}
 \end{figure}
 
@@ -467,7 +467,7 @@ Now we calculate the enclosed mass $M_R$ of the milky way using:
 \begin{align}
 	M_R = 0.234\times 10^{10}\left(\frac{v(R)}{\qty{100}{km\per\s}}\right)^2\left(\frac{R}{\text{kpc}}\right)M_\text{sun}
 \end{align}
-with $1\text{\, M}_\text{sun}=\qty{1.98e30}{kg}$ being one solar mass. When plotting the enclosed mass (see \autoref{fig:encl mass}), a steady rise of mass can be observed. The discrepancy with the expected distribution for the visible matter (a thin disc), can be explained with the existance of dark matter.\\
+with $1\text{\, M}_\text{sun}=\qty{1.98e30}{kg}$ being one solar mass. When plotting the enclosed mass (see \autoref{fig:encl mass}), a steady rise of mass can be observed. The discrepancy with the expected distribution for the visible matter (a thin disc), can be explained with the existence of dark matter.\\
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.5]{img/21cm/enclosed mass of the milky way plot.png}
@@ -483,13 +483,13 @@ With the distinction between baryonic and dark matter in our distributions (see 
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/v R und d plot.png}
-    \caption{The radian and baryonic velocities at each distance R.}
+    \caption{The radial and baryonic velocities at each distance R.}
     \label{fig:radian baryon vel}
 \end{figure}
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/mass all plot.png}
-    \caption{The enclosed mass of the milky way at each distance R broken down for the differnt mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
+    \caption{The enclosed mass of the milky way at each distance R broken down for the different mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
     \label{fig:encl mass all}
 \end{figure}
 Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\pi\langle\rho_{DM}\rangle R_0^3$, the mean density $\langle\rho_{DM}\rangle c^2 = \qty{0.98}{GeV\per cm^3}\pm\qty{0.05}{GeV\per cm^3}$ of the dark matter within the solar orbit can be calculated.
@@ -546,7 +546,7 @@ The choice of baseline is particularly important for the H~I measurements. The b
 \newpage
 
 \appendix
-\section{$H_1$ spetra}
+\section{$H_1$ spectra}
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}

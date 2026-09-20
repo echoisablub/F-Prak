@@ -1,40 +1,38 @@
-This is BibTeX, Version 0.99e
+This is BibTeX, Version 0.99e (TeX Live 2026)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Protokoll HS1.aux
-Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
-Reallocating 'name_of_file' (item size: 1) to 10 items.
 Database file #1: literatur.bib
-You've used 2 entries,
+You've used 1 entry,
             1876 wiz_defined-function locations,
-            486 strings with 3744 characters,
-and the built_in function-call counts, 275 in all, are:
-= -- 23
-> -- 8
+            481 strings with 3564 characters,
+and the built_in function-call counts, 143 in all, are:
+= -- 10
+> -- 4
 < -- 0
-+ -- 4
-- -- 2
-* -- 10
-:= -- 47
-add.period$ -- 3
-call.type$ -- 2
-change.case$ -- 2
++ -- 2
+- -- 1
+* -- 6
+:= -- 28
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 8
-empty$ -- 37
-format.name$ -- 2
-if$ -- 66
+cite$ -- 1
+duplicate$ -- 4
+empty$ -- 19
+format.name$ -- 1
+if$ -- 32
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 10
-num.names$ -- 2
-pop$ -- 14
+newline$ -- 6
+num.names$ -- 1
+pop$ -- 7
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 7
+skip$ -- 4
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -43,6 +41,6 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 3
-write$ -- 18
+while$ -- 1
+width$ -- 2
+write$ -- 9
