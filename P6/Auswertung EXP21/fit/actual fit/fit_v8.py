@@ -104,7 +104,7 @@ def build_deltaI_matrix_from_folders(
 def fit_difference_spectrum(energy, difference, sigma, reference_spectra, fixed_amplitude=None):
     """Fit S1 through S5 with L_off = S1.
     D(E) = A * (L_on(E) - L_off(E)) with
-    L_on = f_5 S_5 + f_4 S_4 + f_3 S_3 + f_2 S_2 + (1 - f_5 - f_4 - f_3 - f_2) S_1 and L_off = S_1.
+    L_on = f_5 S_5 + f_4 S_4 + f_3 S_3 + f_2 S_2 + (1 - f_5 - f_4 - f_3 - f_2) S_1
     """
     ground_state = reference_spectra[:, 0]
 
@@ -190,12 +190,11 @@ def estimate_population_uncertainties(result, difference, sigma, reference_spect
 
 def fit_singlet_transition(time_fs, singlet_population, singlet_uncertainty):
     """
-    Fit a falling Gaussian-CDF edge and return t0 and its width.
-
+    Fit a falling Gaussian-CDF edge and return t0 and its width (CDF: cumulative distribution function)
+    f(t)= f_after + 0.5 * ∆f * erf((t - t_0)/(sigma_time * sqrt(2)))
     t0 is the midpoint of the population drop. 
-    sigma_time is the standard deviation of the Gaussian temporal response, not the FWHM.
+    sigma_time is the standard deviation of the Gaussian temporal response (not the FWHM)
     """
-
     time_fs = np.asarray(time_fs, dtype=float)
     singlet_population = np.asarray(singlet_population, dtype=float)
     singlet_uncertainty = np.asarray(singlet_uncertainty, dtype=float)
@@ -248,13 +247,11 @@ sigma_fit = sigma[:, valid]
 reference_fit = reference_spectra[valid]
 
 # A wird einmal aus der 800-fs-Messung bestimmt und danach festgehalten.
-# Fuer 100 ps muesste dieser Wert auf 100_000 gesetzt werden und der
-# entsprechende Messordner in delays/delay_names vorhanden sein.
+# Für 100 ps müsste dieser Wert auf 100_000 gesetzt werden und der entsprechende Messordner in delays/delay_names vorhanden sein.
 calibration_delay_fs = 800
 calibration_indices = np.flatnonzero(t_fs == calibration_delay_fs)
 calibration_index = calibration_indices[0]
-(
-    calibration_amplitude,
+(   calibration_amplitude,
     calibration_amplitude_uncertainty,
     calibration_formal_uncertainty,
     calibration_reduced_chi2,
@@ -267,9 +264,9 @@ print(
     f"Kalibrierung bei {calibration_delay_fs:g} fs als reines Quintett: "
     f"A = {calibration_amplitude:.5g} +/- {calibration_amplitude_uncertainty:.3g} "
     f"(formal: {calibration_formal_uncertainty:.3g}, "
-    f"reduced chi2: {calibration_reduced_chi2:.3g})"
-)
+    f"reduced chi2: {calibration_reduced_chi2:.3g})")
 
+# jtz ist kein prep mehr
 amplitudes = []
 populations = []
 population_uncertainties = []
@@ -300,9 +297,9 @@ amplitudes = np.array(amplitudes)
 populations = np.array(populations)
 population_uncertainties = np.array(population_uncertainties)
 fitted_spectra = np.array(fitted_spectra)
-
 normalized_residuals = (dI_fit - fitted_spectra) / sigma_fit
 
+# plot
 state_names = ["singlet", "doublet", "triplet", "quartet", "quintet"]
 
 plt.figure(figsize=(7, 4.5))
@@ -316,19 +313,15 @@ for index, state_name in enumerate(state_names):
         label=state_name,
     )
 plt.xlabel("Time delay [fs]")
-plt.ylabel("Population $a_M$")
+plt.ylabel("Population $f_s$")
 plt.ylim(-0.02, 1.02)
 plt.legend()
 plt.tight_layout()
 plt.savefig("Auswertung EXP21/fit/actual fit/population_fit.png")
-plt.show()
+#plt.show()
 
-# t0 aus dem Abfall der Singulettpopulation bestimmen.
-singlet_model, singlet_fit_parameters, singlet_fit_uncertainties = fit_singlet_transition(
-    t_fs,
-    populations[:, 0],
-    population_uncertainties[:, 0],
-)
+# t0 aus dem Abfall der Singulettpopulation bestimmen
+singlet_model, singlet_fit_parameters, singlet_fit_uncertainties = fit_singlet_transition(t_fs, populations[:, 0], population_uncertainties[:, 0])
 population_after, population_drop, t0_fs, sigma_time_fs = singlet_fit_parameters
 t0_uncertainty_fs = singlet_fit_uncertainties[2]
 sigma_time_uncertainty_fs = singlet_fit_uncertainties[3]
@@ -364,4 +357,4 @@ plt.ylim(-0.02, 1.02)
 plt.legend()
 plt.tight_layout()
 plt.savefig("Auswertung EXP21/fit/actual fit/singlet_transition_fit.png")
-plt.show()
+#plt.show()
