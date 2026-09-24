@@ -202,7 +202,9 @@ def fit_singlet_transition(time_fs, singlet_population, singlet_uncertainty):
     def model(time, population_after, population_drop, t0, sigma_time):
         return population_after + 0.5 * population_drop * erfc((time - t0) / (np.sqrt(2.0) * sigma_time))
 
+    # init param: population_after aus dem letzten messwert [0,1], population_drop aus erstem minus letztem Messwert [0,1], t0 [at f_1 nearest 0.5], sigma_time [time range/5, 1]
     initial_parameters = [np.clip(singlet_population[-1], 0.0, 1.0), np.clip(singlet_population[0] - singlet_population[-1], 0.0, 1.0), time_fs[np.argmin(np.abs(singlet_population - 0.5))], max(np.ptp(time_fs) / 5.0, 1.0)]
+    # bounds: population_after [0,1], population_drop [0,1], t0 [can be slightly out of mesured range], sigma_time [>0, max 10*time range]
     parameter_bounds = ([0.0, 0.0, np.min(time_fs) - np.ptp(time_fs), 1e-6], [1.0, 1.0, np.max(time_fs) + np.ptp(time_fs), 10.0 * np.ptp(time_fs)])
 
     fit_parameters, covariance = curve_fit(
