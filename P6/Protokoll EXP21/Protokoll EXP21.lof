@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {9}{\ignorespaces To the left is a 3D intensity plot of the pink beam, to the right the 3D intensity plot of the monochromatic beam with the same attenuators in.}}{8}{figure.caption.10}%
 \contentsline {figure}{\numberline {10}{\ignorespaces The horizontal and vertical profile of the focussed X-ray beam plotted together with a gaussian fit and the corresponding FWHM of \qty {13.5}{\mu \m }.}}{9}{figure.caption.12}%
 \contentsline {figure}{\numberline {11}{\ignorespaces UV/VIS absorption spectrum of an aqueous $[\text {Fe}(\text {bipy})_3]\text {Cl}_2$ solution. The different CT transitions are indicated. The measured molar absorptivity $\epsilon $ values lie in the expected range of $10^{-4}\text {\, l}\text {\,mol}^{-1}\text {\,cm}^{-1}$ to $10^{-5}\text {\, l}\text {\,mol}^{-1}\text {\,cm}^{-1}$ for dipole-allowed transitions\cite {0}}}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {12}{\ignorespaces The Von Hamos spectrometer in operating position. with the read-out of the Jungfrau detector as well as the settings for the position to the left.}}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {12}{\ignorespaces The Von Hamos spectrometer in operating position with the read-out of the Jungfrau detector as well as the settings for the position to the left.}}{12}{figure.caption.14}%
 \contentsline {figure}{\numberline {13}{\ignorespaces The profile of the X-ray beam measured in the sample plane.}}{12}{figure.caption.15}%
 \contentsline {figure}{\numberline {14}{\ignorespaces The profile of the laser beam measured in the sample plane.}}{12}{figure.caption.16}%
 \contentsline {figure}{\numberline {15}{\ignorespaces The profile of the overlapping laser and X-ray beams in the sample plane.}}{13}{figure.caption.17}%
@@ -19,11 +19,10 @@
 \contentsline {figure}{\numberline {19}{\ignorespaces Kinetic traces at selected emission energies.}}{15}{figure.caption.21}%
 \contentsline {figure}{\numberline {20}{\ignorespaces The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}}{15}{figure.caption.22}%
 \contentsline {figure}{\numberline {21}{\ignorespaces The normalised residuals together with the actual measurements and a fit over ... for time delays of $\Delta t=\{\qty {-150}{fs},\qty {-100}{fs},\qty {-50}{fs},\qty {0}{fs},\qty {50}{fs}\}$}}{16}{figure.caption.23}%
-\contentsline {figure}{\numberline {22}{\ignorespaces The photon counts of the different excited states for negative time delays.}}{17}{figure.caption.24}%
-\contentsline {figure}{\numberline {23}{\ignorespaces The adjusted population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}}{17}{figure.caption.25}%
-\contentsline {figure}{\numberline {24}{\ignorespaces A scatterplot of the spatial jitter of the X-ray beam measured on BIU2.}}{C}{figure.caption.29}%
-\contentsline {figure}{\numberline {25}{\ignorespaces The average of three seperate measurements of the spectrum of a pink X-ray beam measured on the Gotthard Spectrum Analyser 1.}}{C}{figure.caption.30}%
-\contentsline {figure}{\numberline {26}{\ignorespaces The average of three seperate measurements of the spectrum of a monochromatic X-ray beam measured on the Gotthard Spectrum Analyser 1.}}{D}{figure.caption.31}%
-\contentsline {figure}{\numberline {27}{\ignorespaces \relax }}{D}{figure.caption.32}%
-\contentsline {figure}{\numberline {28}{\ignorespaces The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds with another y-axes scale to see the errorbars better.}}{E}{figure.caption.33}%
+\contentsline {figure}{\numberline {22}{\ignorespaces The adjusted population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {23}{\ignorespaces A scatterplot of the spatial jitter of the X-ray beam measured on BIU2.}}{C}{figure.caption.28}%
+\contentsline {figure}{\numberline {24}{\ignorespaces The average of three seperate measurements of the spectrum of a pink X-ray beam measured on the Gotthard Spectrum Analyser 1.}}{C}{figure.caption.29}%
+\contentsline {figure}{\numberline {25}{\ignorespaces The average of three seperate measurements of the spectrum of a monochromatic X-ray beam measured on the Gotthard Spectrum Analyser 1.}}{D}{figure.caption.30}%
+\contentsline {figure}{\numberline {26}{\ignorespaces \relax }}{D}{figure.caption.31}%
+\contentsline {figure}{\numberline {27}{\ignorespaces The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds with another y-axes scale to see the errorbars better.}}{E}{figure.caption.32}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

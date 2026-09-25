@@ -180,7 +180,7 @@ VLab recreates the Femtosecond X-ray Experiment research platform FXE. The simul
 
 %For further elaboration see \autoref{Anh: VLab}.
 \subsection{Beamline}
-After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a four-crystal monochromator (see \autoref{fig:mono}) which uses the diffraction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}. The four crystal setup ensures that the monochromatic beam follows the same path after the monochromator the pink beam would have.\\\\ 
+After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a two-crystal monochromator (see \autoref{fig:mono}) which uses the diffraction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}.\\\\ 
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.4]{img/4crystal.png}
@@ -329,7 +329,7 @@ $$c_{355}=\qty{0.033}{mol\per\l}, c_{400}=\qty{0.100}{mol\per\l}, c_{515}=\qty{0
 There are different pulse energies available for each excitation wavelength: \qty{5}{\mu\J}(\qty{355}{nm}), \qty{15}{\mu\J}(\qty{400}{nm}) and \qty{50}{\mu\J}(\qty{515}{nm}). With that in mind the wavelength of \qty{400}{nm} was chosen, as it has a higher pulse energy, even though it's not ideal when looking at the low absorption rate. The extinction coefficient of the \qty{515}{nm} is slightly better but with the low pulse energy it will be hard to see anything.\\\\
 
 As we want to ensure that the X-ray beam always hits excited molecules we need to determine the diameter of the optical laser beam as well as the diameter of the X-ray beam correctly in relation to each other.\\
-The optical laser beam profile is approximately gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jet by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ or rather $d_{FWHM}=?$ with our chosen wavelength of \qty{400}{nm}.\\
+The optical laser beam profile is approximately gaussian-shaped and has an original diameter of \qty{10}{mm} (FWHM). This collimated beam is focussed onto the liquid jet by a lens with a focal length of $f=\qty{250}{mm}$. From the Rayleigh criterion $d_{Airy}=2.44\cdot \frac{\lambda\cdot f}{D}$ we calculate $d_{Airy}=\qty{24.4}{\mu\m}$ with our chosen wavelength of \qty{400}{nm}.\\
 If the optical laser and the X-ray laser had the same diameter, the x-ray beam would also probe molecules that were excited only weakly or even not at all, as the optical laser has an approximately Gaussian beam shape. Ideally, the X-ray is positioned exactly in the centre of the ca. 10 times bigger optical laser beam. Thereby it can investigate a maximal volume of excited molecules. This also compensates for the fact that the optical laser jitters in the focus layer of the X-ray due to not being focussed there itself.\\
 These estimates have consequences for our needed flow speed of the liquid jet which has to be 10 times faster to adjust to the new diameter of the optical laser.\\\\
 Ideally, the number of absorbed optical laser photons should be less than or approximately equal to the number of sample molecules in the laser-excited volume. This reduces the likelihood that multiple photons hit the same molecule and excite it into states other than the one we want to observe while still optimizing the number of excited molecules.\\\\
@@ -377,7 +377,7 @@ The X-ray emission spectrometer was adjusted by setting the Bragg angle range to
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.2]{img/100 ps Screenshot 2026-09-03 093257.png}
-     \caption{The Von Hamos spectrometer in operating position. with the read-out of the Jungfrau detector as well as the settings for the position to the left.}
+     \caption{The Von Hamos spectrometer in operating position with the read-out of the Jungfrau detector as well as the settings for the position to the left.}
      \label{fig:von hamos}
 \end{figure}
 
@@ -432,8 +432,6 @@ When plotting the XES spectrum and the difference spectrum for a time delay of \
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\linewidth]{img/spectra/100ps diff spektrum.png}
-        %diese grafiken müssen adjusted werden was größe der beschriftung angeht
-        %\caption{Difference spectrum between a laser-off and laser-on measurement at a delay of \qty{100}{ps}.}
         \label{fig:100ps diff spec}
     \end{subfigure}
     \caption{On the left the XES spectrum with the excitation laser on at a delay of \qty{100}{ps} is plotted. On the right there's the difference spectrum at the same time delay.}
@@ -478,12 +476,6 @@ To confirm this, we looked at the squared errors over the negative time delays (
      \includegraphics[scale=0.45]{img/fit/residuals_and_spectra_minus150_to_50fs.png}
      \caption{The normalised residuals together with the actual measurements and a fit over ... for time delays of $\Delta t=\{\qty{-150}{fs},\qty{-100}{fs},\qty{-50}{fs},\qty{0}{fs},\qty{50}{fs}\}$}
      \label{fig:resids}
-\end{figure}
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.5]{img/fit/counts_negative_delays_per_delay.png}
-     \caption{The photon counts of the different excited states for negative time delays.}
-     \label{fig:counts}
 \end{figure}
 We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{py:v6}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
 
@@ -581,25 +573,25 @@ In this work, AI tools were used as supportive aids for proofreading and languag
 %\label{Anh: VLab}
 
 \section{Code}
-\lstinputlisting[language=Python,
-    caption={Time resolved difference spectra (2D)},
-    label={lst:time res},
-    captionpos=t]{py/time resolved difference spectra v2.py}
+%\lstinputlisting[language=Python,
+%    caption={Time resolved difference spectra (2D)},
+%    label={lst:time res},
+%    captionpos=t]{py/time resolved difference spectra v2.py}
 
-\lstinputlisting[language=Python,
-    caption={kinetic traces plots},
-    label={lst:kin trace},
-    captionpos=t]{py/kinetic traces v2.py}
+%\lstinputlisting[language=Python,
+%    caption={kinetic traces plots},
+%    label={lst:kin trace},
+%    captionpos=t]{py/kinetic traces v2.py}
 
-\lstinputlisting[language=Python,
-    caption={Fit for population curves},
-    label={lst:fit},
-    captionpos=t]{py/fit_v5.py}
+%\lstinputlisting[language=Python,
+%    caption={Fit for population curves},
+%    label={lst:fit},
+%    captionpos=t]{py/fit_v5.py}
 
-\lstinputlisting[language=Python,
-    caption={stabilized fit for negativ time delays},
-    label={lst:fit fit},
-    captionpos=t]{py/v6.py}
+%\lstinputlisting[language=Python,
+%    caption={stabilized fit for negativ time delays},
+%    label={lst:fit fit},
+%    captionpos=t]{py/v6.py}
 \end{appendices}
 
 

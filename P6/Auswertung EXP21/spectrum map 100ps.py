@@ -7,18 +7,18 @@ from matplotlib import cm
 from matplotlib.colors import Normalize
 
 plt.rcParams.update({
-    "font.size": 14,
-    "axes.titlesize": 14,
-    "axes.labelsize": 14,
-    "xtick.labelsize": 14,
-    "ytick.labelsize": 14,
-    "legend.fontsize": 14,
-    "legend.title_fontsize": 14,
+    "font.size": 22,
+    "axes.titlesize": 22,
+    "axes.labelsize": 22,
+    "xtick.labelsize": 22,
+    "ytick.labelsize": 22,
+    "legend.fontsize": 22,
+    "legend.title_fontsize": 22,
 })
 
 energy_grid = np.linspace(7000, 7110, 1000) #common energy grid
 
-file = Path("Daten/Experiment with Data Acquisition/diff 100 ps spektrum/acc_1min_GotthardVonHamos 26-09-02 19-10-44")
+file = Path("Daten/Experiment with Data Acquisition/diff 100 ps spektrum/non_diff_GotthardVonHamos 26-09-02 19-11-20")
 df = pd.read_table(
     file,
     sep=r'\s+',
@@ -50,13 +50,13 @@ ax.set_ylabel("Emission Intensity [a.u.]")
 
 plt.xlim(7030, 7080)
 
-plt.plot(energy_grid, spectrum, color='blue', label="Accumulated transient spectrum 100 ps delay", linewidth=2)
-plt.title("Accumulated transient spectrum 100 ps delay")
+plt.plot(energy_grid, spectrum, color='blue', label="Accumulated spectrum 100 ps delay", linewidth=2)
+plt.title("Accumulated spectrum 100 ps delay")
 plt.tight_layout()
 plt.grid()
 
 plt.savefig(
-    "Daten/Analysis and Interpretation/100ps diff spektrum.png",
+    "Daten/Analysis and Interpretation/100ps spektrum.png",
     dpi=300
 )
 
