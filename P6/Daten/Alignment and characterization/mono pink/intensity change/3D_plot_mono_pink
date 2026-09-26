@@ -2,9 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
+'''
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 16,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 16,
+    "ytick.labelsize": 16,
+    "legend.fontsize": 16,
+    "legend.title_fontsize": 16,
+})'''
+
 # Load data
-filename_mono = "Daten/Alignment and characterization/mono Sase/intensity change/mono_BIU_2.txt"
-filename_pink = "Daten/Alignment and characterization/mono Sase/intensity change/pink_BIU_2.txt"
+filename_mono = "Daten/Alignment and characterization/mono pink/intensity change/mono_BIU_2.txt"
+filename_pink = "Daten/Alignment and characterization/mono pink/intensity change/pink_BIU_2.txt"
 
 data_mono = np.loadtxt(filename_mono, delimiter=",", comments="#")
 data_pink = np.loadtxt(filename_pink, delimiter=",", comments="#")
@@ -25,21 +36,21 @@ y_pink = np.arange(image_pink.shape[0])
 plt.figure(figsize=(8, 6))
 im = plt.imshow(data_mono, cmap='viridis', origin='lower')
 plt.colorbar(im, label='Intensity (arb. u.)')
-plt.title('2D Monochromatic Beam Intensity Profile on Detector', fontsize=12, fontweight='bold')
+plt.title('2D Monochrom. Beam Intensity Profile', fontsize=16, fontweight='bold')
 plt.xlabel('X-Pixel Position')
 plt.ylabel('Y-Pixel Position')
 plt.tight_layout()
-plt.savefig('Daten/Alignment and characterization/mono Sase/intensity change/beam_profile_2d_mono.png', dpi=150)
+#plt.savefig('Daten/Alignment and characterization/mono pink/intensity change/beam_profile_2d_mono.png', dpi=150)
 plt.show()
 
 plt.figure(figsize=(8, 6))
 im = plt.imshow(data_pink, cmap='viridis', origin='lower')
 plt.colorbar(im, label='Intensity (arb. u.)')
-plt.title('2D Pink Beam Intensity Profile on Detector', fontsize=12, fontweight='bold')
+plt.title('2D Pink Beam Intensity Profile', fontsize=16, fontweight='bold')
 plt.xlabel('X-Pixel Position')
 plt.ylabel('Y-Pixel Position')
 plt.tight_layout()
-plt.savefig('Daten/Alignment and characterization/mono Sase/intensity change/beam_profile_2d_pink.png', dpi=150)
+#plt.savefig('Daten/Alignment and characterization/mono pink/intensity change/beam_profile_2d_pink.png', dpi=150)
 plt.show()
 
 from mpl_toolkits.mplot3d import Axes3D
@@ -54,15 +65,15 @@ surf = ax.plot_surface(X, Y, data_mono, cmap='viridis', rstride=4, cstride=4,
                        edgecolor='none', alpha=0.9)
 
 fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Intensity (arb. u.)')
-ax.set_title('3D Reconstructed Monochromatic Beam Intensity Profile', fontsize=12, fontweight='bold')
-ax.set_xlabel('X-Pixel')
-ax.set_ylabel('Y-Pixel')
-ax.set_zlabel('Intensity')
+ax.set_title('3D Reconstructed Monochrom. Beam Intensity Profile', fontsize=20, fontweight='bold')
+ax.set_xlabel('X-Pixel', fontsize=16)
+ax.set_ylabel('Y-Pixel', fontsize=16)
+ax.set_zlabel('Intensity', fontsize=16)
 
 # Adjust the viewing angle for the best perspective
 ax.view_init(elev=30, azim=45)
 plt.tight_layout()
-plt.savefig('Daten/Alignment and characterization/mono Sase/intensity change/beam_profile_3d_mono.png', dpi=150)
+plt.savefig('Daten/Alignment and characterization/mono pink/intensity change/beam_profile_3d_mono.png', dpi=150)
 plt.show()
 
 X, Y = np.meshgrid(x_pink, y_pink)
@@ -75,13 +86,13 @@ surf = ax.plot_surface(X, Y, data_pink, cmap='viridis', rstride=4, cstride=4,
                        edgecolor='none', alpha=0.9)
 
 fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Intensity (arb. u.)')
-ax.set_title('3D Reconstructed Pink Beam Intensity Profile', fontsize=12, fontweight='bold')
-ax.set_xlabel('X-Pixel')
-ax.set_ylabel('Y-Pixel')
-ax.set_zlabel('Intensity')
+ax.set_title('3D Reconstructed Pink Beam Intensity Profile', fontsize=20, fontweight='bold')
+ax.set_xlabel('X-Pixel', fontsize=16)
+ax.set_ylabel('Y-Pixel', fontsize=16)
+ax.set_zlabel('Intensity', fontsize=16)
 
 # Adjust the viewing angle for the best perspective
 ax.view_init(elev=30, azim=45)
 plt.tight_layout()
-plt.savefig('Daten/Alignment and characterization/mono Sase/intensity change/beam_profile_3d_pink.png', dpi=150)
+plt.savefig('Daten/Alignment and characterization/mono pink/intensity change/beam_profile_3d_pink.png', dpi=150)
 plt.show()

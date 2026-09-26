@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  25 SEP 2026 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  26 SEP 2026 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -711,12 +711,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--92
  []
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 93.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
 [1]
-<img/pump probe 1.png, id=100, 200.24812pt x 124.96687pt>
+<img/pump probe 1.png, id=101, 200.24812pt x 124.96687pt>
 File: img/pump probe 1.png Graphic file (type png)
 <use img/pump probe 1.png>
 Package pdftex.def Info: img/pump probe 1.png  used on input line 104.
@@ -990,7 +994,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 464--471
 
  []
 
-<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=302, 1011.78pt x 823.15
+
+LaTeX Warning: Reference `fig:counts' on page 15 undefined on input line 473.
+
+<img/fit/residuals_and_spectra_minus150_to_50fs.png, id=301, 1011.78pt x 823.15
 53pt>
 File: img/fit/residuals_and_spectra_minus150_to_50fs.png Graphic file (type png
 )
@@ -1002,7 +1009,7 @@ ed on input line 476.
 
 LaTeX Warning: Reference `py:v6' on page 16 undefined on input line 480.
 
-<img/fit/fit_try_to_fix_lol.png, id=315, 505.89pt x 325.215pt>
+<img/fit/fit_try_to_fix_lol.png, id=314, 505.89pt x 325.215pt>
 File: img/fit/fit_try_to_fix_lol.png Graphic file (type png)
 <use img/fit/fit_try_to_fix_lol.png>
 Package pdftex.def Info: img/fit/fit_try_to_fix_lol.png  used on input line 484
@@ -1032,32 +1039,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 514--516
 \openout4 = `"Protokoll EXP21.lof"'.
 
  [2]
-<img/pulse_positions_jitter.png, id=409, 505.89pt x 433.62pt>
+<img/pulse_positions_jitter.png, id=404, 505.89pt x 433.62pt>
 File: img/pulse_positions_jitter.png Graphic file (type png)
 <use img/pulse_positions_jitter.png>
 Package pdftex.def Info: img/pulse_positions_jitter.png  used on input line 539
 .
 (pdftex.def)             Requested size: 252.94437pt x 216.80946pt.
-<img/spectrum_average_pink.png, id=410, 578.16pt x 361.35pt>
+<img/spectrum_average_pink.png, id=405, 578.16pt x 361.35pt>
 File: img/spectrum_average_pink.png Graphic file (type png)
 <use img/spectrum_average_pink.png>
 Package pdftex.def Info: img/spectrum_average_pink.png  used on input line 546.
 
 (pdftex.def)             Requested size: 289.07928pt x 180.67456pt.
-<img/spectrum_average_mono.png, id=411, 578.16pt x 361.35pt>
+<img/spectrum_average_mono.png, id=406, 578.16pt x 361.35pt>
 File: img/spectrum_average_mono.png Graphic file (type png)
 <use img/spectrum_average_mono.png>
 Package pdftex.def Info: img/spectrum_average_mono.png  used on input line 553.
 
 (pdftex.def)             Requested size: 289.07928pt x 180.67456pt.
  [3 <./img/pulse_positions_jitter.png> <./img/spectrum_average_pink.png>]
-<img/Time_resolved_spectrum_3D.png, id=419, 722.7pt x 505.89pt>
+<img/Time_resolved_spectrum_3D.png, id=413, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_3D.png Graphic file (type png)
 <use img/Time_resolved_spectrum_3D.png>
 Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 
 560.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
-<img/fit/fit_big errorbars.png, id=420, 505.89pt x 325.215pt>
+<img/fit/fit_big errorbars.png, id=414, 505.89pt x 325.215pt>
 File: img/fit/fit_big errorbars.png Graphic file (type png)
 <use img/fit/fit_big errorbars.png>
 Package pdftex.def Info: img/fit/fit_big errorbars.png  used on input line 567.
@@ -1073,58 +1080,39 @@ L3 programming layer <2026-01-19>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 21748 strings out of 467867
- 436297 string characters out of 5418334
- 942640 words of memory out of 5000000
+ 21744 strings out of 467867
+ 436239 string characters out of 5418334
+ 941533 words of memory out of 5000000
  50313 multiletter control sequences out of 15000+600000
  639202 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,107p,11249b,1142s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.caption.25} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.33} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{paragraph*.28} has been referenced but does not exi
-st, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.27} has been referenced but does not exist
-, replaced by a fixed one
-
-<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/emmak/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/emm
-ak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Us
-ers/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmssbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/emmak/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/e
-mmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Protokoll EXP21.pdf" (25 pages, 9538604 bytes).
+<C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/emmak/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/emmak/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/emmak/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/emmak/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/e
+mmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
+Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr9.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmssbx10.pfb><C:/Users/emmak/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/emmak/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/emmak/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/emmak/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
+/emmak/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "Protokoll EXP21.pdf" (25 pages, 9505129 bytes).
 PDF statistics:
- 631 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
+ 623 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
  404 words of extra memory for PDF output out of 10000 (max. 10000000)
 

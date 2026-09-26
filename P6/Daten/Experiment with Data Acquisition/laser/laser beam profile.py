@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 from pathlib import Path
 
 
-folder = Path("Daten/Experiment with Data Acquisition/laser/laser und xray profile")
+folder = Path("Daten/Experiment with Data Acquisition/laser/xray profile")
 
 files = sorted(folder.glob("*"))
 
@@ -214,18 +214,18 @@ ax[0].axvline(
     label=f"$x_0$ = {center_x:.3f} mm"
 )
 
-ax[0].set_xlabel("x [mm]", fontsize=16)
-ax[0].set_ylabel("Integrated intensity", fontsize=16)
+ax[0].set_xlabel("x [mm]", fontsize=14)
+ax[0].set_ylabel("Integrated intensity", fontsize=14)
 
 ax[0].set_title(
     f"Horizontal profile\n"
-    f"FWHM = {fwhm_x * 1000:.1f} µm", fontsize=16
+    f"FWHM = {fwhm_x * 1000:.1f} µm", fontsize=14
 )
 
-ax[0].set_xlim(0.25, 1.75)
+ax[0].set_xlim(0.95, 1.05)
 #ax[0].set_xlim(x.min(), x.max())
 
-ax[0].legend(fontsize=14)
+ax[0].legend(fontsize=12)
 ax[0].grid(True)
 
 
@@ -263,25 +263,25 @@ ax[1].axvline(
     label=f"$y_0$ = {center_y:.3f} mm"
 )
 
-ax[1].set_xlabel("y [mm]", fontsize=16)
-ax[1].set_ylabel("Integrated intensity", fontsize=16)
+ax[1].set_xlabel("y [mm]", fontsize=14)
+ax[1].set_ylabel("Integrated intensity", fontsize=14)
 
 ax[1].set_title(
     f"Vertical profile\n"
-    f"FWHM = {fwhm_y * 1000:.1f} µm", fontsize=16
+    f"FWHM = {fwhm_y * 1000:.1f} µm", fontsize=14
 )
 
-ax[1].set_xlim(0.25, 1.75)
+ax[1].set_xlim(0.95, 1.05)
 #ax[1].set_xlim(y.min(), y.max())
 
-ax[1].legend(fontsize=14)
+ax[1].legend(fontsize=12)
 ax[1].grid(True)
 
 
 plt.tight_layout()
 
 plt.savefig(
-    "Daten/Experiment with Data Acquisition/laser/laser_xray_beam_profile.png",
+    "Daten/Experiment with Data Acquisition/laser/xray_beam_profile.png",
     dpi=300
 )
 
