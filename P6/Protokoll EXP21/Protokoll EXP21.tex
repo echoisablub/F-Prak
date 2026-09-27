@@ -453,47 +453,94 @@ Another thing to note is how little the change in spectrum between \qty{600}{fs}
      \caption{Kinetic traces at selected emission energies.}
      \label{fig:kin traces}
 \end{figure}
-The kinetic traces at these energies (see \autoref{fig:kin traces}) can be used to determine the rise time of the population of the excited states of $[\text{Fe}(\text{bipy})_3]^{2+}$ during the relaxation. To do this we use a function to parametrise our reference spectrum:
-\begin{align}
-	S(E)=A\cdot\sum^5_{s=1}f_s\cdot S_s(E)
-\end{align}
-With $A$ being the amplitude, $s=\{1,2,3,4,5\}$ describing the multiplicity and $f_s$ being the population coefficients of the corresponding reference spectra $S_s(E)$. This means the population of the ground state - the singlet state - is described through $f_1$.\\
-The population $T$ of our difference spectrum can now be described as:
-\begin{align}
-	T(E)=S(E)-S_1(E)=A\cdot\left(\sum^5_{s=1} f_s \cdot S_s(E)-S_1(E)\right)
-\end{align}
-The fitting function can be found in \autoref{lst:fit}.\\
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.5]{img/fit/fit_all.png}
-     \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
-     \label{fig:pop bigerr}
-\end{figure}
-Now that we have a fit for the time-dependent population of the respective states present during the different time delays (see \autoref{fig:pop bigerr}), we can see that our population curves have huge errorbars for the time delays $\Delta t\leq0$ (better represented in \autoref{fig:pop errors big}). Those off-the-charts errors explain the occurence of any spin multiplicity other than singlet for our negative delays, as they should not occur. Our data is noisy for these delays and the fitting function struggles to get a read on the data.\\
-To confirm this, we looked at the squared errors over the negative time delays (see \autoref{fig:counts}) and surmised that our photon count was much too low to justify the peaks seen in our population curve. This is also corroborated by looking at the residuals together with the measurements and seeing how noisy the measurements for a time delay of $\Delta t\leq0$ are in comparison to the one at \qty{50}{fs} (see \autoref{fig:resids}).
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.45]{img/fit/residuals_and_spectra_minus150_to_50fs.png}
-     \caption{The normalised residuals together with the actual measurements and a fit over ... for time delays of $\Delta t=\{\qty{-150}{fs},\qty{-100}{fs},\qty{-50}{fs},\qty{0}{fs},\qty{50}{fs}\}$}
-     \label{fig:resids}
-\end{figure}
-We then used this information to fix our population curves (see \autoref{fig:pop fixed}). This new function (see: \autoref{py:v6}) fits the state population for delays up to \qty{50}{fs} simultaneously while softly constraining them to remain close to a common baseline, thereby stabilizing the fit for the weak pre-time-zero signals.
+The kinetic traces at these energies (see \autoref{fig:kin traces}) can be used to determine the rise time of the population of the excited states of $[\text{Fe}(\text{bipy})_3]^{2+}$ during the relaxation. 
 
-\begin{figure}[h]
+To determine the populations, the measured difference spectrum is modelled as a
+linear combination of the five reference spectra. The singlet spectrum
+$S_1(E)$ represents the ground state and is therefore used as the laser-off
+reference. The model for a measurement at delay $t$ is
+\begin{align}
+     D(E,t) = A\left(\sum_{s=1}^{5} f_s(t)S_s(E)-S_1(E)\right),
+     \qquad \sum_{s=1}^{5}f_s(t)=1.
+\end{align}
+Here, $f_s(t)$ is the population of spin multiplicity $s$ and $A$ is a common amplitude. 
+The amplitude is not fitted independently for every delay but is first calibrated using the spectrum at
+$t=\qty{800}{fs}$ under the assumption that this spectrum is purely quintet:
+\begin{align}
+     A = \frac{\displaystyle\sum_E
+     \frac{D(E,800\,\si{fs})\left[S_5(E)-S_1(E)\right]}{\sigma^2(E,800\,\si{fs})}}
+     {\displaystyle\sum_E
+     \frac{\left[S_5(E)-S_1(E)\right]^2}{\sigma^2(E,800\,\si{fs})}}.
+\end{align}
+This calibrated value is then kept fixed for all delays. For each spectrum,
+only the four excited-state populations $f_2$, $f_3$, $f_4$ and $f_5$ are
+optimised by minimising the weighted residual
+\begin{align}
+     \chi^2 = \sum_E \left[\frac{D(E,t)-D_{\mathrm{fit}}(E,t)}{\sigma(E,t)}\right]^2,
+\end{align}
+with $0\leq f_s\leq1$ and $\sum_{s=2}^{5}f_s\leq1$. The singlet population
+is not an independent fit parameter, but is calculated from the normalisation
+condition:
+\begin{align}
+     f_1(t)=1-f_2(t)-f_3(t)-f_4(t)-f_5(t).
+\end{align}
+The resulting populations and their uncertainties are shown in
+\autoref{fig:pop fit}. To estimate the transition time of the singlet
+population, $f_1(t)$ is additionally fitted with a complementary error
+function:
+\begin{align}
+     f_1(t)=f_{\mathrm{after}}+\frac{\Delta f}{2}
+     \operatorname{erfc}\left(\frac{t-t_0}{\sqrt{2}\,\sigma_t}\right).
+\end{align}
+Here, $t_0$ is the midpoint of the population drop and $\sigma_t$ is the
+standard deviation of the Gaussian temporal response. The corresponding full
+width at half maximum is $\mathrm{FWHM}=2\sqrt{2\ln 2}\,\sigma_t$.\\
+\begin{figure}[H]
      \centering
-     \includegraphics[scale=0.55]{img/fit/fit_try_to_fix_lol.png}
-     \caption{The adjusted population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
-     \label{fig:pop fixed}
+     \includegraphics[scale=0.5]{img/fit/population_fit.png}
+     \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds.}
+     \label{fig:pop fit}
 \end{figure}
-With this version of our fit we can see that nothing really changed for our positive delays. We see a population change from majority singlet to almost no singlets around our \qty{50}{fs} and \qty{100}{fs} delay with only small peaks at later delays with errorbars too big to really be definite peaks. Our triplet population grows rapidly for our \qty{100}{fs} delay. After that peak our triplet population steadily decreases and is overtaken by the quintet population which grows steadily from a delay of \qty{50}{fs}. At our latest time delay of \qty{800}{fs} the population is made up of almost only quintets with all other states being near 0. The doublet and quartet populations are near 0 for almost all time delays which is to be expected with the predicted intermediate states of the reaction.
+
+\begin{figure}[H]
+     \centering
+     \includegraphics[scale=0.5]{img/fit/singlet_transition_fit.png}
+     \caption{The fitted evolution of the singlet population.}
+     \label{fig:singlet transition fit}
+\end{figure}
+
+
 
 
 \section{Discussion of the physical meaning}
-In both our versions of our population curves we can see the triplet population spike. This is indicative of an ultrafast intermediate state - the $^3T_1$ state - in the relaxation chain. Approximately 80\% of our excited molecules followed a relaxation chain of $^{1,3}\text{MLCT}\rightarrow ^3T_1 \rightarrow ^5T_2$ while about 20\% directly transitioned from the $^{1,3}\text{MLCT}$ state into the high spin $^5T_2$ state.\\
-The relaxation timescale matches roughly to our literature value of $\tau<\qty{100}{fs}$, even though with a peak at \qty{100}{fs} it's a bit later than expected. This could have happened because of an error in determining our origin (no time delay).\\\\
-While talking about our relaxation timeline we can also see that in our chosen time delays the relaxation doesn't fully end, as we end at a maximal quintet population at our time delay of \qty{800}{fs} and with a difference spectrum that still shows small differences when compared to the difference spectrum at \qty{100}{ps} but not majorly so. This matches our literature value for the relaxation time of the $^5T_2$ state being \qty{1}{ns} which is much larger than our latest time delay but not that much larger than our \qty{100}{ps} measurement.\\\\
-In our population curves we also see doublet and quartet states, which shouldn't necessarily be part of our relaxation chain. The doublets can occur because the whole molecule can look like a doublet. But they, like our quartets, only really occur because of errors in our fitting function which struggles with strongly correlated data for low photon counts.\\
-These errors in our fitting function are also the reason that our first population curve looks the way it does. The algorithm struggles with the noise present at low photon counts.
+The population fit shows the conversion of the low-spin singlet ground state
+into excited spin states after excitation by the optical laser. The transient
+triplet population first increases and later decreases again, while the
+quintet population grows and becomes dominant at long delays. This temporal
+ordering is consistent with a short-lived triplet intermediate that transfers
+population to the long-lived quintet state. The data therefore support a
+predominantly sequential relaxation pathway rather than a direct transition
+to the quintet state alone. Small doublet and quartet contributions occur only
+at some delays and remain much smaller than the main populations. They are
+likely caused by correlations between the reference spectra and statistical
+fluctuations, so they do not provide sufficient evidence for additional
+physical states.
+
+The fitted midpoint of the singlet-population drop is
+$t_0=199.75\pm5.79\,\si{fs}$. In the context of the Gaussian temporal
+statistics of the laser pulses, we interpret this midpoint as the effective
+start of the excitation. The Gaussian model accounts for the fact that the
+ultrashort pump and probe pulses have a finite temporal width rather than
+interacting at one perfectly defined instant. The fitted transition width is
+$\sigma_t=97.63\pm7.63\,\si{fs}$, corresponding to
+$\mathrm{FWHM}=229.91\pm17.96\,\si{fs}$. Thus, $t_0$ marks the temporal
+position of the excitation in our measurement, while the width describes its
+temporal spread.
+
+At long delays, the population is almost entirely quintet, consistent with the
+long-lived high-spin state. The unity quintet population at \qty{800}{fs}
+should be interpreted with care, since this spectrum was used to calibrate the
+common amplitude under the pure-quintet assumption.
 
 \subsection{Error analysis}
 The error bars of the difference-spectrum measurements arise from statistical fluctuations in the data, which are the only source of error modeled in VLab. They are about two orders of magnitude smaller than the largest peak in arbitrary units. To reduce the error bars by half, the difference spectra would have had to be accumulated for four times as long. This was not feasible during the measurements, especially because the program had already crashed twice. Therefore, we preferred collecting data for all time delays with somewhat larger uncertainties rather than risking incomplete measurements.
@@ -534,26 +581,6 @@ In this work, AI tools were used as supportive aids for proofreading and languag
 \begin{appendices}
     
 \section{Additional Plots}
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.5]{img/pulse_positions_jitter.png}
-     \caption{A scatterplot of the spatial jitter of the X-ray beam measured on BIU2.}
-     \label{fig:jitter}
-\end{figure}
-
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.5]{img/spectrum_average_pink.png}
-     \caption{The average of three seperate measurements of the spectrum of a pink X-ray beam measured on the Gotthard Spectrum Analyser 1.}
-     \label{fig:spectrum pink}
-\end{figure}
-
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.5]{img/spectrum_average_mono.png}
-     \caption{The average of three seperate measurements of the spectrum of a monochromatic X-ray beam measured on the Gotthard Spectrum Analyser 1.}
-     \label{fig:spectrum mono}
-\end{figure}
 
 \begin{figure}[H]
      \centering
@@ -562,17 +589,11 @@ In this work, AI tools were used as supportive aids for proofreading and languag
      \label{fig:spectrum 3D}
 \end{figure}
 
-\begin{figure}[H]
-     \centering
-     \includegraphics[scale=0.5]{img/fit/fit_big errorbars.png}
-     \caption{The population curves of the different spin states plotted against the time delay of the optical laser in femtoseconds with another y-axes scale to see the errorbars better.}
-     \label{fig:pop errors big}
-\end{figure}
-
 %\section{VLab}
 %\label{Anh: VLab}
 
 \section{Code}
+
 %\lstinputlisting[language=Python,
 %    caption={Time resolved difference spectra (2D)},
 %    label={lst:time res},
@@ -586,13 +607,8 @@ In this work, AI tools were used as supportive aids for proofreading and languag
 %\lstinputlisting[language=Python,
 %    caption={Fit for population curves},
 %    label={lst:fit},
-%    captionpos=t]{py/fit_v5.py}
+%    captionpos=t]{py/fit_v8.py}
 
-%\lstinputlisting[language=Python,
-%    caption={stabilized fit for negativ time delays},
-%    label={lst:fit fit},
-%    captionpos=t]{py/v6.py}
 \end{appendices}
-
 
 \end{document} 
