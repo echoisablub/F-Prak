@@ -336,19 +336,19 @@ Ideally, the number of absorbed optical laser photons should be less than or app
 To ensure the optical laser excites the sample efficiently, the laser intensity ideally is in a range where the number of optical laser photons is less than or approximately equal to the number of sample molecules in the laser-excited volume.\\
 First we calculate the number of $[\text{Fe}(\text{bipy})_3]^{2+}$ molecules in the volume illuminated by the laser with a chosen beam size of $d_L=\qty{150}{\mu\m}$, a concentration of $c=\qty{1.00e-4}{\mol\per\cm^3}$, a wavelength of $\lambda=\qty{400}{nm}$ and a jet size of $d_{jet}=\qty{25}{\mu\m}$. The particle density is calculated by:
 \begin{align}
-	\mathcal{N} = c \cdot N_A = 0.100 \, \text{mol/L} \cdot 6.022 \times 10^{23}\ \text{L}^{-1}\ \text{mol}^{-1} = 6.022 \times 10^{22}\ \text{molecules/cm}^3
+	\mathcal{N} = c \cdot N_A = \qty{1.00e-4}{\mol\per\cm^3} \cdot 6.022 \times 10^{23}\ \si{mol^{-1}} = 6.022 \times 10^{19}\ \text{molecules/cm}^3
 \end{align}
-The illuminated cross-section area $A$ of the Gaussian beam is $A_{\text{eff}} = 1.133 \cdot d_{\text{FWHM}}^2 = 1{,}133 \cdot (0.015\ \text{cm})^2 \approx 2.549 \times 10^{-4}\ \text{cm}^2$ from which the effective volume can be calculated: $V_{\text{eff}} = A_{\text{eff}} \cdot d_{\text{jet}} = 2.549 \times 10^{-4}\ \text{cm}^2 \cdot 25 \times 10^{-4}\ \text{cm} = 6.373 \times 10^{-10}\ \text{L}$. The number of molecules is then calculated:
+The illuminated cross-section area $A$ of the Gaussian beam is $A_{\text{eff}} = 1.133 \cdot d_{\text{FWHM}}^2 = 1.133 \cdot (0.015\ \text{cm})^2 \approx 2.549 \times 10^{-4}\ \text{cm}^2$. The effective volume is therefore $V_{\text{eff}} = A_{\text{eff}} \cdot d_{\text{jet}} = 2.549 \times 10^{-4}\ \text{cm}^2 \cdot 25 \times 10^{-4}\ \text{cm} = 6.373 \times 10^{-7}\ \text{cm}^3 = 6.373 \times 10^{-10}\ \text{L}$. The number of molecules is then calculated:
 \begin{align}
-	N_{\text{molecules, eff}} = \mathcal{N} \cdot V_{\text{eff}} = (6.022 \times 10^{22}\ \text{cm}^{-3}) \cdot (6.373 \times 10^{-7}\ \text{cm}^3) \approx 3.838 \times 10^{16}\ \text{molecules}
+	N_{\text{molecules, eff}} = \mathcal{N} \cdot V_{\text{eff}} = (6.022 \times 10^{19}\ \text{cm}^{-3}) \cdot (6.373 \times 10^{-7}\ \text{cm}^3) \approx 3.838 \times 10^{13}\ \text{molecules}
 \end{align}
 Now to determine the pulse energy at which the number of photons per pulse is equal to the number of molecules just calculated:
 \begin{align}
-	N_{\text{photons}} = N_{\text{molecules}}\\
-	E_{\text{photon}} = \frac{h \cdot c}{\lambda} = \frac{(6{,}626 \times 10^{-34}\ \text{J}\cdot\text{s}) \cdot (2{,}998 \times 10^8\ \text{m/s})}{400 \times 10^{-9}\ \text{m}} \approx 4.966 \times 10^{-19}\ \text{J}\\
-	E_{\text{pulse}} = N_{\text{molecules}} \cdot E_{\text{photon}}=(3.838 \times 10^{16}) \cdot (4.966 \times 10^{-19}\ \text{J}) \approx 19.06 \times 10^{-3}\ \text{J}
+	N_{\text{photons}} &= N_{\text{molecules}}\\
+	E_{\text{photon}} &= \frac{h \cdot c}{\lambda} = \frac{(6{,}626 \times 10^{-34}\ \text{J}\cdot\text{s}) \cdot (2{,}998 \times 10^8\ \text{m/s})}{400 \times 10^{-9}\ \text{m}} \approx 4.966 \times 10^{-19}\ \text{J}\\
+     E_{\text{pulse}} &= N_{\text{molecules}} \cdot E_{\text{photon}}=(3.838 \times 10^{13}) \cdot (4.966 \times 10^{-19}\ \text{J}) \approx 1.906 \times 10^{-5}\ \text{J} = \qty{19.06}{\micro\J}
 \end{align}
-For a wavelength of \qty{400}{nm} there's a maximal pulse energy of \qty{19059.51}{mJ} available for a spot diameter of \qty{150}{\mu\m}\\\\
+For a wavelength of \qty{400}{nm}, the equal-photon threshold is approximately \qty{19.06}{\micro\J} for a spot diameter of \qty{150}{\mu\m}. This value is slightly above the available pulse energy of \qty{15}{\micro\J}; it is only an order-of-magnitude estimate because it assumes one absorbed photon per excited molecule and neglects saturation and the detailed excitation probability.\\
 There are two X-ray crystal spectrometers available to use: a von Hamos spectrometer and a Johann spectrometer. As the von Hamos spectrometer can record the entire spectrum at once while also being immune to intensity variation, in contrast to the Johann spectrometer which needs to scan each wavelength separately and requires normalization to the accumulated incident intensity at each measurement point to measure the whole spectrum, it is better suited for this experiment.\\\\
 In order to choose the correct crystal for the emission spectrometer the Bragg reflection angle needs to be considered which means we need to calculate the Bragg reflection angle for the Fe K$\beta_{1,3}$ emission line. From the FXE website \cite{5} we preselect the Si(531) crystal and the Ge(531) crystal. The Bragg angle is calculated through:
 \begin{align}
@@ -555,7 +555,7 @@ The following settings for the pump-laser were determined:
      \begin{tabular}{cccccc}
           Laser power & Repetition rate & Pulse energy & Wavelength & Full width, vertical & Full width, horizontal \\
           \midrule
-          \qty{27.5}{W} & \qty{550000}{Hz} & \qty{5.0e-5}{J} & \qty{515}{nm} & \qty{150}{\mu\m} & \qty{150}{\mu\m} \\
+          \qty{27.5}{W} & \qty{550000}{Hz} & \qty{5.0e-5}{J} & \qty{400}{nm} & \qty{150}{\mu\m} & \qty{150}{\mu\m} \\
      \end{tabular}
 \end{table}
 Then a successfull series of pump-probe-measurements was carried out in which we can see the occurance of an ultrafast intermediate state can be seen. The identification was carried out using a provided reference spectrum with which it was possible to fit time delay-dependant population curves resolved after the differnt spin states present during the relaxation process.\\\\
