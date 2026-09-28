@@ -18,16 +18,16 @@
 \contentsline {subsection}{\numberline {4.1}Preparation of the Experiment}{6}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Alignment and Characterization of the X-ray Beam}{6}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Preparatory Estimates for the Experiment}{9}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Performing the Experiment with Data Acquisition}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Performing the Experiment with Data Acquisition}{12}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Analysis and Interpretation}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}XES spectra at 100ps}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Difference spectra for different pump-probe delays}{14}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Discussion of the physical meaning}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Error analysis}{17}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Conclusion and outlook}{17}{section.7}%
+\contentsline {subsection}{\numberline {5.1}XES spectra at 100ps}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Difference spectra for different pump-probe delays}{15}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Discussion of the physical meaning}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Error analysis}{18}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Conclusion and outlook}{18}{section.7}%
 \contentsline {section}{\nonumberline References}{A}{section*.25}%
 \contentsline {paragraph}{\nonumberline Usage of AI}{A}{paragraph*.26}%
-\contentsline {section}{Abbildungsverzeichnis}{B}{paragraph*.26}%
-\contentsline {section}{Appendix \numberline {A}Additional Plots}{C}{appendix.1.A}%
-\contentsline {section}{Appendix \numberline {B}Code}{C}{appendix.1.B}%
+\contentsline {section}{Abbildungsverzeichnis}{C}{paragraph*.26}%
+\contentsline {section}{Appendix \numberline {A}Additional Plots}{D}{appendix.1.A}%
+\contentsline {section}{Appendix \numberline {B}Code}{D}{appendix.1.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
