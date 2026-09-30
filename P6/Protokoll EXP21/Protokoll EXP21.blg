@@ -1,39 +1,40 @@
-This is BibTeX, Version 0.99e (TeX Live 2026)
+This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Protokoll EXP21.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
 Database file #1: literatur.bib
-Warning--I didn't find a database entry for "5"
-You've used 4 entries,
+You've used 5 entries,
             1876 wiz_defined-function locations,
-            494 strings with 4012 characters,
-and the built_in function-call counts, 660 in all, are:
-= -- 60
-> -- 16
+            496 strings with 4053 characters,
+and the built_in function-call counts, 774 in all, are:
+= -- 68
+> -- 20
 < -- 0
-+ -- 8
-- -- 4
-* -- 30
-:= -- 101
++ -- 10
+- -- 5
+* -- 33
+:= -- 116
 add.period$ -- 5
-call.type$ -- 4
-change.case$ -- 2
+call.type$ -- 5
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 35
-empty$ -- 84
-format.name$ -- 4
-if$ -- 166
+cite$ -- 5
+duplicate$ -- 39
+empty$ -- 102
+format.name$ -- 5
+if$ -- 195
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 5
 missing$ -- 5
-newline$ -- 17
-num.names$ -- 4
-pop$ -- 19
+newline$ -- 20
+num.names$ -- 5
+pop$ -- 24
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 18
+skip$ -- 26
 stack$ -- 0
 substring$ -- 15
 swap$ -- 7
@@ -42,7 +43,6 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 6
-width$ -- 5
-write$ -- 36
-(There was 1 warning)
+while$ -- 7
+width$ -- 6
+write$ -- 42

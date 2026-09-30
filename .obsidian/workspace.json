@@ -11,14 +11,10 @@
             "id": "dde9774ec6120660",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "P4/lab book.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "lab book"
+              "title": "Neuer Tab"
             }
           }
         ]
@@ -83,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "da3d6c435cbb4957",
