@@ -370,7 +370,7 @@ The X-ray emission spectrometer was adjusted by setting the Bragg angle range to
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.2]{img/100 ps Screenshot 2026-09-03 093257.png}
-     \caption{The Von Hamos spectrometer in its operating position, with the Jungfrau detector read-out shown alongside the instrument settings. This arrangement records the Fe K$\beta$ emission spectrum over a broad energy range in a single measurement.}
+     \caption{The Von Hamos spectrometer in its operating position, with the Jungfrau detector read-out and the instrument settings shown. The image documents the spectrometer configuration used for the measurements.}
      \label{fig:von hamos}
 \end{figure}
 
@@ -381,19 +381,19 @@ The excitation laser was set to $\lambda=\qty{400}{nm}$ and $f=0.02$ with a beam
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/beams/xray_beam_profile.png}
-     \caption{Spatial intensity profile of the focused X-ray beam in the sample plane. This measurement defines the probe-beam position and size at the liquid jet.}
+     \caption{Spatial intensity profile of the focused X-ray beam at the sample position. Its compact spot defines the region of the liquid jet probed by the X-rays and serves as the reference for checking pump-probe overlap.}
      \label{fig:xray}
 \end{figure}
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/beams/laser_beam_profile.png}
-     \caption{Spatial intensity profile of the optical excitation laser in the sample plane. Its broader profile is used to illuminate a larger region than the focused X-ray probe.}
+     \caption{Spatial intensity profile of the optical excitation laser at the sample position, showing the region excited by the pump pulse. Its size is compared with the X-ray spot to ensure that the probe interrogates laser-excited molecules.}
      \label{fig:laser}
 \end{figure}
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/beams/laser_xray_beam_profile.png}
-     \caption{Superposition of the optical laser and X-ray beam profiles in the sample plane. The overlap demonstrates that the X-ray probe is positioned inside the laser-excited region despite the spatial jitter of the optical beam.}
+     \caption{Superposition of the optical-laser and X-ray intensity profiles in the sample plane, with the smaller X-ray spot positioned inside the broader laser profile. This overlap is important because it ensures that the probed sample volume is excited while providing tolerance to the optical laser's spatial jitter.}
      \label{fig:xary laser both}
 \end{figure}
 
@@ -435,7 +435,7 @@ When plotting the XES spectrum and the difference spectrum for a time delay of \
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/Time_resolved_spectrum_errbars.png}
-     \caption{Transient X-ray emission spectra recorded at different pump-probe delays. Their evolving positive and negative features reveal the spectral changes associated with the population transfer between spin states.}
+     \caption{Transient X-ray emission difference spectra recorded at different pump-probe delays. The positive feature near \qty{7045}{eV}, the negative minimum near \qty{7058}{eV} and the evolving shoulder around \qty{7054}{eV} change with delay, showing that the emission spectrum responds to the laser excitation and evolves as the spin-state populations change. The relatively small differences between the spectra at \qty{600}{fs} and \qty{800}{fs} suggest that the system is approaching a more stable excited-state distribution.}
      \label{fig:time res spec}
 \end{figure}
 From the time resolved difference spectra of the measurements (see \autoref{fig:time res spec}) we can see multiple developments in the transient signal over the different time delays: at an energy around \qty{7045.0}{eV} the difference emission intensity grows (the intensity for the excited state is more intense than that of the ground state), at about \qty{7053.7}{eV} a shoulder in intensity difference initially emerges and then flattens out again for time delays $\Delta t>\qty{350}{fs}$. The two most prominent features of the transient signal are the minimum at \qty{7057.8}{eV} and the maximum at \qty{7060.5}{eV} which both match up with the difference spectrum provided.\\
@@ -491,7 +491,7 @@ width at half maximum is $2\sqrt{2\ln 2}\,\sigma_t$.\\
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/fit/population_fit.png}
-     \caption{Fitted populations of the singlet, doublet, triplet, quartet and quintet reference states as a function of pump-probe delay. The transient triplet contribution and the subsequent growth of the quintet population support a relaxation pathway through an intermediate state.}
+     \caption{Spin-state populations obtained by fitting the measured difference spectrum at each pump-probe delay. The singlet dominates before excitation and then decreases, while the triplet population appears transiently before the quintet grows to dominate, consistent with relaxation through a short-lived intermediate towards the high-spin state. The small doublet and quartet contributions are less conclusive and may reflect correlations between reference spectra.}
      \label{fig:pop fit}
 \end{figure}
 
