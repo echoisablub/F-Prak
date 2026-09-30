@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21"] 1790763413.59404 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21" 1790763420.78371 0
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux" 1790763420.47259 34493 7a68c0bc9ecab86f887f86f889a1223c "pdflatex"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/literatur.bib" 1790514199.24614 1461 40f4bb7a36914ec3fddfb1b2785f0a5a ""
+["bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21"] 1790764823.86262 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21" 1790764831.06275 0
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux" 1790764830.69805 34508 bde8a1ee5d00821b424a4774afb3d7e5 "pdflatex"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/literatur.bib" 1790764764.61759 1664 eb364ba0b93f8ccaa98180ecaa35b983 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   (generated)
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.blg"
   (rewritten before read)
-["pdflatex"] 1790763413.7145 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" "Protokoll EXP21" 1790763420.78428 2
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux" 1790763420.47259 34493 7a68c0bc9ecab86f887f86f889a1223c "pdflatex"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl" 1790763413.70986 684 26acd4fcecd37f883bd45edf69f35730 "bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.lof" 1790763420.47806 7688 1126c5ee9f8145f601a667df8b4e3ba3 "pdflatex"
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex" 1790763390.26268 54318 e9dc19a9f27579a0b547e49ad24c7bbc ""
-  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.toc" 1790763420.47799 2913 d4ea58952e29ebb6510dcec393fe4f10 "pdflatex"
+["pdflatex"] 1790764823.96569 "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex" "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" "Protokoll EXP21" 1790764831.06301 2
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux" 1790764830.69805 34508 bde8a1ee5d00821b424a4774afb3d7e5 "pdflatex"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.bbl" 1790764823.96213 740 72815fa00920ef36fde3d928e3175a4a "bibtex /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.lof" 1790764830.70341 7688 1126c5ee9f8145f601a667df8b4e3ba3 "pdflatex"
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.tex" 1790764800.7844 54310 6945064a3223b863927ba377a304449d ""
+  "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.toc" 1790764830.70335 2913 d4ea58952e29ebb6510dcec393fe4f10 "pdflatex"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/100 ps Screenshot 2026-09-03 093257.png" 1790514199.18413 2211146 38836b433da9406dbbd644a4c96cc506 ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/FWHM_gaussian.png" 1790761462.57847 214450 8ae3cf5cdb1cc638390e700d6e81d20f ""
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/Kinetic traces.png" 1790514199.1913 262821 697fb9b903a6364d54909523697269cf ""
@@ -182,8 +182,8 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1787828517 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1787828465 3636772 f7800f013943a3d765fb1e27bbf33893 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "Protokoll EXP21.lof" 1790763420.47806 7688 1126c5ee9f8145f601a667df8b4e3ba3 ""
-  "Protokoll EXP21.toc" 1790763420.47799 2913 d4ea58952e29ebb6510dcec393fe4f10 ""
+  "Protokoll EXP21.lof" 1790764830.70341 7688 1126c5ee9f8145f601a667df8b4e3ba3 ""
+  "Protokoll EXP21.toc" 1790764830.70335 2913 d4ea58952e29ebb6510dcec393fe4f10 ""
   (generated)
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.aux"
   "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.lof"

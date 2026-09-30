@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  30 SEP 2026 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  30 SEP 2026 13:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,10 +766,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--329
  []
 
 [10 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/abs spec aqu sol.png>]
-
-LaTeX Warning: Citation `5' on page 11 undefined on input line 346.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 342--347
 
  []
@@ -784,29 +780,29 @@ Package siunitx Warning: Unit macro \angstrom has been deprecated in this
 (siunitx)                
 (siunitx)                \DeclareSIUnit\angstrom{\text {Å}}
 
-<img/100 ps Screenshot 2026-09-03 093257.png, id=234, 1444.64719pt x 812.28468pt>
+<img/100 ps Screenshot 2026-09-03 093257.png, id=235, 1444.64719pt x 812.28468pt>
 File: img/100 ps Screenshot 2026-09-03 093257.png Graphic file (type png)
 <use img/100 ps Screenshot 2026-09-03 093257.png>
 Package pdftex.def Info: img/100 ps Screenshot 2026-09-03 093257.png  used on input line 372.
 (pdftex.def)             Requested size: 288.92432pt x 162.45406pt.
 [11]
-<img/beams/xray_beam_profile.png, id=254, 867.24pt x 361.35pt>
+<img/beams/xray_beam_profile.png, id=256, 867.24pt x 361.35pt>
 File: img/beams/xray_beam_profile.png Graphic file (type png)
 <use img/beams/xray_beam_profile.png>
 Package pdftex.def Info: img/beams/xray_beam_profile.png  used on input line 383.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<img/beams/laser_beam_profile.png, id=255, 867.24pt x 361.35pt>
+<img/beams/laser_beam_profile.png, id=257, 867.24pt x 361.35pt>
 File: img/beams/laser_beam_profile.png Graphic file (type png)
 <use img/beams/laser_beam_profile.png>
 Package pdftex.def Info: img/beams/laser_beam_profile.png  used on input line 389.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
-<img/beams/laser_xray_beam_profile.png, id=256, 867.24pt x 361.35pt>
+<img/beams/laser_xray_beam_profile.png, id=258, 867.24pt x 361.35pt>
 File: img/beams/laser_xray_beam_profile.png Graphic file (type png)
 <use img/beams/laser_xray_beam_profile.png>
 Package pdftex.def Info: img/beams/laser_xray_beam_profile.png  used on input line 395.
 (pdftex.def)             Requested size: 433.61894pt x 180.67456pt.
  [12 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/100 ps Screenshot 2026-09-03 093257.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/beams/xray_beam_profile.png>] [13 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/beams/laser_beam_profile.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/beams/laser_xray_beam_profile.png>]
-<img/spectra/Reference_Spectra.png, id=274, 1389.7521pt x 433.62pt>
+<img/spectra/Reference_Spectra.png, id=276, 1389.7521pt x 433.62pt>
 File: img/spectra/Reference_Spectra.png Graphic file (type png)
 <use img/spectra/Reference_Spectra.png>
 Package pdftex.def Info: img/spectra/Reference_Spectra.png  used on input line 410.
@@ -816,23 +812,23 @@ Overfull \hbox (3.3755pt too wide) in paragraph at lines 410--411
  [][] 
  []
 
-<img/spectra/100ps spektrum.png, id=276, 722.7pt x 505.89pt>
+<img/spectra/100ps spektrum.png, id=278, 722.7pt x 505.89pt>
 File: img/spectra/100ps spektrum.png Graphic file (type png)
 <use img/spectra/100ps spektrum.png>
 Package pdftex.def Info: img/spectra/100ps spektrum.png  used on input line 422.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/spectra/100ps diff spektrum.png, id=277, 722.7pt x 505.89pt>
+<img/spectra/100ps diff spektrum.png, id=279, 722.7pt x 505.89pt>
 File: img/spectra/100ps diff spektrum.png Graphic file (type png)
 <use img/spectra/100ps diff spektrum.png>
 Package pdftex.def Info: img/spectra/100ps diff spektrum.png  used on input line 429.
 (pdftex.def)             Requested size: 204.85846pt x 143.4005pt.
-<img/Time_resolved_spectrum_errbars.png, id=278, 722.7pt x 505.89pt>
+<img/Time_resolved_spectrum_errbars.png, id=280, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_errbars.png Graphic file (type png)
 <use img/Time_resolved_spectrum_errbars.png>
 Package pdftex.def Info: img/Time_resolved_spectrum_errbars.png  used on input line 439.
 (pdftex.def)             Requested size: 361.3491pt x 252.94437pt.
 [14 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/spectra/Reference_Spectra.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/spectra/100ps spektrum.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/spectra/100ps diff spektrum.png>]
-<img/Kinetic traces.png, id=289, 722.7pt x 433.62pt>
+<img/Kinetic traces.png, id=291, 722.7pt x 433.62pt>
 File: img/Kinetic traces.png Graphic file (type png)
 <use img/Kinetic traces.png>
 Package pdftex.def Info: img/Kinetic traces.png  used on input line 447.
@@ -848,7 +844,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 443--450
  []
 
 [15 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/Time_resolved_spectrum_errbars.png>]
-<img/fit/population_fit.png, id=298, 505.89pt x 325.215pt>
+<img/fit/population_fit.png, id=300, 505.89pt x 325.215pt>
 File: img/fit/population_fit.png Graphic file (type png)
 <use img/fit/population_fit.png>
 Package pdftex.def Info: img/fit/population_fit.png  used on input line 495.
@@ -859,7 +855,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 489--498
  []
 
 [16 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/img/Kinetic traces.png>]
-<img/fit/singlet_transition_fit.png, id=312, 505.89pt x 325.215pt>
+<img/fit/singlet_transition_fit.png, id=314, 505.89pt x 325.215pt>
 File: img/fit/singlet_transition_fit.png Graphic file (type png)
 <use img/fit/singlet_transition_fit.png>
 Package pdftex.def Info: img/fit/singlet_transition_fit.png  used on input line 502.
@@ -874,7 +870,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 553--555
 \openout4 = `"Protokoll EXP21.lof"'.
 
  [3]
-<img/Time_resolved_spectrum_3D.png, id=424, 722.7pt x 505.89pt>
+<img/Time_resolved_spectrum_3D.png, id=426, 722.7pt x 505.89pt>
 File: img/Time_resolved_spectrum_3D.png Graphic file (type png)
 <use img/Time_resolved_spectrum_3D.png>
 Package pdftex.def Info: img/Time_resolved_spectrum_3D.png  used on input line 579.
@@ -1029,24 +1025,20 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 23270 strings out of 467525
- 455306 string characters out of 5418982
- 1625362 words of memory out of 5000000
- 51038 multiletter control sequences out of 15000+600000
+ 23272 strings out of 467525
+ 455315 string characters out of 5418982
+ 1625349 words of memory out of 5000000
+ 51039 multiletter control sequences out of 15000+600000
  641079 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,107p,11367b,2924s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (36 pages, 8107745 bytes).
+Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P6/Protokoll EXP21/Protokoll EXP21.pdf" (36 pages, 8107593 bytes).
 PDF statistics:
- 1666 PDF objects out of 1728 (max. 8388607)
- 1510 compressed objects within 16 object streams
- 914 named destinations out of 1000 (max. 500000)
+ 1668 PDF objects out of 1728 (max. 8388607)
+ 1512 compressed objects within 16 object streams
+ 915 named destinations out of 1000 (max. 500000)
  374 words of extra memory for PDF output out of 10000 (max. 10000000)
 
