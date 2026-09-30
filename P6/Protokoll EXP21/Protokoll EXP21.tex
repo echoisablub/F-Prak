@@ -90,7 +90,7 @@ When accelerating electrons or other charged particles to relativistic speeds al
 Synchrotron radiation is bright X-radiation with a wide tunability in energy, which is useful for examining structures and dynamics of materials, as X-ray photons have energies in the order of several kiloelectronvolts (keV) \cite{3}. This means their wavelengths are in the order of magnitude of Angstroms and comparable to the spacing of atoms in solid materials. This is useful, as it means that atoms in a crystalline array can diffract X-ray beams and the interference patterns can be measured \cite{1}.\\\\
 There are four generations of synchrotrons with the main difference being the brilliance achieved \cite{1}. The first was the bending magnet in the synchrotron as it was used for high energy collider physics with no additional modifications. The second generation introduced the wiggler, a configuration of dipol magnets with alternating polarity to achieve synchrotron radiation along linear path. The third generation synchrotron radiation facilities were designed for low emittance of the beams with more effective linear magnet configurations, the undulators \cite{3}. A low emittance means a smaller angular divergence of the beam and higher brilliance \cite{3}.
 
-\subsubsection{Free Electron Laser \(FEL\)}
+\subsubsection{Free Electron Laser}
 Free-electron lasers are coherent radiation sources that are capable of even higher brilliance than third generation synchrotron facilities \cite{2}. They are, in theory, able to operate at any arbitrary wavelength or spectrum of wavelengths with the limit being the energy and quality of the accelerated electron beam \cite{2}. \\
 FELs use a process called self-amplified stimulated emission (SASE). SASE free-electron lasers typically use monochromatic electron beams with a long, high-quality undulator around the order of magnitude of a few hundred metres. The light waves emitted by the electron bunches will line up in phase and amplify themselves through superposition. As the electrons oscillate down the undulator they are also interacting with the magnetic components of the light they themselves are generating. The transverse component of the electrons oscillation and the magnetic field component of the emitted light create a Lorentz force which acts upon the electrons and moves them along axial directions. This leads to the electrons creating microbunches inside their conventional bunches \cite{1}.\\\\
 The duration of a single X-ray pulse can also be reduced to even less than a few femtoseconds. This allows for an investigation of molecular processes and photochemical reactions through a form of sequential snapshots with a characteristic time of under a picosecond \cite{1}.
@@ -176,17 +176,11 @@ There are two different ways the deactivation could occur. It can occur either d
 
 \section{Experimental setup}
 The entire experiment is conducted in VLab, a software modeled after a hutch in the experimental hall of the European XFEL in Schenefeld. The European XFEL is \qty{3.4}{km} long and runs from the DESY research center to the European XFEL campus. A \qty{1.9}{km} long superconducting linear accelerator feeds electrons with energies up to \qty{17.5}{GeV} into a branched tunnel system with two \qty{212}{m} long undulators that generate hard X-radiation in the range of \qty{5}{keV} to \qty{25}{keV} and one \qty{125}{m} long undulator that generates soft X-radiation in the range of \qty{0.25}{keV} to \qty{3}{keV}.\\\\
-VLab recreates the Femtosecond X-ray Experiment research platform FXE. The simulation has no built-in structural errors, but there are statistical errors when it comes to the photon count.
+VLab recreates the Femtosecond X-ray Experiment research platform FXE. The simulation has no built-in structural errors, but there are statistical errors when it comes to the photon count.\\
 
 %For further elaboration see \autoref{Anh: VLab}.
 \subsection{Beamline}
-After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a two-crystal monochromator (see \autoref{fig:mono}) which uses the diffraction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}.\\\\ 
-\begin{figure}[h]
-     \centering
-     \includegraphics[scale=0.4]{img/4crystal.png}
-     \caption{Optical layout of a two-crystal monochromator used to reduce the bandwidth of the X-ray beam. The crystal arrangement selects a narrow energy range through successive Bragg reflections \cite{4}.}
-     \label{fig:mono}
-\end{figure}
+After the SASE process in the undulators, the beam is neither monochromatic nor really polychromatic - it's a so-called "pink" beam - which is why it goes through a monochromator before entering any of the optical elements on the optical bench in the experimental hutch.\\ The beamline in VLab uses a two-crystal monochromator which uses the diffraction in the first crystal to absorb all wavelengths that do not interfere constructively \cite{0}.\\\\ 
 Before entering the optical bench there's also a beam splitter built with a linear diamond grating which can be inserted, if so desired, to look at the $\pm1$ order diffractions. The beam splitter is built in such a way, that one of the first order diffractions is sent to a spectrum analyser which consists of a bent crystal and a detector \cite{0}. 
 
 \subsection{Focusing optics}
@@ -268,13 +262,13 @@ For the following experiment the pink X-ray beam is used even though the monochr
 \end{figure}
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{img/beam_profile_3d_pink.png}
         %\caption{XES spectrum with the excitation laser on at a delay of \qty{100}{ps}.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{img/beam_profile_3d_mono.png}
     \end{subfigure}

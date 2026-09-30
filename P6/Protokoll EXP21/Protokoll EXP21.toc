@@ -1,7 +1,7 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Theoretical Background}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Synchrotronradiation}{1}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Free Electron Laser \(FEL\)}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Free Electron Laser}{1}{subsubsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.2}Pump-probe-spectroscopy}{2}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}The pump-pulse}{2}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}The probe-pulse}{2}{subsubsection.2.2.2}%
@@ -25,9 +25,9 @@
 \contentsline {section}{\numberline {6}Discussion of the physical meaning}{17}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Error analysis}{18}{subsection.6.1}%
 \contentsline {section}{\numberline {7}Conclusion and outlook}{18}{section.7}%
-\contentsline {section}{\nonumberline References}{A}{section*.25}%
-\contentsline {paragraph}{\nonumberline Usage of AI}{A}{paragraph*.26}%
-\contentsline {section}{Abbildungsverzeichnis}{C}{paragraph*.26}%
+\contentsline {section}{\nonumberline References}{A}{section*.24}%
+\contentsline {paragraph}{\nonumberline Usage of AI}{A}{paragraph*.25}%
+\contentsline {section}{Abbildungsverzeichnis}{C}{paragraph*.25}%
 \contentsline {section}{Appendix \numberline {A}Additional Plots}{D}{appendix.1.A}%
 \contentsline {section}{Appendix \numberline {B}Code}{D}{appendix.1.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -3,6 +3,15 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from pathlib import Path
 
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 16,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 16,
+    "ytick.labelsize": 16,
+    "legend.fontsize": 13,
+    "legend.title_fontsize": 16,
+})
 
 folder = Path("Daten/Alignment and characterization/focussed xray/focussed beam")
 

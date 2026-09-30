@@ -2,16 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
-'''
+
 plt.rcParams.update({
-    "font.size": 16,
-    "axes.titlesize": 16,
-    "axes.labelsize": 16,
-    "xtick.labelsize": 16,
-    "ytick.labelsize": 16,
-    "legend.fontsize": 16,
-    "legend.title_fontsize": 16,
-})'''
+    "font.size": 19,
+    "axes.titlesize": 19,
+    "axes.labelsize": 19,
+    "xtick.labelsize": 19,
+    "ytick.labelsize": 19,
+    "legend.fontsize": 19,
+    "legend.title_fontsize": 19,
+})
 
 # Load data
 filename_mono = "Daten/Alignment and characterization/mono pink/intensity change/mono_BIU_2.txt"
@@ -66,9 +66,12 @@ surf = ax.plot_surface(X, Y, data_mono, cmap='viridis', rstride=4, cstride=4,
 
 fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Intensity (arb. u.)')
 ax.set_title('3D Reconstructed Monochrom. Beam Intensity Profile', fontsize=20, fontweight='bold')
-ax.set_xlabel('X-Pixel', fontsize=16)
-ax.set_ylabel('Y-Pixel', fontsize=16)
-ax.set_zlabel('Intensity', fontsize=16)
+ax.set_xlabel('X-Pixel', fontsize=19)
+ax.set_ylabel('Y-Pixel', fontsize=19)
+ax.set_zlabel('Intensity', fontsize=19)
+ax.tick_params(axis='x', which='major', pad=0)
+ax.tick_params(axis='y', which='major', pad=0)
+ax.tick_params(axis='z', which='major', pad=1)
 
 # Adjust the viewing angle for the best perspective
 ax.view_init(elev=30, azim=45)
@@ -87,9 +90,12 @@ surf = ax.plot_surface(X, Y, data_pink, cmap='viridis', rstride=4, cstride=4,
 
 fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Intensity (arb. u.)')
 ax.set_title('3D Reconstructed Pink Beam Intensity Profile', fontsize=20, fontweight='bold')
-ax.set_xlabel('X-Pixel', fontsize=16)
-ax.set_ylabel('Y-Pixel', fontsize=16)
-ax.set_zlabel('Intensity', fontsize=16)
+ax.set_xlabel('X-Pixel', fontsize=19)
+ax.set_ylabel('Y-Pixel', fontsize=19)
+ax.set_zlabel('Intensity', fontsize=19)
+ax.tick_params(axis='x', which='major', pad=0)
+ax.tick_params(axis='y', which='major', pad=0)
+ax.tick_params(axis='z', which='major', pad=1)
 
 # Adjust the viewing angle for the best perspective
 ax.view_init(elev=30, azim=45)
