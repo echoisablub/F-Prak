@@ -153,7 +153,7 @@ The goal is measuring the antenna temperature of the sun and converting it into 
 
 \subsubsection{Background Radiation}
 The determination of the background radiation is done at the calibration position where $T_A\approx T'_{sys}$. With the control software of the KRT3 \textsc{RadioUniversePro} the easiest way to measure the background radiation is to do a cross scan over a weak source that barely stands out from the background.\\
-For our purposes we chose the source Virgo A as it was at an elevation of \qty{47}{\degree}\,\qty{56}{min}. Even when the recommended range of elevation is between 30 and 40 degrees of elevation, we chose the VirA source in coordination with the supervisor.
+For our purposes we chose the source Virgo A as it was at an elevation of \qty{47}{\degree}\,\qty{56}{min}.
 
 \subsection{Determination of the angular resolution of the KRT3}
 The expected half-width is $q=1.02 \lambda /D$ with wavelength $\lambda$ and antenna diameter $D=\qty{3}{m}$. To determine the angular resolution the radio telescope is moved step wise over the sun and the antenna temperatures are measured.\\
@@ -167,7 +167,7 @@ The concrete settings in \textsc{RadioUniversePro} are a cross-scan in the Total
 	\item Save as FITS
 \end{itemize}
 
-\subsection{Determination of the Sensitivity of the instrument}
+\subsection{Determination of the sensitivity of the instrument}
 \subsubsection{Theoretical sensitivity}
 To determine the theoretical sensitivity of the instrument, the weakest detectable flux density $\Delta S_\nu$ for a given system temperature $T'_{sys}$ can be given by the radiometer equation:
 \begin{align}
@@ -177,8 +177,8 @@ To determine the theoretical sensitivity of the instrument, the weakest detectab
 where $C_s\approx 2$ is a dimensionless instrumental constant and $\tau$ the integration time. 
 With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to:
 \begin{align}
-	\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624,92 \text{ Jy} \\
-	\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682,02 \text{ Jy}
+	\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624.92 \text{ Jy} \\
+	\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682.02 \text{ Jy}
 \end{align}
 With $T'_{\text{sys,left}} = 98.76 \pm 22.54 \text{ K}$, $T'_{\text{sys,right}} = 107.80 \pm 31.65 \text{ K}$, $A_{e} = 1.125\pi$, $\tau = 1\text{s}$, $\Delta \nu = 61\text{kHz}$.
 
@@ -186,7 +186,7 @@ The measurement is carried out with the radio source Vir A.\\
 The necessary integration time for detecting Vir A with a signal-to-noise ratio of $S/N=10$ in each channel is calcuated, taking the flux density at $\nu=\qty{1420.4}{MHz}$ to be $S_\nu=\qty{211}{Jy}\pm\qty{11}{Jy}$ after Baars et al. (1977):
 \begin{itemize}
     \item Virgo A: Flux density $= 211 \pm 11 \text{ Jy}$, Radiogalaxy
-    \item For 5 channels on each side ($\Delta \nu = 5 \cdot 61\text{kHz} = 305\text{kHz}$)
+    \item For 5 BBCs on each side ($\Delta \nu = 5 \cdot 61\text{kHz} = 305\text{kHz}$)
     \item $S/N = 10$
     \item $\tau = \left( \frac{2k\cdot C_{S}\cdot T'_{\text{sys}}}{\Delta S_{\nu}\cdot A_{E}} \right)^{2} \cdot \frac{\Delta\nu}{S/N}$
     \item $\tau_{l} = 4,12\text{s}$
@@ -194,7 +194,7 @@ The necessary integration time for detecting Vir A with a signal-to-noise ratio 
 \end{itemize}
 
 \subsubsection{Determination of the uncertainty of radiant flux measurements}
-The radio signals from space received on earth are weak. This can be illustrated by the thought experiment of recieving the signal of a mobile radio on the moon transmitting with \qty{2}{W}, \qty{900}{MHz} and a FWHM of \qty{80}{kHz}, $\sigma=\qty{34}{kHz}$ being received on earth. In this scenario the flux density is:
+The radio signals from space received on earth are weak. This can be illustrated by the thought experiment of receiving the signal of a mobile radio on the moon transmitting with \qty{2}{W}, \qty{900}{MHz} and a FWHM of \qty{80}{kHz}, $\sigma=\qty{34}{kHz}$ being received on earth. In this scenario the flux density is:
 \begin{align}
 	S_{\nu} &= \frac{P}{4\pi d^2\sqrt{2\pi}\sigma} = \qty{1263.16}{Jy}
 \end{align}
@@ -203,8 +203,8 @@ To calculate the flux density of Cas A, we assume the spectral response is a sim
 $\nu = 1420.4\text{ MHz}$: $S_{\nu,\text{CasA}} = 1420 \pm 70 \text{ Jy}$.\\
 Using the previous equation $S_\nu=f(T_A,A_e)$, the antenna temperature $T_A$ for Cas A can be calculated:
 \begin{align}
-c &= \frac{1420,4^{-0.7}\text{ MHz}}{1420\text{ Jy}} \\
-S_{\nu,\text{Cas A}} &= \frac{900^{-0.7}}{c} \text{Jy} = \qty{1954.37}{Jy} \\
+k &= \frac{1420,4^{-0.7}\text{ MHz}}{1420\text{ Jy}} \\
+S_{\nu,\text{Cas A}} &= \frac{900^{-0.7}}{k} \text{Jy} = \qty{1954.37}{Jy} \\
 T_{A} &= \frac{S_{\nu}A_{e}}{2k_{B}} = \qty{1.82}{K} \quad (\text{für } \nu = 1420.4\text{ MHz}) \label{eq: antenna temp}
 \end{align}
 
@@ -232,7 +232,7 @@ With the bandwidth of a single channel $\delta\nu=\frac{\Delta\nu}{1024}=\frac{\
 	\frac{\delta v}{c}&=\frac{\delta\nu}{\nu_{0}}\\
 	\Leftrightarrow \delta v &= \frac{c}{\nu_{0}}\cdot \delta\nu=\qty{12.89}{km\per\s}
 \end{align}
-To measure the H1 line at the lab frequency and a radial velocity of \qty{0}{km\per\s} the channels BBC 3 and 11 can be used. Even with an assumed maximal radial velocity of $\pm\qty{200}{km\per\s}$ those channels are sufficient as the frequency shift due to the Doppler effect is only \qty{0.94}{MHz} and the single channels have a frequency range of \qty{8}{MHz}.
+To measure the H1 line at the lab frequency and a radial velocity of \qty{0}{km\per\s} the channels BBC 3 and 11 can be used. Even with an assumed maximal radial velocity of $\pm\qty{200}{km\per\s}$ those channels are sufficient as the frequency shift due to the Doppler effect is only \qty{0.94}{MHz} and the BBCs have a frequency range of \qty{8}{MHz}.
 
 \subsubsection{Measurement of the 21cm line along the Milky Way plane}
 One of the approximations determining the radial velocity is the assumption that the hydrogen is distributed in the plane on circular orbits around the galactic centre. This approximation leads to the following orbital velocity:
@@ -253,7 +253,7 @@ The orbital velocity at the tangential point is $v=\omega R$ with $\omega$ being
 	&=v(R)-\omega_0R
 	\label{eq:ang vel}
 \end{align}
-The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=0$, $b=0$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and varied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
+The measurement carried out is an On-Off measurement at a point on the galactic plane. The location of the galactic centre is at $l=\qty{0}{\degree}$, $b=\qty{0}{\degree}$ with $l$ being the galactic longitude and $b$ being the galactic latitude. The spectra were taken with constant $b$ and varied $l$ in the range of \qty{10}{\degree} to \qty{90}{\degree}.\\
 For that, the telescope is aligned to the galactic plane using the command line in \textsc{RadioUniversePro}. The USBs 3 and 11 in the BBC Tools tab were selected and the following settings were used:
 \begin{itemize}
 	\item Repetitions: 10
