@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  8 OCT 2026 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.26)  8 OCT 2026 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,7 +726,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--252
 <img/calib/background plot.png, id=134, 867.24pt x 361.35pt>
 File: img/calib/background plot.png Graphic file (type png)
 <use img/calib/background plot.png>
-Package pdftex.def Info: img/calib/background plot.png  used on input line 305.
+Package pdftex.def Info: img/calib/background plot.png  used on input line 306.
 
 (pdftex.def)             Requested size: 455.24411pt x 189.68402pt.
  [6]
@@ -734,13 +734,13 @@ Package pdftex.def Info: img/calib/background plot.png  used on input line 305.
 File: img/calib/extrapolation background plot.png Graphic file (type png)
 <use img/calib/extrapolation background plot.png>
 Package pdftex.def Info: img/calib/extrapolation background plot.png  used on i
-nput line 318.
+nput line 319.
 (pdftex.def)             Requested size: 252.94437pt x 180.67456pt.
 <img/ang res/gaussian fit left plot.png, id=146, 939.51pt x 361.35pt>
 File: img/ang res/gaussian fit left plot.png Graphic file (type png)
 <use img/ang res/gaussian fit left plot.png>
 Package pdftex.def Info: img/ang res/gaussian fit left plot.png  used on input 
-line 328.
+line 329.
 (pdftex.def)             Requested size: 455.24411pt x 175.09464pt.
  [7 <./img/calib/background plot.png> <./img/calib/extrapolation background plo
 t.png>]
@@ -748,199 +748,193 @@ t.png>]
 File: img/ang res/gaussian fit right plot.png Graphic file (type png)
 <use img/ang res/gaussian fit right plot.png>
 Package pdftex.def Info: img/ang res/gaussian fit right plot.png  used on input
- line 334.
+ line 335.
 (pdftex.def)             Requested size: 455.24411pt x 175.09464pt.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 338.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 338.
-
-Missing character: There is no ° in font cmr10!
-[8 <./img/ang res/gaussian fit left plot.png> <./img/ang res/gaussian fit right
- plot.png>] [9]
-<img/map/map_VIRA_12.52_12.39_2461291,01986131.png, id=181, 560.0925pt x 545.03
+ [8 <./img/ang res/gaussian fit left plot.png> <./img/ang res/gaussian fit righ
+t plot.png>] [9]
+<img/map/map_VIRA_12.52_12.39_2461291,01986131.png, id=182, 560.0925pt x 545.03
 625pt>
 File: img/map/map_VIRA_12.52_12.39_2461291,01986131.png Graphic file (type png)
 
 <use img/map/map_VIRA_12.52_12.39_2461291,01986131.png>
 Package pdftex.def Info: img/map/map_VIRA_12.52_12.39_2461291,01986131.png  use
-d on input line 425.
+d on input line 426.
 (pdftex.def)             Requested size: 252.03929pt x 245.26405pt.
-<img/labbook/ds9 region screenshot.png, id=182, 801.99625pt x 581.17125pt>
+<img/labbook/ds9 region screenshot.png, id=183, 801.99625pt x 581.17125pt>
 File: img/labbook/ds9 region screenshot.png Graphic file (type png)
 <use img/labbook/ds9 region screenshot.png>
 Package pdftex.def Info: img/labbook/ds9 region screenshot.png  used on input l
-ine 432.
+ine 433.
 (pdftex.def)             Requested size: 240.60072pt x 174.35272pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/21cm/cal_l_80.png, id=184, 462.528pt x 346.896pt>
+<img/21cm/cal_l_80.png, id=185, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_80.png Graphic file (type png)
 <use img/21cm/cal_l_80.png>
-Package pdftex.def Info: img/21cm/cal_l_80.png  used on input line 442.
+Package pdftex.def Info: img/21cm/cal_l_80.png  used on input line 443.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--445
+Underfull \hbox (badness 10000) in paragraph at lines 439--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--445
+Underfull \hbox (badness 10000) in paragraph at lines 439--446
 
  []
 
 [10 <./img/map/map_VIRA_12.52_12.39_2461291,01986131.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 446--466
-
- []
-
-
-Package caption Warning: \label without proper reference on input line 448.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:21 ergebnisse' on page 11 undefined on input line
- 467.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
+Underfull \hbox (badness 10000) in paragraph at lines 447--467
 
  []
 
 [11 <./img/labbook/ds9 region screenshot.png> <./img/21cm/cal_l_80.png>]
-<img/21cm/v(R) plot.png, id=205, 462.528pt x 346.896pt>
-File: img/21cm/v(R) plot.png Graphic file (type png)
-<use img/21cm/v(R) plot.png>
-Package pdftex.def Info: img/21cm/v(R) plot.png  used on input line 472.
-(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--476
+Package caption Warning: \label without proper reference on input line 449.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:21 ergebnisse' on page 12 undefined on input line
+ 468.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
 
  []
 
-<img/21cm/enclosed mass of the milky way plot.png, id=207, 551.4201pt x 346.896
+<img/21cm/v(R) plot.png, id=206, 462.528pt x 346.896pt>
+File: img/21cm/v(R) plot.png Graphic file (type png)
+<use img/21cm/v(R) plot.png>
+Package pdftex.def Info: img/21cm/v(R) plot.png  used on input line 473.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--477
+
+ []
+
+<img/21cm/enclosed mass of the milky way plot.png, id=208, 551.4201pt x 346.896
 pt>
 File: img/21cm/enclosed mass of the milky way plot.png Graphic file (type png)
 <use img/21cm/enclosed mass of the milky way plot.png>
 Package pdftex.def Info: img/21cm/enclosed mass of the milky way plot.png  used
- on input line 484.
+ on input line 485.
 (pdftex.def)             Requested size: 275.70938pt x 173.44757pt.
-<img/21cm/v R und d plot.png, id=210, 462.528pt x 346.896pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/21cm/v R und d plot.png, id=211, 462.528pt x 346.896pt>
 File: img/21cm/v R und d plot.png Graphic file (type png)
 <use img/21cm/v R und d plot.png>
-Package pdftex.def Info: img/21cm/v R und d plot.png  used on input line 496.
+Package pdftex.def Info: img/21cm/v R und d plot.png  used on input line 497.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--499
+Underfull \hbox (badness 10000) in paragraph at lines 492--500
 
  []
 
-[12 <./img/21cm/v(R) plot.png> <./img/21cm/enclosed mass of the milky way plot.
-png>]
-<img/21cm/mass all plot.png, id=224, 545.6385pt x 346.896pt>
+<img/21cm/mass all plot.png, id=212, 545.6385pt x 346.896pt>
 File: img/21cm/mass all plot.png Graphic file (type png)
 <use img/21cm/mass all plot.png>
-Package pdftex.def Info: img/21cm/mass all plot.png  used on input line 502.
+Package pdftex.def Info: img/21cm/mass all plot.png  used on input line 503.
 (pdftex.def)             Requested size: 272.81857pt x 173.44757pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--543
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--543
+[12 <./img/21cm/v(R) plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--543
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--543
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--543
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
 
  []
 
-[13 <./img/21cm/v R und d plot.png> <./img/21cm/mass all plot.png>] [14]
-(Protokoll HS1.bbl) [1] (Protokoll HS1.lof)
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
+
+ []
+
+[13 <./img/21cm/enclosed mass of the milky way plot.png> <./img/21cm/v R und d 
+plot.png> <./img/21cm/mass all plot.png>] [14] (Protokoll HS1.bbl) [1]
+(Protokoll HS1.lof)
 \tf@lof=\write4
 \openout4 = `"Protokoll HS1.lof"'.
 
  [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 560.
+(hyperref)                removing `math shift' on input line 561.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 560.
+(hyperref)                removing `subscript' on input line 561.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 560.
+(hyperref)                removing `math shift' on input line 561.
 
-<img/21cm/cal_l_10.png, id=261, 462.528pt x 346.896pt>
+<img/21cm/cal_l_10.png, id=270, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_10.png Graphic file (type png)
 <use img/21cm/cal_l_10.png>
-Package pdftex.def Info: img/21cm/cal_l_10.png  used on input line 565.
+Package pdftex.def Info: img/21cm/cal_l_10.png  used on input line 566.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_20.png, id=262, 462.528pt x 346.896pt>
+<img/21cm/cal_l_20.png, id=271, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_20.png Graphic file (type png)
 <use img/21cm/cal_l_20.png>
-Package pdftex.def Info: img/21cm/cal_l_20.png  used on input line 570.
+Package pdftex.def Info: img/21cm/cal_l_20.png  used on input line 571.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_30.png, id=263, 462.528pt x 346.896pt>
+<img/21cm/cal_l_30.png, id=272, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_30.png Graphic file (type png)
 <use img/21cm/cal_l_30.png>
-Package pdftex.def Info: img/21cm/cal_l_30.png  used on input line 577.
+Package pdftex.def Info: img/21cm/cal_l_30.png  used on input line 578.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_40.png, id=264, 462.528pt x 346.896pt>
+<img/21cm/cal_l_40.png, id=273, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_40.png Graphic file (type png)
 <use img/21cm/cal_l_40.png>
-Package pdftex.def Info: img/21cm/cal_l_40.png  used on input line 582.
+Package pdftex.def Info: img/21cm/cal_l_40.png  used on input line 583.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_50.png, id=265, 462.528pt x 346.896pt>
+<img/21cm/cal_l_50.png, id=274, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_50.png Graphic file (type png)
 <use img/21cm/cal_l_50.png>
-Package pdftex.def Info: img/21cm/cal_l_50.png  used on input line 589.
+Package pdftex.def Info: img/21cm/cal_l_50.png  used on input line 590.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_60.png, id=266, 462.528pt x 346.896pt>
+<img/21cm/cal_l_60.png, id=275, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_60.png Graphic file (type png)
 <use img/21cm/cal_l_60.png>
-Package pdftex.def Info: img/21cm/cal_l_60.png  used on input line 594.
+Package pdftex.def Info: img/21cm/cal_l_60.png  used on input line 595.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 [3 <./img/21cm/cal_l_10.png> <./img/21cm/cal_l_20.png> <./img/21cm/cal_l_30.png
 > <./img/21cm/cal_l_40.png> <./img/21cm/cal_l_50.png> <./img/21cm/cal_l_60.png>
 ]
-<img/21cm/cal_l_70.png, id=280, 462.528pt x 346.896pt>
+<img/21cm/cal_l_70.png, id=289, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_70.png Graphic file (type png)
 <use img/21cm/cal_l_70.png>
-Package pdftex.def Info: img/21cm/cal_l_70.png  used on input line 604.
+Package pdftex.def Info: img/21cm/cal_l_70.png  used on input line 605.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_80_without_ref.png, id=281, 462.528pt x 346.896pt>
+<img/21cm/cal_l_80_without_ref.png, id=290, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_80_without_ref.png Graphic file (type png)
 <use img/21cm/cal_l_80_without_ref.png>
 Package pdftex.def Info: img/21cm/cal_l_80_without_ref.png  used on input line 
-609.
+610.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 File: img/21cm/cal_l_80.png Graphic file (type png)
 <use img/21cm/cal_l_80.png>
-Package pdftex.def Info: img/21cm/cal_l_80.png  used on input line 616.
+Package pdftex.def Info: img/21cm/cal_l_80.png  used on input line 617.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_90.png, id=282, 462.528pt x 346.896pt>
+<img/21cm/cal_l_90.png, id=291, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_90.png Graphic file (type png)
 <use img/21cm/cal_l_90.png>
-Package pdftex.def Info: img/21cm/cal_l_90.png  used on input line 621.
+Package pdftex.def Info: img/21cm/cal_l_90.png  used on input line 622.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
  [4 <./img/21cm/cal_l_70.png> <./img/21cm/cal_l_80_without_ref.png> <./img/21cm
 /cal_l_90.png>] (Protokoll HS1.aux)
@@ -954,10 +948,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21630 strings out of 467867
- 433738 string characters out of 5418334
- 933594 words of memory out of 5000000
- 50215 multiletter control sequences out of 15000+600000
+ 21627 strings out of 467867
+ 433664 string characters out of 5418334
+ 934191 words of memory out of 5000000
+ 50212 multiletter control sequences out of 15000+600000
  634490 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,14n,107p,11247b,1100s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -980,9 +974,9 @@ X/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/emmak/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/emmak/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/emma
 k/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Protokoll HS1.pdf" (20 pages, 1198821 bytes).
+Output written on "Protokoll HS1.pdf" (20 pages, 1200962 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
+ 480 PDF objects out of 1000 (max. 8388607)
  96 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

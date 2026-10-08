@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{\numberline {3.4.1}Theoretical sensitivity}{9}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}Determination of the uncertainty of radiant flux measurements}{9}{subsubsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.5}Observation of neutral hydrogen in the Milky Way}{10}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Discussion}{13}{section.4}%
+\contentsline {section}{\numberline {4}Discussion}{14}{section.4}%
 \contentsline {section}{\nonumberline References}{A}{section*.14}%
 \contentsline {section}{List of Figures}{B}{section*.14}%
 \contentsline {section}{\numberline {A}$H_1$ spectra}{C}{appendix.A}%

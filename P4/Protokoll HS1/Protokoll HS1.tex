@@ -291,19 +291,20 @@ With \autoref{eq: antenna temp} and the current measured flux densities provided
 \[
 T_A = 972.75\,\mathrm{K}.
 \]
-This value is in reasonable agreement with the measured temperature, confirming that the calibration procedure yields a consistent estimate of the solar signal.
+This means $T_\text{sun,left}$ and $T_\text{sun,right}$ both diverge from $T_A$ by almost $3\sigma$ with the divergence for $T_\text{sun,left}$ being marginally higher. This is a serious difference in determined and expected temperature and can most likely be traced back to RFI in the measurements.
+%This value is in reasonable agreement with the measured temperature, confirming that the calibration procedure yields a consistent estimate of the solar signal.
 
 \subsection{Background Radiation}
 In order to convert the raw TPI signal into the actual background temperature, the measured data was normalized using the mean off-source power and the effective system temperature according to
-\begin{equation}
-    T_{h,n}=\frac{\mathrm{TPI}\cdot T'_{\mathrm{sys}}}{\bar{P}_{\mathrm{off}}}.
+\begin{align}
+    T'_\text{h,n}=\frac{\mathrm{TPI}\cdot T'_{\mathrm{sys}}}{\bar{P}_{\mathrm{off}}}.
     \label{eq: normalization}
-\end{equation}
+\end{align}
 Here, $T'_{\mathrm{sys}}$ is the effective system temperature and $\bar{P}_{\mathrm{off}}$ is the mean reference power measured during the off-source observation. This normalization removes the dependence on the receiver gain and instantaneous power level and rescales the measured TPI signal into an effective temperature. The resulting background curve (see \autoref{fig: background}) therefore represents the true elevation-dependent contribution of the environment to the antenna temperature, which must be corrected for in order to recover the source signal reliably.
 \begin{figure}[H]
      \centering
      \includegraphics[width=\linewidth]{img/calib/background plot.png}
-    \caption{Normalised Background Temperature as a function elevation (left figure) or azimuth (right figure)}
+    \caption{Effective background temperature as a function elevation (left figure) or azimuth (right figure).}
     \label{fig: background}
 \end{figure}
 The background temperature $T_h$ is not constant, but varies significantly with elevation. The background plot shows a clear increase toward lower elevations, indicating that the antenna receives additional radiation from the atmosphere and surrounding environment when observing near the horizon. At higher elevations, the environmental contribution decreases and $T_h$ approaches a lower value set mainly by sky brightness and instrumental noise.
@@ -312,7 +313,7 @@ The background temperature also varies with azimuth, showing that the local envi
 
 The uncertainty is significantly larger for the right-hand polarization than for the left-hand polarization, especially as a function of azimuth. This suggests that the right channel is more strongly affected by instrumental systematics and environmental variations. The smaller uncertainties in the left polarization indicate a more stable response and a more reliable background determination.
 
-Using the extrapolated course of $T'_{h}$ (see \autoref{fig: extrap_background}) up to an elevation of $0^\circ$, it becomes clear that the background temperature rises strongly at low elevations. A comparison with the Earth's effective radiation temperature, $T_{\mathrm{Earth}} \approx 252\,\mathrm{K}$, shows that this increase is of a comparable magnitude and therefore reflects the dominance of atmospheric and ground emission at low elevation.
+Using the extrapolated course of $T_{h}'$ (see \autoref{fig: extrap_background}) up to an elevation of $0^\circ$, it becomes clear that the background temperature rises strongly at low elevations. A comparison with the Earth's effective radiation temperature, $T_{\mathrm{Earth}} \approx 252\,\mathrm{K}$, shows that this increase is of a comparable magnitude and therefore reflects the dominance of atmospheric and ground emission at low elevation.
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.5]{img/calib/extrapolation background plot.png}
@@ -326,16 +327,16 @@ The angular resolution of the KRT3 was determined by scanning the Sun in longitu
 \begin{figure}[H]
      \centering
      \includegraphics[width=\linewidth]{img/ang res/gaussian fit left plot.png}
-    \caption{Gaussian fit of the }
+    \caption{Gaussian fit of the left polarised scan of the longitude (left figure) and latitude (right figure). The FWHM of the fit is marked at \qty{4.6}{\degree} for the longitude scan and at \qty{4.39}{\degree} for the latitude scan. The errorbars in both figures are to small to be seen at the scale of the antenna temperature.}
     \label{fig:gaus_fit_left}
 \end{figure}
 \begin{figure}[H]
      \centering
      \includegraphics[width=\linewidth]{img/ang res/gaussian fit right plot.png}
-    \caption{Gaussian fit of the }
+    \caption{Gaussian fit of the right polarised scan of the longitude (left figure) and latitude (right figure). The FWHM of the fit is marked at \qty{4.78}{\degree} for the longitude scan and at \qty{4.63}{\degree} for the latitude scan. The errorbars in the right figure are remarkably high when contrasted with both the left figure as well as \autoref{fig:gaus_fit_left}.}
     \label{fig:gaus_fit_right}
 \end{figure}
-The resolution was determined separately for the longitude and latitude scans and for both circular polarization channels. In the longitude scans, the measured angular offset does not correspond directly to a great-circle distance on the sky. Therefore, the angular width was corrected using the factor $\cos(\mathrm{ELV})$, where $\mathrm{ELV}$ is the elevation of the Sun ($\mathrm{ELV} = 42°$):
+The resolution was determined separately for the longitude and latitude scans and for both circular polarization channels. In the longitude scans, the measured angular offset does not correspond directly to a great-circle distance on the sky. Therefore, the angular width was corrected using the factor $\cos(\mathrm{ELV})$, where $\mathrm{ELV}$ is the elevation of the Sun ($\mathrm{ELV} = \qty{42}{\degree}$):
 \[
 \theta_{\mathrm{lon}} =
 \mathrm{FWHM}_{\mathrm{lon}}\cos(\mathrm{ELV}).
