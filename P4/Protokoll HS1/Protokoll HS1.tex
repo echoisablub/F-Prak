@@ -399,7 +399,7 @@ The measured value at the position of Virgo A was converted using the same scale
 \begin{align}
     T_A(\mathrm{ON}) &= \qty{330622.6}{K}.
 \end{align}
-Using the on-off relation from \autoref{eq:antenna onoff}, the antenna temperature of the source is therefore
+As a result, using the on-off relation from \autoref{eq:antenna onoff}, the antenna temperature of the source is
 \begin{align}
     T_s &= \frac{T_A(\mathrm{ON})-T_A(\mathrm{OFF})+T'_{\mathrm{sys}}}
     {T'_{\mathrm{sys}}}
@@ -412,8 +412,8 @@ The background is not perfectly constant across the map. Its variation is reflec
 \end{align}
 The dominant limitation is therefore not thermal receiver noise, but radio-frequency interference and variations in the receiver and amplifier response. These effects also explain why the background is not spatially uniform.
 
-The complete mapping required about $28\,\mathrm{min}\,35.4\,\mathrm{s}$ according to the software, or $29\,\mathrm{min}\,27.8\,\mathrm{s}$ according to the independent timer. 
-With an integration time of \qty{10}{s} per measurement point and a $5\times5$ map, the source was observed for approximately $250\,\mathrm{s}$. Thus, the on-source measurement accounted for about $14.1\%$ of the total measurement time.
+The complete mapping of the $7\times7$ map required about $28\,\mathrm{min}\,35.4\,\mathrm{s}$ according to the software, or $29\,\mathrm{min}\,27.8\,\mathrm{s}$ according to the independent timer. 
+%With an integration time of \qty{10}{s} per measurement point and a $7\times7$ map, the source was observed for approximately $250\,\mathrm{s}$. Thus, the on-source measurement accounted for about $14.1\%$ of the total measurement time.
 
 Assuming the ideal relation $S/N\propto\sqrt{\tau}$, the number of equivalent maps required to reach $S/N=10$ can be estimated from
 \begin{align}
@@ -437,14 +437,14 @@ Using the measured values above gives $N_{10}\approx0.01$, meaning that one map 
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
 The measured spectra for the varying galactic longitudes were averaged using the provided python script \textsc{spectrum.py}.\\
-When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
+When comparing the spectrum for $l=\qty{80}{\degree}$ with the H\,\textsc{i}-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/cal_l_80.png}
     \caption{The measured \qty{21}{cm}-line spectrum for $l=\qty{80}{\degree}$ overlaid with the LAB data of the spectrum for the same position.}
     \label{fig:21ref comp}
 \end{figure}
-For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done graphically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
+For each of the averaged spectra the channel with the maximum radial velocity of the H\,\textsc{i}-profile was determined. This was done graphically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
 \begin{table}[H]
 	\label{tab:21 ergebnisse}
 	\centering
@@ -501,7 +501,7 @@ With the distinction between baryonic and dark matter in our distributions (see 
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/mass all plot.png}
-    \caption{The enclosed mass of the milky way at each distance R broken down for the different mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
+    \caption{The enclosed mass of the milky way at each distance $R$ broken down for the different mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
     \label{fig:encl mass all}
 \end{figure}
 Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\pi\langle\rho_{DM}\rangle R_0^3$, the mean density $\langle\rho_{DM}\rangle c^2 = \qty{0.98}{GeV\per cm^3}\pm\qty{0.05}{GeV\per cm^3}$ of the dark matter within the solar orbit can be calculated.

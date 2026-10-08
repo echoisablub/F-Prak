@@ -103,21 +103,21 @@ plt.errorbar(
     yerr=v_R_err[1:],
     fmt="x",
     capsize=3,
-    label=r"$v_R$ mit Fehlerbalken"
+    label=r"$v_R$"
 )
 
-'''plt.errorbar(
+plt.errorbar(
     R[1:],
     v_d[1:],
     yerr=v_d_err[1:],
     fmt="x",
     capsize=3,
-    label=r"$v_d$ mit Fehlerbalken"
-)'''
+    label=r"$v_d$"
+)
 
 plt.xlabel(r"$R$ [kpc]")
-plt.ylabel(r"velocity [kms^{-1}]")
-plt.title("Velocities (radian + bayronic) at each distance R")
+plt.ylabel(r"velocity [kms$^{-1}$]")
+plt.title(r"Velocities (radian + baryonic) at each distance $R$")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
