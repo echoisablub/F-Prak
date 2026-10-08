@@ -175,22 +175,23 @@ To determine the theoretical sensitivity of the instrument, the weakest detectab
 \Delta S_\nu=\frac{2k}{A_e}\cdot\frac{C_sT'_{sys}}{\sqrt{\Delta\nu\tau}}
 \end{align}
 where $C_s\approx 2$ is a dimensionless instrumental constant and $\tau$ the integration time. 
-With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to:
-\begin{align}
-	\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624.92 \text{ Jy} \\
-	\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682.02 \text{ Jy}
-\end{align}
-With $T'_{\text{sys,left}} = 98.76 \pm 22.54 \text{ K}$, $T'_{\text{sys,right}} = 107.80 \pm 31.65 \text{ K}$, $A_{e} = 1.125\pi$, $\tau = 1\text{s}$, $\Delta \nu = 61\text{kHz}$.
+%With \autoref{eq: radiometer} the limiting sensitivity in a single channel with $\Delta\nu=\qty{61}{kHz}$ and an integration time of $\tau=\qty{1}{s}$ can be calculated to:
+%\begin{align}
+	%\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624.92 \text{ Jy} \\
+	%\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682.02 \text{ Jy}
+%\end{align}
+%With $T'_{\text{sys,left}} = 98.76 \pm 22.54 \text{ K}$, $T'_{\text{sys,right}} = 107.80 \pm 31.65 \text{ K}$, $A_{e} = 1.125\pi$, $\tau = 1\text{s}$, $\Delta \nu = 61\text{kHz}$.
 
 The measurement is carried out with the radio source Vir A.\\
 The necessary integration time for detecting Vir A with a signal-to-noise ratio of $S/N=10$ in each channel is calcuated, taking the flux density at $\nu=\qty{1420.4}{MHz}$ to be $S_\nu=\qty{211}{Jy}\pm\qty{11}{Jy}$ after Baars et al. (1977):
 \begin{itemize}
+\label{eq: int time}
     \item Virgo A: Flux density $= 211 \pm 11 \text{ Jy}$, Radiogalaxy
     \item For 5 BBCs on each side ($\Delta \nu = 5 \cdot 61\text{kHz} = 305\text{kHz}$)
     \item $S/N = 10$
     \item $\tau = \left( \frac{2k\cdot C_{S}\cdot T'_{\text{sys}}}{\Delta S_{\nu}\cdot A_{E}} \right)^{2} \cdot \frac{\Delta\nu}{S/N}$
-    \item $\tau_{l} = 4,12\text{s}$
-    \item $\tau_{r} = 5,22\text{s}$
+    %\item $\tau_{l} = 4,12\text{s}$
+    %\item $\tau_{r} = 5,22\text{s}$
 \end{itemize}
 
 \subsubsection{Determination of the uncertainty of radiant flux measurements}
@@ -268,6 +269,7 @@ For that, the telescope is aligned to the galactic plane using the command line 
 \section{Results}
 
 \subsection{Determination of the system temperature}
+\label{sec: res sys temp}
 The system temperature was determined from the calibration measurements using the relation
 \[
 T'_{\mathrm{sys}} = T_{\mathrm{cal}} \frac{P_{\mathrm{off}}}{P_{\mathrm{cal}}-P_{\mathrm{off}}},
@@ -314,7 +316,7 @@ Using the extrapolated course of $T'_{h}$ (see \autoref{fig: extrap_background})
 \begin{figure}[h]
      \centering
      \includegraphics[scale=0.5]{img/calib/extrapolation background plot.png}
-    \caption{The extrapolated course of $T'_{h}$ up to an elevation of o° (for left and right hand polarisation)}
+    \caption{The extrapolated course of $T'_{h}$ up to an elevation of \qty{0}{\degree} (for left and right hand polarisation)}
     \label{fig: extrap_background}
 \end{figure}
 
@@ -370,7 +372,16 @@ corresponding to deviations of approximately $6.8\%$ and $12.7\%$.
 The measured values are therefore in reasonable agreement with the theoretical resolution. The small systematic increase can be explained by pointing uncertainties, limited sampling, atmospheric fluctuations, imperfections in the Gaussian fit, and the finite angular diameter of the Sun. The comparatively large uncertainties result from the scatter of the measurement points and the limited number of data points used for the Gaussian fits.
 
 \subsection{Determination of the Sensitivity of the instrument}
+\subsubsection{Theoretical sensitivity}
+With the system temperatures $T_\text{sys, left}'=\qty{98.76}{K}\pm\qty{22.54}{K}$ and $T_\text{sys, right}'=\qty{107.80}{K}\pm\qty{31.65}{K}$ determined in \autoref{sec: res sys temp} together with \autoref{eq: radiometer}, the limiting sensitivity in a single channel can be calculated to:
+\begin{align}
+	\Delta S_{\nu,\text{left}} &= 6,248 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 624.92 \text{\,Jy} \\
+	\Delta S_{\nu,\text{right}} &= 6,82 \cdot 10^{-24} \frac{\text{W}}{\text{m}^2\text{Hz}} = 682.02 \text{\,Jy}
+\end{align}
+With $A_{e} = 1.125\pi$, $\tau = \qty{1}{s}$ and $\Delta \nu = \qty{61}{kHz}$.\\
+The determined system temperatures can now also be used to calculate the necessary integration time for detecting Vir A using \autoref{eq: int time}: $\tau_{l} = 4,12\text{s}$, $\tau_{r} = 5,22\text{s}$.
 
+\subsubsection{Determination of the uncertainty of radiant flux measurements}
 % Measure the mean and standard deviation of the map in the uncalibrated units. This can be done with the software ds9;12 use a sufficiently large (at least 20 pixels) area of the map in which you position a box (Menu Region → Shape → Box); • Now normalise the mean to the system temperature T ′ sys, which is then also our TA(OFF). Then you can also determine the map noise in units of Kelvin with this scaling. Now one still determines the antenna temperature at the source position TA(ON) by converting the measured value in ds9 again with the scaling; • Calculate the antenna temperature of the source using equation (8); • What can you tell about the background? Is constant? Discuss the results quantitatively by determining the value of S/N; • From the log you can get the actual measurement times. What percentage of the measurement time is accounted for by the observation of the source (ON measurement), if 10 seconds are integrated per measurement point? How many maps do you use to detect the source with a signal-to-noise ratio S/N = 10 for the source? Assume the ideal case where S/N ∝ √τ holds. Compare this result with the theoretical expected value. What conclusions do you draw from the mapping of the source and what influences the quality of the measurement significantly?
 The map was evaluated using SAOImageDS9. A region containing 35 pixels was selected away from the source and from the visible disturbance (see \autoref{fig:map selection}). In the uncalibrated map units, the mean and standard deviation were
 \begin{align}
@@ -614,6 +625,6 @@ The choice of baseline is particularly important for the H~I measurements. The b
 \clearpage
 %\section{B. Lab book}
 \addcontentsline{toc}{section}{B. Lab book}
-\input{../labbook.tex}
+%\input{../labbook.tex}
 
 \end{document} 
