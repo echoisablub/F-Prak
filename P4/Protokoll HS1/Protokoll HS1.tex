@@ -414,14 +414,15 @@ This on-off difference is not consistent with Virgo A. For the flux density $S_\
 The measured map scatter of $\sigma_T=\qty{15.71}{K}$ is about 58 times larger than this expected signal; the theoretical signal-to-noise ratio is only about $0.017$. The apparent measured difference of \qty{119.30}{K} is roughly 440 times the theoretical antenna temperature and therefore cannot be attributed to Virgo A. The map does not provide a credible detection; the large excess is likely caused by interference or other measurement systematics. The quoted map scatter describes spatial variations and does not include the uncertainty of the system-temperature calibration.
 
 The complete mapping of the $7\times7$ map required about $28\,\mathrm{min}\,35.4\,\mathrm{s}$ according to the software, or $29\,\mathrm{min}\,27.8\,\mathrm{s}$ according to the independent timer. 
-With an integration time of \qty{10}{s} per measurement point (7x7), Virgo A fell into one pixel and was therefore observed for only \qty{10}{s}. This corresponds to $\approx0.58\%$ of the total mapping time.
+With an integration time of \qty{10}{s} per measurement point, Virgo A fell into one pixel and was therefore observed for only \qty{10}{s}. This corresponds to $\approx0.58\%$ of the total mapping time.
 
 
-Assuming the ideal relation $S/N\propto\sqrt{\tau}$, the number of equivalent maps required to reach $S/N=10$ can be estimated from
+Assuming $S/N\propto\sqrt{\tau}$, the number of equivalent maps needed for $S/N=10$ is $N_{10}=(10/(S/N))^2$. The theoretical Virgo A signal gives $S/N_{\mathrm{theo}}\approx0.017$ and $N_{10,\mathrm{theo}}\approx3.4\times10^5$. Using the apparent map excess instead gives
 \begin{align}
-    N_{10} = \left(\frac{10}{S/N}\right)^2.
+    (S/N)_{\mathrm{meas}} &= \frac{\qty{119.30}{K}}{\qty{15.71}{K}}\approx7.6,
+    &N_{10,\mathrm{meas}} &= \left(\frac{10}{(S/N)_{\mathrm{meas}}}\right)^2\approx1.7.
 \end{align}
-For one \qty{10}{s} measurement of the source pixel, the theoretical signal-to-noise ratio is $S/N\approx0.017$. Assuming independent noise and the ideal relation $S/N\propto\sqrt{\tau}$, this would require about $N_{10}\approx3.4\times10^5$ equivalent maps to reach $S/N=10$. This is only a formal estimate: the measured map scatter is spatial variation rather than a repeated-measurement noise estimate, and the observed excess shows that systematic effects dominate. The ideal square-root scaling therefore cannot be relied upon to recover Virgo A from these data.
+The measured value is only an apparent map S/N, not a Virgo A detection: the excess is inconsistent with the theoretical signal, and $\sigma_T$ measures spatial variation rather than repeated-measurement noise.
 
 \begin{figure}[h]
      \centering
