@@ -2,8 +2,8 @@ PWD /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/rem
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT Protokoll HS1.tex
-OUTPUT Protokoll HS1.log
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.tex
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrartcl.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrartcl.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -160,10 +160,10 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./Protokoll HS1.aux
-INPUT ./Protokoll HS1.aux
-INPUT Protokoll HS1.aux
-OUTPUT Protokoll HS1.aux
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
 INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -172,7 +172,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-OUTPUT Protokoll HS1.pdf
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.pdf
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
@@ -200,134 +200,134 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
-INPUT ./Protokoll HS1.toc
-INPUT ./Protokoll HS1.toc
-INPUT Protokoll HS1.toc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.toc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.toc
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.toc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT Protokoll HS1.toc
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.toc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-INPUT ./img/angle_of_measurement.png
-INPUT ./img/angle_of_measurement.png
-INPUT ./img/angle_of_measurement.png
-INPUT ./img/angle_of_measurement.png
-INPUT ./img/angle_of_measurement.png
-INPUT ./img/calib/background plot.png
-INPUT ./img/calib/background plot.png
-INPUT ./img/calib/background plot.png
-INPUT ./img/calib/background plot.png
-INPUT ./img/calib/background plot.png
-INPUT ./img/calib/extrapolation background plot.png
-INPUT ./img/calib/extrapolation background plot.png
-INPUT ./img/calib/extrapolation background plot.png
-INPUT ./img/calib/extrapolation background plot.png
-INPUT ./img/calib/extrapolation background plot.png
-INPUT ./img/ang res/gaussian fit left plot.png
-INPUT ./img/ang res/gaussian fit left plot.png
-INPUT ./img/ang res/gaussian fit left plot.png
-INPUT ./img/ang res/gaussian fit left plot.png
-INPUT ./img/ang res/gaussian fit left plot.png
-INPUT ./img/ang res/gaussian fit right plot.png
-INPUT ./img/ang res/gaussian fit right plot.png
-INPUT ./img/ang res/gaussian fit right plot.png
-INPUT ./img/ang res/gaussian fit right plot.png
-INPUT ./img/ang res/gaussian fit right plot.png
-INPUT ./img/map/map_VIRA_12.52_12.39_2461291,01986131.png
-INPUT ./img/map/map_VIRA_12.52_12.39_2461291,01986131.png
-INPUT ./img/map/map_VIRA_12.52_12.39_2461291,01986131.png
-INPUT ./img/map/map_VIRA_12.52_12.39_2461291,01986131.png
-INPUT ./img/map/map_VIRA_12.52_12.39_2461291,01986131.png
-INPUT ./img/labbook/ds9 region screenshot.png
-INPUT ./img/labbook/ds9 region screenshot.png
-INPUT ./img/labbook/ds9 region screenshot.png
-INPUT ./img/labbook/ds9 region screenshot.png
-INPUT ./img/labbook/ds9 region screenshot.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/angle_of_measurement.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/angle_of_measurement.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/angle_of_measurement.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/angle_of_measurement.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/angle_of_measurement.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/extrapolation background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/extrapolation background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/extrapolation background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/extrapolation background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/calib/extrapolation background plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit left plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit left plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit left plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit left plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit left plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit right plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit right plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit right plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit right plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/ang res/gaussian fit right plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/map/map_VIRA_12.52_12.39_2461291,01986131.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/map/map_VIRA_12.52_12.39_2461291,01986131.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/map/map_VIRA_12.52_12.39_2461291,01986131.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/map/map_VIRA_12.52_12.39_2461291,01986131.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/map/map_VIRA_12.52_12.39_2461291,01986131.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT ./img/21cm/v(R) plot.png
-INPUT ./img/21cm/v(R) plot.png
-INPUT ./img/21cm/v(R) plot.png
-INPUT ./img/21cm/v(R) plot.png
-INPUT ./img/21cm/v(R) plot.png
-INPUT ./img/21cm/enclosed mass of the milky way plot.png
-INPUT ./img/21cm/enclosed mass of the milky way plot.png
-INPUT ./img/21cm/enclosed mass of the milky way plot.png
-INPUT ./img/21cm/enclosed mass of the milky way plot.png
-INPUT ./img/21cm/enclosed mass of the milky way plot.png
-INPUT ./img/21cm/v R und d plot.png
-INPUT ./img/21cm/v R und d plot.png
-INPUT ./img/21cm/v R und d plot.png
-INPUT ./img/21cm/v R und d plot.png
-INPUT ./img/21cm/v R und d plot.png
-INPUT ./img/21cm/mass all plot.png
-INPUT ./img/21cm/mass all plot.png
-INPUT ./img/21cm/mass all plot.png
-INPUT ./img/21cm/mass all plot.png
-INPUT ./img/21cm/mass all plot.png
-INPUT ./Protokoll HS1.bbl
-INPUT ./Protokoll HS1.bbl
-INPUT Protokoll HS1.bbl
-INPUT ./Protokoll HS1.lof
-INPUT ./Protokoll HS1.lof
-INPUT Protokoll HS1.lof
-OUTPUT Protokoll HS1.lof
-INPUT ./img/21cm/cal_l_10.png
-INPUT ./img/21cm/cal_l_10.png
-INPUT ./img/21cm/cal_l_10.png
-INPUT ./img/21cm/cal_l_10.png
-INPUT ./img/21cm/cal_l_10.png
-INPUT ./img/21cm/cal_l_20.png
-INPUT ./img/21cm/cal_l_20.png
-INPUT ./img/21cm/cal_l_20.png
-INPUT ./img/21cm/cal_l_20.png
-INPUT ./img/21cm/cal_l_20.png
-INPUT ./img/21cm/cal_l_30.png
-INPUT ./img/21cm/cal_l_30.png
-INPUT ./img/21cm/cal_l_30.png
-INPUT ./img/21cm/cal_l_30.png
-INPUT ./img/21cm/cal_l_30.png
-INPUT ./img/21cm/cal_l_40.png
-INPUT ./img/21cm/cal_l_40.png
-INPUT ./img/21cm/cal_l_40.png
-INPUT ./img/21cm/cal_l_40.png
-INPUT ./img/21cm/cal_l_40.png
-INPUT ./img/21cm/cal_l_50.png
-INPUT ./img/21cm/cal_l_50.png
-INPUT ./img/21cm/cal_l_50.png
-INPUT ./img/21cm/cal_l_50.png
-INPUT ./img/21cm/cal_l_50.png
-INPUT ./img/21cm/cal_l_60.png
-INPUT ./img/21cm/cal_l_60.png
-INPUT ./img/21cm/cal_l_60.png
-INPUT ./img/21cm/cal_l_60.png
-INPUT ./img/21cm/cal_l_60.png
-INPUT ./img/21cm/cal_l_70.png
-INPUT ./img/21cm/cal_l_70.png
-INPUT ./img/21cm/cal_l_70.png
-INPUT ./img/21cm/cal_l_70.png
-INPUT ./img/21cm/cal_l_70.png
-INPUT ./img/21cm/cal_l_80_without_ref.png
-INPUT ./img/21cm/cal_l_80_without_ref.png
-INPUT ./img/21cm/cal_l_80_without_ref.png
-INPUT ./img/21cm/cal_l_80_without_ref.png
-INPUT ./img/21cm/cal_l_80_without_ref.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_80.png
-INPUT ./img/21cm/cal_l_90.png
-INPUT ./img/21cm/cal_l_90.png
-INPUT ./img/21cm/cal_l_90.png
-INPUT ./img/21cm/cal_l_90.png
-INPUT ./img/21cm/cal_l_90.png
-INPUT Protokoll HS1.aux
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v(R) plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v(R) plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v(R) plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v(R) plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v(R) plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/enclosed mass of the milky way plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/enclosed mass of the milky way plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/enclosed mass of the milky way plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/enclosed mass of the milky way plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/enclosed mass of the milky way plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v R und d plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v R und d plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v R und d plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v R und d plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v R und d plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/mass all plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/mass all plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/mass all plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/mass all plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/mass all plot.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.bbl
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.bbl
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.bbl
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
+OUTPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.lof
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_10.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_10.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_10.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_10.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_10.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_20.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_20.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_20.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_20.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_20.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_30.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_30.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_30.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_30.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_30.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_40.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_40.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_40.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_40.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_40.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_50.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_50.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_50.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_50.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_50.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_60.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_60.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_60.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_60.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_60.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_70.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_70.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_70.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_70.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_70.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80_without_ref.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80_without_ref.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80_without_ref.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80_without_ref.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80_without_ref.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_90.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_90.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_90.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_90.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_90.png
+INPUT /Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.aux
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
