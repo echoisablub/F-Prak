@@ -389,37 +389,43 @@ The map was evaluated using SAOImageDS9. A region containing 35 pixels was selec
     \overline{P}_{\mathrm{off}} &= 1455.83, \\
     \sigma_P &= 212.206.
 \end{align}
-The map was then calibrated by scaling the mean off-source value to the effective system temperature. This gives
+The map uses BBC 11, i.e. the right-hand polarization, for which $T'_{\mathrm{sys}}=\qty{107.80}{K}$. Each map value is converted using the same scale factor, $T'_{\mathrm{sys}}/\overline{P}_{\mathrm{off}}$. Thus,
 \begin{align}
-    T_A(\mathrm{OFF}) &= \qty{156938.474}{K}, \\
+    T_A(\mathrm{OFF}) &= \frac{\overline{P}_{\mathrm{off}}}{\overline{P}_{\mathrm{off}}}T'_{\mathrm{sys}}
+    = \qty{107.80}{K}, \\
     \sigma_T &= \frac{\sigma_P}{\overline{P}_{\mathrm{off}}}T'_{\mathrm{sys}}
     = \qty{15.71}{K}.
 \end{align}
-The measured value at the position of Virgo A was converted using the same scale, resulting in
+Applying this scale to the measured map value at the position of Virgo A gives
 \begin{align}
-    T_A(\mathrm{ON}) &= \qty{330622.6}{K}.
+    T_A(\mathrm{ON}) &= \qty{227.10}{K}.
 \end{align}
-Using the on-off relation from \autoref{eq:antenna onoff}, the antenna temperature of the source is therefore
+As a result, using the on-off relation from \autoref{eq:antenna onoff}, the antenna temperature of the source is
 \begin{align}
-    T_s &= \frac{T_A(\mathrm{ON})-T_A(\mathrm{OFF})+T'_{\mathrm{sys}}}
-    {T'_{\mathrm{sys}}}
-    = \qty{1612.17}{K}.
+    T_s &= T_A(\mathrm{ON})-T_A(\mathrm{OFF})
+    = \qty{119.30}{K}.
 \end{align}
 
-The background is not perfectly constant across the map. Its variation is reflected by the standard deviation of approximately \qty{15.71}{K}. This noise level is considerably larger than the approximately \qty{1}{K} expected from the theoretical sensitivity for an integration time of \qty{10}{s}. The resulting signal-to-noise ratio is approximately
+This on-off difference is not consistent with Virgo A. For the flux density $S_\nu=\qty{211}{Jy}\pm\qty{11}{Jy}$ at \qty{1420.4}{MHz} given above and $A_e=1.125\pi\,\mathrm{m}^2$, the theoretical antenna temperature is
 \begin{align}
-    \frac{S}{N} = \frac{T_s}{\sigma_T} \approx 102.6.
+    T_{A,\mathrm{Vir\,A}} &= \frac{S_\nu A_e}{2k_B}
+    = \qty{0.270}{K}\pm\qty{0.014}{K}.
 \end{align}
-The dominant limitation is therefore not thermal receiver noise, but radio-frequency interference and variations in the receiver and amplifier response. These effects also explain why the background is not spatially uniform.
+The measured map scatter of $\sigma_T=\qty{15.71}{K}$ is about 58 times larger than this expected signal; the theoretical signal-to-noise ratio is only about $0.017$. The apparent measured difference of \qty{119.30}{K} is roughly 440 times the theoretical antenna temperature and therefore cannot be attributed to Virgo A. The map does not provide a credible detection; the large excess is likely caused by interference or other measurement systematics. The quoted map scatter describes spatial variations and does not include the uncertainty of the system-temperature calibration.
 
+<<<<<<< HEAD
 The complete mapping required about $28\,\mathrm{min}\,35.4\,\mathrm{s}$ according to the software, or $29\,\mathrm{min}\,27.8\,\mathrm{s}$ according to the independent timer. 
-With an integration time of \qty{10}{s} per measurement point and a $5\times5$ map, the source was observed for approximately $250\,\mathrm{s}$. Thus, the on-source measurement accounted for about $14.1\%$ of the total measurement time.
+With an integration time of \qty{10}{s} per measurement point (7x7), Virgo A fell into one pixel and was therefore observed for only \qty{10}{s}. This corresponds to $\approx0.58\%$ of the total mapping time.
+=======
+The complete mapping of the $7\times7$ map required about $28\,\mathrm{min}\,35.4\,\mathrm{s}$ according to the software, or $29\,\mathrm{min}\,27.8\,\mathrm{s}$ according to the independent timer. 
+%With an integration time of \qty{10}{s} per measurement point and a $7\times7$ map, the source was observed for approximately $250\,\mathrm{s}$. Thus, the on-source measurement accounted for about $14.1\%$ of the total measurement time.
+>>>>>>> 9441612d67378b72f5ecba64123b982cf8c9e9a7
 
 Assuming the ideal relation $S/N\propto\sqrt{\tau}$, the number of equivalent maps required to reach $S/N=10$ can be estimated from
 \begin{align}
     N_{10} = \left(\frac{10}{S/N}\right)^2.
 \end{align}
-Using the measured values above gives $N_{10}\approx0.01$, meaning that one map would already be sufficient in the ideal statistical case. In practice, we estimate about 25 maps for a reliable detection with $S/N=10$. This difference demonstrates that the ideal square-root scaling does not fully describe the measurement: RFI, receiver instabilities, background variations, and calibration uncertainties dominate the actual data quality.
+For one \qty{10}{s} measurement of the source pixel, the theoretical signal-to-noise ratio is $S/N\approx0.017$. Assuming independent noise and the ideal relation $S/N\propto\sqrt{\tau}$, this would require about $N_{10}\approx3.4\times10^5$ equivalent maps to reach $S/N=10$. This is only a formal estimate: the measured map scatter is spatial variation rather than a repeated-measurement noise estimate, and the observed excess shows that systematic effects dominate. The ideal square-root scaling therefore cannot be relied upon to recover Virgo A from these data.
 
 \begin{figure}[h]
      \centering
@@ -437,14 +443,14 @@ Using the measured values above gives $N_{10}\approx0.01$, meaning that one map 
 
 \subsection{Observation of neutral hydrogen in the Milky Way}
 The measured spectra for the varying galactic longitudes were averaged using the provided python script \textsc{spectrum.py}.\\
-When comparing the spectrum for $l=\qty{80}{\degree}$ with the H1-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
+When comparing the spectrum for $l=\qty{80}{\degree}$ with the H\,\textsc{i}-line profile of the Leiden-Argentine-Bonn (LAB) survey, as done in \autoref{fig:21ref comp}, we can see that our measured data matches the three-fingered shape of the LAB spectrum roughly with a few differences. Those differences being a slight red-shift, the middle peak being slightly higher and the right peak being about \qty{20}{K} higher.\\\\
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/cal_l_80.png}
     \caption{The measured \qty{21}{cm}-line spectrum for $l=\qty{80}{\degree}$ overlaid with the LAB data of the spectrum for the same position.}
     \label{fig:21ref comp}
 \end{figure}
-For each of the averaged spectra the channel with the maximum radial velocity of the H1-profile was determined. This was done graphically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
+For each of the averaged spectra the channel with the maximum radial velocity of the H\,\textsc{i}-profile was determined. This was done graphically, by taking the intercept of the spectrum with the $3\sigma$-line.\\
 \begin{table}[H]
 	\label{tab:21 ergebnisse}
 	\centering
@@ -501,7 +507,7 @@ With the distinction between baryonic and dark matter in our distributions (see 
 \begin{figure}[H]
      \centering
      \includegraphics[scale=0.5]{img/21cm/mass all plot.png}
-    \caption{The enclosed mass of the milky way at each distance R broken down for the different mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
+    \caption{The enclosed mass of the milky way at each distance $R$ broken down for the different mass distributions with $M_R$ being the total enclosed mass, $M_d$ being the enclosed baryonic mass and $M_{DM}$ being the enclosed mass of the dark matter.}
     \label{fig:encl mass all}
 \end{figure}
 Assuming a spherical distribution for the dark matter $M_{DM}(R_0)=\frac{4}{3}\pi\langle\rho_{DM}\rangle R_0^3$, the mean density $\langle\rho_{DM}\rangle c^2 = \qty{0.98}{GeV\per cm^3}\pm\qty{0.05}{GeV\per cm^3}$ of the dark matter within the solar orbit can be calculated.
@@ -536,8 +542,7 @@ $T'_{sys,left}=98.76\pm22.54K$, while the right-hand polarization yielded
 $T'_{sys,right}=107.80\pm31.65K$. The larger uncertainty in the right-hand channel indicates a less stable receiver response or stronger interference in this polarization. The measured solar antenna temperatures were somewhat higher than the theoretical value of approximately \qty{972.75}{K}. This difference can be caused by radio-frequency interference, calibration uncertainties, and variations in the solar flux during the measurement.\\
 The background radiation showed a clear dependence on elevation and azimuth. The background temperature increased at low elevations because the antenna received more atmospheric emission, ground radiation, and radiation from nearby structures. The azimuthal variation indicates that the local environment was not uniform around the telescope.\\\\
 The measured angular resolutions were close to the theoretical value of approximately \qty{4.11}{\degree}. The measured values were between \qty{4.39}{\degree} and \qty{4.78}{\degree}, and were therefore slightly larger than expected. This agreement is reasonable considering the positioning accuracy of the telescope, the finite angular diameter of the Sun, atmospheric fluctuations, limited sampling, and uncertainties in the Gaussian fits. The slightly larger values obtained for the right-hand polarization are consistent with its greater measurement uncertainty.\\\\
-The mapping of Virgo A confirmed the presence of a source signal. The source antenna temperature was determined to be approximately \qty{1612.17}{K}, while the map noise was about \qty{15.71}{K}. This corresponds to a measured signal-to-noise ratio of approximately $\frac{S}{N}\approx 103$.\\
-Thus, the source was clearly detected. However, the measured noise was considerably larger than expected from the theoretical sensitivity. The main causes are likely radio-frequency interference, receiver instabilities, background variations, and calibration uncertainties. Consequently, the ideal relation $S/N\propto\sqrt{\tau}$ cannot be expected to describe the measurement perfectly.\\\\
+The map does not provide a credible detection of Virgo A. Its theoretical antenna temperature, approximately \qty{0.270}{K} for a flux density of \qty{211}{Jy}, is far below the measured map scatter of \qty{15.71}{K}. The much larger apparent on-off difference is inconsistent with the expected source signal and is most likely caused by radio-frequency interference, receiver instabilities, background variations, or other measurement systematics. Consequently, the ideal relation $S/N\propto\sqrt{\tau}$ cannot be used to claim a detection from this map.\\\\
 The 21-cm measurements successfully revealed the spectral line of neutral hydrogen at different galactic longitudes. The measured spectra showed the expected changes in the radial velocity of the hydrogen gas. However, the derived rotation curve deviated from the ideal expectation of a nearly constant orbital velocity. The uncertainties in identifying the line maximum, the limited frequency resolution, baseline variations, and the relatively small number of measurements contribute to this deviation.\\
 The determined value of the mean density of dark matter within the solar orbit was calculated to be $\langle\rho_{DM}\rangle c^2 = \qty{0.98}{GeV\per cm^3}\pm\qty{0.05}{GeV\per cm^3}$, a slightly higher value than the literature value of $\langle\rho_{DM}\rangle c^2 = \qty{0.43}{GeV\per cm^3}\pm \qty{0.11}{GeV\per cm^3}$. These differences can be attributed to the mentioned measurement uncertainties as well.\\\\
 The choice of baseline is particularly important for the H~I measurements. The baseline represents the continuum level and instrumental background, which must be subtracted before determining the line intensity and its maximum velocity. If the baseline is chosen incorrectly, the position of the line maximum and therefore the derived radial velocity can be shifted. This effect is especially relevant for weak or broad spectral features and can produce systematic errors in the rotation curve. In addition, radio-frequency interference and residual background structure may distort the baseline. Despite these limitations, the measurements provide a qualitatively consistent demonstration of the distribution and kinematics of neutral hydrogen in the Milky Way.
