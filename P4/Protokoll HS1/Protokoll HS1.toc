@@ -26,4 +26,5 @@
 \contentsline {section}{\nonumberline References}{A}{section*.14}%
 \contentsline {section}{List of Figures}{B}{section*.14}%
 \contentsline {section}{\numberline {A}$H_1$ spectra}{C}{appendix.A}%
+\contentsline {section}{B. Lab book}{E}{figure.caption.16}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
