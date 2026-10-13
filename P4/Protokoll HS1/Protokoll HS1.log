@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  11 OCT 2026 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.27)  13 OCT 2026 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,14 +673,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--470
  []
 
 [11 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/labbook/ds9 region screenshot.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_80.png>]
-
-Package caption Warning: \label without proper reference on input line 452.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:21 ergebnisse' on page 12 undefined on input line 471.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 471--472
 
  []
@@ -695,11 +687,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--480
 
  []
 
-<img/21cm/enclosed mass of the milky way plot.png, id=212, 551.4201pt x 346.896pt>
+<img/21cm/enclosed mass of the milky way plot.png, id=212, 462.528pt x 346.896pt>
 File: img/21cm/enclosed mass of the milky way plot.png Graphic file (type png)
 <use img/21cm/enclosed mass of the milky way plot.png>
 Package pdftex.def Info: img/21cm/enclosed mass of the milky way plot.png  used on input line 488.
-(pdftex.def)             Requested size: 275.70938pt x 173.44757pt.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -713,11 +705,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 495--503
 
  []
 
-<img/21cm/mass all plot.png, id=216, 545.6385pt x 346.896pt>
+<img/21cm/mass all plot.png, id=216, 462.528pt x 346.896pt>
 File: img/21cm/mass all plot.png Graphic file (type png)
 <use img/21cm/mass all plot.png>
 Package pdftex.def Info: img/21cm/mass all plot.png  used on input line 506.
-(pdftex.def)             Requested size: 272.81857pt x 173.44757pt.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 [12 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/v(R) plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 536--546
 
@@ -755,43 +747,43 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 563.
 
-<img/21cm/cal_l_10.png, id=275, 462.528pt x 346.896pt>
+<img/21cm/cal_l_10.png, id=274, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_10.png Graphic file (type png)
 <use img/21cm/cal_l_10.png>
 Package pdftex.def Info: img/21cm/cal_l_10.png  used on input line 568.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_20.png, id=276, 462.528pt x 346.896pt>
+<img/21cm/cal_l_20.png, id=275, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_20.png Graphic file (type png)
 <use img/21cm/cal_l_20.png>
 Package pdftex.def Info: img/21cm/cal_l_20.png  used on input line 573.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_30.png, id=277, 462.528pt x 346.896pt>
+<img/21cm/cal_l_30.png, id=276, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_30.png Graphic file (type png)
 <use img/21cm/cal_l_30.png>
 Package pdftex.def Info: img/21cm/cal_l_30.png  used on input line 580.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_40.png, id=278, 462.528pt x 346.896pt>
+<img/21cm/cal_l_40.png, id=277, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_40.png Graphic file (type png)
 <use img/21cm/cal_l_40.png>
 Package pdftex.def Info: img/21cm/cal_l_40.png  used on input line 585.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_50.png, id=279, 462.528pt x 346.896pt>
+<img/21cm/cal_l_50.png, id=278, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_50.png Graphic file (type png)
 <use img/21cm/cal_l_50.png>
 Package pdftex.def Info: img/21cm/cal_l_50.png  used on input line 592.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_60.png, id=280, 462.528pt x 346.896pt>
+<img/21cm/cal_l_60.png, id=279, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_60.png Graphic file (type png)
 <use img/21cm/cal_l_60.png>
 Package pdftex.def Info: img/21cm/cal_l_60.png  used on input line 597.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 [3 </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_10.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_20.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_30.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_40.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_50.png> </Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/img/21cm/cal_l_60.png>]
-<img/21cm/cal_l_70.png, id=294, 462.528pt x 346.896pt>
+<img/21cm/cal_l_70.png, id=293, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_70.png Graphic file (type png)
 <use img/21cm/cal_l_70.png>
 Package pdftex.def Info: img/21cm/cal_l_70.png  used on input line 607.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_80_without_ref.png, id=295, 462.528pt x 346.896pt>
+<img/21cm/cal_l_80_without_ref.png, id=294, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_80_without_ref.png Graphic file (type png)
 <use img/21cm/cal_l_80_without_ref.png>
 Package pdftex.def Info: img/21cm/cal_l_80_without_ref.png  used on input line 612.
@@ -800,7 +792,7 @@ File: img/21cm/cal_l_80.png Graphic file (type png)
 <use img/21cm/cal_l_80.png>
 Package pdftex.def Info: img/21cm/cal_l_80.png  used on input line 619.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
-<img/21cm/cal_l_90.png, id=296, 462.528pt x 346.896pt>
+<img/21cm/cal_l_90.png, id=295, 462.528pt x 346.896pt>
 File: img/21cm/cal_l_90.png Graphic file (type png)
 <use img/21cm/cal_l_90.png>
 Package pdftex.def Info: img/21cm/cal_l_90.png  used on input line 624.
@@ -810,7 +802,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
 
-<img/labbook/wetter_hs1.png, id=304, 975.645pt x 106.3975pt>
+<img/labbook/wetter_hs1.png, id=303, 975.645pt x 106.3975pt>
 File: img/labbook/wetter_hs1.png Graphic file (type png)
 <use img/labbook/wetter_hs1.png>
 Package pdftex.def Info: img/labbook/wetter_hs1.png  used on input line 12.
@@ -858,21 +850,17 @@ l.633 \end{document}
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
  21702 strings out of 467525
  434753 string characters out of 5418982
- 934724 words of memory out of 5000000
+ 934712 words of memory out of 5000000
  50271 multiletter control sequences out of 15000+600000
  635172 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,14n,107p,11363b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.pdf" (25 pages, 1322864 bytes).
+Output written on "/Users/leonielanz/Library/CloudStorage/OneDrive-Persönlich/Anwendungen/remotely-save/Studium/F-Prak/P4/Protokoll HS1/Protokoll HS1.pdf" (25 pages, 1303384 bytes).
 PDF statistics:
  567 PDF objects out of 1000 (max. 8388607)
  445 compressed objects within 5 object streams
